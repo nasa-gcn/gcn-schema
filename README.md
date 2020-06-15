@@ -1,0 +1,1 @@
+# tach-avro-schema
