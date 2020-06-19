@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "fermi.gbm.ground_pos-value",
+  "fields": [
+    {"name": "trigger_num", "type": "int", doc="Fermi trigger number"},
+    {"name": "grb_ra", "type": "double", doc="J2000 right ascension (degrees)"},
+    {"name": "grb_dec", "type": "double", doc="J2000 right ascension (degrees)"},
+    {"name": "grb_error", "type": "double", doc="position error radius (degrees)"}
+  ]
+}
