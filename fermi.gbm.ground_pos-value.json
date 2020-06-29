@@ -1,10 +1,23 @@
 {
-  "type": "record",
-  "name": "fermi.gbm.ground_pos-value",
-  "fields": [
-    {"name": "trigger_num", "type": "int", "doc": "Fermi trigger number"},
-    {"name": "grb_ra", "type": "double", "doc": "J2000 right ascension (degrees)"},
-    {"name": "grb_dec", "type": "double", "doc": "J2000 right ascension (degrees)"},
-    {"name": "grb_error", "type": "double", "doc": "position error radius (degrees)"}
-  ]
+	"type": "record",
+	"name": "fermi.gbm.ground_pos-value",
+	"fields": [
+		{"name": "trigger_num", "type": "int", "doc": "Fermi trigger number"},
+		{"name": "data_signif", "type": "float", "doc": "significance (sigma)"},
+		{"name": "phi", "type": "float", "doc": "angle between zenith and source (degrees)"},
+		{"name": "theta", "type": "float", "doc": "angle between boresight and source (degrees)"},
+		{"name": "energy-range",
+			"type":{
+				"type":"array",
+				"items":{
+					"name":"energy-low","type":"float", "doc": "lower bound energy range of trigger (keV)",
+					"name":"energy-high","type":"float", "doc": "upper bound energy range of trigger (keV)"
+				}
+			}
+		}
+		{"name":"loc_algorithm", "type": "int", "doc": "(Gnd S/W Version number)"},
+		{"name":"time","type":"time"},
+		{"name":"spatial","type":"spatial-value"},
+		{"name":"spatial-addon","type":"spatial_addon"}
+	]
 }
