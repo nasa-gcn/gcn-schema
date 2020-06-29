@@ -8,7 +8,14 @@
     {"name": "error90", "type": "double", "doc": "position error radius (90% confidence, degrees)"}
     {"name": "error-2sig", "type": "double", "doc": "position error radius (2sig confidence, degrees)"}
     {"name": "error-3sig", "type": "double", "doc": "position error radius (2sig confidence, degrees)"}
-    {"name": "prob-map", "type": "string", "doc": "healpix probability map url"}
+    {"name": "prob-map", 
+      {"type": "record", "name": "spatial.avro.file.Header",
+      "fields" : [
+      {"name": "magic", "type": {"type": "fixed", "name": "Magic", "size": 4}},
+      {"name": "meta", "type": {"type": "map", "values": "bytes"}},
+      {"name": "sync", "type": {"type": "fixed", "name": "Sync", "size": 16}},
+      ]
+    }
 
   ]
 }
