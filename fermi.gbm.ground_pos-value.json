@@ -1,6 +1,6 @@
 {
 	"type": "record",
-	"name":"Fermi GBM Ground Position"
+	"name":"Fermi GBM Ground Position",
 	"namespace": "fermi.gbm.ground_pos",
 	"fields": [
 		{"name": "trigger_num", "type": "int", "doc": "Fermi trigger number"},
