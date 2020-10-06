@@ -1,20 +1,14 @@
 {
 	"type": "record",
-	"name": "fermi.gbm.ground_pos-value",
+	"name":"Fermi GBM Ground Position"
+	"namespace": "fermi.gbm.ground_pos",
 	"fields": [
 		{"name": "trigger_num", "type": "int", "doc": "Fermi trigger number"},
 		{"name": "data_signif", "type": "float", "doc": "significance (sigma)"},
 		{"name": "phi", "type": "float", "doc": "angle between zenith and source (degrees)"},
 		{"name": "theta", "type": "float", "doc": "angle between boresight and source (degrees)"},
-		{"name": "energy-range",
-			"type":{
-				"type":"array",
-				"items":{
-					"name":"energy-low","type":"float", "doc": "lower bound energy range of trigger (keV)",
-					"name":"energy-high","type":"float", "doc": "upper bound energy range of trigger (keV)"
-				}
-			}
-		}
+		{"name":"energy-low","type":"float", "doc": "lower bound energy range of trigger (keV)"},
+		{"name":"energy-high","type":"float", "doc": "upper bound energy range of trigger (keV)"},"
 		{"name":"loc_algorithm", "type": "int", "doc": "(Gnd S/W Version number)"},
 		{"name":"time","type":"time"},
 		{"name":"spatial","type":"spatial-value"},
