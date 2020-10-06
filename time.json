@@ -1,6 +1,7 @@
 {
   "type": "record",
-  "name": "time",
+  "namespace": "time",
+  "name":"time",
   "fields": [
     {"name": "obs-start", "type": "double", "doc": "observation start time (ISO UTC)"},
     {"name": "obs-end", "type": "double", "doc": "observation end time (ISO UTC)"},
