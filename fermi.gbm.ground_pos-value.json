@@ -8,7 +8,7 @@
 		{"name": "phi", "type": "float", "doc": "angle between zenith and source (degrees)"},
 		{"name": "theta", "type": "float", "doc": "angle between boresight and source (degrees)"},
 		{"name":"energy-low","type":"float", "doc": "lower bound energy range of trigger (keV)"},
-		{"name":"energy-high","type":"float", "doc": "upper bound energy range of trigger (keV)"},"
+		{"name":"energy-high","type":"float", "doc": "upper bound energy range of trigger (keV)"},
 		{"name":"loc_algorithm", "type": "int", "doc": "(Gnd S/W Version number)"},
 		{"name":"time","type":"time"},
 		{"name":"spatial","type":"spatial-value"},
