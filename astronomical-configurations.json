@@ -1,0 +1,39 @@
+    {"type": "record",
+     "name":"astronomical-configurations",
+     "fields": [
+                {"name": "sun-ra",        "type": "float", "doc": "right ascension of sun (deg)"},
+                {"name": "sun-dec",       "type": "float", "doc": "declination of sun (deg)"},
+                {"name": "sun-dist",      "type": "float", "doc": "angular distance between sun and source (deg)"},
+                {"name": "sun-hourangle", "type": "float", "doc": "hour angle between sun and source (hours)"}
+               ]
+    }
+    {"type": "record",
+     "name": "moon",
+     "fields": [
+                {"name": "moon-ra",          "type": "float", "doc": "right ascension of moon (deg)"},
+                {"name": "moon-dec",         "type": "float", "doc": "declination of moon (deg)"},
+                {"name": "moon-dist",        "type": "float", "doc": "angular distance between moon and source (deg)"},
+                {"name": "moon-illumination","type": "float", "doc": "illumination of the moon (percent)"}
+               ]
+    }
+    {"type": "record",
+     "name": "earth-location",
+     "fields": [
+                {"name": "earth-long", "type": "float", "doc": "Earth longitude of source (deg)"},
+                {"name": "earth-lat",  "type": "float", "doc": "Earth latitude of source (deg)"}
+               ]
+    }
+    {"type": "record",
+     "name": "galactic-coords",
+     "fields": [
+                {"name": "galactic-long", "type": "float", "doc": "galactic longitude of source (deg)"},
+                {"name": "galactic-lat",  "type": "float", "doc": "galactic latitude of source (deg)"}
+               ]
+    }
+    {"type": "record",
+     "name": "ecliptic-coords",
+     "fields": [
+                {"name": "ecliptic-long", "type": "float", "doc": "ecliptic longitude of source (deg)"},
+                {"name": "ecliptic-lat",  "type": "float", "doc": "ecliptic latitude of source (deg)"}
+               ]
+    }

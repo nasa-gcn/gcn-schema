@@ -1,0 +1,26 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_SC_SLEW",
+ "fields": [
+     {"name": "TITLE",         "type": "string"},
+     {"name": "NOTICE_DATE",   "type": "string",          "doc": "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",   "type": "string",          "doc": "type of notice"},
+     {"name": "TRIGGER_NUM",   "type": ["int", "string"], "doc": "integer or string of digits uniquely identifying event" },  
+     {"name": "SEG_NUM",       "type" : "long",           "doc": "Swift serial number (for Swift notice types only)" },
+     {"name": "GRB_RA_J2000",  "type": "double",          "doc": "ra of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "GRB_DEC_J2000", "type": "double",          "doc": "dec of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "GRB_DATE",      "type": "int",             "doc": "date of GRB/Transient [TJD]"},
+     {"name": "GRB_TIME",      "type": "float",           "doc": "time of GRB/Transient [SOD]"},
+     {"name": "TRIGGER_INDEX", "type": "int",             "doc": "id number of successful trigger criteria"},
+     {"name": "RATE_SIGNIF",   "type": "float",           "doc": "strength of rate domain at time of trigger [sigma]"},
+     {"name": "IMAGE_SIGNIF",  "type": "float",           "doc": "strength of image domain at time of trigger [sigma]"},
+     {"name": "SLEW_QUERY",    "type": "int",             "doc": "0=will_slew, non-0=wont"},
+     {"name": "WAIT_TIME",     "type": "float",           "doc": "number of seconds until the target becomes viewable [sec]"},
+     {"name": "OBS_TIME",      "type": "float",           "doc": "number of seconds the target is observable [sec]"},
+     {"name": "INST_MODE_BAT", "type": "int",             "doc": "BAT configuration"},
+     {"name": "INST_MODE_XRT", "type": "int",             "doc": "XRT configuration"},
+     {"name": "INST_MODE_UVOT","type": "int",             "doc": "UVOT configuration"},
+     {"name": "MERIT",         "type": "float",           "doc": "total calculated value for the given burst"},
+     {"name": "COMMENTS",      "type": "array", "items" : "string", "default": []}
+  ]
+}

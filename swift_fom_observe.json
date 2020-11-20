@@ -1,0 +1,22 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_FOM_OBSERVE",
+ "fields": [
+     {"name": "TITLE",         "type": "string"},
+     {"name": "NOTICE_DATE",   "type": "string",  "doc": "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",   "type": "string",  "doc": "type of notice"},
+     {"name": "TRIGGER_NUM",   "type": "long",    "doc": "integer or string of digits uniquely identifying event"},
+     {"name": "SEG_NUM",       "type": "long",    "doc": "Swift serial number (for Swift notice types only)"},
+     {"name": "GRB_RA_J2000",  "type": "double",  "doc": "ra of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "GRB_DEC_J2000", "type": "double",  "doc": "dec of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "GRB_DATE",      "type": "int",     "doc": "date of GRB/Transient [TJD]"},
+     {"name": "GRB_TIME",      "type": "float",   "doc": "start time of background interval [SOD]"},
+     {"name": "TRIGGER_INDEX", "type": "int",     "doc": "id number of successful trigger criteria"},
+     {"name": "RATE_SIGNIF",   "type": "float",   "doc": "strength of rate domain at time of trigger [sigma]"},
+     {"name": "IMAGE_SIGNIF",  "type": "float",   "doc": "strength of image domain at time of trigger [sigma]"},
+     {"name": "FLAGS",         "type": "int",     "doc": "status of the given burst wrt the Automated Target (AT) and Slewing. 2^0 set = worthy of becoming the new Automated Target, 2^1  set = sufficient merit to request a s/c slew"},
+     {"name": "MERIT",         "type": "float",   "doc": "total calculated value for the given burst"},
+     {"name": "COMMENTS",      "type": "array", "items" : "string", "default": []}
+  
+  ]
+}

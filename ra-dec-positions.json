@@ -1,0 +1,12 @@
+    { "type": "record",
+     "namespace": "gcn.notices",
+     "name": "ra-dec-positions",
+     "fields": [
+                {"name": "grb-ra-j2000",    "type": "double", "doc": "ra of GRB/Transient in J2000 epoch [deg]"},
+                {"name": "grb-ra-current",  "type": "double", "doc": "ra of GRB/Transient in Current epoch [deg]"},
+                {"name": "grb-ra-1950",     "type": "double", "doc": "ra of GRB/Transient in 1950 epoch [deg]"},
+                {"name": "grb-dec-j2000",   "type": "double", "doc": "dec of GRB/Transient in J2000 epoch [deg]"},
+                {"name": "grb-dec-current", "type": "double", "doc": "dec of GRB/Transient in Current epoch [deg]"},
+                {"name": "grb-dec-1950",    "type": "double", "doc": "dec of GRB/Transient in 1950 epoch [deg]"}
+               ]
+    }

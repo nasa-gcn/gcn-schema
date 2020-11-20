@@ -1,0 +1,26 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_XRT_POSITION",
+ "fields": [
+     {"name": "TITLE",           "type": "string"},
+     {"name": "NOTICE_DATE",     "type": "string",          "doc": "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",     "type": "string",          "doc": "type of notice"},
+     {"name": "TRIGGER_NUM",     "type": ["int", "string"], "doc": "integer or string of digits uniquely identifying event" },  
+     {"name": "SEG_NUM",         "type" : "long",           "doc": "Swift serial number (for Swift notice types only)" },
+     {"name": "GRB_RA_J2000",    "type": "double",          "doc": "ra of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "GRB_DEC_J2000",   "type": "double",          "doc": "dec of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "GRB_ERROR",       "type": "float",           "doc": "[arcsec radius, statistical plus systematic, 90% containment]"},
+     {"name": "GRB_INTEN",       "type": "int",             "doc": "approximate flux [erg/cm2/sec]"},
+     {"name": "GRB_SIGNIF",      "type": "float",           "doc": "measure of the significance of the afterglow detection [sigma]"},
+     {"name": "IMG_START_DATE",  "type": "int",             "doc": "TJD"},
+     {"name": "IMG_START_TIME",  "type": "float",           "doc": "SOD"},
+     {"name": "IMG_START_DELAY", "type": "float",           "doc": "[sec]"},
+     {"name": "TAM_0",           "type": "float",           "doc": "positions of the TAM (Telescope Alignment Monitor) in the 1st and 2nd images"},
+     {"name": "TAM_1",           "type": "float",           "doc": "positions of the TAM (Telescope Alignment Monitor) in the 1st and 2nd images"},
+     {"name": "TAM_2",           "type": "float",           "doc": "positions of the TAM (Telescope Alignment Monitor) in the 1st and 2nd images"},
+     {"name": "TAM_3",           "type": "float",           "doc": "positions of the TAM (Telescope Alignment Monitor) in the 1st and 2nd images"},
+     {"name": "AMPLIFIER",       "type": "int",             "doc": "'waveform number' of the readout"},
+     {"name": "WAVEFORM",        "type": "int",             "doc": "amplifier used during the readout"},
+     {"name": "COMMENTS",        "type" : "array", "items" : "string", "default": []}
+  ]
+}
