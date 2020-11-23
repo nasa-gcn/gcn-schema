@@ -18,5 +18,7 @@ jobs:
         from glob import glob
         from fastavro.schema import load_schema
         for filename in glob('*.json') + glob('*.avsc'):
+          print()
+          print('Parsing', filename)
           load_schema(filename)
         EOF
