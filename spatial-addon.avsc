@@ -2,48 +2,53 @@
 	"type": "record",
 	"name": "spatial-addon",
 	"fields": [
-		{"name": "sun",
-			"type":{
-				"type":"array",
-				"items":{
-					"name":"sun-ra","type":"float", "doc": "right ascension of sun (deg)",
-					"name":"sun-dec","type":"float", "doc": "declination of sun (deg)",
-					"name":"sun-dist","type":"float", "doc": "angular distance between sun and source (deg)",
-					"name":"sun-hourangle","type":"float", "doc": "hour angle between sun and source (hours)"
-				}
+		{
+			"name": "sun",
+			"type": {
+				"type": "record",
+				"name": "Sun",
+				"fields": [
+					{"name": "ra", "type": "float", "doc": "right ascension of sun (deg)"},
+					{"name": "dec", "type": "float", "doc": "declination of sun (deg)"},
+					{"name": "dist", "type": "float", "doc": "angular distance between sun and source (deg)"},
+					{"name": "hourangle", "type": "float", "doc": "hour angle between sun and source (hours)"}
+				]
+			}
+		},
+		{
+			"name": "moon",
+			"type": {
+				"type": "record",
+				"name": "Moon",
+				"fields": [
+					{"name": "ra", "type": "float", "doc": "right ascension of moon (deg)"},
+					{"name": "dec", "type": "float", "doc": "declination of moon (deg)"},
+					{"name": "dist", "type": "float", "doc": "angular distance between moon and source (deg)"},
+					{"name": "illumination", "type": "float", "doc": "illumination of the moon (percent)"}
+				]
+			}
+		},
+		{
+			"name": "galactic",
+			"type": {
+				"type": "record",
+				"name": "Galactic",
+				"fields": [
+					{"name": "lon", "type": "float", "doc": "galactic longitude of source (deg)"},
+					{"name": "lat", "type": "float", "doc": "galactic latitude of source (deg)"}
+				]
+			}
+		},
+		{
+			"name": "ecliptic",
+			"type": {
+				"type": "record",
+				"name": "Ecliptic",
+				"fields": [
+					{"name": "lon", "type": "float", "doc": "ecliptic longitude of source (deg)"},
+					{"name": "lat", "type": "float", "doc": "ecliptic latitude of source (deg)"}
+				]
 			}
 		}
-		{"name": "moon",
-			"type":{
-				"type":"array",
-				"items":{
-					"name":"moon-ra","type":"float", "doc": "right ascension of moon (deg)",
-					"name":"moon-dec","type":"float", "doc": "declination of moon (deg)",
-					"name":"moon-dist","type":"float", "doc": "angular distance between moon and source (deg)",
-					"name":"moon-illumination","type":"float", "doc": "illumination of the moon (percent)"
-				}
-			}
-		}
-		{"name": "galactic-coords",
-			"type":{
-				"type":"array",
-				"items":{
-					"name":"galactic-long","type":"float", "doc": "galactic longitude of source (deg)",
-					"name":"galactic-lat","type":"float", "doc": "galactic latitude of source (deg)",
-				}
-			}
-		}
-		{"name": "ecliptic-coords",
-			"type":{
-				"type":"array",
-				"items":{
-					"name":"ecliptic-long","type":"float", "doc": "ecliptic longitude of source (deg)",
-					"name":"ecliptic-lat","type":"float", "doc": "ecliptic latitude of source (deg)",
-				}
-			}
-		}
-
-
-
 	]
 }
