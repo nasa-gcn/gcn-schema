@@ -1,6 +1,6 @@
 name: Validate Avro schema
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
