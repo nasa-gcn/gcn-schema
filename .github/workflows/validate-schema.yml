@@ -2,18 +2,20 @@ name: Validate Avro schema
 
 on: [push]
 
-steps:
-- uses: actions/checkout@v2
-- uses: actions/setup-python@v2
-  with:
-    python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-- name: Install dependencies with pip
-  run: pip install fastavro
-- name: Parse all Avro schema
-  run: |
-    python <<EOF
-    from glob import glob
-    from fastavro.schema import load_schema
-    for filename in glob('*.json') + glob('*.avsc'):
-      load_schema(filename)
-    EOF
+jobs:
+  build:
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+    - name: Install dependencies with pip
+      run: pip install fastavro
+    - name: Parse all Avro schema
+      run: |
+        python <<EOF
+        from glob import glob
+        from fastavro.schema import load_schema
+        for filename in glob('*.json') + glob('*.avsc'):
+          load_schema(filename)
+        EOF
