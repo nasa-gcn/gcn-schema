@@ -1,0 +1,28 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_UVOT_SOURCE_LIST",
+ "fields": [
+     {"name": "TITLE",           "type": "string",          "default": "GCN/SWIFT NOTICE"},
+     {"name": "NOTICE_DATE",     "type": "string",          "doc": "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",     "type": "string",          "default": "Swift-UVOT Source List", "doc": "type of notice"},
+     {"name": "TRIGGER_NUM",     "type": "string",          "doc": "string of alpha and digits uniquely identifying event"},  
+     {"name": "SEG_NUM",         "type": "long",            "doc": "Swift serial number (for Swift notice types only)" },
+     {"name": "SRC_RA",          "type": "double",          "doc": "ra of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "SRC_DEC",         "type": "double",          "doc": "dec of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "POINT_ROLL",      "type": "float",           "doc": "Roll of the target"},
+     {"name": "IMG_START_DATE",  "type": "int",             "doc": "TJD"},
+     {"name": "IMG_START_TIME",  "type": "float",           "doc": "SOD"},
+     {"name": "FILTER",          "type": "int",             "doc": "0-Blocked,1-UV_Grism,2-UVW2,3-V,4-UVM2,5-Vis_Grism,6-UVW1,7-U,8-Magnifier,9-B,10-White,11-unknown"},
+     {"name": "BKG_MEAN",        "type": "float",           "doc": "mean value of the background level in the exposure"},
+     {"name": "N_STARS",         "type": "int",             "doc": "total number of stars in the source list"},
+     {"name": "X_OFFSET",        "type": "int",             "doc": "offset of the image window expressed in detector coordinates (0-2095)[pixels]"},
+     {"name": "Y_OFFSET",        "type": "int",             "doc": "offset of the image window expressed in detector coordinates (0-2095)[pixels]"},
+     {"name": "X_MAX",           "type": "int",             "doc": "maximum extent of the image window expressed in detector coordinates (0-2095)pixels]"},
+     {"name": "Y_MAX",           "type": "int",             "doc": "maximum extent of the image window expressed in detector coordinates (0-2095)[pixels]"},
+     {"name": "DET_THRESH",      "type": "int",             "doc": "detection threshold used in this exposure [digital number]"},
+     {"name": "PHOTO_THRESH",    "type": "int",             "doc": "photometry threshold used in this exposure [digital number]"},
+     {"name": "SL_URL",          "type": "string",          "doc": "full URL of the UVOT Source List"},
+     {"name": "MISC_19",         "type": "bytes",           "doc": "32 Flag Bits. See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of bits, some bits may not be defined"},
+     {"name": "COMMENTS",        "type": "array", "items" : "string", "default": []}
+  ]
+}

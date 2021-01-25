@@ -1,0 +1,28 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_XRT_LIGHTCURVE",
+ "fields": [
+     {"name": "TITLE",           "type": "string",          "default": "GCN/SWIFT NOTICE"},
+     {"name": "NOTICE_DATE",     "type": "string",          "doc": "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",     "type": "string",          "default": "Swift-XRT Lightcurve", "doc": "type of notice"},
+     {"name": "TRIGGER_NUM",     "type": "string",          "doc": "string of alpha and digits uniquely identifying event"},  
+     {"name": "SEG_NUM",         "type": "long",            "doc": "Swift serial number (for Swift notice types only)" },
+     {"name": "SRC_RA",          "type": "double",          "doc": "ra of the XRT bore sight in J2000 epoch [deg]"},
+     {"name": "SRC_DEC",         "type": "double",          "doc": "dec of the XRT bore sight in J2000 epoch [deg]"},
+     {"name": "LC_START_DATE",   "type": "int",             "doc": "TJD"},
+     {"name": "LC_START_TIME",   "type": "float",           "doc": "SOD"},
+     {"name": "LC_STOP_DATE",    "type": "int",             "doc": "TJD"},
+     {"name": "LC_STOP_TIME",    "type": "float",           "doc": "SOD"},
+     {"name": "LC_LIVE_TIME",    "type": "float",           "doc": "exposure time duration of the lightcurve integration [sec]"},
+     {"name": "LC_LIVE_TIME_PERCENT","type": "float",       "doc": "exposure time duration of the lightcurve integration [%] ????KEEP OR NOT????"},
+     {"name": "DELTA_TIME",      "type": "float",           "doc": "[sec]"},
+     {"name": "N_BINS",          "type": "int",             "doc": "number of valid bins in the collected lightcurve (0-100)"},
+     {"name": "TERM_COND",       "type": "int",             "doc": "termination condition of the lc collection process.  The values are: 0 Normal(100 bins),1 Terminated by time(1-99 bins),2 Terminated by snapshot(1-99 bins),3 Terminated by entering SAA(1-99 bins)"},
+     {"name": "LC_URL",          "type": "string",          "doc": "full URL of Swift XRT Lightcurve"},
+     {"name": "MISC_19",         "type": "bytes",           "doc": "32 Flag Bits. See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of bits, some bits may not be defined"},
+     {"name": "COMMENTS",        "type": "array", "items" : "string", "default": []}
+  ]
+}
+
+
+

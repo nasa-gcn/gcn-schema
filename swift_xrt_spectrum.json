@@ -1,0 +1,28 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_XRT_SPECTRUM",
+ "fields": [
+     {"name": "TITLE",           "type": "string",          "default": "GCN/SWIFT NOTICE"},
+     {"name": "NOTICE_DATE",     "type": "string",          "doc": "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",     "type": "string",          "default": "Swift-XRT Spectrum", "doc": "type of notice"},
+     {"name": "TRIGGER_NUM",     "type": "string",          "doc": "string of alpha and digits uniquely identifying event"},  
+     {"name": "SEG_NUM",         "type": "long",            "doc": "Swift serial number (for Swift notice types only)" },
+     {"name": "SPEC_START_DATE", "type": "int",             "doc": "TJD"},
+     {"name": "SPEC_START_TIME", "type": "float",           "doc": "SOD"},
+     {"name": "SPEC_STOP_DATE",  "type": "int",             "doc": "TJD"},
+     {"name": "SPEC_STOP_TIME",  "type": "float",           "doc": "SOD"},
+     {"name": "LIVE_TIME",       "type": "float",           "doc": "exposure time duration of the spectrum integration [sec]"},
+     {"name": "SRC_RA",          "type": "double",          "doc": "ra of the XRT bore sight in J2000 epoch [deg]"},
+     {"name": "SRC_DEC",         "type": "double",          "doc": "dec of the XRT bore sight in J2000 epoch [deg]"},
+     {"name": "MODE",            "type": "int",             "doc": "CCD Readout mode.  The values are: 1-Null 2-Short image 3-Long image 4-Piled-up Photodiode 5-Low Rate Photodiode 6-Windowed Timing 7-Photo-counting 8-Raw data 9-Bias map 10-Stop"},
+     {"name": "WAVEFORM",        "type": "int",             "doc": "CCD waveform ID. The values are either 50 or 60"},
+     {"name": "LRPD_BIAS",       "type": "int",             "doc": "the bias value of the last LRPD frame (ignore this for WT spectrum).  The units are ADU"},
+     {"name": "TERM_COND",       "type": "int",             "doc": "termination condition of the lightcurve collection process.  The values are: 0-Normal, 1-Terminated by time, 2-Terminated by snapshot, 3-Terminated by entering SAA, 4-Spectrum generated at the LRPD-to-WT transition, 5-Spectrum generated at the WT-to-LRorPC transition"},
+     {"name": "SPEC_URL",        "type": "string",          "doc": "full URL of Swift XRT Spectrum"},
+     {"name": "MISC_19",         "type": "bytes",           "doc": "32 Flag Bits. See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of bits, some bits may not be defined"},
+     {"name": "COMMENTS",        "type": "array", "items" : "string", "default": []}
+  ]
+}
+
+
+

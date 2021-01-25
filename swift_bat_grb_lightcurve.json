@@ -1,0 +1,26 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_BAT_GRB_LIGHTCURVE",
+ "fields": [
+     {"name": "TITLE",         "type": "string",          "default": "GCN/SWIFT NOTICE"},
+     {"name": "NOTICE_DATE",   "type": "string",          "doc": "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",   "type": "string",          "default": "Swift-BAT GRB Lightcurve", "doc": "type of notice"},
+     {"name": "TRIGGER_NUM",   "type": "string",          "doc": "string of alpha and digits uniquely identifying event"},  
+     {"name": "SEG_NUM",       "type" : "long",           "doc": "Swift serial number (for Swift notice types only)" },
+     {"name": "SRC_RA",        "type": "double",          "doc": "ra of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "SRC_DEC",       "type": "double",          "doc": "dec of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "GRB_DATE",      "type": "int",             "doc": "date of GRB/Transient [TJD]"},
+     {"name": "GRB_TIME",      "type": "float",           "doc": "time of GRB/Transient [SOD]"},
+     {"name": "TRIGGER_INDEX", "type": "int",             "doc": "id number of successful trigger criteria"},
+     {"name": "GRB_PHI",       "type": "float",           "doc": "phi orientation of GRB/Transient wrt BAT instrument [deg]"},
+     {"name": "GRB_THETA",     "type": "float",           "doc": "theta orientation of GRB/Transient wrt BAT instrument [deg]"},
+     {"name": "DELTA_TIME",    "type": "float",           "doc": "time of GRB/Transient [SOD]"},
+     {"name": "TRIGGER_DUR",   "type": "float",           "doc": "trigger width delta_t [sec]"},
+     {"name": "SOLN_STATUS",   "type": "int",             "doc": "flag bits"},
+     {"name": "RATE_SIGNIF",   "type": "float",           "doc": "strength of rate domain at time of trigger [sigma]"},
+     {"name": "IMAGE_SIGNIF",  "type": "float",           "doc": "strength of image domain at time of trigger [sigma]"},
+     {"name": "LC_URL",        "type" : "string",         "doc": "full URL of the BAT GRB Lightcurve"},
+     {"name": "MISC_19",       "type": "bytes",           "doc": "32 Flag Bits. See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of bits, some bits may not be defined"},
+     {"name": "COMMENTS", "type" : "array", "items" : "string", "default": []}
+  ]
+}
