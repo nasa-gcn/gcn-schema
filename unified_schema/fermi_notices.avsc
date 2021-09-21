@@ -1,0 +1,159 @@
+
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "FERMI",
+ "fields" : [
+  {
+    "type": "record",
+    "name": "AlertInfo",
+    "fields" : [
+       {"name": "Stream",                          "type": "string",  "doc":     " e.g. GCN/FERMI NOTICE"},
+       {"name": "AlertTime",                       "type": "string",  "doc":     "date and time (UT) of notice creation"},
+       {"name": "AlertTense",                      "type": "string",  "doc":     "Current, Archival, Planned"},
+       ]
+  }
+  {
+    "type": "record",
+    "name": "Reporter",
+    "fields" : [
+       {"name": "AlertReporter",                   "type": "array",   "items":   "string", "default": [], "doc": "Mission, Instrument, Group"},
+       {"name": "RecordNumber",                    "type": "int",     "doc":     "packet serial number spanning all the messages that come from the s/c during a given trigger"},
+       ]
+  }
+  {
+  "type": "record",
+  "name": "Observation",
+  "fields" : [
+     {"name": "ReportType",                      "type": "string",  "doc":     "was GCN Notice Type e.g. FERMI-GBM Alert, etc"},
+     {"name": "SearchPipeline",                  "type": "string",  "doc":     "On-board Trigger, Untargeted Search, Targeted Search"},
+     {"name": "MessengerType",                   "type": "enum",    "symbols":["Electromagnetic", "Neutrino", "Gravitational Waves"]},  
+     {"name": "RangeQualitativeClass",           "type": "array",   "items":   "string", "default": [], "doc": "type,class, specify one type: Photometric Bands, Gamma-rays, X-rays, High Energy, Radio, specify one class: u,,,,Low Frequency"},
+     {"name": "RangeQuantitativeInfo",           "type": "array",   "items":   "string", "default": [], "doc": "type, unit, specify one type: Energy, Frequency, Wavelength, specify one unit: keV, Hz, nm"},
+     {"name": "RangeQuantitativeValue",          "type": "array",   "items":   "float", "doc": "range"},
+     {"name": "PointingUnits",                   "type": "string",  "doc":     "Deg,hhmmss"},  
+     {"name": "Pointing",                        "type": "array",   "items":   "float", "default": [], "doc": "RA, Dec, Roll"},
+     {"name": "ObservationType",                 "type": "string",  "doc":     "Trigger, Lightcurve, Image, Spectrum"},
+     ]
+  }
+  {
+  "type": "record",
+  "name": "Identifiers",
+  "fields" : [
+     {"name": "InstrumentID",                    "type": "string",  "doc":     "trigger number or id number"},  
+     {"name": "InstrumentIDAlias",               "type": "string",  "doc":     "alernate id number"},  
+     {"name": "DataPage",                        "type": "string",  "doc":     "URL of data files"},
+     ]
+  }
+  {
+  "type": "record",
+  "name": "EventInfo",
+  "fields" : [
+     {"name": "EventID",                         "type": "string",  "doc":     "name of the event"},
+     {"name": "EventTime",                       "type": "string",  "doc":     "date and time of event"},
+     {"name": "EventAlias",                      "type": "array",   "items":   "string", "default": [], "doc": "0 or more alias event identfiers"},
+     ]
+  }
+  {
+  "type": "record",
+  "name": "Reports",
+  "fields" : [
+     {"name": "ContributingReporters",           "type": "array",   "items":   "string", "default": [], "doc": "Mission, Instrument, Group for each contributor"},
+     ]
+  }
+  {
+  "type": "record",
+  "name": "Temporal",
+  "fields" : [
+     {"name": "TriggerTime",                     "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm UTC"},
+     {"name": "ObservationStartTime",            "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm UTC"},
+     {"name": "ObservationStopTime",             "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm UTC"},
+     {"name": "ObservationLivetime",             "type": "string",  "doc":     "units?? seconds?? hh:mm:ss.mmm ??"},
+     ]
+  }
+  {
+  "type": "record",
+  "name": "Spatial",
+  "fields" : [
+     {"name": "CircularFormat",                  "type": "string",  "doc":     "Units of error radius: arcsec, arcmin, deg"},  
+     {"name": "Circular",                        "type": "array",   "items":   "float", "default": [], "doc": "RA (J2000 Deg), Dec (J2000 Deg), Error, containment percentage"},
+     {"name": "Skymap",                          "type": "string",  "doc":     "string containing the full healpix URL path"},  
+     {"name": "ContainmentArea90",               "type": "float",   "doc":     "value of 90% containment in square degrees"},  
+     ]
+  }
+  {
+  "type": "record",
+  "name": "Distance",
+  "fields" : [
+     {"name": "Redshift",                        "type": "array",   "items":   "float", "default": [], "doc": "Value, Error"},
+     {"name": "LuminosityDistance",              "type": "array",   "items":   "float", "default": [], "doc": "Value, Error"},
+     ]
+  }
+  {
+  "type": "record",
+  "name": "Statistics",
+  "fields" : [
+     {"name": "FAR",                                "type": "float",   "doc":     "[Hz]"},
+     {"name": "Rate",                               "type": "float",   "doc":     "[Sigma]"},
+     {"name": "Image",                              "type": "float",   "doc":     "[Sigma]"},
+     {"name": "AstrophysicalProbability",           "type": "float",   "doc":     "P_{Astro}, P_{Signalness}, Real/Bogus"},
+     {"name": "ClassificationProbabilityClass",     "type": "string",  "doc":     "GRB, Long GRB, Short GRB, BNS"},
+     {"name": "ClassificationProbabilityAssumption","type": "string",  "doc":     "P_{Astro} = 1, P_{GRB} = 1"},
+     {"name": "ClassificationProbabilityValue",     "type": "float",   "doc":     "17%, 84%, 16%,90%"},
+     {"name": "OtherProbabilityClass_or_Option",    "type": "array",   "items":   "string", "default": [], "doc": "NS (GW), Remnant (GW)"},
+     {"name": "OtherProbabilityValues",             "type": "array",   "items":   "float", "default": [], "doc": "percentages"},
+     ]
+  }
+  {
+  "type": "record",
+  "name": "GRB Brightness",
+  "fields" : [
+     {"name": "Flux",                            "type": "array",   "items":   "float",  "default": [], "doc": "Value, Error"},
+     {"name": "FluxInfo",                        "type": "array",   "items":   "string", "default": [], "doc": "Energy Range, Instrument"},
+     {"name": "Fluence",                         "type": "array",   "items":   "float",  "default": [], "doc": "Value, Error"},
+     {"name": "FluenceInfo",                     "type": "array",   "items":   "string", "default": [], "doc": "Energy Range, Instrument"},
+     ]
+  }
+  {
+  "type": "record",
+  "name": "GRB Duration",
+  "fields" : [
+     {"name": "T90",                             "type": "array",   "items":   "float", "default": [], "doc": "Value, Error"},
+     {"name": "T90Instrument",                   "type": "string",  "doc":     "Instrument"},
+     {"name": "T50",                             "type": "array",   "items":   "float", "default": [], "doc": "Value, Error"},
+     {"name": "T50Instrument",                   "type": "string",  "doc":     "Instrument"},
+     ]
+  }
+  {
+  "type": "record",
+  "name": "GRB Spectral",
+  "fields" : [
+     {"name": "SpectrumBestFitModel",            "type": "string",  "doc":     ""},
+     {"name": "Spectrum",                        "type": "array",   "items":   "float", "default": [], "doc": "Alpha, Alpha Error, Epeak, Epeak Error, Beta, Beta Error"},
+     {"name": "SpectrumInfo",                    "type": "array",   "items":   "string", "default": [], "doc": "Energy Range, Instrument"},
+     {"name": "HardnessRatio",                   "type": "float",   "doc":     "??"},
+     {"name": "HardnessRatioInfo",               "type": "array",   "items":   "string", "default": [], "doc": "Energy Range High, Energy Range Low, Instrument"},
+     ]
+  }
+  {"name": "Comments",                        "type": "array",   "items":   "string", "default": []}
+  {
+  "type": "record",
+  "name": "GRB Specifics",
+  "fields" : [
+     {"name": "TriggerID",            "type": "string",  "doc":     ""},
+     {"name": "Detectors",            "type": "string",  "doc":     ""},
+     {"name": "Lightcurve",           "type": "string",  "doc":     ""},
+     {"name": "EnergyRange",          "type": "string",  "doc":     ""},
+     {"name": "Algorithm",            "type": "string",  "doc":     ""},
+
+     {"name": "Comments",             "type": "array",   "items":   "string", "default": []}
+     ]
+  }
+]}
+
+
+
+
+
+
+
+
