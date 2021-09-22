@@ -18,6 +18,7 @@ for filename in iglob('*.avsc'):
         load_schema(filename)
     except JSONDecodeError as e:
         print(f'{filename}:{e.lineno}:{e.colno}: error: {e.msg}')
+        failed = True
     except SchemaParseException as e:
         print(f'{filename}: error: {e.args[0]}')
         failed = True
