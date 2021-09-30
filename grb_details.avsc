@@ -1,0 +1,45 @@
+[
+  {
+  "type": "record",
+  "name": "GRB Brightness",
+  "fields" : [
+     {"name": "Flux",                            "type": { "type": "array",   "items":   "float",  "default": [], "doc": "Value, Error"}},
+     {"name": "FluxInfo",                        "type": { "type": "array",   "items":   "string", "default": [], "doc": "Energy Range, Instrument"}},
+     {"name": "Fluence",                         "type": { "type": "array",   "items":   "float",  "default": [], "doc": "Value, Error"}},
+     {"name": "FluenceInfo",                     "type": { "type": "array",   "items":   "string", "default": [], "doc": "Energy Range, Instrument"}}
+     ]
+  },
+  {
+  "type": "record",
+  "name": "GRB Duration",
+  "fields" : [
+     {"name": "T90",                             "type": { "type": "array",   "items":   "float", "default": [], "doc": "Value, Error"}},
+     {"name": "T90Instrument",                   "type": "string",  "doc":     "Instrument"},
+     {"name": "T50",                             "type": { "type": "array",   "items":   "float", "default": [], "doc": "Value, Error"}},
+     {"name": "T50Instrument",                   "type": "string",  "doc":     "Instrument"}
+     ]
+  },
+  {
+  "type": "record",
+  "name": "GRB Spectral",
+  "fields" : [
+     {"name": "SpectrumBestFitModel",            "type": "string",  "doc":     ""},
+     {"name": "Spectrum",                        "type": { "type": "array",   "items":   "float", "default": [], "doc": "Alpha, Alpha Error, Epeak, Epeak Error, Beta, Beta Error"}},
+     {"name": "SpectrumInfo",                    "type": { "type": "array",   "items":   "string", "default": [], "doc": "Energy Range, Instrument"}},
+     {"name": "HardnessRatio",                   "type": "float",   "doc":     "??"},
+     {"name": "HardnessRatioInfo",               "type": { "type": "array",   "items":   "string", "default": [], "doc": "Energy Range High, Energy Range Low, Instrument"}}
+     ]
+  },
+  {
+  "type": "record",
+  "name": "GRB Specifics",
+  "fields" : [
+     {"name": "TriggerID",            "type": "string",  "doc":     ""},
+     {"name": "Detectors",            "type": "string",  "doc":     ""},
+     {"name": "Lightcurve",           "type": "string",  "doc":     ""},
+     {"name": "EnergyRange",          "type": "string",  "doc":     ""},
+     {"name": "Algorithm",            "type": "string",  "doc":     ""},
+     {"name": "Comments",             "type": { "type": "array",   "items":   "string", "default": []}}
+     ]
+  }
+]
