@@ -1,0 +1,58 @@
+[
+  {
+  "type": "record",
+  "name": "Statistics_option2",
+  "fields" : [
+     {"name": "FAR",                                "type": "float",   "doc":     "[Hz]"},
+     {"name": "Rate",                               "type": "float",   "doc":     "[Sigma]"},
+     {"name": "Image",                              "type": "float",   "doc":     "[Sigma]"},
+     {"name": "AstrophysicalProbability",           "type": "float",   "doc":     "GRB: P_{Astro}, GW: P_{Signalness}, OPTICAL: Real/Bogus"},
+     {"name": "ClassificationProbabilityClass",     "type": "string",  "doc":     "GRB: GRB, Long GRB, Short GRB, GW: BNS, NSBH, BBH, Mass Gap"},
+     {"name": "ClassificationProbabilityAssumption","type": "string",  "doc":     "P_{Astro} = 1, P_{GRB} = 1"},
+     {"name": "ClassificationProbabilityValue",     "type": "float",   "doc":     "17%, 84%, 16%,90%"},
+     {"name": "OtherProbabilityClass_or_Option",    "type": { "type": "array",   "items":   "string", "default": [], "doc": "GW: NS, Remnant"}},
+     {"name": "OtherProbabilityValues",             "type": { "type": "array",   "items":   "float", "default": [], "doc": "percentages"}}
+     ]
+  },
+  {
+  "type": "record",
+  "name": "StatisticsLVC",
+  "fields" : [
+     {"name": "FAR",                    "type": "float", "doc": "False alarm rate for GW candidates with this strength or greater. [Hz]"},
+     {"name": "Rate",                   "type": "float", "doc": "[Sigma]"},
+     {"name": "Image",                  "type": "float", "doc": "[Sigma]"},
+     {"name": "Probability_Signalness", "type": "float", "doc": "GW: P_{Signalness}"},
+     {"name": "BNS",                    "type": "float", "doc": "Probability that the source is a binary neutron star merger"},
+     {"name": "NSBH",                   "type": "float", "doc": "Probability that the source is a neutron star-black hole merger"},
+     {"name": "BBH",                    "type": "float", "doc": "Probability that the source is a binary black hole merger"},
+     {"name": "MassGap",                "type": "float", "doc": "Probability that the source has at least one object between 3 and 5 solar masses"},
+     {"name": "Terrestrial",            "type": "float", "doc": "Probability that the source is terrestrial"},
+     {"name": "HasNS",                  "type": "float", "doc": "Probability that at least one object in the binary has a mass that is less than 3 solar masses"},
+     {"name": "HasRemnant",             "type": "float", "doc": "Probability that a nonzero mass was ejected outside the central remnant object"},
+     {"name": "OtherProbabilityValues", "type": { "type": "array",   "items":   "float", "default": [], "doc": "percentages"}}
+     ]
+  },
+  {
+  "type": "record",
+  "name": "StatisticsGRB",
+  "fields" : [
+     {"name": "FAR",                    "type": "float", "doc": "False alarm rate for GW candidates with this strength or greater. [Hz]"},
+     {"name": "Rate",                   "type": "float", "doc": "[Sigma]"},
+     {"name": "Image",                  "type": "float", "doc": "[Sigma]"},
+     {"name": "GRBClass",               "type": "string", "doc": "GRB: GRB, Long GRB, Short GRB"},
+     {"name": "Probability_Signalness", "type": "float", "doc": "GRB: P_{Astro},"},
+     {"name": "OtherProbabilityValues", "type": { "type": "array",   "items":   "float", "default": [], "doc": "percentages"}}
+     ]
+  },
+  {
+  "type": "record",
+  "name": "StatisticsOptical",
+  "fields" : [
+     {"name": "FAR",                    "type": "float", "doc": "False alarm rate for GW candidates with this strength or greater. [Hz]"},
+     {"name": "Rate",                   "type": "float", "doc": "[Sigma]"},
+     {"name": "Image",                  "type": "float", "doc": "[Sigma]"},
+     {"name": "Probability_Signalness", "type": "float", "doc": "OPTICAL: Real/Bogus"},
+     {"name": "OtherProbabilityValues", "type": { "type": "array",   "items":   "float", "default": [], "doc": "percentages"}}
+     ]
+  }
+]
