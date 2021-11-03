@@ -3,16 +3,6 @@
   "type": "record",
   "name": "GRB_Brightness",
   "fields" : [
-     {"name": "Flux",                            "type": { "type": "array",   "items":   "float",  "default": [], "doc": "Value, Error"}},
-     {"name": "FluxInfo",                        "type": { "type": "array",   "items":   "string", "default": [], "doc": "Energy Range, Instrument"}},
-     {"name": "Fluence",                         "type": { "type": "array",   "items":   "float",  "default": [], "doc": "Value, Error"}},
-     {"name": "FluenceInfo",                     "type": { "type": "array",   "items":   "string", "default": [], "doc": "Energy Range, Instrument"}}
-     ]
-  },
-  {
-  "type": "record",
-  "name": "GRB_Brightness_option2",
-  "fields" : [
      {"name": "FluxValue",                       "type": "float",  "doc": "Value"},
      {"name": "FluxError",                       "type": "float",  "doc": "Error"},
      {"name": "FluxEnergyRange",                 "type": "string", "doc": "Energy Range"},
@@ -27,10 +17,12 @@
   "type": "record",
   "name": "GRB_Duration",
   "fields" : [
-     {"name": "T90",                             "type": { "type": "array",   "items":   "float", "default": [], "doc": "Value, Error"}},
-     {"name": "T90Instrument",                   "type": "string",  "doc":     "Instrument"},
-     {"name": "T50",                             "type": { "type": "array",   "items":   "float", "default": [], "doc": "Value, Error"}},
-     {"name": "T50Instrument",                   "type": "string",  "doc":     "Instrument"}
+     {"name": "T90Value",                        "type": "float", "doc": "T90 Value"},
+     {"name": "T90Error",                        "type": "float", "doc": "T90 Error"},
+     {"name": "T90Instrument",                   "type": "string","doc": "Instrument"},
+     {"name": "T50Value",                        "type": "float", "doc": "T50 Value"},
+     {"name": "T50Error",                        "type": "float", "doc": "T50 Error"},
+     {"name": "T50Instrument",                   "type": "string","doc": "Instrument"}
      ]
   },
   {
