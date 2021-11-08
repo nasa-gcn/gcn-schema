@@ -4,10 +4,10 @@
   "name": "LVC_Specifics",
   "fields" : [
      {"name": "Instrument",        "type": "string",  "doc":    "Instruments: H1: LHO, L1: LLO, V1: Virgo"},
-     {"name": "InternalFlag",      "type": "int",     "doc":    " LCV_Team_internal distribution(=1), Full (Priv Phase) LV-EM-Forum_sign-up distribution(=0)"},
+     {"name": "InternalFlag",      "type": "int",     "doc":    "LCV_Team_internal distribution(=1), Full (Priv Phase) LV-EM-Forum_sign-up distribution(=0)"},
      {"name": "HardwareInj",       "type": "int",     "doc":    "Indicates that this event is a hardware injection if 1, no if 0"},
      {"name": "OpenAlert",         "type": "int",     "doc":    "Indicates that this event is an open alert if 1, no if 0"},
-     {"name": "Retraction",        "type": "int",     "doc":    " 0=No or 1=Yes, it is definitely not real, a Retraction"},
+     {"name": "Retraction",        "type": "int",     "doc":    "0=No or 1=Yes, it is definitely not real, a Retraction"},
      {"name": "GroupType",         "type": "string",  "doc":    "CBC, Stochastic, Burst, Coherent, Test, External"},
      {"name": "SearchType",        "type": "string",  "doc":    "AllSky, LowMass, HighMass, GRB, Supernova, MDC, LowMassSim, AllSkyLong, O2VirgoTest, BBH, IMBH, SubGRB, EarlyWarning, SubGRBTargeted"},
      {"name": "SearchPipeline",    "type": "string",  "doc":    "MBTAOnline, CWB2G, gstlal, spiir, HardwareInjection, X, Q, Omega, Ringdown, Fermi, Swift, CWB, SNEWS, oLIB, pycbc, INTEGRAL, AGILE"},

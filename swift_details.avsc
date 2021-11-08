@@ -72,7 +72,16 @@
      {"name": "GRBMagError",         "type": "float",  "doc": "the magnitude error (in the specified filter) of the burst/afterglow [mag]"},
      {"name": "RegionSource",        "type": "string", "doc": "indicates the source of the RA,Dec-location error circle that was searched to yield the limiting magnitude for the UVOT non-detection.  The values are: 0  undefined 1  BAT 2  XRT 3  Other"},
      {"name": "MagLimit",            "type": "float",  "doc": "the lower limit magnitude (in the specified filter) of the burst observation (ie the afterglow has to be fainter than the mag_lim value) [mag]"},
-     {"name": "MagLimitSigma",       "type": "float",  "doc": "the lower limit magnitude (in the specified filter) of the burst observation (ie the afterglow has to be fainter than the mag_lim value) [sigma]"}
+     {"name": "MagLimitSigma",       "type": "float",  "doc": "the lower limit magnitude (in the specified filter) of the burst observation (ie the afterglow has to be fainter than the mag_lim value) [sigma]"},
+     {"name": "CrabFlux",            "type": "float",  "doc": "the current intensity of the source object in mCrab units [mCrab]"},
+     {"name": "BaselineFluxValue",   "type": "float",  "doc": "the baseline intensity of the source before the transient outburst occurred [cnts/cm2/sec]"},
+     {"name": "SamplingIndex",       "type": "int",    "doc": "Sampling index: 0=Orbital, 1=Daily"},
+     {"name": "SourceTypeID",        "type": "int",    "doc": "the source-type identity 0-test_blank_sky 1-unknown_src 2-known_src 3-provisional source"},
+     {"name": "Longitude",           "type": "float",  "doc": "the Longitude of the s/c at the time of the notice"},
+     {"name": "Latitude",            "type": "float",  "doc": "the Latitude of the s/c at the time of the notice."},
+     {"name": "TargetName",          "type": "string", "doc": "the name of the object that the sc will be observing next.  The name is chosen by the science planners at the MOC.  The name does not always fit the IAU standard naming convention (due to limitations in the planning s/w)"},
+     {"name": "TargetNumber",        "type": "int",    "doc": "Target ID number"},
+     {"name": "CatalogNumber",       "type": "int",    "doc": "the catalog number in the on-board catalog for sources that match a known source in the on-board catalog.  (Typically it is a number in the low 10,000s, 12,000s, or 15,000s.)"}
      ]
   }
 ]

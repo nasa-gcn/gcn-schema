@@ -112,8 +112,8 @@
   "name": "Statistics",
   "//": "See file statistics_option_2 for statistics grouped by type",
   "fields" : [
-     {"name": "FAR",                                "type": "float",   "doc":  "[Hz]"},
-     {"name": "Rate",                               "type": "float",   "doc":  "[Sigma]"},
+     {"name": "FAR",                                "type": "float",   "doc":  "the false alarm rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event.  OR  the rate of background events that are like this alert that would be seen by IceCube per year."},
+     {"name": "Rate",                               "type": "float",   "doc":  "the number of times per year that a fluctuation of this significance at this duration interval is expected to be seen [Sigma] OR significance level of the initial 'rate trigger'.  This is the signal/noise (ie number of sigma) of the rate-trigger detection"},
      {"name": "Image",                              "type": "float",   "doc":  "[Sigma]"},
      {"name": "AstrophysicalProbability",           "type": "float",   "doc":  "GRB: P_{Astro}, GW: P_{Signalness}, OPTICAL: Real/Bogus"},
      {"name": "ClassificationProbabilityClass",     "type": "string",  "doc":  "GRB: GRB, Long GRB, Short GRB, GW: BNS, NSBH, BBH, Mass Gap"},
