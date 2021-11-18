@@ -1,7 +1,7 @@
 [
   {
   "type": "record",
-  "name": "GRB_Brightness",
+  "name": "GRBBrightness",
   "fields" : [
      {"name": "FluxValue",                       "type": "float",  "doc": "Value"},
      {"name": "FluxError",                       "type": "float",  "doc": "Error"},
@@ -15,7 +15,7 @@
   },
   {
   "type": "record",
-  "name": "GRB_Duration",
+  "name": "GRBDuration",
   "fields" : [
      {"name": "T90Value",                        "type": "float", "doc": "T90 Value"},
      {"name": "T90Error",                        "type": "float", "doc": "T90 Error"},
@@ -27,10 +27,10 @@
   },
   {
   "type": "record",
-  "name": "GRB_Spectral",
+  "name": "GRBSpectral",
   "fields" : [
      {"name": "SpectrumBestFitModel",            "type": "string",  "doc":     ""},
-     {"name": "Spectrum",                        "type": { "type": "array",   "items":   "float", "default": [], "doc": "Alpha, Alpha Error, Epeak, Epeak Error, Beta, Beta Error"}},
+     {"name": "SpectralParameters",              "type": { "type": "array",   "items":   "float", "default": [], "doc": "Alpha, Alpha Error, Epeak, Epeak Error, Beta, Beta Error"}},
      {"name": "SpectrumInfo",                    "type": { "type": "array",   "items":   "string", "default": [], "doc": "Energy Range, Instrument"}},
      {"name": "HardnessRatio",                   "type": "float",   "doc":     "??"},
      {"name": "HardnessRatioInfo",               "type": { "type": "array",   "items":   "string", "default": [], "doc": "Energy Range High, Energy Range Low, Instrument"}}
@@ -38,15 +38,14 @@
   },
   {
   "type": "record",
-  "name": "GRB_Specifics",
+  "name": "GRBSpecifics",
   "fields" : [
-     {"name": "TriggerID",        "type": "string",  "doc": "for GCN this was also used for solution status bits"},
-     {"name": "Detectors",        "type": "string",  "doc": "which two of the 14 detectors that resulted in this event"},
-     {"name": "LightCurveURL",    "type": "string",  "doc": "string containing the full lightcurve URL"},
-     {"name": "EnergyRange",      "type": "string",  "doc": "energy range for this event"},
-     {"name": "Algorithm",        "type": "string",  "doc": "identifying which location_calculation algorithm was used for this event"},
-     {"name": "LightCurveURL",    "type": "string",  "doc": "string containing the full lightcurve URL"},
-     {"name": "Comments",         "type": { "type": "array",   "items":   "string", "default": []}}
+     {"name": "TriggerID",        "type": "string",  "doc": "For GCN this was also used for solution status bits"},
+     {"name": "LightCurveURL",    "type": "string",  "doc": "String containing the full lightcurve URL"},
+     {"name": "EnergyRange",      "type": "string",  "doc": "Energy range for this event"},
+     {"name": "Algorithm",        "type": "string",  "doc": "Identifying which location_calculation algorithm was used for this event"},
+     {"name": "LightCurveURL",    "type": "string",  "doc": "Sring containing the full lightcurve URL"},
+     {"name": "Comments",         "type": "string", "default": []}
      ]
   }
 ]

@@ -4,7 +4,7 @@
     "name": "AlertInfo",
     "fields" : [
        {"name": "Stream",                  "type": "string", "doc": "e.g. GCN/NOTICE"},
-       {"name": "AlertTime",               "type": "string", "doc": "date and time (UT) of notice creation"},
+       {"name": "AlertTime",               "type": "string", "doc": "Date and time (UT) of notice creation"},
        {"name": "AlertTense",              "type": "string", "doc": "Current, Archival, Planned"}
        ]
   },
@@ -15,35 +15,35 @@
        {"name": "Mission",                 "type": "string", "doc": "Name of Mission or Telescope reporting the event"},
        {"name": "Instrument",              "type": "string", "doc": "Name of the Instrument reporting the event"},
        {"name": "Group",                   "type": "string", "doc": "Name of the Group reporting the event"},
-       {"name": "RecordNumber",            "type": "int",    "doc": "packet serial number spanning all the messages that come from the s/c during a given trigger"}
+       {"name": "RecordNumber",            "type": "int",    "doc": "Packet serial number spanning all the messages that come from the s/c during a given trigger"}
        ]
   },
   {
   "type": "record",
   "name": "Observation",
   "fields" : [
-     {"name": "ReportType",                "type": "string", "doc": "was GCN Notice Type e.g. FERMI-GBM Alert, etc"},
+     {"name": "ReportType",                "type": "string", "doc": "Was GCN Notice Type e.g. Fermi-GBM Alert, etc"},
      {"name": "SearchPipeline",            "type": "string", "doc": "On-board Trigger, Untargeted Search, Targeted Search"},
-     {"name": "MessengerType",             "type": {"name":  "EnumType", "type": "enum", "symbols" : ["Electromagnetic", "Neutrino", "Gravitational Waves"]}},  
-     {"name": "RangeQualitativeType",      "type": "string", "doc": "specify one type: Photometric Bands, Gamma-rays, X-rays, High Energy, Radio"},
-     {"name": "RangeQualitativeClass",     "type": "string", "doc": "specify one class: u,,,,Low Frequency"},
-     {"name": "RangeQuantitativeType",     "type": "string", "doc": "specify one type: Energy, Frequency, Wavelength"},
-     {"name": "RangeQuantitativeUnits",    "type": "string", "doc": "specify one unit: keV, Hz, nm"},
-     {"name": "RangeQuantitativeMinValue", "type": "float",  "doc": "min quantitative value"},
-     {"name": "RangeQuantitativeMaxValue", "type": "float",  "doc": "max quantitative value"},
+     {"name": "MessengerType",             "type": {"name": "MessengerTypeEnum",  "type": "enum", "symbols": ["Electromagnetic", "Neutrino", "Gravitational Waves"]}},  
+     {"name": "RangeQualitativeType",      "type": {"name": "RangeQualTypeEnum",  "type": "enum", "symbols": ["Photometric Bands", "Gamma-rays", "X-rays", "High Energy", "Radio"]}},
+     {"name": "RangeQualitativeClass",     "type": {"name": "RangeQuanClassEnum", "type": "enum", "symbols": ["u", "Low Frequency"]}},
+     {"name": "RangeQuantitativeType",     "type": {"name": "RangeQuanTypeEnum",  "type": "enum", "symbols": ["Energy", "Frequency", "Wavelength"]}},
+     {"name": "RangeQuantitativeUnits",    "type": {"name": "RangeQuanUnitsEnum", "type": "enum", "symbols": ["keV", "Hz", "nm"]}},
+     {"name": "RangeQuantitativeMinValue", "type": "float",  "doc": "Min quantitative value"},
+     {"name": "RangeQuantitativeMaxValue", "type": "float",  "doc": "Max quantitative value"},
      {"name": "PointingUnits",             "type": "string", "doc": "Deg,hhmmss"},  
      {"name": "PointingRA",                "type": "float",  "doc": "RA"},
      {"name": "PointingDec",               "type": "float",  "doc": "Dec"},
      {"name": "PointingRoll",              "type": "float",  "doc": "Roll"},
-     {"name": "ObservationType",           "type": "string", "doc": "specify one type: Trigger, Lightcurve, Image, Spectrum"}
+     {"name": "ObservationType",           "type": {"name": "ObsTypeEnum", "type": "enum", "symbols": ["Trigger", "Lightcurve", "Image", "Spectrum"]}}
      ]
   },
   {
   "type": "record",
   "name": "Identifiers",
   "fields" : [
-     {"name": "InstrumentID",              "type": "string",  "doc": "trigger number or id number"},  
-     {"name": "InstrumentIDAlias",         "type": "string",  "doc": "alernate id number"},  
+     {"name": "InstrumentID",              "type": "string",  "doc": "Trigger number or id number"},  
+     {"name": "InstrumentIDAlias",         "type": "string",  "doc": "Alernate id number"},  
      {"name": "DataPage",                  "type": "string",  "doc": "URL of data files"}
      ]
   },
@@ -51,58 +51,49 @@
   "type": "record",
   "name": "EventInfo",
   "fields" : [
-     {"name": "EventID",                   "type": "string", "doc":   "name of the event"},
-     {"name": "EventTime",                 "type": "string", "doc":   "date and time of event"},
+     {"name": "EventID",                   "type": "string", "doc":   "Name of the event"},
+     {"name": "EventTime",                 "type": "string", "doc":   "Date and time of event"},
      {"name": "EventAlias",                "type": { "type": "array", "items":   "string", "default": [], "doc": "0 or more alias event identfiers"}}
      ]
   },
   {
   "type": "record",
   "name": "Reporters",
-  "//": "See section below for a different approach for this section", 
   "fields" : [
      {"name": "ContributingReporters",     "type": { "type": "array",   "items":   "string", "default": [], "doc": "Mission, Instrument, Group for each contributor"}}
      ]
   },
   {
   "type": "record",
-  "name": "ContributingReporters_to_replace_Reporters_option_above",
-  "fields" : [
-     {"name": "ContributingReporters1",    "type": { "type": "array",   "items":   "string", "default": [], "doc": "Mission, Instrument, Group for 1st contributor"}},
-     {"name": "ContributingReporters2",    "type": { "type": "array",   "items":   "string", "default": [], "doc": "Mission, Instrument, Group for 2nd contributor"}},
-     {"name": "ContributingReporters3",    "type": { "type": "array",   "items":   "string", "default": [], "doc": "Mission, Instrument, Group for 3rd contributor"}}
-     ]
-  },
-  {
-  "type": "record",
   "name": "Temporal",
   "fields" : [
-     {"name": "TriggerTime",               "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm UTC"},
-     {"name": "ObservationStartTime",      "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm UTC"},
-     {"name": "ObservationStopTime",       "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm UTC"},
+     {"name": "TriggerTime",               "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm [UTC]"},
+     {"name": "ObservationStartTime",      "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm [UTC]"},
+     {"name": "ObservationStopTime",       "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm [UTC]"},
      {"name": "ObservationLivetime",       "type": "string",  "doc":     "units?? seconds?? hh:mm:ss.mmm ?? excel has string and float - I thought livetime was usually duration in seconds"}
      ]
   },
   {
   "type": "record",
   "name": "Spatial",
-  "//" : "Circular and Ellipse shown as arrays and as separate entires for comparison", 
   "fields" : [
-     {"name": "CircularFormat",            "type": "string", "doc": "Units of error radius: arcsec, arcmin, deg"},  
-     {"name": "Circular",                  "type": { "type": "array", "items":   "float", "default": [], "doc": "RA (J2000 Deg), Dec (J2000 Deg), Error, containment percentage"}},
-     {"name": "CircularRA",                "type": "float",  "doc": "RA (J2000 Deg)"},
-     {"name": "CircularDec",               "type": "float",  "doc": "Dec (J2000 Deg)"},
+     {"name": "CircularRA",                "type": "float",  "doc": "RA [J2000 Deg]"},
+     {"name": "CircularDec",               "type": "float",  "doc": "Dec [J2000 Deg]"},
      {"name": "CircularError",             "type": "float",  "doc": "Error"},
-     {"name": "CircularPercentage",        "type": "float",  "doc": "containment percentage"},
-     {"name": "Skymap",                    "type": "string", "doc": "string containing the full healpix URL path"},  
-     {"name": "ContainmentArea90",         "type": "float",  "doc": "value of 90% containment in square degrees"},
+     {"name": "CircularErrorUnit",         "type": "string", "doc": "Units of error radius: arcsec, arcmin, deg"},  
+     {"name": "CircularPercentage",        "type": "float",  "doc": "Containment percentage"},
+     {"name": "Skymap",                    "type": "string", "doc": "String containing the full healpix URL path"},  
+     {"name": "ContainmentArea90",         "type": "float",  "doc": "Value of 90% containment in square degrees"},
      {"name": "EllipseFormat",             "type": "string", "doc": "Units of error radius: arcsec, arcmin, deg"},  
-     {"name": "Ellipse",                   "type": { "type": "array", "items":   "float", "default": [], "doc": "RA (J2000 Deg), Dec (J2000 Deg), Error, containment percentage OR prob,d=90,projection='ARC',nest=False"}},
-     {"name": "EllipseRA",                 "type": "float",  "doc": "RA (J2000 Deg)"},
-     {"name": "EllipseDec",                "type": "float",  "doc": "Dec (J2000 Deg)"},
-     {"name": "EllipseRoll",               "type": "float",  "doc": "Error, containment percentage OR prob,d=90,projection='ARC',nest=False"},
+     {"name": "EllipseRA",                 "type": "float",  "doc": "RA [J2000 Deg]"},
+     {"name": "EllipseDec",                "type": "float",  "doc": "Dec [J2000 Deg]"},
+     {"name": "EllipseA",                  "type": "float",  "doc": "Semi-major axis [Deg]"},
+     {"name": "EllipseB",                  "type": "float",  "doc": "Semi-minor axis [Deg]"},
+     {"name": "EllipsePA",                 "type": "float",  "doc": "Position angle of the semi-minor axis [Deg]"},
+     {"name": "Ellipse????",               "type": "float",  "doc": "Error, containment percentage OR prob, d=90, projection='ARC', nest=False"},
      {"name": "RedshiftValue",             "type": "float",  "doc": "Value"},
      {"name": "RedshiftError",             "type": "float",  "doc": "Error"},
+     {"name": "RedshiftType",              "type": {"name":  "RedshiftTypeEnum", "type": "enum", "symbols":["Spectroscopic", "Photometric"]}}, 
      {"name": "LuminosityDistanceValue",   "type": "float",  "doc": "Value"},
      {"name": "LuminosityDistanceError",   "type": "float",  "doc": "Error"}
       ]
@@ -110,25 +101,23 @@
   {
   "type": "record",
   "name": "Statistics",
-  "//": "See file statistics_option_2 for statistics grouped by type",
   "fields" : [
-     {"name": "FAR",                                "type": "float",   "doc":  "the false alarm rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event.  OR  the rate of background events that are like this alert that would be seen by IceCube per year."},
-     {"name": "Rate",                               "type": "float",   "doc":  "the number of times per year that a fluctuation of this significance at this duration interval is expected to be seen [Sigma] OR significance level of the initial 'rate trigger'.  This is the signal/noise (ie number of sigma) of the rate-trigger detection"},
+     {"name": "FAR",                                "type": "float",   "doc":  "False Alarm Rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event.  OR  the rate of background events that are like this alert that would be seen by IceCube per year."},
+     {"name": "Rate",                               "type": "float",   "doc":  "Number of times per year that a fluctuation of this significance at this duration interval is expected to be seen [Sigma] OR significance level of the initial 'rate trigger'.  This is the signal/noise (ie number of sigma) of the rate-trigger detection"},
      {"name": "Image",                              "type": "float",   "doc":  "[Sigma]"},
      {"name": "AstrophysicalProbability",           "type": "float",   "doc":  "GRB: P_{Astro}, GW: P_{Signalness}, OPTICAL: Real/Bogus"},
      {"name": "ClassificationProbabilityClass",     "type": "string",  "doc":  "GRB: GRB, Long GRB, Short GRB, GW: BNS, NSBH, BBH, Mass Gap"},
      {"name": "ClassificationProbabilityAssumption","type": "string",  "doc":  "P_{Astro} = 1, P_{GRB} = 1"},
      {"name": "ClassificationProbabilityValue",     "type": "float",   "doc":  "17%, 84%, 16%,90%"},
      {"name": "OtherProbabilityClass_or_Option",    "type": { "type": "array", "items":   "string", "default": [], "doc": "GW: NS, Remnant"}},
-     {"name": "OtherProbabilityValues",             "type": { "type": "array", "items":   "float", "default": [], "doc": "percentages"}}
+     {"name": "OtherProbabilityValues",             "type": { "type": "array", "items":   "float", "default": [], "doc": "Percentages"}}
      ]
   },
   {
   "type": "record",
   "name": "Comments",
   "fields" : [
-     {"name": "Comments_option1", "type": {"type" : "array",  "items":   "string", "default": []}},
-     {"name": "Comments_option2", "type": "string", "default": []}
+     {"name": "Comments", "type": "string", "default": []}
      ]
   }
 ]

@@ -2,6 +2,7 @@
   {
   "type": "record",
   "name": "Statistics_option2",
+  "//": "This was a proposed alternate option for the Statistics section.  This option will not be used.",
   "fields" : [
      {"name": "FAR",                                "type": "float",   "doc":     "[Hz]"},
      {"name": "Rate",                               "type": "float",   "doc":     "[Sigma]"},
