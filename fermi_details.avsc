@@ -25,7 +25,7 @@
      {"name": "SolnStatus",       "type": "bytes",  "doc": "Flag bits on the type of solution that was found in the on-board image"},
      {"name": "FirstPhoton",      "type": "float",  "doc": "UT seconds-of-day (SOD) of the first photon used in the location calculation [SOD]"},
      {"name": "LastPhoton",       "type": "float",  "doc": "UT seconds-of-day (SOD) of the last photon used in the location calculation [SOD]"},
-     {"name": "Comments",         "type": "string", "default": []}
+     {"name": "Comments",         "type": "string", "default": ""}
      ]
   }
 ]

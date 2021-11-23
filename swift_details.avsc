@@ -14,9 +14,9 @@
      {"name": "GRBPhi",              "type": "string", "doc": "Phi orientation of GRB/Transient instrument coordinates of the trigger [deg]"},
      {"name": "GRBTheta",            "type": "string", "doc": "Theta orientation of GRB/Transient instrument coordinates of the trigger [deg]"},
      {"name": "MeritParameters",     "type": { "type": "array",   "items":  "int",  "doc":  "10 merit parameters for this burst.  Their values range from -127 to +127."}},
-     {"name": "ATSlewNew",           "type": {"name": "ATSlewNewEnum",     "type": "enum", "symbols": [ "No", "Yes"]}, "doc": "Is this burst worthy of becoming the new Automated Target"},
-     {"name": "ATSlewRequest",       "type": {"name": "ATSlewRequestEnum", "type": "enum", "symbols": [ "No", "Yes"]}, "doc": "Is this burst of sufficient merit to request a s/c slew"}, 
-     {"name": "MeritValue",          "type": "float",  "doc": "Total calculated value for the given burst.  It is a fl.pt. quantity which can theoretically range from -infinity to +infinity, but given normal operations, we expect it to range from about -100 to +300.  And for the first 6-12 months of flight-ops, it will be forced to be a constant value of 100 for all bursts."},
+     {"name": "ATSlewNew",           "type": "boolean", "default": false , "doc": "Is this burst worthy of becoming the new Automated Target"},
+     {"name": "ATSlewRequest",       "type": "boolean", "default": false , "doc": "Is this burst of sufficient merit to request a s/c slew"}, 
+     {"name": "Merit",               "type": "float",  "doc": "Total calculated value for the given burst.  It is a fl.pt. quantity which can theoretically range from -infinity to +infinity, but given normal operations, we expect it to range from about -100 to +300.  And for the first 6-12 months of flight-ops, it will be forced to be a constant value of 100 for all bursts."},
      {"name": "SlewQuery",           "type": "int",    "doc": "Return code from the s/c for the given slew_request.  If value is zero, then the slew will be executed by the s/c; if non-zero, then slew will not be executed.  The non-zero values are: 1 Sun constraint, 2 Earth_limb constraint, 3 Moon constraint, 4 Ram_vector constraint, 5 invalid slew_request parameter."},  
      {"name": "WaitTime",            "type": "float",  "doc": "Number of seconds until the target becomes viewable.  A value of zero means that the spacecraft will slew immediately -- ie no waiting.  [sec]"},
      {"name": "BATInstMode",         "type": "bytes",  "doc": "Configuration field for the BAT Instrument"},
@@ -74,7 +74,7 @@
      {"name": "MagLimit",            "type": "float",  "doc": "Lower limit magnitude (in the specified filter) of the burst observation (ie the afterglow has to be fainter than the mag_lim value) [mag]"},
      {"name": "MagLimitSigma",       "type": "float",  "doc": "Lower limit magnitude (in the specified filter) of the burst observation (ie the afterglow has to be fainter than the mag_lim value) [sigma]"},
      {"name": "CrabFlux",            "type": "float",  "doc": "Current intensity of the source object in mCrab units [mCrab]"},
-     {"name": "BaselineFluxValue",   "type": "float",  "doc": "Baseline intensity of the source before the transient outburst occurred [cnts/cm2/sec]"},
+     {"name": "BaselineFlux",        "type": "float",  "doc": "Baseline intensity of the source before the transient outburst occurred [cnts/cm2/sec]"},
      {"name": "SamplingIndex",       "type": {"name": "SamplingIndexEnum", "type": "enum", "symbols": [ "Orbital", "Daily"]}},
      {"name": "SourceTypeID",        "type": {"name": "SourceTypeIDEnum",  "type": "enum", "symbols": [ "Test_blank_sky","Unknown_src","Known_src","Provisional source"]}},
      {"name": "Longitude",           "type": "float",  "doc": "Longitude of the s/c at the time of the notice"},
@@ -82,7 +82,7 @@
      {"name": "TargetName",          "type": "string", "doc": "Name of the object that the sc will be observing next.  The name is chosen by the science planners at the MOC.  The name does not always fit the IAU standard naming convention (due to limitations in the planning s/w)"},
      {"name": "TargetNumber",        "type": "int",    "doc": "Target ID number"},
      {"name": "CatalogNumber",       "type": "int",    "doc": "Catalog number in the on-board catalog for sources that match a known source in the on-board catalog.  (Typically it is a number in the low 10,000s, 12,000s, or 15,000s.)"},
-     {"name": "Comments",            "type": "string", "default": []}
+     {"name": "Comments",            "type": "string", "default": ""}
      ]
   }
 ]
