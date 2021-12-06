@@ -8,7 +8,6 @@
      {"name": "GRBPhi",           "type": "string", "doc": "Phi orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
      {"name": "GRBTheta",         "type": "string", "doc": "Theta orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
      {"name": "GRBZenith",        "type": "string", "doc": "Zenith orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
-     {"name": "HardnessRatio",    "type": "string", "doc": "Hardness ratio (HR = Cnts(15-50keV) / Cnts(50-300keV))"},
      {"name": "LocationAlgorithm","type": "string", "doc": "Version number of the Flt S/W Location Algorithm that was used to derive this RA,Dec location for this event"},
      {"name": "LocationURL",      "type": "string", "doc": "String containing the full location URL"},
      {"name": "LightCurveURL",    "type": "string", "doc": "String containing the full lightcurve URL"},
@@ -22,7 +21,7 @@
      {"name": "GRBIntensity3",    "type": "int",    "doc": "Number of events in the 1-10 GeV band [cnts]"},
      {"name": "GRBIntensity4",    "type": "int",    "doc": "Number of events in the 10-up GeV band [cnts]"},
      {"name": "Significance",     "type": "float",  "doc": "Sqrt(TS) (with 2 dof) of the detection [sqrt(TS) 2 dof]"},
-     {"name": "SolnStatus",       "type": "bytes",  "doc": "Flag bits on the type of solution that was found in the on-board image"},
+     {"name": "SolutionStatus",   "type": "bytes",  "doc": "Flag bits on the type of solution that was found in the on-board image"},
      {"name": "FirstPhoton",      "type": "float",  "doc": "UT seconds-of-day (SOD) of the first photon used in the location calculation [SOD]"},
      {"name": "LastPhoton",       "type": "float",  "doc": "UT seconds-of-day (SOD) of the last photon used in the location calculation [SOD]"},
      {"name": "Comments",         "type": "string", "default": ""}

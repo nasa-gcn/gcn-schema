@@ -3,7 +3,7 @@
   "type": "record",
   "name": "IGWNSpecifics",
   "fields" : [
-     {"name": "Instrument",        "type": {"name": "InstrumentEnum",   "type": "enum", "symbols": ["LHO", "LLO", "Virgo", "Kagra"]}},
+     {"name": "Instrument",        "type": {"type": "array", "items": "string", "doc": "One or more of the following: LHO, LLO, Virgo, Kagra"}},
      {"name": "InternalFlag",      "type": "boolean", "default": false , "doc": ""},
      {"name": "HardwareInj",       "type": "boolean", "default": false , "doc": ""},
      {"name": "OpenAlert",         "type": "boolean", "default": false , "doc": ""},

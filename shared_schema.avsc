@@ -4,8 +4,8 @@
     "name": "AlertInfo",
     "fields" : [
        {"name": "Stream",                  "type": "string", "doc": "e.g. GCN/NOTICE"},
-       {"name": "AlertTime",               "type": "string", "doc": "Date and time (UT) of notice creation"},
-       {"name": "AlertTense",              "type": "string", "doc": "Current, Archival, Planned"}
+       {"name": "AlertTime",               "type": "string", "doc": "Date and time (UT) of notice creation yyyy-mm-ddThh:mm:ss.mmmZ"},
+       {"name": "AlertTense",              "type": {"name": "AlertTencseEnum", "type": "enum", "symbols": ["Current", "Archival", "Planned"]}}
        ]
   },
   {
@@ -61,10 +61,10 @@
   "type": "record",
   "name": "Temporal",
   "fields" : [
-     {"name": "TriggerTime",               "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm [UTC]"},
-     {"name": "ObservationStartTime",      "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm [UTC]"},
-     {"name": "ObservationStopTime",       "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmm [UTC]"},
-     {"name": "ObservationLivetime",       "type": "string",  "doc":     "units?? seconds?? hh:mm:ss.mmm ?? excel has string and float - I thought livetime was usually duration in seconds"}
+     {"name": "TriggerTime",               "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
+     {"name": "ObservationStartTime",      "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
+     {"name": "ObservationStopTime",       "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
+     {"name": "ObservationLivetime",       "type": "string",  "doc":     "ss.mmm [sec]"}
      ]
   },
   {
@@ -84,7 +84,7 @@
      {"name": "EllipseA",                  "type": "float",  "doc": "Semi-major axis [Deg]"},
      {"name": "EllipseB",                  "type": "float",  "doc": "Semi-minor axis [Deg]"},
      {"name": "EllipsePA",                 "type": "float",  "doc": "Position angle of the semi-minor axis [Deg]"},
-     {"name": "Ellipse????",               "type": "float",  "doc": "Error, containment percentage OR prob, d=90, projection='ARC', nest=False"},
+     {"name": "Ellipse",                   "type": "float",  "doc": "Error, containment percentage OR prob"},
      {"name": "Redshift",                  "type": "float",  "doc": "Value"},
      {"name": "RedshiftError",             "type": "float",  "doc": "Error"},
      {"name": "RedshiftType",              "type": {"name":  "RedshiftTypeEnum", "type": "enum", "symbols":["Spectroscopic", "Photometric"]}}, 
@@ -99,12 +99,12 @@
      {"name": "FAR",                                "type": "float",   "doc":  "False Alarm Rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event.  OR  the rate of background events that are like this alert that would be seen by IceCube per year."},
      {"name": "Rate",                               "type": "float",   "doc":  "Number of times per year that a fluctuation of this significance at this duration interval is expected to be seen [Sigma] OR significance level of the initial 'rate trigger'.  This is the signal/noise (ie number of sigma) of the rate-trigger detection"},
      {"name": "Image",                              "type": "float",   "doc":  "[Sigma]"},
-     {"name": "AstrophysicalProbability",           "type": "float",   "doc":  "GRB: P_{Astro}, GW: P_{Signalness}, OPTICAL: Real/Bogus"},
-     {"name": "ClassificationProbabilityClass",     "type": "string",  "doc":  "GRB: GRB, Long GRB, Short GRB, GW: BNS, NSBH, BBH, Mass Gap"},
-     {"name": "ClassificationProbabilityAssumption","type": "string",  "doc":  "P_{Astro} = 1, P_{GRB} = 1"},
-     {"name": "ClassificationProbability",          "type": "float",   "doc":  "17%, 84%, 16%,90%"},
-     {"name": "OtherProbabilityOption",             "type": { "type": "array", "items":   "string", "default": [], "doc": "GW: NS, Remnant"}},
-     {"name": "OtherProbability",                   "type": { "type": "array", "items":   "float", "default": [], "doc": "Percentages"}}
+     {"name": "AstrophysicalProbability",           "type": {"type": "map", "values": "float", "doc": "GRB: P_{Astro}, GW: P_{Signalness}, OPTICAL: Real/Bogus"}},
+     {"name": "ClassificationProbabilityClass",     "type": {"type": "map", "values": "float", "doc": "GRB: GRB, Long GRB, Short GRB, GW: BNS, NSBH, BBH, Mass Gap"}},
+     {"name": "ClassificationProbabilityAssumption","type": {"type": "map", "values": "float", "doc": "P_{Astro} = 1, P_{GRB} = 1"}},
+     {"name": "ClassificationProbability",          "type": {"type": "map", "values": "float", "doc": "17%, 84%, 16%, 90%"}},
+     {"name": "OtherProbabilityOption",             "type": {"type": "map", "values": "float", "doc": "GW: NS, Remnant"}},
+     {"name": "OtherProbability",                   "type": {"type": "map", "values": "float", "doc": "Percentages"}}
      ]
   },
   {
