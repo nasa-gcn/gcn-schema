@@ -1,0 +1,9 @@
+{
+    "type": "record",
+    "namespace": "foo.baf",
+    "name": "Bag",
+    "fields": [
+        {"name": "bat", "type": "foo.bar.Bat"},
+        {"name": "baz", "type": "foo.bar.Baz"}
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "type": "record",
+    "namespace": "foo.bar",
+    "name": "Baz",
+    "fields": [
+        {"name": "grue", "type": "long"},
+        {"name": "frobozz", "type": "float"}
+    ]
+}

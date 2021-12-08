@@ -1,0 +1,9 @@
+{
+    "type": "record",
+    "namespace": "foo.bar",
+    "name": "Bat",
+    "fields": [
+        {"name": "plugh", "type": "double"},
+        {"name": "xyzzy", "type": "string"}
+    ]
+}
