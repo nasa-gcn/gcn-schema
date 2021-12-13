@@ -1,0 +1,10 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.core.common",
+  "name": "Identifiers",
+  "fields" : [
+     {"name": "InstrumentID",              "type": "string",  "doc": "Trigger number or id number"},  
+     {"name": "InstrumentIDAlias",         "type": "string",  "doc": "Alernate id number"},  
+     {"name": "DataPage",                  "type": "string",  "doc": "URL of data files"}
+     ]
+  }

@@ -1,0 +1,15 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.grb",
+  "name": "Brightness",
+  "fields" : [
+     {"name": "Flux",                            "type": "float",  "doc": "Flow rate per unit area"},
+     {"name": "FluxError",                       "type": "float",  "doc": "1-sigma uncertainty in Flux field"},
+     {"name": "FluxEnergyRange",                 "type": "string", "doc": "Energy Range: 10 keV to 100 keV"},
+     {"name": "FluxInstrument",                  "type": "string", "doc": "Instrument:  varies from mission to mission"},
+     {"name": "Fluence",                         "type": "float",  "doc": "Value"},
+     {"name": "FluenceError",                    "type": "float",  "doc": "Error"},
+     {"name": "FluenceEnergyRange",              "type": "string", "doc": "Energy Range: the window in the energy scale, eg 10 keV to 100 keV"},
+     {"name": "FluenceInstrument",               "type": "string", "doc": "Instrument:  varies from mission to mission"}
+     ]
+  }

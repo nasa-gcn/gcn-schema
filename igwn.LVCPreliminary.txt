@@ -1,0 +1,91 @@
+
+SCHEMA NAMESPACE: gcn.notices.igwn.LVCPreliminary
+
+AlertInfo
+                             Stream   string    e.g. GCN/NOTICE
+                          AlertTime   string    Date and time (UT) of notice creation yyyy-mm-ddThh:mm:ss.mmmZ
+                         AlertTense     enum    [CURRENT ARCHIVAL PLANNED]
+
+AlertReporter
+                            Mission   string    Name of Mission or Telescope reporting the event
+                         Instrument   string    Name of the Instrument reporting the event
+                              Group   string    Name of the Group reporting the event
+                       RecordNumber      int    Packet serial number spanning all the messages that come from the s/c during a given trigger
+
+Observation
+                         ReportType   string    Was GCN Notice Type e.g. Fermi-GBM Alert etc
+                     SearchPipeline     enum    [ONBOARD_TRIGGER UNTARGETED_SEARCH TARGETED_SEARCH]
+                      MessengerType     enum    [ELECTROMAGNETIC NEUTRINO GRAVITATIONAL_WAVES]
+               RangeQualitativeType     enum    [PHOTOMETRIC_BANDS GAMMA_RAYS X_RAYS HIGH_ENERGY RADIO]
+              RangeQualitativeClass     enum    [U LOW_FREQUENCY]
+              RangeQuantitativeType     enum    [ENERGY FREQUENCY WAVELENGTH]
+             RangeQuantitativeUnits     enum    [KEV HZ NM]
+               RangeQuantitativeMin    float    Min quantitative value
+               RangeQuantitativeMax    float    Max quantitative value
+                      PointingUnits   string    Deghhmmss
+                         PointingRA    float    RA
+                        PointingDec    float    Dec
+                       PointingRoll    float    Roll
+                    ObservationType     enum    [TRIGGER LIGHTCURVE IMAGE SPECTRUM]
+
+Identifiers
+                       InstrumentID   string    Trigger number or id number
+                  InstrumentIDAlias   string    Alernate id number
+                           DataPage   string    URL of data files
+
+EventInfo
+                            EventID   string    Name of the event
+                          EventTime   string    Date and time of event
+                         EventAlias    array    0 or more alias event identfiers
+              ContributingReporters    array    Mission Instrument Group for each contributor
+
+EventTime
+                        TriggerTime   string    yyyy-mm-ddThh:mm:ss.mmmZ
+               ObservationStartTime   string    yyyy-mm-ddThh:mm:ss.mmmZ
+                ObservationStopTime   string    yyyy-mm-ddThh:mm:ss.mmmZ
+                ObservationLivetime   string    ss.mmm [sec]
+
+Location
+                         CircularRA    float    RA [J2000 Deg]
+                        CircularDec    float    Dec [J2000 Deg]
+                      CircularError    float    Error
+                  CircularErrorUnit   string    Units of error radius: arcsec arcmin deg
+                 CircularPercentage    float    Containment percentage
+                             Skymap   string    String containing the full healpix URL path
+                  ContainmentArea90    float    Value of 90% containment in square degrees
+                      EllipseFormat   string    Units of error radius: arcsec arcmin deg
+                          EllipseRA    float    RA [J2000 Deg]
+                         EllipseDec    float    Dec [J2000 Deg]
+                           EllipseA    float    Semi-major axis [Deg]
+                           EllipseB    float    Semi-minor axis [Deg]
+                          EllipsePA    float    Position angle of the semi-minor axis [Deg]
+                            Ellipse    float    Error containment percentage OR prob
+                           Redshift    float    Value
+                      RedshiftError    float    Error
+                       RedshiftType     enum    [SPECTROSCOPIC PHOTOMETRIC]
+                 LuminosityDistance    float    Value
+            LuminosityDistanceError    float    Error
+
+Statistics
+                                FAR    float    False Alarm Rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event. OR the rate of background events that are like this alert that would be seen by IceCube per year.
+                              Image    float    [Sigma]
+           AstrophysicalProbability      map    GRB: P_Astro GW: P_Signalness OPTICAL: Real/Bogus
+     ClassificationProbabilityClass      map    GRB: GRB Long GRB Short GRB GW: BNS NSBH BBH Mass Gap
+ClassificationProbabilityAssumption      map    P_Astro = 1 P_GRB = 1
+          ClassificationProbability      map    17% 84% 16% 90%
+             OtherProbabilityOption      map    GW: NS Remnant
+                   OtherProbability      map    Percentages
+
+Comments
+                           Comments   string    
+
+IGWNSpecifics
+                         Instrument    array    One or more of the following: LHO LLO Virgo Kagra
+                       InternalFlag  boolean    is this Internal only
+                        HardwareInj  boolean    is this a Hardware Injected event
+                          OpenAlert  boolean    is this an Open Alert
+                         Retraction  boolean    is this a Retraction
+                          GroupType   string    CBC Stochastic Burst Coherent Test External
+                         SearchType   string    AllSky LowMass HighMass GRB Supernova MDC LowMassSim AllSkyLong O2VirgoTest BBH IMBH SubGRB EarlyWarning SubGRBTargeted
+                     SearchPipeline   string    MBTAOnline CWB2G gstlal spiir HardwareInjection X Q Omega Ringdown Fermi Swift CWB SNEWS oLIB pycbc INTEGRAL AGILE
+                           Comments   string    

@@ -1,0 +1,137 @@
+
+SCHEMA NAMESPACE: gcn.notices.fermi.gbm.Alert
+
+AlertInfo
+                             Stream   string    e.g. GCN/NOTICE
+                          AlertTime   string    Date and time (UT) of notice creation yyyy-mm-ddThh:mm:ss.mmmZ
+                         AlertTense     enum    [CURRENT ARCHIVAL PLANNED]
+
+AlertReporter
+                            Mission   string    Name of Mission or Telescope reporting the event
+                         Instrument   string    Name of the Instrument reporting the event
+                              Group   string    Name of the Group reporting the event
+                       RecordNumber      int    Packet serial number spanning all the messages that come from the s/c during a given trigger
+
+Observation
+                         ReportType   string    Was GCN Notice Type e.g. Fermi-GBM Alert etc
+                     SearchPipeline     enum    [ONBOARD_TRIGGER UNTARGETED_SEARCH TARGETED_SEARCH]
+                      MessengerType     enum    [ELECTROMAGNETIC NEUTRINO GRAVITATIONAL_WAVES]
+               RangeQualitativeType     enum    [PHOTOMETRIC_BANDS GAMMA_RAYS X_RAYS HIGH_ENERGY RADIO]
+              RangeQualitativeClass     enum    [U LOW_FREQUENCY]
+              RangeQuantitativeType     enum    [ENERGY FREQUENCY WAVELENGTH]
+             RangeQuantitativeUnits     enum    [KEV HZ NM]
+               RangeQuantitativeMin    float    Min quantitative value
+               RangeQuantitativeMax    float    Max quantitative value
+                      PointingUnits   string    Deghhmmss
+                         PointingRA    float    RA
+                        PointingDec    float    Dec
+                       PointingRoll    float    Roll
+                    ObservationType     enum    [TRIGGER LIGHTCURVE IMAGE SPECTRUM]
+
+Identifiers
+                       InstrumentID   string    Trigger number or id number
+                  InstrumentIDAlias   string    Alernate id number
+                           DataPage   string    URL of data files
+
+EventInfo
+                            EventID   string    Name of the event
+                          EventTime   string    Date and time of event
+                         EventAlias    array    0 or more alias event identfiers
+              ContributingReporters    array    Mission Instrument Group for each contributor
+
+EventTime
+                        TriggerTime   string    yyyy-mm-ddThh:mm:ss.mmmZ
+               ObservationStartTime   string    yyyy-mm-ddThh:mm:ss.mmmZ
+                ObservationStopTime   string    yyyy-mm-ddThh:mm:ss.mmmZ
+                ObservationLivetime   string    ss.mmm [sec]
+
+Location
+                         CircularRA    float    RA [J2000 Deg]
+                        CircularDec    float    Dec [J2000 Deg]
+                      CircularError    float    Error
+                  CircularErrorUnit   string    Units of error radius: arcsec arcmin deg
+                 CircularPercentage    float    Containment percentage
+                             Skymap   string    String containing the full healpix URL path
+                  ContainmentArea90    float    Value of 90% containment in square degrees
+                      EllipseFormat   string    Units of error radius: arcsec arcmin deg
+                          EllipseRA    float    RA [J2000 Deg]
+                         EllipseDec    float    Dec [J2000 Deg]
+                           EllipseA    float    Semi-major axis [Deg]
+                           EllipseB    float    Semi-minor axis [Deg]
+                          EllipsePA    float    Position angle of the semi-minor axis [Deg]
+                            Ellipse    float    Error containment percentage OR prob
+                           Redshift    float    Value
+                      RedshiftError    float    Error
+                       RedshiftType     enum    [SPECTROSCOPIC PHOTOMETRIC]
+                 LuminosityDistance    float    Value
+            LuminosityDistanceError    float    Error
+
+Statistics
+                                FAR    float    False Alarm Rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event. OR the rate of background events that are like this alert that would be seen by IceCube per year.
+                              Image    float    [Sigma]
+           AstrophysicalProbability      map    GRB: P_Astro GW: P_Signalness OPTICAL: Real/Bogus
+     ClassificationProbabilityClass      map    GRB: GRB Long GRB Short GRB GW: BNS NSBH BBH Mass Gap
+ClassificationProbabilityAssumption      map    P_Astro = 1 P_GRB = 1
+          ClassificationProbability      map    17% 84% 16% 90%
+             OtherProbabilityOption      map    GW: NS Remnant
+                   OtherProbability      map    Percentages
+
+Comments
+                           Comments   string    
+
+Brightness
+                               Flux    float    Flow rate per unit area
+                          FluxError    float    1-sigma uncertainty in Flux field
+                    FluxEnergyRange   string    Energy Range: 10 keV to 100 keV
+                     FluxInstrument   string    Instrument: varies from mission to mission
+                            Fluence    float    Value
+                       FluenceError    float    Error
+                 FluenceEnergyRange   string    Energy Range: the window in the energy scale eg 10 keV to 100 keV
+                  FluenceInstrument   string    Instrument: varies from mission to mission
+
+Duration
+                                T90    float    Time duration of a transient event that has 90% has 5% already done then the 90% containment window start and then there is the remaining 5%
+                           T90Error    float    Uncertainty of the T90 duration window
+                      T90Instrument   string    Instrument: varies from mission to mission
+                                T50    float    similar to T90 this time if is for the 25% initial window 50% if the emission in the middle and then another 25% containment time length window
+                           T50Error    float    Uncertainty of the T50 duration window
+                      T50Instrument   string    Instrument: varies from mission to mission
+
+Spectral
+               SpectrumBestFitModel   string    Commonly used spectrum arrangements that are then fit to the given measured spectraum: single power law two power-law etc.
+                              Alpha    float    If allowing two power-law components then Alpha is the slope of the spectrum.
+                         AlphaError    float    Uncertainty of the Alpha parameter
+                              Epeak    float    Energy at the peak in the spectrum
+                         EpeakError    float    Uncertainty of the Epeak parameter
+                               Beta    float    Slope of the 2nd power-law component
+                          BetaError    float    Uncertainty of the Beta parameter
+                         Instrument   string    Uncertainty of the Alpha parameter
+                        EnergyRange   string    Energy range in keV
+                      HardnessRatio    float    
+       HardnessRatioEnergyRangeHigh   string    
+        HardnessRatioEnergyRangeLow   string    
+            HardnessRatioInstrument   string    
+
+Specifics
+                          TriggerID   string    For GCN this was also used for solution status bits
+                      LightCurveURL   string    String containing the full lightcurve URL
+                        EnergyRange   string    Energy range for this event
+                          Algorithm   string    Identifying which location_calculation algorithm was used for this event
+                      LightCurveURL   string    Sring containing the full lightcurve URL
+                           Comments   string    
+
+gbm
+                          Detectors   string    Which two of the 14 detectors that resulted in this event
+                             GRBPhi   string    Phi orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]
+                           GRBTheta   string    Theta orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]
+                          GRBZenith   string    Zenith orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]
+                  LocationAlgorithm   string    Version number of the Flt S/W Location Algorithm that was used to derive this RADec location for this event
+                        LocationURL   string    String containing the full location URL
+                      LightCurveURL   string    String containing the full lightcurve URL
+                      DataTimeScale    float    Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [sec]
+                         EarthAngle    float    Angle between the event direction and the center of the Earth [deg]
+                      SpectralClass     enum    [SOFT HARD]
+                          TypeClass     enum    [SHORT LONG]
+                        Reliability     long    Measure of confidence on the detection. It is a number from 1 to 10. 2=low 5=medium 8=high
+                     SolutionStatus    bytes    Flag bits on the type of solution that was found in the on-board image
+                           Comments   string    

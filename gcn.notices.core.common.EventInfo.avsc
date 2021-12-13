@@ -1,0 +1,11 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.core.common",
+  "name": "EventInfo",
+  "fields" : [
+     {"name": "EventID",                   "type": "string", "doc":   "Name of the event"},
+     {"name": "EventTime",                 "type": "string", "doc":   "Date and time of event"},
+     {"name": "EventAlias",                "type": { "type": "array", "items":   "string", "default": [], "doc": "0 or more alias event identfiers"}},
+     {"name": "ContributingReporters",     "type": { "type": "array",   "items":   "string", "default": [], "doc": "Mission, Instrument, Group for each contributor"}}
+     ]
+  }

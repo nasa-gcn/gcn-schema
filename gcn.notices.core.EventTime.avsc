@@ -1,0 +1,11 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.core",
+  "name": "EventTime",
+  "fields" : [
+     {"name": "TriggerTime",               "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
+     {"name": "ObservationStartTime",      "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
+     {"name": "ObservationStopTime",       "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
+     {"name": "ObservationLivetime",       "type": "string",  "doc":     "ss.mmm [sec]"}
+     ]
+  }

@@ -1,0 +1,21 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.fermi",
+  "name": "gbm",
+  "fields" : [
+     {"name": "Detectors",        "type": "string", "doc": "Which two of the 14 detectors that resulted in this event"},
+     {"name": "GRBPhi",           "type": "string", "doc": "Phi orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
+     {"name": "GRBTheta",         "type": "string", "doc": "Theta orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
+     {"name": "GRBZenith",        "type": "string", "doc": "Zenith orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
+     {"name": "LocationAlgorithm", "type": "string", "doc": "Version number of the Flt S/W Location Algorithm that was used to derive this RA,Dec location for this event"},
+     {"name": "LocationURL",      "type": "string", "doc": "String containing the full location URL"},
+     {"name": "LightCurveURL",    "type": "string", "doc": "String containing the full lightcurve URL"},
+     {"name": "DataTimeScale",    "type": "float",  "doc": "Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [sec]"},
+     {"name": "EarthAngle",       "type": "float",  "doc": "Angle between the event direction and the center of the Earth [deg]"},
+     {"name": "SpectralClass",    "type": {"name": "SpectralClassEnum", "type": "enum", "symbols": ["SOFT", "HARD"]}},
+     {"name": "TypeClass",        "type": {"name": "TypeClassEnum",     "type": "enum", "symbols": ["SHORT", "LONG"]}},
+     {"name": "Reliability",      "type": "long",   "doc": "Measure of confidence on the detection.  It is a number from 1 to 10. 2=low, 5=medium, 8=high"},
+     {"name": "SolutionStatus",   "type": "bytes",  "doc": "Flag bits on the type of solution that was found in the on-board image"},
+     {"name": "Comments",         "type": "string", "default": ""}
+     ]
+  }
