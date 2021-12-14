@@ -1,0 +1,28 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.swift",
+  "name": "uvot",
+  "fields" : [
+     {"name": "Filter",              "type": {"name": "FilterEnum", "type": "enum", "symbols": [ "BLOCKED", "UV_GRISM", "UVW2", "V", "UVM2", "VIS_GRISM", "UVW1", "U", "MAGNIFIER", "B", "WHITE", "UNKNOWN"]}},
+     {"name": "ExposureId",          "type": "int",    "doc": "Exposure_ID expressed in spacecraft seconds"},
+     {"name": "XOffset",             "type": "int",    "doc": "Coordinates of pixel_zero in the Image subarray expressed in detector coordinates (0-2095) [pixels]"},
+     {"name": "YOffset",             "type": "int",    "doc": "Coordinates of pixel_zero in the Image subarray expressed in detector coordinates (0-2095) [pixels]"},
+     {"name": "Width",               "type": "int",    "doc": "Size of the Image subarray expressed in detector coordinates (0-2095) [pixels]"},
+     {"name": "Height",              "type": "int",    "doc": "Size of the Image subarray expressed in detector coordinates (0-2095) [pixels]"},
+     {"name": "XGRBPos",             "type": "int",    "doc": "Position of the GRB in unbinned detector units [pixels]"},
+     {"name": "YGRBPos",             "type": "int",    "doc": "Position of the GRB in unbinned detector units [pixels]"},
+     {"name": "BinningIndex",        "type": "int",    "doc": "Four bits encoding the pixel binning, eg =0 means 1x1 binning (ie none), =1 mean 2x2 binning, =2 means 4x4 binning, up to =6 mean 64x64 binning"},
+     {"name": "BackgroundMean",      "type": "float",  "doc": "Mean value of the background level in the exposure"},
+     {"name": "NumStars",            "type": "int",    "doc": "Total number of stars in the source list"},
+     {"name": "XMax",                "type": "int",    "doc": "Maximum extent of the image window expressed in detector coordinates (0-2095) [pixels]"},
+     {"name": "YMax",                "type": "int",    "doc": "Maximum extent of the image window expressed in detector coordinates (0-2095) [pixels]"},
+     {"name": "DetectionThreshold",  "type": "int",    "doc": "Detection threshold used in this exposure.  The units are dn (digital number)"},
+     {"name": "PhotometryThreshold", "type": "int",    "doc": "Photometry threshold used in this exposure.  The units are dn (digital number)"},
+     {"name": "GRBMag",              "type": "float",  "doc": "Magnitude (in the specified filter) of the burst/afterglow [mag]"},
+     {"name": "GRBMagError",         "type": "float",  "doc": "Magnitude error (in the specified filter) of the burst/afterglow [mag]"},
+     {"name": "RegionSource",        "type": "string", "doc": "Indicates the source of the RA,Dec-location error circle that was searched to yield the limiting magnitude for the UVOT non-detection.  The values are: 0  undefined 1  BAT 2  XRT 3  Other"},
+     {"name": "MagLimit",            "type": "float",  "doc": "Lower limit magnitude (in the specified filter) of the burst observation (ie the afterglow has to be fainter than the mag_lim value) [mag]"},
+     {"name": "MagLimitSigma",       "type": "float",  "doc": "Lower limit magnitude (in the specified filter) of the burst observation (ie the afterglow has to be fainter than the mag_lim value) [sigma]"},
+     {"name": "Comments",            "type": "string", "default": ""}
+     ]
+  }
