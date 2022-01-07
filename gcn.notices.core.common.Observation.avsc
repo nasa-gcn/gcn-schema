@@ -3,19 +3,19 @@
   "namespace": "gcn.notices.core.common",
   "name": "Observation",
   "fields" : [
-     {"name": "ReportType",                "type": "string", "doc": "Was GCN Notice Type e.g. Fermi-GBM Alert, etc"},
-     {"name": "SearchPipeline",            "type": {"name": "SearchPipelineEnum", "type": "enum", "symbols": ["ONBOARD_TRIGGER", "UNTARGETED_SEARCH", "TARGETED_SEARCH"]}},
-     {"name": "MessengerType",             "type": {"name": "MessengerTypeEnum",  "type": "enum", "symbols": ["ELECTROMAGNETIC", "NEUTRINO", "GRAVITATIONAL_WAVES"]}},  
-     {"name": "RangeQualitativeType",      "type": {"name": "RangeQualTypeEnum",  "type": "enum", "symbols": ["PHOTOMETRIC_BANDS", "GAMMA_RAYS", "X_RAYS", "HIGH_ENERGY", "RADIO"]}},
-     {"name": "RangeQualitativeClass",     "type": {"name": "RangeQuanClassEnum", "type": "enum", "symbols": ["U", "LOW_FREQUENCY"]}},
-     {"name": "RangeQuantitativeType",     "type": {"name": "RangeQuanTypeEnum",  "type": "enum", "symbols": ["ENERGY", "FREQUENCY", "WAVELENGTH"]}},
-     {"name": "RangeQuantitativeUnits",    "type": {"name": "RangeQuanUnitsEnum", "type": "enum", "symbols": ["KEV", "HZ", "NM"]}},
-     {"name": "RangeQuantitativeMin",      "type": "float",  "doc": "Min quantitative value"},
-     {"name": "RangeQuantitativeMax",      "type": "float",  "doc": "Max quantitative value"},
-     {"name": "PointingUnits",             "type": "string", "doc": "Deg,hhmmss"},  
-     {"name": "PointingRA",                "type": "float",  "doc": "RA"},
-     {"name": "PointingDec",               "type": "float",  "doc": "Dec"},
-     {"name": "PointingRoll",              "type": "float",  "doc": "Roll"},
-     {"name": "ObservationType",           "type": {"name": "ObsTypeEnum", "type": "enum", "symbols": ["TRIGGER", "LIGHTCURVE", "IMAGE", "SPECTRUM"]}}
+     {"name": "report_type",                "type": "string", "doc": "Was GCN Notice Type e.g. Fermi-GBM Alert, etc"},
+     {"name": "search_pipeline",            "type": {"name": "SearchPipelineEnum", "type": "enum", "symbols": ["ONBOARD_TRIGGER", "UNTARGETED_SEARCH", "TARGETED_SEARCH"]}},
+     {"name": "messenger_type",             "type": {"name": "MessengerTypeEnum",  "type": "enum", "symbols": ["ELECTROMAGNETIC", "NEUTRINO", "GRAVITATIONAL_WAVES"]}},  
+     {"name": "range_qualitative_type",      "type": {"name": "RangeQualTypeEnum",  "type": "enum", "symbols": ["PHOTOMETRIC_BANDS", "GAMMA_RAYS", "X_RAYS", "HIGH_ENERGY", "RADIO"]}},
+     {"name": "range_qualitative_class",     "type": {"name": "RangeQuanClassEnum", "type": "enum", "symbols": ["U", "LOW_FREQUENCY"]}},
+     {"name": "range_quantitative_type",     "type": {"name": "RangeQuanTypeEnum",  "type": "enum", "symbols": ["ENERGY", "FREQUENCY", "WAVELENGTH"]}},
+     {"name": "range_quantitative_units",    "type": {"name": "RangeQuanUnitsEnum", "type": "enum", "symbols": ["KEV", "HZ", "NM"]}},
+     {"name": "range_quantitative_min",      "type": "float",  "doc": "Min quantitative value"},
+     {"name": "range_quantitative_max",      "type": "float",  "doc": "Max quantitative value"},
+     {"name": "pointing_units",             "type": "string", "doc": "Deg,hhmmss"},  
+     {"name": "pointing_ra",                "type": "float",  "doc": "RA"},
+     {"name": "pointing_dec",               "type": "float",  "doc": "Dec"},
+     {"name": "pointing_roll",              "type": "float",  "doc": "Roll"},
+     {"name": "observation_type",           "type": {"name": "ObsTypeEnum", "type": "enum", "symbols": ["TRIGGER", "LIGHTCURVE", "IMAGE", "SPECTRUM"]}}
      ]
   }

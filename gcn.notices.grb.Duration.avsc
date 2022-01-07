@@ -3,11 +3,11 @@
   "namespace": "gcn.notices.grb",
   "name": "Duration",
   "fields" : [
-     {"name": "T90",                             "type": "float",  "doc": "Time duration of a transient event that has 90% has 5% already done, then the 90% containment window start, and then there is the remaining 5%"},
-     {"name": "T90Error",                        "type": "float",  "doc": "Uncertainty of the T90 duration window"},
-     {"name": "T90Instrument",                   "type": "string", "doc": "Instrument: varies from mission to mission"},
-     {"name": "T50",                             "type": "float",  "doc": "similar to T90, this time if is for the 25% initial window, 50% if the emission in the middle, and then another 25% containment time length window"},
-     {"name": "T50Error",                        "type": "float",  "doc": "Uncertainty of the T50 duration window"},
-     {"name": "T50Instrument",                   "type": "string", "doc": "Instrument: varies from mission to mission"}
+     {"name": "t90",                 "type": "float",  "doc": "Time duration of a transient event that has 90% has 5% already done, then the 90% containment window start, and then there is the remaining 5%"},
+     {"name": "t90_error",           "type": "float",  "doc": "Uncertainty of the T90 duration window"},
+     {"name": "t90_instrument",      "type": "string", "doc": "Instrument: varies from mission to mission"},
+     {"name": "t50",                 "type": "float",  "doc": "similar to T90, this time if is for the 25% initial window, 50% if the emission in the middle, and then another 25% containment time length window"},
+     {"name": "t50_error",           "type": "float",  "doc": "Uncertainty of the T50 duration window"},
+     {"name": "t50_instrument",      "type": "string", "doc": "Instrument: varies from mission to mission"}
      ]
   }

@@ -3,14 +3,14 @@
   "namespace": "gcn.notices.igwn",
   "name": "IGWNSpecifics",
   "fields" : [
-     {"name": "Instrument",        "type": {"type": "array", "items": "string", "default": [], "doc": "One or more of the following: LHO, LLO, Virgo, Kagra"}},
-     {"name": "InternalFlag",      "type": "boolean", "default": false , "doc": "is this Internal only"},
-     {"name": "HardwareInj",       "type": "boolean", "default": false , "doc": "is this a Hardware Injected event"},
-     {"name": "OpenAlert",         "type": "boolean", "default": false , "doc": "is this an Open Alert"},
-     {"name": "Retraction",        "type": "boolean", "default": false , "doc": "is this a Retraction"},
-     {"name": "GroupType",         "type": "string",  "doc":    "CBC, Stochastic, Burst, Coherent, Test, External"},
-     {"name": "SearchType",        "type": "string",  "doc":    "AllSky, LowMass, HighMass, GRB, Supernova, MDC, LowMassSim, AllSkyLong, O2VirgoTest, BBH, IMBH, SubGRB, EarlyWarning, SubGRBTargeted"},
-     {"name": "SearchPipeline",    "type": "string",  "doc":    "MBTAOnline, CWB2G, gstlal, spiir, HardwareInjection, X, Q, Omega, Ringdown, Fermi, Swift, CWB, SNEWS, oLIB, pycbc, INTEGRAL, AGILE"},
-     {"name": "Comments",          "type": "string",  "default": ""}
+     {"name": "instrument",        "type": {"type": "array", "items": "string", "default": [], "doc": "One or more of the following: LHO, LLO, Virgo, Kagra"}},
+     {"name": "internal_flag",     "type": "boolean", "default": false , "doc": "is this Internal only"},
+     {"name": "hardware_inj",      "type": "boolean", "default": false , "doc": "is this a Hardware Injected event"},
+     {"name": "open_alert",        "type": "boolean", "default": false , "doc": "is this an Open Alert"},
+     {"name": "retraction",        "type": "boolean", "default": false , "doc": "is this a Retraction"},
+     {"name": "group_type",        "type": "string",  "doc":    "CBC, Stochastic, Burst, Coherent, Test, External"},
+     {"name": "search_type",       "type": "string",  "doc":    "AllSky, LowMass, HighMass, GRB, Supernova, MDC, LowMassSim, AllSkyLong, O2VirgoTest, BBH, IMBH, SubGRB, EarlyWarning, SubGRBTargeted"},
+     {"name": "search_pipeline",   "type": "string",  "doc":    "MBTAOnline, CWB2G, gstlal, spiir, HardwareInjection, X, Q, Omega, Ringdown, Fermi, Swift, CWB, SNEWS, oLIB, pycbc, INTEGRAL, AGILE"},
+     {"name": "comments",          "type": "string",  "default": ""}
      ]
   }

@@ -4,20 +4,20 @@
     "name": "alert",
     "type": "record",
     "fields": [
-        {"name": "alertinfo",  "type": "gcn.notices.core.common.AlertInfo"},
-        {"name": "alertreporter",  "type": "gcn.notices.core.common.AlertReporter"},
-        {"name": "observation",  "type": "gcn.notices.core.common.Observation"},
-        {"name": "identifiers",  "type": "gcn.notices.core.common.Identifiers"},
-        {"name": "eventinfo",  "type": "gcn.notices.core.common.EventInfo"},
-        {"name": "eventtime",  "type": "gcn.notices.core.EventTime"},
-        {"name": "location",  "type": "gcn.notices.core.Location"},
-        {"name": "statistics",  "type": "gcn.notices.core.Statistics"},
-        {"name": "comments",  "type": "gcn.notices.core.Comments"},
-        {"name": "grbbrightness", "type": "gcn.notices.grb.Brightness"},
-        {"name": "grbduration", "type": "gcn.notices.grb.Duration"},
-        {"name": "grbspectral", "type": "gcn.notices.grb.Spectral"},
-        {"name": "grbspecifics", "type": "gcn.notices.grb.Specifics"},
-        {"name": "batspecifics", "type": "gcn.notices.swift.bat"}
+        {"name": "alert_info",      "type": "gcn.notices.core.common.AlertInfo"},
+        {"name": "alert_reporter",  "type": "gcn.notices.core.common.AlertReporter"},
+        {"name": "observation",     "type": "gcn.notices.core.common.Observation"},
+        {"name": "identifiers",     "type": "gcn.notices.core.common.Identifiers"},
+        {"name": "event_info",      "type": "gcn.notices.core.common.EventInfo"},
+        {"name": "event_time",      "type": "gcn.notices.core.EventTime"},
+        {"name": "location",        "type": "gcn.notices.core.Location"},
+        {"name": "statistics",      "type": "gcn.notices.core.Statistics"},
+        {"name": "comments",        "type": "gcn.notices.core.Comments"},
+        {"name": "grb_brightness",  "type": "gcn.notices.grb.Brightness"},
+        {"name": "grb_duration",    "type": "gcn.notices.grb.Duration"},
+        {"name": "grb_spectral",    "type": "gcn.notices.grb.Spectral"},
+        {"name": "grb_specifics",   "type": "gcn.notices.grb.Specifics"},
+        {"name": "bat_specifics",   "type": "gcn.notices.swift.bat"}
      ]
   }
 ]

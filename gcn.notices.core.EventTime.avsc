@@ -3,9 +3,9 @@
   "namespace": "gcn.notices.core",
   "name": "EventTime",
   "fields" : [
-     {"name": "TriggerTime",               "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
-     {"name": "ObservationStartTime",      "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
-     {"name": "ObservationStopTime",       "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
-     {"name": "ObservationLivetime",       "type": "string",  "doc":     "ss.mmm [sec]"}
+     {"name": "trigger_time",               "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
+     {"name": "observation_start_time",     "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
+     {"name": "observation_stop_time",      "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
+     {"name": "observation_livetime",       "type": "string",  "doc":     "ss.mmm [sec]"}
      ]
   }

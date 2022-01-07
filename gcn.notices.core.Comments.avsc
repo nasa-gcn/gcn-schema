@@ -3,6 +3,6 @@
   "namespace": "gcn.notices.core",
   "name": "Comments",
   "fields" : [
-     {"name": "Comments", "type": "string", "default": ""}
+     {"name": "comments", "type": "string", "default": ""}
      ]
   }

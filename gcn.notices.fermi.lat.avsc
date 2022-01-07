@@ -3,19 +3,19 @@
   "namespace": "gcn.notices.fermi",
   "name": "lat",
   "fields" : [
-     {"name": "GRBPhi",           "type": "string", "doc": "Phi orientation of the location of the source in LAT instrument coordinates [deg]"},
-     {"name": "GRBTheta",         "type": "string", "doc": "Theta orientation of the location of the source in LAT instrument coordinates [deg]"},
-     {"name": "GRBZenith",        "type": "string", "doc": "Zenith orientation of the location of the source in LAT instrument coordinates [deg]"},
-     {"name": "LightCurveURL",    "type": "string", "doc": "String containing the full lightcurve URL"},
-     {"name": "DataTimeScale",    "type": "float",  "doc": "Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [sec]"},
-     {"name": "GRBIntensityTotal", "type": "int",    "doc": "Subset of the total number of events in the standard 4 energy bands that were used in the location calculation [cnts]"},
-     {"name": "GRBIntensity2",    "type": "int",    "doc": "Number of events in the 0.1-1 GeV band [cnts]"},
-     {"name": "GRBIntensity3",    "type": "int",    "doc": "Number of events in the 1-10 GeV band [cnts]"},
-     {"name": "GRBIntensity4",    "type": "int",    "doc": "Number of events in the 10-up GeV band [cnts]"},
-     {"name": "Significance",     "type": "float",  "doc": "Sqrt(TS) (with 2 dof) of the detection [sqrt(TS) 2 dof]"},
-     {"name": "SolutionStatus",   "type": "bytes",  "doc": "Flag bits on the type of solution that was found in the on-board image"},
-     {"name": "FirstPhoton",      "type": "float",  "doc": "UT seconds-of-day (SOD) of the first photon used in the location calculation [SOD]"},
-     {"name": "LastPhoton",       "type": "float",  "doc": "UT seconds-of-day (SOD) of the last photon used in the location calculation [SOD]"},
-     {"name": "Comments",         "type": "string", "default": ""}
+     {"name": "grb_phi",             "type": "string", "doc": "Phi orientation of the location of the source in LAT instrument coordinates [deg]"},
+     {"name": "grb_theta",           "type": "string", "doc": "Theta orientation of the location of the source in LAT instrument coordinates [deg]"},
+     {"name": "grb_zenith",          "type": "string", "doc": "Zenith orientation of the location of the source in LAT instrument coordinates [deg]"},
+     {"name": "lightcurve_url",      "type": "string", "doc": "String containing the full lightcurve URL"},
+     {"name": "data_timescale",      "type": "float",  "doc": "Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [sec]"},
+     {"name": "grb_intensity_total", "type": "int",    "doc": "Subset of the total number of events in the standard 4 energy bands that were used in the location calculation [cnts]"},
+     {"name": "grb_intensity2",      "type": "int",    "doc": "Number of events in the 0.1-1 GeV band [cnts]"},
+     {"name": "grb_intensity3",      "type": "int",    "doc": "Number of events in the 1-10 GeV band [cnts]"},
+     {"name": "grb_intensity4",      "type": "int",    "doc": "Number of events in the 10-up GeV band [cnts]"},
+     {"name": "significance",        "type": "float",  "doc": "Sqrt(TS) (with 2 dof) of the detection [sqrt(TS) 2 dof]"},
+     {"name": "solution_status",     "type": "bytes",  "doc": "Flag bits on the type of solution that was found in the on-board image"},
+     {"name": "first_photon",        "type": "float",  "doc": "UT seconds-of-day (SOD) of the first photon used in the location calculation [SOD]"},
+     {"name": "last_photon",         "type": "float",  "doc": "UT seconds-of-day (SOD) of the last photon used in the location calculation [SOD]"},
+     {"name": "comments",            "type": "string", "default": ""}
      ]
   }
