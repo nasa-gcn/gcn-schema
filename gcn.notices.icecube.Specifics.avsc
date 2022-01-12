@@ -1,0 +1,12 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.icecube",
+  "name": "Specifics",
+  "fields" : [
+     {"name": "stream",           "type": "int", "doc": "Index number identifying which analysis stream produced this trigger"},
+     {"name": "revision",         "type": "int", "doc": "Number of times this notice was revised"},
+     {"name": "delta_time",       "type": "float", "doc": "Time window of the burst [s]"},
+     {"name": "coincidence_pair", "type": {"name": "ConcidencePairEnum", "type": "enum", "symbols": ["IC_HAWC", "IC_SWIFT", "IC_HESE_EHE", "IC_FERMI", "OFU_ALERTS", "GFU_ALERTS", "HAWC_GRBLIKE_ALERT", "ANTARES_FERMI", "IC_GOLD_BRONZE"]}},
+     {"name": "energy",           "type": "float", "doc": "Energy of the neutrino [TeV] "}
+     ]
+  }

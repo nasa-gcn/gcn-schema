@@ -8,6 +8,8 @@
 #
 #         This should be replaced by the better python verson whenever it is completed.  
 #
+# MODS: 
+# 1/10/22 TBS Add section for handling null. 
 #
 use strict;
 use warnings;
@@ -67,6 +69,12 @@ sub read_avsc_file {
         } elsif ($subrow =~ /\bboolean\b/) {
            my $part7 = shift(@rest); 
            my $part8 = shift(@rest); 
+           printf "%35s %8s ",$part2, $part4;
+           print "   @rest\n"; 
+        } elsif ($subrow =~ /\bnull\b/) {
+           my $part7 = shift(@rest); 
+           ##my $part8 = shift(@rest); 
+           $part4 =~ s/\[//;
            printf "%35s %8s ",$part2, $part4;
            print "   @rest\n"; 
         } else {

@@ -12,10 +12,9 @@
      {"name": "range_quantitative_units",    "type": {"name": "RangeQuanUnitsEnum", "type": "enum", "symbols": ["KEV", "HZ", "NM"]}},
      {"name": "range_quantitative_min",      "type": "float",  "doc": "Min quantitative value"},
      {"name": "range_quantitative_max",      "type": "float",  "doc": "Max quantitative value"},
-     {"name": "pointing_units",             "type": "string", "doc": "Deg,hhmmss"},  
-     {"name": "pointing_ra",                "type": "float",  "doc": "RA"},
-     {"name": "pointing_dec",               "type": "float",  "doc": "Dec"},
-     {"name": "pointing_roll",              "type": "float",  "doc": "Roll"},
+     {"name": "pointing_ra",                "type": "float",  "doc": "RA [deg]"},
+     {"name": "pointing_dec",               "type": "float",  "doc": "Dec [deg]"},
+     {"name": "pointing_roll",              "type": "float",  "doc": "Roll [deg]"},
      {"name": "observation_type",           "type": {"name": "ObsTypeEnum", "type": "enum", "symbols": ["TRIGGER", "LIGHTCURVE", "IMAGE", "SPECTRUM"]}}
      ]
   }

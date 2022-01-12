@@ -10,7 +10,6 @@
      {"name": "retraction",        "type": "boolean", "default": false , "doc": "is this a Retraction"},
      {"name": "group_type",        "type": "string",  "doc":    "CBC, Stochastic, Burst, Coherent, Test, External"},
      {"name": "search_type",       "type": "string",  "doc":    "AllSky, LowMass, HighMass, GRB, Supernova, MDC, LowMassSim, AllSkyLong, O2VirgoTest, BBH, IMBH, SubGRB, EarlyWarning, SubGRBTargeted"},
-     {"name": "search_pipeline",   "type": "string",  "doc":    "MBTAOnline, CWB2G, gstlal, spiir, HardwareInjection, X, Q, Omega, Ringdown, Fermi, Swift, CWB, SNEWS, oLIB, pycbc, INTEGRAL, AGILE"},
-     {"name": "comments",          "type": "string",  "default": ""}
+     {"name": "search_pipeline",   "type": "string",  "doc":    "MBTAOnline, CWB2G, gstlal, spiir, HardwareInjection, X, Q, Omega, Ringdown, Fermi, Swift, CWB, SNEWS, oLIB, pycbc, INTEGRAL, AGILE"}
      ]
   }

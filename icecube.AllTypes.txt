@@ -1,5 +1,5 @@
 
-SCHEMA NAMESPACE: gcn.notices.igwn.LVCPreliminary
+SCHEMA NAMESPACE: gcn.notices.icecube.AllTypes
 
 AlertInfo
                              stream   string    e.g. GCN/NOTICE
@@ -56,10 +56,6 @@ Location
                      redshift_error    float    Error
                       redshift_type     enum    [SPECTROSCOPIC PHOTOMETRIC]
 
-Distance
-                luminosity_distance    float    ??????????
-          luminosity_distance_error    float    Error
-
 Statistics
                                 far    float    False Alarm Rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event. OR the rate of background events that are like this alert that would be seen by IceCube per year.
                               image    float    ?????????? [Sigma]
@@ -69,12 +65,9 @@ Statistics
 Comments
                            comments   string    
 
-IGWNSpecifics
-                         instrument    array    One or more of the following: LHO LLO Virgo Kagra
-                      internal_flag  boolean    is this Internal only
-                       hardware_inj  boolean    is this a Hardware Injected event
-                         open_alert  boolean    is this an Open Alert
-                         retraction  boolean    is this a Retraction
-                         group_type   string    CBC Stochastic Burst Coherent Test External
-                        search_type   string    AllSky LowMass HighMass GRB Supernova MDC LowMassSim AllSkyLong O2VirgoTest BBH IMBH SubGRB EarlyWarning SubGRBTargeted
-                    search_pipeline   string    MBTAOnline CWB2G gstlal spiir HardwareInjection X Q Omega Ringdown Fermi Swift CWB SNEWS oLIB pycbc INTEGRAL AGILE
+Specifics
+                             stream      int    Index number identifying which analysis stream produced this trigger
+                           revision      int    Number of times this notice was revised
+                         delta_time    float    Time window of the burst [s]
+                   coincidence_pair     enum    [IC_HAWC IC_SWIFT IC_HESE_EHE IC_FERMI OFU_ALERTS GFU_ALERTS HAWC_GRBLIKE_ALERT ANTARES_FERMI IC_GOLD_BRONZE]
+                             energy    float    Energy of the neutrino [TeV]

@@ -22,15 +22,14 @@ Observation
            range_quantitative_units     enum    [KEV HZ NM]
              range_quantitative_min    float    Min quantitative value
              range_quantitative_max    float    Max quantitative value
-                     pointing_units   string    Deghhmmss
-                        pointing_ra    float    RA
-                       pointing_dec    float    Dec
-                      pointing_roll    float    Roll
+                        pointing_ra    float    RA [deg]
+                       pointing_dec    float    Dec [deg]
+                      pointing_roll    float    Roll [deg]
                    observation_type     enum    [TRIGGER LIGHTCURVE IMAGE SPECTRUM]
 
 Identifiers
                       instrument_id   string    Trigger number or id number
-                instrument_id_alias   string    Alernate id number
+                instrument_id_alias   string    Alternate id number
                           data_page   string    URL of data files
 
 EventInfo
@@ -43,38 +42,25 @@ EventTime
                        trigger_time   string    yyyy-mm-ddThh:mm:ss.mmmZ
              observation_start_time   string    yyyy-mm-ddThh:mm:ss.mmmZ
               observation_stop_time   string    yyyy-mm-ddThh:mm:ss.mmmZ
-               observation_livetime   string    ss.mmm [sec]
+               observation_livetime   string    ss.mmm [s]
 
 Location
-                        circular_ra    float    RA [J2000 Deg]
-                       circular_dec    float    Dec [J2000 Deg]
-                     circular_error    float    Error
-                circular_error_unit   string    Units of error radius: arcsec arcmin deg
-                circular_percentage    float    Containment percentage
-                             skymap   string    String containing the full healpix URL path
-                containment_area_90    float    Value of 90% containment in square degrees
-                     ellipse_format   string    Units of error radius: arcsec arcmin deg
-                         ellipse_ra    float    RA [J2000 Deg]
-                        ellipse_dec    float    Dec [J2000 Deg]
-                          ellipse_a    float    Semi-major axis [Deg]
-                          ellipse_b    float    Semi-minor axis [Deg]
-                         ellipse_pa    float    Position angle of the semi-minor axis [Deg]
-                            ellipse    float    Error containment percentage OR prob
-                           redshift    float    Value
+                                 ra    float    ICRS right ascension [deg]
+                                dec    float    ICRS declination [deg]
+                                  a    float    Uncertainty ellipse semi-major axis [deg]
+                                  b    float    Uncertainty ellipse semi-minor axis or null if ellipse is a circle [deg]
+                                 pa    float    Position angle of semi-major axis [deg]
+                               prob    float    Containment probability [dimensionless 0-1]
+                             skymap   string    URL of HEALPix localization file
+                           redshift    float    displacement of spectal lines toward longer wavelengths [sigma]
                      redshift_error    float    Error
                       redshift_type     enum    [SPECTROSCOPIC PHOTOMETRIC]
-                luminosity_distance    float    Value
-          luminosity_distance_error    float    Error
 
 Statistics
                                 far    float    False Alarm Rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event. OR the rate of background events that are like this alert that would be seen by IceCube per year.
-                              image    float    [Sigma]
-          astrophysical_probability      map    GRB: P_Astro GW: P_Signalness OPTICAL: Real/Bogus
-   classification_probability_class      map    GRB: GRB Long GRB Short GRB GW: BNS NSBH BBH Mass Gap
-classification_probability_assumption      map    P_Astro = 1 P_GRB = 1
-         classification_probability      map    17% 84% 16% 90%
-           other_probability_option      map    GW: NS Remnant
-                  other_probability      map    Percentages
+                              image    float    ?????????? [Sigma]
+                     classification      map    Dictionary mapping mutually exclusive source classes to probabilities between 0 and 1. The sum of all values must be 1.
+                         properties      map    Dictionary of binary classifiers. Each entry is between 0 and 1.
 
 Comments
                            comments   string    
@@ -107,10 +93,10 @@ Spectral
                          beta_error    float    Uncertainty of the Beta parameter
                          instrument   string    Uncertainty of the Alpha parameter
                        energy_range   string    Energy range in keV
-                     hardness_ratio    float    
-   hardness_ratio_energy_range_high   string    
-    hardness_ratio_energy_range_low   string    
-          hardness_ratio_instrument   string    
+                     hardness_ratio    float    ??????????
+   hardness_ratio_energy_range_high   string    ??????????
+    hardness_ratio_energy_range_low   string    ??????????
+          hardness_ratio_instrument   string    ??????????
 
 Specifics
                          trigger_id   string    For GCN this was also used for solution status bits
@@ -118,7 +104,6 @@ Specifics
                        energy_range   string    Energy range for this event
                           algorithm   string    Identifying which location_calculation algorithm was used for this event
                      lightcurve_url   string    Sring containing the full lightcurve URL
-                           comments   string    
 
 xrt
                                tam0    float    Tam_x/y_1/2 are the positions of the TAM (Telescope Alignment Monitor) in the 1st and 2nd images [pixels]
@@ -136,11 +121,12 @@ xrt
                      centroid_y_raw      int    Iraw_x/y are the row/column numbers (in units of CCD pixels) of the center of the 51x51 pixel image that is this 'postage-stamp' subarray of the whole CCD
                                roll    float    Roll angle of the spacecraft [deg]
                                gain      int    Gain of the amplifier used during the readout of the CCD. The value will be 1 2 4 8 or 16. If the gain is greater than 1 then the object in the image is likely due to a cosmic ray and not due to a GRB afterglow
-                      exposure_time    float    Nominal exposure time for this image [sec]
+                      exposure_time    float    Nominal exposure time for this image [s]
                    grb_pos_in_xrt_y    float    GRB_in_xrt_y/z is the GRB x-ray afterglow position in XRT coordinates [pixels]
                    grb_pos_in_xrt_z    float    GRB_in_xrt_y/z is the GRB x-ray afterglow position in XRT coordinates [pixels]
-                  lc_stop_date_time   string    Truncated Julian Day eg. TJD=13370 is 01 Jan 2005 and UT seconds-of-day (SOD) of the last CCD integration in the lightcurve accumulation.
-                         delta_time    float    Delta Time [sec]
+                       lc_stop_date      int    Truncated Julian Day of the last CCD integration in the lightcurve accumulation.
+                       lc_stop_time      int    UT seconds-of-day (SOD) of the last CCD integration in the lightcurve accumulation.
+                         delta_time    float    Delta Time [s]
                      num_valid_bins      int    Number of valid bins in the collected lightcurve (0-100).
                      centroid_count      int    Calculated number of events in the centroid [counts]
                  min_centroid_count      int    Minimum number of events needed to calculate a proper centroid (ie a proper position) [counts]
@@ -149,7 +135,7 @@ xrt
                            ph2_iter      int    Number of iterations used in Phase 2 of the search algorithm
                        max_ph2_iter      int    Maximum number of iterations allowed in Phase 2 of the search algorithm
                          error_code      int    Error code value for why a position was not found. The values are: 1=no source found in image 2=algorithm did not converge 3=standard deviation too large and 0xFFF=general error
-                sper_stop_date_time   string    Truncated Julian Day eg. TJD=13370 is 01 Jan 2005 and UT seconds-of-day (SOD) of the stop date and time of the Swift-BAT transient trigger.
+                     sper_stop_date      int    Truncated Julian Day of the stop date of the Swift-BAT transient trigger.
+                     sper_stop_time      int    UT seconds-of-day (SOD) of the stop time of the Swift-BAT transient trigger.
                         num_packets      int    Number of packets in the integration
                   num_photon_events      int    Number of photon events in the integration
-                           comments   string    

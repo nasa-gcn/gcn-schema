@@ -12,9 +12,9 @@
      {"name": "beta_error",                        "type": "float",  "doc": "Uncertainty of the Beta parameter"},
      {"name": "instrument",                        "type": "string", "doc": "Uncertainty of the Alpha parameter"},
      {"name": "energy_range",                      "type": "string", "doc": "Energy range in keV"},
-     {"name": "hardness_ratio",                    "type": "float",  "doc": ""},
-     {"name": "hardness_ratio_energy_range_high",  "type": "string", "doc": ""},
-     {"name": "hardness_ratio_energy_range_low",   "type": "string", "doc": ""},
-     {"name": "hardness_ratio_instrument",         "type": "string", "doc": ""}
+     {"name": "hardness_ratio",                    "type": "float",  "doc": "??????????"},
+     {"name": "hardness_ratio_energy_range_high",  "type": "string", "doc": "??????????"},
+     {"name": "hardness_ratio_energy_range_low",   "type": "string", "doc": "??????????"},
+     {"name": "hardness_ratio_instrument",         "type": "string", "doc": "??????????"}
      ]
   }

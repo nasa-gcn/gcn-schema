@@ -22,15 +22,14 @@ Observation
            range_quantitative_units     enum    [KEV HZ NM]
              range_quantitative_min    float    Min quantitative value
              range_quantitative_max    float    Max quantitative value
-                     pointing_units   string    Deghhmmss
-                        pointing_ra    float    RA
-                       pointing_dec    float    Dec
-                      pointing_roll    float    Roll
+                        pointing_ra    float    RA [deg]
+                       pointing_dec    float    Dec [deg]
+                      pointing_roll    float    Roll [deg]
                    observation_type     enum    [TRIGGER LIGHTCURVE IMAGE SPECTRUM]
 
 Identifiers
                       instrument_id   string    Trigger number or id number
-                instrument_id_alias   string    Alernate id number
+                instrument_id_alias   string    Alternate id number
                           data_page   string    URL of data files
 
 EventInfo
@@ -43,38 +42,25 @@ EventTime
                        trigger_time   string    yyyy-mm-ddThh:mm:ss.mmmZ
              observation_start_time   string    yyyy-mm-ddThh:mm:ss.mmmZ
               observation_stop_time   string    yyyy-mm-ddThh:mm:ss.mmmZ
-               observation_livetime   string    ss.mmm [sec]
+               observation_livetime   string    ss.mmm [s]
 
 Location
-                        circular_ra    float    RA [J2000 Deg]
-                       circular_dec    float    Dec [J2000 Deg]
-                     circular_error    float    Error
-                circular_error_unit   string    Units of error radius: arcsec arcmin deg
-                circular_percentage    float    Containment percentage
-                             skymap   string    String containing the full healpix URL path
-                containment_area_90    float    Value of 90% containment in square degrees
-                     ellipse_format   string    Units of error radius: arcsec arcmin deg
-                         ellipse_ra    float    RA [J2000 Deg]
-                        ellipse_dec    float    Dec [J2000 Deg]
-                          ellipse_a    float    Semi-major axis [Deg]
-                          ellipse_b    float    Semi-minor axis [Deg]
-                         ellipse_pa    float    Position angle of the semi-minor axis [Deg]
-                            ellipse    float    Error containment percentage OR prob
-                           redshift    float    Value
+                                 ra    float    ICRS right ascension [deg]
+                                dec    float    ICRS declination [deg]
+                                  a    float    Uncertainty ellipse semi-major axis [deg]
+                                  b    float    Uncertainty ellipse semi-minor axis or null if ellipse is a circle [deg]
+                                 pa    float    Position angle of semi-major axis [deg]
+                               prob    float    Containment probability [dimensionless 0-1]
+                             skymap   string    URL of HEALPix localization file
+                           redshift    float    displacement of spectal lines toward longer wavelengths [sigma]
                      redshift_error    float    Error
                       redshift_type     enum    [SPECTROSCOPIC PHOTOMETRIC]
-                luminosity_distance    float    Value
-          luminosity_distance_error    float    Error
 
 Statistics
                                 far    float    False Alarm Rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event. OR the rate of background events that are like this alert that would be seen by IceCube per year.
-                              image    float    [Sigma]
-          astrophysical_probability      map    GRB: P_Astro GW: P_Signalness OPTICAL: Real/Bogus
-   classification_probability_class      map    GRB: GRB Long GRB Short GRB GW: BNS NSBH BBH Mass Gap
-classification_probability_assumption      map    P_Astro = 1 P_GRB = 1
-         classification_probability      map    17% 84% 16% 90%
-           other_probability_option      map    GW: NS Remnant
-                  other_probability      map    Percentages
+                              image    float    ?????????? [Sigma]
+                     classification      map    Dictionary mapping mutually exclusive source classes to probabilities between 0 and 1. The sum of all values must be 1.
+                         properties      map    Dictionary of binary classifiers. Each entry is between 0 and 1.
 
 Comments
                            comments   string    
@@ -107,10 +93,10 @@ Spectral
                          beta_error    float    Uncertainty of the Beta parameter
                          instrument   string    Uncertainty of the Alpha parameter
                        energy_range   string    Energy range in keV
-                     hardness_ratio    float    
-   hardness_ratio_energy_range_high   string    
-    hardness_ratio_energy_range_low   string    
-          hardness_ratio_instrument   string    
+                     hardness_ratio    float    ??????????
+   hardness_ratio_energy_range_high   string    ??????????
+    hardness_ratio_energy_range_low   string    ??????????
+          hardness_ratio_instrument   string    ??????????
 
 Specifics
                          trigger_id   string    For GCN this was also used for solution status bits
@@ -118,15 +104,14 @@ Specifics
                        energy_range   string    Energy range for this event
                           algorithm   string    Identifying which location_calculation algorithm was used for this event
                      lightcurve_url   string    Sring containing the full lightcurve URL
-                           comments   string    
 
 bat
                       grb_intensity      int    Number of events (burst+background events) during the 'integ_time' time interval of the successful trigger criterion
                      grb_image_peak      int    Height of the peak in the sky-image plane (ie the result of the FFT MaskConvolution InvFFT calculation). The units are counts after a multiplicative factor of about 0.5-0.7
                       trigger_index      int    Index value (row_number in the BAT on-board flight s/w table) of the trigger criteria that was the highest-significance successful trigger
                background_intensity      int    Total number of events in the time interval used for the background subtraction of the detector_rate_map (used for the image calc)[cnts]
-                    background_time      int    Starting time of the background interval [SOD]
-                background_duration      int    Duration of the background interval [sec]
+                    background_time      int    Starting time (seconds of day) of the background interval [s]
+                background_duration      int    Duration of the background interval [s]
                   rate_significance    float    Significance level of the initial 'rate trigger'. This is the signal/noise (ie number of sigma) of the rate-trigger detection [sigma]
                  image_significance    float    Significance level of the peak in the FFT image plane. This is the signal/noise (ie number of sigma) of the grb peak detection [sigma]
                             grb_phi   string    Phi orientation of GRB/Transient instrument coordinates of the trigger [deg]
@@ -136,12 +121,12 @@ bat
                     at_slew_request  boolean    Is this burst of sufficient merit to request a s/c slew
                               merit    float    Total calculated value for the given burst. It is a fl.pt. quantity which can theoretically range from -infinity to +infinity but given normal operations we expect it to range from about -100 to +300. And for the first 6-12 months of flight-ops it will be forced to be a constant value of 100 for all bursts
                          slew_query      int    Return code from the s/c for the given slew_request. If value is zero then the slew will be executed by the s/c; if non-zero then slew will not be executed. The non-zero values are: 1 Sun constraint 2 Earth_limb constraint 3 Moon constraint 4 Ram_vector constraint 5 invalid slew_request parameter
-                          wait_time    float    Number of seconds until the target becomes viewable. A value of zero means that the spacecraft will slew immediately -- ie no waiting [sec]
+                          wait_time    float    Number of seconds until the target becomes viewable. A value of zero means that the spacecraft will slew immediately -- ie no waiting [s]
                       bat_inst_mode    bytes    Configuration field for the BAT Instrument
                       xrt_inst_mode    bytes    Configuration field for the XRT Instrument
                      uvot_inst_mode    bytes    Configuration field for the UVOT Instrument
                           crab_flux    float    Current intensity of the source object in mCrab units [mCrab]
-                      baseline_flux    float    Baseline intensity of the source before the transient outburst occurred [cnts/cm2/sec]
+                      baseline_flux    float    Baseline intensity of the source before the transient outburst occurred [cnts/cm2/s]
                      sampling_index     enum    [ORBITAL DAILY]
                      source_type_id     enum    [TEST_BLANK_SKYUNKNOWN_SRCKNOWN_SRCPROVISIONAL_SOURCE]
                           longitude    float    Longitude of the s/c at the time of the notice [deg]
@@ -149,4 +134,3 @@ bat
                         target_name   string    Name of the object that the sc will be observing next. The name is chosen by the science planners at the MOC. The name does not always fit the IAU standard naming convention (due to limitations in the planning s/w)
                       target_number      int    Target ID number
                      catalog_number      int    Catalog number in the on-board catalog for sources that match a known source in the on-board catalog (Typically it is a number in the low 10000s 12000s or 15000s)
-                           comments   string    

@@ -1,0 +1,19 @@
+[
+  {
+    "namespace": "gcn.notices.calet",
+    "name": "AllTypes",
+    "type": "record",
+    "fields": [
+        {"name": "alert_info",        "type": "gcn.notices.core.common.AlertInfo"},
+        {"name": "alert_reporter",    "type": "gcn.notices.core.common.AlertReporter"},
+        {"name": "observation",       "type": "gcn.notices.core.common.Observation"},
+        {"name": "identifiers",       "type": "gcn.notices.core.common.Identifiers"},
+        {"name": "event_info",        "type": "gcn.notices.core.common.EventInfo"},
+        {"name": "event_time",        "type": "gcn.notices.core.EventTime"},
+        {"name": "location",          "type": "gcn.notices.core.Location"},
+        {"name": "statistics",        "type": "gcn.notices.core.Statistics"},
+        {"name": "comments",          "type": "gcn.notices.core.Comments"},
+        {"name": "calet_specifics",   "type": "gcn.notices.calet.Specifics"}
+     ]
+  }
+]

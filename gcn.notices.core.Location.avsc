@@ -3,24 +3,15 @@
   "namespace": "gcn.notices.core",
   "name": "Location",
   "fields" : [
-     {"name": "circular_ra",                "type": "float",  "doc": "RA [J2000 Deg]"},
-     {"name": "circular_dec",               "type": "float",  "doc": "Dec [J2000 Deg]"},
-     {"name": "circular_error",             "type": "float",  "doc": "Error"},
-     {"name": "circular_error_unit",         "type": "string", "doc": "Units of error radius: arcsec, arcmin, deg"},  
-     {"name": "circular_percentage",        "type": "float",  "doc": "Containment percentage"},
-     {"name": "skymap",                    "type": "string", "doc": "String containing the full healpix URL path"},  
-     {"name": "containment_area_90",         "type": "float",  "doc": "Value of 90% containment in square degrees"},
-     {"name": "ellipse_format",             "type": "string", "doc": "Units of error radius: arcsec, arcmin, deg"},  
-     {"name": "ellipse_ra",                 "type": "float",  "doc": "RA [J2000 Deg]"},
-     {"name": "ellipse_dec",                "type": "float",  "doc": "Dec [J2000 Deg]"},
-     {"name": "ellipse_a",                  "type": "float",  "doc": "Semi-major axis [Deg]"},
-     {"name": "ellipse_b",                  "type": "float",  "doc": "Semi-minor axis [Deg]"},
-     {"name": "ellipse_pa",                 "type": "float",  "doc": "Position angle of the semi-minor axis [Deg]"},
-     {"name": "ellipse",                   "type": "float",  "doc": "Error, containment percentage OR prob"},
-     {"name": "redshift",                  "type": "float",  "doc": "Value"},
-     {"name": "redshift_error",             "type": "float",  "doc": "Error"},
-     {"name": "redshift_type",              "type": {"name":  "RedshiftTypeEnum", "type": "enum", "symbols": ["SPECTROSCOPIC", "PHOTOMETRIC"]}}, 
-     {"name": "luminosity_distance",        "type": "float",  "doc": "Value"},
-     {"name": "luminosity_distance_error",   "type": "float",  "doc": "Error"}
-      ]
+     {"name": "ra",                "type": ["float", "null"],  "doc": "ICRS right ascension [deg]"},
+     {"name": "dec",               "type": ["float", "null"],  "doc": "ICRS declination [deg]"},
+     {"name": "a",                 "type": ["float", "null"],  "doc": "Uncertainty ellipse semi-major axis [deg]"},
+     {"name": "b",                 "type": ["float", "null"], "doc": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"},
+     {"name": "pa",                "type": ["float", "null"], "doc": "Position angle of semi-major axis [deg]"},
+     {"name": "prob",              "type": ["float", "null"],  "doc": "Containment probability [dimensionless, 0-1]"},
+     {"name": "skymap",            "type": ["string", "null"], "doc": "URL of HEALPix localization file"}, 
+     {"name": "redshift",          "type": "float",  "doc": "displacement of spectal lines toward longer wavelengths [sigma]"},
+     {"name": "redshift_error",    "type": "float",  "doc": "Error"},
+     {"name": "redshift_type",     "type": {"name":  "RedshiftTypeEnum", "type": "enum", "symbols": ["SPECTROSCOPIC", "PHOTOMETRIC"]}} 
+     ]
   }

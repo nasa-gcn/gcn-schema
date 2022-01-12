@@ -7,7 +7,6 @@
      {"name": "lightcurve_url",   "type": "string",  "doc": "String containing the full lightcurve URL"},
      {"name": "energy_range",     "type": "string",  "doc": "Energy range for this event"},
      {"name": "algorithm",        "type": "string",  "doc": "Identifying which location_calculation algorithm was used for this event"},
-     {"name": "lightcurve_url",   "type": "string",  "doc": "Sring containing the full lightcurve URL"},
-     {"name": "comments",         "type": "string", "default": ""}
+     {"name": "lightcurve_url",   "type": "string",  "doc": "Sring containing the full lightcurve URL"}
      ]
   }

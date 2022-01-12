@@ -1,0 +1,9 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.calet",
+  "name": "Specifics",
+  "fields" : [
+     {"name": "background_time",      "type": "int",    "doc": "Starting time of the background interval in seconds of day [s]."},
+     {"name": "background_duration",  "type": "int",    "doc": "Duration of the background interval [s]."}
+     ]
+  }

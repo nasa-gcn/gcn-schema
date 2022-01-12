@@ -11,6 +11,7 @@
         {"name": "event_info",     "type": "gcn.notices.core.common.EventInfo"},
         {"name": "event_time",     "type": "gcn.notices.core.EventTime"},
         {"name": "location",       "type": "gcn.notices.core.Location"},
+        {"name": "distance",       "type": "gcn.notices.core.Distance"},
         {"name": "statistics",     "type": "gcn.notices.core.Statistics"},
         {"name": "comments",       "type": "gcn.notices.core.Comments"},
         {"name": "igwn_specifics", "type": "gcn.notices.igwn.IGWNSpecifics"}

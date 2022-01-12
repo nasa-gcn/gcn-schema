@@ -18,11 +18,12 @@
      {"name": "centroid_y_raw",      "type": "int",    "doc": "Iraw_x/y are the row/column numbers (in units of CCD pixels) of the center of the 51x51 pixel image that is this 'postage-stamp' subarray of the whole CCD"},
      {"name": "roll",                "type": "float",  "doc": "Roll angle of the spacecraft [deg]"},
      {"name": "gain",                "type": "int",    "doc": "Gain of the amplifier used during the readout of the CCD. The value will be 1, 2, 4, 8, or 16.  If the gain is greater than 1, then the object in the image is likely due to a cosmic ray, and not due to a GRB afterglow"},
-     {"name": "exposure_time",       "type": "float",  "doc": "Nominal exposure time for this image [sec]"},
+     {"name": "exposure_time",       "type": "float",  "doc": "Nominal exposure time for this image [s]"},
      {"name": "grb_pos_in_xrt_y",    "type": "float",  "doc": "GRB_in_xrt_y/z is the GRB x-ray afterglow position in XRT coordinates [pixels]"},
      {"name": "grb_pos_in_xrt_z",    "type": "float",  "doc": "GRB_in_xrt_y/z is the GRB x-ray afterglow position in XRT coordinates [pixels]"},
-     {"name": "lc_stop_date_time",   "type": "string", "doc": "Truncated Julian Day, eg. TJD=13370 is 01 Jan 2005 and UT seconds-of-day (SOD) of the last CCD integration in the lightcurve accumulation."},
-     {"name": "delta_time",          "type": "float",  "doc": "Delta Time [sec]"},
+     {"name": "lc_stop_date",        "type": "int",    "doc": "Truncated Julian Day of the last CCD integration in the lightcurve accumulation."},
+     {"name": "lc_stop_time",        "type": "int",    "doc": "UT seconds-of-day (SOD) of the last CCD integration in the lightcurve accumulation."},
+     {"name": "delta_time",          "type": "float",  "doc": "Delta Time [s]"},
      {"name": "num_valid_bins",      "type": "int",    "doc": "Number of valid bins in the collected lightcurve (0-100)."},
      {"name": "centroid_count",      "type": "int",    "doc": "Calculated number of events in the centroid, [counts]"},
      {"name": "min_centroid_count",  "type": "int",    "doc": "Minimum number of events needed to calculate a proper centroid (ie a proper position) [counts]"},
@@ -31,9 +32,9 @@
      {"name": "ph2_iter",            "type": "int",    "doc": "Number of iterations used in Phase 2 of the search algorithm"},
      {"name": "max_ph2_iter",        "type": "int",    "doc": "Maximum number of iterations allowed in Phase 2 of the search algorithm"},
      {"name": "error_code",          "type": "int",    "doc": "Error code value for why a position was not found.  The values are:  1=no source found in image, 2=algorithm did not converge, 3=standard deviation too large, and 0xFFF=general error"},
-     {"name": "sper_stop_date_time", "type": "string", "doc": "Truncated Julian Day, eg. TJD=13370 is 01 Jan 2005 and UT seconds-of-day (SOD) of the stop date and time of the Swift-BAT transient trigger."},
+     {"name": "sper_stop_date",      "type": "int",    "doc": "Truncated Julian Day of the stop date of the Swift-BAT transient trigger."},
+     {"name": "sper_stop_time",      "type": "int",    "doc": "UT seconds-of-day (SOD) of the stop time of the Swift-BAT transient trigger."},
      {"name": "num_packets",         "type": "int",    "doc": "Number of packets in the integration"},
-     {"name": "num_photon_events",   "type": "int",    "doc": "Number of photon events in the integration"},
-     {"name": "comments",            "type": "string", "default": ""}
+     {"name": "num_photon_events",   "type": "int",    "doc": "Number of photon events in the integration"}
      ]
   }
