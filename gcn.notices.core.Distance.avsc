@@ -3,7 +3,7 @@
   "namespace": "gcn.notices.core",
   "name": "Distance",
   "fields" : [
-     {"name": "luminosity_distance",        "type": "float",  "doc": "??????????"},
+     {"name": "luminosity_distance",        "type": "float",  "doc": "Luminosity distance [Mpc]"},
      {"name": "luminosity_distance_error",  "type": "float",  "doc": "Error"}
       ]
   }
