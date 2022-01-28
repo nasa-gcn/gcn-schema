@@ -1,0 +1,10 @@
+  {
+    "type": "record",
+    "namespace": "gcn.notices.core.common",
+    "name": "AlertInfo",
+    "fields" : [
+       {"name": "stream",                  "type": "string", "doc": "e.g. GCN/NOTICE"},
+       {"name": "alert_time",               "type": "string", "doc": "Date and time (UT) of notice creation yyyy-mm-ddThh:mm:ss.mmmZ"},
+       {"name": "alert_tense",              "type": {"name": "AlertTenseEnum", "type": "enum", "symbols": ["CURRENT", "ARCHIVAL", "PLANNED"]}}
+       ]
+  }
