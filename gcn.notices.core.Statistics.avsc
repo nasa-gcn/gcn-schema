@@ -3,7 +3,7 @@
   "namespace": "gcn.notices.core",
   "name": "Statistics",
   "fields" : [
-     {"name": "far",             "type": "float",   "doc":  "False Alarm Rate [Hz] the occurance rate of non-astrophysical events that are of the same intensity (significance) as the current event.  OR  the rate of background events that are like this alert that would be seen by IceCube per year."},
+     {"name": "far",             "type": "float",   "doc":  "False alarm rate: the rate of occurrence of non-astrophysical events that are of the same intensity or significance as the current event [Hz]"},
      {"name": "image",           "type": "float",   "doc":  "?????????? [Sigma]"},
      {"name": "classification",  "type": {"type": "map", "values": "float", "doc": "Dictionary mapping mutually exclusive source classes to probabilities between 0 and 1. The sum of all values must be 1."}},
      {"name": "properties",      "type": {"type": "map", "values": "float", "doc": "Dictionary of binary classifiers. Each entry is between 0 and 1."}}
