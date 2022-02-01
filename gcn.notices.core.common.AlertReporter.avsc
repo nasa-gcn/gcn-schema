@@ -5,7 +5,7 @@
     "fields" : [
        {"name": "mission",                 "type": "string", "doc": "Name of Mission or Telescope reporting the event"},
        {"name": "instrument",              "type": "string", "doc": "Name of the Instrument reporting the event"},
-       {"name": "group",                   "type": "string", "doc": "Name of the Group reporting the event"},
+       {"name": "author",                   "type": "string", "doc": "Name of the individual or entity responsible for the alert"},
        {"name": "record_number",           "type": "int",    "doc": "Packet serial number spanning all the messages that come from the s/c during a given trigger"}
        ]
   }
