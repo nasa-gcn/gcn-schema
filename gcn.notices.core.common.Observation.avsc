@@ -3,7 +3,6 @@
   "namespace": "gcn.notices.core.common",
   "name": "Observation",
   "fields" : [
-     {"name": "report_type",                "type": "string", "doc": "Was GCN Notice Type e.g. Fermi-GBM Alert, etc"},
      {"name": "search_pipeline",            "type": {"name": "SearchPipelineEnum", "type": "enum", "symbols": ["ONBOARD_TRIGGER", "UNTARGETED_SEARCH", "TARGETED_SEARCH"]}},
      {"name": "messenger_type",             "type": {"name": "MessengerTypeEnum",  "type": "enum", "symbols": ["ELECTROMAGNETIC", "NEUTRINO", "GRAVITATIONAL_WAVES"]}},  
      {"name": "range_qualitative_type",      "type": {"name": "RangeQualTypeEnum",  "type": "enum", "symbols": ["PHOTOMETRIC_BANDS", "GAMMA_RAYS", "X_RAYS", "HIGH_ENERGY", "RADIO"]}},
