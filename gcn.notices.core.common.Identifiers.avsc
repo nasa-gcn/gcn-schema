@@ -3,8 +3,8 @@
   "namespace": "gcn.notices.core.common",
   "name": "Identifiers",
   "fields" : [
-     {"name": "instrument_id",             "type": "string",  "doc": "Trigger number or id number"},  
-     {"name": "instrument_id_alias",       "type": "string",  "doc": "Alternate id number"},  
-     {"name": "data_page",                 "type": "string",  "doc": "URL of data files"}
+     {"name": "instrument_trigger_id",             "type": "string",            "doc": "Trigger number or id number"},  
+     {"name": "instrument_trigger_id_alternate",   "type": ["string", "null"],  "doc": "Alternate id number"},  
+     {"name": "data_archive_page",                 "type": ["string", "null"],  "doc": "URL of archived data files"}
      ]
   }

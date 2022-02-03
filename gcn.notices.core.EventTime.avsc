@@ -3,9 +3,9 @@
   "namespace": "gcn.notices.core",
   "name": "EventTime",
   "fields" : [
-     {"name": "trigger_time",               "type": "string",  "doc":     "Time of the trigger [ISO 8601]"},
-     {"name": "observation_start_time",     "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
-     {"name": "observation_stop_time",      "type": "string",  "doc":     "yyyy-mm-ddThh:mm:ss.mmmZ"},
-     {"name": "observation_livetime",       "type": "string",  "doc":     "ss.mmm [s]"}
+     {"name": "trigger_time",             "type": "string",            "doc":  "Time of the trigger [ISO 6801]"},
+     {"name": "observation_start_time",   "type": ["string", "null"],  "doc":  "Start time of the observation [ISO 6801]"},
+     {"name": "observation_stop_time",    "type": ["string", "null"],  "doc":  "Stop time of the observation [ISO 6801]"},
+     {"name": "observation_livetime",     "type": ["string", "null"],  "doc":  "Livetime of the trigger ss.mmm [s]"}
      ]
   }
