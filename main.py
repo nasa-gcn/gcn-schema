@@ -21,7 +21,7 @@ for x in (array):
      timeFile = json.load(d)
      fileLoader = FileSystemLoader("templates");
      env = Environment(loader=fileLoader);
-     rendered = env.get_template("tach.html.jinja").render(timeFile=timeFile,title="Tach")
+     rendered = env.get_template("tach.html.jinja").render(timeFile=timeFile,title=x)
 
   # Write the new html to a file
      output = "html/" + x + ".html" 

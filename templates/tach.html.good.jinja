@@ -15,9 +15,7 @@
       <ul id ="myUL">
        {% for key, value in timeFile.items() recursive %}
          {% if value is string %}
-           <li><span>{{ key }}:  <div class = value>{{ value }} </div> </span>
-         {% elif value is number %} 
-          <li><span>{{ key }}:  <div class = value>{{ value }} </div> </span> 
+         <li><span>{{ key }}:  <div class = value>{{ value }} </div> </span>
 	 {% else %} 
           {% set outer_loop = loop %}
           <li><span class ='caret'>{{ key }}</span>
