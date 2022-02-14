@@ -5,6 +5,5 @@
   "fields" : [
      {"name": "event_id",                   "type": "string", "doc":   "Name of the event"},
      {"name": "event_alias",                "type": { "type": "array", "items":   "string", "default": [], "doc": "0 or more alias event identfiers"}},
-     {"name": "contributing_reporters",     "type": { "type": "array", "items":   "string", "default": [], "doc": "Mission, Instrument, Author for each contributor"}}
      ]
   }
