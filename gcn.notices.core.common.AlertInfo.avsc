@@ -1,6 +1,6 @@
   {
     "type": "record",
-    "namespace": "gcn.notices.core.common",
+    "namespace": "gcn.notices.core",
     "name": "AlertInfo",
     "fields" : [
        {"name": "alert_time",               "type": "string", "doc": "Date and time of notice creation [UTC, ISO 8601]"},
