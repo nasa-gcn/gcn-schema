@@ -1,7 +1,7 @@
   {
   "type": "record",
   "namespace": "gcn.notices.core",
-  "name": "RedShift",
+  "name": "Redshift",
   "fields" : [
      {"name": "redshift",          "type": "float",  "doc": "displacement of spectal lines toward longer wavelengths [sigma]"},
      {"name": "redshift_error",    "type": "float",  "doc": "Error"},
