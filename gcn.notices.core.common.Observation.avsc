@@ -5,7 +5,6 @@
   "fields" : [
      {"name": "range_qualitative_type",     "type": {"name": "RangeQualTypeEnum",  "type": "enum", "symbols": ["PHOTOMETRIC_BANDS", "GAMMA_RAYS", "X_RAYS", "HIGH_ENERGY", "RADIO"]}},
      {"name": "range_qualitative_class",    "type": {"name": "RangeQuanClassEnum", "type": "enum", "symbols": ["U", "LOW_FREQUENCY"]}},
-     {"name": "range_quantitative_type",    "type": {"name": "RangeQuanTypeEnum",  "type": "enum", "symbols": ["ENERGY", "FREQUENCY", "WAVELENGTH"]}},
      {"name": "range_quantitative_units",   "type": {"name": "RangeQuanUnitsEnum", "type": "enum", "symbols": ["KEV", "HZ", "NM"]}},
      {"name": "range_quantitative_min",     "type": "float", "doc": "Min quantitative value"},
      {"name": "range_quantitative_max",     "type": "float", "doc": "Max quantitative value"},
