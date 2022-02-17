@@ -1,0 +1,12 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.core",
+  "name": "Statistics",
+  "fields" : [
+     {"name": "far",             "type": "float", "doc":  "False alarm rate: the rate of occurrence of non-astrophysical events that are of the same intensity or significance as the current event [Hz]"},
+     {"name": "rate_snr",        "type": "float", "doc":  "Rate signal to noise ratio [dimensionless]"},
+     {"name": "image_snr",       "type": "float", "doc":  "Image signal to noise ratio [dimensionless]"},
+     {"name": "classification",  "type": {"type": "map",  "values": "float", "doc": "Dictionary mapping mutually exclusive source classes to probabilities between 0 and 1, the sum of all values must be 1"}},
+     {"name": "properties",      "type": {"type": "map",  "values": "float", "doc": "Dictionary of binary classifiers, each entry is between 0 and 1"}}
+     ]
+  }
