@@ -1,14 +1,42 @@
-  {
+{
   "type": "record",
   "namespace": "gcn.notices.core",
   "name": "Location",
-  "fields" : [
-     {"name": "ra",                "type": ["float", "null"],  "doc": "ICRS right ascension [deg]"},
-     {"name": "dec",               "type": ["float", "null"],  "doc": "ICRS declination [deg]"},
-     {"name": "a",                 "type": ["float", "null"],  "doc": "Uncertainty ellipse semi-major axis [deg]"},
-     {"name": "b",                 "type": ["float", "null"],  "doc": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"},
-     {"name": "pa",                "type": ["float", "null"],  "doc": "Position angle of semi-major axis [deg]"},
-     {"name": "prob",              "type": ["float", "null"],  "doc": "Containment probability [dimensionless, 0-1]"},
-     {"name": "skymap",            "type": ["string", "null"], "doc": "URL of HEALPix localization file"} 
-     ]
-  }
+  "fields": [
+    {
+      "name": "ra",
+      "type": ["float", "null"],
+      "doc": "ICRS right ascension [deg]"
+    },
+    {
+      "name": "dec",
+      "type": ["float", "null"],
+      "doc": "ICRS declination [deg]"
+    },
+    {
+      "name": "a",
+      "type": ["float", "null"],
+      "doc": "Uncertainty ellipse semi-major axis [deg]"
+    },
+    {
+      "name": "b",
+      "type": ["float", "null"],
+      "doc": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"
+    },
+    {
+      "name": "pa",
+      "type": ["float", "null"],
+      "doc": "Position angle of semi-major axis [deg]"
+    },
+    {
+      "name": "prob",
+      "type": ["float", "null"],
+      "doc": "Containment probability [dimensionless, 0-1]"
+    },
+    {
+      "name": "skymap",
+      "type": ["string", "null"],
+      "doc": "URL of HEALPix localization file"
+    }
+  ]
+}

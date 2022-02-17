@@ -1,12 +1,32 @@
-  {
+{
   "type": "record",
   "namespace": "gcn.notices.core",
   "name": "Time",
-  "fields" : [
-     {"name": "event",             "type": ["string", "null"],            "doc":  "Time of the event [ISO 6801]"},
-     {"name": "trigger",             "type": ["string", "null"],            "doc":  "Time of the trigger [ISO 6801]"},
-     {"name": "observation_start",   "type": ["string", "null"],  "doc":  "Start time of the observation [ISO 6801]"},
-     {"name": "observation_stop",    "type": ["string", "null"],  "doc":  "Stop time of the observation [ISO 6801]"},
-     {"name": "observation_livetime",     "type": ["float", "null"],  "doc":  "Livetime of the trigger [s]"}
-     ]
-  }
+  "fields": [
+    {
+      "name": "event",
+      "type": ["string", "null"],
+      "doc": "Time of the event [ISO 6801]"
+    },
+    {
+      "name": "trigger",
+      "type": ["string", "null"],
+      "doc": "Time of the trigger [ISO 6801]"
+    },
+    {
+      "name": "observation_start",
+      "type": ["string", "null"],
+      "doc": "Start time of the observation [ISO 6801]"
+    },
+    {
+      "name": "observation_stop",
+      "type": ["string", "null"],
+      "doc": "Stop time of the observation [ISO 6801]"
+    },
+    {
+      "name": "observation_livetime",
+      "type": ["float", "null"],
+      "doc": "Livetime of the trigger [s]"
+    }
+  ]
+}

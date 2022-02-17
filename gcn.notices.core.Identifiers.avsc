@@ -1,10 +1,22 @@
-  {
+{
   "type": "record",
   "namespace": "gcn.notices.core",
   "name": "Identifiers",
-  "fields" : [
-     {"name": "instrument_trigger_id",             "type": "string",            "doc": "Trigger number or id number"},  
-     {"name": "instrument_trigger_id_alternate",   "type": ["string", "null"],  "doc": "Alternate id number"},  
-     {"name": "data_archive_page",                 "type": ["string", "null"],  "doc": "URL of archived data files"}
-     ]
-  }
+  "fields": [
+    {
+      "name": "instrument_trigger_id",
+      "type": "string",
+      "doc": "Trigger number or id number"
+    },
+    {
+      "name": "instrument_trigger_id_alternate",
+      "type": ["string", "null"],
+      "doc": "Alternate id number"
+    },
+    {
+      "name": "data_archive_page",
+      "type": ["string", "null"],
+      "doc": "URL of archived data files"
+    }
+  ]
+}
