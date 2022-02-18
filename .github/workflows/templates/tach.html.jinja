@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <title>Pretty Static - {{ title }}</title>
-  <LINK REL="StyleSheet"  HREF = '../css/tach.css' TYPE="text/css">
-   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-   <script language = 'JavaScript' type = 'text/javascript' src = '../js/tach.js'></script>
-</head>
-<body onload  = "foo()">
-   <div class ="container">
+{% extends "base.html.jinja" %}
+{% block content %}
+<div class ="container">
       <div class ="heading">
         <h1>{{ title }}</h1>   
       </div>
       <div class ="gallery">
       <ul id ="myUL">
-       {% for key, value in timeFile.items() recursive %}
-         {% if value is string %}
+       {% for key, value in tachFile.items() recursive %}
+         {% if value is string or value is number %}
            <li><span>{{ key }}:  <div class = value>{{ value }} </div> </span>
-         {% elif value is number %} 
-          <li><span>{{ key }}:  <div class = value>{{ value }} </div> </span> 
 	 {% else %} 
           {% set outer_loop = loop %}
           <li><span class ='caret'>{{ key }}</span>
@@ -43,7 +34,5 @@
      {% endfor %}
      </ul>
      </div>
-    </div>
-    {# a comment #}
-</body>
-</html>
+</div>
+{% endblock %}

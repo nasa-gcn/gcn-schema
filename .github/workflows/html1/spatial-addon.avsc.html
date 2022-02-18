@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Pretty Static - spatial-addon.avsc</title>
-  <LINK REL="StyleSheet"  HREF = '../css/tach.css' TYPE="text/css">
+   <title>spatial-addon.avsc</title>
+   <link rel="StyleSheet" href = '../css/tach.css' type="text/css">
    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
    <script language = 'JavaScript' type = 'text/javascript' src = '../js/tach.js'></script>
 </head>
-<body onload  = "foo()">
-   <div class ="container">
+<body onload = "convertToTree()">
+
+<div class ="container">
       <div class ="heading">
         <h1>spatial-addon.avsc</h1>   
       </div>
@@ -16,11 +17,11 @@
        
          
            <li><span>type:  <div class = value>record </div> </span>
-         
+	 
      
          
            <li><span>name:  <div class = value>spatial-addon </div> </span>
-         
+	 
      
           
           
@@ -33,7 +34,7 @@
                        
          
            <li><span>name:  <div class = value>sun </div> </span>
-         
+	 
      
           
           
@@ -43,11 +44,11 @@
                  
          
            <li><span>type:  <div class = value>record </div> </span>
-         
+	 
      
          
            <li><span>name:  <div class = value>Sun </div> </span>
-         
+	 
      
           
           
@@ -60,15 +61,15 @@
                        
          
            <li><span>name:  <div class = value>ra </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>right ascension of sun (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -78,15 +79,15 @@
                        
          
            <li><span>name:  <div class = value>dec </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>declination of sun (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -96,15 +97,15 @@
                        
          
            <li><span>name:  <div class = value>dist </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>angular distance between sun and source (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -114,15 +115,15 @@
                        
          
            <li><span>name:  <div class = value>hourangle </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>hour angle between sun and source (hours) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -145,7 +146,7 @@
                        
          
            <li><span>name:  <div class = value>moon </div> </span>
-         
+	 
      
           
           
@@ -155,11 +156,11 @@
                  
          
            <li><span>type:  <div class = value>record </div> </span>
-         
+	 
      
          
            <li><span>name:  <div class = value>Moon </div> </span>
-         
+	 
      
           
           
@@ -172,15 +173,15 @@
                        
          
            <li><span>name:  <div class = value>ra </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>right ascension of moon (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -190,15 +191,15 @@
                        
          
            <li><span>name:  <div class = value>dec </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>declination of moon (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -208,15 +209,15 @@
                        
          
            <li><span>name:  <div class = value>dist </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>angular distance between moon and source (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -226,15 +227,15 @@
                        
          
            <li><span>name:  <div class = value>illumination </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>illumination of the moon (percent) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -257,7 +258,7 @@
                        
          
            <li><span>name:  <div class = value>galactic </div> </span>
-         
+	 
      
           
           
@@ -267,11 +268,11 @@
                  
          
            <li><span>type:  <div class = value>record </div> </span>
-         
+	 
      
          
            <li><span>name:  <div class = value>Galactic </div> </span>
-         
+	 
      
           
           
@@ -284,15 +285,15 @@
                        
          
            <li><span>name:  <div class = value>lon </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>galactic longitude of source (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -302,15 +303,15 @@
                        
          
            <li><span>name:  <div class = value>lat </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>galactic latitude of source (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -333,7 +334,7 @@
                        
          
            <li><span>name:  <div class = value>ecliptic </div> </span>
-         
+	 
      
           
           
@@ -343,11 +344,11 @@
                  
          
            <li><span>type:  <div class = value>record </div> </span>
-         
+	 
      
          
            <li><span>name:  <div class = value>Ecliptic </div> </span>
-         
+	 
      
           
           
@@ -360,15 +361,15 @@
                        
          
            <li><span>name:  <div class = value>lon </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>ecliptic longitude of source (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -378,15 +379,15 @@
                        
          
            <li><span>name:  <div class = value>lat </div> </span>
-         
+	 
      
          
            <li><span>type:  <div class = value>float </div> </span>
-         
+	 
      
          
            <li><span>doc:  <div class = value>ecliptic latitude of source (deg) </div> </span>
-         
+	 
      
                     
                   </li>
@@ -411,7 +412,7 @@
      
      </ul>
      </div>
-    </div>
-    
+</div>
+ 
 </body>
 </html>
