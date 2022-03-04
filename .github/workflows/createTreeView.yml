@@ -38,7 +38,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: output treeview htmls
-          path: .github/workflows/html/*
+          path: .github/workflows/html/*.html
           retention-days: 1
 
 
