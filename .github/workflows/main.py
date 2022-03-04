@@ -1,5 +1,5 @@
-#!/usr/bin/env/python
-####/usr1/local/anaconda_py3/ana37/bin//python
+#!/usr1/local/anaconda_py3/ana37/bin//python
+##/usr/bin/env/python
 # Name:        main.py
 # Author:      Michael Preciado
 # Description: Reads in the JSON files from the json subdirectory and uses a
@@ -12,7 +12,7 @@ import glob
 from jinja2 import Environment, FileSystemLoader
 
 
-def render(template, tachFile, fileName):
+def renderTemplate(template, tachFile, fileName):
     fileLoader = FileSystemLoader("templates")
     env = Environment(loader=fileLoader)
     rendered = env.get_template(template).render(tachFile=tachFile,title=fileName)
@@ -32,7 +32,7 @@ def run(template, files):
             tachFile = json.load(d)
 
         # Get rendered template
-        rendered = render(template, tachFile, fileName)
+        rendered = renderTemplate(template, tachFile, fileName)
 
         # Write the new html to a file
         writeToFile(rendered, fileName)
