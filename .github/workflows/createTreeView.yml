@@ -33,10 +33,10 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: generate html files using jinja template
       run: |
-        main.py
+        sh ./.github/workflows/main.py
     - name: Upload Artifact (generated html files)
       uses: actions/upload-artifact@v3
       with:
           name: output treeview htmls
-          path: html/*
+          path: ./.github/workflows/html/*
           retention-days: 1
