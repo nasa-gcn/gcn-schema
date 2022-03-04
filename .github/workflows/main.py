@@ -1,4 +1,5 @@
-#!/usr1/local/anaconda_py3/ana37/bin//python
+#!/usr/bin/env/python
+####/usr1/local/anaconda_py3/ana37/bin//python
 # Name:        main.py
 # Author:      Michael Preciado
 # Description: Reads in the JSON files from the json subdirectory and uses a
