@@ -33,7 +33,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: generate html files using jinja template
       run: |
-       ./main.py
+        main.py
     - name: Upload Artifact (generated html files)
       uses: actions/upload-artifact@v3
       with:
