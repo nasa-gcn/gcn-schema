@@ -36,6 +36,8 @@ jobs:
     - name: generate html files using jinja template
       run: |
         .github/workflows/main.py
+    - name: See if the html files are there 
+      run:  ls -l .github/workflows/html
     - name: Upload Artifact (generated html files)
       uses: actions/upload-artifact@v2
       with:
