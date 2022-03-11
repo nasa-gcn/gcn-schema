@@ -38,11 +38,9 @@ jobs:
         cd .github/workflows
         python ./main.py
         ls -l html3
-    # - name: See if the html files are there 
-     # run:  ls -l html3
-    # - name: Upload Artifact (generated html files)
-    #  uses: actions/upload-artifact@v2
-     # with:
-      #  name: output-treeview-htmls
-       # path: .github/workflows/html3
+    - name: Upload Artifact (generated html files)
+      uses: actions/upload-artifact@v2
+       with:
+       name: output-treeview-htmls
+       path: .github/workflows/html3
 
