@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    #- name: checkout repo content
     - uses: actions/checkout@v2
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
@@ -34,14 +33,17 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Create a temp artifacts downloads folder
       run:  mkdir .github/workflows/html3
+    - name: Change dirs to the workflows dir
+      run:  |
+        cd .github/workflows/
     - name: Run main.py (generate html files using jinja template)
       run: |
-        python .github/workflows/main.py
+        python main.py
     - name: See if the html files are there 
-      run:  ls -l .github/workflows/html3
-    - name: Upload Artifact (generated html files)
-      uses: actions/upload-artifact@v2
-      with:
-        name: output-treeview-htmls
-        path: .github/workflows/html3
+      run:  ls -l html3
+    # - name: Upload Artifact (generated html files)
+    #  uses: actions/upload-artifact@v2
+     # with:
+      #  name: output-treeview-htmls
+       # path: .github/workflows/html3
 
