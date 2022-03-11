@@ -38,7 +38,7 @@ jobs:
         cd .github/workflows
         python ./main.py
     - name: See if the html files are there 
-      run:  ls -l ./github/workflows/html3
+      run:  ls -l html3
     # - name: Upload Artifact (generated html files)
     #  uses: actions/upload-artifact@v2
      # with:
