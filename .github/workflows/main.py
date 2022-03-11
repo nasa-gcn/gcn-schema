@@ -19,7 +19,7 @@ def renderTemplate(template, tachFile, fileName):
 
 
 def writeToFile(rendered, fileName):
-    with open(f'html/{fileName}.html', 'w') as writer:
+    with open(f'html3/{fileName}.html', 'w') as writer:
         writer.write(rendered)
 
 
