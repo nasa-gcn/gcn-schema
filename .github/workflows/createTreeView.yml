@@ -36,12 +36,12 @@ jobs:
     - name: generate html files using jinja template
       run: |
         .github/workflows/main.py
-    #- name: Upload Artifact (generated html files)
-    #  uses: actions/upload-artifact@v3
-     # with:
-       #   name: output treeview htmls
-        #  path: .github/workflows/html
-         # retention-days: 1
+    - name: Upload Artifact (generated html files)
+      uses: actions/upload-artifact@v3
+      with:
+        name: output-treeview-htmls
+        path: .github/workflows/html
+        retention-days: 1
 
 
 
