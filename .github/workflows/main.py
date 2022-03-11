@@ -27,7 +27,7 @@ def run(template, files):
     # Loop over each JSON file and apply the jinja template to each
     names = [os.path.basename(x) for x in (files)]
     for fileName in names:
-        with open(ns fileName, "r") as d:
+        with open("../../" + fileName, "r") as d:
             tachFile = json.load(d)
 
         # Get rendered template
