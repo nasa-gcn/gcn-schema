@@ -37,11 +37,9 @@ jobs:
       run: |
         .github/workflows/main.py
     - name: Upload Artifact (generated html files)
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: output-treeview-htmls
-        path: .github/workflows/html/*html
-        retention-days: 1
-
+        path: .github/workflows/html
 
 
