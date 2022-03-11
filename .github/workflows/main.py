@@ -14,12 +14,13 @@ from jinja2 import Environment, FileSystemLoader
 def renderTemplate(template, tachFile, fileName):
     fileLoader = FileSystemLoader("templates")
     env = Environment(loader=fileLoader)
-    rendered = env.get_template(template).render(tachFile=tachFile,title=fileName)
+    rendered = env.get_template(template).render(tachFile=tachFile,
+                                                 title=fileName)
     return rendered
 
 
 def writeToFile(rendered, fileName):
-    with open(f'html3/{fileName}.html', 'w') as writer:
+    with open(f'html/{fileName}.html', 'w') as writer:
         writer.write(rendered)
 
 

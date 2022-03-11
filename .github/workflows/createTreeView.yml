@@ -32,15 +32,15 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Create a temp artifacts downloads folder
-      run:  mkdir .github/workflows/html3
+      run:  mkdir .github/workflows/html
     - name: Run main.py (generate html files using jinja template)
       run: |
         cd .github/workflows
         python ./main.py
-        ls -l html3
+        ls -l html
     - name: Upload Artifact (generated html files)
       uses: actions/upload-artifact@v2
       with:
         name: output-treeview-htmls
-        path: .github/workflows/html3
+        path: .github/workflows/html
 
