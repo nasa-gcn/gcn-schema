@@ -1,0 +1,20 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.grb",
+  "name": "Spectral",
+  "fields" : [
+     {"name": "spectrum_best_fit_model",           "type": "string", "doc": "Commonly used spectrum arrangements that are then fit to the given measured spectraum: single power law, two power-law, etc."},
+     {"name": "alpha",                             "type": "float",  "doc": "If allowing two power-law components, then Alpha is the slope of the spectrum."},
+     {"name": "alpha_error",                       "type": "float",  "doc": "Uncertainty of the Alpha parameter"},
+     {"name": "epeak",                             "type": "float",  "doc": "Energy at the peak in the spectrum"},
+     {"name": "epeak_error",                       "type": "float",  "doc": "Uncertainty of the Epeak parameter"},
+     {"name": "beta",                              "type": "float",  "doc": "Slope of the 2nd power-law component"},
+     {"name": "beta_error",                        "type": "float",  "doc": "Uncertainty of the Beta parameter"},
+     {"name": "instrument",                        "type": "string", "doc": "Uncertainty of the Alpha parameter"},
+     {"name": "energy_range",                      "type": "string", "doc": "Energy range in keV"},
+     {"name": "hardness_ratio",                    "type": "float",  "doc": "??????????"},
+     {"name": "hardness_ratio_energy_range_high",  "type": "string", "doc": "??????????"},
+     {"name": "hardness_ratio_energy_range_low",   "type": "string", "doc": "??????????"},
+     {"name": "hardness_ratio_instrument",         "type": "string", "doc": "??????????"}
+     ]
+  }

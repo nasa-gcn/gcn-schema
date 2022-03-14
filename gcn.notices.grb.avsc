@@ -1,0 +1,63 @@
+[
+  {
+  "type": "record",
+  "namespace": "gcn.notices.grb",
+  "name": "Brightness",
+  "fields" : [
+     {"name": "Flux",                            "type": "float",  "doc": "Flow rate per unit area"},
+     {"name": "FluxError",                       "type": "float",  "doc": "1-sigma uncertainty in Flux field"},
+     {"name": "FluxEnergyRange",                 "type": "string", "doc": "Energy Range: 10 keV to 100 keV"},
+     {"name": "FluxInstrument",                  "type": "string", "doc": "Instrument:  varies from mission to mission"},
+     {"name": "Fluence",                         "type": "float",  "doc": "??????????"},
+     {"name": "FluenceError",                    "type": "float",  "doc": "Error"},
+     {"name": "FluenceEnergyRange",              "type": "string", "doc": "Energy Range: the window in the energy scale, eg 10 keV to 100 keV"},
+     {"name": "FluenceInstrument",               "type": "string", "doc": "Instrument:  varies from mission to mission"}
+     ]
+  },
+  {
+  "type": "record",
+  "namespace": "gcn.notices.grb",
+  "name": "Duration",
+  "fields" : [
+     {"name": "T90",                             "type": "float", "doc": "Time duration of a transient event that has 90% has 5% already done, then the 90% containment window start, and then there is the remaining 5%"},
+     {"name": "T90Error",                        "type": "float", "doc": "Uncertainty of the T90 duration window"},
+     {"name": "T90Instrument",                   "type": "string","doc": "Instrument: varies from mission to mission"},
+     {"name": "T50",                             "type": "float", "doc": "similar to T90, this time if is for the 25% initial window, 50% if the emission in the middle, and then another 25% containment time length window"},
+     {"name": "T50Error",                        "type": "float", "doc": "Uncertainty of the T50 duration window"},
+     {"name": "T50Instrument",                   "type": "string","doc": "Instrument: varies from mission to mission"}
+     ]
+  },
+  {
+  "type": "record",
+  "namespace": "gcn.notices.grb",
+  "name": "Spectral",
+  "fields" : [
+     {"name": "SpectrumBestFitModel",            "type": "string", "doc": "Commonly used spectrum arrangements that are then fit to the given measured spectraum: single power law, two power-law, etc."},
+     {"name": "Alpha",                           "type": "float",  "doc": "If allowing two power-law components, then Alpha is the slope of the spectrum."},
+     {"name": "AlphaError",                      "type": "float",  "doc": "Uncertainty of the Alpha parameter"},
+     {"name": "Epeak",                           "type": "float",  "doc": "Energy at the peak in the spectrum"},
+     {"name": "EpeakError",                      "type": "float",  "doc": "Uncertainty of the Epeak parameter"},
+     {"name": "Beta",                            "type": "float",  "doc": "Slope of the 2nd power-law component"},
+     {"name": "BetaError",                       "type": "float",  "doc": "Uncertainty of the Beta parameter"},
+     {"name": "Instrument",                      "type": "string", "doc": "Uncertainty of the Alpha parameter"},
+     {"name": "EnergyRange",                     "type": "string", "doc": "Energy range in keV"},
+     {"name": "HardnessRatio",                   "type": "float",  "doc": "??????????"},
+     {"name": "HardnessRatioEnergyRangeHigh",    "type": "string", "doc": "??????????"},
+     {"name": "HardnessRatioEnergyRangeLow",     "type": "string", "doc": "??????????"},
+     {"name": "HardnessRatioInstrument",         "type": "string", "doc": "??????????"}
+     ]
+  },
+  {
+  "type": "record",
+  "namespace": "gcn.notices.grb",
+  "name": "Specifics",
+  "fields" : [
+     {"name": "TriggerID",        "type": "string",  "doc": "For GCN this was also used for solution status bits"},
+     {"name": "LightCurveURL",    "type": "string",  "doc": "String containing the full lightcurve URL"},
+     {"name": "EnergyRange",      "type": "string",  "doc": "Energy range for this event"},
+     {"name": "Algorithm",        "type": "string",  "doc": "Identifying which location_calculation algorithm was used for this event"},
+     {"name": "LightCurveURL",    "type": "string",  "doc": "Sring containing the full lightcurve URL"},
+     {"name": "Comments",         "type": "string", "default": ""}
+     ]
+  }
+]
