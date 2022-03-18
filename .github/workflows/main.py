@@ -14,6 +14,8 @@ from jinja2 import Environment, FileSystemLoader
 def renderTemplate(template, tachFile, fileName):
     fileLoader = FileSystemLoader("templates")
     env = Environment(loader=fileLoader)
+    env.trim_blocks = True;
+    env.lstrip_blocks = True;
     rendered = env.get_template(template).render(tachFile=tachFile,
                                                  title=fileName)
     return rendered
