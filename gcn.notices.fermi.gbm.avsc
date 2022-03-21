@@ -7,7 +7,7 @@
      {"name": "grb_phi",             "type": "string", "doc": "Phi orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
      {"name": "grb_theta",           "type": "string", "doc": "Theta orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
      {"name": "grb_zenith",          "type": "string", "doc": "Zenith orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
-     {"name": "location_algorithm",  "type": "string", "doc": "Version number of the Flt S/W Location Algorithm that was used to derive this RA,Dec location for this event"},
+     {"name": "localization_algorithm",  "type": "string", "doc": "Version number of the flight software localization algorithm that was used to derive this location for this event"},
      {"name": "location_url",        "type": "string", "doc": "String containing the full location URL"},
      {"name": "lightcurve_url",      "type": "string", "doc": "String containing the full lightcurve URL"},
      {"name": "data_time_scale",     "type": "float",  "doc": "Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [s]"},
