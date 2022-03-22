@@ -1,20 +1,20 @@
   {
   "type": "record",
   "namespace": "gcn.notices.fermi",
-  "name": "GBM",
+  "name": "gbm",
   "fields" : [
-     {"name": "detectors",               "type": "string", "doc": "Which two of the 14 detectors that resulted in this event"},
-     {"name": "grb_phi",                 "type": "string", "doc": "Phi orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
-     {"name": "grb_theta",               "type": "string", "doc": "Theta orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
-     {"name": "grb_zenith",              "type": "string", "doc": "Zenith orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
+     {"name": "detectors",           "type": "string", "doc": "Which two of the 14 detectors that resulted in this event"},
+     {"name": "grb_phi",             "type": "string", "doc": "Phi orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
+     {"name": "grb_theta",           "type": "string", "doc": "Theta orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
+     {"name": "grb_zenith",          "type": "string", "doc": "Zenith orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},
      {"name": "localization_algorithm",  "type": "string", "doc": "Version number of the flight software localization algorithm that was used to derive this location for this event"},
      {"name": "localization_url",        "type": "string", "doc": "String containing the full localization URL"},
-     {"name": "lightcurve_url",          "type": "string", "doc": "String containing the full lightcurve URL"},
-     {"name": "data_time_scale",         "type": "float",  "doc": "Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [s]"},
-     {"name": "earth_angle",             "type": "float",  "doc": "Angle between the event direction and the center of the Earth [deg]"},
-     {"name": "spectral_class",          "type": {"name": "SpectralClassEnum", "type": "enum", "symbols": ["SOFT", "HARD"]}},
-     {"name": "type_class",              "type": {"name": "TypeClassEnum",     "type": "enum", "symbols": ["SHORT", "LONG"]}},
-     {"name": "reliability",             "type": "long",   "doc": "Measure of confidence on the detection.  It is a number from 1 to 10. 2=low, 5=medium, 8=high"},
-     {"name": "solution_status",         "type": "bytes",  "doc": "Flag bits on the type of solution that was found in the on-board image"}
+     {"name": "lightcurve_url",      "type": "string", "doc": "String containing the full lightcurve URL"},
+     {"name": "data_time_scale",     "type": "float",  "doc": "Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [s]"},
+     {"name": "earth_angle",         "type": "float",  "doc": "Angle between the event direction and the center of the Earth [deg]"},
+     {"name": "spectral_class",      "type": {"name": "SpectralClassEnum", "type": "enum", "symbols": ["SOFT", "HARD"]}},
+     {"name": "type_class",          "type": {"name": "TypeClassEnum",     "type": "enum", "symbols": ["SHORT", "LONG"]}},
+     {"name": "reliability",         "type": "long",   "doc": "Measure of confidence on the detection.  It is a number from 1 to 10. 2=low, 5=medium, 8=high"},
+     {"name": "solution_status",     "type": "bytes",  "doc": "Flag bits on the type of solution that was found in the on-board image"}
      ]
   }
