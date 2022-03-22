@@ -1,7 +1,7 @@
   {
   "type": "record",
   "namespace": "gcn.notices.fermi",
-  "name": "gbm",
+  "name": "GBM",
   "fields" : [
      {"name": "detectors",           "type": "string", "doc": "Which two of the 14 detectors that resulted in this event"},
      {"name": "grb_phi",             "type": "string", "doc": "Phi orientation of GRB/Transient GBM instrument coordinates of the trigger [deg]"},

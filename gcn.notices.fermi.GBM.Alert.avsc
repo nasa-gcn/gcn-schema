@@ -1,6 +1,6 @@
 [
   {
-    "namespace": "gcn.notices.fermi.gbm",
+    "namespace": "gcn.notices.fermi.GBM",
     "name": "Alert",
     "type": "record",
     "fields": [
