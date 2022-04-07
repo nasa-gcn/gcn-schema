@@ -3,7 +3,7 @@
   "namespace": "gcn.notices.grb",
   "name": "Spectral",
   "fields" : [
-     {"name": "spectrum_best_fit_model", "type": enum", "symbols": ["powerlaw","cutoffpowerlaw","band"], "doc": "Name of model corresponding to best statistical fit of spectrum"},
+     {"name": "spectrum_best_fit_model",           "type": {"name": "SpectralModelEnum", "type":"enum", "symbols": ["powerlaw","cutoffpowerlaw","band"]}, "doc": "Name of model corresponding to best statistical fit of spectrum"},
      {"name": "alpha",                             "type": "float",  "doc": "low-energy power-law index of spectral model"},
      {"name": "alpha_error",                       "type": "float",  "doc": "1-sigma uncertainty of alpha"},
      {"name": "epeak",                             "type": "float",  "doc": "Energy peak in nuFnu for cutoffpowerlaw or band parameterization [keV]"},

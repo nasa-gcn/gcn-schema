@@ -15,7 +15,6 @@
         {"name": "grb_brightness",  "type": "gcn.notices.grb.Brightness"},
         {"name": "grb_duration",    "type": "gcn.notices.grb.Duration"},
         {"name": "grb_spectral",    "type": "gcn.notices.grb.Spectral"},
-        {"name": "grb_specifics",   "type": "gcn.notices.grb.Specifics"},
         {"name": "fermi_specifics", "type": "gcn.notices.fermi.GBM"}
      ]
   }
