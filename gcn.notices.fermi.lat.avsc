@@ -3,18 +3,16 @@
   "namespace": "gcn.notices.fermi",
   "name": "lat",
   "fields" : [
-     {"name": "grb_phi",             "type": "string", "doc": "Phi orientation of the location of the source in LAT instrument coordinates [deg]"},
-     {"name": "grb_theta",           "type": "string", "doc": "Theta orientation of the location of the source in LAT instrument coordinates [deg]"},
-     {"name": "grb_zenith",          "type": "string", "doc": "Zenith orientation of the location of the source in LAT instrument coordinates [deg]"},
-     {"name": "lightcurve_url",      "type": "string", "doc": "String containing the full lightcurve URL"},
-     {"name": "data_timescale",      "type": "float",  "doc": "Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [s]"},
-     {"name": "grb_intensity_total", "type": "int",    "doc": "Subset of the total number of events in the standard 4 energy bands that were used in the location calculation [cnts]"},
-     {"name": "grb_intensity2",      "type": "int",    "doc": "Number of events in the 0.1-1 GeV band [cnts]"},
-     {"name": "grb_intensity3",      "type": "int",    "doc": "Number of events in the 1-10 GeV band [cnts]"},
-     {"name": "grb_intensity4",      "type": "int",    "doc": "Number of events in the 10-up GeV band [cnts]"},
-     {"name": "significance",        "type": "float",  "doc": "Sqrt(TS) (with 2 dof) of the detection [sqrt(TS) 2 dof]"},
-     {"name": "solution_status",     "type": "bytes",  "doc": "Flag bits on the type of solution that was found in the on-board image"},
-     {"name": "first_photon",        "type": "float",  "doc": "UT seconds-of-day (SOD) of the first photon used in the location calculation [s]"},
-     {"name": "last_photon",         "type": "float",  "doc": "UT seconds-of-day (SOD) of the last photon used in the location calculation [s]"}
+     {"name": "phi",             "type": "string", "doc": "Angle between source location in azimuth measured from +x axis counterclockwise, to +y axis, range 0 - 360 degrees [deg]"},
+     {"name": "theta",           "type": "string", "doc": "Angle between source location and LAT boresight, range 0 - 180 [deg]"},
+     {"name": "data_timescale",      "type": "float",  "doc": "Binning (i.e. time sampling) of the count rate lightcurve used during the iterative location calculation phase of the processing [s]"},
+     {"name": "grb_intensity_total", "type": "int",    "doc": "Subset of the total number of events in the standard 4 energy bands that were used in the location calculation [ct]"},
+     {"name": "grb_intensity1",      "type": "int",    "doc": "Number of events in the <0.1 GeV band [ct]"},
+     {"name": "grb_intensity2",      "type": "int",    "doc": "Number of events in the 0.1-1 GeV band [ct]"},
+     {"name": "grb_intensity3",      "type": "int",    "doc": "Number of events in the 1-10 GeV band [ct]"},
+     {"name": "grb_intensity4",      "type": "int",    "doc": "Number of events in the >10 GeV band [ct]"},
+     {"name": "significance",        "type": "float",  "doc": "Sqrt(TS) (with 2 DOF) of the detection [sqrt(TS) 2 DOF]"},
+     {"name": "first_photon",        "type": "float",  "doc": "Time of first photon used in the location calculation [ISO 8601]"},
+     {"name": "last_photon",         "type": "float",  "doc": "Time of last photon used in the location calculation [ISO 8601]"}
      ]
   }

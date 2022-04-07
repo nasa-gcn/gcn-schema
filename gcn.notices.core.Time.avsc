@@ -6,22 +6,22 @@
     {
       "name": "event",
       "type": ["string", "null"],
-      "doc": "Time of the event [ISO 6801]"
+      "doc": "Time of the event [ISO 8601]"
     },
     {
       "name": "trigger",
       "type": ["string", "null"],
-      "doc": "Time of the trigger [ISO 6801]"
+      "doc": "Time of the trigger [ISO 8601]"
     },
     {
       "name": "observation_start",
       "type": ["string", "null"],
-      "doc": "Start time of the observation [ISO 6801]"
+      "doc": "Start time of the observation [ISO 8601]"
     },
     {
       "name": "observation_stop",
       "type": ["string", "null"],
-      "doc": "Stop time of the observation [ISO 6801]"
+      "doc": "Stop time of the observation [ISO 8601]"
     },
     {
       "name": "observation_livetime",
