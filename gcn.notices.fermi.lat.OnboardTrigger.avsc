@@ -1,7 +1,7 @@
   {
   "type": "record",
-  "namespace": "gcn.notices.fermi",
-  "name": "lat",
+  "namespace": "gcn.notices.fermi.lat",
+  "name": "OnboardTrigger",
   "fields" : [
      {"name": "phi",             "type": "string", "doc": "Angle between source location in azimuth measured from +x axis counterclockwise, to +y axis, range 0 - 360 degrees [deg]"},
      {"name": "theta",           "type": "string", "doc": "Angle between source location and LAT boresight, range 0 - 180 [deg]"},

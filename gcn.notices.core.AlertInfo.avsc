@@ -13,8 +13,8 @@
       "type": {
         "name": "AlertTenseEnum",
         "type": "enum",
-        "symbols": ["CURRENT", "ARCHIVAL", "PLANNED"],
-        "doc": "Indication of whether this alert refers to a recent observation (CURRENT), re-analysis of archival data (ARCHIVAL), or a planned observation in the future (PLANNED)"
+        "symbols": ["current", "archival", "planned"],
+        "doc": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), or a planned observation in the future (planned)"
       }
     }
   ]

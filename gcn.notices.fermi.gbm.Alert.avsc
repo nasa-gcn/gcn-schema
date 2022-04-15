@@ -1,6 +1,6 @@
 [
   {
-    "namespace": "gcn.notices.fermi.GBM",
+    "namespace": "gcn.notices.fermi.gbm",
     "name": "Alert",
     "type": "record",
     "fields": [
@@ -15,7 +15,7 @@
         {"name": "grb_brightness",  "type": "gcn.notices.grb.Brightness"},
         {"name": "grb_duration",    "type": "gcn.notices.grb.Duration"},
         {"name": "grb_spectral",    "type": "gcn.notices.grb.Spectral"},
-        {"name": "fermi_specifics", "type": "gcn.notices.fermi.GBM"}
+        {"name": "gbm_specific",    "type": "gcn.notices.fermi.gbm.Specific"}
      ]
   }
 ]
