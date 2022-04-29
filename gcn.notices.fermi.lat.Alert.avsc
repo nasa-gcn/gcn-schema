@@ -8,7 +8,7 @@
         {"name": "alert_reporter",   "type": "gcn.notices.core.AlertReporter"},
         {"name": "identifiers",      "type": "gcn.notices.core.Identifiers"},
         {"name": "event_info",       "type": "gcn.notices.core.EventInfo"},
-        {"name": "event_time",       "type": "gcn.notices.core.Time"},
+        {"name": "datetime",         "type": "gcn.notices.core.DateTime"},
         {"name": "location",         "type": "gcn.notices.core.Location"},
         {"name": "statistics",       "type": "gcn.notices.core.Statistics"},
         {"name": "comments",         "type": "gcn.notices.core.Comments"},

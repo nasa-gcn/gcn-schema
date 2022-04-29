@@ -33,10 +33,16 @@
       "type": ["float", "null"],
       "doc": "Containment probability [dimensionless, 0-1]"
     },
+    { 
+      "name": "systematic_included", 
+      "type": "boolean", 
+      "doc": "Contains true when the systematic error is included and false when the systematic error is not included", 
+      "default": false
+    },
     {
-      "name": "skymap",
+      "name": "healpix_url",
       "type": ["string", "null"],
-      "doc": "URL of HEALPix localization file"
+      "doc": "URL of HEALPix localization probability file"
     }
   ]
 }

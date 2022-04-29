@@ -3,13 +3,15 @@
   "namespace": "gcn.notices.grb",
   "name": "Brightness",
   "fields" : [
-     {"name": "photon_flux",                       "type": "float",  "doc": "Photon Flux [ph/cm2/s]"},
-     {"name": "photon_flux_error",                 "type": "float",  "doc": "1-sigma uncertainty in Photon Flux [ph/cm2/s]"},
-     {"name": "energy_flux",                       "type": "float",  "doc": "Energy Flux [erg/cm2/s]"},
-     {"name": "energy_flux_error",                 "type": "float",  "doc": "1-sigma uncertainty in Energy Flux [erg/cm2/s]"},
-     {"name": "flux_energy_range",          "type": "string", "doc": "Energy Range used in Flux Calculation [keV]"},
-     {"name": "fluence",                    "type": "float",  "doc": "Fluence [erg/cm2]"},
-     {"name": "fluence_error",              "type": "float",  "doc": "Fluence Error [erg/cm2]"},
-     {"name": "fluence_energy_range",       "type": "string", "doc": "Energy Range used in Fluence calculation [keV]"}
+     {"name": "photon_flux", "type": "float",  "doc": "Photon Flux [ph/cm2/s]"},
+     {"name": "photon_flux_error","type": "float",  "doc": "1-sigma uncertainty in Photon Flux [ph/cm2/s]"},
+     {"name": "energy_flux","type": "float",  "doc": "Energy Flux [erg/cm2/s]"},
+     {"name": "energy_flux_error","type": "float",  "doc": "1-sigma uncertainty in Energy Flux [erg/cm2/s]"},
+     {"name": "flux_energy_range","type": "gcn.notices.core.EnergyRange", "doc": "Energy range used in flux calculation [keV]"},
+     {"name": "flux_time_range", "type": "gcn.notices.core.TimeRange", "doc": "Time range used in flux calculation [s]"},
+     {"name": "fluence","type": "float",  "doc": "Fluence [erg/cm2]"},
+     {"name": "fluence_error","type": "float",  "doc": "Fluence Error [erg/cm2]"},
+     {"name": "fluence_energy_range","type": "gcn.notices.core.EnergyRange", "doc": "Energy Range used in Fluence calculation [keV]"},
+     {"name": "fluence_time_range", "type": "gcn.notices.core.TimeRange", "doc": "Time range used in fluence calculation [s]"}
      ]
   }

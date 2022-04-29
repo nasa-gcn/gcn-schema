@@ -4,7 +4,7 @@
   "name": "AlertInfo",
   "fields": [
     {
-      "name": "alert_time",
+      "name": "alert_datetime",
       "type": "string",
       "doc": "Date and time of notice creation [UTC, ISO 8601]"
     },

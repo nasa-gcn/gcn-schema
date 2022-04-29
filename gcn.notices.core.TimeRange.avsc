@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "namespace": "gcn.notices.core",
+  "name": "TimeRange",
+  "fields": [
+      {"name":"time_start","type": "float", "doc": "Time window start, since trigger [s]"},
+      {"name":"time_stop","type": "float", "doc": "Time window stop, since trigger [s]"}
+   ]
+}

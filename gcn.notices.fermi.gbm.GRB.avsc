@@ -1,0 +1,20 @@
+[
+  {
+    "namespace": "gcn.notices.fermi.gbm",
+    "name": "GRB",
+    "type": "record",
+    "fields": [
+        {"name": "alert_info",      "type": "gcn.notices.core.AlertInfo"},
+        {"name": "identifiers",     "type": "gcn.notices.core.Identifiers"},
+        {"name": "event_info",      "type": "gcn.notices.core.EventInfo"},
+        {"name": "datetime",        "type": "gcn.notices.core.DateTime"},
+        {"name": "location",        "type": "gcn.notices.core.Location"},
+        {"name": "statistics",      "type": "gcn.notices.core.Statistics"},
+        {"name": "comments",        "type": "gcn.notices.core.Comments"},
+        {"name": "grb_brightness",  "type": "gcn.notices.grb.Brightness"},
+        {"name": "grb_duration",    "type": "gcn.notices.grb.Duration"},
+        {"name": "grb_spectral",    "type": "gcn.notices.grb.Spectral"},
+        {"name": "gbm_specific",    "type": "gcn.notices.fermi.gbm.Specific"}
+     ]
+  }
+]

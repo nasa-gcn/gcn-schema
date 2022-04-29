@@ -1,15 +1,10 @@
 {
   "type": "record",
   "namespace": "gcn.notices.core",
-  "name": "Time",
+  "name": "DateTime",
   "fields": [
     {
-      "name": "event",
-      "type": ["string", "null"],
-      "doc": "Time of the event [ISO 8601]"
-    },
-    {
-      "name": "trigger",
+      "name": "trigger_time",
       "type": ["string", "null"],
       "doc": "Time of the trigger [ISO 8601]"
     },
@@ -26,7 +21,7 @@
     {
       "name": "observation_livetime",
       "type": ["float", "null"],
-      "doc": "Livetime of the trigger [s]"
+      "doc": "Livetime of the observation [s]"
     }
   ]
 }
