@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "namespace": "gcn.notices.grb.spectral",
+  "namespace": "gcn.notices.core.spectral.models",
   "name": "CutOffPowerLaw",
   "doc": "Spectral model known as comptonized or powerlaw with exponential cutoff amplitude*energy^{-alpha}*exp(-energy/beta)",
   "fields" : [

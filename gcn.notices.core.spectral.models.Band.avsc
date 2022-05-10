@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "namespace": "gcn.notices.grb.spectral",
+  "namespace": "gcn.notices.core.spectral.models",
   "name": "Band",
   "fields" : [
     {"name": "amplitude","type": "float",  "doc": "amplitude of spectral model fit [ph/cm2/s/keV]"},

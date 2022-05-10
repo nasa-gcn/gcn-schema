@@ -8,10 +8,11 @@
         {"name": "identifiers",     "type": "gcn.notices.core.Identifiers"},
         {"name": "event_info",      "type": "gcn.notices.core.EventInfo"},
         {"name": "datetime",        "type": "gcn.notices.core.DateTime"},
-        {"name": "location",        "type": "gcn.notices.core.Location"},
+        {"name": "localization",    "type": "gcn.notices.core.Localization"},
         {"name": "statistics",      "type": "gcn.notices.core.Statistics"},
+        {"name": "hardness_ratio",  "type": "gcn.notices.core.HardnessRatio"},
         {"name": "comments",        "type": "gcn.notices.core.Comments"},
-        {"name": "gbm_specific",    "type": "gcn.notices.fermi.gbm.Specific"}
+        {"name": "specific",        "type": "gcn.notices.fermi.gbm.Specific"}
      ]
   }
 ]

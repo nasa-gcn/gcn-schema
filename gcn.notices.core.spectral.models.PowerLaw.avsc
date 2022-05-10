@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "namespace": "gcn.notices.grb.spectral",
+  "namespace": "gcn.notices.core.spectral.models",
   "name": "PowerLaw",
   "doc": "Spectral model powerlaw with N(E)=amplitude*energy^{-alpha}",
   "fields": [

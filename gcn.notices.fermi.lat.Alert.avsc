@@ -9,12 +9,11 @@
         {"name": "identifiers",      "type": "gcn.notices.core.Identifiers"},
         {"name": "event_info",       "type": "gcn.notices.core.EventInfo"},
         {"name": "datetime",         "type": "gcn.notices.core.DateTime"},
-        {"name": "location",         "type": "gcn.notices.core.Location"},
+        {"name": "localization",     "type": "gcn.notices.core.Localization"},
         {"name": "statistics",       "type": "gcn.notices.core.Statistics"},
         {"name": "comments",         "type": "gcn.notices.core.Comments"},
-        {"name": "grb_brightness",   "type": "gcn.notices.grb.Brightness"},
         {"name": "grb_duration",     "type": "gcn.notices.grb.Duration"},
-        {"name": "grb_spectral",     "type": "gcn.notices.grb.Spectral"},
+        {"name": "grb_spectral",     "type": "gcn.notices.core.spectral.GammaRay"},
         {"name": "lat_onboard",      "type": "gcn.notices.fermi.lat.OnboardTrigger"}
      ]
   }

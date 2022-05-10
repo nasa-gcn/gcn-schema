@@ -72,6 +72,11 @@
          "name": "reliability",
          "type": "int",
          "doc": "Measure of confidence on the detection.  It is a number from 1 to 10. 2=low, 5=medium, 8=high"
+      },
+      {
+         "name": "message_type",
+         "type": "string",
+         "doc": "Specify the type of alert message, e.g. Alert, Flight Position, Ground Position [string]"
       }
      ]
   }

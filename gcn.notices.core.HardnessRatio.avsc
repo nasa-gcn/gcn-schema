@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "namespace": "gcn.notices.core",
+  "name": "HardnessRatio",
+  "fields" : [
+     {"name": "hardness_ratio","type": "float","doc": "ratio of flux between high and low energy bands"},
+     {"name": "energy_range_hard", "type": "gcn.notices.core.EnergyRange"},
+     {"name": "energy_range_soft", "type": "gcn.notices.core.EnergyRange"}
+       ]
+}
