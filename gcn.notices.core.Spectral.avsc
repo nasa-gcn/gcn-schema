@@ -1,0 +1,20 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.grb",
+  "name": "Spectral",
+  "fields" : [
+     {"name": "best_fit_model",
+      "type": 
+        {"name": "SpectralModelEnum", 
+         "type":"enum", 
+         "symbols": ["POWERLAW","CUTOFFPOWERLAW","BAND"]}, 
+      "doc": "Name of model corresponding to best statistical fit of spectrum"},
+     {"name":"power_law", "type":"gcn.notices.core.spectral.models.PowerLaw"},
+     {"name":"cutoff_power_law", "type":"gcn.notices.core.spectral.models.CutOffPowerLaw"},
+     {"name":"band", "type":"gcn.notices.core.spectral.models.Band"},
+     {"name": "spectral_energy_range", "type": "gcn.notices.core.EnergyRange"},
+     {"name": "hardness_ratio","type": "float","doc": "ratio of flux between high and low energy bands"},
+     {"name": "hardness_ratio_energy_range_hard", "type": "gcn.notices.core.EnergyRange"},
+     {"name": "hardness_ratio_energy_range_soft", "type": "gcn.notices.core.EnergyRange"}
+   ]
+  }

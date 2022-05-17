@@ -4,12 +4,12 @@
   "name": "Identifiers",
   "fields": [
     {
-      "name": "instrument_trigger_id",
+      "name": "instrument_id",
       "type": "string",
       "doc": "Trigger number or id number"
     },
     {
-      "name": "instrument_trigger_id_alternate",
+      "name": "instrument_id_alternate",
       "type": ["string", "null"],
       "doc": "Alternate id number"
     },

@@ -1,0 +1,29 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.core.spectral",
+  "name": "GammaRay",
+  "fields" : [
+     {"name": "best_fit_model",
+      "type": 
+        {"name": "SpectralModelEnum", 
+         "type":"enum", 
+         "symbols": ["POWERLAW","CUTOFFPOWERLAW","BAND"]}, 
+      "doc": "Name of model corresponding to best statistical fit of spectrum"},
+     {"name":"power_law", "type":"gcn.notices.core.spectral.models.PowerLaw"},
+     {"name":"cutoff_power_law", "type":"gcn.notices.core.spectral.models.CutOffPowerLaw"},
+     {"name":"band", "type":"gcn.notices.core.spectral.models.Band"},
+     {"name": "spectral_energy_range", "type": "gcn.notices.core.EnergyRange"},
+     {"name": "spectral_time_range", "type": "gcn.notices.core.TimeRange", "doc": "Time range used in spectral fit [s]"},
+     {"name": "hardness_ratio","type": "gcn.notices.core.HardnessRatio","doc": "ratio of flux between high and low energy bands"},
+     {"name": "photon_flux", "type": "float",  "doc": "Photon Flux [ph/cm2/s]"},
+     {"name": "photon_flux_error","type": "float",  "doc": "1-sigma uncertainty in Photon Flux [ph/cm2/s]"},
+     {"name": "energy_flux","type": "float",  "doc": "Energy Flux [erg/cm2/s]"},
+     {"name": "energy_flux_error","type": "float",  "doc": "1-sigma uncertainty in Energy Flux [erg/cm2/s]"},
+     {"name": "flux_energy_range","type": "gcn.notices.core.EnergyRange", "doc": "Energy range used in flux calculation [keV]"},
+     {"name": "flux_time_range", "type": "gcn.notices.core.TimeRange", "doc": "Time range used in flux calculation [s]"},
+     {"name": "fluence","type": "float",  "doc": "Fluence [erg/cm2]"},
+     {"name": "fluence_error","type": "float",  "doc": "Fluence Error [erg/cm2]"},
+     {"name": "fluence_energy_range","type": "gcn.notices.core.EnergyRange", "doc": "Energy Range used in Fluence calculation [keV]"},
+     {"name": "fluence_time_range", "type": "gcn.notices.core.TimeRange", "doc": "Time range used in fluence calculation [s]"}
+   ]
+  }

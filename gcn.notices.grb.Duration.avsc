@@ -1,0 +1,11 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.grb",
+  "name": "Duration",
+  "fields" : [
+     {"name": "t90",                 "type": "float",  "doc": "Time duration of central 90% of integrated fluence [s]"},
+     {"name": "t90_error",           "type": "float",  "doc": "1-sigma uncertainty of the T90 duration [s]"},
+     {"name": "t50",                 "type": "float",  "doc": "Time duration of central 50% of integrated fluence [s]"},
+     {"name": "t50_error",           "type": "float",  "doc": "1-sigma uncertainty of the T50 duration [s]"}
+     ]
+  }

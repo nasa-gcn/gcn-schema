@@ -1,0 +1,20 @@
+[
+  {
+    "namespace": "gcn.notices.fermi.gbm",
+    "name": "GRB",
+    "type": "record",
+    "fields": [
+        {"name": "alert_info",        "type": "gcn.notices.core.AlertInfo"},
+        {"name": "identifiers",       "type": "gcn.notices.core.Identifiers"},
+        {"name": "event_info",        "type": "gcn.notices.core.EventInfo"},
+        {"name": "datetime",          "type": "gcn.notices.core.DateTime"},
+        {"name": "localization",      "type": "gcn.notices.core.Localization"},
+        {"name": "statistics",        "type": "gcn.notices.core.Statistics"},
+        {"name": "comments",          "type": "gcn.notices.core.Comments"},
+        {"name": "grb_duration",      "type": "gcn.notices.grb.Duration"},
+        {"name": "peak_flux_spectral","type": "gcn.notices.core.spectral.GammaRay"},
+        {"name": "fluence_spectral",  "type": "gcn.notices.core.spectral.GammaRay"},
+        {"name": "specific",      "type": "gcn.notices.fermi.gbm.Specific"}
+     ]
+  }
+]

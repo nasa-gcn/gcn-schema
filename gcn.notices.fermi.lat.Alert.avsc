@@ -1,0 +1,20 @@
+[
+  {
+    "namespace": "gcn.notices.fermi.lat",
+    "name": "Alert",
+    "type": "record",
+    "fields": [
+        {"name": "alert_info",       "type": "gcn.notices.core.AlertInfo"},
+        {"name": "alert_reporter",   "type": "gcn.notices.core.AlertReporter"},
+        {"name": "identifiers",      "type": "gcn.notices.core.Identifiers"},
+        {"name": "event_info",       "type": "gcn.notices.core.EventInfo"},
+        {"name": "datetime",         "type": "gcn.notices.core.DateTime"},
+        {"name": "localization",     "type": "gcn.notices.core.Localization"},
+        {"name": "statistics",       "type": "gcn.notices.core.Statistics"},
+        {"name": "comments",         "type": "gcn.notices.core.Comments"},
+        {"name": "grb_duration",     "type": "gcn.notices.grb.Duration"},
+        {"name": "grb_spectral",     "type": "gcn.notices.core.spectral.GammaRay"},
+        {"name": "lat_onboard",      "type": "gcn.notices.fermi.lat.OnboardTrigger"}
+     ]
+  }
+]

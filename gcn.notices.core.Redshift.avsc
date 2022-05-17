@@ -14,7 +14,7 @@
       "type": {
         "name": "RedshiftTypeEnum",
         "type": "enum",
-        "symbols": ["SPECTROSCOPIC", "PHOTOMETRIC"]
+        "symbols": ["spectroscopic", "photometric"]
       }
     }
   ]

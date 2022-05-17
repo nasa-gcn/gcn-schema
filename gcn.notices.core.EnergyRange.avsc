@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "namespace": "gcn.notices.core",
+  "name": "EnergyRange",
+  "fields": [
+      {"name":"energy_low","type": "float", "doc": "Low energy bound in range [keV]"},
+      {"name":"energy_high","type": "float", "doc": "High energy bound in range [keV]"}
+   ]
+}

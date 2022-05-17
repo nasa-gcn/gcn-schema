@@ -4,7 +4,7 @@
   "name": "AlertInfo",
   "fields": [
     {
-      "name": "alert_time",
+      "name": "alert_datetime",
       "type": "string",
       "doc": "Date and time of notice creation [UTC, ISO 8601]"
     },
@@ -13,8 +13,8 @@
       "type": {
         "name": "AlertTenseEnum",
         "type": "enum",
-        "symbols": ["CURRENT", "ARCHIVAL", "PLANNED"],
-        "doc": "Indication of whether this alert refers to a recent observation (CURRENT), re-analysis of archival data (ARCHIVAL), or a planned observation in the future (PLANNED)"
+        "symbols": ["current", "archival", "planned"],
+        "doc": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), or a planned observation in the future (planned)"
       }
     }
   ]

@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "namespace": "gcn.notices.core.spectral.models",
+  "name": "PowerLaw",
+  "doc": "Spectral model powerlaw with N(E)=amplitude*energy^{-alpha}",
+  "fields": [
+    {"name": "amplitude","type": "float",  "doc": "amplitude of spectral model fit at pivot_energy [ph/cm2/s/keV]"},
+    {"name": "amplitude_error","type": "float",  "doc": "1-sigma uncertainty of amplitude [ph/cm2/s/keV]"},
+    {"name": "pivot_energy","type":"float","doc":"pivot energy [keV]"},
+    {"name": "alpha","type": "float",  "doc": "power-law index of spectral model"},
+    {"name": "alpha_error","type": "float",  "doc": "1-sigma uncertainty of alpha"}
+  ]
+}
+

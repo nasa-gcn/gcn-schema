@@ -1,0 +1,18 @@
+[
+  {
+    "namespace": "gcn.notices.fermi.gbm",
+    "name": "Trigger",
+    "type": "record",
+    "fields": [
+        {"name": "alert_info",      "type": "gcn.notices.core.AlertInfo"},
+        {"name": "identifiers",     "type": "gcn.notices.core.Identifiers"},
+        {"name": "event_info",      "type": "gcn.notices.core.EventInfo"},
+        {"name": "datetime",        "type": "gcn.notices.core.DateTime"},
+        {"name": "localization",    "type": "gcn.notices.core.Localization"},
+        {"name": "statistics",      "type": "gcn.notices.core.Statistics"},
+        {"name": "hardness_ratio",  "type": "gcn.notices.core.HardnessRatio"},
+        {"name": "comments",        "type": "gcn.notices.core.Comments"},
+        {"name": "specific",        "type": "gcn.notices.fermi.gbm.Specific"}
+     ]
+  }
+]

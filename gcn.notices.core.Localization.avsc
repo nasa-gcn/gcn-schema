@@ -1,7 +1,7 @@
 {
   "type": "record",
   "namespace": "gcn.notices.core",
-  "name": "Location",
+  "name": "Localization",
   "fields": [
     {
       "name": "ra",
@@ -14,29 +14,35 @@
       "doc": "ICRS declination [deg]"
     },
     {
-      "name": "a",
+      "name": "semi_major",
       "type": ["float", "null"],
       "doc": "Uncertainty ellipse semi-major axis [deg]"
     },
     {
-      "name": "b",
+      "name": "semi_minor",
       "type": ["float", "null"],
       "doc": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"
     },
     {
-      "name": "pa",
+      "name": "position_angle",
       "type": ["float", "null"],
       "doc": "Position angle of semi-major axis [deg]"
     },
     {
-      "name": "prob",
+      "name": "containment_probability",
       "type": ["float", "null"],
       "doc": "Containment probability [dimensionless, 0-1]"
     },
+    { 
+      "name": "systematic_included", 
+      "type": "boolean", 
+      "doc": "Contains true when the systematic error is included and false when the systematic error is not included", 
+      "default": false
+    },
     {
-      "name": "skymap",
+      "name": "healpix_url",
       "type": ["string", "null"],
-      "doc": "URL of HEALPix localization file"
+      "doc": "URL of HEALPix localization probability file"
     }
   ]
 }

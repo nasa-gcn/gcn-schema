@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "namespace": "gcn.notices.core.spectral.models",
+  "name": "CutOffPowerLaw",
+  "doc": "Spectral model known as comptonized or powerlaw with exponential cutoff amplitude*energy^{-alpha}*exp(-energy/beta)",
+  "fields" : [
+    {"name": "amplitude","type": "float",  "doc": "amplitude of spectral model fit at 100 keV [ph/cm2/s/keV]"},
+    {"name": "amplitude_error","type": "float",  "doc": "1-sigma uncertainty of amplitude [ph/cm2/s/keV]"},
+    {"name": "alpha","type": "float",  "doc": "low-energy power-law index of spectral model"},
+    {"name": "alpha_error","type": "float",  "doc": "1-sigma uncertainty of alpha"},
+    {"name": "epeak","type": "float",  "doc": "e-folding energy of exponential rolloff [keV]"},
+    {"name": "epeak_error","type": "float",  "doc": "1-sigma uncertainty of Epeak [keV]"}
+  ]
+}
+

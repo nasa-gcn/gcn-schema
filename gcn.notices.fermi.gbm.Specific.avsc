@@ -1,0 +1,82 @@
+  {
+  "type": "record",
+  "namespace": "gcn.notices.fermi.gbm",
+  "name": "Specific",
+  "fields" : [
+      {
+         "name": "detectors",
+         "type": "string", 
+         "doc": "Which of the 14 detectors triggered on this event"
+      },
+      {
+         "name": "phi",
+         "type": "string", 
+         "doc": "Angle between source location in azimuth measured from +x axis counterclockwise, to +y axis, range 0 - 360 degrees [deg]"
+      },
+      {
+         "name": "theta",
+         "type": "string", 
+         "doc": "Angle between source location and LAT boresight, range 0 - 180 [deg]"
+      },
+      {
+         "name": "trigger_algorithm",  
+         "type": "string", 
+         "doc": "Version number of the flight software trigger algorithm that was used to calculate the trigger for this event"
+      },
+      {
+         "name": "localization_algorithm",  
+         "type": "string", 
+         "doc": "Version number of the flight software localization algorithm that was used to derive this location for this event"
+      },
+      {  
+         "name": "localization_url",
+         "type": "string", 
+         "doc": "String containing the full localization URL"
+      },
+      {
+         "name": "lightcurve_url",
+         "type": "string", 
+         "doc": "String containing the full lightcurve URL"
+      },
+      {
+         "name": "data_timescale",
+         "type": "float",  
+         "doc": "Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [s]"
+      },
+      {
+         "name": "latitude",
+         "type": "float",
+         "doc": "Geographic latitude of Fermi at time of trigger [deg]"
+      },
+      {
+         "name": "longitude",
+         "type": "float",
+         "doc": "Geographic longitude of Fermi at time of trigger [deg]"
+      },
+      {
+         "name": "earth_angle",
+         "type": "float",  
+         "doc": "Angle between the source location and the center of the Earth [deg]"
+      },
+      {
+         "name": "spectral_class",
+         "type": {"name": "SpectralClassEnum", "type": "enum", "symbols": ["SOFT", "HARD"]},
+         "doc": "Enum specifying classification of soft or hard spectral classification"
+      },
+      {
+         "name": "duration_class",
+         "type": {"name": "TypeClassEnum","type": "enum", "symbols": ["SHORT", "LONG"]},
+         "doc": "Enum specifying classification of short or long duration"
+      },
+      {
+         "name": "reliability",
+         "type": "int",
+         "doc": "Measure of confidence on the detection.  It is a number from 1 to 10. 2=low, 5=medium, 8=high"
+      },
+      {
+         "name": "message_type",
+         "type": "string",
+         "doc": "Specify the type of alert message, e.g. Alert, Flight Position, Ground Position [string]"
+      }
+     ]
+  }
