@@ -1,1 +1,1 @@
-# tach-avro-schema
+# Unified GCN Schema
