@@ -5,7 +5,7 @@ Parse all Avro schema in this repository.
 Errors are output in the GNU error format
 <https://www.gnu.org/prep/standards/html_node/Errors.html>.
 """
-from json.decoder import JSONDecodeError
+import json
 from glob import iglob
 import sys
 
@@ -16,7 +16,7 @@ failed = False
 for filename in iglob('*.avsc'):
     try:
         load_schema(filename)
-    except JSONDecodeError as e:
+    except json.decoder.JSONDecodeError as e:
         print(f'{filename}:{e.lineno}:{e.colno}: error: {e.msg}')
         failed = True
     except SchemaParseException as e:
@@ -25,6 +25,18 @@ for filename in iglob('*.avsc'):
     except UnknownType as e:
         print(f'{filename}: error: unknown type: {e.args[0]}')
         failed = True
+
+def validate(filename):
+    with open(filename) as file:
+        try:
+            return json.load(file) # put JSON-data to a variable
+        except json.decoder.JSONDecodeError:
+            print('Invalid JSON') # in case json is invalid
+        else:
+            print('Valid JSON') # in case json is valid
+
+for filename in iglob('**/*.json'):
+    validate(filename)
 
 if failed:
     sys.exit(1)
