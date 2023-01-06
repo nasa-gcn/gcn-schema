@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "title": "gcn.notices.core",
+    "description": "Distance",
+    "properties": {
+        "luminosity_distance":{
+        "type": ["float"],
+        "description": "Luminosity distance [Mpc]"
+        },
+        "luminosity_distance_error": {
+        "type":["float"],
+        "description": "Luminosity distance uncertainty [Mpc, 1-sigma]"
+        }
+    }
+}
