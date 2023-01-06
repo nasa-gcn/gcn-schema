@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "title": "gcn.notices.core",
+    "description": "Comments",
+    "properties": {
+        "comments": {
+            "type": ["string"],
+            "description": "Additional information about the event"
+        }
+    }
+  }

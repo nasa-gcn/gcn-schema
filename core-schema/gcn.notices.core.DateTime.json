@@ -1,0 +1,23 @@
+{
+    "title": "gcn.notices.core",
+    "description": "DateTime",
+    "type": "object",
+    "properties": {
+        "trigger_time": {
+        "type": ["string", "null"],
+        "description": "Time of the trigger [ISO 8601]"
+        },
+        "observation_start": {
+        "type": ["string", "null"],
+        "description": "Start time of the observation [ISO 8601]"
+        },
+        "observation_stop": {
+        "type": ["string", "null"],
+        "description": "Stop time of the observation [ISO 8601]"
+        },
+        "observation_livetime": {
+        "type": ["float", "null"],
+        "description": "Livetime of the observation [s]"
+        }  
+    }
+}

@@ -36,6 +36,7 @@ def validate(filename):
             print('Valid JSON') # in case json is valid
 
 for filename in iglob('**/*.json'):
+    print(filename)
     validate(filename)
 
 if failed:

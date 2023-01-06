@@ -1,0 +1,19 @@
+{
+    "title": "gcn.notices.core",
+    "description": "AlertReporter",
+    "type": "object",
+    "properties": {
+        "mission": {
+            "type": ["string"],
+            "description": "Name of Mission or Telescope reporting the event"
+        },
+        "instrument": {
+            "type": ["string"],
+            "description": "Name of the Instrument reporting the event"
+        },
+        "record_number": {
+            "type": ["int"],
+            "description": "Serial number spanning all the messages that come from the mission during a given trigger"
+        }
+    }
+}

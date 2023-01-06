@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "title": "gcn.notices.core",
+    "description": "EventInfo",
+    "properties": {
+        "event_id": {
+            "type": ["string"], 
+            "description": "Name of the event" 
+        },
+        "event_alias": {
+            "type": ["array"],
+            "description": "0 or more alias event identfiers"
+        }
+    }
+}
