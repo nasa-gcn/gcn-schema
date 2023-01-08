@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "title": "gcn.notices.core",
+    "description": "Identifiers",
+    "properties": {
+      
+        "instrument_id": {
+        "type": "string",
+        "description": "Trigger number or id number"
+      },
+      
+       "instrument_id_alternate": {
+        "type": ["string", "null"],
+        "description": "Alternate id number"
+      },
+      
+       "data_archive_page": {
+        "type": ["string", "null"],
+        "description": "URL of archived data files"
+      }
+  }
+  }

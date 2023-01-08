@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "title": "gcn.notices.core",
+  "description": "TimeRange",
+  "properties": {
+    "time_start":{"type": "number", "description": "Time window start, since trigger [s]"},
+    "time_stop":{"type": "number", "description": "Time window stop, since trigger [s]"}
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "title": "gcn.notices.core",
+  "description": "HardnessRatio",
+  "properties" : {
+    "hardness_ratio": {"type": "number", "description": "ratio of flux between high and low energy bands"},
+    "energy_range_hard": {"$ref": "gcn.notices.core.HardnessRatio"},
+    "energy_range_soft": {"$ref": "gcn.notices.core.HardnessRatio"}
+  }
+}

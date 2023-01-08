@@ -9,22 +9,22 @@ import json
 from glob import iglob
 import sys
 
-from fastavro.schema import load_schema, SchemaParseException, UnknownType
+#from fastavro.schema import load_schema, SchemaParseException, UnknownType
 
 failed = False
 
-for filename in iglob('*.avsc'):
-    try:
-        load_schema(filename)
-    except json.decoder.JSONDecodeError as e:
-        print(f'{filename}:{e.lineno}:{e.colno}: error: {e.msg}')
-        failed = True
-    except SchemaParseException as e:
-        print(f'{filename}: error: {e.args[0]}')
-        failed = True
-    except UnknownType as e:
-        print(f'{filename}: error: unknown type: {e.args[0]}')
-        failed = True
+# for filename in iglob('*.avsc'):
+#     try:
+#         load_schema(filename)
+#     except json.decoder.JSONDecodeError as e:
+#         print(f'{filename}:{e.lineno}:{e.colno}: error: {e.msg}')
+#         failed = True
+#     except SchemaParseException as e:
+#         print(f'{filename}: error: {e.args[0]}')
+#         failed = True
+#     except UnknownType as e:
+#         print(f'{filename}: error: unknown type: {e.args[0]}')
+#         failed = True
 
 def validate(filename):
     with open(filename) as file:
