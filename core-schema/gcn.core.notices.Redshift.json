@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "title": "gcn.notices.core",
+  "description": "Redshift",
+  "properties": {
+    
+     "redshift": {
+      "type": "number",
+      "description": "displacement of spectal lines toward longer wavelengths [sigma]"},
+
+      "redshift_error": { "type": "number", "description": "Error" },
+    
+      "redshift_type": {
+        "enum": ["spectroscopic", "photometric"]
+      }
+    }
+}
+

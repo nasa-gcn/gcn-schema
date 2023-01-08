@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "title": "gcn.notices.core",
+  "description": "Localization",
+  "properties": {
+    
+      "ra": {
+      "type": ["number", "null"],
+      "description": "ICRS right ascension [deg]"
+    },
+    
+      "dec": {
+      "type": ["number", "null"],
+      "description": "ICRS declination [deg]"
+    },
+    
+     "semi_major": {
+      "type": ["number", "null"],
+      "description": "Uncertainty ellipse semi-major axis [deg]"
+    },
+    
+     "semi_minor": {
+      "type": ["number", "null"],
+      "description": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"
+    },
+    
+     "position_angle": {
+      "type": ["number", "null"],
+      "description": "Position angle of semi-major axis [deg]"
+    },
+    
+     "containment_probability": {
+      "type": ["number", "null"],
+      "description": "Containment probability [dimensionless, 0-1]"
+    },
+    
+     "systematic_included": { 
+      "type": "boolean", 
+      "description": "Contains true when the systematic error is included and false when the systematic error is not included", 
+      "default": false
+    },
+    
+     "healpix_url": {
+      "type": ["string", "null"],
+      "description": "URL of HEALPix localization probability file"
+    }
+}
+}
