@@ -4,39 +4,39 @@
     "description": "Spectral model Band smoothly broken powerlaw (Band et al. 1993)",
     "properties":{
         "amplitude": {
-            "type": ["float"],
+            "type": ["number"],
             "description":"amplitude of spectral model fit at pivot_energy [ph/cm2/s/keV]"
         },
         "amplitude_error":{
-            "type": ["float"],  
+            "type": ["number"],  
             "description": "1-sigma uncertainty of amplitude [ph/cm2/s/keV]"
         },
         "pivot_energy":{
-            "type":["float"],
+            "type":["number"],
             "description":"pivot energy [keV]"
         },
         "alpha":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "power-law index of spectral model"
         },
         "alpha_error":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "1-sigma uncertainty of alpha"
         },
         "epeak":{
-            "type": ["float"],  
+            "type": ["number"],  
             "description": "e-folding energy of exponential rolloff [keV]"
         },
         "epeak_error":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "1-sigma uncertainty of Epeak [keV]"
         },
         "beta":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "high-energy power-law index of Band parameterization"
         },
         "beta_error":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "1-sigma uncertainty of beta"
         }
     }

@@ -1,7 +1,7 @@
 {
     "type": "record",
-    "title": "gcn.notices.core",
-    "description": "EnergyRange",
+    "title": "gcn.notices.core.EnergyRange",
+    "description": "Generic energy range schema",
     "properties": {
         "energy_low": {"type": ["number"], "description": "Low energy bound in range [keV]"},
         "energy_high": {"type": ["number"], "description": "high energy bound in range [keV]"}

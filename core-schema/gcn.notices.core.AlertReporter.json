@@ -1,6 +1,6 @@
 {
-    "title": "gcn.notices.core",
-    "description": "AlertReporter",
+    "title": "gcn.notices.core.AlertReporter",
+    "description": "Alert Reporter instrument",
     "type": "object",
     "properties": {
         "mission": {

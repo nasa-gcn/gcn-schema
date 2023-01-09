@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "title": "gcn.amon.notice",
+    "title": "gcn.notices.amon",
     "description": "GoldAndBronze",
     "properties": { 
         "type": {

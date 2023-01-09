@@ -24,7 +24,7 @@
             "description":"Energy range [keV] used in spectral fit"
         },
        "hardness_ratio": {
-           "type": ["float"],
+           "type": ["number"],
            "description": "ratio of flux between high and low energy bands"
         },
        "hardness_ratio_energy_range_hard":{
@@ -36,19 +36,19 @@
             "description":"Energy range [keV] used in soft band of hardness ratio"
         },
         "photon_flux":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "Photon Flux [ph/cm2/s]"
         },
         "photon_flux_error":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "1-sigma uncertainty in Photon Flux [ph/cm2/s]"
         },
         "energy_flux":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "Energy Flux [erg/cm2/s]"
         },
         "energy_flux_error":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "1-sigma uncertainty in Energy Flux [erg/cm2/s]"
         },
         "flux_energy_range":{
@@ -60,11 +60,11 @@
             "description": "Time range used in flux calculation [s]"
         },
         "fluence":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "Fluence [erg/cm2]"
         },
         "fluence_error":{
-            "type": ["float"],
+            "type": ["number"],
             "description": "Fluence Error [erg/cm2]"
         },
         "fluence_energy_range": {

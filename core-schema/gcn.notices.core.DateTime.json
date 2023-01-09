@@ -1,6 +1,6 @@
 {
-    "title": "gcn.notices.core",
-    "description": "DateTime",
+    "title": "gcn.notices.core.DateTime",
+    "description": "Time descriptions of transient event and observation",
     "type": "object",
     "properties": {
         "trigger_time": {

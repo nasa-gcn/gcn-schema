@@ -1,7 +1,7 @@
 {
     "type": "object",
-    "title": "gcn.notices.core",
-    "description": "Distance",
+    "title": "gcn.notices.core.Distance",
+    "description": "Luminosity Distance",
     "properties": {
         "luminosity_distance":{
         "type": ["float"],
