@@ -1,0 +1,79 @@
+{
+    "type": "object",
+    "title": "gcn.notices.core.spectral.GammaRay",
+    "description": "Spectral properties from gamma-ray data",
+    "properties": { 
+        "best_fit_model": {
+            "enum": ["POWERLAW","CUTOFFPOWERLAW","BAND"],
+            "description": "Name of model corresponding to best statistical fit of spectrum"
+        },
+       "power_law": {
+            "$ref": "gcn.notices.core.spectral.models.PowerLaw",
+            "description":"Fit parameters for PowerLaw model"
+        },
+       "cutoff_power_law": {
+            "$ref": "gcn.notices.core.spectral.models.CutOffPowerLaw",
+            "description":"Fit parameters for Cutoff PowerLaw model"
+        },
+       "band": {
+            "$ref":"gcn.notices.core.spectral.models.Band",
+            "description":"Fit parameters for Band model"
+        },
+       "spectral_energy_range": {
+            "$ref":"gcn.notices.core.EnergyRange",
+            "description":"Energy range [keV] used in spectral fit"
+        },
+       "hardness_ratio": {
+           "type": ["float"],
+           "description": "ratio of flux between high and low energy bands"
+        },
+       "hardness_ratio_energy_range_hard":{
+            "$ref":"gcn.notices.core.EnergyRange",
+            "description":"Energy range [keV] used in hard band of hardness ratio"
+        },
+       "hardness_ratio_energy_range_soft": {
+            "$ref":"gcn.notices.core.EnergyRange",
+            "description":"Energy range [keV] used in soft band of hardness ratio"
+        },
+        "photon_flux":{
+            "type": ["float"],
+            "description": "Photon Flux [ph/cm2/s]"
+        },
+        "photon_flux_error":{
+            "type": ["float"],
+            "description": "1-sigma uncertainty in Photon Flux [ph/cm2/s]"
+        },
+        "energy_flux":{
+            "type": ["float"],
+            "description": "Energy Flux [erg/cm2/s]"
+        },
+        "energy_flux_error":{
+            "type": ["float"],
+            "description": "1-sigma uncertainty in Energy Flux [erg/cm2/s]"
+        },
+        "flux_energy_range":{
+            "$ref": "gcn.notices.core.EnergyRange", 
+            "description": "Energy range used in flux calculation [keV]"
+        },
+        "flux_time_range":{
+            "$ref":"gcn.notices.core.TimeRange",
+            "description": "Time range used in flux calculation [s]"
+        },
+        "fluence":{
+            "type": ["float"],
+            "description": "Fluence [erg/cm2]"
+        },
+        "fluence_error":{
+            "type": ["float"],
+            "description": "Fluence Error [erg/cm2]"
+        },
+        "fluence_energy_range": {
+            "$ref": "gcn.notices.core.EnergyRange", 
+            "description": "Energy Range used in Fluence calculation [keV]"
+        },
+        "fluence_time_range":{
+            "$ref":"gcn.notices.core.TimeRange", 
+            "description": "Time range used in fluence calculation [s]"
+        }
+    }
+}
