@@ -1,6 +1,6 @@
 {
-    "title": "gcn.notices.core",
-    "description": "AlertInfo",
+    "title": "gcn.notices.core.AlertInfo",
+    "description": "Alert Information description properties of this notice",
     "type": "object",
     "properties": {
         "alert_datetime": {
@@ -8,7 +8,10 @@
             "description": "Date and time of notice creation [UTC, ISO 8601]"},
         "alert_tense": {
             "enum": ["current","archival","planned"],
-            "description": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), or a planned observation in the future (planned)"}
+            "description": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), or a planned observation in the future (planned)"},
+        "alert_type": {
+            "enum": ["initial","update","retraction"],
+            "description": "Indication of alert sequence if multiple of same type sent"}
     }
 }
 

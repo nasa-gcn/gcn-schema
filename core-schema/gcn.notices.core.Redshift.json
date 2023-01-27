@@ -1,17 +1,20 @@
 {
   "type": "object",
-  "title": "gcn.notices.core",
-  "description": "Redshift",
+  "title": "gcn.notices.core.Redshift",
+  "description": "Redshift measure of transient",
   "properties": {
-    
      "redshift": {
-      "type": "number",
-      "description": "displacement of spectal lines toward longer wavelengths [sigma]"},
-
-      "redshift_error": { "type": "number", "description": "Error" },
-    
-      "redshift_type": {
+      "type": ["number"],
+      "description": "displacement of spectal lines toward longer wavelengths [sigma]"
+      },
+      "redshift_error": { 
+        "type": ["number"], 
+        "description": "Error" },
+      "redshift_measure": {
         "enum": ["spectroscopic", "photometric"]
+      },
+      "redshift_type": {
+        "enum": ["emission","absorption","host"]
       }
     }
 }

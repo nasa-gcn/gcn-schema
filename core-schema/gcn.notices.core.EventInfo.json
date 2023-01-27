@@ -1,7 +1,7 @@
 {
     "type": "object",
-    "title": "gcn.notices.core",
-    "description": "EventInfo",
+    "title": "gcn.notices.core.EventInfo",
+    "description": "Name or names of the event",
     "properties": {
         "event_id": {
             "type": ["string"], 

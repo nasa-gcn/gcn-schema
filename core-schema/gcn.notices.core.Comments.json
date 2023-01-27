@@ -1,7 +1,7 @@
 {
     "type": "object",
-    "title": "gcn.notices.core",
-    "description": "Comments",
+    "title": "gcn.notices.core.Comments",
+    "description": "Comments that are not summarized elsewhere in schema",
     "properties": {
         "comments": {
             "type": ["string"],

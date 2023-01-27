@@ -1,7 +1,7 @@
 {
     "type": "object",
-    "title": "gcn.notices.core",
-    "description": "Identifiers",
+    "title": "gcn.notices.core.Identifiers",
+    "description": "Identifiers of trigger and archive",
     "properties": {
       
         "instrument_id": {
@@ -18,5 +18,5 @@
         "type": ["string", "null"],
         "description": "URL of archived data files"
       }
-  }
-  }
+    }
+}

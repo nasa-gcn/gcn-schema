@@ -1,10 +1,19 @@
 {
   "type": "object",
-  "title": "gcn.notices.core",
-  "description": "HardnessRatio",
+  "title": "gcn.notices.core.HardnessRatio",
+  "description": "Hardness Ratio parameterization",
   "properties" : {
-    "hardness_ratio": {"type": "number", "description": "ratio of flux between high and low energy bands"},
-    "energy_range_hard": {"$ref": "gcn.notices.core.HardnessRatio"},
-    "energy_range_soft": {"$ref": "gcn.notices.core.HardnessRatio"}
+    "hardness_ratio": {
+      "type": ["number"], 
+      "description": "ratio of flux between high and low energy bands"
+    },
+    "energy_range_hard": {
+      "$ref": "gcn.notices.core.HardnessRatio",
+      "description": "Energy range [keV] used in hard band of hardness ratio"
+    },
+    "energy_range_soft": {
+      "$ref": "gcn.notices.core.HardnessRatio",
+      "description": "Energy range [keV] used in soft band of hardness ratio"
+    }
   }
 }

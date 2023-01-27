@@ -1,7 +1,7 @@
 {
   "type": "object",
-  "title": "gcn.notices.core",
-  "description": "Localization",
+  "title": "gcn.notices.core.Localization",
+  "description": "Localization of transient",
   "properties": {
     
       "ra": {
