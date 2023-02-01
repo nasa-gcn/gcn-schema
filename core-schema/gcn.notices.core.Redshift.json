@@ -1,21 +1,25 @@
 {
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Redshift.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "gcn.notices.core.Redshift",
   "description": "Redshift measure of transient",
   "properties": {
-     "redshift": {
-      "type": ["number"],
-      "description": "displacement of spectal lines toward longer wavelengths [sigma]"
+    "redshift": {
+      "type": "number",
+      "description": "Displacement of spectal lines toward longer wavelengths [sigma]"
+    },
+    "redshift_error": { 
+        "type": "number", 
+        "description": "Error"
       },
-      "redshift_error": { 
-        "type": ["number"], 
-        "description": "Error" },
       "redshift_measure": {
         "enum": ["spectroscopic", "photometric"]
       },
       "redshift_type": {
-        "enum": ["emission","absorption","host"]
+        "enum": ["emission", "absorption", "host"]
       }
-    }
+    },
+  "required": ["redshift", "redshift_error", "redshift_measure", "redshift_type"]
 }
 

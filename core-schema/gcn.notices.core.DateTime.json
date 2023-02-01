@@ -1,4 +1,6 @@
 {
+    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Comments.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "gcn.notices.core.DateTime",
     "description": "Time descriptions of transient event and observation",
     "type": "object",
@@ -19,5 +21,6 @@
         "type": ["float", "null"],
         "description": "Livetime of the observation [s]"
         }  
-    }
+    },
+    "required": ["trigger_time", "observation_start", "observation_stop", "observation_livetime"]
 }

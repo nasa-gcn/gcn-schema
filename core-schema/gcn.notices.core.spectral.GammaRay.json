@@ -1,79 +1,81 @@
 {
+    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.spectral.GammaRay.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "title": "gcn.notices.core.spectral.GammaRay",
     "description": "Spectral properties from gamma-ray data",
-    "properties": { 
+    "properties": {
         "best_fit_model": {
-            "enum": ["POWERLAW","CUTOFFPOWERLAW","BAND"],
+            "enum": ["POWERLAW", "CUTOFFPOWERLAW", "BAND"],
             "description": "Name of model corresponding to best statistical fit of spectrum"
         },
        "power_law": {
-            "$ref": "gcn.notices.core.spectral.models.PowerLaw",
+            "$ref": "gcn.notices.core.spectral.models.PowerLaw.json",
             "description":"Fit parameters for PowerLaw model"
         },
        "cutoff_power_law": {
-            "$ref": "gcn.notices.core.spectral.models.CutOffPowerLaw",
+            "$ref": "gcn.notices.core.spectral.models.CutOffPowerLaw.json",
             "description":"Fit parameters for Cutoff PowerLaw model"
         },
        "band": {
-            "$ref":"gcn.notices.core.spectral.models.Band",
+            "$ref":"gcn.notices.core.spectral.models.Band.json",
             "description":"Fit parameters for Band model"
         },
        "spectral_energy_range": {
-            "$ref":"gcn.notices.core.EnergyRange",
+            "$ref": "gcn.notices.core.EnergyRange.json",
             "description":"Energy range [keV] used in spectral fit"
         },
        "hardness_ratio": {
-           "type": ["number"],
+           "type": "number",
            "description": "ratio of flux between high and low energy bands"
         },
-       "hardness_ratio_energy_range_hard":{
-            "$ref":"gcn.notices.core.EnergyRange",
-            "description":"Energy range [keV] used in hard band of hardness ratio"
-        },
-       "hardness_ratio_energy_range_soft": {
-            "$ref":"gcn.notices.core.EnergyRange",
-            "description":"Energy range [keV] used in soft band of hardness ratio"
+       "hardness_ratio_energy_range":{
+            "$ref":"gcn.notices.core.EnergyRange.json",
+            "description":"Energy range [keV] used in soft and hard band of hardness ratio"
         },
         "photon_flux":{
-            "type": ["number"],
+            "type": "number",
             "description": "Photon Flux [ph/cm2/s]"
         },
         "photon_flux_error":{
-            "type": ["number"],
+            "type": "number",
             "description": "1-sigma uncertainty in Photon Flux [ph/cm2/s]"
         },
         "energy_flux":{
-            "type": ["number"],
+            "type": "number",
             "description": "Energy Flux [erg/cm2/s]"
         },
         "energy_flux_error":{
-            "type": ["number"],
+            "type": "number",
             "description": "1-sigma uncertainty in Energy Flux [erg/cm2/s]"
         },
         "flux_energy_range":{
-            "$ref": "gcn.notices.core.EnergyRange", 
+            "$ref": "gcn.notices.core.EnergyRange.json", 
             "description": "Energy range used in flux calculation [keV]"
         },
         "flux_time_range":{
-            "$ref":"gcn.notices.core.TimeRange",
+            "$ref":"gcn.notices.core.TimeRange.json",
             "description": "Time range used in flux calculation [s]"
         },
         "fluence":{
-            "type": ["number"],
+            "type": "number",
             "description": "Fluence [erg/cm2]"
         },
         "fluence_error":{
-            "type": ["number"],
+            "type": "number",
             "description": "Fluence Error [erg/cm2]"
         },
         "fluence_energy_range": {
-            "$ref": "gcn.notices.core.EnergyRange", 
+            "$ref": "gcn.notices.core.EnergyRange.json", 
             "description": "Energy Range used in Fluence calculation [keV]"
         },
         "fluence_time_range":{
-            "$ref":"gcn.notices.core.TimeRange", 
+            "$ref": "gcn.notices.core.TimeRange.json", 
             "description": "Time range used in fluence calculation [s]"
         }
-    }
+    },
+    "required": ["best_fit_model", "power_law", "cutoff_power_law", "band", "spectral_energy_range", 
+    "hardness_ratio", "hardness_ratio_energy_range", "photon_flux", "photon_flux_error", 
+    "energy_flux", "energy_flux_error", "flux_energy_range", "flux_time_range","fluence", "fluence_error", 
+    "fluence_energy_range", "fluence_time_range"]
 }
