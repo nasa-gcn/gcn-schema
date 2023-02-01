@@ -1,55 +1,46 @@
 {
+    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/icecube/gcn.notices.amon.GoldAndBronze.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "title": "gcn.notices.amon",
     "description": "GoldAndBronze",
     "properties": { 
         "type": {
             "description": "Notice type Gold or Bronze", 
-            "type": ["string"]
+            "type": "string"
         },  
         "event": {
-            "$ref": "gcn.notices.core.EventInfo"
+            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.EventInfo.json"
         }, 
-        "ra": {
-            "$ref": "gcn.notices.core.Localization"
+        "localization": {
+            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Localization.json"
         },
-        "dec": {
-            "$ref": "gcn.notices.core.Localization"
-        },  
-        "err": {
-            "$ref": "gcn.notices.core.Localization"
-        }, 
         "err50": {
             "description": "Location uncertainty (radius, 50% containment) in units of arcmin",  
-            "type": ["number"],
+            "type": "number",
             "minimum": 0
         }, 
-        "discovery_date": {
-            "$ref": "gcn.notices.core.AlertInfo"
-        },
-        "discovery_time": {
-            "$ref": "gcn.notices.core.AlertInfo"
-        },  
+        "discovery_datetime": {
+            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.DateTime.json"
+        }, 
         "revision": {
             "description": "Revision number by IceCube",  
-            "type": [ "number"]
+            "type": "number"
         }, 
         "energy": {
             "description": "Most probable neutrino energy [TeV] that would have produced an event",  
-            "type": ["number"],
+            "type": "number",
             "minimum": 0
         }, 
         "signalness": {
             "description": "Probability [dn] that this is an astrophysical signal relative to backgrounds", 
-            "type": [ "number"],
+            "type": "number",
             "minimum": 0
         }, 
         "far": {
             "description": "Rate of background events expected that are 'like this alert', would be seen by IceCube per year", 
-            "$ref": "gcn.notices.core.Statistics"
+            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Statistics.json"
         }
     },
-    
-    "required": ["type", "event", "ra", "dec", "err", "err50", "discovery_date", "discovery_time", 
-                 "revision", "energy", "signalness", "far"]
+    "required": ["type", "event", "localization", "err50", "discovery_datetime", "revision", "energy", "signalness", "far"]
 }
