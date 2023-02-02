@@ -14,7 +14,7 @@
             "description": "Name of the Instrument reporting the event"
         },
         "record_number": {
-            "type": "int",
+            "type": "number",
             "description": "Serial number spanning all the messages that come from the mission during a given trigger"
         }
     },
