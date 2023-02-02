@@ -10,7 +10,7 @@
       "description": "ratio of flux between high and low energy bands"
     },
     "energy_range": {
-      "$ref": "gcn.notices.core.EventInfo.json",
+      "$ref": "gcn.notices.core.EnergyRange.json",
       "description": "Energy range [keV] used in soft and hard band of hardness ratio"
     }
   },
