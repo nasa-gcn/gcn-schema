@@ -1,4 +1,4 @@
-name: Validate Avro schema
+name: Validate schema
 
 on: [push, pull_request]
 
@@ -7,10 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
+    - name: Install Node.js
+      uses: actions/setup-node@v3
       with:
-        python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-    - name: Install dependencies with pip
-      run: pip install fastavro
-    - name: Parse all Avro schema
-      run: .github/workflows/validate.py
+        node-version: '18'
+    - name: Run Prettier code style checks
+      run: npx prettier -c .
