@@ -1,48 +1,43 @@
 {
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Localization.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "gcn.notices.core.Localization",
   "description": "Localization of transient",
   "properties": {
-    
-      "ra": {
+    "ra": {
       "type": ["number", "null"],
       "description": "ICRS right ascension [deg]"
     },
-    
-      "dec": {
+    "dec": {
       "type": ["number", "null"],
       "description": "ICRS declination [deg]"
     },
-    
-     "semi_major": {
+    "semi_major": {
       "type": ["number", "null"],
       "description": "Uncertainty ellipse semi-major axis [deg]"
     },
-    
-     "semi_minor": {
+    "semi_minor": {
       "type": ["number", "null"],
       "description": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"
     },
-    
-     "position_angle": {
+    "position_angle": {
       "type": ["number", "null"],
       "description": "Position angle of semi-major axis [deg]"
     },
-    
-     "containment_probability": {
+    "containment_probability": {
       "type": ["number", "null"],
       "description": "Containment probability [dimensionless, 0-1]"
     },
-    
-     "systematic_included": { 
+    "systematic_included": { 
       "type": "boolean", 
       "description": "Contains true when the systematic error is included and false when the systematic error is not included", 
       "default": false
     },
-    
-     "healpix_url": {
+    "healpix_url": {
       "type": ["string", "null"],
       "description": "URL of HEALPix localization probability file"
     }
-}
+  },
+  "required": ["ra", "dec", "semi_major", "semi_minor", "position_angle", "containment_probability", "systematic_included", "healpix_url"]
 }

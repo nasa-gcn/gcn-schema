@@ -1,11 +1,15 @@
 {
+    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Comments.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "title": "gcn.notices.core.Comments",
     "description": "Comments that are not summarized elsewhere in schema",
     "properties": {
         "comments": {
-            "type": ["string"],
+            "type": "string",
             "description": "Additional information about the event"
         }
-    }
-  }
+    },
+    "required": ["comments"]
+}
+  
