@@ -1,0 +1,55 @@
+ {
+    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/fermi/gcn.notices.fermi.lat.OnboardTrigger.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "gcn.notices.fermi.lat",
+    "description": "fermi lat OnboardTrigger",
+    "properties" : {
+        "phi":{
+            "type": "string", 
+            "description": "Angle between source location in azimuth measured from +x axis counterclockwise, to +y axis, range 0 - 360 degrees [deg]"
+        },
+        "theta": {          
+            "type": "string", 
+            "description": "Angle between source location and LAT boresight, range 0 - 180 [deg]"
+        },
+        "data_timescale": {      
+            "type": "number",  
+            "description": "Binning (i.e. time sampling) of the count rate lightcurve used during the iterative location calculation phase of the processing [s]"
+        }, 
+        "grb_intensity_total": {
+            "type": "number",    
+            "description": "Subset of the total number of events in the standard 4 energy bands that were used in the location calculation [ct]"
+        },
+        "grb_intensity1": {      
+            "type": "number",    
+            "description": "Number of events in the <0.1 GeV band [ct]"
+        },
+        "grb_intensity2": {      
+            "type": "number",    
+            "description": "Number of events in the 0.1-1 GeV band [ct]"
+        },
+        "grb_intensity3": {      
+            "type": "number",    
+            "description": "Number of events in the 1-10 GeV band [ct]"
+        },
+        "grb_intensity4": {
+            "type": "number",    
+            "description": "Number of events in the >10 GeV band [ct]"
+        },
+        "significance": {
+            "type": "number",  
+            "description": "Sqrt(TS) (with 2 DOF) of the detection [sqrt(TS) 2 DOF]"
+        },
+        "first_photon": {       
+            "type": "number",  
+            "description": "Time of first photon used in the location calculation [ISO 8601]"
+        },
+        "last_photon": {        
+            "type": "number",  
+            "description": "Time of last photon used in the location calculation [ISO 8601]"
+        }
+    },
+    "required": ["phi", "theta", "data_timescale", "grb_intensity_total", "grb_intensity1", "grb_intensity2",
+    "grb_intensity3", "grb_intensity4", "significance", "first_photon", "last_photon" ]
+}
