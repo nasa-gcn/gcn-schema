@@ -1,18 +1,18 @@
 {
-    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.EnergyRange.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "title": "gcn.notices.core.EnergyRange",
-    "description": "Generic energy range schema",
-    "properties": {
-        "energy_low": {
-            "type": "number",
-            "description": "Low energy bound in range [keV]"
-        },
-        "energy_high": {
-            "type": "number", 
-            "description": "high energy bound in range [keV]"
-        }
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.EnergyRange.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "gcn.notices.core.EnergyRange",
+  "description": "Generic energy range schema",
+  "properties": {
+    "energy_low": {
+      "type": "number",
+      "description": "Low energy bound in range [keV]"
     },
-    "required": ["energy_low", "energy_high"]
+    "energy_high": {
+      "type": "number",
+      "description": "high energy bound in range [keV]"
+    }
+  },
+  "required": ["energy_low", "energy_high"]
 }

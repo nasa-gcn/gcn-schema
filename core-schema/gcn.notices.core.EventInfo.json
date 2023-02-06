@@ -1,18 +1,18 @@
 {
-    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.EventInfo.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "title": "gcn.notices.core.EventInfo",
-    "description": "Name or names of the event",
-    "properties": {
-        "event_id": {
-            "type": "string", 
-            "description": "Name of the event" 
-        },
-        "event_alias": {
-            "type": "array",
-            "description": "0 or more alias event identfiers"
-        }
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.EventInfo.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "gcn.notices.core.EventInfo",
+  "description": "Name or names of the event",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "Name of the event"
     },
-    "required": ["event_id", "event_alias"]
+    "event_alias": {
+      "type": "array",
+      "description": "0 or more alias event identfiers"
+    }
+  },
+  "required": ["event_id", "event_alias"]
 }

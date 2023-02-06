@@ -1,36 +1,36 @@
 {
-    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/fermi/gcn.notices.fermi.gbm.Trigger.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "gcn.notices.fermi.gbm",
-    "description": "fermi gbm Trigger",
-    "type": "object",
-    "properties": {
-        "alert_info":{
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.AlertInfo.json"
-        },
-        "identifiers": {    
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Identifiers.json"
-        },
-        "event_info": {     
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.EventInfo.json"
-        },
-        "datetime": {       
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.DateTime.json"
-        },
-        "localization": {  
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Localization.json"
-        },
-        "statistics": {     
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Statistics.json"
-        },
-        "hardness_ratio": { 
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.HardnessRatio.json"
-        },
-        "comments": {       
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Comments.json"
-        },
-        "specific": {        
-            "$ref": "gcn.notices.fermi.gbm.Specific.json"
-        }
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/fermi/gcn.notices.fermi.gbm.Trigger.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gcn.notices.fermi.gbm",
+  "description": "fermi gbm Trigger",
+  "type": "object",
+  "properties": {
+    "alert_info": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.AlertInfo.json"
+    },
+    "identifiers": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Identifiers.json"
+    },
+    "event_info": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.EventInfo.json"
+    },
+    "datetime": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.DateTime.json"
+    },
+    "localization": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Localization.json"
+    },
+    "statistics": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Statistics.json"
+    },
+    "hardness_ratio": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.HardnessRatio.json"
+    },
+    "comments": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Comments.json"
+    },
+    "specific": {
+      "$ref": "gcn.notices.fermi.gbm.Specific.json"
     }
+  }
 }

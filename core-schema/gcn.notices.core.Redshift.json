@@ -9,17 +9,21 @@
       "type": "number",
       "description": "Displacement of spectal lines toward longer wavelengths [sigma]"
     },
-    "redshift_error": { 
-        "type": "number", 
-        "description": "Error"
-      },
-      "redshift_measure": {
-        "enum": ["spectroscopic", "photometric"]
-      },
-      "redshift_type": {
-        "enum": ["emission", "absorption", "host"]
-      }
+    "redshift_error": {
+      "type": "number",
+      "description": "Error"
     },
-  "required": ["redshift", "redshift_error", "redshift_measure", "redshift_type"]
+    "redshift_measure": {
+      "enum": ["spectroscopic", "photometric"]
+    },
+    "redshift_type": {
+      "enum": ["emission", "absorption", "host"]
+    }
+  },
+  "required": [
+    "redshift",
+    "redshift_error",
+    "redshift_measure",
+    "redshift_type"
+  ]
 }
-

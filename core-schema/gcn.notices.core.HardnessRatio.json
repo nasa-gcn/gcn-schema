@@ -4,9 +4,9 @@
   "type": "object",
   "title": "gcn.notices.core.HardnessRatio",
   "description": "Hardness Ratio parameterization",
-  "properties" : {
+  "properties": {
     "hardness_ratio": {
-      "type": "number", 
+      "type": "number",
       "description": "ratio of flux between high and low energy bands"
     },
     "energy_range": {
