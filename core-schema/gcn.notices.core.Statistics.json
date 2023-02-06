@@ -18,7 +18,7 @@
       "description": "Interval over rate signal to noise ratio calculation [s]"
     },
     "rate_energy_range": {
-      "$ref": "gcn.notices.core.EnergyRange",
+      "$ref": "gcn.notices.core.EnergyRange.json",
       "description": "Energy range over rate signal to noise ratio calculation [keV]"
     },
     "image_snr": {
@@ -40,18 +40,28 @@
     "classification": {
       "type": {
         "type": "object",
-        "additionalProperties": {"type": "string"}
+        "additionalProperties": { "type": "string" },
         "description": "Dictionary mapping mutually exclusive source classes to probabilities between 0 and 1, the sum of all values must be 1. e.g. ({'BNS', 0.9}, {'NSBH', 0.05}, {'BBH', 0.05})"
       }
     },
     "properties": {
       "type": {
         "type": "object",
-        "additionalProperties": {"type": "string"}
+        "additionalProperties": { "type": "string" },
         "description": "Dictionary of binary classifiers, each entry is between 0 and 1. e.g. ({'NS', 0.95}, {'REMNANT', 0.3})"
       }
     }
   },
-  "required": ["far", "rate_snr", "rate_duration", "rate_energy_range", "image_snr", "image_duration", 
-  "image_energy_range", "p_astro", "classification", "properties"]
+  "required": [
+    "far",
+    "rate_snr",
+    "rate_duration",
+    "rate_energy_range",
+    "image_snr",
+    "image_duration",
+    "image_energy_range",
+    "p_astro",
+    "classification",
+    "properties"
+  ]
 }

@@ -29,9 +29,9 @@
       "type": ["number", "null"],
       "description": "Containment probability [dimensionless, 0-1]"
     },
-    "systematic_included": { 
-      "type": "boolean", 
-      "description": "Contains true when the systematic error is included and false when the systematic error is not included", 
+    "systematic_included": {
+      "type": "boolean",
+      "description": "Contains true when the systematic error is included and false when the systematic error is not included",
       "default": false
     },
     "healpix_url": {
@@ -39,5 +39,14 @@
       "description": "URL of HEALPix localization probability file"
     }
   },
-  "required": ["ra", "dec", "semi_major", "semi_minor", "position_angle", "containment_probability", "systematic_included", "healpix_url"]
+  "required": [
+    "ra",
+    "dec",
+    "semi_major",
+    "semi_minor",
+    "position_angle",
+    "containment_probability",
+    "systematic_included",
+    "healpix_url"
+  ]
 }

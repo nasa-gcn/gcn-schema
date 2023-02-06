@@ -1,26 +1,31 @@
 {
-    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Comments.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "gcn.notices.core.DateTime",
-    "description": "Time descriptions of transient event and observation",
-    "type": "object",
-    "properties": {
-        "trigger_time": {
-        "type": ["string", "null"],
-        "description": "Time of the trigger [ISO 8601]"
-        },
-        "observation_start": {
-        "type": ["string", "null"],
-        "description": "Start time of the observation [ISO 8601]"
-        },
-        "observation_stop": {
-        "type": ["string", "null"],
-        "description": "Stop time of the observation [ISO 8601]"
-        },
-        "observation_livetime": {
-        "type": ["float", "null"],
-        "description": "Livetime of the observation [s]"
-        }  
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Comments.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gcn.notices.core.DateTime",
+  "description": "Time descriptions of transient event and observation",
+  "type": "object",
+  "properties": {
+    "trigger_time": {
+      "type": ["string", "null"],
+      "description": "Time of the trigger [ISO 8601]"
     },
-    "required": ["trigger_time", "observation_start", "observation_stop", "observation_livetime"]
+    "observation_start": {
+      "type": ["string", "null"],
+      "description": "Start time of the observation [ISO 8601]"
+    },
+    "observation_stop": {
+      "type": ["string", "null"],
+      "description": "Stop time of the observation [ISO 8601]"
+    },
+    "observation_livetime": {
+      "type": ["float", "null"],
+      "description": "Livetime of the observation [s]"
+    }
+  },
+  "required": [
+    "trigger_time",
+    "observation_start",
+    "observation_stop",
+    "observation_livetime"
+  ]
 }

@@ -1,39 +1,39 @@
 {
-    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/fermi/gcn.notices.fermi.gbm.GRB.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "gcn.notices.fermi.gbm",
-    "description": "gbm reported GRB notices",
-    "type": "object",
-    "properties": {
-        "alert_info": {        
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.AlertInfo.json"
-        },
-        "identifiers": {       
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Identifiers.json"
-        },
-        "event_info": {       
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.EventInfo.json"
-        },
-        "datetime": {       
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.DateTime.json"
-        },
-        "localization": {    
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Localization.json"
-        },
-        "statistics": {     
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Statistics.json"
-        },
-        "comments": {         
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Comments.json"
-        },
-        "grb_duration": {
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.grb.Duration.json"
-        },
-        "spectral_values": {
-            "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.spectral.GammaRay.json"
-        },
-        "specific": {     
-            "$ref": "gcn.notices.fermi.gbm.Specific.json"
-        }
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/fermi/gcn.notices.fermi.gbm.GRB.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gcn.notices.fermi.gbm",
+  "description": "gbm reported GRB notices",
+  "type": "object",
+  "properties": {
+    "alert_info": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.AlertInfo.json"
+    },
+    "identifiers": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Identifiers.json"
+    },
+    "event_info": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.EventInfo.json"
+    },
+    "datetime": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.DateTime.json"
+    },
+    "localization": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Localization.json"
+    },
+    "statistics": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Statistics.json"
+    },
+    "comments": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.Comments.json"
+    },
+    "grb_duration": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.grb.Duration.json"
+    },
+    "spectral_values": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.spectral.GammaRay.json"
+    },
+    "specific": {
+      "$ref": "gcn.notices.fermi.gbm.Specific.json"
     }
+  }
 }

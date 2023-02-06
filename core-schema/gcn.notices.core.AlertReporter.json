@@ -1,22 +1,22 @@
 {
-    "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.AlertReporter.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "gcn.notices.core.AlertReporter",
-    "description": "Alert Reporter instrument",
-    "type": "object",
-    "properties": {
-        "mission": {
-            "type": "string",
-            "description": "Name of Mission or Telescope reporting the event"
-        },
-        "instrument": {
-            "type": "string",
-            "description": "Name of the Instrument reporting the event"
-        },
-        "record_number": {
-            "type": "number",
-            "description": "Serial number spanning all the messages that come from the mission during a given trigger"
-        }
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/core-schema/gcn.notices.core.AlertReporter.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gcn.notices.core.AlertReporter",
+  "description": "Alert Reporter instrument",
+  "type": "object",
+  "properties": {
+    "mission": {
+      "type": "string",
+      "description": "Name of Mission or Telescope reporting the event"
     },
-    "required": ["mission", "instrument", "record_number"]
+    "instrument": {
+      "type": "string",
+      "description": "Name of the Instrument reporting the event"
+    },
+    "record_number": {
+      "type": "number",
+      "description": "Serial number spanning all the messages that come from the mission during a given trigger"
+    }
+  },
+  "required": ["mission", "instrument", "record_number"]
 }
