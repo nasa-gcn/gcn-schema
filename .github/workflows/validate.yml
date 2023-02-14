@@ -11,5 +11,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Run Prettier code style checks
-        run: npx prettier -c .
+      - name: Validate
+        run: npm run validate
