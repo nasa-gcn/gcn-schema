@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/master/fermi/gcn.notices.fermi.lat.OnboardTrigger.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/fermi/gcn.notices.fermi.lat.OnboardTrigger.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "gcn.notices.fermi.lat",
