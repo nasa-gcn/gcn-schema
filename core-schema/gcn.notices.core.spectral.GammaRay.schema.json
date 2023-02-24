@@ -30,7 +30,7 @@
       "description": "ratio of flux between high and low energy bands"
     },
     "hardness_ratio_energy_range": {
-      "$ref": "gcn.notices.core.EnergyRange.schema.json",
+      "$ref": "/Vidushi-GitHub/gcn-avro-schema/validate/core-schema/gcn.notices.core.EnergyRange.schema.json",
       "description": "Energy range [keV] used in soft and hard band of hardness ratio"
     },
     "photon_flux": {
@@ -50,11 +50,11 @@
       "description": "1-sigma uncertainty in Energy Flux [erg/cm2/s]"
     },
     "flux_energy_range": {
-      "$ref": "gcn.notices.core.EnergyRange.schema.json",
+      "$ref": "/Vidushi-GitHub/gcn-avro-schema/validate/core-schema/gcn.notices.core.EnergyRange.schema.json",
       "description": "Energy range used in flux calculation [keV]"
     },
     "flux_time_range": {
-      "$ref": "gcn.notices.core.TimeRange.schema.json",
+      "$ref": "/Vidushi-GitHub/gcn-avro-schema/validate/core-schema/gcn.notices.core.TimeRange.schema.json",
       "description": "Time range used in flux calculation [s]"
     },
     "fluence": {
@@ -66,11 +66,11 @@
       "description": "Fluence Error [erg/cm2]"
     },
     "fluence_energy_range": {
-      "$ref": "gcn.notices.core.EnergyRange.schema.json",
+      "$ref": "/Vidushi-GitHub/gcn-avro-schema/validate/core-schema/gcn.notices.core.EnergyRange.schema.json",
       "description": "Energy Range used in Fluence calculation [keV]"
     },
     "fluence_time_range": {
-      "$ref": "gcn.notices.core.TimeRange.schema.json",
+      "$ref": "/Vidushi-GitHub/gcn-avro-schema/validate/core-schema/gcn.notices.core.TimeRange.schema.json",
       "description": "Time range used in fluence calculation [s]"
     }
   },

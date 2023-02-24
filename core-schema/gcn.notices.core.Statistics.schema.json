@@ -18,7 +18,7 @@
       "description": "Interval over rate signal to noise ratio calculation [s]"
     },
     "rate_energy_range": {
-      "$ref": "gcn.notices.core.EnergyRange.schema.json",
+      "$ref": "/Vidushi-GitHub/gcn-avro-schema/validate/core-schema/gcn.notices.core.EnergyRange.schema.json",
       "description": "Energy range over rate signal to noise ratio calculation [keV]"
     },
     "image_snr": {
@@ -30,7 +30,7 @@
       "description": "Interval over image signal to noise ratio calculation [s]"
     },
     "image_energy_range": {
-      "$ref": "gcn.notices.core.EnergyRange.schema.json",
+      "$ref": "/Vidushi-GitHub/gcn-avro-schema/validate/core-schema/gcn.notices.core.EnergyRange.schema.json",
       "description": "Energy range over image signal to noise ratio calculation [keV]"
     },
     "p_astro": {
