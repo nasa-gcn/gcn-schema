@@ -10,7 +10,7 @@
       "description": "ratio of flux between high and low energy bands"
     },
     "energy_range": {
-      "$ref": "Vidushi-GitHub/gcn-avro-schema/validate/core-schema/gcn.notices.core.EnergyRange.schema.json",
+      "$ref": "/Vidushi-GitHub/gcn-avro-schema/validate/core-schema/gcn.notices.core.EnergyRange.schema.json",
       "description": "Energy range [keV] used in soft and hard band of hardness ratio"
     }
   },
