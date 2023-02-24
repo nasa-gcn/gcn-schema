@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/core-schema/gcn.notices.core.HardnessRatio.schema.json",
+  "$id": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.DateTime.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "gcn.notices.core.HardnessRatio",
