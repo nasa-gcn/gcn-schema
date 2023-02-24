@@ -18,7 +18,7 @@
       "description": "Stop time of the observation [ISO 8601]"
     },
     "observation_livetime": {
-      "type": ["float", "null"],
+      "type": ["number", "null"],
       "description": "Livetime of the observation [s]"
     }
   },
