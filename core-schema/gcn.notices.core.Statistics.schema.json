@@ -38,18 +38,14 @@
       "description": "Probability that source is of astrophysical origin"
     },
     "classification": {
-      "type": {
-        "type": "object",
-        "additionalProperties": { "type": "string" },
-        "description": "Dictionary mapping mutually exclusive source classes to probabilities between 0 and 1, the sum of all values must be 1. e.g. ({'BNS', 0.9}, {'NSBH', 0.05}, {'BBH', 0.05})"
-      }
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Dictionary mapping mutually exclusive source classes to probabilities between 0 and 1, the sum of all values must be 1. e.g. ({'BNS', 0.9}, {'NSBH', 0.05}, {'BBH', 0.05})"
     },
     "properties": {
-      "type": {
-        "type": "object",
-        "additionalProperties": { "type": "string" },
-        "description": "Dictionary of binary classifiers, each entry is between 0 and 1. e.g. ({'NS', 0.95}, {'REMNANT', 0.3})"
-      }
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Dictionary of binary classifiers, each entry is between 0 and 1. e.g. ({'NS', 0.95}, {'REMNANT', 0.3})"
     }
   },
   "required": [
