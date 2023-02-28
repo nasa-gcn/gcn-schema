@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/fermi/gcn.notices.fermi.gbm.GRB.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/fermi/gbm/GRB.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "gcn.notices.fermi.gbm",
   "description": "gbm reported GRB notices",
@@ -33,7 +33,7 @@
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/core-schema/gcn.notices.core.spectral.GammaRay.schema.json"
     },
     "specific": {
-      "$ref": "gcn.notices.fermi.gbm.Specific.schema.json"
+      "$ref": "Specific.schema.json"
     }
   }
 }
