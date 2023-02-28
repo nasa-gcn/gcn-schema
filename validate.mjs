@@ -21,10 +21,8 @@ async function validate(path) {
       )
     )
   )
-  console.log(filesInDir)
   try {
     ajv.addSchema(schemas).compile(true)
-    console.log(Object.keys(ajv.schemas))
   } catch (e) {
     if (e instanceof Error) {
       process.exitCode = 1
