@@ -12,16 +12,16 @@ async function validate(path) {
     ignore: ['test/**', 'node_modules/**'],
   })
 
-  try {
-    const schemas = await Promise.all(
-      filesInDir.map(async (file) =>
-        JSON.parse(
-          await readFile(file, {
-            encoding: 'utf-8',
-          })
-        )
+  const schemas = await Promise.all(
+    filesInDir.map(async (file) =>
+      JSON.parse(
+        await readFile(file, {
+          encoding: 'utf-8',
+        })
       )
     )
+  )
+  try {
     ajv.addSchema(schemas).compile(true)
   } catch (e) {
     if (e instanceof Error) {
