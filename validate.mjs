@@ -22,7 +22,6 @@ async function validate(path) {
     )
   )
   ajv.addSchema(schemas).compile(true)
-  return true
 }
 
 const args = process.argv.slice(2)
