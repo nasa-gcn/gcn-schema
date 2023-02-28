@@ -1,0 +1,24 @@
+{
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Duration.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Duration",
+  "properties": {
+    "t90": {
+      "type": "number",
+      "doc": "Time duration of central 90% of integrated fluence [s]"
+    },
+    "t90_error": {
+      "type": "number",
+      "doc": "1-sigma uncertainty of the T90 duration [s]"
+    },
+    "t50": {
+      "type": "number",
+      "doc": "Time duration of central 50% of integrated fluence [s]"
+    },
+    "t50_error": {
+      "type": "number",
+      "doc": "1-sigma uncertainty of the T50 duration [s]"
+    }
+  }
+}
