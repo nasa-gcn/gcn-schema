@@ -1,8 +1,8 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/core-schema/gcn.notices.core.EventInfo.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/EventInfo.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "gcn.notices.core.EventInfo",
+  "title": "EventInfo",
   "description": "Name or names of the event",
   "properties": {
     "event_id": {

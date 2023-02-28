@@ -1,8 +1,8 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/core-schema/gcn.notices.core.Identifiers.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Identifiers.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "gcn.notices.core.Identifiers",
+  "title": "Identifiers",
   "description": "Identifiers of trigger and archive",
   "properties": {
     "instrument_id": {

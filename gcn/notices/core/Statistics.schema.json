@@ -1,8 +1,8 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/core-schema/gcn.notices.core.Statistics.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Statistics.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "gcn.notices.core.Statistics",
+  "title": "Statistics",
   "description": "statistical measures of source significance or classification",
   "properties": {
     "far": {

@@ -1,8 +1,8 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/core-schema/gcn.notices.core.Comments.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Comments.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "gcn.notices.core.Comments",
+  "title": "Comments",
   "description": "Comments that are not summarized elsewhere in schema",
   "properties": {
     "comments": {

@@ -1,9 +1,9 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/core-schema/gcn.notices.core.spectral.models.CutOffPowerLaw.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/spectral/models/PowerLaw.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "gcn.notices.core.spectral.models.CutOffPowerLaw",
-  "description": "Spectral model known as comptonized or powerlaw with exponential cutoff amplitude*energy^{-alpha}*exp(-energy/beta)",
+  "title": "PowerLaw",
+  "description": "Spectral model powerlaw with N(E)=amplitude*energy^{-alpha}",
   "properties": {
     "amplitude": {
       "type": "number",
@@ -24,14 +24,6 @@
     "alpha_error": {
       "type": "number",
       "description": "1-sigma uncertainty of alpha"
-    },
-    "epeak": {
-      "type": "number",
-      "description": "e-folding energy of exponential rolloff [keV]"
-    },
-    "epeak_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of Epeak [keV]"
     }
   },
   "required": [
@@ -39,8 +31,6 @@
     "amplitude_error",
     "pivot_energy",
     "alpha",
-    "alpha_error",
-    "epeak",
-    "epeak_error"
+    "alpha_error"
   ]
 }
