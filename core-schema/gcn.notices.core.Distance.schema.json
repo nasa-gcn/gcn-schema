@@ -6,11 +6,11 @@
   "description": "Luminosity Distance",
   "properties": {
     "luminosity_distance": {
-      "type": "float",
+      "type": "number",
       "description": "Luminosity distance [Mpc]"
     },
     "luminosity_distance_error": {
-      "type": "float",
+      "type": "number",
       "description": "Luminosity distance uncertainty [Mpc, 1-sigma]"
     }
   },
