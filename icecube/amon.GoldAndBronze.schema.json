@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/icecube/gcn.notices.amon.GoldAndBronze.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/icecube/amon.GoldAndBronze.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "amon",
