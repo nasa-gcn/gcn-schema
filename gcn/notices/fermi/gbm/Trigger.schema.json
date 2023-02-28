@@ -1,8 +1,8 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/fermi/gbm/GRB.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/fermi/gbm/Trigger.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "GRB",
-  "description": "gbm reported GRB notices",
+  "title": "Trigger",
+  "description": "fermi gbm Trigger",
   "type": "object",
   "properties": {
     "alert_info": {
@@ -23,14 +23,11 @@
     "statistics": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Statistics.schema.json"
     },
+    "hardness_ratio": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/HardnessRatio.schema.json"
+    },
     "comments": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Comments.schema.json"
-    },
-    "grb_duration": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Duration.schema.json"
-    },
-    "spectral_values": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/spectral/GammaRay.schema.json"
     },
     "specific": {
       "$ref": "Specific.schema.json"

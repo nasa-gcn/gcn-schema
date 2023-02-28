@@ -1,12 +1,15 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/fermi/gbm/Trigger.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/fermi/lat/Alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Trigger",
-  "description": "fermi gbm Trigger",
+  "title": "Alert",
+  "description": "fermi lat Alerts",
   "type": "object",
   "properties": {
     "alert_info": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/AlertInfo.schema.json"
+    },
+    "alert_reporter": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/AlertReporter.schema.json"
     },
     "identifiers": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Identifiers.schema.json"
@@ -23,14 +26,17 @@
     "statistics": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Statistics.schema.json"
     },
-    "hardness_ratio": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/HardnessRatio.schema.json"
-    },
     "comments": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Comments.schema.json"
     },
-    "specific": {
-      "$ref": "Specific.schema.json"
+    "grb_duration": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Duration.schema.json"
+    },
+    "grb_spectral": {
+      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/spectral/GammaRay.schema.json"
+    },
+    "lat_onboard": {
+      "$ref": "OnboardTrigger.schema.json"
     }
   }
 }

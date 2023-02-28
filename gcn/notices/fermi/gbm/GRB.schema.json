@@ -1,15 +1,12 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/fermi/lat/Alert.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/fermi/gbm/GRB.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Alert",
-  "description": "fermi lat Alerts",
+  "title": "GRB",
+  "description": "gbm reported GRB notices",
   "type": "object",
   "properties": {
     "alert_info": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/AlertInfo.schema.json"
-    },
-    "alert_reporter": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/AlertReporter.schema.json"
     },
     "identifiers": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Identifiers.schema.json"
@@ -32,11 +29,11 @@
     "grb_duration": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Duration.schema.json"
     },
-    "grb_spectral": {
+    "spectral_values": {
       "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/spectral/GammaRay.schema.json"
     },
-    "lat_onboard": {
-      "$ref": "OnboardTrigger.schema.json"
+    "specific": {
+      "$ref": "Specific.schema.json"
     }
   }
 }
