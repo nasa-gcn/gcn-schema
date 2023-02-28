@@ -11,7 +11,7 @@ async function validate(path) {
   const filesInDir = await glob(path, {
     ignore: ['test/**', 'node_modules/**'],
   })
-  // Hey
+
   try {
     const schemas = await Promise.all(
       filesInDir.map(async (file) =>
