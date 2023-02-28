@@ -1,9 +1,9 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/icecube/amon.GoldAndBronze.schema.json",
+  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/icecube/amon/GoldAndBronze.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "amon",
-  "description": "GoldAndBronze",
+  "title": "GoldAndBronze",
+  "description": "GoldAndBronze events",
   "properties": {
     "type": {
       "description": "Notice type Gold or Bronze",
