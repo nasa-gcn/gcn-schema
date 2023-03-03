@@ -1,33 +1,33 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/fermi/gbm/Trigger.schema.json",
+  "$id": "Trigger.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Trigger",
   "description": "fermi gbm Trigger",
   "type": "object",
   "properties": {
     "alert_info": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/AlertInfo.schema.json"
+      "$ref": "AlertInfo.schema.json"
     },
     "identifiers": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Identifiers.schema.json"
+      "$ref": "Identifiers.schema.json"
     },
     "event_info": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/EventInfo.schema.json"
+      "$ref": "EventInfo.schema.json"
     },
     "datetime": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/DateTime.schema.json"
+      "$ref": "DateTime.schema.json"
     },
     "localization": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Localization.schema.json"
+      "$ref": "Localization.schema.json"
     },
     "statistics": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Statistics.schema.json"
+      "$ref": "Statistics.schema.json"
     },
     "hardness_ratio": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/HardnessRatio.schema.json"
+      "$ref": "HardnessRatio.schema.json"
     },
     "comments": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Comments.schema.json"
+      "$ref": "Comments.schema.json"
     },
     "specific": {
       "$ref": "Specific.schema.json"

@@ -1,8 +1,8 @@
 {
-  "$id": "Specific.schema.json",
+  "$id": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/fermi/gcn.notices.fermi.gbm.Specific.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Specific",
+  "title": "gcn.notices.fermi.gbm",
   "description": "Specific to fermi gbm notices",
   "properties": {
     "detectors": {

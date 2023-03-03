@@ -23,6 +23,23 @@ async function validate(path) {
   )
   try {
     ajv.addSchema(schemas).compile(true)
+    let result = {}
+    // Structure Validation:
+    console.log(Object.keys(ajv.schemas))
+    filesInDir.forEach(async (file) => {
+      const testCase = JSON.parse(
+        await readFile(['./test', file].join('/'), {
+          encoding: 'utf-8',
+        })
+      )
+      const pathComponents = file.split('\\')
+      const schemaId = pathComponents[pathComponents.length - 1]
+      // console.log(schemaId)
+      // result[schemaId] = ajv.validate(schemaId, testCase)
+      console.log(`Case: ${schemaId}: ${ajv.validate(schemaId, testCase)}`)
+    })
+
+    console.log(result)
   } catch (e) {
     if (e instanceof Error) {
       process.exitCode = 1

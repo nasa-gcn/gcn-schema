@@ -1,0 +1,55 @@
+{
+  "best_fit_model": "POWERLAW",
+  "power_law": {
+    "amplitude": 0,
+    "amplitude_error": 0,
+    "pivot_energy": 0,
+    "alpha": 0,
+    "alpha_error": 0
+  },
+  "cutoff_power_law": {
+    "amplitude": 0,
+    "amplitude_error": 0,
+    "pivot_energy": 0,
+    "alpha": 0,
+    "alpha_error": 0,
+    "epeak": 0,
+    "epeak_error": 0
+  },
+  "band": {
+    "amplitude": 0,
+    "amplitude_error": 0,
+    "pivot_energy": 0,
+    "alpha": 0,
+    "alpha_error": 0,
+    "epeak": 0,
+    "epeak_error": 0,
+    "beta": 0,
+    "beta_error": 0
+  },
+  "spectral_energy_range": {
+    "energy_low": 0,
+    "energy_high": 0
+  },
+  "hardness_ratio": 0,
+  "hardness_ratio_energy_range": {
+    "energy_low": 0,
+    "energy_high": 0
+  },
+  "photon_flux": 0,
+  "photon_flux_error": 0,
+  "energy_flux": 0,
+  "energy_flux_error": 0,
+  "flux_energy_range": {
+    "energy_low": 0,
+    "energy_high": 0
+  },
+  "flux_time_range": { "time_start": 0, "time_stop": 0 },
+  "fluence": 0,
+  "fluence_error": 0,
+  "fluence_energy_range": {
+    "energy_low": 0,
+    "energy_high": 0
+  },
+  "fluence_time_range": { "time_start": 0, "time_stop": 0 }
+}

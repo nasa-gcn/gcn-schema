@@ -1,8 +1,8 @@
 {
-  "$id": "OnboardTrigger.schema.json",
+  "$id": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/fermi/gcn.notices.fermi.lat.OnboardTrigger.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "OnboardTrigger",
+  "title": "gcn.notices.fermi.lat",
   "description": "fermi lat OnboardTrigger",
   "properties": {
     "phi": {

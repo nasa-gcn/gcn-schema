@@ -1,8 +1,8 @@
 {
-  "$id": "Band.schema.json",
+  "$id": "gcn.notices.core.spectral.models.Band.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Band",
+  "title": "gcn.notices.core.spectral.models.Band",
   "description": "Spectral model Band smoothly broken powerlaw (Band et al. 1993)",
   "properties": {
     "amplitude": {

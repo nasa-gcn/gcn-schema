@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/icecube/amon/GoldAndBronze.schema.json",
+  "$id": "GoldAndBronze.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "GoldAndBronze",
@@ -10,10 +10,10 @@
       "type": "string"
     },
     "event": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/EventInfo.schema.json"
+      "$ref": "EventInfo.schema.json"
     },
     "localization": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Localization.schema.json"
+      "$ref": "Localization.schema.json"
     },
     "err50": {
       "description": "Location uncertainty (radius, 50% containment) in units of arcmin",
@@ -21,7 +21,7 @@
       "minimum": 0
     },
     "discovery_datetime": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/DateTime.schema.json"
+      "$ref": "DateTime.schema.json"
     },
     "revision": {
       "description": "Revision number by IceCube",
@@ -39,7 +39,7 @@
     },
     "far": {
       "description": "Rate of background events expected that are 'like this alert', would be seen by IceCube per year",
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Statistics.schema.json"
+      "$ref": "Statistics.schema.json"
     }
   },
   "required": [

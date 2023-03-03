@@ -1,0 +1,42 @@
+{
+  "$id": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/fermi/gcn.notices.fermi.lat.Alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gcn.notices.fermi.lat",
+  "description": "fermi lat Alerts",
+  "type": "object",
+  "properties": {
+    "alert_info": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.AlertInfo.schema.json"
+    },
+    "alert_reporter": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.AlertReporter.schema.json"
+    },
+    "identifiers": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.Identifiers.schema.json"
+    },
+    "event_info": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.EventInfo.schema.json"
+    },
+    "datetime": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.DateTime.schema.json"
+    },
+    "localization": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.Localization.schema.json"
+    },
+    "statistics": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.Statistics.schema.json"
+    },
+    "comments": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.Comments.schema.json"
+    },
+    "grb_duration": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.grb.Duration.schema.json"
+    },
+    "grb_spectral": {
+      "$ref": "https://raw.githubusercontent.com/nasa-gcn/gcn-schema/main/core-schema/gcn.notices.core.spectral.GammaRay.schema.json"
+    },
+    "lat_onboard": {
+      "$ref": "gcn.notices.fermi.lat.OnboardTrigger.schema.json"
+    }
+  }
+}

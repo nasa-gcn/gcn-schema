@@ -1,9 +1,9 @@
 {
-  "$id": "Band.schema.json",
+  "$id": "gcn.notices.core.spectral.models.PowerLaw.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Band",
-  "description": "Spectral model Band smoothly broken powerlaw (Band et al. 1993)",
+  "title": "gcn.notices.core.spectral.models.PowerLaw",
+  "description": "Spectral model powerlaw with N(E)=amplitude*energy^{-alpha}",
   "properties": {
     "amplitude": {
       "type": "number",
@@ -24,22 +24,6 @@
     "alpha_error": {
       "type": "number",
       "description": "1-sigma uncertainty of alpha"
-    },
-    "epeak": {
-      "type": "number",
-      "description": "e-folding energy of exponential rolloff [keV]"
-    },
-    "epeak_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of Epeak [keV]"
-    },
-    "beta": {
-      "type": "number",
-      "description": "high-energy power-law index of Band parameterization"
-    },
-    "beta_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of beta"
     }
   },
   "required": [
@@ -47,10 +31,6 @@
     "amplitude_error",
     "pivot_energy",
     "alpha",
-    "alpha_error",
-    "epeak",
-    "epeak_error",
-    "beta",
-    "beta_error"
+    "alpha_error"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/spectral/models/CutOffPowerLaw.schema.json",
+  "$id": "CutOffPowerLaw.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "CutOffPowerLaw",
