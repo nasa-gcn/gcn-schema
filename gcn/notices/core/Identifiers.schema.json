@@ -1,5 +1,5 @@
 {
-  "$id": "Identifiers.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/Identifiers.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Identifiers",

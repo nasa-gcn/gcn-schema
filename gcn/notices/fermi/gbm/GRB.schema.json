@@ -1,40 +1,40 @@
 {
-  "$id": "GRB.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/fermi/gbm/GRB.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "GRB",
   "description": "gbm reported GRB notices",
   "type": "object",
   "properties": {
     "alert_info": {
-      "$ref": "AlertInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/AlertInfo.schema.json"
     },
     "identifiers": {
-      "$ref": "Identifiers.schema.json"
+      "$ref": "/schema/gcn/notices/core/Identifiers.schema.json"
     },
     "event_info": {
-      "$ref": "EventInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/EventInfo.schema.json"
     },
     "datetime": {
-      "$ref": "DateTime.schema.json"
+      "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
     },
     "localization": {
-      "$ref": "Localization.schema.json"
+      "$ref": "/schema/gcn/notices/core/Localization.schema.json"
     },
     "statistics": {
-      "$ref": "Statistics.schema.json"
+      "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
     },
     "comments": {
       "type": "string",
       "description": "Additional information about the event"
     },
     "grb_duration": {
-      "$ref": "Duration.schema.json"
+      "$ref": "/schema/gcn/notices/core/Duration.schema.json"
     },
     "spectral_values": {
-      "$ref": "GammaRay.schema.json"
+      "$ref": "/schema/gcn/notices/core/spectral/GammaRay.schema.json"
     },
     "specific": {
-      "$ref": "Specific.schema.json"
+      "$ref": "/schema/gcn/notices/fermi/gbm/Specific.schema.json"
     }
   }
 }

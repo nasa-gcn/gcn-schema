@@ -1,42 +1,42 @@
 {
-  "$id": "Alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/fermi/lat/Alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Alert",
   "description": "fermi lat Alerts",
   "type": "object",
   "properties": {
     "alert_info": {
-      "$ref": "AlertInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/AlertInfo.schema.json"
     },
     "alert_reporter": {
-      "$ref": "AlertReporter.schema.json"
+      "$ref": "/schema/gcn/notices/core/AlertReporter.schema.json"
     },
     "identifiers": {
-      "$ref": "Identifiers.schema.json"
+      "$ref": "/schema/gcn/notices/core/Identifiers.schema.json"
     },
     "event_info": {
-      "$ref": "EventInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/EventInfo.schema.json"
     },
     "datetime": {
-      "$ref": "DateTime.schema.json"
+      "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
     },
     "localization": {
-      "$ref": "Localization.schema.json"
+      "$ref": "/schema/gcn/notices/core/Localization.schema.json"
     },
     "statistics": {
-      "$ref": "Statistics.schema.json"
+      "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
     },
     "comments": {
-      "$ref": "Comments.schema.json"
+      "$ref": "/schema/gcn/notices/core/Comments.schema.json"
     },
     "grb_duration": {
-      "$ref": "Duration.schema.json"
+      "$ref": "/schema/gcn/notices/core/Duration.schema.json"
     },
     "grb_spectral": {
-      "$ref": "GammaRay.schema.json"
+      "$ref": "/schema/gcn/notices/core/spectral/GammaRay.schema.json"
     },
     "lat_onboard": {
-      "$ref": "OnboardTrigger.schema.json"
+      "$ref": "/schema/gcn/notices/fermi/lat/OnboardTrigger.schema.json"
     }
   }
 }

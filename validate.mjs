@@ -25,21 +25,16 @@ async function validate(path) {
     ajv.addSchema(schemas).compile(true)
     let result = {}
     // Structure Validation:
-    console.log(Object.keys(ajv.schemas))
     filesInDir.forEach(async (file) => {
       const testCase = JSON.parse(
         await readFile(['./test', file].join('/'), {
           encoding: 'utf-8',
         })
       )
-      const pathComponents = file.split('\\')
-      const schemaId = pathComponents[pathComponents.length - 1]
-      // console.log(schemaId)
-      // result[schemaId] = ajv.validate(schemaId, testCase)
+      const schemaId =
+        'https://gcn.nasa.gov/schema/' + file.replaceAll('\\', '/') //pathComponents[pathComponents.length - 1]
       console.log(`Case: ${schemaId}: ${ajv.validate(schemaId, testCase)}`)
     })
-
-    console.log(result)
   } catch (e) {
     if (e instanceof Error) {
       process.exitCode = 1

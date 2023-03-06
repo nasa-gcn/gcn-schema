@@ -1,5 +1,5 @@
 {
-  "$id": "Comments.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/Comments.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Comments",

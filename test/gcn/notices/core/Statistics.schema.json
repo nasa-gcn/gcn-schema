@@ -1,5 +1,5 @@
 {
-  "$id": "Statistics.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/Statistics.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Statistics",
@@ -18,7 +18,7 @@
       "description": "Interval over rate signal to noise ratio calculation [s]"
     },
     "rate_energy_range": {
-      "$ref": "EnergyRange.schema.json",
+      "$ref": "/schema/gcn/notices/EnergyRange.schema.json",
       "description": "Energy range over rate signal to noise ratio calculation [keV]"
     },
     "image_snr": {
@@ -30,7 +30,7 @@
       "description": "Interval over image signal to noise ratio calculation [s]"
     },
     "image_energy_range": {
-      "$ref": "EnergyRange.schema.json",
+      "$ref": "/schema/gcn/notices/EnergyRange.schema.json",
       "description": "Energy range over image signal to noise ratio calculation [keV]"
     },
     "p_astro": {
