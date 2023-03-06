@@ -32,7 +32,7 @@ async function validate(path) {
         })
       )
       const schemaId =
-        'https://gcn.nasa.gov/schema/' + file.replaceAll('\\', '/') //pathComponents[pathComponents.length - 1]
+        'https://gcn.nasa.gov/schema/' + file.replaceAll('\\', '/')
       console.log(`Case: ${schemaId}: ${ajv.validate(schemaId, testCase)}`)
     })
   } catch (e) {
