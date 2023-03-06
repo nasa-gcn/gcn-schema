@@ -1,5 +1,5 @@
 {
-  "name": "@nasa-gcn/gcn-schema",
+  "name": "@nasa-gcn/schema",
   "type": "module",
   "scripts": {
     "prepare": "husky install",
