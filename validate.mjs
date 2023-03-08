@@ -62,7 +62,7 @@ async function validate(path) {
           throw e
         }
       }
-      
+
       if (ajv.errors) {
         process.exitCode = 1
         ajv.errors.forEach(({ message }) =>
