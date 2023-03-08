@@ -1,0 +1,50 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/amon/GoldAndBronze.schema.json",
+  "type": "Gold",
+  "event": {
+    "event_id": "ABC123",
+    "event_alias": ["123"]
+  },
+  "localization": {
+    "ra": 0,
+    "dec": 0,
+    "semi_major": 0,
+    "semi_minor": 0,
+    "position_angle": 0,
+    "containment_probability": 0,
+    "systematic_included": true,
+    "healpix_url": "url.example.com"
+  },
+  "err50": 0,
+  "discovery_datetime": {
+    "trigger_time": "ISO 8601 time here",
+    "observation_start": "ISO 8601 time here",
+    "observation_stop": "ISO 8601 time here",
+    "observation_livetime": 0
+  },
+  "revision": 0,
+  "energy": 0,
+  "signalness": 0,
+  "far": {
+    "far": 0,
+    "rate_snr": 0,
+    "rate_duration": 0,
+    "rate_energy_range": {
+      "energy_low": 0,
+      "energy_high": 0
+    },
+    "image_snr": 0,
+    "image_duration": 0,
+    "image_energy_range": {
+      "energy_low": 0,
+      "energy_high": 0
+    },
+    "p_astro": 0,
+    "classification": {
+      "type": "object"
+    },
+    "properties": {
+      "type": "object"
+    }
+  }
+}

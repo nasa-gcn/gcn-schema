@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/AlertReporter.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/AlertReporter.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "AlertReporter",
   "description": "Alert Reporter instrument",

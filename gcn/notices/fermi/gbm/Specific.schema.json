@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/fermi/gbm/Specific.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/fermi/gbm/Specific.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Specific",

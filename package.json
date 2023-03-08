@@ -3,7 +3,7 @@
   "scripts": {
     "prepare": "husky install",
     "validate:prettier": "prettier --check .",
-    "validate:jsonschema": "node validate.mjs **/*.schema.json",
+    "validate:jsonschema": "node validate.mjs",
     "validate": "run-s validate:*"
   },
   "devDependencies": {

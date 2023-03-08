@@ -1,0 +1,82 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/fermi/gbm/Trigger.schema.json",
+  "alert_info": {
+    "alert_datetime": "[UTC, ISO 8601]",
+    "alert_tense": "current",
+    "alert_type": "initial"
+  },
+  "identifiers": {
+    "instrument_id": "id number",
+    "instrument_id_alternate": "null",
+    "data_archive_page": "null"
+  },
+  "event_info": {
+    "event_id": "Name of the event",
+    "event_alias": [0, 1]
+  },
+  "datetime": {
+    "trigger_time": "Time of the trigger [ISO 8601]",
+    "observation_start": "Time of the observation [ISO 8601]",
+    "observation_stop": "Stop time of the observation [ISO 8601]",
+    "observation_livetime": 0
+  },
+  "localization": {
+    "ra": 0,
+    "dec": 0,
+    "semi_major": 0,
+    "semi_minor": 0,
+    "position_angle": 0,
+    "containment_probability": 0,
+    "systematic_included": true,
+    "healpix_url": "null"
+  },
+  "statistics": {
+    "far": 0,
+    "rate_snr": 0,
+    "rate_duration": 0,
+    "rate_energy_range": {
+      "energy_low": 0,
+      "energy_high": 100
+    },
+    "image_snr": 0,
+    "image_duration": 0,
+    "image_energy_range": {
+      "energy_low": 0,
+      "energy_high": 100
+    },
+    "p_astro": 0,
+    "classification": {
+      "type": "object"
+    },
+    "properties": {
+      "type": "object"
+    }
+  },
+  "hardness_ratio": {
+    "hardness_ratio": 0,
+    "energy_range": {
+      "energy_low": 0,
+      "energy_high": 100
+    }
+  },
+  "comments": {
+    "comments": "Comment example"
+  },
+  "specific": {
+    "detectors": "Detector#x",
+    "phi": "",
+    "theta": "",
+    "trigger_algorithm": "",
+    "localization_algorithm": "",
+    "localization_url": "",
+    "lightcurve_url": "",
+    "data_timescale": 0,
+    "latitude": 0,
+    "longitude": 0,
+    "earth_angle": 0,
+    "spectral_class": "SOFT",
+    "duration_class": "SHORT",
+    "reliability": 0,
+    "message_type": ""
+  }
+}

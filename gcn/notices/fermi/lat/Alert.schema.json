@@ -1,42 +1,42 @@
 {
-  "$id": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/fermi/lat/Alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/fermi/lat/Alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Alert",
   "description": "fermi lat Alerts",
   "type": "object",
   "properties": {
     "alert_info": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/AlertInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/AlertInfo.schema.json"
     },
     "alert_reporter": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/AlertReporter.schema.json"
+      "$ref": "/schema/gcn/notices/core/AlertReporter.schema.json"
     },
     "identifiers": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Identifiers.schema.json"
+      "$ref": "/schema/gcn/notices/core/Identifiers.schema.json"
     },
     "event_info": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/EventInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/EventInfo.schema.json"
     },
     "datetime": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/DateTime.schema.json"
+      "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
     },
     "localization": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Localization.schema.json"
+      "$ref": "/schema/gcn/notices/core/Localization.schema.json"
     },
     "statistics": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Statistics.schema.json"
+      "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
     },
     "comments": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Comments.schema.json"
+      "$ref": "/schema/gcn/notices/core/Comments.schema.json"
     },
     "grb_duration": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/Duration.schema.json"
+      "$ref": "/schema/gcn/notices/core/Duration.schema.json"
     },
     "grb_spectral": {
-      "$ref": "https://github.com/nasa-gcn/gcn-schema/blob/main/gcn/notices/core/spectral/GammaRay.schema.json"
+      "$ref": "/schema/gcn/notices/core/spectral/GammaRay.schema.json"
     },
     "lat_onboard": {
-      "$ref": "OnboardTrigger.schema.json"
+      "$ref": "/schema/gcn/notices/fermi/lat/OnboardTrigger.schema.json"
     }
   }
 }
