@@ -1,4 +1,5 @@
 {
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/amon/GoldAndBronze.schema.json",
   "type": "Gold",
   "event": {
     "event_id": "ABC123",
