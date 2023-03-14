@@ -20,6 +20,5 @@
     "names": {
       "$ref": "/schema/gcn/notices/core/Names.schema.json"
     }
-  },
-  "required": ["instrument_id"]
+  }
 }
