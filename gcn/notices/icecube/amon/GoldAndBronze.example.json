@@ -41,7 +41,7 @@
     },
     "p_astro": 0,
     "classification": {
-      "type": "object"
+      "type": 0
     },
     "properties": {
       "type": "object"

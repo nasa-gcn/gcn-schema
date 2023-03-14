@@ -6,26 +6,21 @@
   "type": "object",
   "properties": {
     "trigger_time": {
-      "type": ["string", "null"],
+      "type": ["string"],
       "description": "Time of the trigger [ISO 8601]"
     },
     "observation_start": {
-      "type": ["string", "null"],
+      "type": ["string"],
       "description": "Start time of the observation [ISO 8601]"
     },
     "observation_stop": {
-      "type": ["string", "null"],
+      "type": ["string"],
       "description": "Stop time of the observation [ISO 8601]"
     },
     "observation_livetime": {
-      "type": ["number", "null"],
+      "type": ["number"],
       "description": "Livetime of the observation [s]"
     }
   },
-  "required": [
-    "trigger_time",
-    "observation_start",
-    "observation_stop",
-    "observation_livetime"
-  ]
+  "required": ["trigger_time"]
 }

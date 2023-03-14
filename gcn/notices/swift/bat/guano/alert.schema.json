@@ -1,0 +1,26 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/swift/bat/guano/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "alert_reporter": {
+      "$ref": "/schema/gcn/notices/core/AlertReporter.schema.json"
+    },
+    "alert_info": {
+      "$ref": "/schema/gcn/notices/core/AlertInfo.schema.json"
+    },
+    "identifiers": {
+      "$ref": "/schema/gcn/notices/core/Identifiers.schema.json"
+    },
+    "datetime": {
+      "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
+    },
+    "localization": {
+      "$ref": "/schema/gcn/notices/core/Localization.schema.json"
+    },
+    "statistics": {
+      "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
+    }
+  },
+  "required": ["alert_reporter", "alert_info", "identifiers", "datetime"]
+}

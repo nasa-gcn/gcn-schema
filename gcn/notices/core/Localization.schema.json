@@ -38,15 +38,5 @@
       "type": ["string", "null"],
       "description": "URL of HEALPix localization probability file"
     }
-  },
-  "required": [
-    "ra",
-    "dec",
-    "semi_major",
-    "semi_minor",
-    "position_angle",
-    "containment_probability",
-    "systematic_included",
-    "healpix_url"
-  ]
+  }
 }

@@ -39,7 +39,7 @@
     },
     "classification": {
       "type": "object",
-      "additionalProperties": { "type": "string" },
+      "additionalProperties": { "type": "number" },
       "description": "Dictionary mapping mutually exclusive source classes to probabilities between 0 and 1, the sum of all values must be 1. e.g. ({'BNS', 0.9}, {'NSBH', 0.05}, {'BBH', 0.05})"
     },
     "properties": {
