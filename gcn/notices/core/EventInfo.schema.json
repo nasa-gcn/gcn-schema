@@ -14,5 +14,5 @@
       "description": "0 or more alias event identfiers"
     }
   },
-  "required": ["event_id", "event_alias"]
+  "required": ["event_id"]
 }
