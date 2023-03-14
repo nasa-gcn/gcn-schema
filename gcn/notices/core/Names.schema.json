@@ -1,8 +1,8 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/EventInfo.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/Names.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "EventInfo",
+  "title": "Names",
   "description": "Name or names of the event",
   "properties": {
     "event_id": {

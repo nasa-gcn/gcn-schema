@@ -16,6 +16,9 @@
     "data_archive_page": {
       "type": "string",
       "description": "URL of archived data files"
+    },
+    "names": {
+      "$ref": "/schema/gcn/notices/core/Names.schema.json"
     }
   },
   "required": ["instrument_id"]
