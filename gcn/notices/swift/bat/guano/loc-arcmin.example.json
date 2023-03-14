@@ -10,9 +10,6 @@
     "alert_tense": "current",
     "alert_type": "update"
   },
-  "event_info": {
-    "event_id": "name"
-  },
   "datetime": {
     "trigger_time": "Time of the trigger [ISO 8601]"
   },
@@ -21,7 +18,7 @@
     "dec": 37.6,
     "semi_major": 0.03,
     "containment_probability": 0.9,
-    "systematic_included": true,
+    "systematic_included": true
   },
   "statistics": {
     "rate_snr": 7.5,
@@ -36,9 +33,11 @@
       "energy_low": 15,
       "energy_high": 350
     },
-    "classification": "GRB"
+    "classification": { "GRB": 1 }
   },
   "identifiers": {
-    "data_archive_page": "https://swift.gsfc.nasa.gov/archive/"
+    "data_archive_page": "https://swift.gsfc.nasa.gov/archive/",
+    "instrument_id": "700000031",
+    "instrument_id_alternate": "7000000000"
   }
 }
