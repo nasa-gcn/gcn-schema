@@ -1,0 +1,22 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/swift/bat/guano/alert.schema.json",
+  "alert_reporter": {
+    "mission": "Swift",
+    "instrument": "BAT-GUANO",
+    "record_number": 4
+  },
+  "alert_info": {
+    "alert_datetime": "[UTC, ISO 8601]",
+    "alert_tense": "current",
+    "alert_type": "retraction"
+  },
+  "event_info": {
+    "event_id": "name"
+  },
+  "datetime": {
+    "trigger_time": "Time of the trigger [ISO 8601]"
+  },
+  "identifiers": {
+    "data_archive_page": "https://swift.gsfc.nasa.gov/archive/"
+  }
+}

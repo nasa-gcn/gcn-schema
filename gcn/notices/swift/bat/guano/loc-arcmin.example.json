@@ -1,0 +1,44 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/swift/bat/guano/alert.schema.json",
+  "alert_reporter": {
+    "mission": "Swift",
+    "instrument": "BAT-GUANO",
+    "record_number": 3
+  },
+  "alert_info": {
+    "alert_datetime": "[UTC, ISO 8601]",
+    "alert_tense": "current",
+    "alert_type": "update"
+  },
+  "event_info": {
+    "event_id": "name"
+  },
+  "datetime": {
+    "trigger_time": "Time of the trigger [ISO 8601]"
+  },
+  "localization": {
+    "ra": 193.8,
+    "dec": 37.6,
+    "semi_major": 0.03,
+    "containment_probability": 0.9,
+    "systematic_included": true,
+  },
+  "statistics": {
+    "rate_snr": 7.5,
+    "rate_duration": 0.256,
+    "rate_energy_range": {
+      "energy_low": 15,
+      "energy_high": 350
+    },
+    "image_snr": 6,
+    "image_duration": 0.256,
+    "image_energy_range": {
+      "energy_low": 15,
+      "energy_high": 350
+    },
+    "classification": "GRB"
+  },
+  "identifiers": {
+    "data_archive_page": "https://swift.gsfc.nasa.gov/archive/"
+  }
+}
