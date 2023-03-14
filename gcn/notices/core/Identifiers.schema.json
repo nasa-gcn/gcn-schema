@@ -10,13 +10,13 @@
       "description": "Trigger number or id number"
     },
     "instrument_id_alternate": {
-      "type": ["string", "null"],
+      "type": "string",
       "description": "Alternate id number"
     },
     "data_archive_page": {
-      "type": ["string", "null"],
+      "type": "string",
       "description": "URL of archived data files"
     }
   },
-  "required": ["instrument_id", "instrument_id_alternate", "data_archive_page"]
+  "required": ["instrument_id"]
 }

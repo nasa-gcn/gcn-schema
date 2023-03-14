@@ -47,17 +47,5 @@
       "additionalProperties": { "type": "string" },
       "description": "Dictionary of binary classifiers, each entry is between 0 and 1. e.g. ({'NS', 0.95}, {'REMNANT', 0.3})"
     }
-  },
-  "required": [
-    "far",
-    "rate_snr",
-    "rate_duration",
-    "rate_energy_range",
-    "image_snr",
-    "image_duration",
-    "image_energy_range",
-    "p_astro",
-    "classification",
-    "properties"
-  ]
+  }
 }
