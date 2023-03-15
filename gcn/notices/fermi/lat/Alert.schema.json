@@ -14,9 +14,6 @@
     "identifiers": {
       "$ref": "/schema/gcn/notices/core/Identifiers.schema.json"
     },
-    "event_info": {
-      "$ref": "/schema/gcn/notices/core/Names.schema.json"
-    },
     "datetime": {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
     },
