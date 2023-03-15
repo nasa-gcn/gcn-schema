@@ -5,20 +5,25 @@
   "title": "Identifiers",
   "description": "Identifiers of trigger and archive",
   "properties": {
-    "instrument_id": {
+    "event_id": {
       "type": "string",
-      "description": "Trigger number or id number"
+      "description": "Trigger ID specific to the instrument (ex: Fermi bn230313485, Swift 1159327)"
     },
-    "instrument_id_alternate": {
+    "event_id_alternate": {
       "type": "string",
-      "description": "Alternate id number"
+      "description": "Alternate instrument specific ID number"
     },
     "data_archive_page": {
       "type": "string",
       "description": "URL of archived data files"
     },
-    "names": {
-      "$ref": "/schema/gcn/notices/core/Names.schema.json"
+    "event_name": {
+      "type": "string",
+      "description": "Name of the event (ex: GRB 211211A, GW170817, AT2017gfo, SGR 1806-20, etc)"
+    },
+    "event_alias": {
+      "type": "array",
+      "description": "0 or more alias event names"
     }
   }
 }

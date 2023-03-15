@@ -10,7 +10,7 @@
       "type": "string"
     },
     "event": {
-      "$ref": "/schema/gcn/notices/core/Names.schema.json"
+      "$ref": "/schema/gcn/notices/core/Identifiers.schema.json"
     },
     "localization": {
       "$ref": "/schema/gcn/notices/core/Localization.schema.json"
