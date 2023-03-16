@@ -7,8 +7,6 @@
   },
   "identifiers": {
     "event_id": "id number",
-    "event_id_alternate": "null",
-    "data_archive_page": "null",
     "event_name": "Name of the event",
     "event_alias": [0, 1]
   },

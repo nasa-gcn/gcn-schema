@@ -16,7 +16,11 @@
     "record_number": {
       "type": "number",
       "description": "Serial number spanning all the messages that come from the mission during a given trigger"
+    },
+    "fakeProp": {
+      "type": "number",
+      "description": "Serial number spanning all the messages that come from the mission during a given trigger"
     }
   },
-  "required": ["mission", "instrument", "record_number"]
+  "required": ["mission", "instrument", "record_number", "fakeProp"]
 }
