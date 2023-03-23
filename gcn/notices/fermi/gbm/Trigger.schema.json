@@ -23,8 +23,8 @@
     "hardness_ratio": {
       "$ref": "/schema/gcn/notices/core/HardnessRatio.schema.json"
     },
-    "comments": {
-      "$ref": "/schema/gcn/notices/core/Comments.schema.json"
+    "AdditionalInfo": {
+      "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
     "specific": {
       "$ref": "/schema/gcn/notices/fermi/gbm/Specific.schema.json"

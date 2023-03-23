@@ -37,7 +37,6 @@
   },
   "event": {
     "data_archive_page": "https://swift.gsfc.nasa.gov/archive/",
-    "instrument_id": "700000031",
-    "instrument_id_alternate": "7000000000"
+    "Id": "[700000031, 7000000000]"
   }
 }
