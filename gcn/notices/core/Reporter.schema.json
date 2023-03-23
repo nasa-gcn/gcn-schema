@@ -1,8 +1,8 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/AlertReporter.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/Reporter.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "AlertReporter",
-  "description": "Alert Reporter instrument",
+  "title": "Report",
+  "description": "Instrument Reporter",
   "type": "object",
   "properties": {
     "mission": {

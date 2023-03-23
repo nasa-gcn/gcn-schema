@@ -1,6 +1,6 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/fermi/gbm/Trigger.schema.json",
-  "alert_info": {
+  "alert": {
     "alert_datetime": "[UTC, ISO 8601]",
     "alert_tense": "current",
     "alert_type": "initial"
