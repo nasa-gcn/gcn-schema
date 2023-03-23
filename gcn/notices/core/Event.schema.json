@@ -21,6 +21,5 @@
       "type": "string",
       "description": "URL of archived data files"
     }
-  },
-  "required": ["event_id"]
+  }
 }

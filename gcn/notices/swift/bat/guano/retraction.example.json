@@ -15,6 +15,6 @@
   },
   "event": {
     "data_archive_page": "https://swift.gsfc.nasa.gov/archive/",
-    "Id": "[700000031, 7000000000]"
+    "ID": [700000031, 7000000000]
   }
 }

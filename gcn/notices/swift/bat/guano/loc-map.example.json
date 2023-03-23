@@ -1,11 +1,11 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/swift/bat/guano/alert.schema.json",
-  "alert_reporter": {
+  "reporter": {
     "mission": "Swift",
     "instrument": "BAT-GUANO",
     "record_number": 2
   },
-  "alert_info": {
+  "alert": {
     "alert_datetime": "[UTC, ISO 8601]",
     "alert_tense": "current",
     "alert_type": "update"
@@ -28,6 +28,6 @@
   },
   "event": {
     "data_archive_page": "https://swift.gsfc.nasa.gov/archive/",
-    "Id": "[700000031, 7000000000]"
+    "ID": [700000031, 7000000000]
   }
 }
