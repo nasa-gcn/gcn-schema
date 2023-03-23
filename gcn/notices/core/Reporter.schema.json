@@ -15,7 +15,8 @@
     },
     "record_number": {
       "type": "number",
-      "description": "Serial number spanning all the messages that come from the mission during a given trigger"
+      "description": "Incremental number of messages that come from the instrument 
+during a given trigger (ex: 0, 1, 2)"
     }
   },
   "required": ["mission", "instrument", "record_number"]

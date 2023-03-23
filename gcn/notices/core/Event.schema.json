@@ -1,0 +1,26 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/EventInfo.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "EventInfo",
+  "description": "Name or names of the event",
+  "properties": {
+    "event_names": {
+      "type": "array",
+      "description": "Names (0 or more alias) of the event given by each instrument"
+    },
+	"ID": {
+      "type": "array",
+      "description": "Trigger ID or alternate tracking ID"
+    }
+	"ID_source": {
+      "type": "array",
+      "description": "Source of the Trigger ID"
+    },
+	"data_archive_page": {
+      "type": "string",
+      "description": "URL of archived data files"
+    }
+  },
+  "required": ["event_id"]
+}
