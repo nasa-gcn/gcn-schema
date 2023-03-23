@@ -15,8 +15,7 @@
     },
     "record_number": {
       "type": "number",
-      "description": "Incremental number of messages that come from the instrument 
-during a given trigger (ex: 0, 1, 2)"
+      "description": "Incremental number of messages that come from the instrument during a given trigger (ex: 0, 1, 2)"
     }
   },
   "required": ["mission", "instrument", "record_number"]

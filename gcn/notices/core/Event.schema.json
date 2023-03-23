@@ -9,15 +9,15 @@
       "type": "array",
       "description": "Names (0 or more alias) of the event given by each instrument"
     },
-	"ID": {
+    "ID": {
       "type": "array",
       "description": "Trigger ID or alternate tracking ID"
-    }
-	"ID_source": {
+    },
+    "ID_source": {
       "type": "array",
       "description": "Source of the Trigger ID"
     },
-	"data_archive_page": {
+    "data_archive_page": {
       "type": "string",
       "description": "URL of archived data files"
     }
