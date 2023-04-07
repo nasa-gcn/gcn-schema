@@ -4,13 +4,13 @@
   "type": "object",
   "properties": {
     "alert_reporter": {
-      "$ref": "/schema/gcn/notices/core/AlertReporter.schema.json"
+      "$ref": "/schema/gcn/notices/core/Reporter.schema.json"
     },
     "alert_info": {
-      "$ref": "/schema/gcn/notices/core/AlertInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/Alert.schema.json"
     },
-    "identifiers": {
-      "$ref": "/schema/gcn/notices/core/Identifiers.schema.json"
+    "event": {
+      "$ref": "/schema/gcn/notices/core/Event.schema.json"
     },
     "datetime": {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
@@ -22,5 +22,5 @@
       "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
     }
   },
-  "required": ["alert_reporter", "alert_info", "identifiers", "datetime"]
+  "required": ["alert_reporter", "alert_info", "event", "datetime"]
 }

@@ -17,6 +17,5 @@
       "type": "string",
       "description": "URL of archived data files"
     }
-  },
-  "required": ["instrument_id"]
+  }
 }

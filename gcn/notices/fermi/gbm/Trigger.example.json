@@ -1,18 +1,12 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/fermi/gbm/Trigger.schema.json",
-  "alert_info": {
+  "alert": {
     "alert_datetime": "[UTC, ISO 8601]",
     "alert_tense": "current",
     "alert_type": "initial"
   },
-  "identifiers": {
-    "instrument_id": "id number",
-    "instrument_id_alternate": "null",
-    "data_archive_page": "null"
-  },
-  "event_info": {
-    "event_id": "Name of the event",
-    "event_alias": [0, 1]
+  "event": {
+    "id": ["GRB1", "GW2"]
   },
   "datetime": {
     "trigger_time": "Time of the trigger [ISO 8601]",
@@ -59,7 +53,7 @@
       "energy_high": 100
     }
   },
-  "comments": {
+  "additional_info": {
     "comments": "Comment example"
   },
   "specific": {

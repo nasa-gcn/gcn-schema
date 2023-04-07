@@ -6,13 +6,10 @@
   "type": "object",
   "properties": {
     "alert_info": {
-      "$ref": "/schema/gcn/notices/core/AlertInfo.schema.json"
-    },
-    "identifiers": {
-      "$ref": "/schema/gcn/notices/core/Identifiers.schema.json"
+      "$ref": "/schema/gcn/notices/core/Alert.schema.json"
     },
     "event_info": {
-      "$ref": "/schema/gcn/notices/core/EventInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/Event.schema.json"
     },
     "datetime": {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
@@ -23,9 +20,9 @@
     "statistics": {
       "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
     },
-    "comments": {
+    "additional_info": {
       "type": "string",
-      "description": "Additional information about the event"
+      "description": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
     "grb_duration": {
       "$ref": "/schema/gcn/notices/core/Duration.schema.json"

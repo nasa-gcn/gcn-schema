@@ -13,6 +13,5 @@
       "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
       "description": "Energy range [keV] used in soft and hard band of hardness ratio"
     }
-  },
-  "required": ["hardness_ratio", "energy_range"]
+  }
 }

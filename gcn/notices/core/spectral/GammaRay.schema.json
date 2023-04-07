@@ -73,24 +73,5 @@
       "$ref": "/schema/gcn/notices/core/TimeRange.schema.json",
       "description": "Time range used in fluence calculation [s]"
     }
-  },
-  "required": [
-    "best_fit_model",
-    "power_law",
-    "cutoff_power_law",
-    "band",
-    "spectral_energy_range",
-    "hardness_ratio",
-    "hardness_ratio_energy_range",
-    "photon_flux",
-    "photon_flux_error",
-    "energy_flux",
-    "energy_flux_error",
-    "flux_energy_range",
-    "flux_time_range",
-    "fluence",
-    "fluence_error",
-    "fluence_energy_range",
-    "fluence_time_range"
-  ]
+  }
 }
