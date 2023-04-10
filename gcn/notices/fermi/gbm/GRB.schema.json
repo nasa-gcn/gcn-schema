@@ -21,8 +21,7 @@
       "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
     },
     "additional_info": {
-      "type": "string",
-      "description": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
     "grb_duration": {
       "$ref": "/schema/gcn/notices/core/Duration.schema.json"
