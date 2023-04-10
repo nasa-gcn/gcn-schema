@@ -35,9 +35,8 @@
     },
     "classification": { "GRB": 1 }
   },
-  "identifiers": {
+  "event": {
     "data_archive_page": "https://swift.gsfc.nasa.gov/archive/",
-    "instrument_id": "700000031",
-    "instrument_id_alternate": "7000000000"
+    "id": [700000031, 7000000000]
   }
 }

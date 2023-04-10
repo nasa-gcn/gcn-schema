@@ -19,11 +19,5 @@
     "redshift_type": {
       "enum": ["emission", "absorption", "host"]
     }
-  },
-  "required": [
-    "redshift",
-    "redshift_error",
-    "redshift_measure",
-    "redshift_type"
-  ]
+  }
 }

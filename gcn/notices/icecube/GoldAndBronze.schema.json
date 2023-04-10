@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/icecube/amon/GoldAndBronze.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/icecube/GoldAndBronze.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "GoldAndBronze",
@@ -10,7 +10,7 @@
       "type": "string"
     },
     "event": {
-      "$ref": "/schema/gcn/notices/core/EventInfo.schema.json"
+      "$ref": "/schema/gcn/notices/core/Event.schema.json"
     },
     "localization": {
       "$ref": "/schema/gcn/notices/core/Localization.schema.json"

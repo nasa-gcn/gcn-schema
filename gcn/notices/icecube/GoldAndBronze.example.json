@@ -1,9 +1,9 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/amon/GoldAndBronze.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/GoldAndBronze.schema.json",
   "type": "Gold",
   "event": {
-    "event_id": "ABC123",
-    "event_alias": ["123"]
+    "event_name": ["GRB", "GW"],
+    "id": ["120", "131"]
   },
   "localization": {
     "ra": 0,

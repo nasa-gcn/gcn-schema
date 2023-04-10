@@ -41,16 +41,5 @@
       "type": "number",
       "description": "1-sigma uncertainty of beta"
     }
-  },
-  "required": [
-    "amplitude",
-    "amplitude_error",
-    "pivot_energy",
-    "alpha",
-    "alpha_error",
-    "epeak",
-    "epeak_error",
-    "beta",
-    "beta_error"
-  ]
+  }
 }

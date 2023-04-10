@@ -21,6 +21,5 @@
       "type": ["number"],
       "description": "Livetime of the observation [s]"
     }
-  },
-  "required": ["trigger_time"]
+  }
 }

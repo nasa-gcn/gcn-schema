@@ -1,11 +1,11 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/AlertInfo.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/Alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "AlertInfo",
+  "title": "Alert",
   "description": "Alert Information description properties of this notice",
   "type": "object",
   "properties": {
-    "alert_datetime": {
+    "datetime_of_notice": {
       "type": "string",
       "description": "Date and time of notice creation [UTC, ISO 8601]"
     },
@@ -17,6 +17,5 @@
       "enum": ["initial", "update", "retraction"],
       "description": "Indication of alert sequence if multiple of same type sent"
     }
-  },
-  "required": ["alert_datetime", "alert_tense", "alert_type"]
+  }
 }

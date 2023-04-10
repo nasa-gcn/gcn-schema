@@ -13,6 +13,5 @@
       "type": "number",
       "description": "Luminosity distance uncertainty [Mpc, 1-sigma]"
     }
-  },
-  "required": ["luminosity_distance", "luminosity_distance_error"]
+  }
 }
