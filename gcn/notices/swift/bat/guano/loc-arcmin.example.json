@@ -25,13 +25,17 @@
     "rate_duration": 0.256,
     "rate_energy_range": {
       "energy_low": 15,
-      "energy_high": 350
+      "energy_high": 350,
+      "band": "energy",
+      "units": "keV"
     },
     "image_snr": 6,
     "image_duration": 0.256,
     "image_energy_range": {
       "energy_low": 15,
-      "energy_high": 350
+      "energy_high": 350,
+      "band": "energy",
+      "units": "keV"
     },
     "classification": { "GRB": 1 }
   },
