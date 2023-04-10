@@ -7,7 +7,7 @@
   "properties": {
     "energy_low": {
       "type": "number",
-      "description": "high energy bound in range [keV]"
+      "description": "low energy bound in range [keV]"
     },
     "energy_high": {
       "type": "number",
