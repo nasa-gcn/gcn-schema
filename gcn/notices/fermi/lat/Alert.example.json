@@ -1,0 +1,26 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/fermi/lat/Alert.schema.json",
+
+  "datetime_of_notice": "2023-04-13 10:22:30",
+  "alert_tense": "current",
+  "alert_type": "initial",
+
+  "mission": "Fermi",
+  "instrument": "LAT",
+  "record_number": 1,
+
+  "event_name": ["GRB221009A"],
+  "id": ["bn221009553"],
+
+  "trigger_time": "2022-10-09 17:33:54",
+
+  "ra": 288.282,
+  "dec": 19.495,
+
+  "position_angle": 0.0,
+  "healpix_url": "glg_healpix_all_bn221009553_v01",
+
+  "additional_info": "This Notice was ground-generated -- not flight-generated. ",
+
+  "significance": 5.59
+}
