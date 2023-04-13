@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "OnboardTrigger",
-  "description": "fermi lat OnboardTrigger",
+  "description": "Fermi LAT specific schema: OnboardTrigger",
   "properties": {
     "phi": {
       "type": "string",

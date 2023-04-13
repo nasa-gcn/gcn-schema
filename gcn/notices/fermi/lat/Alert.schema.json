@@ -2,7 +2,7 @@
   "$id": "https://gcn.nasa.gov/schema/gcn/notices/fermi/lat/Alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Alert",
-  "description": "fermi lat Alerts",
+  "description": "Fermi LAT Alerts",
   "type": "object",
   "allOf": [
     {
