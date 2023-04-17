@@ -47,13 +47,14 @@
       "properties": {
         "RA_errors": {
           "type": "array",
-          "description": "Asymmetric RA errors as a tuple",
+          "description": "Asymmetric RA errors as a tuple"
         },
         "DEC_errors": {
           "type": "array",
-          "description": "Asymmetric DEC errors as a tuple",
-	},
-     },	  
+          "description": "Asymmetric DEC errors as a tuple"
+	}
+      }
+    }
   },
   "required": [
     "type",
