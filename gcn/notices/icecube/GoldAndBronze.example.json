@@ -1,8 +1,8 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/GoldAndBronze.schema.json",
-  "type": "IceCube Astrotrack Bronze",
+  "type": "IceCube Bronze Neutrino Track Alert",
   "event": {
-    "event_name": ["IceCube-230416A"],  ## Supplied at Rev1
+    "event_name": ["IceCube-230416A"],
     "id": ["137840", "57034692"]
   },
   "localization": {
@@ -12,7 +12,7 @@
     "semi_minor": null,
     "containment_probability": 0.9,
     "systematic_included": false,
-    "healpix_url": "https://roc.icecube.wisc.edu/public/"  ## Supplied at Rev1
+    "healpix_url": "https://roc.icecube.wisc.edu/public/"
   },
   "err50": 0.2,
   "discovery_datetime": {
@@ -24,7 +24,7 @@
   "far": {
     "far": 8.029e-08,
   }
-  "asymmetric_errors": {  ## Supplied at Rev1
+  "asymmetric_errors": {
     "RA_errors": [-1.5, +1.4],
     "DEC_errors": [-1.2, +1.3],
   }
