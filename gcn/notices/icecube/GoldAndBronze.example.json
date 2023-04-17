@@ -1,50 +1,31 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/GoldAndBronze.schema.json",
-  "type": "Gold",
+  "type": "ICECUBE Astrotrack Bronze",
   "event": {
-    "event_name": ["GRB", "GW"],
-    "id": ["120", "131"]
+    "event_name": ["IceCube-230416A"],  ## Supplied at Rev1
+    "id": ["137840", "57034692"]
   },
   "localization": {
-    "ra": 0,
-    "dec": 0,
-    "semi_major": 0,
-    "semi_minor": 0,
-    "position_angle": 0,
-    "containment_probability": 0,
-    "systematic_included": true,
-    "healpix_url": "url.example.com"
+    "ra": 345.82,
+    "dec": +9.01,
+    "semi_major": 0.51,
+    "semi_minor": null,
+    "containment_probability": 0.9,
+    "systematic_included": false,
+    "healpix_url": "https://roc.icecube.wisc.edu/public/"  ## Supplied at Rev1
   },
-  "err50": 0,
+  "err50": 0.2,
   "discovery_datetime": {
-    "trigger_time": "ISO 8601 time here",
-    "observation_start": "ISO 8601 time here",
-    "observation_stop": "ISO 8601 time here",
-    "observation_livetime": 0
+    "trigger_time": "2023-04-16T05:22:26.150574",
   },
   "revision": 0,
-  "energy": 0,
-  "signalness": 0,
+  "energy": 127.29,
+  "signalness": 0.34064,
   "far": {
-    "far": 0,
-    "rate_snr": 0,
-    "rate_duration": 0,
-    "rate_energy_range": {
-      "energy_low": 0,
-      "energy_high": 0
-    },
-    "image_snr": 0,
-    "image_duration": 0,
-    "image_energy_range": {
-      "energy_low": 0,
-      "energy_high": 0
-    },
-    "p_astro": 0,
-    "classification": {
-      "type": 0
-    },
-    "properties": {
-      "type": "object"
-    }
+    "far": 8.029e-08,
+  }
+  "asymmetric_errors": {  ## Supplied at Rev1
+    "RA_errors": [-1.5, +1.4],
+    "DEC_errors": [-1.2, +1.3],
   }
 }
