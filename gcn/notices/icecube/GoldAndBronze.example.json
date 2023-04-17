@@ -1,6 +1,6 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/GoldAndBronze.schema.json",
-  "type": "ICECUBE Astrotrack Bronze",
+  "type": "IceCube Astrotrack Bronze",
   "event": {
     "event_name": ["IceCube-230416A"],  ## Supplied at Rev1
     "id": ["137840", "57034692"]
