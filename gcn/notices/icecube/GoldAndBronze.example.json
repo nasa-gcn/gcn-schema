@@ -23,7 +23,7 @@
   "signalness": 0.34064,
   "far": {
     "far": 8.029e-08,
-  }
+  },
   "asymmetric_errors": {
     "RA_errors": [-1.5, +1.4],
     "DEC_errors": [-1.2, +1.3],
