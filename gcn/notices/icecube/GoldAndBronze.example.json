@@ -22,7 +22,7 @@
   "energy": 127.29,
   "signalness": 0.34064,
   "far": {
-    "far": 8.029e-08
+    "far": 8.029e-8
   },
   "asymmetric_errors": {
     "RA_errors": [-1.5, 1.4],

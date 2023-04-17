@@ -52,7 +52,7 @@
         "DEC_errors": {
           "type": "array",
           "description": "Asymmetric DEC errors as a tuple"
-	}
+        }
       }
     }
   },
