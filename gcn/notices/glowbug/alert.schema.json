@@ -1,0 +1,125 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://gcn.nasa.gov/schema/gcn/notices/glowbug/alert.schema.json",
+
+    "reporter": {
+      "$ref": "/schema/gcn/notices/core/Reporter.schema.json"
+    },
+    
+    "alert_info": {
+      "$ref": "/schema/gcn/notices/core/Alert.schema.json"
+    },
+    
+    "event_info": {
+      "$ref": "/schema/gcn/notices/core/Event.schema.json"
+    },
+    
+    "trigger_time": {
+      "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
+    },
+    
+    "trigger_stats": {
+      "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
+    },
+
+    "glowbug" : {
+        "type": "object",
+        "properties": {
+          
+            "detector_num": { 
+                "type": "integer", 
+                "minimum": 0,
+                "maximum": 11 
+            },
+              
+            "active_detectors": {
+                "type": "array",
+                "items": {
+                    "type": "boolean",
+                    "minItems": 15,
+                    "maxItems": 15
+                }
+            },
+        
+            "channels": {
+                "type": "array",
+                "items": {
+                    "type": "number",
+                    "minItems": 12,
+                    "maxItems": 12      
+                }
+            },
+        
+            "templates": {
+                "type":"array",
+                "items": {
+                    "type": "number",
+                    "minItems": 16,
+                    "maxItems": 16      
+                }
+            },
+        
+            "background": {
+                "type": "array",
+                "items": {
+                    "type": "number",
+                    "minItems": 96,
+                    "maxItems": 96      
+                }
+            },
+        
+            "counts": {
+                "type": "array",
+                "items": {
+                    "type": "number",
+                    "minItems": 96,
+                    "maxItems": 96
+                }
+            },
+            
+            "flags": {
+                "type": "string"
+            },
+            
+            "software_version": {
+                "type": "string"
+            }
+        }
+    },
+    
+    "localization": {
+        "type": "object",
+        "properties": {
+
+            "equatorial": {
+              "$ref": "/schema/gcn/notices/core/Localization.schema.json"
+            },
+        
+            "instrumnet": {
+              "$ref": "/schema/gcn/notices/core/Localization.schema.json"
+            },
+        
+            "iss": {
+              "$ref": "/schema/gcn/notices/core/Localization.schema.json"
+            },
+            
+            "geo": {
+              "$ref": "/schema/gcn/notices/core/Localization.schema.json"
+            },
+            
+            "galactic": {
+              "$ref": "/schema/gcn/notices/core/Localization.schema.json"
+            }
+        }
+    },
+
+    "required": [
+        "reporter", 
+        "alert_info", 
+        "event_info", 
+        "trigger_time",
+        "trigger_stats",
+        "glowbug"
+        ]
+    
+}
