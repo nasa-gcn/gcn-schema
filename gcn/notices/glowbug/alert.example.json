@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/glowbug/alert.schema.json",
+
+  "reporter": {
+    "mission": "GLOWBUG"
+  },
+
+  "alert_info": {
+    "datetime_of_notice": "2023-04-23T15:25:55Z",
+    "alert_tense": "current",
+    "alert_type": "initial"
+  },
+  "event_info": {
+    "event_id": ["BUG230423.789", 432],
+    "data_archive_page": "glowbug.com/230423.789"
+  },
+
+  "trigger_time": {
+    "trigger_time": "2023-04-23T15:20:11Z"
+  },
+
+  "trigger_stats": {
+    "far": 0.2,
+    "rate_snr": 6.1,
+    "rate_duration": 0.064,
+    "rate_energy_range": {
+      "energy_low": 50,
+      "energy_high": 300
+    },
+    "p_astro": 0.9,
+    "classification": { "BNS": 0.9, "NSBH": 0.05, "BBH": 0.05 }
+  },
+
+  "equatorial": {
+    "ra": 283.183,
+    "dec": 8.017,
+    "semi_major": 5.18,
+    "containment_probability": 0.9,
+    "systematic_included": true,
+    "healpix_url": "glowbug.com/230423.789/healpix"
+  },
+
+  "glowbug": {
+    "software_version": 1.0,
+    "detector_num": 10,
+    "active_detectors": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  }
+}
