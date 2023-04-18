@@ -92,13 +92,6 @@
       }
     }
   },
-  "required": [
-    "reporter",
-    "alert_info",
-    "event_info",
-    "trigger_time",
-    "trigger_stats",
-    "glowbug"
-  ]
+  "required": ["reporter", "alert_info", "event_info", "trigger_time", "trigger_stats", "glowbug"]
 }
 
