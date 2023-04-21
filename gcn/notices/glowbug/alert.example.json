@@ -2,6 +2,10 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gcn.nasa.gov/schema/gcn/notices/glowbug/alert.schema.json",
 
+  "remarks": {
+    "additional_info": "Some of the CsI detectors are turned off (see: active_detectors 0-11).  Analysees should ignore data from inactive CsI detectors."
+  },
+
   "reporter": {
     "mission": "GLOWBUG"
   },
@@ -13,7 +17,7 @@
   },
   "event_info": {
     "event_id": ["BUG230423.789", 432],
-    "id_source": "GLOWBUG",
+    "id_source": ["GLOWBUG", "GLOWBUG"],
     "data_archive_page": "glowbug.com/230423.789"
   },
 
@@ -33,13 +37,15 @@
     "classification": { "BNS": 0.9, "NSBH": 0.05, "BBH": 0.05 }
   },
 
-  "equatorial": {
-    "ra": 283.183,
-    "dec": 8.017,
-    "semi_major": 5.18,
-    "containment_probability": 0.9,
-    "systematic_included": true,
-    "healpix_url": "glowbug.com/230423.789/healpix"
+  "localization": {
+    "equatorial": {
+      "ra": 283.183,
+      "dec": 8.017,
+      "semi_major": 5.18,
+      "containment_probability": 0.9,
+      "systematic_included": true,
+      "healpix_url": "glowbug.com/230423.789/healpix"
+    }
   },
 
   "glowbug": {
@@ -54,9 +60,12 @@
       true,
       true,
       true,
+      false,
       true,
       true,
       true,
+      false,
+      false,
       true
     ]
   }
