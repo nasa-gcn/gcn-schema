@@ -17,8 +17,8 @@
   },
   "event_info": {
     "event_id": ["BUG230423.789", 432],
-    "id_source": none,
-    "data_archive_page": 0
+    "id_source": "GLOWBUG",
+    "data_archive_page": "glowbug.com/230423.789"
   },
 
   "trigger_time": {
