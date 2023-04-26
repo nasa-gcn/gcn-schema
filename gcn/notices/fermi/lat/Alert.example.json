@@ -1,18 +1,18 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/fermi/lat/Alert.schema.json",
 
-  "datetime_of_notice": "2023-04-13 10:22:30",
+  "datetime_of_notice": "2022-10-10T10:22:30Z",
   "alert_tense": "current",
   "alert_type": "initial",
 
   "mission": "Fermi",
-  "instrument": "LAT",
+  "instrument": "Fermi-LAT",
   "record_number": 1,
 
   "event_name": ["GRB221009A", "Swift J1913.1+1946"],
   "id": ["bn221009553"],
 
-  "trigger_time": "2022-10-09 17:33:54",
+  "trigger_time": "2022-10-09T17:33:54Z",
 
   "ra": 288.28,
   "dec": 19.49,
@@ -22,5 +22,15 @@
 
   "additional_info": "This Notice was ground-generated -- not flight-generated. ",
 
-  "significance": 5.59
+  "phi": 123.45,
+  "theta": 12.34,
+  "data_timescale": 2.048,
+  "grb_intensity_total": 120,
+  "grb_intensity1": 50,
+  "grb_intensity2": 40,
+  "grb_intensity3": 20,
+  "grb_intensity3": 10,
+  "significance": 5.59,
+  "first_photon": "2022-10-09T13:16:59.99Z",
+  "last_photon": "2022-10-09T15:16:59.99Z"
 }
