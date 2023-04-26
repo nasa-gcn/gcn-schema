@@ -15,11 +15,6 @@
     "localization": {
       "$ref": "/schema/gcn/notices/core/Localization.schema.json"
     },
-    "err50": {
-      "description": "Location uncertainty (radius, 50% containment) [deg]",
-      "type": "number",
-      "minimum": 0
-    },
     "discovery_datetime": {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
     },
@@ -60,7 +55,6 @@
     "type",
     "event",
     "localization",
-    "err50",
     "discovery_datetime",
     "revision",
     "energy",

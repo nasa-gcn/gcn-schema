@@ -14,7 +14,6 @@
     "systematic_included": false,
     "healpix_url": "https://roc.icecube.wisc.edu/public/"
   },
-  "err50": 0.2,
   "discovery_datetime": {
     "trigger_time": "2023-04-16T05:22:26.150574"
   },
