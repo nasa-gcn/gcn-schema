@@ -1,0 +1,82 @@
+{
+    "$id": "https://gcn.nasa.gov/schema/gcn/notices/icecube/LVK_nu_track_search.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "IceCube LVK Alert Nu Track Search",
+    "description": "IceCube LVK Coincident Neutrino Track Search",
+    "properties": {
+	"type": {
+	    "description": "IceCube LVK Alert Nu Track Search",
+	    "type": "string"
+	},
+	"event": {
+	    "$ref": "/schema/gcn/notices/core/Event.schema.json"
+	},
+	"search_datetime": {
+	    "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
+	},
+	"pval_generic": {
+	    "description": "P-value from generic transient search; consistency with background expectations [0-1]",
+	    "type": "number"
+	},
+	"significance_generic": {
+	    "description": "Significance from generic transient search in sigmas; not corrected for number of searches",
+	    "type": "number"
+	},
+	"pval_bayesian": {
+	    "description": "P-value from LLAMA bayesian search; consistency with background expectations [0-1]",
+	    "type": "number"
+	},
+	"significance_bayesian": {
+	    "description": "Significance from LLAMA bayesian search in sigmas; not corrected for number of searches",
+	    "type": "number"
+	},
+	"n_events_coincident": {
+            "description": "Number of IceCube events in spatial and temporal coincidence with the GW map",
+            "type": "number"
+        },
+	"coincident_events": {
+	    "type": "array",
+	    "description": "An array of summary of information for each coincident neutrino track event",
+	    "items": { "$ref": "#/$defs/coincevent"}
+	},
+	"sensitivity_energy_range": {
+	    "description": "Energy sensitivity range assuming an E^-2 spectrum (E^2 dN/dE) within the GW map localization",
+	    "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json"
+        }
+    },
+    "$defs": {
+	"coincevent": {
+	    "type": "object",
+	    "required": [ "event_dt", "localization", "event_pval_generic", "event_pval_bayesian"],
+	    "properties": {
+		"event_dt":{
+		    "description": "Time difference between LVK alert time and neutrino candidate [sec]",
+		    "type": "number"
+		},
+		"localization": {
+		    "$ref": "/schema/gcn/notices/core/Localization.schema.json"
+		},
+		"event_pval_generic": {
+		    "description": "Per-event P-value from generic transient search; consistency with background expectations [0-1]",
+		    "type": "number"
+		},
+		"event_pval_bayesian": {
+		    "description": "Per-event P-value from LLAMA bayesian search; consistency with background expectations [0-1]",
+		    "type": "number"
+		}
+	    }
+	}
+    },
+    "required": [
+	"type",
+	"event",
+	"search_datetime",
+	"pval_generic",
+	"significance_generic",
+	"pval_bayesian",
+	"significance_bayesian",
+	"n_events_coincident",
+	"sensitivity_energy_range"
+    ]
+}
