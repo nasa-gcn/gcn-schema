@@ -21,10 +21,6 @@
       "type": ["number", "null"],
       "description": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"
     },
-    "position_angle": {
-      "type": ["number", "null"],
-      "description": "Position angle of semi-major axis [deg]"
-    },
     "containment_probability": {
       "type": ["number", "null"],
       "description": "Containment probability [dimensionless, 0-1]"
@@ -33,6 +29,46 @@
       "type": "boolean",
       "description": "Contains true when the systematic error is included and false when the systematic error is not included",
       "default": false
+    },
+    "position_angle": {
+      "type": ["number", "null"],
+      "description": "Position angle of semi-major axis [deg]"
+    },
+    "galactic_l": {
+      "type": ["number", "null"],
+      "description": "Galactic longitude [deg]"
+    },
+    "galactic_b": {
+      "type": ["number", "null"],
+      "description": "Galactic latitude [deg]"
+    },
+    "galactic_semimajor_angle": {
+      "type": ["number", "null"],
+      "description": "Position angle of semi-major axis in galactic coordinates [deg]"
+    },
+    "instrument_phi": {
+      "type": ["number", "null"],
+      "description": "Instrument phi [deg]"
+    },
+    "instrument_theta": {
+      "type": ["number", "null"],
+      "description": "Instrument theta [deg]"
+    },
+    "instrument_semimajor_angle": {
+      "type": ["number", "null"],
+      "description": "Position angle of semi-major axis in instrument coordinates [deg]"
+    },
+    "spacecraft_phi": {
+      "type": ["number", "null"],
+      "description": "Spacecraft phi [deg]"
+    },
+    "spacecraft_theta": {
+      "type": ["number", "null"],
+      "description": "Spacecraft theta [deg]"
+    },
+    "spacecraft_semimajor_angle": {
+      "type": ["number", "null"],
+      "description": "Position angle of semi-major axis in Spacecraft coordinates [deg]"
     },
     "healpix_url": {
       "type": ["string", "null"],
