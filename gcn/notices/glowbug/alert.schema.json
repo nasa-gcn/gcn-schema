@@ -3,118 +3,33 @@
   "$id": "https://gcn.nasa.gov/schema/gcn/notices/glowbug/alert.schema.json",
   "title": "Glowbug Alert Notice",
   "description": "Information about a Glowbug trigger.  All fields optional; omitted if not available or not applicable.",
-  "reporter": {
-    "$ref": "/schema/gcn/notices/core/Reporter.schema.json",
-    "description": "mission=GLOWBUG, the other fields are not used."
-  },
-  "remarks": {
-    "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json",
-    "description": "Complementary info in narrative form."
-  },
-  "alert_info": {
-    "$ref": "/schema/gcn/notices/core/Alert.schema.json",
-    "description": "All fields used. tense='current' for astrphysical triggers or 'planned' for commanded ones (injections)'"
-  },
-  "event_info": {
-    "$ref": "/schema/gcn/notices/core/Event.schema.json",
-    "description": "event_id=[ 'BUGyymmdd.fff', seqnum ], where fff is in milidays with trailing zeros. id_source=GLOWBUG. event_name is not used."
-  },
-  "trigger_time": {
-    "$ref": "/schema/gcn/notices/core/DateTime.schema.json",
-    "description": "Only trigger_time is used (ISO 6801) with second fraction."
-  },
-  "trigger_stats": {
-    "$ref": "/schema/gcn/notices/core/Statistics.schema.json",
-    "description": "rate_duration is the integration time, over which the rate_snr was measured. Not used: image_snr, image_duration and image_energy_range."
-  },
-  "glowbug": {
-    "type": "object",
-    "description": "Glowbug-specific part of the schema",
-    "properties": {
-      "detector_num": {
-        "type": "integer",
-        "minimum": 0,
-        "maximum": 11,
-        "description": "Detector number, which triggered."
-      },
-      "active_detectors": {
-        "type": "array",
-        "items": {
-          "type": "boolean",
-          "minItems": 12,
-          "maxItems": 15
-        },
-        "description": "Elements 0..11 correspond to the 12 CsI detectors. If present, 12 and 13 correspond to the two CLLB detectos and 15 to the SSA detector."
-      },
-      "channels": {
-        "type": "array",
-        "items": {
-          "type": "number",
-          "minItems": 12,
-          "maxItems": 12
-        },
-        "description": "TBD"
-      },
-      "templates": {
-        "type": "array",
-        "items": {
-          "type": "number",
-          "minItems": 16,
-          "maxItems": 16
-        },
-        "description": "TBD"
-      },
-      "background": {
-        "type": "array",
-        "items": {
-          "type": "number",
-          "minItems": 96,
-          "maxItems": 96
-        },
-        "description": "TBD"
-      },
-      "counts": {
-        "type": "array",
-        "items": {
-          "type": "number",
-          "minItems": 96,
-          "maxItems": 96
-        },
-        "description": "TBD"
-      },
-      "flags": {
-        "type": "string",
-        "description": "TBD"
-      },
-      "software_version": {
-        "type": "string",
-        "description": "Software version information."
-      }
+  "allOf": [
+    {
+      "$ref": "/schema/gcn/notices/core/Reporter.schema.json",
+      "description": "mission=GLOWBUG"
+    },
+    {
+      "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json",
+      "description": "Complementary info in text form."
+    },
+    {
+      "$ref": "/schema/gcn/notices/core/Alert.schema.json"
+    },
+    {
+      "$ref": "/schema/gcn/notices/core/Event.schema.json",
+      "description": "event_id=[ 'BUGyymmdd.fff', seqnum ], where fff is in milidays with trailing zeros. id_source=GLOWBUG for both."
+    },
+    {
+      "$ref": "/schema/gcn/notices/core/DateTime.schema.json",
+      "description": "Trigger_time with seconds fraction."
+    },
+    {
+      "$ref": "/schema/gcn/notices/core/Statistics.schema.json",
+      "description": "rate_duration is the integration time (a.k.a. trigger time scale), over which the rate_snr was measured."
+    },
+    {
+      "$ref": "/schema/gcn/notices/glowbug/specific.schema.json",
+      "description": "Glowbug-specific fields"
     }
-  },
-  "localization": {
-    "type": "object",
-    "description": "Burst localization in different coordinate systems if applicable. If semi_minor or position_angle are null or missing then semi_major should be interpreted as a radius of the containment contour.",
-    "properties": {
-      "equatorial": {
-        "$ref": "/schema/gcn/notices/core/Localization.schema.json"
-      },
-      "instrumnet": {
-        "$ref": "/schema/gcn/notices/core/Localization.schema.json",
-        "description": "ra,dec are TBD angles in the instrument coordinate system."
-      },
-      "iss": {
-        "$ref": "/schema/gcn/notices/core/Localization.schema.json",
-        "description": "ra,dec are TBD angles in the ISS coordinate system."
-      },
-      "galactic": {
-        "$ref": "/schema/gcn/notices/core/Localization.schema.json",
-        "description": "ra,dec are the galactic longitude,latitude (l,b)."
-      }
-    }
-  },
-  "instrument_geoloc": {
-    "$ref": "/schema/gcn/notices/core/Localization.schema.json",
-    "description": "ra,dec are the longitude,latitude of the instrument location in geocentric (TBD) coordinates."
-  }
+  ]
 }

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/glowbug/specific.schema.json",
+  "description": "Fields specific to a Glowbug trigger.",
+  "title": "Glowbug Alert Notice, Special Fields",
+  "type": "object",
+  "properties": {
+    "detector_statuses": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["off", "on", "triggered"]
+      },
+      "min_items": 15,
+      "max_items": 15,
+      "description": "Detector statuses at trigger time. Detectors: 0..11 - CsI; 12, 13 - CLLB; 14 - SSA."
+    }
+  }
+}
