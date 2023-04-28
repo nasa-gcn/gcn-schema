@@ -1,0 +1,30 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/AttitudeBase.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Attitude (Generic)",
+  "description": "A generic dchema for attitude and rotational rates.",
+  "$comment": "Providers should $ref this chema directly but Attitudes.schema.json instead.",
+  "type": "object",
+  "properties": {
+    "q1": { "type": "number", "description": "Attitude quarternion" },
+    "q2": { "type": "number", "description": "Attitude quarternion" },
+    "q3": { "type": "number", "description": "Attitude quarternion" },
+    "q4": { "type": "number", "description": "Attitude quarternion" },
+    "rx": {
+      "type": "number",
+      "description": "Rottional rate about the X axis"
+    },
+    "ry": {
+      "type": "number",
+      "description": "Rottional rate about the Y axis"
+    },
+    "rz": {
+      "type": "number",
+      "description": "Rottional rate about the Z axis"
+    },
+    "time": {
+      "type": "string",
+      "description": "Time [UTC, ISO 8601] of this data, if different than the trigger time."
+    }
+  }
+}

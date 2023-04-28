@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/glowbug/GeoLoc.schema.json",
+  "title": "GCN Geolocation",
+  "description": "Enables GCN providers to include instrument geolocation.",
+  "type": "object",
+  "properties": {
+    "geoloc": {
+      "$ref": "/schema/gcn/notices/core/GeoLocBase.schema.json",
+      "description": "Instrument geolocation."
+    }
+  }
+}
