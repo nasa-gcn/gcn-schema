@@ -1,17 +1,21 @@
 {
   "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/HardnessRatio.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "title": "HardnessRatio",
   "description": "Hardness Ratio parameterization",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
   "properties": {
     "hardness_ratio": {
       "type": "number",
-      "description": "ratio of flux between high and low energy bands"
+      "description": "Ratio of flux between high and low energy bands"
     },
-    "energy_range": {
+    "soft_range": {
       "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
-      "description": "Energy range [keV] used in soft and hard band of hardness ratio"
+      "description": "The low energy range used to calculate the hardness ratio."
+    },
+    "hard_range": {
+      "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
+      "description": "The high energy range used to calculate the hardness ratio."
     }
   }
 }
