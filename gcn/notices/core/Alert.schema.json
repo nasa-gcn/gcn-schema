@@ -10,8 +10,15 @@
       "description": "Date and time of notice creation [UTC, ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
     },
     "alert_tense": {
-      "enum": ["current", "archival", "planned"],
-      "description": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), or a planned observation in the future (planned)"
+      "enum": [
+        "current",
+        "archival",
+        "planned",
+        "injection",
+        "commanded",
+        "mock"
+      ],
+      "description": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), or a planned observation in the future (planned), or an injection of sort."
     },
     "alert_type": {
       "enum": [
