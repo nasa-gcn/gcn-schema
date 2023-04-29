@@ -31,12 +31,16 @@
     "rate_duration": 0,
     "rate_energy_range": {
       "energy_low": 0,
+      "band": "energy",
+      "units": "keV",
       "energy_high": 0
     },
     "image_snr": 0,
     "image_duration": 0,
     "image_energy_range": {
       "energy_low": 0,
+      "band": "energy",
+      "units": "keV",
       "energy_high": 0
     },
     "p_astro": 0,

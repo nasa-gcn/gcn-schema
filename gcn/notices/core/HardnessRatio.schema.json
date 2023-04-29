@@ -1,8 +1,8 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/HardnessRatio.schema.json",
   "title": "HardnessRatio",
   "description": "Hardness Ratio parameterization",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
     "hardness_ratio": {
@@ -13,9 +13,13 @@
       "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
       "description": "The low energy range used to calculate the hardness ratio."
     },
-    "hard_range": {
+    "energy_range_soft": {
       "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
-      "description": "The high energy range used to calculate the hardness ratio."
+      "description": "Energy range [keV] used in soft band of hardness ratio"
+    },
+    "energy_range_hard": {
+      "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
+      "description": "Energy range [keV] used in hard band of hardness ratio"
     }
   }
 }
