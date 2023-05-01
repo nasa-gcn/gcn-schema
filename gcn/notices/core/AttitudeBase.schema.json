@@ -12,7 +12,7 @@
     "q4": { "type": "number", "description": "Attitude quarternion" },
     "rx": {
       "type": "number",
-      "description": "Rottional rate about the X axis"
+      "description": "Rotational rate about the X axis"
     },
     "ry": {
       "type": "number",
