@@ -5,6 +5,10 @@
   "title": "Event Information",
   "description": "Name or names of the event",
   "properties": {
+    "messenger": {
+      "type": "string",
+      "description": "Type of messenger of the event; GRB, GW or Neutrino"
+    },
     "event_name": {
       "type": "array",
       "description": "Name of the event (ex: GRB 170817A, GW170817, AT2017gfo, SSS 17a)"
