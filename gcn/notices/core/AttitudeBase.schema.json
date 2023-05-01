@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Attitude (Generic)",
   "description": "A generic schema for attitude and rotational rates.",
-  "$comment": "Providers should $ref this chema directly but Attitudes.schema.json instead.",
+  "$comment": "Providers should $ref this schema directly but Attitudes.schema.json instead.",
   "type": "object",
   "properties": {
     "q1": { "type": "number", "description": "Attitude quarternion" },
