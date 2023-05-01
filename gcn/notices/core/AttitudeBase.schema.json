@@ -16,7 +16,7 @@
     },
     "ry": {
       "type": "number",
-      "description": "Rottional rate about the Y axis"
+      "description": "Rotational rate about the Y axis"
     },
     "rz": {
       "type": "number",
