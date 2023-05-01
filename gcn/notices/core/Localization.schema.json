@@ -10,7 +10,7 @@
       "description": "ICRS right ascension [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
     "dec": {
-      "type": ["number", "null"],
+      "type": ["number"],
       "description": "ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
     "semi_major": {
