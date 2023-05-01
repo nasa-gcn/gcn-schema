@@ -7,7 +7,7 @@
   "properties": {
     "redshift": {
       "type": "number",
-      "description": "Displacement of spectal lines toward longer wavelengths [sigma]"
+      "description": "Displacement of spectral lines toward longer wavelengths [sigma]"
     },
     "redshift_error": {
       "type": "array",
