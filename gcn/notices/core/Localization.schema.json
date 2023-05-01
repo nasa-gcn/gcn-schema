@@ -23,7 +23,7 @@
     },
     "semi_minor": {
       "type": "number",
-      "description": "Optional uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"
+      "description": "Optional uncertainty ellipse semi-minor axis [deg]"
     },
     "position_angle": {
       "type": "number",
