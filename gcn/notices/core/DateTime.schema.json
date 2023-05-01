@@ -6,19 +6,19 @@
   "type": "object",
   "properties": {
     "trigger_time": {
-      "type": ["string"],
-      "description": "Time of the trigger [ISO 8601]"
+      "type": "string",
+      "description": "Time of the trigger [ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
     },
     "observation_start": {
-      "type": ["string"],
+      "type": "string",
       "description": "Start time of the observation [ISO 8601]"
     },
     "observation_stop": {
-      "type": ["string"],
+      "type": "string",
       "description": "Stop time of the observation [ISO 8601]"
     },
     "observation_livetime": {
-      "type": ["number"],
+      "type": "number",
       "description": "Livetime of the observation [s]"
     }
   }

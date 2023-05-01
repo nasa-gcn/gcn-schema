@@ -7,19 +7,23 @@
   "properties": {
     "ra": {
       "type": "number",
-      "description": "ICRS right ascension [deg]"
+      "description": "ICRS right ascension [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
     "dec": {
       "type": "number",
-      "description": "ICRS declination [deg]"
+      "description": "ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system"
+    },
+    "uncertainty": {
+      "type": "number",
+      "description": "Uncertainty radius [deg], circular, containment probability as specified"
     },
     "semi_major": {
       "type": "number",
-      "description": "Uncertainty ellipse semi-major axis [deg]"
+      "description": "Optional uncertainty ellipse semi-major axis [deg]"
     },
     "semi_minor": {
       "type": "number",
-      "description": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"
+      "description": "Optional uncertainty ellipse semi-minor axis [deg]"
     },
     "position_angle": {
       "type": "number",

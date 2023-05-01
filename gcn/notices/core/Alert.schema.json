@@ -7,7 +7,7 @@
   "properties": {
     "datetime_of_notice": {
       "type": "string",
-      "description": "Date and time of notice creation [UTC, ISO 8601]"
+      "description": "Date and time of notice creation [UTC, ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
     },
     "alert_tense": {
       "enum": [
