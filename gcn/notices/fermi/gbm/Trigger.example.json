@@ -17,8 +17,8 @@
   "localization": {
     "ra": 0,
     "dec": 0,
-    "semi_major": 0,
-    "semi_minor": 0,
+    "semi_major": [0],
+    "semi_minor": [0],
     "position_angle": 0,
     "containment_probability": 0,
     "systematic_included": true,
