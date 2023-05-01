@@ -16,7 +16,7 @@
         "planned",
         "injection",
         "commanded",
-        "mock"
+        "test"
       ],
       "description": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), or a planned observation in the future (planned), or an injection of sort."
     },
