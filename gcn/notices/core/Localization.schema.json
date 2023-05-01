@@ -6,7 +6,7 @@
   "description": "Localization of transient",
   "properties": {
     "ra": {
-      "type": ["number", "null"],
+      "type": ["number"],
       "description": "ICRS right ascension [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
     "dec": {
