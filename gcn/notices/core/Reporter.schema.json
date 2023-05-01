@@ -18,7 +18,7 @@
       "description": "Incremental number for messages from the instrument during a given trigger (ex: 0, 1, 2)"
     },
     "messenger": {
-      "type": "string",
+      "enum": ["EM", "GW", "Neutrino"],
       "description": "Messenger of report; EM, GW or Neutrino"
     }
   }
