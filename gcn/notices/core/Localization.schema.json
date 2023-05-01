@@ -7,7 +7,7 @@
   "properties": {
     "ra": {
       "type": ["number", "null"],
-      "description": "ICRS right ascension [deg]"
+      "description": "ICRS right ascension [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
     "dec": {
       "type": ["number", "null"],
