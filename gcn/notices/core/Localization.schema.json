@@ -13,7 +13,7 @@
       "type": "number",
       "description": "ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
-    "uncertainty_box": {
+    "uncertainty_shape": {
       "enum": ["circle", "ellipse", "rectangle"],
       "description": "In what manner are the errors in RA and Dec defined - as circular, elliptical, or rectangular boxes"
     },
