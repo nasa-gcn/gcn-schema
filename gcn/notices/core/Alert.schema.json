@@ -7,11 +7,18 @@
   "properties": {
     "datetime_of_notice": {
       "type": "string",
-      "description": "Date and time of notice creation [UTC, ISO 8601]"
+      "description": "Date and time of notice creation [UTC, ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
     },
     "alert_tense": {
-      "enum": ["current", "archival", "planned"],
-      "description": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), or a planned observation in the future (planned)"
+      "enum": [
+        "current",
+        "archival",
+        "planned",
+        "injection",
+        "commanded",
+        "test"
+      ],
+      "description": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), a planned observation in the future (planned), a signal injection (injection), commanded trigger (commanded) or a test trigger (test)."
     },
     "alert_type": {
       "enum": ["initial", "update", "retraction"],

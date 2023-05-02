@@ -3,14 +3,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "OnboardTrigger",
-  "description": "fermi lat OnboardTrigger",
+  "description": "Fermi LAT specific schema: OnboardTrigger",
   "properties": {
     "phi": {
-      "type": "string",
+      "type": "number",
       "description": "Angle between source location in azimuth measured from +x axis counterclockwise, to +y axis, range 0 - 360 degrees [deg]"
     },
     "theta": {
-      "type": "string",
+      "type": "number",
       "description": "Angle between source location and LAT boresight, range 0 - 180 [deg]"
     },
     "data_timescale": {
@@ -42,25 +42,12 @@
       "description": "Sqrt(TS) (with 2 DOF) of the detection [sqrt(TS) 2 DOF]"
     },
     "first_photon": {
-      "type": "number",
+      "type": "string",
       "description": "Time of first photon used in the location calculation [ISO 8601]"
     },
     "last_photon": {
-      "type": "number",
+      "type": "string",
       "description": "Time of last photon used in the location calculation [ISO 8601]"
     }
-  },
-  "required": [
-    "phi",
-    "theta",
-    "data_timescale",
-    "grb_intensity_total",
-    "grb_intensity1",
-    "grb_intensity2",
-    "grb_intensity3",
-    "grb_intensity4",
-    "significance",
-    "first_photon",
-    "last_photon"
-  ]
+  }
 }
