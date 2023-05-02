@@ -13,9 +13,10 @@
       "type": "number",
       "description": "ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
-    "uncertainty_box": {
+    "uncertainty_shape": {
       "enum": ["circle", "ellipse", "rectangle"],
-      "description": "In what manner are the errors in RA and Dec defined - as circular, elliptical, or rectangular boxes"
+      "description": "In what manner are the errors in RA and Dec defined - as circular, elliptical, or rectangular shapes",
+      "default": "circle"
     },
     "semi_major": {
       "type": "array",
@@ -23,16 +24,17 @@
     },
     "semi_minor": {
       "type": "array",
-      "description": "Uncertainty ellipse semi-minor axis or half-width for rectangle [deg] with optional asymmetric errors; respective ex: [r], [r2], [b1/2]"
+      "description": "Uncertainty ellipse semi-minor axis or half-width for rectangle [deg] with optional asymmetric errors; respective ex: [r2], [b1/2]. Not reported if circular."
     },
     "position_angle": {
       "type": "number",
-      "description": "Position angle of semi-major axis [deg]"
+      "description": "Position angle of semi-major axis [deg]. Used if uncertainty_shape is ellipse or rectangle.",
+      "default": 0
     },
     "containment_probability": {
       "type": "number",
-      "default": 0.9,
-      "description": "Containment probability [dimensionless, 0-1], if not parsed, default is 0.9"
+      "description": "Containment probability [dimensionless, 0-1], if not parsed, default is 0.9",
+      "default": 0.9
     },
     "systematic_included": {
       "type": "boolean",
