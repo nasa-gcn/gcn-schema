@@ -23,7 +23,7 @@
     },
     "semi_minor": {
       "type": "array",
-      "description": "Uncertainty ellipse semi-minor axis or half-width for rectangle [deg] with optional asymmetric errors; respective ex: [r], [r2], [b1/2].  Same value as semi-major axis if circular."
+      "description": "Uncertainty ellipse semi-minor axis or half-width for rectangle [deg] with optional asymmetric errors; respective ex: [r2], [b1/2]. Not reported if circular."
     },
     "position_angle": {
       "type": "number",
