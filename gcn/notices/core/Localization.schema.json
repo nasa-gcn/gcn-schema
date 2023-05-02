@@ -6,27 +6,31 @@
   "description": "Localization of transient",
   "properties": {
     "ra": {
-      "type": ["number", "null"],
-      "description": "ICRS right ascension [deg]"
+      "type": "number",
+      "description": "ICRS right ascension [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
     "dec": {
-      "type": ["number", "null"],
-      "description": "ICRS declination [deg]"
+      "type": "number",
+      "description": "ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system"
+    },
+    "uncertainty": {
+      "type": "number",
+      "description": "Uncertainty radius [deg], circular, containment probability as specified"
     },
     "semi_major": {
-      "type": ["number", "null"],
-      "description": "Uncertainty ellipse semi-major axis [deg]"
+      "type": "number",
+      "description": "Optional uncertainty ellipse semi-major axis [deg]"
     },
     "semi_minor": {
-      "type": ["number", "null"],
-      "description": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"
+      "type": "number",
+      "description": "Optional uncertainty ellipse semi-minor axis [deg]"
     },
     "position_angle": {
-      "type": ["number", "null"],
+      "type": "number",
       "description": "Position angle of semi-major axis [deg]"
     },
     "containment_probability": {
-      "type": ["number", "null"],
+      "type": "number",
       "description": "Containment probability [dimensionless, 0-1]"
     },
     "systematic_included": {
@@ -35,7 +39,7 @@
       "default": false
     },
     "healpix_url": {
-      "type": ["string", "null"],
+      "type": "string",
       "description": "URL of HEALPix localization probability file"
     }
   }
