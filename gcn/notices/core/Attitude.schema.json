@@ -8,10 +8,6 @@
     "instrument_attitude": {
       "$ref": "/schema/gcn/notices/core/AttitudeBase.schema.json",
       "description": "Instrument attitude and rotaional rates."
-    },
-    "spacecraft_attitude": {
-      "$ref": "/schema/gcn/notices/core/AttitudeBase.schema.json",
-      "description": "Spacecraft attitude and rotaional rates."
     }
   }
 }
