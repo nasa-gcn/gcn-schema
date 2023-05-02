@@ -15,7 +15,8 @@
     },
     "uncertainty_shape": {
       "enum": ["circle", "ellipse", "rectangle"],
-      "description": "In what manner are the errors in RA and Dec defined - as circular, elliptical, or rectangular shapes"
+      "description": "In what manner are the errors in RA and Dec defined - as circular, elliptical, or rectangular shapes",
+      "default": "circle"
     },
     "semi_major": {
       "type": "array",
@@ -27,12 +28,13 @@
     },
     "position_angle": {
       "type": "number",
-      "description": "Position angle of semi-major axis [deg]"
+      "description": "Position angle of semi-major axis [deg]. Used if uncertainty_shape is ellipse or rectangle.",
+      "default": 0
     },
     "containment_probability": {
       "type": "number",
-      "default": 0.9,
-      "description": "Containment probability [dimensionless, 0-1], if not parsed, default is 0.9"
+      "description": "Containment probability [dimensionless, 0-1], if not parsed, default is 0.9",
+      "default": 0.9
     },
     "systematic_included": {
       "type": "boolean",
