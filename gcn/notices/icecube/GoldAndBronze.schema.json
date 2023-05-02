@@ -35,20 +35,6 @@
     "far": {
       "description": "Rate of background events expected similar to alert event that would be seen by IceCube per year",
       "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
-    },
-    "asymmetric_errors": {
-      "type": "object",
-      "description": "Asymmetric error bounding box edges from of followup reconstruction tools at 90% containment",
-      "properties": {
-        "RA_errors": {
-          "type": "array",
-          "description": "Asymmetric RA errors as a tuple"
-        },
-        "DEC_errors": {
-          "type": "array",
-          "description": "Asymmetric DEC errors as a tuple"
-        }
-      }
     }
   },
   "required": [
