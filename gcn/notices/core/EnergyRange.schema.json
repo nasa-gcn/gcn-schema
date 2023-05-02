@@ -16,16 +16,18 @@
     "band": {
       "enum": ["energy", "wavelength", "frequency"],
       "description": "high-energy or optical or radio observations, if not parsed, then default band is energy",
-      "type": "string"
+      "type": "string",
+      "default": "energy"
     },
     "units": {
       "enum": ["keV", "nm", "Hz"],
       "description": "Units of band range, if not parsed, then default energy is keV",
-      "type": "string"
+      "type": "string",
+      "default": "keV"
     },
     "filter": {
       "type": "string",
-      "description": "Filter name, as used in optical observations"
+      "description": "Optional filter name, as used in optical observations"
     }
   }
 }

@@ -22,7 +22,7 @@
       "band": "energy",
       "units": "keV"
     },
-    "classification": { "GRB": 1 }
+    "classification": { "GRB": "1" }
   },
   "event": {
     "data_archive_page": "https://swift.gsfc.nasa.gov/archive/",
