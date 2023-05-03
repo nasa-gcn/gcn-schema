@@ -18,17 +18,17 @@
       "description": "In what manner are the errors in RA and Dec defined - as circular, elliptical, or rectangular shapes",
       "default": "circle"
     },
-    "semi_major": {
+    "ra_axis": {
       "type": "array",
-      "description": "Uncertainty ellipse semi-major axis or half-length for rectangle [deg] with optional asymmetric errors; respective ex: [r], [r1], [l1/2]"
+      "description": "Uncertainty in RA [deg] with optional asymmetric errors, measured from the center of the shape; respective ex: [r], [r1], [l1-, l1+]. For ellipse, ra axis is r1 or semi-major axis."
     },
-    "semi_minor": {
+    "dec_axis": {
       "type": "array",
-      "description": "Uncertainty ellipse semi-minor axis or half-width for rectangle [deg] with optional asymmetric errors; respective ex: [r2], [b1/2]. Not reported if circular."
+      "description": "Uncertainty in Dec [deg] with optional asymmetric errors, measured from the center of the shape; respective ex: [r2], [l2-, l2+]. Not reported if circular and Dec axis is r2 or semi-minor axis for ellipse."
     },
     "position_angle": {
       "type": "number",
-      "description": "Position angle of semi-major axis [deg]. Used if uncertainty_shape is ellipse or rectangle.",
+      "description": "Anti-clockwise position angle from RA axis [deg]. Used if uncertainty_shape ellipse or rectangle is tilted w.r.t. standard (RA, Dec) coordinate.",
       "default": 0
     },
     "containment_probability": {
