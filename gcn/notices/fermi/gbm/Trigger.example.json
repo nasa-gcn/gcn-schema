@@ -18,7 +18,7 @@
   "ra": 290.4,
   "dec": 22.3,
   "semi_major": [1],
-  "healpix_url": "glg_healpix_all_bn221009553_v01",
+  "healpix_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/bursts/2022/bn221009553/current/glg_healpix_all_bn221009553_v01.fit",
 
   "far": 0.1,
   "rate_snr": 250,
@@ -28,7 +28,7 @@
   "energy_low": 9,
   "energy_high": 30000,
   "p_astro": 0.99,
-  "classification": { "type": "{'BNS', 0.9}" },
+  "classification": { "GRB": 0.99, "Flare": 0.01 },
 
   "hardness_ratio": 0.6,
   "energy_range_soft": [10, 100],

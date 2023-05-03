@@ -26,7 +26,7 @@
       "default": "keV"
     },
     "filter": {
-      "type": "string",
+      "type": "array",
       "description": "Optional filter name, as used in optical observations"
     }
   }
