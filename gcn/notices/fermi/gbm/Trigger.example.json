@@ -1,82 +1,44 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/fermi/gbm/Trigger.schema.json",
-  "alert": {
-    "alert_datetime": "[UTC, ISO 8601]",
-    "alert_tense": "current",
-    "alert_type": "initial"
-  },
-  "event": {
-    "id": ["GRB1", "GW2"]
-  },
-  "datetime": {
-    "trigger_time": "Time of the trigger [ISO 8601]",
-    "observation_start": "Time of the observation [ISO 8601]",
-    "observation_stop": "Stop time of the observation [ISO 8601]",
-    "observation_livetime": 0
-  },
-  "localization": {
-    "ra": 0,
-    "dec": 0,
-    "semi_major": [0],
-    "semi_minor": [0],
-    "position_angle": 0,
-    "containment_probability": 0,
-    "systematic_included": true,
-    "healpix_url": "null"
-  },
-  "statistics": {
-    "far": 0,
-    "rate_snr": 0,
-    "rate_duration": 0,
-    "rate_energy_range": {
-      "energy_low": 0,
-      "energy_high": 100,
-      "band": "energy",
-      "units": "keV"
-    },
-    "image_snr": 0,
-    "image_duration": 0,
-    "image_energy_range": {
-      "energy_low": 0,
-      "energy_high": 100,
-      "band": "energy",
-      "units": "keV"
-    },
-    "p_astro": 0,
-    "classification": {
-      "type": 0
-    },
-    "properties": {
-      "type": "object"
-    }
-  },
-  "hardness_ratio": {
-    "hardness_ratio": 0,
-    "energy_range": {
-      "energy_low": 0,
-      "energy_high": 100,
-      "band": "energy",
-      "units": "keV"
-    }
-  },
-  "additional_info": {
-    "comments": "Comment example"
-  },
-  "specific": {
-    "detectors": "Detector#x",
-    "phi": "",
-    "theta": "",
-    "trigger_algorithm": "",
-    "localization_algorithm": "",
-    "localization_url": "",
-    "lightcurve_url": "",
-    "data_timescale": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "earth_angle": 0,
-    "spectral_class": "SOFT",
-    "duration_class": "SHORT",
-    "reliability": 0,
-    "message_type": ""
-  }
+
+  "alert_datetime": "2022-10-09T20:54:36Z",
+  "alert_tense": "current",
+  "alert_type": "initial",
+
+  "mission": "Fermi",
+  "instrument": "GBM",
+  "record_number": 1,
+  "messenger": "EM",
+
+  "event_name": ["GRB 221009A", "Swift J1913.1+1946"],
+  "id": ["bn 221009553"],
+
+  "trigger_time": "2022-10-09T13:16:59.000Z",
+
+  "ra": 290.4,
+  "dec": 22.3,
+  "semi_major": [1],
+  "healpix_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/bursts/2022/bn221009553/current/glg_healpix_all_bn221009553_v01.fit",
+
+  "far": 0.1,
+  "rate_snr": 250,
+  "rate_duration": 37,
+  "image_snr": 150,
+  "image_duration": 22.3,
+  "energy_low": 9,
+  "energy_high": 30000,
+  "p_astro": 0.99,
+  "classification": { "GRB": 0.99, "Flare": 0.01 },
+
+  "hardness_ratio": 0.6,
+  "energy_range_soft": [10, 100],
+  "energy_range_hard": [100, 1000],
+
+  "additional_info": "This is Fermi GBM Trigger schema example",
+
+  "detectors": "00000101100010",
+  "trigger_algorithm": "In-flight",
+  "spectral_class": "HARD",
+  "duration_class": "LONG",
+  "reliability": 8
 }
