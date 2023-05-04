@@ -37,8 +37,8 @@
             "description": "Most likely source direction based on all coincident events and GW localizations",
             "$ref": "/schema/gcn/notices/core/Localization.schema.json"
         },
-        "neutrino_flux_limit_range": {
-            "description": "Time integrated flux limit ranges assuming an E^-2 spectrum (E^2 dN/dE) within the GW map localization",
+        "neutrino_flux_sensitivity_range": {
+            "description": "Time integrated flux sensitivity ranges assuming an E^-2 spectrum (E^2 dN/dE) within the GW map localization",
             "$ref": "#/$defs/fluxlimits"
         }
     },
