@@ -45,17 +45,17 @@
     "$defs": {
         "fluxlimits": {
             "type": "object",
-            "required": [ "flux_limit_max", "flux_limit_min", "sensitivity_energy_range"],
+            "required": [ "flux_sensitivity_max", "flux_sensitivity_min", "sensitive_energy_range"],
             "properties": {
-                "flux_limit_max": {
-                    "description": "Largest time integrated flux limit [GeV cm^-2] assuming an E^-2 spectrum (E^2 dN/dE) found within the 90% region of GW map localization",
+                "flux_sensitivity_max": {
+                    "description": "Largest time integrated flux sensitivity [GeV cm^-2] assuming an E^-2 spectrum (E^2 dN/dE) found within the 90% region of GW map localization",
                     "type": "number"
                 },
-                "flux_limit_min": {
-                    "description": "Smallest time integrated flux limit [GeV cm^-2] assuming an E^-2 spectrum (E^2 dN/dE) found within the 90% region of GW map localization",
+                "flux_sensitivity_min": {
+                    "description": "Smallest time integrated flux sensitivity [GeV cm^-2] assuming an E^-2 spectrum (E^2 dN/dE) found within the 90% region of GW map localization",
                     "type": "number"
                 },
-                "sensitivity_energy_range": {
+                "sensitive_energy_range": {
                     "description": "Energy sensitivity range assuming an E^-2 spectrum (E^2 dN/dE)",
                     "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json"
                 }

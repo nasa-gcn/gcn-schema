@@ -43,9 +43,9 @@
         "dec": 6.44
     },
     "neutrino_flux_limit_range": {
-        "flux_limit_max": 0.329,
-        "flux_limit_min": 0.044,
-        "sensitivity_energy_range": {
+        "flux_sensitivity_max": 0.329,
+        "flux_sensitivity_min": 0.044,
+        "sensitive_energy_range": {
             "energy_low": 1.0e8,
             "energy_high": 2.0e11
         }
