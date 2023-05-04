@@ -3,7 +3,7 @@
   "additional_info": "IceCube Bronze Neutrino Track Alert",
   "event_name": ["IceCube-230416A"],
   "id": ["137840", "57034692"],
-  "datetime_of_notice": "2023-04-16T05:42:00.0",
+  "datetime_of_notice": "2023-04-16T05:42:00.0Z",
   "alert_type": "update",
   "ra": 345.82,
   "dec": 9.01,
