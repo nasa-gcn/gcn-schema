@@ -1,50 +1,53 @@
 {
     "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/LVK_nu_track_search.schema.json",
     "type": "IceCube LVK Alert Nu Track Search",
-    "event": {
-	"event_name": ["MS230427r"],
-	"id": ["Initial", "Sequence: 2"]
-    },
-    "search_datetime": {
-	"trigger_time": "2023-04-16T05:22:26.0",
-	"observation_start": "2023-04-16T05:14:06.0",
-	"observation_stop": "2023-04-16T05:30:46.0",
-	"observation_livetime": 1000
-    },
+    "event_name": ["MS230427r"],
+    "id": ["Initial", "Sequence: 2"],
+    "trigger_time": "2023-04-16T05:22:26.0Z",
+    "observation_start": "2023-04-16T05:14:06.0Z",
+    "observation_stop": "2023-04-16T05:30:46.0Z",
+    "observation_livetime": 1000,
     "pval_generic": 0.50,
-    "significance_generic": 2.5,
     "pval_bayesian": 0.45,
-    "significance_bayesian": 2.2,
     "n_events_coincident": 2,
     "coincident_events": [
-	{
-	    "event_dt": -123.4,
-	    "localization": {
-		"ra": 345.82,
-		"dec": 9.01,
-		"semi_major": 0.51,
-		"semi_minor": null,
-		"containment_probability": 0.9,
-		"systematic_included": false
-	    },
-	    "event_pval_generic": 0.45,
-	    "event_pval_bayesian": 0.40
-	},
-	{
-	    "event_dt": 321.9,
-	    "localization": {
-		"ra": 343.99,
-		"dec": 6.71,
-		"semi_major": 1.53,
-		"semi_minor": null,
-		"containment_probability": 0.9,
-		"systematic_included": false
-	    },
-	    "event_pval_generic": 0.05,
-	    "event_pval_bayesian": 0.03
-	}],
-    "sensitivity_energy_range": {
-	"energy_low": 1.0e8,
-	"energy_high": 2.0e11
+    {
+        "event_dt": -123.4,
+        "localization": {
+            "ra": 345.82,
+            "dec": 9.01,
+            "uncertainty_shape": "circle",
+            "semi_major": [0.51],
+            "containment_probability": 0.9,
+            "systematic_included": false
+        },
+        "event_pval_generic": 0.45,
+        "event_pval_bayesian": 0.40
+    },
+    {
+        "event_dt": 321.9,
+        "localization": {
+            "ra": 343.99,
+            "dec": 6.71,
+            "uncertainty_shape": "circle",
+            "semi_major": [1.53],
+            "semi_minor": null,
+            "containment_probability": 0.9,
+            "systematic_included": false
+        },
+        "event_pval_generic": 0.05,
+        "event_pval_bayesian": 0.03
+    }],
+    "most_likely_direction": {
+        "ra": 343.66,
+        "dec": 6.44
+    },
+    "neutrino_flux_limit_range": {
+        "flux_limit_max": 0.329,
+        "flux_limit_min": 0.044,
+        "sensitivity_energy_range": {
+            "energy_low": 1.0e8,
+            "energy_high": 2.0e11
+        }
     }
 }
