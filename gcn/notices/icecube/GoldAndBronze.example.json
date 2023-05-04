@@ -10,7 +10,7 @@
   "ra_axis": [0.51],
   "containment_probability": 0.9,
   "systematic_included": false,
-  "trigger_time": "2023-04-16T05:22:26.150574",
+  "trigger_time": "2023-04-16T05:22:26.150574Z",
   "nu_energy": 127.29,
   "signalness": 0.34064,
   "far": 8.029e-8
