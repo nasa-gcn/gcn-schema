@@ -4,47 +4,40 @@
   "type": "object",
   "title": "IceCubeGoldAndBronzeTracks",
   "description": "IceCube Astrotrack Gold And Bronze track alert events",
-  "properties": {
-    "type": {
-      "description": "Notice type Astrotrack Gold or Bronze",
-      "type": "string"
+  "anyOf": [
+    {
+      "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
-    "event": {
+    {
       "$ref": "/schema/gcn/notices/core/Event.schema.json"
     },
-    "localization": {
+    {
+      "$ref": "/schema/gcn/notices/core/Alert.schema.json"
+    },
+    {
       "$ref": "/schema/gcn/notices/core/Localization.schema.json"
     },
-    "discovery_datetime": {
+    {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
     },
-    "revision": {
-      "description": "Revision number by IceCube",
-      "type": "number"
+    {
+      "$ref": "#/$defs/nu_energy"
     },
-    "energy": {
+    {
+      "$ref": "#/$defs/signalness"
+    },
+    {
+      "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
+    }
+  ],
+  "$defs": {
+    "nu_energy": {
       "description": "Most probable neutrino energy [TeV] that would have produced an event",
-      "type": "number",
-      "minimum": 0
+      "type": "number"
     },
     "signalness": {
       "description": "Probability [dn] that this is an astrophysical signal relative to backgrounds",
-      "type": "number",
-      "minimum": 0
-    },
-    "far": {
-      "description": "Rate of background events expected similar to alert event that would be seen by IceCube per year",
-      "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
+      "type": "number"
     }
-  },
-  "required": [
-    "type",
-    "event",
-    "localization",
-    "discovery_datetime",
-    "revision",
-    "energy",
-    "signalness",
-    "far"
-  ]
+  }
 }

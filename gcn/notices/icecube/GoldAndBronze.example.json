@@ -1,24 +1,17 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/GoldAndBronze.schema.json",
-  "type": "IceCube Bronze Neutrino Track Alert",
-  "event": {
-    "id": ["137840", "57034692"]
-  },
-  "localization": {
-    "ra": 345.82,
-    "dec": 9.01,
-    "uncertainty_shape": "circle",
-    "semi_major": [0.51],
-    "containment_probability": 0.9,
-    "systematic_included": false
-  },
-  "discovery_datetime": {
-    "trigger_time": "2023-04-16T05:22:26.150574"
-  },
-  "revision": 0,
-  "energy": 127.29,
+  "additional_info": "IceCube Bronze Neutrino Track Alert",
+  "id": ["137840", "57034692"],
+  "datetime_of_notice": "2023-04-16T05:22:29.55",
+  "alert_type": "initial",
+  "ra": 345.82,
+  "dec": 9.01,
+  "uncertainty_shape": "circle",
+  "semi_major": [0.51],
+  "containment_probability": 0.9,
+  "systematic_included": false,
+  "trigger_time": "2023-04-16T05:22:26.150574",
+  "nu_energy": 127.29,
   "signalness": 0.34064,
-  "far": {
-    "far": 8.029e-8
-  }
+  "far": 8.029e-8
 }
