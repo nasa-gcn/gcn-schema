@@ -4,33 +4,94 @@
   "title": "GRB",
   "description": "gbm reported GRB notices",
   "type": "object",
-  "properties": {
-    "alert_info": {
+  "allOf": [
+    {
       "$ref": "/schema/gcn/notices/core/Alert.schema.json"
     },
-    "event_info": {
+    {
       "$ref": "/schema/gcn/notices/core/Event.schema.json"
     },
-    "datetime": {
+    {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
-    },
-    "localization": {
+    }
+  ],
+  "oneOf": [
+    {
       "$ref": "/schema/gcn/notices/core/Localization.schema.json"
     },
-    "statistics": {
+    {
       "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
     },
-    "additional_info": {
+    {
       "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
-    "grb_duration": {
+    {
       "$ref": "/schema/gcn/notices/core/Duration.schema.json"
     },
-    "spectral_values": {
+    {
       "$ref": "/schema/gcn/notices/core/spectral/GammaRay.schema.json"
+    }
+  ],
+  "properties": {
+    "detectors": {
+      "type": "string",
+      "description": "Which of the 14 detectors triggered on this event"
     },
-    "specific": {
-      "$ref": "/schema/gcn/notices/fermi/gbm/Specific.schema.json"
+    "phi": {
+      "type": "string",
+      "description": "Angle between source location in azimuth measured from +x axis counterclockwise, to +y axis, range 0 - 360 degrees [deg]"
+    },
+    "theta": {
+      "type": "string",
+      "description": "Angle between source location and LAT boresight, range 0 - 180 [deg]"
+    },
+    "trigger_algorithm": {
+      "type": "string",
+      "description": "Version number of the flight software trigger algorithm that was used to calculate the trigger for this event"
+    },
+    "localization_algorithm": {
+      "type": "string",
+      "description": "Version number of the flight software localization algorithm that was used to derive this location for this event"
+    },
+    "localization_url": {
+      "type": "string",
+      "description": "String containing the full localization URL"
+    },
+    "lightcurve_url": {
+      "type": "string",
+      "description": "String containing the full lightcurve URL"
+    },
+    "data_timescale": {
+      "type": "number",
+      "description": "Binning (ie timesampling) of the countrate lightcurve used during the iterative location calculation phase of the processing [s]"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Geographic latitude of Fermi at time of trigger [deg]"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Geographic longitude of Fermi at time of trigger [deg]"
+    },
+    "earth_angle": {
+      "type": "number",
+      "description": "Angle between the source location and the center of the Earth [deg]"
+    },
+    "spectral_class": {
+      "enum": ["SOFT", "HARD"],
+      "description": "Enum specifying classification of soft or hard spectral classification"
+    },
+    "duration_class": {
+      "enum": ["SHORT", "LONG"],
+      "description": "Enum specifying classification of short or long duration"
+    },
+    "reliability": {
+      "type": "number",
+      "description": "Measure of confidence on the detection.  It is a number from 1 to 10. 2=low, 5=medium, 8=high"
+    },
+    "message_type": {
+      "type": "string",
+      "description": "Specify the type of alert message, e.g. Alert, Flight Position, Ground Position [string]"
     }
   }
 }
