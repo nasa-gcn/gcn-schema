@@ -9,7 +9,7 @@
   "dec": 9.01,
   "uncertainty_shape": "rectangle",
   "position_angle": 0,
-  "semi_major": [-1.5, 1.4],
+  "ra_axis": [-1.5, 1.4],
   "semi_minor": [-1.2, 1.3],
   "containment_probability": 0.9,
   "systematic_included": false,
