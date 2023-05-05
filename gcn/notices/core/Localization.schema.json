@@ -41,6 +41,18 @@
       "description": "Contains true when the systematic error is included and false when the systematic error is not included",
       "default": false
     },
+    "instrument_phi": {
+      "type": ["number", "null"],
+      "description": "Instrument phi [deg]"
+    },
+    "instrument_theta": {
+      "type": ["number", "null"],
+      "description": "Instrument theta [deg]"
+    },
+    "instrument_semimajor_angle": {
+      "type": ["number", "null"],
+      "description": "Position angle of semi-major axis in instrument coordinates [deg]"
+    },
     "healpix_url": {
       "type": "string",
       "description": "URL of HEALPix localization probability file"
