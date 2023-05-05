@@ -53,18 +53,6 @@
       "type": ["number", "null"],
       "description": "Position angle of semi-major axis in instrument coordinates [deg]"
     },
-    "spacecraft_phi": {
-      "type": ["number", "null"],
-      "description": "Spacecraft phi [deg]"
-    },
-    "spacecraft_theta": {
-      "type": ["number", "null"],
-      "description": "Spacecraft theta [deg]"
-    },
-    "spacecraft_semimajor_angle": {
-      "type": ["number", "null"],
-      "description": "Position angle of semi-major axis in Spacecraft coordinates [deg]"
-    },
     "healpix_url": {
       "type": "string",
       "description": "URL of HEALPix localization probability file"
