@@ -9,16 +9,16 @@
       "description": "Time duration of central 90% of integrated fluence [s]"
     },
     "t90_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of the T90 duration [s]"
+      "type": "array",
+      "description": "1-sigma uncertainty of the T90 duration [s], with asymmetric statistical errors taken into account"
     },
     "t50": {
       "type": "number",
       "description": "Time duration of central 50% of integrated fluence [s]"
     },
     "t50_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of the T50 duration [s]"
+      "type": "array",
+      "description": "1-sigma uncertainty of the T50 duration [s], with asymmetric statistical errors taken into account"
     }
   }
 }

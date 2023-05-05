@@ -2,38 +2,81 @@
   "$id": "https://gcn.nasa.gov/schema/gcn/notices/fermi/lat/Alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Alert",
-  "description": "fermi lat Alerts",
+  "description": "Fermi LAT Alerts",
   "type": "object",
-  "properties": {
-    "alert_info": {
+  "allOf": [
+    {
       "$ref": "/schema/gcn/notices/core/Alert.schema.json"
     },
-    "alert_reporter": {
+    {
       "$ref": "/schema/gcn/notices/core/Reporter.schema.json"
     },
-    "event_info": {
+    {
       "$ref": "/schema/gcn/notices/core/Event.schema.json"
     },
-    "datetime": {
+    {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
     },
-    "localization": {
+    {
       "$ref": "/schema/gcn/notices/core/Localization.schema.json"
     },
-    "statistics": {
+    {
       "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
     },
-    "comments": {
-      "$ref": "/schema/gcn/notices/core/Comments.schema.json"
+    {
+      "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
-    "grb_duration": {
+    {
       "$ref": "/schema/gcn/notices/core/Duration.schema.json"
     },
-    "grb_spectral": {
+    {
       "$ref": "/schema/gcn/notices/core/spectral/GammaRay.schema.json"
+    }
+  ],
+  "properties": {
+    "phi": {
+      "type": "number",
+      "description": "Angle between source location in azimuth measured from +x axis counterclockwise, to +y axis, range 0 - 360 degrees [deg]"
     },
-    "lat_onboard": {
-      "$ref": "/schema/gcn/notices/fermi/lat/OnboardTrigger.schema.json"
+    "theta": {
+      "type": "number",
+      "description": "Angle between source location and LAT boresight, range 0 - 180 [deg]"
+    },
+    "data_timescale": {
+      "type": "number",
+      "description": "Binning (i.e. time sampling) of the count rate lightcurve used during the iterative location calculation phase of the processing [s]"
+    },
+    "grb_intensity_total": {
+      "type": "number",
+      "description": "Subset of the total number of events in the standard 4 energy bands that were used in the location calculation [ct]"
+    },
+    "grb_intensity1": {
+      "type": "number",
+      "description": "Number of events in the <0.1 GeV band [ct]"
+    },
+    "grb_intensity2": {
+      "type": "number",
+      "description": "Number of events in the 0.1-1 GeV band [ct]"
+    },
+    "grb_intensity3": {
+      "type": "number",
+      "description": "Number of events in the 1-10 GeV band [ct]"
+    },
+    "grb_intensity4": {
+      "type": "number",
+      "description": "Number of events in the >10 GeV band [ct]"
+    },
+    "significance": {
+      "type": "number",
+      "description": "Sqrt(TS) (with 2 DOF) of the detection [sqrt(TS) 2 DOF]"
+    },
+    "first_photon": {
+      "type": "string",
+      "description": "Time of first photon used in the location calculation [ISO 8601]"
+    },
+    "last_photon": {
+      "type": "string",
+      "description": "Time of last photon used in the location calculation [ISO 8601]"
     }
   }
 }

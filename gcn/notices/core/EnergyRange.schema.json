@@ -7,11 +7,27 @@
   "properties": {
     "energy_low": {
       "type": "number",
-      "description": "low energy bound in range [keV]"
+      "description": "lower bound in range"
     },
     "energy_high": {
       "type": "number",
-      "description": "high energy bound in range [keV]"
+      "description": "higher bound in range"
+    },
+    "band": {
+      "enum": ["energy", "wavelength", "frequency"],
+      "description": "high-energy or optical or radio observations, if not parsed, then default band is energy",
+      "type": "string",
+      "default": "energy"
+    },
+    "units": {
+      "enum": ["keV", "nm", "Hz"],
+      "description": "Units of band range, if not parsed, then default energy is keV",
+      "type": "string",
+      "default": "keV"
+    },
+    "filter": {
+      "type": "array",
+      "description": "Optional filter name, as used in optical observations"
     }
   }
 }

@@ -16,7 +16,7 @@
   "localization": {
     "ra": 193.8,
     "dec": 37.6,
-    "semi_major": 0.03,
+    "semi_major": [0.03],
     "containment_probability": 0.9,
     "systematic_included": true
   },
@@ -25,13 +25,17 @@
     "rate_duration": 0.256,
     "rate_energy_range": {
       "energy_low": 15,
-      "energy_high": 350
+      "energy_high": 350,
+      "band": "energy",
+      "units": "keV"
     },
     "image_snr": 6,
     "image_duration": 0.256,
     "image_energy_range": {
       "energy_low": 15,
-      "energy_high": 350
+      "energy_high": 350,
+      "band": "energy",
+      "units": "keV"
     },
     "classification": { "GRB": 1 }
   },

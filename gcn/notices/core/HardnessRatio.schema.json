@@ -9,9 +9,17 @@
       "type": "number",
       "description": "ratio of flux between high and low energy bands"
     },
-    "energy_range": {
-      "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
-      "description": "Energy range [keV] used in soft and hard band of hardness ratio"
+    "hardness_ratio_error": {
+      "type": "array",
+      "description": "ratio of flux between high and low energy bands, with asymmetric statistical errors taken into account"
+    },
+    "energy_range_soft": {
+      "type": "array",
+      "description": "Energy range [keV] used in soft band of hardness ratio"
+    },
+    "energy_range_hard": {
+      "type": "array",
+      "description": "Energy range [keV] used in hard band of hardness ratio"
     }
   }
 }

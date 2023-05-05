@@ -6,33 +6,40 @@
   "description": "Localization of transient",
   "properties": {
     "ra": {
-      "type": ["number", "null"],
-      "description": "ICRS right ascension [deg]"
+      "type": "number",
+      "description": "ICRS right ascension [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
     "dec": {
-      "type": ["number", "null"],
-      "description": "ICRS declination [deg]"
+      "type": "number",
+      "description": "ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
-    "semi_major": {
-      "type": ["number", "null"],
-      "description": "Uncertainty ellipse semi-major axis [deg]"
+    "uncertainty_shape": {
+      "enum": ["circle", "ellipse", "rectangle"],
+      "description": "In what manner are the errors in RA and Dec defined - as circular, elliptical, or rectangular shapes",
+      "default": "circle"
     },
-    "semi_minor": {
-      "type": ["number", "null"],
-      "description": "Uncertainty ellipse semi-minor axis, or null if ellipse is a circle [deg]"
+    "ra_axis": {
+      "type": "array",
+      "description": "Uncertainty in RA [deg] with optional asymmetric errors, measured from the center of the shape; respective ex: [r], [r1], [l1-, l1+]. For ellipse, ra axis is r1 or semi-major axis."
+    },
+    "dec_axis": {
+      "type": "array",
+      "description": "Uncertainty in Dec [deg] with optional asymmetric errors, measured from the center of the shape; respective ex: [r2], [l2-, l2+]. Not reported if circular and Dec axis is r2 or semi-minor axis for ellipse."
+    },
+    "position_angle": {
+      "type": "number",
+      "description": "Anti-clockwise position angle from RA axis [deg]. Used if uncertainty_shape ellipse or rectangle is tilted w.r.t. standard (RA, Dec) coordinate.",
+      "default": 0
     },
     "containment_probability": {
-      "type": ["number", "null"],
-      "description": "Containment probability [dimensionless, 0-1]"
+      "type": "number",
+      "description": "Containment probability [dimensionless, 0-1], if not parsed, default is 0.9",
+      "default": 0.9
     },
     "systematic_included": {
       "type": "boolean",
       "description": "Contains true when the systematic error is included and false when the systematic error is not included",
       "default": false
-    },
-    "position_angle": {
-      "type": ["number", "null"],
-      "description": "Position angle of semi-major axis [deg]"
     },
     "instrument_phi": {
       "type": ["number", "null"],
@@ -59,8 +66,14 @@
       "description": "Position angle of semi-major axis in Spacecraft coordinates [deg]"
     },
     "healpix_url": {
-      "type": ["string", "null"],
+      "type": "string",
       "description": "URL of HEALPix localization probability file"
+    },
+    "healpix_file": {
+      "type": "string",
+      "contentEncoding": "base64",
+      "contentMediaType": "image/fits",
+      "description": "Base 64 encoded content of a FITS file"
     }
   }
 }
