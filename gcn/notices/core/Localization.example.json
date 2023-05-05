@@ -1,0 +1,16 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/Localization.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "ra": 0,
+  "dec": 0,
+  "uncertainty_shape": "rectangle",
+  "ra_axis": [-5.5, 7.5],
+  "dec_axis": [-2.1, 3.3],
+  "position_angle": -30,
+  "containment_probability": 0.95,
+  "systematic_included": true,
+  "instrument_phi": 90,
+  "instrument_theta": 270,
+  "instrument_semimajor_angle": -30,
+  "healpix_url": "https://heasarc/example_healpix"
+}
