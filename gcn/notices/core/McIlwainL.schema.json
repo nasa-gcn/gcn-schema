@@ -1,0 +1,10 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/McIlwainL.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "McIlwain L-Parameter",
+  "description": "Enables provides to report the McIlwain L-parameter."
+  "type": "object",
+  "properties": {
+    "mcilwain_L": { "type": "number", "description": "McIlwain L-parameter" }
+  }
+}
