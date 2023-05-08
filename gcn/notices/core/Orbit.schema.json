@@ -6,7 +6,7 @@
   "type": "object",
   "properties": {
     "latitude": { "type": "number", "description": "Geocentric latitude [deg]" },
-    "longitude": { "type": "number", "description": "Geocentric lat-lon" },
+    "longitude": { "type": "number", "description": "Geocentric longitude [deg]" },
     "altitude": {
       "type": "number",
       "description": "Distance from the center of the Earth."
