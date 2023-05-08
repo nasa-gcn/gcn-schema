@@ -6,7 +6,7 @@
   "type": "object",
   "properties": {
     "description": "Spacecraft geolocation.",
-    "latitude": { "type": "number", "description": "Geocentric lat-lon" },
+    "latitude": { "type": "number", "description": "Geocentric latitude [deg]" },
     "longitude": { "type": "number", "description": "Geocentric lat-lon" },
     "altitude": {
       "type": "number",
