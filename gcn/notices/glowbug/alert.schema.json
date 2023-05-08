@@ -37,7 +37,7 @@
             "enum": ["off", "on", "triggered"]
           },
           "minItems": 15,
-          "max_items": 15,
+          "maxItems": 15,
           "description": "Detector statuses at trigger time. Detectors: 0..11 - CsI; 12, 13 - CLLB; 14 - SSA."
         }
       }
