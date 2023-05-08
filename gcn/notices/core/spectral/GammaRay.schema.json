@@ -54,8 +54,8 @@
       "description": "Energy range used in flux calculation [keV]"
     },
     "flux_time_range": {
-      "$ref": "/schema/gcn/notices/core/TimeRange.schema.json",
-      "description": "Time range used in flux calculation [s]"
+      "type": "array",
+      "description": "Start and stop time stamps in array as used in flux calculation, measured since trigger [s]"
     },
     "fluence": {
       "type": "number",
@@ -66,12 +66,12 @@
       "description": "Fluence Error [erg/cm2]"
     },
     "fluence_energy_range": {
-      "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
+      "type": "array",
       "description": "Energy Range used in Fluence calculation [keV]"
     },
     "fluence_time_range": {
-      "$ref": "/schema/gcn/notices/core/TimeRange.schema.json",
-      "description": "Time range used in fluence calculation [s]"
+      "type": "array",
+      "description": "Start and stop time stamps in array as used in fluence calculation, measured since trigger [s]"
     }
   }
 }
