@@ -35,7 +35,7 @@
         },
         "rz": {
           "type": "number",
-          "description": "Rotational rate about the Z axis"
+          "description": "Rotational rate [rad/s] about the Z axis"
         },
         "time": {
           "type": "string",
