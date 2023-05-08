@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/core/Pointing.schema.json",
   "ra": 0,
   "dec": 0,
   "uncertainty_shape": "rectangle",
