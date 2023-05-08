@@ -1,5 +1,4 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/Localization.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "ra": 0,
   "dec": 0,
