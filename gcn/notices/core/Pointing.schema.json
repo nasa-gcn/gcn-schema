@@ -33,7 +33,7 @@
           "type": "number",
           "description": "Rotational rate about the Y axis"
         },
-        "rz": {
+        "rotation_z": {
           "type": "number",
           "description": "Rotational rate [rad/s] about the Z axis"
         },
