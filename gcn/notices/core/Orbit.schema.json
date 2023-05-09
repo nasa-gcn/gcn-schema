@@ -9,7 +9,7 @@
     "longitude": { "type": "number", "description": "Geocentric longitude [deg]" },
     "altitude": {
       "type": "number",
-      "description": "Distance from the center of the Earth [km]."
+      "description": "Distance from the surface of the Earth [km]."
     },
     "mcilwain_l": { "type": "number", "description": "McIlwain L-parameter" },
     "geoloc_time": {
