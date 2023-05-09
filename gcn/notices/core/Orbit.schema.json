@@ -5,8 +5,14 @@
   "description": "Enables GCN providers to include spacecraft geolocation and McIlwain L-Parameter.",
   "type": "object",
   "properties": {
-    "latitude": { "type": "number", "description": "Geocentric latitude [deg]" },
-    "longitude": { "type": "number", "description": "Geocentric longitude [deg]" },
+    "latitude": {
+      "type": "number",
+      "description": "Geocentric latitude [deg]"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Geocentric longitude [deg]"
+    },
     "altitude": {
       "type": "number",
       "description": "Distance from the surface of the Earth [km]."
