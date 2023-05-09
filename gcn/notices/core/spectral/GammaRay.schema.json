@@ -23,7 +23,9 @@
     },
     "spectral_energy_range": {
       "type": "array",
-      "description": "Low and High energy bounds used in spectral fit, if not parsed in Reporter.schema.json, default unit is keV"
+      "description": "Low and High energy bounds used in spectral fit, if not parsed in Reporter.schema.json, default unit is keV",
+      "minItems": 2,
+      "maxItems": 2
     },
     "hardness_ratio": {
       "type": "number",
@@ -31,7 +33,9 @@
     },
     "hardness_ratio_energy_range": {
       "type": "array",
-      "description": "Low and High energy bounds used for hardness ratio, if not parsed in Reporter.schema.json, default unit is keV"
+      "description": "Low and High energy bounds used for hardness ratio, if not parsed in Reporter.schema.json, default unit is keV",
+      "minItems": 2,
+      "maxItems": 2
     },
     "photon_flux": {
       "type": "number",
@@ -51,11 +55,15 @@
     },
     "flux_energy_range": {
       "type": "array",
-      "description": "Low and High energy bounds used in flux calculation, if not parsed in Reporter.schema.json, default unit is keV"
+      "description": "Low and High energy bounds used in flux calculation, if not parsed in Reporter.schema.json, default unit is keV",
+      "minItems": 2,
+      "maxItems": 2
     },
     "flux_time_range": {
       "type": "array",
-      "description": "Start and stop time stamps in array as used in flux calculation, measured since trigger [s]"
+      "description": "Start and stop time stamps in array as used in flux calculation, measured since trigger [s]",
+      "minItems": 2,
+      "maxItems": 2
     },
     "fluence": {
       "type": "number",
@@ -67,11 +75,15 @@
     },
     "fluence_energy_range": {
       "type": "array",
-      "description": "Low and High energy bounds used in fluence calculation, if not parsed in Reporter.schema.json, default unit is keV"
+      "description": "Low and High energy bounds used in fluence calculation, if not parsed in Reporter.schema.json, default unit is keV",
+      "minItems": 2,
+      "maxItems": 2
     },
     "fluence_time_range": {
       "type": "array",
-      "description": "Start and stop time stamps in array as used in fluence calculation, measured since trigger [s]"
+      "description": "Start and stop time stamps in array as used in fluence calculation, measured since trigger [s]",
+      "minItems": 2,
+      "maxItems": 2
     }
   }
 }
