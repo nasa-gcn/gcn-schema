@@ -21,6 +21,8 @@
       "type": "array",
       "description": "Low and High energy bounds used in rate signal to noise ratio calculation, if not parsed in Reporter.schema.json, default unit is keV"
     },
+    "minItems": 2,
+    "maxItems": 2,
     "image_snr": {
       "type": "number",
       "description": "Image signal to noise ratio [dimensionless]"
