@@ -18,8 +18,8 @@
       "description": "Interval over rate signal to noise ratio calculation [s]"
     },
     "rate_energy_range": {
-      "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
-      "description": "Energy range over rate signal to noise ratio calculation [keV]"
+      "type": "array",
+      "description": "Low and High energy bounds used in rate signal to noise ratio calculation, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "image_snr": {
       "type": "number",
@@ -30,8 +30,8 @@
       "description": "Interval over image signal to noise ratio calculation [s]"
     },
     "image_energy_range": {
-      "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
-      "description": "Energy range over image signal to noise ratio calculation [keV]"
+      "type": "array",
+      "description": "Low and High energy bounds used in image signal to noise ratio calculation, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "p_astro": {
       "type": "number",

@@ -22,16 +22,16 @@
       "description": "Fit parameters for Band model"
     },
     "spectral_energy_range": {
-      "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
-      "description": "Energy range [keV] used in spectral fit"
+      "type": "array",
+      "description": "Low and High energy bounds used in spectral fit, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "hardness_ratio": {
       "type": "number",
       "description": "ratio of flux between high and low energy bands"
     },
     "hardness_ratio_energy_range": {
-      "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
-      "description": "Energy range [keV] used in soft and hard band of hardness ratio"
+      "type": "array",
+      "description": "Low and High energy bounds used for hardness ratio, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "photon_flux": {
       "type": "number",
@@ -50,8 +50,8 @@
       "description": "1-sigma uncertainty in Energy Flux [erg/cm2/s]"
     },
     "flux_energy_range": {
-      "$ref": "/schema/gcn/notices/core/EnergyRange.schema.json",
-      "description": "Energy range used in flux calculation [keV]"
+      "type": "array",
+      "description": "Low and High energy bounds used in flux calculation, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "flux_time_range": {
       "type": "array",
@@ -67,7 +67,7 @@
     },
     "fluence_energy_range": {
       "type": "array",
-      "description": "Energy Range used in Fluence calculation [keV]"
+      "description": "Low and High energy bounds used in fluence calculation, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "fluence_time_range": {
       "type": "array",
