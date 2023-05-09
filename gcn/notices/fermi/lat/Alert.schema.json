@@ -16,7 +16,9 @@
     },
     {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
-    },
+    }
+  ],
+  "allOf": [
     {
       "$ref": "/schema/gcn/notices/core/Localization.schema.json"
     },
