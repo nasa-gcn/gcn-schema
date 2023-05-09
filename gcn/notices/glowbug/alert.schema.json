@@ -31,11 +31,6 @@
   ],
   "properties": {
     "detector_statuses": {
-      "$ref": "#/$defs/detector_statuses"
-    }
-  },
-  "$defs": {
-    "detector_statuses": {
       "type": "array",
       "items": {
         "type": "string",
