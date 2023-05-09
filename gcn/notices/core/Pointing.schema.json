@@ -15,7 +15,7 @@
         },
         "dec": {
           "type": "number",
-          "description": "DEC pointing of the instrument Z axis"
+          "description": "Dec pointing of the instrument Z axis"
         },
         "roll": {
           "type": "number",
