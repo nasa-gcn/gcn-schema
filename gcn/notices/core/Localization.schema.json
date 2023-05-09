@@ -42,15 +42,15 @@
       "default": false
     },
     "instrument_phi": {
-      "type": ["number", "null"],
+      "type": "number",
       "description": "Instrument phi [deg]"
     },
     "instrument_theta": {
-      "type": ["number", "null"],
+      "type": "number",
       "description": "Instrument theta [deg]"
     },
     "instrument_semimajor_angle": {
-      "type": ["number", "null"],
+      "type": "number",
       "description": "Position angle of semi-major axis in instrument coordinates [deg]"
     },
     "healpix_url": {

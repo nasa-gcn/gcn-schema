@@ -3,16 +3,10 @@
   "far": 0.001,
   "rate_snr": 5.2,
   "rate_duration": 10.0,
-  "rate_energy_range": {
-    "min": 100,
-    "max": 1000
-  },
+  "rate_energy_range": [100, 1000],
   "image_snr": 3.1,
   "image_duration": 30.0,
-  "image_energy_range": {
-    "min": 50,
-    "max": 500
-  },
+  "image_energy_range": [50, 500],
   "p_astro": 0.8,
   "classification": {
     "BNS": 0.9,
