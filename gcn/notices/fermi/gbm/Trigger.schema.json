@@ -16,7 +16,9 @@
     },
     {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
-    },
+    }
+  ],
+  "anyOf": [
     {
       "$ref": "/schema/gcn/notices/core/Localization.schema.json"
     },
@@ -31,8 +33,14 @@
     }
   ],
   "properties": {
-    "detectors": {
-      "type": "string",
+    "detector_status": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "enum": [0, 1]
+      },
+      "minProperties": 14,
+      "maxProperties": 14,
       "description": "Which of the 14 detectors triggered on this event"
     },
     "phi": {

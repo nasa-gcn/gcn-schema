@@ -32,6 +32,10 @@
   "properties": {
     "detector_status": {
       "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "enum": ["on", "off", "triggered"]
+      },
       "minProperties": 15,
       "maxProperties": 15,
       "description": "Key value pairs of detector statuses at trigger time. Ex. Detectors: 0..11 - CsI; 12, 13 - CLLB; 14 - SSA. would be {'CsI0': 'on','CsI1': 'triggered','CsI1': 'off'...}"

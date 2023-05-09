@@ -23,9 +23,9 @@
     },
     "spectral_energy_range": {
       "type": "array",
-      "description": "Low and High energy bounds used in spectral fit, if not parsed in Reporter.schema.json, default unit is keV",
       "minItems": 2,
-      "maxItems": 2
+      "maxItems": 2,
+      "description": "Low and High energy bounds used in spectral fit, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "hardness_ratio": {
       "type": "number",
@@ -33,9 +33,9 @@
     },
     "hardness_ratio_energy_range": {
       "type": "array",
-      "description": "Low and High energy bounds used for hardness ratio, if not parsed in Reporter.schema.json, default unit is keV",
       "minItems": 2,
-      "maxItems": 2
+      "maxItems": 2,
+      "description": "Low and High energy bounds used for hardness ratio, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "photon_flux": {
       "type": "number",
@@ -55,15 +55,15 @@
     },
     "flux_energy_range": {
       "type": "array",
-      "description": "Low and High energy bounds used in flux calculation, if not parsed in Reporter.schema.json, default unit is keV",
       "minItems": 2,
-      "maxItems": 2
+      "maxItems": 2,
+      "description": "Low and High energy bounds used in flux calculation, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "flux_time_range": {
       "type": "array",
-      "description": "Start and stop time stamps in array as used in flux calculation, measured since trigger [s]",
       "minItems": 2,
-      "maxItems": 2
+      "maxItems": 2,
+      "description": "Start and stop time stamps in array as used in flux calculation, measured since trigger [s]"
     },
     "fluence": {
       "type": "number",
@@ -75,15 +75,15 @@
     },
     "fluence_energy_range": {
       "type": "array",
-      "description": "Low and High energy bounds used in fluence calculation, if not parsed in Reporter.schema.json, default unit is keV",
       "minItems": 2,
-      "maxItems": 2
+      "maxItems": 2,
+      "description": "Low and High energy bounds used in fluence calculation, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "fluence_time_range": {
       "type": "array",
-      "description": "Start and stop time stamps in array as used in fluence calculation, measured since trigger [s]",
       "minItems": 2,
-      "maxItems": 2
+      "maxItems": 2,
+      "description": "Start and stop time stamps in array as used in fluence calculation, measured since trigger [s]"
     }
   }
 }
