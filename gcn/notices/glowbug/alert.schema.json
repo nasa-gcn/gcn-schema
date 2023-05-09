@@ -30,15 +30,11 @@
     }
   ],
   "properties": {
-    "detector_statuses": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": ["off", "on", "triggered"]
-      },
-      "minItems": 15,
-      "maxItems": 15,
-      "description": "Detector statuses at trigger time. Detectors: 0..11 - CsI; 12, 13 - CLLB; 14 - SSA."
+    "detector_status": {
+      "type": "object",
+      "minProperties": 15,
+      "maxProperties": 15,
+      "description": "Key value pairs of detector statuses at trigger time. Ex. Detectors: 0..11 - CsI; 12, 13 - CLLB; 14 - SSA. would be {'CsI0': 'on','CsI1': 'triggered','CsI1': 'off'...}"
     }
   }
 }

@@ -23,23 +23,23 @@
   "p_astro": 0.9,
   "classification": { "BNS": 0.9, "NSBH": 0.05, "BBH": 0.05 },
 
-  "detector_statuses": [
-    "on",
-    "on",
-    "on",
-    "on",
-    "triggered",
-    "on",
-    "on",
-    "on",
-    "off",
-    "on",
-    "on",
-    "on",
-    "off",
-    "off",
-    "on"
-  ],
+  "detector_statuses": {
+    "CsI0": "on",
+    "CsI1": "on",
+    "CsI2": "on",
+    "CsI3": "on",
+    "CsI4": "triggered",
+    "CsI5": "on",
+    "CsI6": "on",
+    "CsI7": "on",
+    "CsI8": "off",
+    "CsI9": "on",
+    "CsI10": "on",
+    "CsI11": "on",
+    "CLLB0": "off",
+    "CLLB1": "off",
+    "SSA": "on"
+  },
 
   "additional_info": "Software versions:  FSW: 1.0,  Alert Pipeline: 1.1,  Localization: 2.0"
 }
