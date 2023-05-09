@@ -3,7 +3,7 @@
   "ra": 120.0,
   "dec": 45.0,
   "uncertainty_shape": "ellipse",
-  "ra_axis": [0.1, 0.05, 0.15],
+  "ra_uncertainty": [0.1, 0.05, 0.15],
   "dec_axis": [0.2, 0.1, 0.3],
   "position_angle": 30,
   "containment_probability": 0.95,
