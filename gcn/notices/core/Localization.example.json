@@ -4,7 +4,7 @@
   "dec": 0,
   "uncertainty_shape": "rectangle",
   "ra_axis": [-5.5, 7.5],
-  "dec_axis": [-2.1, 3.3],
+  "dec_uncertainty": [-2.1, 3.3],
   "position_angle": -30,
   "containment_probability": 0.95,
   "systematic_included": true,
