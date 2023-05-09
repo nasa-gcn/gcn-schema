@@ -31,7 +31,7 @@
         "q4": { "type": "number", "description": "Attitude quarternion" },
         "rotation_x": {
           "type": "number",
-          "description": "Rotational rate about the X axis"
+          "description": "Rotational rate [rad/s] about the X axis"
         },
         "rotation_y": {
           "type": "number",
