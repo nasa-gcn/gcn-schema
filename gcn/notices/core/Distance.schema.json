@@ -11,6 +11,7 @@
     },
     "luminosity_distance_error": {
       "type": "array",
+      "maxItems": 2,
       "description": "Luminosity distance uncertainty [Mpc, 1-sigma], with optional asymmetric uncertainty"
     }
   }
