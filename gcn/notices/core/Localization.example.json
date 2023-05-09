@@ -1,0 +1,16 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/core/Localization.schema.json",
+  "ra": 120.0,
+  "dec": 45.0,
+  "uncertainty_shape": "ellipse",
+  "ra_uncertainty": [0.1, 0.05],
+  "dec_uncertainity": [-0.2, 0.5],
+  "position_angle": 30,
+  "containment_probability": 0.95,
+  "systematic_included": true,
+  "instrument_phi": 90.0,
+  "instrument_theta": 45,
+  "instrument_semimajor_angle": 50,
+  "healpix_url": "http://example.com/localization.fits",
+  "healpix_file": "H4sIAAAAAAAAC......."
+}

@@ -11,6 +11,7 @@
     },
     "hardness_ratio_error": {
       "type": "array",
+      "maxItems": 2,
       "description": "ratio of flux between high and low energy bands, with asymmetric statistical errors taken into account"
     },
     "energy_range_soft": {
