@@ -4,7 +4,7 @@
   "title": "Glowbug Alert Notice",
   "description": "Information about a Glowbug trigger.  All fields optional; omitted if not available or not applicable.",
   "type": "object",
-  "allOf": [
+  "anyOf": [
     {
       "$ref": "/schema/gcn/notices/core/Reporter.schema.json",
       "description": "mission=GLOWBUG"
@@ -40,6 +40,5 @@
       "maxItems": 15,
       "description": "Detector statuses at trigger time. Detectors: 0..11 - CsI; 12, 13 - CLLB; 14 - SSA."
     }
-  },
-  "required": ["detector_statuses"]
+  }
 }
