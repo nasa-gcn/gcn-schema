@@ -21,6 +21,10 @@
           "type": "number",
           "description": "Roll of the instrument about its Z axis"
         },
+        "position_angle": {
+          "type": "number",
+          "description": "Rotation angle [deg] between the spacecraft X-Z plane and the plane defined by the spacecraft X-axis and celestial North"
+        },
         "q1": { "type": "number", "description": "Attitude quarternion" },
         "q2": { "type": "number", "description": "Attitude quarternion" },
         "q3": { "type": "number", "description": "Attitude quarternion" },
