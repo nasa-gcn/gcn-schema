@@ -25,7 +25,7 @@
         "q2": { "type": "number", "description": "Attitude quarternion" },
         "q3": { "type": "number", "description": "Attitude quarternion" },
         "q4": { "type": "number", "description": "Attitude quarternion" },
-        "rx": {
+        "rotation_x": {
           "type": "number",
           "description": "Rotational rate about the X axis"
         },
