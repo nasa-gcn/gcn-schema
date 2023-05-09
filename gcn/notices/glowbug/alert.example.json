@@ -1,0 +1,45 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/glowbug/alert.schema.json",
+
+  "mission": "GLOWBUG",
+
+  "datetime_of_notice": "2023-04-23T15:25:55Z",
+  "alert_tense": "current",
+  "alert_type": "initial",
+
+  "id": ["BUG230423.789", 432],
+  "id_source": ["GLOWBUG", "GLOWBUG"],
+  "data_archive_page": "glowbug.com/230423.789",
+
+  "trigger_time": "2023-04-23T15:20:11Z",
+
+  "far": 0.2,
+  "rate_snr": 6.1,
+  "rate_duration": 0.064,
+  "rate_energy_range": {
+    "energy_low": 50,
+    "energy_high": 300
+  },
+  "p_astro": 0.9,
+  "classification": { "BNS": 0.9, "NSBH": 0.05, "BBH": 0.05 },
+
+  "detector_statuses": [
+    "on",
+    "on",
+    "on",
+    "on",
+    "triggered",
+    "on",
+    "on",
+    "on",
+    "off",
+    "on",
+    "on",
+    "on",
+    "off",
+    "off",
+    "on"
+  ],
+
+  "additional_info": "Software versions:  FSW: 1.0,  Alert Pipeline: 1.1,  Localization: 2.0"
+}
