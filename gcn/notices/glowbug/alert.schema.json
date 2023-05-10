@@ -30,15 +30,74 @@
     }
   ],
   "properties": {
-    "detector_status": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "string",
-        "enum": ["on", "off", "triggered"]
-      },
-      "minProperties": 15,
-      "maxProperties": 15,
-      "description": "Key value pairs of detector statuses at trigger time. Ex. Detectors: 0..11 - CsI; 12, 13 - CLLB; 14 - SSA. would be {'CsI0': 'on','CsI1': 'triggered','CsI1': 'off'...}"
+    "CsI0": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI1": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI2": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI3": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI4": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI5": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI6": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI7": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI8": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI9": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI10": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI11": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CLLB0": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CLLB1": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "SSA": {
+      "$ref": "#/$defs/detectorStatus"
     }
-  }
+  },
+  "$defs": {
+    "detectorStatus": {
+      "type": "string",
+      "enum": ["on", "off", "triggered"],
+      "description": "Status of a specified detector at the time of the alert"
+    }
+  },
+  "required": [
+    "CsI0",
+    "CsI1",
+    "CsI2",
+    "CsI3",
+    "CsI4",
+    "CsI5",
+    "CsI6",
+    "CsI7",
+    "CsI8",
+    "CsI9",
+    "CsI10",
+    "CsI11",
+    "CLLB0",
+    "CLLB1",
+    "SSA"
+  ]
 }
