@@ -82,22 +82,5 @@
       "enum": ["on", "off", "triggered"],
       "description": "Status of a specified detector at the time of the alert"
     }
-  },
-  "required": [
-    "CsI0",
-    "CsI1",
-    "CsI2",
-    "CsI3",
-    "CsI4",
-    "CsI5",
-    "CsI6",
-    "CsI7",
-    "CsI8",
-    "CsI9",
-    "CsI10",
-    "CsI11",
-    "CLLB0",
-    "CLLB1",
-    "SSA"
-  ]
+  }
 }
