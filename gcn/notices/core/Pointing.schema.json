@@ -31,7 +31,7 @@
       "maxItems": 4,
       "description": "Representing attitude state of a spacecraft, using four element vector [q1, q2, q3, q4], composed of a scalar and 3 element unit vector."
     },
-    "rotation": {
+    "rotation_rate": {
       "type": "array",
       "items": {
         "type": "number"
