@@ -50,7 +50,7 @@
     "NaIa": "triggered",
     "NaIb": "on",
     "BGO0": "on",
-    "BGO1": "on"
+    "BGO1": "triggered"
   },
 
   "trigger_algorithm": "In-flight",
