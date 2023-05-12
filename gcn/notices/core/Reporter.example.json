@@ -1,0 +1,7 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/core/Reporter.schema.json",
+  "mission": "Hubble Space Telescope",
+  "instrument": "Advanced Camera for Surveys",
+  "record_number": 1,
+  "messenger": "EM"
+}

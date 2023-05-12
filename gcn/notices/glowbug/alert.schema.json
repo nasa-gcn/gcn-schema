@@ -3,7 +3,8 @@
   "$id": "https://gcn.nasa.gov/schema/gcn/notices/glowbug/alert.schema.json",
   "title": "Glowbug Alert Notice",
   "description": "Information about a Glowbug trigger.  All fields optional; omitted if not available or not applicable.",
-  "allOf": [
+  "type": "object",
+  "anyOf": [
     {
       "$ref": "/schema/gcn/notices/core/Reporter.schema.json",
       "description": "mission=GLOWBUG"
@@ -26,21 +27,60 @@
     {
       "$ref": "/schema/gcn/notices/core/Statistics.schema.json",
       "description": "rate_duration is the integration time (a.k.a. trigger time scale), over which the rate_snr was measured."
-    },
-    {
-      "type": "object",
-      "properties": {
-        "detector_statuses": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": ["off", "on", "triggered"]
-          },
-          "minItems": 15,
-          "maxItems": 15,
-          "description": "Detector statuses at trigger time. Detectors: 0..11 - CsI; 12, 13 - CLLB; 14 - SSA."
-        }
-      }
     }
-  ]
+  ],
+  "properties": {
+    "CsI0": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI1": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI2": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI3": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI4": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI5": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI6": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI7": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI8": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI9": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI10": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CsI11": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CLLB0": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "CLLB1": {
+      "$ref": "#/$defs/detectorStatus"
+    },
+    "SSA": {
+      "$ref": "#/$defs/detectorStatus"
+    }
+  },
+  "$defs": {
+    "detectorStatus": {
+      "type": "string",
+      "enum": ["on", "off", "triggered"],
+      "description": "Status of a specified detector at the time of the alert"
+    }
+  }
 }

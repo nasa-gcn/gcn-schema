@@ -18,13 +18,15 @@
       "description": "In what manner are the errors in RA and Dec defined - as circular, elliptical, or rectangular shapes",
       "default": "circle"
     },
-    "ra_axis": {
+    "ra_uncertainty": {
       "type": "array",
-      "description": "Uncertainty in RA [deg] with optional asymmetric errors, measured from the center of the shape; respective ex: [r], [r1], [l1-, l1+]. For ellipse, ra axis is r1 or semi-major axis."
+      "maxItems": 2,
+      "description": "Uncertainty in RA [deg] with optional asymmetric errors, measured from the RA in the schema; respective ex: [r], [r1], [l1-, l1+]. For ellipse, ra axis is r1 or semi-major axis."
     },
-    "dec_axis": {
+    "dec_uncertainty": {
       "type": "array",
-      "description": "Uncertainty in Dec [deg] with optional asymmetric errors, measured from the center of the shape; respective ex: [r2], [l2-, l2+]. Not reported if circular and Dec axis is r2 or semi-minor axis for ellipse."
+      "maxItems": 2,
+      "description": "Uncertainty in Dec [deg] with optional asymmetric errors, measured from the Dec in the schema; respective ex: [r2], [l2-, l2+]. Not reported if circular and Dec axis is r2 or semi-minor axis for ellipse."
     },
     "position_angle": {
       "type": "number",
@@ -42,15 +44,15 @@
       "default": false
     },
     "instrument_phi": {
-      "type": ["number", "null"],
+      "type": "number",
       "description": "Instrument phi [deg]"
     },
     "instrument_theta": {
-      "type": ["number", "null"],
+      "type": "number",
       "description": "Instrument theta [deg]"
     },
     "instrument_semimajor_angle": {
-      "type": ["number", "null"],
+      "type": "number",
       "description": "Position angle of semi-major axis in instrument coordinates [deg]"
     },
     "healpix_url": {

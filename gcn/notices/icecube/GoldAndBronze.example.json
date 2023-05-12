@@ -7,7 +7,7 @@
   "ra": 345.82,
   "dec": 9.01,
   "uncertainty_shape": "circle",
-  "ra_axis": [0.51],
+  "ra_uncertainty": [0.51],
   "containment_probability": 0.9,
   "systematic_included": false,
   "trigger_time": "2023-04-16T05:22:26.150574Z",

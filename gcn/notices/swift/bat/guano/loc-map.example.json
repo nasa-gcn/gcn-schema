@@ -20,12 +20,7 @@
   "statistics": {
     "rate_snr": 7.5,
     "rate_duration": 0.256,
-    "rate_energy_range": {
-      "energy_low": 15,
-      "energy_high": 350,
-      "band": "energy",
-      "units": "keV"
-    },
+    "rate_energy_range": [15, 350],
     "classification": { "GRB": 1 }
   },
   "event": {
