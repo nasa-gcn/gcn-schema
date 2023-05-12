@@ -34,49 +34,49 @@
       "type": "object",
       "properties": {
         "CsI0": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI1": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI2": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI3": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI4": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI5": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI6": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI7": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI8": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI9": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI10": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI11": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CLLB0": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CLLB1": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         },
         "SSA": {
-          "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
         }
       }
     }
