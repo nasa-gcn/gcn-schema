@@ -16,7 +16,7 @@
     },
     "roll": {
       "type": "number",
-      "description": "Roll of the instrument about its Z axis"
+      "description": "Roll [deg] of the instrument about its Z axis"
     },
     "position_angle": {
       "type": "number",
