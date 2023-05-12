@@ -22,21 +22,23 @@
       "type": "number",
       "description": "Rotation angle [deg] between the spacecraft X-Z plane and the plane defined by the spacecraft X-axis and celestial North"
     },
-    "q1": { "type": "number", "description": "Attitude quarternion" },
-    "q2": { "type": "number", "description": "Attitude quarternion" },
-    "q3": { "type": "number", "description": "Attitude quarternion" },
-    "q4": { "type": "number", "description": "Attitude quarternion" },
-    "rotation_x": {
-      "type": "number",
-      "description": "Rotational rate [rad/s] about the X axis"
+    "attitude_quarternion": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": ""
     },
-    "rotation_y": {
-      "type": "number",
-      "description": "Rotational rate [rad/s] about the Y axis"
-    },
-    "rotation_z": {
-      "type": "number",
-      "description": "Rotational rate [rad/s] about the Z axis"
+    "rotation": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3,
+      "description": "Rotational rate [rad/s] about the X, Y, and Z axes respectively"
     },
     "time": {
       "type": "string",
