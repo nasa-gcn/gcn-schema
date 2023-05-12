@@ -35,9 +35,49 @@
   "properties": {
     "detector_status": {
       "type": "object",
-      "additionalProperties": {
-        "type": "number",
-        "enum": [0, 1]
+      "properties": {
+        "NaI0": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaI2": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaI1": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaI3": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaI4": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaI5": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaI6": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaI7": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaI8": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaI9": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaIa": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "NaIb": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "BGO0": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        },
+        "BGO1": {
+          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+        }
       },
       "minProperties": 14,
       "maxProperties": 14,
