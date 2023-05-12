@@ -30,53 +30,61 @@
     }
   ],
   "properties": {
-    "CsI0": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI1": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI2": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI3": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI4": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI5": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI6": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI7": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI8": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI9": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI10": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CsI11": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CLLB0": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "CLLB1": {
-      "$ref": "#/$defs/detectorStatus"
-    },
-    "SSA": {
-      "$ref": "#/$defs/detectorStatus"
+    "detector_status": {
+      "$ref": "#/$defs/detectors"
     }
   },
   "$defs": {
+    "detectors": {
+      "type": "object",
+      "properties": {
+        "CsI0": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI1": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI2": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI3": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI4": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI5": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI6": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI7": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI8": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI9": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI10": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CsI11": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CLLB0": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "CLLB1": {
+          "$ref": "#/$defs/detectorStatus"
+        },
+        "SSA": {
+          "$ref": "#/$defs/detectorStatus"
+        }
+      }
+    },
     "detectorStatus": {
       "type": "string",
       "enum": ["on", "off", "triggered"],
