@@ -1,7 +1,7 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/fermi/lat/Alert.schema.json",
 
-  "datetime_of_notice": "2022-10-10T10:22:30Z",
+  "alert_datetime": "2022-10-10T10:22:30Z",
   "alert_tense": "current",
   "alert_type": "initial",
 

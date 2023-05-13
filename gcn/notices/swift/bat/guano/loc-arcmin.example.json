@@ -1,36 +1,28 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/swift/bat/guano/alert.schema.json",
-  "alert_reporter": {
-    "mission": "Swift",
-    "instrument": "BAT-GUANO",
-    "record_number": 3
-  },
-  "alert_info": {
-    "alert_datetime": "[UTC, ISO 8601]",
-    "alert_tense": "current",
-    "alert_type": "update"
-  },
-  "datetime": {
-    "trigger_time": "Time of the trigger [ISO 8601]"
-  },
-  "localization": {
-    "ra": 193.8,
-    "dec": 37.6,
-    "ra_uncertainty": [0.03],
-    "containment_probability": 0.9,
-    "systematic_included": true
-  },
-  "statistics": {
-    "rate_snr": 7.5,
-    "rate_duration": 0.256,
-    "rate_energy_range": [15, 350],
-    "image_snr": 6,
-    "image_duration": 0.256,
-    "image_energy_range": [15, 350],
-    "classification": { "GRB": 1 }
-  },
-  "event": {
-    "data_archive_page": "https://swift.gsfc.nasa.gov/archive/",
-    "id": [700000031, 7000000000]
-  }
+  "mission": "Swift",
+  "instrument": "BAT-GUANO",
+  "messenger": "EM",
+  "record_number": 3,
+  "alert_datetime": "2023-01-01T05:33:01Z",
+  "alert_tense": "current",
+  "alert_type": "update",
+  "trigger_time": "2022-12-31T21:46:05.13Z",
+  "ra": 336.26,
+  "dec": 25.139,
+  "ra_uncertainty": [0.05],
+  "containment_probability": 0.9,
+  "systematic_included": true,
+  "rate_snr": 15.8,
+  "rate_duration": 0.256,
+  "rate_energy_range": [15, 350],
+  "image_snr": 13.94,
+  "image_duration": 0.256,
+  "image_energy_range": [15, 350],
+  "classification": { "GRB": 1 },
+  "far": 0.00001,
+  "follow_up_event": "Fermi 694215970",
+  "follow_up_type": "GRB",
+  "data_archive_page": "https://guano.swift.psu.edu/trigger_report?id=694215995",
+  "id": [694215995]
 }

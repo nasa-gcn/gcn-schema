@@ -5,7 +5,7 @@
   "description": "Alert Information description properties of this notice",
   "type": "object",
   "properties": {
-    "datetime_of_notice": {
+    "alert_datetime": {
       "type": "string",
       "description": "Date and time of notice creation [UTC, ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
     },
