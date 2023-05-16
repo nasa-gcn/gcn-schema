@@ -2,7 +2,7 @@
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/GoldAndBronze.schema.json",
   "additional_info": "IceCube Bronze Neutrino Track Alert",
   "id": ["137840", "57034692"],
-  "datetime_of_notice": "2023-04-16T05:22:29.55Z",
+  "alert_datetime": "2023-04-16T05:22:29.55Z",
   "alert_type": "initial",
   "ra": 345.82,
   "dec": 9.01,
