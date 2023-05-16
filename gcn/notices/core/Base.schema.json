@@ -1,0 +1,13 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/Base.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Base Schema",
+  "description": "A root element that any schema may include in the allOf to add the $schema property. This should be used along with `unevaluatedProperties`:false to catch cases like typos or properties that do not exist",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": ["$schema"]
+}
