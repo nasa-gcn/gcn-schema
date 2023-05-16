@@ -1,0 +1,5 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/example/Example.schema.json",
+  "ra": 3.14,
+  "redshift": 1.24
+}

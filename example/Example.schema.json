@@ -1,0 +1,15 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/example/Example.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Example",
+  "description": "Example of inheriting fields from two other schema",
+  "allOf": [
+    {
+      "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/Localization.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/gcn/notices/core/Redshift.schema.json"
+    }
+  ]
+}
