@@ -64,7 +64,6 @@ async function validate(path) {
       }
 
       if (ajv.errors) {
-        console.log(ajv.errors)
         process.exitCode = 1
         ajv.errors.forEach(({ message }) =>
           console.error(`error: ${path}: ${message}`)
