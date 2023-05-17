@@ -6,6 +6,9 @@
   "description": "IceCube LVK Coincident Neutrino Track Search",
   "anyOf": [
     {
+      "$ref": "/schema/gcn/notices/core/Alert.schema.json"
+    },
+    {
       "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
     {

@@ -3,6 +3,7 @@
   "type": "IceCube LVK Alert Nu Track Search",
   "event_name": ["MS230427r"],
   "id": ["Initial", "Sequence: 2"],
+  "alert_datetime": "2023-04-16T05:32:29.55Z",
   "trigger_time": "2023-04-16T05:22:26.0Z",
   "observation_start": "2023-04-16T05:14:06.0Z",
   "observation_stop": "2023-04-16T05:30:46.0Z",
