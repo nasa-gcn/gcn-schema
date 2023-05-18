@@ -13,10 +13,6 @@
       "type": "array",
       "description": "Instrument-specific trigger ID (ex: bn230313485 (Fermi), 1159327 (Swift)) or alternate ID"
     },
-    "id_source": {
-      "type": "array",
-      "description": "Source of trigger ID"
-    },
     "data_archive_page": {
       "type": "string",
       "description": "URL of archived data files"

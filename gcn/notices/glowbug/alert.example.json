@@ -8,7 +8,6 @@
   "alert_type": "initial",
 
   "id": ["BUG230423.789", 432],
-  "id_source": ["GLOWBUG", "GLOWBUG"],
   "data_archive_page": "glowbug.com/230423.789",
 
   "trigger_time": "2023-04-23T15:20:11Z",
