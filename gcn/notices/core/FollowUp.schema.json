@@ -17,7 +17,7 @@
       "type": "string",
       "description": "Trigger ID as reported by the reference instrument, ex. bnYYMMDDFF"
     },
-    "ref": {
+    "reference": {
       "type": "object",
       "additionalProperties": { "type": "number" },
       "description": "Reference as distributed by the notices or circulars or ATel, ex. gcn.notices.Fermi.gbm.alert: 4642"
