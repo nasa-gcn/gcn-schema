@@ -6,13 +6,15 @@
   "description": "IceCube LVK Coincident Neutrino Track Search",
   "anyOf": [
     {
-      "$ref": "/schema/gcn/notices/core/Alert.schema.json"
+      "$ref": "/schema/gcn/notices/core/Alert.schema.json",
+      "description": "Alert information (alert_datetime and alert_type) from LVK alert notices"
     },
     {
       "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
     {
-      "$ref": "/schema/gcn/notices/core/Event.schema.json"
+      "$ref": "/schema/gcn/notices/core/Reporter.schema.json",
+      "description": "Record/Sequence number of LVK alerts"
     },
     {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
@@ -49,21 +51,13 @@
     "fluxlimits": {
       "type": "object",
       "properties": {
-        "flux_sensitivity_max": {
-          "description": "Largest time integrated flux sensitivity [GeV cm^-2] assuming an E^-2 spectrum (E^2 dN/dE) found within the 90% region of GW map localization",
-          "type": "number"
+        "flux_sensitivity": {
+          "description": "Time integrated flux sensitivity range (min, max) [GeV cm^-2] assuming an E^-2 spectrum (E^2 dN/dE) found within the 90% region of GW map localization",
+          "type": "array"
         },
-        "flux_sensitivity_min": {
-          "description": "Smallest time integrated flux sensitivity [GeV cm^-2] assuming an E^-2 spectrum (E^2 dN/dE) found within the 90% region of GW map localization",
-          "type": "number"
-        },
-        "sensitive_energy_range_lower": {
-          "description": "Energy sensitivity range lower end (TeV) assuming an E^-2 spectrum (E^2 dN/dE)",
-          "type": "number"
-        },
-        "sensitive_energy_range_upper": {
-          "description": "Energy sensitivity range upper end (TeV) assuming an E^-2 spectrum (E^2 dN/dE)",
-          "type": "number"
+        "sensitive_energy_range": {
+          "description": "Energy sensitivity range lower, upper ends (GeV) assuming an E^-2 spectrum (E^2 dN/dE)",
+          "type": "array"
         }
       }
     },
