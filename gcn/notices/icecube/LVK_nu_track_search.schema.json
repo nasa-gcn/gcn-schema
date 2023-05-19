@@ -10,6 +10,10 @@
       "description": "Alert information (alert_datetime and alert_type) from LVK alert notices"
     },
     {
+      "$ref": "/schema/gcn/notices/core/FollowUp.schema.json",
+      "description": "ID (ref_ID) of LVK alert notice"
+    },
+    {
       "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
     {

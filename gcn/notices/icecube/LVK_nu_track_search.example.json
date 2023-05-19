@@ -1,7 +1,7 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/gcn/notices/icecube/LVK_nu_track_search.schema.json",
   "type": "IceCube LVK Alert Nu Track Search",
-  "event_name": ["MS230427r"],
+  "ref_ID": ["MS230427r"],
   "alert_type": "initial",
   "record_number": 2,
   "alert_datetime": "2023-04-16T05:32:29.55Z",
