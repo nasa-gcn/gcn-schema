@@ -30,7 +30,7 @@
       "type": "number"
     },
     "pval_bayesian": {
-      "description": "P-value from LLAMA bayesian search; consistency with background expectations [0-1]",
+      "description": "P-value from LLAMA Bayesian search; consistency with background expectations [0-1]",
       "type": "number"
     },
     "n_events_coincident": {
@@ -67,7 +67,7 @@
     },
     "coincevent": {
       "type": "object",
-      "anyOf": [
+      "allOf": [
         {
           "$ref": "/schema/gcn/notices/core/Localization.schema.json"
         }
@@ -82,7 +82,7 @@
           "type": "number"
         },
         "event_pval_bayesian": {
-          "description": "Per-event P-value from LLAMA bayesian search; consistency with background expectations [0-1]",
+          "description": "Per-event P-value from LLAMA Bayesian search; consistency with background expectations [0-1]",
           "type": "number"
         }
       }
