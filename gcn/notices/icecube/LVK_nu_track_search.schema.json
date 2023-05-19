@@ -56,7 +56,7 @@
           "type": "array"
         },
         "sensitive_energy_range": {
-          "description": "Energy sensitivity range lower, upper ends (GeV) assuming an E^-2 spectrum (E^2 dN/dE)",
+          "description": "Energy sensitivity range (lower, upper) [GeV] assuming an E^-2 spectrum (E^2 dN/dE)",
           "type": "array"
         }
       }
