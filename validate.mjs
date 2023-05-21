@@ -1,10 +1,12 @@
 import { readFile } from 'fs/promises'
-import Ajv from 'ajv/dist/2019.js'
+import Ajv from 'ajv/dist/2020.js'
+import addFormats from 'ajv-formats'
 import meta from 'ajv/dist/refs/json-schema-2020-12/index.js'
 import { glob as baseGlob } from 'glob'
 
 const ajv = new Ajv({ validateSchema: true, verbose: true })
-ajv.addMetaSchema(meta, 'https://json-schema.org/draft/2020-12/schema')
+addFormats(ajv)
+ajv.addMetaSchema(meta)
 
 async function glob(path) {
   return await baseGlob(path, {
@@ -64,10 +66,8 @@ async function validate(path) {
       }
 
       if (ajv.errors) {
+        console.log(JSON.stringify(ajv.errors, null, 2))
         process.exitCode = 1
-        ajv.errors.forEach(({ message }) =>
-          console.error(`error: ${path}: ${message}`)
-        )
       }
     })
   )
