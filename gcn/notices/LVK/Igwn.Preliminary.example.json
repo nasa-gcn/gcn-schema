@@ -1,0 +1,33 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/LVK/Igwn.schema.json",
+  "alert_type": "PRELIMINARY",
+  "time_created": "2018-11-01T22:34:49Z",
+  "superevent_id": "MS181101ab",
+  "urls": {
+    "gracedb": "https://example.org/superevents/MS181101ab/view/"
+  },
+  "event": {
+    "time": "2018-11-01T22:22:46.654Z",
+    "far": 9.11069936486e-14,
+    "significant": true,
+    "instruments": ["H1", "L1", "V1"],
+    "group": "CBC",
+    "pipeline": "gstlal",
+    "search": "MDC",
+    "properties": {
+      "HasNS": 0.95,
+      "HasRemnant": 0.91,
+      "HasMassGap": 0.01
+    },
+    "classification": {
+      "BNS": 0.95,
+      "NSBH": 0.01,
+      "BBH": 0.03,
+      "Terrestrial": 0.01
+    },
+    "duration": null,
+    "central_frequency": null,
+    "skymap": "U0lNUExFICA9ICAgICAgICAgICAgICAgICAgICBUIC8gY29uZm..."
+  },
+  "external_coinc": null
+}

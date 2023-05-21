@@ -1,0 +1,167 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/gcn/notices/LVK/Igwn.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "alert_type": {
+      "type": "string",
+      "enum": [
+        "earlywarning",
+        "EARLYWARNING",
+        "preliminary",
+        "PRELIMINARY",
+        "initial",
+        "INITIAL",
+        "update",
+        "UPDATE",
+        "retraction",
+        "RETRACTION"
+      ]
+    },
+    "time_created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "superevent_id": {
+      "type": "string"
+    },
+    "urls": {
+      "type": "object",
+      "properties": {
+        "gracedb": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["gracedb"],
+      "additionalProperties": false
+    },
+    "event": {
+      "type": ["object", "null"],
+      "properties": {
+        "time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "far": {
+          "type": "number"
+        },
+        "significant": {
+          "type": "boolean"
+        },
+        "instruments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "group": {
+          "type": "string"
+        },
+        "pipeline": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "HasNS": {
+              "type": "number"
+            },
+            "HasRemnant": {
+              "type": "number"
+            },
+            "HasMassGap": {
+              "type": "number"
+            }
+          },
+          "required": ["HasNS", "HasRemnant", "HasMassGap"],
+          "additionalProperties": false
+        },
+        "classification": {
+          "type": "object",
+          "properties": {
+            "BNS": {
+              "type": "number"
+            },
+            "NSBH": {
+              "type": "number"
+            },
+            "BBH": {
+              "type": "number"
+            },
+            "Terrestrial": {
+              "type": "number"
+            }
+          },
+          "required": ["BNS", "NSBH", "BBH", "Terrestrial"],
+          "additionalProperties": false
+        },
+        "duration": {
+          "type": ["null", "number"]
+        },
+        "central_frequency": {
+          "type": ["null", "number"]
+        },
+        "skymap": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "time",
+        "far",
+        "significant",
+        "instruments",
+        "group",
+        "pipeline",
+        "search",
+        "properties",
+        "classification",
+        "skymap"
+      ],
+      "additionalProperties": false
+    },
+    "external_coinc": {
+      "type": ["object", "null"],
+      "properties": {
+        "gcn_notice_id": {
+          "type": "integer"
+        },
+        "ivorn": {
+          "type": "string"
+        },
+        "observatory": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "time_difference": {
+          "type": "number"
+        },
+        "time_coincidence_far": {
+          "type": "number"
+        },
+        "time_sky_position_coincidence_far": {
+          "type": "number"
+        },
+        "combined_skymap": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "gcn_notice_id",
+        "ivorn",
+        "observatory",
+        "search",
+        "time_difference",
+        "time_coincidence_far",
+        "time_sky_position_coincidence_far",
+        "combined_skymap"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

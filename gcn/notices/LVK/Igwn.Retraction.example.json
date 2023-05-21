@@ -1,0 +1,11 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/gcn/notices/LVK/Igwn.schema.json",
+  "alert_type": "RETRACTION",
+  "time_created": "2018-11-01T23:36:23Z",
+  "superevent_id": "MS181101ab",
+  "urls": {
+    "gracedb": "https://example.org/superevents/MS181101ab/view/"
+  },
+  "event": null,
+  "external_coinc": null
+}
