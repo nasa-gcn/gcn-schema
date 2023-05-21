@@ -21,5 +21,8 @@
   "lint-staged": {
     "*.(json,js,mjs)": "prettier --write",
     "*.schema.json": "node validate.mjs"
+  },
+  "dependencies": {
+    "ajv-formats": "^2.1.1"
   }
 }
