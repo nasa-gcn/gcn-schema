@@ -22,11 +22,16 @@
     },
     "alert_type": {
       "enum": [
-        "initial",
-        "update",
-        "retraction",
         "earlywarning",
-        "premliminary"
+        "EARLYWARNING",
+        "preliminary",
+        "PRELIMINARY",
+        "initial",
+        "INITIAL",
+        "update",
+        "UPDATE",
+        "retraction",
+        "RETRACTION"
       ],
       "description": "Indication of alert sequence if multiple of same type sent"
     }
