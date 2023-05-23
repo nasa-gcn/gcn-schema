@@ -19,8 +19,7 @@
     },
     "reference": {
       "type": "object",
-      "additionalProperties": { "type": "number" },
-      "description": "Reference as distributed by the notices or circulars or ATel, ex. gcn.notices.Fermi.gbm.alert: 4642"
+      "description": "Key-value pairs to reference notices, circulars, ATel, etc. For notices, the key should be the topic as a string, and the value should be the timestamp of the notice (ex: 'gcn.notices.glowbug.alert':'2023-01-01T03:24:36.0Z'). For circulars the key should be 'gcn.circulars' and the value should be the circular ID (ex: 'gcn.circular':32517)"
     }
   }
 }
