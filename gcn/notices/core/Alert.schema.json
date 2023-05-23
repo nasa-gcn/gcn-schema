@@ -24,7 +24,7 @@
       "enum": [
         "initial",
         "update",
-        "retraction",
+        "retraction"
       ],
       "description": "Indication of alert sequence if multiple of same type sent"
     }
