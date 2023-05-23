@@ -4,7 +4,7 @@
   "type": "object",
   "title": "IceCubeGoldAndBronzeTracks",
   "description": "IceCube Astrotrack Gold And Bronze track alert events",
-  "anyOf": [
+  "allOf": [
     {
       "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
     },
@@ -21,16 +21,10 @@
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
     },
     {
-      "$ref": "#/$defs/nu_energy"
-    },
-    {
-      "$ref": "#/$defs/signalness"
-    },
-    {
       "$ref": "/schema/gcn/notices/core/Statistics.schema.json"
     }
   ],
-  "$defs": {
+  "properties": {
     "nu_energy": {
       "description": "Most probable neutrino energy [TeV] that would have produced an event",
       "type": "number"
