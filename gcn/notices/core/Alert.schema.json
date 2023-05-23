@@ -25,7 +25,6 @@
         "initial",
         "update",
         "retraction",
-        "earlywarning",
         "preliminary"
       ],
       "description": "Indication of alert sequence if multiple of same type sent"
