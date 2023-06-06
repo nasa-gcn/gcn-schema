@@ -1,31 +1,31 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/glowbug/alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/glowbug/alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Glowbug Alert Notice",
   "description": "Information about a Glowbug trigger.  All fields optional; omitted if not available or not applicable.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "/schema/gcn/notices/core/Reporter.schema.json",
+      "$ref": "/schema/main/gcn/notices/core/Reporter.schema.json",
       "description": "mission=GLOWBUG"
     },
     {
-      "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json",
+      "$ref": "/schema/main/gcn/notices/core/AdditionalInfo.schema.json",
       "description": "Complementary info in text form."
     },
     {
-      "$ref": "/schema/gcn/notices/core/Alert.schema.json"
+      "$ref": "/schema/main/gcn/notices/core/Alert.schema.json"
     },
     {
-      "$ref": "/schema/gcn/notices/core/Event.schema.json",
+      "$ref": "/schema/main/gcn/notices/core/Event.schema.json",
       "description": "event_id=[ 'BUGyymmdd.fff', seqnum ], where fff is in milidays with trailing zeros. id_source=GLOWBUG for both."
     },
     {
-      "$ref": "/schema/gcn/notices/core/DateTime.schema.json",
+      "$ref": "/schema/main/gcn/notices/core/DateTime.schema.json",
       "description": "Trigger_time with seconds fraction."
     },
     {
-      "$ref": "/schema/gcn/notices/core/Statistics.schema.json",
+      "$ref": "/schema/main/gcn/notices/core/Statistics.schema.json",
       "description": "rate_duration is the integration time (a.k.a. trigger time scale), over which the rate_snr was measured."
     }
   ],
@@ -34,49 +34,49 @@
       "type": "object",
       "properties": {
         "CsI0": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI1": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI2": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI3": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI4": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI5": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI6": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI7": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI8": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI9": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI10": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CsI11": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CLLB0": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "CLLB1": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         },
         "SSA": {
-          "$ref": "/schema/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
         }
       }
     }

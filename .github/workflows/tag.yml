@@ -1,0 +1,33 @@
+name: Update From Package
+on:
+  pull_request:
+    types:
+      - 'closed'
+    paths:
+      - 'package.json'
+
+jobs:
+  tag_update:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - uses: salsify/action-detect-and-tag-new-version@v2
+        id: version
+        with:
+          version-command: |
+            git config user.name  "${{github.actor}}"
+            git config user.email "${{github.actor}}@users.noreply.github.com"
+            node update-tags.mjs
+            git commit -q -a -m "Set id and schema paths for new version"
+
+      - name: Reset
+        if: ${{steps.version.outputs.tag != null}}
+        run: |
+          node update-tags.mjs --reset
+          git commit -a -m "Post-new-tag revert paths to point to main"
+          git push
