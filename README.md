@@ -8,3 +8,7 @@ Please add your schema to this repository under <code>gcn/notices/<i>mission</i>
 
 The GCN team is happy to iterate with the producers on their schema contents and format.
 Your pipeline will generate JSON files following these schema and send alerts to GCN as described in [New Notice Producers](https://gcn.nasa.gov/docs/producers).
+
+## Version Updates
+
+To create a new tagged version, update the `version` property in `package.json` and create a new PR into main. When this PR is merged, actions will trigger that will update the `$id` and `$schema` properties to include `?version=....`. This commit will get tagged, then the action will reset the paths to `?version=main` so that the latest commit on the main branch always points to main.
