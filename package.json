@@ -4,7 +4,9 @@
     "prepare": "husky install",
     "validate:prettier": "prettier --check .",
     "validate:jsonschema": "node validate.mjs",
-    "validate": "run-s validate:*"
+    "validate": "run-s validate:*",
+    "version": "node update-tags.mjs && git add -u",
+    "postversion": "node update-tags.mjs --reset && git add -u && git commit -m \"Back to development\" && git push && git push --tags"
   },
   "devDependencies": {
     "ajv": "^8.12.0",

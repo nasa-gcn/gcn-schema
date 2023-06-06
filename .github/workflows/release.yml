@@ -1,0 +1,14 @@
+name: Create New Release
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  tag-new-versions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ncipollo/release-action@v1
