@@ -19,7 +19,7 @@
     },
     "reference": {
       "type": "object",
-      "description": "Key-value pairs to reference notices, circulars, ATel, etc. For notices, the key should be the topic as a string, and the value should be the timestamp of the notice (ex: 'gcn.notices.glowbug.alert':'2023-01-01T03:24:36.0Z'). For circulars the key should be 'gcn.circulars' and the value should be the circular ID (ex: 'gcn.circular':32517)"
+      "description": "Key-value pairs to reference Notices, Circulars, ATel, etc. that point to the reference localization. For notices, provide the topic and timestamp (ex: 'gcn.notices.glowbug.alert':'2023-01-01T03:24:36.0Z') or topic and alert type with use of ref_ID field (ex: 'igwn.gwalert':'PRELIMINARY'). For Circulars or ATels, the key-value pair should be the system and ID (ex: 'circular':32517 or 'atel':12345)."
     }
   }
 }
