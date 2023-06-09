@@ -18,7 +18,7 @@
     },
     {
       "$ref": "/schema/gcn/notices/core/Event.schema.json",
-      "description": "event_id=[ 'BUGyymmdd.fff', seqnum ], where fff is in milidays with trailing zeros. id_source=GLOWBUG for both."
+      "description": "event_id=[ 'BUGyymmdd.fff', seqnum ], where fff is in millidays with trailing zeros. id_source=GLOWBUG for both."
     },
     {
       "$ref": "/schema/gcn/notices/core/DateTime.schema.json",
