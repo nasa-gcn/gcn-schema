@@ -10,15 +10,15 @@
       "description": "Name of model corresponding to best statistical fit of spectrum"
     },
     "power_law": {
-      "$ref": "/schema/main/gcn/notices/core/spectral/models/PowerLaw.schema.json",
+      "$ref": "./models/PowerLaw.schema.json",
       "description": "Fit parameters for PowerLaw model"
     },
     "cutoff_power_law": {
-      "$ref": "/schema/main/gcn/notices/core/spectral/models/CutOffPowerLaw.schema.json",
+      "$ref": "./models/CutOffPowerLaw.schema.json",
       "description": "Fit parameters for Cutoff PowerLaw model"
     },
     "band": {
-      "$ref": "/schema/main/gcn/notices/core/spectral/models/Band.schema.json",
+      "$ref": "./models/Band.schema.json",
       "description": "Fit parameters for Band model"
     },
     "spectral_energy_range": {

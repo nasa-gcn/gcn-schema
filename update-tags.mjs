@@ -38,7 +38,7 @@ async function loadAndUpdateFiles(oldValue, newValue) {
       )
 
       schema['$id'] = schema['$id'].replace(oldValue, newValue)
-      searchForAndUpdateRefs(schema, oldValue, newValue)
+      // searchForAndUpdateRefs(schema, oldValue, newValue)
       await writeFile(match, JSON.stringify(schema, null, 2))
     })
   )

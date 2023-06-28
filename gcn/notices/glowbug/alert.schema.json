@@ -6,26 +6,26 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "/schema/main/gcn/notices/core/Reporter.schema.json",
+      "$ref": "../core/Reporter.schema.json",
       "description": "mission=GLOWBUG"
     },
     {
-      "$ref": "/schema/main/gcn/notices/core/AdditionalInfo.schema.json",
+      "$ref": "../core/AdditionalInfo.schema.json",
       "description": "Complementary info in text form."
     },
     {
-      "$ref": "/schema/main/gcn/notices/core/Alert.schema.json"
+      "$ref": "../core/Alert.schema.json"
     },
     {
-      "$ref": "/schema/main/gcn/notices/core/Event.schema.json",
+      "$ref": "../core/Event.schema.json",
       "description": "event_id=[ 'BUGyymmdd.fff', seqnum ], where fff is in milidays with trailing zeros. id_source=GLOWBUG for both."
     },
     {
-      "$ref": "/schema/main/gcn/notices/core/DateTime.schema.json",
+      "$ref": "../core/DateTime.schema.json",
       "description": "Trigger_time with seconds fraction."
     },
     {
-      "$ref": "/schema/main/gcn/notices/core/Statistics.schema.json",
+      "$ref": "../core/Statistics.schema.json",
       "description": "rate_duration is the integration time (a.k.a. trigger time scale), over which the rate_snr was measured."
     }
   ],
@@ -34,49 +34,49 @@
       "type": "object",
       "properties": {
         "CsI0": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI1": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI2": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI3": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI4": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI5": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI6": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI7": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI8": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI9": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI10": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI11": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CLLB0": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "CLLB1": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         },
         "SSA": {
-          "$ref": "/schema/main/gcn/notices/core/DetectorStatus.schema.json"
+          "$ref": "../core/DetectorStatus.schema.json"
         }
       }
     }
