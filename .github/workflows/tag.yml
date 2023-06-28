@@ -1,10 +1,8 @@
 name: Update From Package
 on:
-  pull_request:
-    types:
-      - 'closed'
-    paths:
-      - 'package.json'
+  push:
+    branches:
+      - main
 
 jobs:
   tag_update:
