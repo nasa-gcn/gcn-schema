@@ -7,6 +7,8 @@ on:
 jobs:
   tag_update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       # Checkout
       - name: Checkout
@@ -23,9 +25,5 @@ jobs:
             node update-tags.mjs
             git commit -q -a -m "Set id and schema paths for new version"
 
-      - name: Reset
-        if: ${{steps.version.outputs.tag != null}}
-        run: |
-          node update-tags.mjs --reset
-          git commit -a -m "Post-new-tag revert paths to point to main"
-          git push
+      - name: Publish Release
+        uses: ghalactic/github-release-from-tag@v4
