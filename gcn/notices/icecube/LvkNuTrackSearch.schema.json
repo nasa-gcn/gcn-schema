@@ -1,27 +1,27 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/icecube/LvkNuTrackSearch.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/LvkNuTrackSearch.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "IceCube LVK Alert Nu Track Search",
   "description": "IceCube LVK Coincident Neutrino Track Search",
   "allOf": [
     {
-      "$ref": "/schema/gcn/notices/core/Alert.schema.json",
+      "$ref": "../core/Alert.schema.json",
       "description": "Alert information (alert_datetime and alert_type) from LVK alert notices"
     },
     {
-      "$ref": "/schema/gcn/notices/core/FollowUp.schema.json",
+      "$ref": "../core/FollowUp.schema.json",
       "description": "ID (ref_ID) of LVK alert notice"
     },
     {
-      "$ref": "/schema/gcn/notices/core/AdditionalInfo.schema.json"
+      "$ref": "../core/AdditionalInfo.schema.json"
     },
     {
-      "$ref": "/schema/gcn/notices/core/Reporter.schema.json",
+      "$ref": "../core/Reporter.schema.json",
       "description": "Record/Sequence number of LVK alerts"
     },
     {
-      "$ref": "/schema/gcn/notices/core/DateTime.schema.json"
+      "$ref": "../core/DateTime.schema.json"
     }
   ],
   "properties": {
@@ -40,11 +40,13 @@
     "coincident_events": {
       "type": "array",
       "description": "An array of summary of information for each coincident neutrino track event",
-      "items": { "$ref": "#/$defs/coincevent" }
+      "items": {
+        "$ref": "#/$defs/coincevent"
+      }
     },
     "most_probable_direction": {
       "description": "Most likely source direction based on all coincident events and GW localizations",
-      "$ref": "/schema/gcn/notices/core/Localization.schema.json"
+      "$ref": "../core/Localization.schema.json"
     },
     "neutrino_flux_sensitivity_range": {
       "description": "Time integrated flux sensitivity ranges assuming an E^-2 spectrum (E^2 dN/dE) within the GW map localization",
@@ -69,7 +71,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "/schema/gcn/notices/core/Localization.schema.json"
+          "$ref": "../core/Localization.schema.json"
         }
       ],
       "properties": {

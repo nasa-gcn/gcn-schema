@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/FollowUp.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/FollowUp.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "FollowUp",
   "description": "Schema specific to follow-up cases",
@@ -19,7 +19,9 @@
     },
     "reference": {
       "type": "object",
-      "additionalProperties": { "type": "number" },
+      "additionalProperties": {
+        "type": "number"
+      },
       "description": "Reference as distributed by the notices or circulars or ATel, ex. gcn.notices.Fermi.gbm.alert: 4642"
     }
   }

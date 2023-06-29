@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/spectral/models/Band.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/models/Band.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Band",

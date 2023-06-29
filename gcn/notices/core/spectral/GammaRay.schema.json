@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/spectral/GammaRay.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/GammaRay.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "spectral.GammaRay",
@@ -10,15 +10,15 @@
       "description": "Name of model corresponding to best statistical fit of spectrum"
     },
     "power_law": {
-      "$ref": "/schema/gcn/notices/core/spectral/models/PowerLaw.schema.json",
+      "$ref": "./models/PowerLaw.schema.json",
       "description": "Fit parameters for PowerLaw model"
     },
     "cutoff_power_law": {
-      "$ref": "/schema/gcn/notices/core/spectral/models/CutOffPowerLaw.schema.json",
+      "$ref": "./models/CutOffPowerLaw.schema.json",
       "description": "Fit parameters for Cutoff PowerLaw model"
     },
     "band": {
-      "$ref": "/schema/gcn/notices/core/spectral/models/Band.schema.json",
+      "$ref": "./models/Band.schema.json",
       "description": "Fit parameters for Band model"
     },
     "spectral_energy_range": {
