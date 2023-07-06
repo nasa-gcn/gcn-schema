@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'fs/promises'
 import { exec } from 'child_process'
 import { glob as baseGlob } from 'glob'
-import packageJSON from './package.json' assert {type: 'json'}
+import packageJSON from './package.json' assert { type: 'json' }
 
 const tagPath = `/v${packageJSON.version}/`
 
