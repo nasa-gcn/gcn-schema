@@ -11,4 +11,9 @@ Your pipeline will generate JSON files following these schema and send alerts to
 
 ## Version Updates
 
-New versions are simplified with the [`npm version`](https://docs.npmjs.com/cli/v8/commands/npm-version) command.
+New versions are simplified with the [`npm version`](https://docs.npmjs.com/cli/v8/commands/npm-version) command. The following steps describe the process for incrementing versions.
+
+1. Clone the parent repo (nasa-gcn/gcn-schema). This should not be run in your own forked version of this repo.
+
+2. Run `npm version [ major | minor | patch ]`
+   This command will handle the intermediate steps of updating, committing, and pushing the path changes in each file as defined in the `version` and `postversion` npm scripts
