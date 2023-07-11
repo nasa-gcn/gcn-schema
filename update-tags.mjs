@@ -7,7 +7,7 @@ const tagPath = `/v${packageJSON.version}/`
 
 async function glob(path) {
   return await baseGlob(path, {
-    ignore: ['test/**', 'node_modules/**'],
+    ignore: ['node_modules/**'],
   })
 }
 async function loadAndUpdateFiles(oldValue, newValue) {
