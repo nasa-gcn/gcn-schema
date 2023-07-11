@@ -9,7 +9,7 @@ Please add your schema to this repository under <code>gcn/notices/<i>mission</i>
 The GCN team is happy to iterate with the producers on their schema contents and format.
 Your pipeline will generate JSON files following these schema and send alerts to GCN as described in [New Notice Producers](https://gcn.nasa.gov/docs/producers).
 
-## Version Updates
+## How To Release
 
 New versions are simplified with the [`npm version`](https://docs.npmjs.com/cli/v8/commands/npm-version) command. The following steps describe the process for incrementing versions.
 
