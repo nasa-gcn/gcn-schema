@@ -38,7 +38,7 @@ async function loadAndUpdateFiles(oldValue, newValue) {
   )
 }
 
-if (process.argv.some((x) => x == '--reset')) {
+if (process.argv.includes('--reset')) {
   await loadAndUpdateFiles(tagPath, '/main/')
 } else {
   await loadAndUpdateFiles('/main/', tagPath)
