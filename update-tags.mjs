@@ -10,32 +10,27 @@ async function glob(path) {
     ignore: ['node_modules/**'],
   })
 }
+
+async function fileUpdates(fileSet, key, oldValue, newValue) {
+  await Promise.all(
+    fileSet.map(async (fileItem) => {
+      let file = JSON.parse(
+        await readFile(fileItem, {
+          encoding: 'utf-8',
+        })
+      )
+      file[key] = file[key].replace(oldValue, newValue)
+      await writeFile(fileItem, JSON.stringify(file, null, 2).concat('\n'))
+    })
+  )
+}
+
 async function loadAndUpdateFiles(oldValue, newValue) {
   const schemaFilenames = await glob('**/*.schema.json')
-  await Promise.all(
-    schemaFilenames.map(async (match) => {
-      let schema = JSON.parse(
-        await readFile(match, {
-          encoding: 'utf-8',
-        })
-      )
+  await fileUpdates(schemaFilenames, '$id', oldValue, newValue)
 
-      schema['$id'] = schema['$id'].replace(oldValue, newValue)
-      await writeFile(match, JSON.stringify(schema, null, 2))
-    })
-  )
   const exampleFilenames = await glob('**/*.example.json')
-  await Promise.all(
-    exampleFilenames.map(async (path) => {
-      const example = JSON.parse(
-        await readFile(path, {
-          encoding: 'utf-8',
-        })
-      )
-      example['$schema'] = example['$schema'].replace(oldValue, newValue)
-      await writeFile(path, JSON.stringify(example, null, 2))
-    })
-  )
+  await fileUpdates(exampleFilenames, '$schema', oldValue, newValue)
 }
 
 if (process.argv.includes('--reset')) {
