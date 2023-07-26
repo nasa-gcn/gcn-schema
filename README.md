@@ -16,4 +16,10 @@ Your pipeline will generate JSON files following these schema and send alerts to
    `git clone git@github.com:nasa-gcn/gcn-schema.git `
 
 2. Run `npm version [ major | minor | patch ]`
-   This command will handle the intermediate steps of updating, committing, and pushing the path changes in each file as defined in the `version` and `postversion` npm scripts
+   This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts
+
+3. Review the changes with `git log -p` to make sure that each file is appropriately updated.
+
+4. Push the commit and tag:
+
+   `git push && git push origin <tag name>`
