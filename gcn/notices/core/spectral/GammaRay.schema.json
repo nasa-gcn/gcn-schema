@@ -65,10 +65,7 @@
       "maxItems": 2,
       "description": "Start and stop time stamps in array as used in flux calculation, measured since trigger [s]"
     },
-    "fluence": {
-      "type": "number",
-      "description": "Fluence [erg/cm2]"
-    },
+    "fluence": { "type": "number", "description": "Fluence [erg/cm2]" },
     "fluence_error": {
       "type": "number",
       "description": "Fluence Error [erg/cm2]"

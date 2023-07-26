@@ -14,11 +14,7 @@
       "maxItems": 2,
       "description": "Error in redshift, array for asymmetric statistical errors"
     },
-    "redshift_measure": {
-      "enum": ["spectroscopic", "photometric"]
-    },
-    "redshift_type": {
-      "enum": ["emission", "absorption", "host"]
-    }
+    "redshift_measure": { "enum": ["spectroscopic", "photometric"] },
+    "redshift_type": { "enum": ["emission", "absorption", "host"] }
   }
 }

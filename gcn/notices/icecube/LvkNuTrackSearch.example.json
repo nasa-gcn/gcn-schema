@@ -1,9 +1,7 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/LvkNuTrackSearch.schema.json",
   "type": "IceCube LVK Alert Nu Track Search",
-  "reference": {
-    "gcn.notices.LVK.alert": 4642
-  },
+  "reference": { "gcn.notices.LVK.alert": 4642 },
   "ref_ID": "MS230427r",
   "alert_datetime": "2023-04-16T05:32:29.55Z",
   "trigger_time": "2023-04-16T05:22:26.0Z",
@@ -37,10 +35,7 @@
       "event_pval_bayesian": 0.03
     }
   ],
-  "most_probable_direction": {
-    "ra": 343.66,
-    "dec": 6.44
-  },
+  "most_probable_direction": { "ra": 343.66, "dec": 6.44 },
   "neutrino_flux_sensitivity_range": {
     "flux_sensitivity": [0.329, 0.044],
     "sensitive_energy_range": [100, 200000]

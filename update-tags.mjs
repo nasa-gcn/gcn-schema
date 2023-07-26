@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'fs/promises'
-import { exec } from 'child_process'
 import { glob as baseGlob } from 'glob'
 import packageJSON from './package.json' assert { type: 'json' }
+import * as prettier from 'prettier'
 
 const tagPath = `/v${packageJSON.version}/`
 
@@ -19,8 +19,11 @@ async function fileUpdates(fileSet, key, oldValue, newValue) {
           encoding: 'utf-8',
         })
       )
-      file[key] = file[key].replace(oldValue, newValue)
-      await writeFile(fileItem, JSON.stringify(file, null, 2).concat('\n'))
+      file[key] = file[key].replace(
+        `https://gcn.nasa.gov/schema/${oldValue}`,
+        `https://gcn.nasa.gov/schema/${newValue}`
+      )
+      await writeFile(fileItem, JSON.stringify(file))
     })
   )
 }
@@ -39,4 +42,15 @@ if (process.argv.includes('--reset')) {
   await loadAndUpdateFiles('/main/', tagPath)
 }
 
-exec('npx prettier -w .')
+const files = await glob('**/*.json')
+for (const file of files) {
+  const text = await readFile(file, 'utf-8')
+  await writeFile(
+    file,
+    prettier.format(text, {
+      semi: false,
+      singleQuote: true,
+      parser: 'json',
+    })
+  )
+}

@@ -12,11 +12,7 @@
   "rate_duration": 0.064,
   "rate_energy_range": [50, 300],
   "p_astro": 0.9,
-  "classification": {
-    "BNS": 0.9,
-    "NSBH": 0.05,
-    "BBH": 0.05
-  },
+  "classification": { "BNS": 0.9, "NSBH": 0.05, "BBH": 0.05 },
   "detector_status": {
     "CsI0": "on",
     "CsI1": "on",

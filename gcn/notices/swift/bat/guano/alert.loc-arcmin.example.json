@@ -19,9 +19,7 @@
   "image_snr": 13.94,
   "image_duration": 0.256,
   "image_energy_range": [15, 350],
-  "classification": {
-    "GRB": 1
-  },
+  "classification": { "GRB": 1 },
   "far": 0.00001,
   "follow_up_event": "Fermi 694215970",
   "follow_up_type": "GRB",

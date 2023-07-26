@@ -13,16 +13,12 @@
       "$ref": "../core/FollowUp.schema.json",
       "description": "ID (ref_ID) of LVK alert notice"
     },
-    {
-      "$ref": "../core/AdditionalInfo.schema.json"
-    },
+    { "$ref": "../core/AdditionalInfo.schema.json" },
     {
       "$ref": "../core/Reporter.schema.json",
       "description": "Record/Sequence number of LVK alerts"
     },
-    {
-      "$ref": "../core/DateTime.schema.json"
-    }
+    { "$ref": "../core/DateTime.schema.json" }
   ],
   "properties": {
     "pval_generic": {
@@ -40,9 +36,7 @@
     "coincident_events": {
       "type": "array",
       "description": "An array of summary of information for each coincident neutrino track event",
-      "items": {
-        "$ref": "#/$defs/coincevent"
-      }
+      "items": { "$ref": "#/$defs/coincevent" }
     },
     "most_probable_direction": {
       "description": "Most likely source direction based on all coincident events and GW localizations",
@@ -69,11 +63,7 @@
     },
     "coincevent": {
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "../core/Localization.schema.json"
-        }
-      ],
+      "allOf": [{ "$ref": "../core/Localization.schema.json" }],
       "properties": {
         "event_dt": {
           "description": "Time difference between LVK alert time and neutrino candidate [sec]",

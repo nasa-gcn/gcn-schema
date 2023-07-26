@@ -13,10 +13,7 @@
       "type": "number",
       "description": "1-sigma uncertainty of amplitude [ph/cm2/s/keV]"
     },
-    "pivot_energy": {
-      "type": "number",
-      "description": "pivot energy [keV]"
-    },
+    "pivot_energy": { "type": "number", "description": "pivot energy [keV]" },
     "alpha": {
       "type": "number",
       "description": "power-law index of spectral model"

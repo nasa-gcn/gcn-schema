@@ -24,18 +24,14 @@
     },
     "attitude_quarternion": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 4,
       "maxItems": 4,
       "description": "Representing attitude state of a spacecraft, using four element vector [q1, q2, q3, q4], composed of a scalar and 3 element unit vector."
     },
     "rotation_rate": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 3,
       "maxItems": 3,
       "description": "Rotational rate [rad/s] about the X, Y, and Z axes respectively"
