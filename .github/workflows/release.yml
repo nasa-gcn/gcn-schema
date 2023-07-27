@@ -1,14 +1,15 @@
-name: Create New Release
+name: Main
+
 on:
   push:
     tags:
       - '*'
 
 jobs:
-  tag-new-versions:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: ncipollo/release-action@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Release
+        uses: softprops/action-gh-release@v1
