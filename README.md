@@ -11,15 +11,16 @@ Your pipeline will generate JSON files following these schema and send alerts to
 
 ## How To Release
 
-1. Clone the parent repo (nasa-gcn/gcn-schema).
+1.  Clone the parent repo (nasa-gcn/gcn-schema).
 
-   `git clone git@github.com:nasa-gcn/gcn-schema.git `
+        git clone git@github.com:nasa-gcn/gcn-schema.git
 
-2. Run `npm version [ major | minor | patch ]`
-   This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts
+2.  Run `npm version [ major | minor | patch ]`
 
-3. Review the changes with `git log -p` to make sure that each file is appropriately updated.
+    This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts
 
-4. Push the commit and tag:
+3.  Review the changes with `git log -p` to make sure that each file is appropriately updated.
 
-   `git push && git push origin <tag name>`
+4.  Push the commit and tag:
+
+    git push && git push origin <tag name>
