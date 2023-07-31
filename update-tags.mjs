@@ -20,8 +20,8 @@ async function fileUpdates(fileSet, key, oldValue, newValue) {
         })
       )
       file[key] = file[key].replace(
-        `https://gcn.nasa.gov/schema/${oldValue}`,
-        `https://gcn.nasa.gov/schema/${newValue}`
+        `https://gcn.nasa.gov/schema/${oldValue}/`,
+        `https://gcn.nasa.gov/schema/${newValue}/`
       )
       await writeFile(fileItem, JSON.stringify(file))
     })
