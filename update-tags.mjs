@@ -37,9 +37,9 @@ async function loadAndUpdateFiles(oldValue, newValue) {
 }
 
 if (process.argv.includes('--reset')) {
-  await loadAndUpdateFiles(tagPath, '/main/')
+  await loadAndUpdateFiles(tagPath, 'main')
 } else {
-  await loadAndUpdateFiles('/main/', tagPath)
+  await loadAndUpdateFiles('main', tagPath)
 }
 
 const files = await glob('**/*.json')
