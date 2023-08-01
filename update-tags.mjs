@@ -3,7 +3,7 @@ import { glob as baseGlob } from 'glob'
 import packageJSON from './package.json' assert { type: 'json' }
 import * as prettier from 'prettier'
 
-const tagPath = `/v${packageJSON.version}/`
+const tagPath = `v${packageJSON.version}`
 
 async function glob(path) {
   return await baseGlob(path, {
@@ -23,7 +23,15 @@ async function fileUpdates(fileSet, key, oldValue, newValue) {
         `https://gcn.nasa.gov/schema/${oldValue}/`,
         `https://gcn.nasa.gov/schema/${newValue}/`
       )
-      await writeFile(fileItem, JSON.stringify(file))
+
+      await writeFile(
+        fileItem,
+        prettier.format(JSON.stringify(file), {
+          semi: false,
+          singleQuote: true,
+          parser: 'json',
+        })
+      )
     })
   )
 }
@@ -40,17 +48,4 @@ if (process.argv.includes('--reset')) {
   await loadAndUpdateFiles(tagPath, 'main')
 } else {
   await loadAndUpdateFiles('main', tagPath)
-}
-
-const files = await glob('**/*.json')
-for (const file of files) {
-  const text = await readFile(file, 'utf-8')
-  await writeFile(
-    file,
-    prettier.format(text, {
-      semi: false,
-      singleQuote: true,
-      parser: 'json',
-    })
-  )
 }
