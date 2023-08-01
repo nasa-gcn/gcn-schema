@@ -23,4 +23,4 @@ Your pipeline will generate JSON files following these schema and send alerts to
 
 4.  Push the commit and tag:
 
-    git push && git push origin <tag name>
+        git push && git push origin <tag name>
