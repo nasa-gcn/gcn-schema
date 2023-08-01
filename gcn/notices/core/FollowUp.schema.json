@@ -19,9 +19,7 @@
     },
     "reference": {
       "type": "object",
-      "additionalProperties": {
-        "type": "number"
-      },
+      "additionalProperties": { "type": "number" },
       "description": "Reference as distributed by the notices or circulars or ATel, ex. gcn.notices.Fermi.gbm.alert: 4642"
     }
   }

@@ -17,10 +17,7 @@
       "type": "number",
       "description": "Distance from the surface of the Earth [km]."
     },
-    "mcilwain_l": {
-      "type": "number",
-      "description": "McIlwain L-parameter"
-    },
+    "mcilwain_l": { "type": "number", "description": "McIlwain L-parameter" },
     "geoloc_time": {
       "type": "string",
       "description": "Time [UTC, ISO 8601] of the geolocation and McIlwain L-parameter, if different than the trigger time."

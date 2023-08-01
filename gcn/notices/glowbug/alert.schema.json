@@ -13,9 +13,7 @@
       "$ref": "../core/AdditionalInfo.schema.json",
       "description": "Complementary info in text form."
     },
-    {
-      "$ref": "../core/Alert.schema.json"
-    },
+    { "$ref": "../core/Alert.schema.json" },
     {
       "$ref": "../core/Event.schema.json",
       "description": "event_id=[ 'BUGyymmdd.fff', seqnum ], where fff is in milidays with trailing zeros. id_source=GLOWBUG for both."
@@ -33,51 +31,21 @@
     "detector_status": {
       "type": "object",
       "properties": {
-        "CsI0": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI1": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI2": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI3": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI4": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI5": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI6": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI7": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI8": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI9": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI10": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CsI11": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CLLB0": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CLLB1": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "SSA": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        }
+        "CsI0": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI1": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI2": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI3": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI4": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI5": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI6": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI7": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI8": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI9": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI10": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CsI11": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CLLB0": { "$ref": "../core/DetectorStatus.schema.json" },
+        "CLLB1": { "$ref": "../core/DetectorStatus.schema.json" },
+        "SSA": { "$ref": "../core/DetectorStatus.schema.json" }
       }
     }
   }
