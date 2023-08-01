@@ -27,8 +27,6 @@ async function fileUpdates(fileSet, key, oldValue, newValue) {
       await writeFile(
         fileItem,
         prettier.format(JSON.stringify(file), {
-          semi: false,
-          singleQuote: true,
           parser: 'json',
         })
       )
