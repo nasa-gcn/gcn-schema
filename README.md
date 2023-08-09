@@ -8,3 +8,19 @@ Please add your schema to this repository under <code>gcn/notices/<i>mission</i>
 
 The GCN team is happy to iterate with the producers on their schema contents and format.
 Your pipeline will generate JSON files following these schema and send alerts to GCN as described in [New Notice Producers](https://gcn.nasa.gov/docs/producers).
+
+## How To Release
+
+1.  Clone the parent repo (nasa-gcn/gcn-schema).
+
+        git clone git@github.com:nasa-gcn/gcn-schema.git
+
+2.  Run `npm version [ major | minor | patch ]`
+
+    This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts
+
+3.  Review the changes with `git log -p` to make sure that each file is appropriately updated.
+
+4.  Push the commit and tag:
+
+        git push && git push origin <tag name>
