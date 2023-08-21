@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v1.0.0/gcn/notices/core/Localization.schema.json",
   "ra": 120,
   "dec": 45,
   "uncertainty_shape": "ellipse",
