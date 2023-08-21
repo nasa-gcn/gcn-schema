@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v1.0.0/gcn/notices/icecube/LvkNuTrackSearch.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/LvkNuTrackSearch.schema.json",
   "type": "IceCube LVK Alert Nu Track Search",
   "reference": { "gcn.notices.LVK.alert": 4642 },
   "ref_ID": "MS230427r",

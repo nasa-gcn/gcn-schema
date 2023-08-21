@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v1.0.0/gcn/notices/icecube/GoldAndBronze.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/GoldAndBronze.schema.json",
   "additional_info": "IceCube Bronze Neutrino Track Alert",
   "event_name": ["IceCube-230416A"],
   "id": ["137840", "57034692"],
