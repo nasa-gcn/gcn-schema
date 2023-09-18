@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/gcn/notices/core/spectral/models/Band.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/models/Band.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Band",
@@ -13,10 +13,7 @@
       "type": "number",
       "description": "1-sigma uncertainty of amplitude [ph/cm2/s/keV]"
     },
-    "pivot_energy": {
-      "type": "number",
-      "description": "pivot energy [keV]"
-    },
+    "pivot_energy": { "type": "number", "description": "pivot energy [keV]" },
     "alpha": {
       "type": "number",
       "description": "power-law index of spectral model"

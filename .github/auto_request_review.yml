@@ -1,0 +1,12 @@
+# The format of this file is described at
+# https://github.com/necojackarc/auto-request-review#reviewers-configuration.
+
+files:
+  '**':
+    - team:maintainers
+  'gcn/notices/glowbug/**':
+    - shb46
+  'gcn/notices/icecube/**':
+    - blaufuss
+  'gcn/notices/swift/**':
+    - Tohuvavohu
