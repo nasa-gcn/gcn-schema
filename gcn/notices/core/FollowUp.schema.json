@@ -19,7 +19,7 @@
     },
     "reference": {
       "type": "object",
-      "additionalProperties": { "type": "string" },
+      "additionalProperties": { "type": ["number", "string"] },
       "description": "Reference as distributed by the notices or circulars or ATel, ex. gcn circulars: 12345, gcn.notices.LVK.alert: SYYMMDDak-2-preliminary"
     }
   }
