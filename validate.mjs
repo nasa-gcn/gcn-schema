@@ -4,7 +4,11 @@ import addFormats from 'ajv-formats'
 import meta from 'ajv/dist/refs/json-schema-2020-12/index.js'
 import { glob as baseGlob } from 'glob'
 
-const ajv = new Ajv({ validateSchema: true, verbose: true })
+const ajv = new Ajv({
+  validateSchema: true,
+  verbose: true,
+  allowUnionTypes: true,
+})
 addFormats(ajv)
 ajv.addMetaSchema(meta)
 
