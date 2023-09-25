@@ -1,8 +1,8 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/LvkNuTrackSearch.schema.json",
   "type": "IceCube LVK Alert Nu Track Search",
-  "reference": { "gcn.notices.LVK.alert": "S230914ak" },
-  "ref_ID": "S230914ak-2-Preliminary",
+  "reference": { "gcn.notices.LVK.alert": "S230914ak-2-Preliminary" },
+  "ref_ID": "S230914ak",
   "alert_datetime": "2023-09-14T11:49:16.526Z",
   "trigger_time": "2023-09-14T11:14:01Z",
   "observation_start": "2023-09-14T11:05:41.000Z",
@@ -23,7 +23,7 @@
         "systematic_included": false
       },
       "event_pval_generic": 0.0191,
-      "event_pval_bayesian": "null"
+      "event_pval_bayesian": 0.0549
     },
     {
       "event_dt": 222.46,
