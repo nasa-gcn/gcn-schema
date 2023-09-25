@@ -23,7 +23,7 @@
         "systematic_included": false
       },
       "event_pval_generic": 0.0191,
-      "event_pval_bayesian": 0.0549
+      "event_pval_bayesian": null
     },
     {
       "event_dt": 222.46,
