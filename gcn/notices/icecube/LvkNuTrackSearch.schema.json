@@ -23,11 +23,11 @@
   "properties": {
     "pval_generic": {
       "description": "P-value from generic transient search; consistency with background expectations [0-1]",
-      "type": "number"
+      "type": ["number", "null"]
     },
     "pval_bayesian": {
       "description": "P-value from LLAMA Bayesian search; consistency with background expectations [0-1]",
-      "type": "number"
+      "type": ["number", "null"]
     },
     "n_events_coincident": {
       "description": "Number of IceCube events in spatial and temporal coincidence with the GW map",
@@ -71,11 +71,11 @@
         },
         "event_pval_generic": {
           "description": "Per-event P-value from generic transient search; consistency with background expectations [0-1]",
-          "type": "number"
+          "type": ["number", "null"]
         },
         "event_pval_bayesian": {
           "description": "Per-event P-value from LLAMA Bayesian search; consistency with background expectations [0-1]",
-          "type": "number"
+          "type": ["number", "null"]
         }
       }
     }
