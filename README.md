@@ -23,4 +23,4 @@ Please add your schema to this repository under <code>gcn/notices/<i>mission</i>
 
         git push && git push origin <tag name>
 
-This will make release officially available for use.
+This will make release available for use.
