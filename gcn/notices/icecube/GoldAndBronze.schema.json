@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/GoldAndBronze.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v2.0.0/gcn/notices/icecube/GoldAndBronze.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "IceCubeGoldAndBronzeTracks",

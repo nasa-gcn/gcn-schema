@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/LvkNuTrackSearch.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v2.0.0/gcn/notices/icecube/LvkNuTrackSearch.schema.json",
   "type": "IceCube LVK Alert Nu Track Search",
   "reference": { "gcn.notices.LVK.alert": "S230914ak-2-Preliminary" },
   "ref_ID": "S230914ak",
@@ -39,10 +39,7 @@
       "event_pval_bayesian": 0.0656
     }
   ],
-  "most_probable_direction": {
-    "ra": 17.49,
-    "dec": 16.18
-  },
+  "most_probable_direction": { "ra": 17.49, "dec": 16.18 },
   "neutrino_flux_sensitivity_range": {
     "flux_sensitivity": [0.0277, 0.647],
     "sensitive_energy_range": [542, 23000000]
