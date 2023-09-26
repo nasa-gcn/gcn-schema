@@ -13,7 +13,7 @@ Please add your schema to this repository under <code>gcn/notices/<i>mission</i>
         git clone git@github.com:nasa-gcn/gcn-schema.git
         cd gcn-schema
 
-2.  Use the following command to initiate the [release](https://semver.org) process: `npm version [ major | minor | patch ]`
+2.  Tag a new version by running the following command: `npm version [ major | minor | patch ]`. Choose `major`, `minor`, or `patch` depending on the kind of update according to [Semantic Versioning](https://semver.org) rules.
 
     This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts
 
