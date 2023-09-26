@@ -1,6 +1,6 @@
 # GCN Schema
 
-This repository contains the schemas for crafting new GCN notices. It also includes mission-specific schemas and illustrative examples, which are distributed by [GCN Kafka](https://gcn.nasa.gov). The formulation of mission schemas are one step in the process for setting up [New Notice Producers](https://gcn.nasa.gov/docs/producers).
+This repository contains the schemas for crafting new GCN notices. It also includes mission-specific schemas and illustrative examples, which are distributed by [GCN Kafka](https://gcn.nasa.gov). The formulation of mission schemas is one step in the process for setting up [New Notice Producers](https://gcn.nasa.gov/docs/producers).
 
 The alert format for new Notices over GCN Kafka is JavaScript Object Notation (JSON), a widely adopted Internet data format. We have designed a set of core schema which serve as the building blocks for new GCN Notices. Instrument-specific schema can also be created, but we request that you utilize the core schema as much as possible.
 
