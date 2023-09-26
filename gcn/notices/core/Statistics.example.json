@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v2.0.0/gcn/notices/core/Statistics.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json",
   "far": 0.001,
   "rate_snr": 5.2,
   "rate_duration": 10,
