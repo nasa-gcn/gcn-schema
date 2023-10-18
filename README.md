@@ -13,14 +13,24 @@ Please add your schema to this repository under <code>gcn/notices/<i>mission</i>
         git clone git@github.com:nasa-gcn/gcn-schema.git
         cd gcn-schema
 
-2.  Tag a new version by running the following command: `npm version [ major | minor | patch ]`. Choose `major`, `minor`, or `patch` depending on the kind of update according to [Semantic Versioning](https://semver.org) rules.
+2.  Install necessary npm packages
+
+        npm install
+
+3.  Tag a new version by running the following command: `npm version [ major | minor | patch ]`. Choose `major`, `minor`, or `patch` depending on the kind of update according to [Semantic Versioning](https://semver.org) rules.
 
     This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts
 
-3.  Review the changes with `git log -p` to make sure that each file is appropriately updated.
+4.  Review the changes with `git log -p` to make sure that each file is appropriately updated.
 
-4.  Finally, push both the commit and the tag:
+5.  Finally, push both the commit and the tag:
 
         git push && git push origin <tag name>
 
-This will make release available for use.
+This will make the release available for use. For subsequent releases:
+
+1.  Pull the latest state of the main branch
+
+        git pull
+
+2.  Follow the above steps from Step 3 on.
