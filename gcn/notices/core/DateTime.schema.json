@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v3.0.0/gcn/notices/core/DateTime.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "DateTime",
   "description": "Time descriptions of transient event and observation",
