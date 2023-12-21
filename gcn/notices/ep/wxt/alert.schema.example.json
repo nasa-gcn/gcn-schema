@@ -1,0 +1,11 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/ep/wxt/alert.schema.json",
+  "mission": "EP",
+  "instrument": "WXT",
+  "trigger_time": "2024-03-01T21:46:05.13Z",
+  "ra": 120,
+  "dec": 40,
+  "ra_uncertainty": [0.02],
+  "net_rate": 1.0,
+  "src_significance": 1.0
+}
