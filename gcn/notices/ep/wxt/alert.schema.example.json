@@ -6,6 +6,7 @@
   "ra": 120,
   "dec": 40,
   "ra_uncertainty": [0.02],
+  "image_energy_range": [0.5, 4.0],
   "net_rate": 1.0,
-  "src_significance": 1.0
+  "image_snr": 1.0
 }
