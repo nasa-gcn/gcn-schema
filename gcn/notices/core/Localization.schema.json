@@ -19,30 +19,28 @@
       "default": "circle"
     },
     "ra_uncertainty": {
+      "description": "Uncertainty in RA [deg], measured w.r.t. RA. A single number for circle, or ellipse, such that RA axis alligns with semi-major axis. For rectangle, use optional aymmetric errors array, [l1-, l2+].",
       "oneOf": [
         {
-          "type": "number",
-          "description": "Uncertainty in RA [deg], a single number for circle and ellipse. For ellipse, ra-axis r1 represents semi-major axis."
+          "type": "number"
         },
         {
           "type": "array",
           "maxItems": 2,
-          "items": { "type": "number" },
-          "description": "Uncertainty in RA [deg] with optional asymmetric errors, measured from the RA in the schema; [l1-, l1+] for rectangle."
+          "items": { "type": "number" }
         }
       ]
     },
     "dec_uncertainty": {
+      "description": "Uncertainty in Dec [deg], measured w.r.t. Dec, not reported for circle. A single number for ellipse, such that Dec axis alligns with semi-minor axis. For rectangle, use optional aymmetric errors array, [b1-, b2+].",
       "oneOf": [
         {
-          "type": "number",
-          "description": "Uncertainty in Dec [deg], ellipse minor-axis reported as a single number. If circle, do not report."
+          "type": "number"
         },
         {
           "type": "array",
           "maxItems": 2,
-          "items": { "type": "number" },
-          "description": "Uncertainty in Dec [deg] with optional asymmetric errors, measured from the Dec in the schema; [l2-, l2+] for rectangle."
+          "items": { "type": "number" }
         }
       ]
     },
