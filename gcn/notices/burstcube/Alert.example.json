@@ -12,6 +12,7 @@
   "uncertainty_shape": "circle",
   "ra_uncertainty": [10],
   "dec_uncertainty": [10],
+  "containment_probability": 0.9,
   "systematic_included": false,
   "healpix_url": "https://heasarc.gsfc.nasa.gov/burstcube/trigger/240601000/current/240601000_locmap.fits",
   "healpix_file": "stuff",
