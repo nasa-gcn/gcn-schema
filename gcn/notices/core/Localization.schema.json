@@ -35,7 +35,7 @@
     },
     "containment_probability": {
       "type": "number",
-      "description": "Containment probability [dimensionless, 0-1], if not parsed, default is 0.9",
+      "description": "Containment probability [dimensionless, 0-1]; if absent, default is 0.9",
       "default": 0.9
     },
     "systematic_included": {
