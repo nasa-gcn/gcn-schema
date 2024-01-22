@@ -13,28 +13,17 @@
       "type": "number",
       "description": "ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
-    "uncertainty_shape": {
-      "enum": ["circle", "ellipse", "rectangle"],
-      "description": "In what manner are the errors in RA and Dec defined - as circular, elliptical, or rectangular shapes",
-      "default": "circle"
+    "position_a_error": {
+      "description": "Radii of the semi-major axis [deg]. ",
+      "type": "number"
     },
-    "ra_uncertainty": {
-      "description": "Uncertainty in RA [deg], measured w.r.t. RA. A single number for circle, and ellipse, RA axis alligns with semi-major axis. For rectangle, use optional aymmetric errors array, [l1-, l2+].",
-      "oneOf": [
-        { "type": "number" },
-        { "type": "array", "maxItems": 2, "items": { "type": "number" } }
-      ]
+    "position_b_error": {
+      "description": "Radii of the semi-minor axis [deg] of the ellipse. Do not report for circle.",
+      "type": "number"
     },
-    "dec_uncertainty": {
-      "description": "Uncertainty in Dec [deg], measured w.r.t. Dec, not reported for circle. A single number for ellipse, Dec axis alligns with semi-minor axis. For rectangle, use optional aymmetric errors array, [b1-, b2+].",
-      "oneOf": [
-        { "type": "number" },
-        { "type": "array", "maxItems": 2, "items": { "type": "number" } }
-      ]
-    },
-    "position_angle": {
+    "position_error_pa": {
       "type": "number",
-      "description": "Anti-clockwise position angle from RA axis [deg]. Used if uncertainty_shape ellipse or rectangle is tilted w.r.t. standard (RA, Dec) coordinate.",
+      "description": "Anti-clockwise position angle from semi-major axis [deg] of the ellipse, if tilted w.r.t. standard (RA, Dec) coordinate.",
       "default": 0
     },
     "containment_probability": {
