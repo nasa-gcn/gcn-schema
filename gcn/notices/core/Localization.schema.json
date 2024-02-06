@@ -18,7 +18,7 @@
       "type": "number"
     },
     "position_b_error": {
-      "description": "Radii of the semi-minor axis [deg] of the ellipse. Do not report for circle.",
+      "description": "Length of the semi-minor axis [deg] of the ellipse. Do not report for circle.",
       "type": "number"
     },
     "position_error_pa": {
