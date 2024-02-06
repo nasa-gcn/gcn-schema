@@ -14,7 +14,7 @@
       "description": "ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
     "position_a_error": {
-      "description": "Radii of the semi-major axis [deg]. ",
+      "description": "Length of the semi-major axis [deg]. ",
       "type": "number"
     },
     "position_b_error": {
