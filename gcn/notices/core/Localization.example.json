@@ -2,9 +2,9 @@
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json",
   "ra": 120,
   "dec": 45,
-  "position_a_error": 0.05,
-  "position_b_error": 0.5,
-  "position_angle": 0,
+  "error": {
+    "radius": 0.5
+  },
   "containment_probability": 0.95,
   "systematic_included": true,
   "instrument_phi": 90,

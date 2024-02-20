@@ -13,18 +13,41 @@
       "type": "number",
       "description": "ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system"
     },
-    "position_a_error": {
-      "description": "Length of the semi-major axis [deg]. ",
-      "type": "number"
-    },
-    "position_b_error": {
-      "description": "Length of the semi-minor axis [deg] of the ellipse. Do not report for circle.",
-      "type": "number"
-    },
-    "position_error_pa": {
-      "type": "number",
-      "description": "Anti-clockwise position angle from semi-major axis [deg] of the ellipse, if tilted w.r.t. standard (RA, Dec) coordinate.",
-      "default": 0
+    "error": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "description": "Uncertainty region described as a circle with a radius [deg]."
+            }
+          },
+          "required": ["radius"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "position_error_a": {
+              "type": "number",
+              "description": "Length of the semi-major axis of the uncertainty ellipse [deg]."
+            },
+            "position_error_b": {
+              "type": "number",
+              "description": "Length of the semi-minor axis of the uncertainty ellipse [deg]."
+            },
+            "position_error_pa": {
+              "type": "number",
+              "description": "Astronomical position angle (measured from North through East) of the major axis of the uncertainty ellipse [deg]."
+            }
+          },
+          "required": [
+            "position_error_a",
+            "position_error_b",
+            "position_error_pa"
+          ]
+        }
+      ]
     },
     "containment_probability": {
       "type": "number",
