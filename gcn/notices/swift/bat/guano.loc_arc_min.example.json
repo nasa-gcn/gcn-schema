@@ -10,7 +10,7 @@
   "trigger_time": "2022-12-31T21:46:05.13Z",
   "ra": 336.26,
   "dec": 25.139,
-  "ra_uncertainty": [0.05],
+  "ra_dec_error": 0.05,
   "containment_probability": 0.9,
   "systematic_included": true,
   "rate_snr": 15.8,

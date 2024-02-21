@@ -17,8 +17,7 @@
       "localization": {
         "ra": 17.48,
         "dec": 16.15,
-        "uncertainty_shape": "circle",
-        "ra_uncertainty": [0.43],
+        "ra_dec_error": 0.43,
         "containment_probability": 0.9,
         "systematic_included": false
       },
@@ -30,8 +29,7 @@
       "localization": {
         "ra": 13.82,
         "dec": 18.66,
-        "uncertainty_shape": "circle",
-        "ra_uncertainty": [0.88],
+        "ra_dec_error": 0.88,
         "containment_probability": 0.9,
         "systematic_included": false
       },
