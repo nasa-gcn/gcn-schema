@@ -22,24 +22,11 @@
         {
           "type": "array",
           "items": {
-            "anyOf": [
-              {
-                "type": "number",
-                "description": "Length of the semi-major axis of the uncertainty ellipse [deg]."
-              },
-              {
-                "type": "number",
-                "description": "Length of the semi-minor axis of the uncertainty ellipse [deg]."
-              },
-              {
-                "type": "number",
-                "description": "Astronomical position angle (measured from North through East) of the major axis of the uncertainty ellipse [deg]."
-              }
-            ]
+            "type": "number"
           },
           "minItems": 3,
           "maxItems": 3,
-          "description": "Array containing values of position_error_a, position_error_b, and position_error_pa."
+          "description": "Array values: position_error_a, position_error_b, position_error_pa. These represent the length of the semi-major axis, semi-minor axis, and astronomical position angle (measured from North through East) of the major axis of the uncertainty ellipse [deg]."
         }
       ]
     },
