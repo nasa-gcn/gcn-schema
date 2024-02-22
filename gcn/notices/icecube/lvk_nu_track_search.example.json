@@ -17,7 +17,7 @@
       "localization": {
         "ra": 17.48,
         "dec": 16.15,
-        "error": { "radius": 0.5 },
+        "ra_dec_error": 0.5,
         "containment_probability": 0.9,
         "systematic_included": false
       },
@@ -29,7 +29,7 @@
       "localization": {
         "ra": 13.82,
         "dec": 18.66,
-        "error": { "radius": 0.5 },
+        "ra_dec_error": 0.5,
         "containment_probability": 0.9,
         "systematic_included": false
       },

@@ -6,7 +6,7 @@
   "alert_type": "initial",
   "ra": 345.82,
   "dec": 9.01,
-  "error": { "radius": 0.5 },
+  "ra_dec_error": 0.5,
   "containment_probability": 0.9,
   "systematic_included": false,
   "trigger_time": "2023-04-16T05:22:26.150574Z",

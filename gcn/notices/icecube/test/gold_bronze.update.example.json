@@ -7,7 +7,7 @@
   "alert_type": "update",
   "ra": 345.82,
   "dec": 9.01,
-  "error": { "radius": 0.5 },
+  "ra_dec_error": 0.5,
   "containment_probability": 0.9,
   "systematic_included": false,
   "healpix_url": "https://roc.icecube.wisc.edu/public/",
