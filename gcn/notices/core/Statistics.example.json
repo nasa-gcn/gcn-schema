@@ -1,6 +1,8 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json",
   "far": 0.001,
+  "net_count_rate": 2000,
+  "background_count_rate": 250,
   "rate_snr": 5.2,
   "rate_duration": 10,
   "rate_energy_range": [100, 1000],

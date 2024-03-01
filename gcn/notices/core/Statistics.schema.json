@@ -9,6 +9,14 @@
       "type": "number",
       "description": "False alarm rate: the rate of occurrence of non-astrophysical events that are of the same intensity or significance as the current event [Hz]"
     },
+    "net_count_rate": {
+      "type": "number",
+      "description": "Net count rate of the transient above the background [counts/s]"
+    },
+    "backgound_count_rate": {
+      "type": "number",
+      "description": "Mean count per second of the background for the transient [counts/s]"
+    },
     "rate_snr": {
       "type": "number",
       "description": "Rate signal to noise ratio [dimensionless]"
