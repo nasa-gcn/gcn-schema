@@ -11,17 +11,26 @@
     },
     "hardness_ratio_error": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "maxItems": 2,
       "description": "ratio of flux between high and low energy bands, with asymmetric statistical errors taken into account"
     },
     "energy_range_soft": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "description": "Energy range [keV] used in soft band of hardness ratio",
       "minItems": 2,
       "maxItems": 2
     },
     "energy_range_hard": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "description": "Energy range [keV] used in hard band of hardness ratio",
       "minItems": 2,
       "maxItems": 2

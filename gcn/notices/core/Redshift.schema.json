@@ -11,6 +11,9 @@
     },
     "redshift_error": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "maxItems": 2,
       "description": "Error in redshift, array for asymmetric statistical errors"
     },
