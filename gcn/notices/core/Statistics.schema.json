@@ -19,6 +19,9 @@
     },
     "rate_energy_range": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used in rate signal to noise ratio calculation, if not parsed in Reporter.schema.json, default unit is keV"
@@ -33,6 +36,9 @@
     },
     "image_energy_range": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used in image signal to noise ratio calculation, if not parsed in Reporter.schema.json, default unit is keV"

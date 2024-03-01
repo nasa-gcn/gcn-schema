@@ -35,6 +35,9 @@
     },
     "filter": {
       "type": "array",
+      "items": {
+        "type": "string"
+      },
       "description": "Optional filter name, as used in optical observations"
     }
   }
