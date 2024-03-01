@@ -1,10 +1,10 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/eclairs/alert.schema.json",
-  "instrument": "ECLAIRs",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/alert.schema.json",
+  "instrument": "GRM",
   "alert_datetime": "2024-02-22T08:51:55",
   "alert_tense": "test",
-  "alert_type": "update",
-  "notice_level": "N1e",
+  "alert_type": "initial",
+  "notice_level": "N1g",
   "id": ["sb24022203"],
   "trigger_time": "2024-02-22T08:51:31.320000",
   "ra": 143.2478,
@@ -13,6 +13,5 @@
   "image_snr": 25.67,
   "image_duration": 0.0,
   "image_energy_range": [4, 20],
-  "trigger_type": "count_rate",
-  "slew_status": "accepted"
+  "triggered_GRDs": "111"
 }
