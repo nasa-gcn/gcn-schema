@@ -15,7 +15,7 @@
     },
     "backgound_count_rate": {
       "type": "number",
-      "description": "Mean count per second of the background for the transient [counts/s]"
+      "description": "Mean counts per second of the background for the transient [counts/s]"
     },
     "rate_snr": {
       "type": "number",
