@@ -1,0 +1,11 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/einstein_probe/wxt/alert.schema.json",
+  "instrument": "WXT",
+  "trigger_time": "2024-03-01T21:46:05.13Z",
+  "ra": 120,
+  "dec": 40,
+  "ra_dec_error": 0.02,
+  "image_energy_range": [0.5, 4.0],
+  "net_rate": 1.0,
+  "image_snr": 1.0
+}
