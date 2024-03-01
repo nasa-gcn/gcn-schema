@@ -22,7 +22,7 @@
     "singleQuote": true
   },
   "lint-staged": {
-    "*.(json,js,mjs)": "prettier --write",
+    "*.{json,js,mjs}": "prettier --write",
     "*.schema.json": "node validate.mjs"
   },
   "dependencies": {
