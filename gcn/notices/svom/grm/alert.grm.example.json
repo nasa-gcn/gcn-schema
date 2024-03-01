@@ -10,8 +10,8 @@
   "ra": 143.2478,
   "dec": -68.0289,
   "ra_dec_error": 0.1,
-  "image_snr": 25.67,
-  "image_duration": 0.0,
-  "image_energy_range": [4, 20],
+  "rate_snr": 25.67,
+  "rate_duration": 0.0,
+  "rate_energy_range": [4, 20],
   "triggered_GRDs": "111"
 }
