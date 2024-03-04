@@ -29,8 +29,13 @@
       "description": "In case of an ECLAIRs trigger, specifices whether count rate or image trigger"
     },
     "triggered_GRDs": {
-      "enum": ["111", "110", "101", "011", "100", "010", "001"],
-      "description": "In case of a GRM trigger, trigger status the 3 GRDs. Each digit correspond to one of the 3 GRDs. 1 means the GRD triggers, 0 not"
+      "type": "array",
+      "items": {
+        "type": "boolean"
+      },
+      "minItems": 3,
+      "maxItems": 3,
+      "description": "In case of a GRM trigger, trigger status the 3 GRDs. Each item correspond to one of the 3 GRDs. true means the GRD triggers, false not"
     }
   }
 }
