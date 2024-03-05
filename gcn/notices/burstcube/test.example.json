@@ -1,0 +1,29 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/burstcube/test.schema.json",
+  "alert_datetime": "2024-06-01T00:05:00.00Z",
+  "alert_tense": "current",
+  "alert_type": "initial",
+  "mission": "BurstCube",
+  "record_number": 1,
+  "trigger_time": "2024-06-01T00:00:00.0Z",
+  "id": ["240601000"],
+  "ra": 232.0,
+  "dec": -53.1,
+  "ra_dec_error": 10,
+  "containment_probability": 0.9,
+  "systematic_included": false,
+  "healpix_url": "https://heasarc.gsfc.nasa.gov/burstcube/trigger/240601000/current/240601000_locmap.fits",
+  "healpix_file": "stuff",
+  "rate_snr": 7.2,
+  "rate_duration": 1.024,
+  "rate_energy_range": [50, 300],
+  "classification": { "GRB": 0.95, "SF": 0.03, "Local Particles": 0.02 },
+  "t90": 2.3,
+  "t90_error": [0.1],
+  "detector_status": {
+    "CsI0": "triggered",
+    "CsI1": "triggered",
+    "CsI2": "on",
+    "CsI3": "on"
+  }
+}
