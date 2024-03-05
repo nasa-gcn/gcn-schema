@@ -9,7 +9,7 @@
   "id": ["240601000"],
   "ra": 232.0,
   "dec": -53.1,
-  "ra_dec_error": [10],
+  "ra_dec_error": 10,
   "containment_probability": 0.9,
   "systematic_included": false,
   "healpix_url": "https://heasarc.gsfc.nasa.gov/burstcube/trigger/240601000/current/240601000_locmap.fits",
