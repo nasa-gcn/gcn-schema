@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/burstcube/alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/burstcube/Alert.schema.json",
   "alert_datetime": "2024-06-01T00:05:00.00Z",
   "alert_tense": "current",
   "alert_type": "initial",
@@ -9,7 +9,9 @@
   "id": ["240601000"],
   "ra": 232.0,
   "dec": -53.1,
-  "ra_dec_error": 10,
+  "uncertainty_shape": "circle",
+  "ra_uncertainty": [10],
+  "dec_uncertainty": [10],
   "containment_probability": 0.9,
   "systematic_included": false,
   "healpix_url": "https://heasarc.gsfc.nasa.gov/burstcube/trigger/240601000/current/240601000_locmap.fits",
