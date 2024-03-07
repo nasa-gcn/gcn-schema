@@ -18,7 +18,7 @@
     "$schema": true,
     "notice_level": {
       "enum": ["N1e", "N1g"],
-      "description": "SVOM notice reference id. N1e is an ECLAIRs trigger, N1g a GRM trigger."
+      "description": "SVOM notice reference id."
     },
     "slew_status": {
       "enum": ["accepted", "rejected", "not_requested"],
@@ -35,7 +35,7 @@
       },
       "minItems": 3,
       "maxItems": 3,
-      "description": "In case of a GRM trigger, trigger status the 3 GRDs. Each item correspond to one of the 3 GRDs. true means the GRD triggers, false not"
+      "description": "In case of a GRM trigger, trigger status the 3 GRDs. Each item correspond to one of the 3 GRDs: true means the GRD triggers, false not"
     }
   }
 }

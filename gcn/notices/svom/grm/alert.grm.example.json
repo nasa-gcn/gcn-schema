@@ -13,5 +13,5 @@
   "rate_snr": 25.67,
   "rate_duration": 0.0,
   "rate_energy_range": [4, 20],
-  "triggered_GRDs": "111"
+  "triggered_GRDs": [true, true, true]
 }
