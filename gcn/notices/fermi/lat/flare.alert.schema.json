@@ -1,0 +1,56 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare.alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Alert",
+  "description": "BurstCube Trigger Alert",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../../core/Event.schema.json"
+    },
+    {
+      "$ref": "../../core/Localization.schema.json"
+    },
+    {
+      "$ref": "../../core/Redshift.schema.json"
+    },
+    { "$ref": "../../core/spectral/models/PowerLaw.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+
+    "flux": {
+      "type": "number",
+      "description": "Daily averaged gamma-ray flux [ph/cm2/s]"
+    },
+    "flux_date": {
+      "type": "string",
+      "description": "Date of the observed average gamma-ray flux in the format [YYYY-MM-DD]"
+    },
+    "flux_increase": {
+      "type": "number",
+      "description": "Factor by which the flux has increased with respect to the average flux in the fourth Fermi-LAT catalog (4FGL)"
+    },
+    "flux_date": {
+      "type": "string",
+      "description": "Date of the observed average gamma-ray flux in the format [YYYY-MM-DD]"
+    },
+    "alpha_4FGL": {
+      "type": "number",
+      "description": "Photon index value from the 4FGL catalog"
+    },
+    "alpha_error_4FGL": {
+      "type": "number",
+      "description": "1-sigma uncertainty of alpha_4FGL"
+    }
+  }
+}
