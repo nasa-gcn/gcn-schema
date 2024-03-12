@@ -15,7 +15,7 @@
     },
     "backgound_count_rate": {
       "type": "number",
-      "description": "Count rate of the background for the transient [counts/s]"
+      "description": "Count rate of the background for the transient [counts/s] over rate_duration and rate_energy_range."
     },
     "rate_snr": {
       "type": "number",
