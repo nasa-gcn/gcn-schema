@@ -15,7 +15,11 @@
     },
     "backgound_count_rate": {
       "type": "number",
-      "description": "Count rate of the background for the transient [counts/s] over rate_duration and rate_energy_range."
+      "description": "Count rate of the background for the transient [counts/s] for rate_duration and rate_energy_range used for net count rate."
+    },
+    "trigger_type": {
+      "enum": ["rate", "image"],
+      "description": "Specifies the type of trigger; rate, or image trigger"
     },
     "rate_snr": {
       "type": "number",
