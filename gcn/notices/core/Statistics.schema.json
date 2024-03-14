@@ -9,6 +9,10 @@
       "type": "number",
       "description": "False alarm rate: the rate of occurrence of non-astrophysical events that are of the same intensity or significance as the current event [Hz]"
     },
+    "trigger_type": {
+      "enum": ["rate", "image"],
+      "description": "Type of trigger algorithm used to identify the transient event."
+    },
     "rate_snr": {
       "type": "number",
       "description": "Rate signal to noise ratio [dimensionless]"
