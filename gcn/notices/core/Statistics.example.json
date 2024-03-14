@@ -1,6 +1,7 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json",
   "far": 0.001,
+  "trigger_type": "rate",
   "rate_snr": 5.2,
   "rate_duration": 10,
   "rate_energy_range": [100, 1000],
