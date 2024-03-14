@@ -10,6 +10,9 @@
     },
     "t90_error": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "maxItems": 2,
       "description": "1-sigma uncertainty of the T90 duration [s], with asymmetric statistical errors taken into account"
     },
@@ -19,6 +22,9 @@
     },
     "t50_error": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "maxItems": 2,
       "description": "1-sigma uncertainty of the T50 duration [s], with asymmetric statistical errors taken into account"
     }

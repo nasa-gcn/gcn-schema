@@ -9,6 +9,13 @@
       "type": "number",
       "description": "False alarm rate: the rate of occurrence of non-astrophysical events that are of the same intensity or significance as the current event [Hz]"
     },
+<<<<<<< HEAD
+=======
+    "trigger_type": {
+      "enum": ["rate", "image"],
+      "description": "Type of trigger algorithm used to identify the transient event."
+    },
+>>>>>>> e84f4da1964f4b46bc9da752a3c009fd71d17e68
     "net_count_rate": {
       "type": "number",
       "description": "Net count rate of the transient above the background [counts/s] over rate duration and rate energy range. Do specify rate_duration and rate_energy_range with net_count_rate property."
@@ -16,10 +23,6 @@
     "backgound_count_rate": {
       "type": "number",
       "description": "Count rate of the background for the transient [counts/s] for rate_duration and rate_energy_range used for net count rate."
-    },
-    "trigger_type": {
-      "enum": ["rate", "image"],
-      "description": "Specifies the type of trigger; rate, or image trigger"
     },
     "rate_snr": {
       "type": "number",
@@ -31,6 +34,9 @@
     },
     "rate_energy_range": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used in rate signal to noise ratio calculation, if not parsed in Reporter.schema.json, default unit is keV"
@@ -45,6 +51,9 @@
     },
     "image_energy_range": {
       "type": "array",
+      "items": {
+        "type": "number"
+      },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used in image signal to noise ratio calculation, if not parsed in Reporter.schema.json, default unit is keV"
