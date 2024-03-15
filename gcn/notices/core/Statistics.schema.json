@@ -13,6 +13,14 @@
       "enum": ["rate", "image"],
       "description": "Type of trigger algorithm used to identify the transient event."
     },
+    "net_count_rate": {
+      "type": "number",
+      "description": "Net count rate of the transient above the background [counts/s] over rate duration and rate energy range. Do specify rate_duration and rate_energy_range with net_count_rate property."
+    },
+    "backgound_count_rate": {
+      "type": "number",
+      "description": "Count rate of the background for the transient [counts/s] for rate_duration and rate_energy_range used for net count rate."
+    },
     "rate_snr": {
       "type": "number",
       "description": "Rate signal to noise ratio [dimensionless]"
