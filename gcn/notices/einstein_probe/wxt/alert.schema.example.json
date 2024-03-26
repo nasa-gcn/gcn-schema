@@ -6,6 +6,9 @@
   "dec": 40,
   "ra_dec_error": 0.02,
   "image_energy_range": [0.5, 4.0],
-  "net_rate": 1.0,
-  "image_snr": 1.0
+  "image_snr": 1.0,
+  "net_count_rate": 1.0,
+  "backgound_count_rate": 0.2,
+  "rate_duration": 10,
+  "rate_energy_range": [0.5, 4.0]
 }
