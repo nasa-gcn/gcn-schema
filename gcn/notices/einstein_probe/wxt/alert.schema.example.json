@@ -6,6 +6,7 @@
   "dec": 40,
   "ra_dec_error": 0.02,
   "image_energy_range": [0.5, 4.0],
-  "net_rate": 1.0,
-  "image_snr": 1.0
+  "net_count_rate": 1.0,
+  "image_snr": 1.0,
+  "additional_info": "The net count rate is derived from an accumulated image (up to 20 min) in 0.5-4 keV, assuming a constant flux. However, it can be significantly lower than the actual count rate of a burst with a duration much shorter than 20 min."
 }

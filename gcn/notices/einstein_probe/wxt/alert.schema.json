@@ -8,14 +8,7 @@
     { "$ref": "../../core/DateTime.schema.json" },
     { "$ref": "../../core/Localization.schema.json" },
     { "$ref": "../../core/Reporter.schema.json" },
-    { "$ref": "../../core/Statistics.schema.json" }
-  ],
-  "properties": {
-    "$schema": true,
-    "net_rate": {
-      "type": "number",
-      "description": "Net count rate [cnt/sec] of the transient in WXT band (0.5-4.0 keV)."
-    }
-  },
-  "unevaluatedProperties": false
+    { "$ref": "../../core/Statistics.schema.json" },
+    { "$ref": "../../core/AdditionalInfo.schema.json" }
+  ]
 }
