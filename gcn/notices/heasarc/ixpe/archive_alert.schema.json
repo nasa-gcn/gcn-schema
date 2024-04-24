@@ -1,0 +1,37 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/ixpe/archive_alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "HEASARC - IXPE Data in Archive",
+  "description": "IXPE Data Archived at HEASARC",
+  "allOf": [
+    {
+      "$ref": "../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../core/Event.schema.json"
+    }
+  ],
+  "properties": {
+    "observation_id": {
+      "type": "number",
+      "description": "The observation ID of the sequence"
+    },
+    "target_name": {
+      "type": "string",
+      "description": "Name of the target object for the observation"
+    },
+    "observation_datetime": {
+      "type": "string",
+      "description": "Start time of observation"
+    },
+    "mission_page": {
+      "type": "string",
+      "description": "Webpage of mission at HEASARC"
+    }
+  }
+}
