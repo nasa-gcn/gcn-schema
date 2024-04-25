@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/nicer/archive_alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/nustar/archive_alert.schema.json",
   "mission": "NuSTAR",
   "alert_datetime": "2024-01-21T00:00:00Z",
   "alert_tense": "archival",
@@ -7,6 +7,6 @@
   "data_archive_page": "https://heasarc.gsfc.nasa.gov/FTP/nustar/data/obs/00/6/60061224002/",
   "observation_id": 60061224002,
   "target_name": "NGC4138",
-  "observation_datetime":"2024-01-08 11:21:09",
-  "mission_page":"https://heasarc.gsfc.nasa.gov/docs/nustar/"
+  "observation_datetime": "2024-01-08 11:21:09",
+  "mission_page": "https://heasarc.gsfc.nasa.gov/docs/nustar/"
 }
