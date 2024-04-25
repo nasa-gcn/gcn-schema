@@ -7,13 +7,13 @@
   "description": "IXPE Data Archived at HEASARC",
   "allOf": [
     {
-      "$ref": "../core/Reporter.schema.json"
+      "$ref": "../../core/Reporter.schema.json"
     },
     {
-      "$ref": "../core/Alert.schema.json"
+      "$ref": "../../core/Alert.schema.json"
     },
     {
-      "$ref": "../core/Event.schema.json"
+      "$ref": "../../core/Event.schema.json"
     }
   ],
   "properties": {
