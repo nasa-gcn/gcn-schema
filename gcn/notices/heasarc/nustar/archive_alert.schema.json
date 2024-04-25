@@ -18,7 +18,7 @@
   ],
   "properties": {
     "observation_id": {
-      "type": "number",
+      "type": "string",
       "description": "The observation ID of the sequence"
     },
     "target_name": {
