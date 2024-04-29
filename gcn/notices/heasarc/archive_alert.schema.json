@@ -1,10 +1,10 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/nustar/archive_alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/archive_alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "unevaluatedProperties": false,
-  "title": "HEASARC - NuSTAR Data in Archive",
-  "description": "NuSTAR Data Archived at HEASARC",
+  "title": "HEASARC - Data in Archive",
+  "description": "Data Archived at HEASARC",
   "allOf": [
     {
       "$ref": "../../core/Reporter.schema.json"
