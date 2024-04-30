@@ -4,9 +4,9 @@
   "alert_datetime": "2022-05-04T00:00:00Z",
   "alert_tense": "archival",
   "alert_type": "initial",
+  "observation_start": "2022-02-21T16:12:23.000",
   "data_archive_page": "https://heasarc.gsfc.nasa.gov/FTP/ixpe/data/obs/01/01001099/",
   "observation_id": "01001099",
   "target_name": "Crab",
-  "observation_datetime": "2022-02-21T16:12:23.000",
   "mission_page": "https://heasarc.gsfc.nasa.gov/docs/ixpe/"
 }
