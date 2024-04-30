@@ -2,7 +2,6 @@
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/archive_alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "unevaluatedProperties": false,
   "title": "HEASARC - Data in Archive",
   "description": "Data Archived at HEASARC",
   "allOf": [
