@@ -1,9 +1,9 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/trigger.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "unevaluatedProperties": false,
-  "title": "SVOM Alert",
+  "title": "SVOM trigger alerts",
   "description": "ECLAIRs or GRM trigger parameters computed onboard",
   "allOf": [
     { "$ref": "../core/AdditionalInfo.schema.json" },
@@ -12,21 +12,15 @@
     { "$ref": "../core/Event.schema.json" },
     { "$ref": "../core/Localization.schema.json" },
     { "$ref": "../core/Reporter.schema.json" },
-    { "$ref": "../core/Statistics.schema.json" }
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/Pointing.schema.json" },
+    { "$ref": "../core/GeoLocBase.schema.json" }
   ],
   "properties": {
     "$schema": true,
-    "notice_level": {
-      "enum": ["N1e", "N1g"],
-      "description": "SVOM notice reference id."
-    },
     "slew_status": {
       "enum": ["accepted", "rejected", "not_requested"],
       "description": "Spacecraft slew status"
-    },
-    "trigger_type": {
-      "enum": ["count_rate", "image"],
-      "description": "In case of an ECLAIRs trigger, specifices whether count rate or image trigger"
     },
     "triggered_GRDs": {
       "type": "array",

@@ -1,10 +1,9 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/trigger.schema.json",
   "instrument": "GRM",
   "alert_datetime": "2024-02-22T08:51:55",
   "alert_tense": "test",
   "alert_type": "initial",
-  "notice_level": "N1g",
   "id": ["sb24022203"],
   "trigger_time": "2024-02-22T08:51:31.320000",
   "ra": 143.2478,
@@ -12,6 +11,6 @@
   "ra_dec_error": 0.1,
   "rate_snr": 25.67,
   "rate_duration": 0.0,
-  "rate_energy_range": [4, 20],
+  "rate_energy_range": [15, 550],
   "triggered_GRDs": [true, true, true]
 }
