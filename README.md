@@ -4,7 +4,7 @@ This repository contains the schemas for crafting new GCN notices. It also inclu
 
 The alert format for new Notices over GCN Kafka is JavaScript Object Notation (JSON), a widely adopted Internet data format. We have designed a set of core schema which serve as the building blocks for new GCN Notices. Instrument-specific schema can also be created, but we request that you utilize the core schema as much as possible.
 
-Please add your schema to this repository under <code>gcn/notices/<i>mission</i>/</code> and submit a pull request for the GCN Team to review. The GCN team is happy to iterate with the producers on their schema contents and format. Your pipeline will generate JSON files following these schema and send alerts to GCN as described in [New Notice Producers](https://gcn.nasa.gov/docs/producers).
+Please add your schema to this repository under <code>gcn/notices/<i>mission</i>/</code> and submit a pull request for the GCN Team to review. The GCN team is happy to iterate with the producers on their schema contents and format. Your pipeline will generate JSON files following these schema and send alerts to GCN as described in [New Notice Producers](https://gcn.nasa.gov/docs/notices/producers).
 
 ## How To Release
 

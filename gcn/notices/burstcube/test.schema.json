@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/burstcube/Test.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/burstcube/test.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Alert",
   "description": "BurstCube Trigger Alert",
