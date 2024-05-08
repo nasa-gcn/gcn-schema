@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Duration.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v4.0.0/gcn/notices/core/Duration.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Duration",
@@ -10,9 +10,7 @@
     },
     "t90_error": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "maxItems": 2,
       "description": "1-sigma uncertainty of the T90 duration [s], with asymmetric statistical errors taken into account"
     },
@@ -22,9 +20,7 @@
     },
     "t50_error": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "maxItems": 2,
       "description": "1-sigma uncertainty of the T50 duration [s], with asymmetric statistical errors taken into account"
     }

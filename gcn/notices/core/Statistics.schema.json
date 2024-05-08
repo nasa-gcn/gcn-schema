@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v4.0.0/gcn/notices/core/Statistics.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Statistics",
@@ -31,9 +31,7 @@
     },
     "rate_energy_range": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used in rate signal to noise ratio calculation, if not parsed in Reporter.schema.json, default unit is keV"
@@ -48,9 +46,7 @@
     },
     "image_energy_range": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used in image signal to noise ratio calculation, if not parsed in Reporter.schema.json, default unit is keV"

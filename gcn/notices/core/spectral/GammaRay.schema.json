@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/GammaRay.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v4.0.0/gcn/notices/core/spectral/GammaRay.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "spectral.GammaRay",
@@ -23,9 +23,7 @@
     },
     "spectral_energy_range": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used in spectral fit, if not parsed in Reporter.schema.json, default unit is keV"
@@ -36,9 +34,7 @@
     },
     "hardness_ratio_energy_range": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used for hardness ratio, if not parsed in Reporter.schema.json, default unit is keV"
@@ -61,18 +57,14 @@
     },
     "flux_energy_range": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used in flux calculation, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "flux_time_range": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "Start and stop time stamps in array as used in flux calculation, measured since trigger [s]"
@@ -84,18 +76,14 @@
     },
     "fluence_energy_range": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "Low and High energy bounds used in fluence calculation, if not parsed in Reporter.schema.json, default unit is keV"
     },
     "fluence_time_range": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "Start and stop time stamps in array as used in fluence calculation, measured since trigger [s]"

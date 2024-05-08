@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/lvk_nu_track_search.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v4.0.0/gcn/notices/icecube/lvk_nu_track_search.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "IceCube LVK Alert Nu Track Search",
@@ -54,16 +54,12 @@
         "flux_sensitivity": {
           "description": "Time integrated flux sensitivity range (min, max) [GeV cm^-2] assuming an E^-2 spectrum (E^2 dN/dE) found within the 90% region of GW map localization",
           "type": "array",
-          "items": {
-            "type": "number"
-          }
+          "items": { "type": "number" }
         },
         "sensitive_energy_range": {
           "description": "Energy sensitivity range (lower, upper) [GeV] assuming an E^-2 spectrum (E^2 dN/dE)",
           "type": "array",
-          "items": {
-            "type": "number"
-          }
+          "items": { "type": "number" }
         }
       }
     },
