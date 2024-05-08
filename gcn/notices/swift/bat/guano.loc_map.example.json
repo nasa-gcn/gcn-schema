@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v4.0.0/gcn/notices/swift/bat/guano.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/bat/guano.schema.json",
   "mission": "Swift",
   "instrument": "BAT-GUANO",
   "messenger": "EM",
