@@ -1,0 +1,20 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/astrosat/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AstroSat GRB Detection",
+  "description": "Detection of a GRB by AstroSat",
+  "type": "object",
+  "allOf": [
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "active_detectors": {
+      "type": "number",
+      "description": "Number of detectors that triggered."
+    }
+  },
+  "unevaluatedProperties": false
+}

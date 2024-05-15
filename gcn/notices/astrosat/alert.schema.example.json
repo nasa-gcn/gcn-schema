@@ -1,0 +1,9 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/astrosat/alert.schema.json",
+  "instrument": "CZTI",
+  "trigger_time": "2024-03-01T21:46:05.13Z",
+  "ra": 120,
+  "dec": 40,
+  "ra_dec_error": 0.02,
+  "active_detectors": 3
+}
