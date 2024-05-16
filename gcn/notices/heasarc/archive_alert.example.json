@@ -9,5 +9,5 @@
   "obs_id": "01001099",
   "target_name": "Crab",
   "mission_page": "https://heasarc.gsfc.nasa.gov/docs/ixpe/",
-  "obs_creator_name": "IXPE"
+  "facility_name": "IXPE"
 }

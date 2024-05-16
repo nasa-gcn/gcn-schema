@@ -31,7 +31,7 @@
       "type": "string",
       "description": "Webpage of the creator mission at HEASARC"
     },
-    "obs_creator_name": {
+    "facility_name": {
       "type": "string",
       "description": "Name of the creator of the data [IVOA ObsCore]"
     }
