@@ -29,7 +29,7 @@
     },
     "mission_page": {
       "type": "string",
-      "description": "Webpage of the creator mission at HEASARC"
+      "description": "Web page of the creator mission at HEASARC"
     },
     "facility_name": {
       "type": "string",
