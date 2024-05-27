@@ -5,27 +5,13 @@
   "description": "BurstCube Trigger Alert",
   "type": "object",
   "allOf": [
-    {
-      "$ref": "../core/Alert.schema.json"
-    },
-    {
-      "$ref": "../core/Reporter.schema.json"
-    },
-    {
-      "$ref": "../core/DateTime.schema.json"
-    },
-    {
-      "$ref": "../core/Event.schema.json"
-    },
-    {
-      "$ref": "../core/Localization.schema.json"
-    },
-    {
-      "$ref": "../core/Statistics.schema.json"
-    },
-    {
-      "$ref": "../core/Duration.schema.json"
-    }
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/Duration.schema.json" }
   ],
   "properties": {
     "detector_status": {

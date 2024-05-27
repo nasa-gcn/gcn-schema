@@ -1,6 +1,6 @@
 {
   "name": "@nasa-gcn/schema",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "scripts": {
     "prepare": "husky install",
     "validate:prettier": "prettier --check .",
