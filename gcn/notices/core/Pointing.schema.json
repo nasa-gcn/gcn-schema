@@ -8,7 +8,7 @@
   "properties": {
     "ra_pointing": {
       "type": "number",
-      "description": "RA pointing of the instrument Z axis"
+      "description": "RA pointing of the instrument Z axis. ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system."
     },
     "dec_pointing": {
       "type": "number",
