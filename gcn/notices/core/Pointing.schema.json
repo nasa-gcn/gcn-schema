@@ -12,7 +12,7 @@
     },
     "dec_pointing": {
       "type": "number",
-      "description": "Dec pointing of the instrument Z axis"
+      "description": "Dec pointing of the instrument Z axis. ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system."
     },
     "roll": {
       "type": "number",
