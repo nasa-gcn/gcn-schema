@@ -1,26 +1,31 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/FollowUp.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/FollowUp.schema.json",
   "title": "FollowUp",
   "description": "Schema specific to follow-up cases",
   "type": "object",
   "properties": {
-    "ref_type": {
-      "type": "string",
-      "description": "Type of the event detected, ex. GRB, GW, neutrino"
+    "ref_ID": {
+      "description": "Trigger ID as reported by the reference instrument, ex. bnYYMMDDFF",
+      "type": "string"
     },
     "ref_instrument": {
-      "type": "string",
-      "description": "Name of the reference mission or, instrument, ex. Fermi-GBM"
+      "description": "Name of the reference mission or, instrument, ex. Fermi-GBM",
+      "type": "string"
     },
-    "ref_ID": {
-      "type": "string",
-      "description": "Trigger ID as reported by the reference instrument, ex. bnYYMMDDFF"
+    "ref_type": {
+      "description": "Type of the event detected, ex. GRB, GW, neutrino",
+      "type": "string"
     },
     "reference": {
+      "description": "Reference as distributed by the notices or circulars or ATel, ex. gcn circulars: 12345, gcn.notices.LVK.alert: SYYMMDDak-2-preliminary. ",
       "type": "object",
-      "additionalProperties": { "type": ["number", "string"] },
-      "description": "Reference as distributed by the notices or circulars or ATel, ex. gcn circulars: 12345, gcn.notices.LVK.alert: SYYMMDDak-2-preliminary. "
+      "additionalProperties": {
+        "type": [
+          "number",
+          "string"
+        ]
+      }
     }
   }
 }
