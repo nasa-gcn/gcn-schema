@@ -1,42 +1,45 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/models/Band.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/models/Band.schema.json",
   "title": "Band",
   "description": "Spectral model Band smoothly broken powerlaw (Band et al. 1993)",
+  "type": "object",
   "properties": {
-    "amplitude": {
-      "type": "number",
-      "description": "amplitude of spectral model fit at pivot_energy [ph/cm2/s/keV]"
-    },
-    "amplitude_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of amplitude [ph/cm2/s/keV]"
-    },
-    "pivot_energy": { "type": "number", "description": "pivot energy [keV]" },
     "alpha": {
-      "type": "number",
-      "description": "power-law index of spectral model"
+      "description": "power-law index of spectral model",
+      "type": "number"
     },
     "alpha_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of alpha"
+      "description": "1-sigma uncertainty of alpha",
+      "type": "number"
     },
-    "epeak": {
-      "type": "number",
-      "description": "e-folding energy of exponential rolloff [keV]"
+    "amplitude": {
+      "description": "amplitude of spectral model fit at pivot_energy [ph/cm2/s/keV]",
+      "type": "number"
     },
-    "epeak_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of Epeak [keV]"
+    "amplitude_error": {
+      "description": "1-sigma uncertainty of amplitude [ph/cm2/s/keV]",
+      "type": "number"
     },
     "beta": {
-      "type": "number",
-      "description": "high-energy power-law index of Band parameterization"
+      "description": "high-energy power-law index of Band parameterization",
+      "type": "number"
     },
     "beta_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of beta"
+      "description": "1-sigma uncertainty of beta",
+      "type": "number"
+    },
+    "epeak": {
+      "description": "e-folding energy of exponential rolloff [keV]",
+      "type": "number"
+    },
+    "epeak_error": {
+      "description": "1-sigma uncertainty of Epeak [keV]",
+      "type": "number"
+    },
+    "pivot_energy": {
+      "description": "pivot energy [keV]",
+      "type": "number"
     }
   }
 }

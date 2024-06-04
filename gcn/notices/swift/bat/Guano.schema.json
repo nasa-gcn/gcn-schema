@@ -1,27 +1,41 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/bat/guano.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/bat/guano.schema.json",
   "title": "Swift/BAT-GUANO Alert",
   "description": "Candidate gamma-ray transient reported from the BAT-GUANO targeted search",
   "type": "object",
   "allOf": [
-    { "$ref": "../../core/Alert.schema.json" },
-    { "$ref": "../../core/Event.schema.json" },
-    { "$ref": "../../core/DateTime.schema.json" },
-    { "$ref": "../../core/Localization.schema.json" },
-    { "$ref": "../../core/Statistics.schema.json" },
-    { "$ref": "../../core/Reporter.schema.json" },
-    { "$ref": "../../core/AdditionalInfo.schema.json" }
+    {
+      "$ref": "../../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../../core/Event.schema.json"
+    },
+    {
+      "$ref": "../../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../../core/Localization.schema.json"
+    },
+    {
+      "$ref": "../../core/Statistics.schema.json"
+    },
+    {
+      "$ref": "../../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../../core/AdditionalInfo.schema.json"
+    }
   ],
   "properties": {
     "$schema": true,
     "follow_up_event": {
-      "type": "string",
-      "description": "Name or trigger time of the external trigger that launched the search."
+      "description": "Name or trigger time of the external trigger that launched the search.",
+      "type": "string"
     },
     "follow_up_type": {
-      "type": "string",
-      "description": "Type of external trigger that launched the search, eg GW, neutrino, etc."
+      "description": "Type of external trigger that launched the search, eg GW, neutrino, etc.",
+      "type": "string"
     }
   },
   "unevaluatedProperties": false
