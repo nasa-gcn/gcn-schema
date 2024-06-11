@@ -1,92 +1,111 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/GammaRay.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/GammaRay.schema.json",
   "title": "spectral.GammaRay",
   "description": "Spectral properties from gamma-ray data",
+  "type": "object",
   "properties": {
-    "best_fit_model": {
-      "enum": ["POWERLAW", "CUTOFFPOWERLAW", "BAND"],
-      "description": "Name of model corresponding to best statistical fit of spectrum"
+    "band": {
+      "description": "Fit parameters for Band model",
+      "$ref": "./models/Band.schema.json"
     },
-    "power_law": {
-      "$ref": "./models/PowerLaw.schema.json",
-      "description": "Fit parameters for PowerLaw model"
+    "best_fit_model": {
+      "description": "Name of model corresponding to best statistical fit of spectrum",
+      "enum": [
+        "POWERLAW",
+        "CUTOFFPOWERLAW",
+        "BAND"
+      ]
     },
     "cutoff_power_law": {
-      "$ref": "./models/CutOffPowerLaw.schema.json",
-      "description": "Fit parameters for Cutoff PowerLaw model"
-    },
-    "band": {
-      "$ref": "./models/Band.schema.json",
-      "description": "Fit parameters for Band model"
-    },
-    "spectral_energy_range": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Low and High energy bounds used in spectral fit, if not parsed in Reporter.schema.json, default unit is keV"
-    },
-    "hardness_ratio": {
-      "type": "number",
-      "description": "ratio of flux between high and low energy bands"
-    },
-    "hardness_ratio_energy_range": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Low and High energy bounds used for hardness ratio, if not parsed in Reporter.schema.json, default unit is keV"
-    },
-    "photon_flux": {
-      "type": "number",
-      "description": "Photon Flux [ph/cm2/s]"
-    },
-    "photon_flux_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty in Photon Flux [ph/cm2/s]"
+      "description": "Fit parameters for Cutoff PowerLaw model",
+      "$ref": "./models/CutOffPowerLaw.schema.json"
     },
     "energy_flux": {
-      "type": "number",
-      "description": "Energy Flux [erg/cm2/s]"
+      "description": "Energy Flux [erg/cm2/s]",
+      "type": "number"
     },
     "energy_flux_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty in Energy Flux [erg/cm2/s]"
+      "description": "1-sigma uncertainty in Energy Flux [erg/cm2/s]",
+      "type": "number"
     },
-    "flux_energy_range": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Low and High energy bounds used in flux calculation, if not parsed in Reporter.schema.json, default unit is keV"
-    },
-    "flux_time_range": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Start and stop time stamps in array as used in flux calculation, measured since trigger [s]"
-    },
-    "fluence": { "type": "number", "description": "Fluence [erg/cm2]" },
-    "fluence_error": {
-      "type": "number",
-      "description": "Fluence Error [erg/cm2]"
+    "fluence": {
+      "description": "Fluence [erg/cm2]",
+      "type": "number"
     },
     "fluence_energy_range": {
+      "description": "Low and High energy bounds used in fluence calculation, if not parsed in Reporter.schema.json, default unit is keV",
       "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
       "maxItems": 2,
-      "description": "Low and High energy bounds used in fluence calculation, if not parsed in Reporter.schema.json, default unit is keV"
+      "minItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "fluence_error": {
+      "description": "Fluence Error [erg/cm2]",
+      "type": "number"
     },
     "fluence_time_range": {
+      "description": "Start and stop time stamps in array as used in fluence calculation, measured since trigger [s]",
       "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
       "maxItems": 2,
-      "description": "Start and stop time stamps in array as used in fluence calculation, measured since trigger [s]"
+      "minItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "flux_energy_range": {
+      "description": "Low and High energy bounds used in flux calculation, if not parsed in Reporter.schema.json, default unit is keV",
+      "type": "array",
+      "maxItems": 2,
+      "minItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "flux_time_range": {
+      "description": "Start and stop time stamps in array as used in flux calculation, measured since trigger [s]",
+      "type": "array",
+      "maxItems": 2,
+      "minItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "hardness_ratio": {
+      "description": "ratio of flux between high and low energy bands",
+      "type": "number"
+    },
+    "hardness_ratio_energy_range": {
+      "description": "Low and High energy bounds used for hardness ratio, if not parsed in Reporter.schema.json, default unit is keV",
+      "type": "array",
+      "maxItems": 2,
+      "minItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "photon_flux": {
+      "description": "Photon Flux [ph/cm2/s]",
+      "type": "number"
+    },
+    "photon_flux_error": {
+      "description": "1-sigma uncertainty in Photon Flux [ph/cm2/s]",
+      "type": "number"
+    },
+    "power_law": {
+      "description": "Fit parameters for PowerLaw model",
+      "$ref": "./models/PowerLaw.schema.json"
+    },
+    "spectral_energy_range": {
+      "description": "Low and High energy bounds used in spectral fit, if not parsed in Reporter.schema.json, default unit is keV",
+      "type": "array",
+      "maxItems": 2,
+      "minItems": 2,
+      "items": {
+        "type": "number"
+      }
     }
   }
 }

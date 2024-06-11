@@ -1,42 +1,54 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json",
   "title": "Reporter",
   "description": "Alert Reporter instrument",
   "type": "object",
   "properties": {
-    "mission": {
-      "type": "string",
-      "description": "Name of Mission or Telescope reporting the event"
+    "filter": {
+      "description": "Optional filter name, as used in optical observations",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "instrument": {
-      "type": "string",
-      "description": "Name of the Instrument reporting the event"
-    },
-    "record_number": {
-      "type": "number",
-      "description": "Incremental number for messages from the instrument during a given trigger (ex: 1, 2, 3)"
+      "description": "Name of the Instrument reporting the event",
+      "type": "string"
     },
     "messenger": {
-      "enum": ["EM", "GW", "Neutrino"],
-      "description": "Messenger of report; EM, GW or Neutrino"
+      "description": "Messenger of report; EM, GW or Neutrino",
+      "enum": [
+        "EM",
+        "GW",
+        "Neutrino"
+      ]
+    },
+    "mission": {
+      "description": "Name of Mission or Telescope reporting the event",
+      "type": "string"
+    },
+    "record_number": {
+      "description": "Incremental number for messages from the instrument during a given trigger (ex: 1, 2, 3)",
+      "type": "number"
     },
     "spectrum": {
-      "enum": ["energy", "wavelength", "frequency"],
       "description": "high-energy or optical or radio observations, if not parsed, then default band is energy",
-      "type": "string",
-      "default": "energy"
+      "default": "energy",
+      "enum": [
+        "energy",
+        "wavelength",
+        "frequency"
+      ]
     },
     "units": {
-      "enum": ["keV", "nm", "Hz"],
       "description": "Units of band range, if not parsed, then default energy is keV",
-      "type": "string",
-      "default": "keV"
-    },
-    "filter": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Optional filter name, as used in optical observations"
+      "default": "keV",
+      "enum": [
+        "keV",
+        "nm",
+        "Hz"
+      ]
     }
   }
 }

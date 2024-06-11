@@ -1,26 +1,29 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/GeoLocBase.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/GeoLocBase.schema.json",
   "title": "Spacecraft Geolocation and McIlwain L",
   "description": "Enables GCN providers to include spacecraft geolocation and McIlwain L-Parameter.",
   "type": "object",
   "properties": {
+    "altitude": {
+      "description": "Distance from the surface of the Earth [km].",
+      "type": "number"
+    },
+    "geoloc_time": {
+      "description": "Time [UTC, ISO 8601] of the geolocation and McIlwain L-parameter, if different than the trigger time.",
+      "type": "string"
+    },
     "latitude": {
-      "type": "number",
-      "description": "Geocentric latitude [deg]"
+      "description": "Geocentric latitude [deg]",
+      "type": "number"
     },
     "longitude": {
-      "type": "number",
-      "description": "Geocentric longitude [deg]"
+      "description": "Geocentric longitude [deg]",
+      "type": "number"
     },
-    "altitude": {
-      "type": "number",
-      "description": "Distance from the surface of the Earth [km]."
-    },
-    "mcilwain_l": { "type": "number", "description": "McIlwain L-parameter" },
-    "geoloc_time": {
-      "type": "string",
-      "description": "Time [UTC, ISO 8601] of the geolocation and McIlwain L-parameter, if different than the trigger time."
+    "mcilwain_l": {
+      "description": "McIlwain L-parameter",
+      "type": "number"
     }
   }
 }

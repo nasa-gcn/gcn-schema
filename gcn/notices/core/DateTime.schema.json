@@ -1,25 +1,25 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json",
   "title": "DateTime",
   "description": "Time descriptions of transient event and observation",
   "type": "object",
   "properties": {
-    "trigger_time": {
-      "type": "string",
-      "description": "Time of the trigger [ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
+    "observation_livetime": {
+      "description": "Livetime of the observation [s]",
+      "type": "number"
     },
     "observation_start": {
-      "type": "string",
-      "description": "Start time of the observation [ISO 8601]"
+      "description": "Start time of the observation [ISO 8601]",
+      "type": "string"
     },
     "observation_stop": {
-      "type": "string",
-      "description": "Stop time of the observation [ISO 8601]"
+      "description": "Stop time of the observation [ISO 8601]",
+      "type": "string"
     },
-    "observation_livetime": {
-      "type": "number",
-      "description": "Livetime of the observation [s]"
+    "trigger_time": {
+      "description": "Time of the trigger [ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ",
+      "type": "string"
     }
   }
 }

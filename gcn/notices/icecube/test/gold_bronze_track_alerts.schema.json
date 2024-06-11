@@ -1,16 +1,28 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/test/gold_bronze_track_alerts.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/test/gold_bronze_track_alerts.schema.json",
   "title": "IceCubeGoldAndBronzeTracks",
   "description": "IceCube Astrotrack Gold And Bronze track alert events",
+  "type": "object",
   "allOf": [
-    { "$ref": "../../core/AdditionalInfo.schema.json" },
-    { "$ref": "../../core/Event.schema.json" },
-    { "$ref": "../../core/Alert.schema.json" },
-    { "$ref": "../../core/Localization.schema.json" },
-    { "$ref": "../../core/DateTime.schema.json" },
-    { "$ref": "../../core/Statistics.schema.json" }
+    {
+      "$ref": "../../core/AdditionalInfo.schema.json"
+    },
+    {
+      "$ref": "../../core/Event.schema.json"
+    },
+    {
+      "$ref": "../../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../../core/Localization.schema.json"
+    },
+    {
+      "$ref": "../../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../../core/Statistics.schema.json"
+    }
   ],
   "properties": {
     "nu_energy": {
