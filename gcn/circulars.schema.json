@@ -1,0 +1,38 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/circulars.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "GCN Circular",
+  "description": "GCN Circulars are rapid astronomical bulletins submitted by and distributed to community members worldwide. They are used to share discoveries, observations, quantitative near-term predictions, requests for follow-up observations, or future observing plans related to high-energy, multi-messenger, and variable or transient astrophysical events. See https://gcn.nasa.gov/circulars",
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "description": "Event name, automatically inferred from the subject"
+    },
+    "submitter": {
+      "type": "string",
+      "description": "Name, affiliation, and email address of the person who submitted the Circular, in the form `A. E. Einstein at IAS <albert.einstein@example.edu>`"
+    },
+    "submittedHow": {
+      "enum": ["web", "email", "email-legacy", "api"],
+      "description": "Submission method"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject line"
+    },
+    "circularId": {
+      "type": "number",
+      "description": "Circular ID assign in the GCN Ciculars archive. Increments by 1 for each published Circular"
+    },
+    "format": {
+      "enum": ["text/plain", "text/markdown"],
+      "description": "Format of the body text as a MIME type"
+    },
+    "body": { "type": "string", "description": "Body text" },
+    "createdOn": {
+      "type": "number",
+      "description": "Date accepted into GCN Circular archive as milliseconds since the UNIX epoch"
+    }
+  }
+}
