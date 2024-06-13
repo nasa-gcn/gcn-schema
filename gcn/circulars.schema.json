@@ -19,7 +19,7 @@
     },
     "subject": {
       "type": "string",
-      "description": "Subject line"
+      "description": "Subject line of the Circular"
     },
     "circularId": {
       "type": "number",
