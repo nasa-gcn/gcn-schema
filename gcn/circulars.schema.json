@@ -15,7 +15,7 @@
     },
     "submittedHow": {
       "enum": ["web", "email", "email-legacy", "api"],
-      "description": "Submission method"
+      "description": "Specifies the method by which the user submitted the Circular"
     },
     "subject": {
       "type": "string",
