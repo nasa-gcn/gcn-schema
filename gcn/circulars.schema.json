@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "GCN Circular",
-  "description": "GCN Circulars are rapid astronomical bulletins submitted by and distributed to community members worldwide. They are used to share discoveries, observations, quantitative near-term predictions, requests for follow-up observations, or future observing plans related to high-energy, multi-messenger, and variable or transient astrophysical events. See https://gcn.nasa.gov/circulars",
+  "description": "GCN Circulars are rapid astronomical bulletins submitted by and distributed to community members worldwide. They are used to share discoveries, observations, quantitative near-term predictions, requests for follow-up observations, or future observing plans related to high-energy, multi-messenger, and variable or transient astrophysical events. An archive of all GCN Circulars can be found at https://gcn.nasa.gov/circulars",
   "properties": {
     "eventId": {
       "type": "string",
