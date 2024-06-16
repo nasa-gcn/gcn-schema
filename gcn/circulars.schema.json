@@ -23,7 +23,7 @@
     },
     "circularId": {
       "type": "number",
-      "description": "Circular ID assign in the GCN Ciculars archive. Increments by 1 for each published Circular"
+      "description": "Circular ID assigned to the Circular in the GCN Circulars archive. This value is unique to each published Circular and increments by 1"
     },
     "format": {
       "enum": ["text/plain", "text/markdown"],
