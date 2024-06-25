@@ -1,6 +1,10 @@
 {
   "name": "@nasa-gcn/schema",
   "version": "4.0.0",
+  "repository": {
+    "type": "git",
+    "url": "github:nasa-gcn/gcn-schema"
+  },
   "scripts": {
     "prepare": "husky install",
     "validate:prettier": "prettier --check .",
