@@ -2,6 +2,7 @@
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/einstein_probe/wxt/alert.schema.json",
   "instrument": "WXT",
   "trigger_time": "2024-03-01T21:46:05.13Z",
+  "event_name": ["EP240618a"],
   "ra": 120,
   "dec": 40,
   "ra_dec_error": 0.02,
