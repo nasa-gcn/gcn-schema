@@ -1,5 +1,6 @@
 {
   "name": "@nasa-gcn/schema",
+  "description": "Unified JSON Schema for multi-messenger and high-energy astronomy alerts",
   "version": "4.0.0",
   "scripts": {
     "prepare": "husky install",
