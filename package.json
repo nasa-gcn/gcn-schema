@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "ajv": "^8.17.1",
+    "ajv-formats": "^2.1.1",
     "execa": "^9.3.0",
     "glob": "^9.0.1",
     "husky": "^9.1.0",
@@ -31,8 +32,5 @@
   "lint-staged": {
     "*.{json,js,mjs}": "prettier --write",
     "*.schema.json": "node validate.mjs"
-  },
-  "dependencies": {
-    "ajv-formats": "^2.1.1"
   }
 }
