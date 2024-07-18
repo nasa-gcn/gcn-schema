@@ -37,17 +37,17 @@ async function validate() {
       const json = JSON.parse(
         await readFile(match, {
           encoding: 'utf-8',
-        })
+        }),
       )
       const expectedId = `${schemaIdPrefix}/${match}`
       if (json['$id'] !== expectedId) {
         console.error(
-          `error: ${match}: expected value of $id to be ${expectedId}, but found ${json['$id']}`
+          `error: ${match}: expected value of $id to be ${expectedId}, but found ${json['$id']}`,
         )
         process.exitCode = 1
       }
       return json
-    })
+    }),
   )
 
   try {
@@ -67,7 +67,7 @@ async function validate() {
       const example = JSON.parse(
         await readFile(path, {
           encoding: 'utf-8',
-        })
+        }),
       )
 
       const schemaId = example['$schema']
@@ -92,7 +92,7 @@ async function validate() {
         console.log(JSON.stringify(ajv.errors, null, 2))
         process.exitCode = 1
       }
-    })
+    }),
   )
 }
 
