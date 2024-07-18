@@ -34,5 +34,13 @@
       "type": "number",
       "description": "Date and time the Circular is accepted and published onto the GCN Circulars archive, formatted as a UNIX timestamp (milliseconds since the UNIX epoch)"
     }
-  }
+  },
+  "required": [
+    "eventId",
+    "submitter",
+    "subject",
+    "circularId",
+    "body",
+    "createdOn"
+  ]
 }
