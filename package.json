@@ -15,7 +15,7 @@
     "postversion": "node update-tags.mjs --reset && git add -u && git commit -m \"Back to development\""
   },
   "devDependencies": {
-    "ajv": "^8.12.0",
+    "ajv": "^8.17.1",
     "execa": "^9.3.0",
     "glob": "^9.0.1",
     "husky": "^9.1.0",
