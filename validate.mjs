@@ -7,7 +7,7 @@ import { execa, ExecaError } from 'execa'
 
 let ref
 try {
-  const { stdout } = await execa`git describe --exact-match --tags`
+  const { stdout } = await execa`git describe --tags --abbrev=0`
   ref = stdout
 } catch (e) {
   if (e instanceof ExecaError && e.failed) ref = 'main'
