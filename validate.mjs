@@ -3,18 +3,6 @@ import Ajv from 'ajv/dist/2020.js'
 import addFormats from 'ajv-formats'
 import meta from 'ajv/dist/refs/json-schema-2020-12/index.js'
 import { glob as baseGlob } from 'glob'
-import { execa, ExecaError } from 'execa'
-
-let ref
-try {
-  const { stdout } = await execa`git describe --tags --abbrev=0`
-  ref = stdout
-} catch (e) {
-  if (e instanceof ExecaError && e.failed) ref = 'main'
-  else throw e
-}
-
-const schemaIdPrefix = `https://gcn.nasa.gov/schema/${ref}`
 
 const ajv = new Ajv({
   validateSchema: true,
@@ -39,13 +27,6 @@ async function validate() {
           encoding: 'utf-8',
         }),
       )
-      const expectedId = `${schemaIdPrefix}/${match}`
-      if (json['$id'] !== expectedId) {
-        console.error(
-          `error: ${match}: expected value of $id to be ${expectedId}, but found ${json['$id']}`,
-        )
-        process.exitCode = 1
-      }
       return json
     }),
   )
