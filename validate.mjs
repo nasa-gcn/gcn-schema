@@ -3,6 +3,18 @@ import Ajv from 'ajv/dist/2020.js'
 import addFormats from 'ajv-formats'
 import meta from 'ajv/dist/refs/json-schema-2020-12/index.js'
 import { glob as baseGlob } from 'glob'
+import { execa, ExecaError } from 'execa'
+
+let ref
+try {
+  const { stdout } = await execa`git describe --exact-match --tags`
+  ref = stdout
+} catch (e) {
+  if (e instanceof ExecaError && e.failed) ref = 'main'
+  else throw e
+}
+
+const schemaIdPrefix = `https://gcn.nasa.gov/schema/${ref}`
 
 const ajv = new Ajv({
   validateSchema: true,
@@ -18,17 +30,24 @@ async function glob(path) {
   })
 }
 
-/** @param {string} path */
-async function validate(path) {
+async function validate() {
   const schemaFilenames = await glob('**/*.schema.json')
   const schemas = await Promise.all(
-    schemaFilenames.map(async (match) =>
-      JSON.parse(
+    schemaFilenames.map(async (match) => {
+      const json = JSON.parse(
         await readFile(match, {
           encoding: 'utf-8',
-        })
+        }),
       )
-    )
+      const expectedId = `${schemaIdPrefix}/${match}`
+      if (json['$id'] !== expectedId) {
+        console.error(
+          `error: ${match}: expected value of $id to be ${expectedId}, but found ${json['$id']}`,
+        )
+        process.exitCode = 1
+      }
+      return json
+    }),
   )
 
   try {
@@ -48,7 +67,7 @@ async function validate(path) {
       const example = JSON.parse(
         await readFile(path, {
           encoding: 'utf-8',
-        })
+        }),
       )
 
       const schemaId = example['$schema']
@@ -73,7 +92,7 @@ async function validate(path) {
         console.log(JSON.stringify(ajv.errors, null, 2))
         process.exitCode = 1
       }
-    })
+    }),
   )
 }
 

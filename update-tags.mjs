@@ -17,20 +17,20 @@ async function fileUpdates(fileSet, key, oldValue, newValue) {
       let file = JSON.parse(
         await readFile(fileItem, {
           encoding: 'utf-8',
-        })
+        }),
       )
       file[key] = file[key].replace(
         `https://gcn.nasa.gov/schema/${oldValue}/`,
-        `https://gcn.nasa.gov/schema/${newValue}/`
+        `https://gcn.nasa.gov/schema/${newValue}/`,
       )
 
       await writeFile(
         fileItem,
-        prettier.format(JSON.stringify(file), {
+        await prettier.format(JSON.stringify(file), {
           parser: 'json',
-        })
+        }),
       )
-    })
+    }),
   )
 }
 

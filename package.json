@@ -1,8 +1,13 @@
 {
   "name": "@nasa-gcn/schema",
+  "description": "Unified JSON Schema for multi-messenger and high-energy astronomy alerts",
   "version": "4.0.0",
+  "repository": {
+    "type": "git",
+    "url": "github:nasa-gcn/gcn-schema"
+  },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "validate:prettier": "prettier --check .",
     "validate:jsonschema": "node validate.mjs",
     "validate": "run-s validate:*",
@@ -10,12 +15,14 @@
     "postversion": "node update-tags.mjs --reset && git add -u && git commit -m \"Back to development\""
   },
   "devDependencies": {
-    "ajv": "^8.12.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "execa": "^9.3.0",
     "glob": "^9.0.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.0",
+    "husky": "^9.1.1",
+    "lint-staged": "^15.2.7",
     "npm-run-all": "^4.1.5",
-    "prettier": "2.8.3"
+    "prettier": "3.3.3"
   },
   "prettier": {
     "semi": false,
@@ -24,8 +31,5 @@
   "lint-staged": {
     "*.{json,js,mjs}": "prettier --write",
     "*.schema.json": "node validate.mjs"
-  },
-  "dependencies": {
-    "ajv-formats": "^2.1.1"
   }
 }
