@@ -1,0 +1,11 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/circulars.schema.json",
+  "eventId": "GRB 230410A",
+  "submitter": "Fermi GBM Team at MSFC/Fermi-GBM <do_not_reply@GIOC.nsstc.nasa.gov>",
+  "submittedHow": "email-legacy",
+  "subject": "GRB 230410A: Fermi GBM Final Real-time Localization",
+  "circularId": 33603,
+  "format": "text/plain",
+  "body": "The Fermi GBM team reports the detection of a likely LONG GRB\\n\\nAt 11:26:00 UT on 10 Apr 2023, the Fermi Gamma-ray Burst Monitor (GBM) triggered and located GRB 230410A (trigger 702818765.135562 / 230410476).\\n\\nThe on-ground calculated location, using the Fermi GBM trigger data, is RA = 352.3, Dec = 22.9 (J2000 degrees, equivalent to J2000 23h 29m, 22d 53'), with a statistical uncertainty of 2.1 degrees.\\n\\nThe angle from the Fermi LAT boresight is 72.0 degrees.\\n\\nThe skymap can be found here:\\nhttps://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2023/bn230410476/quicklook/glg_skymap_all_bn230410476.png\\n\\nThe HEALPix FITS file, including the estimated localization systematic, can be found here:\\nhttps://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2023/bn230410476/quicklook/glg_healpix_all_bn230410476.fit\\n\\nThe GBM light curve can be found here:\\nhttps://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2023/bn230410476/quicklook/glg_lc_medres34_bn230410476.gif",
+  "createdOn": 1718212589034
+}

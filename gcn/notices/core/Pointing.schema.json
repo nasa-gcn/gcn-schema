@@ -6,13 +6,13 @@
   "$comment": "Providers should $ref this schema directly but Attitudes.schema.json instead.",
   "type": "object",
   "properties": {
-    "ra": {
+    "ra_pointing": {
       "type": "number",
-      "description": "RA pointing of the instrument Z axis"
+      "description": "RA pointing of the instrument Z axis. ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system."
     },
-    "dec": {
+    "dec_pointing": {
       "type": "number",
-      "description": "Dec pointing of the instrument Z axis"
+      "description": "Dec pointing of the instrument Z axis. ICRS declination [deg], utilizes the J2000 epoch and an equatorial coordinate system."
     },
     "roll": {
       "type": "number",
