@@ -16,8 +16,11 @@
     "node": ">=18"
   },
   "devDependencies": {
+    "@nasa-gcn/eslint-config-gitignore": "^0.0.2",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^9.1.0",
     "execa": "^9.3.0",
     "glob": "^9.0.1",
     "husky": "^9.1.1",
@@ -28,8 +31,23 @@
     "semi": false,
     "singleQuote": true
   },
+  "eslintConfig": {
+    "env": {
+      "es2022": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "@nasa-gcn/eslint-config-gitignore",
+      "prettier"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  },
   "lint-staged": {
     "*.{json,js,mjs}": "prettier --write",
+    "*.{js,mjs}": "eslint --max-warnings 0",
     "*.schema.json": "node validate.mjs"
   }
 }
