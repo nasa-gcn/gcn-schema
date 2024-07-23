@@ -1,9 +1,14 @@
 import { readFile, writeFile } from 'fs/promises'
 import { glob as baseGlob } from 'glob'
-import packageJSON from './package.json'
 import * as prettier from 'prettier'
 
-const tagPath = `v${packageJSON.version}`
+// FIXME: replace with a JSON import when Import Attributes become part of
+// EcmaScript. See https://github.com/tc39/proposal-import-attributes
+const { version } = JSON.parse(
+  await readFile('package.json', { encoding: 'utf8' }),
+)
+
+const tagPath = `v${version}`
 
 async function glob(path) {
   return await baseGlob(path, {
