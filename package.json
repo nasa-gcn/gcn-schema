@@ -10,7 +10,7 @@
     "prepare": "husky",
     "test": "node validate.mjs",
     "version": "node update-tags.mjs && git add -u",
-    "postversion": "node update-tags.mjs --reset && git add -u && git commit -m \"Back to development\""
+    "postversion": "node update-tags.mjs --reset && git add -u && git commit --no-verify -m \"Back to development\""
   },
   "engines": {
     "node": ">=18"
