@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'fs/promises'
 import { glob as baseGlob } from 'glob'
-import packageJSON from './package.json' assert { type: 'json' }
+import packageJSON from './package.json'
 import * as prettier from 'prettier'
 
 const tagPath = `v${packageJSON.version}`
@@ -8,6 +8,7 @@ const tagPath = `v${packageJSON.version}`
 async function glob(path) {
   return await baseGlob(path, {
     ignore: ['node_modules/**'],
+    posix: true,
   })
 }
 
