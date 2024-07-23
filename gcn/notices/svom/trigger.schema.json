@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/trigger.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v4.1.0/gcn/notices/svom/trigger.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "unevaluatedProperties": false,
@@ -24,9 +24,7 @@
     },
     "triggered_GRDs": {
       "type": "array",
-      "items": {
-        "type": "boolean"
-      },
+      "items": { "type": "boolean" },
       "minItems": 3,
       "maxItems": 3,
       "description": "In case of a GRM trigger, trigger status the 3 GRDs. Each item correspond to one of the 3 GRDs: true means the GRD triggers, false not"

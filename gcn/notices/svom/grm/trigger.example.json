@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/trigger.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v4.1.0/gcn/notices/svom/trigger.schema.json",
   "instrument": "GRM",
   "alert_datetime": "2024-02-22T08:51:55",
   "alert_tense": "test",
@@ -10,7 +10,7 @@
   "dec": -68.0289,
   "ra_dec_error": 0.1,
   "rate_snr": 25.67,
-  "rate_duration": 0.0,
+  "rate_duration": 0,
   "rate_energy_range": [15, 550],
   "triggered_GRDs": [true, true, true]
 }
