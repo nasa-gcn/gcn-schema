@@ -27,6 +27,7 @@ ajv.addMetaSchema(meta)
 async function glob(path) {
   return await baseGlob(path, {
     ignore: ['test/**', 'node_modules/**'],
+    posix: true,
   })
 }
 
