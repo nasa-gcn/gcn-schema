@@ -3,7 +3,6 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Instrument Pointing",
   "description": "Instrument pointing and rotational rates.",
-  "$comment": "Providers should $ref this schema directly but Attitudes.schema.json instead.",
   "type": "object",
   "properties": {
     "ra_pointing": {
