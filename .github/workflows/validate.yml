@@ -7,7 +7,26 @@ on:
     branches:
       - main
 jobs:
-  build:
+  test:
     uses: nasa-gcn/.github/.github/workflows/node.yml@main
     with:
       test-options:
+  bump:
+    name: dry run of version bump
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: Configure git identity
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+      - name: Install package
+        run: npm ci
+      - name: Bump version
+        run: npm version patch
+      - name: Run validation
+        run: npm test
