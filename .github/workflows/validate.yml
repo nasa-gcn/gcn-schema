@@ -1,17 +1,13 @@
-name: Validate schema
-
-on: [push, pull_request]
-
+name: Validate
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - name: NPM Install
-        run: npm ci
-      - name: Validate
-        run: npm run validate
+    uses: nasa-gcn/.github/.github/workflows/node.yml@main
+    with:
+      test-options:
