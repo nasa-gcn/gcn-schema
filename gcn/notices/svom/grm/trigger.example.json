@@ -10,7 +10,7 @@
   "dec": -68.0289,
   "ra_dec_error": 0.1,
   "rate_snr": 25.67,
-  "rate_duration": 0.0,
+  "rate_duration": 0,
   "rate_energy_range": [15, 550],
   "triggered_GRDs": [true, true, true]
 }

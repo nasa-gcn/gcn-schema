@@ -1,7 +1,7 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json",
-  "ra": 120.5,
-  "dec": 30.2,
+  "ra_pointing": 120.5,
+  "dec_pointing": 30.2,
   "roll": -12.8,
   "position_angle": 23.7,
   "attitude_quarternion": [0.2, 0.3, 0.4, 0.5],

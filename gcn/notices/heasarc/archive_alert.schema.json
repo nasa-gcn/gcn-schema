@@ -5,18 +5,10 @@
   "title": "HEASARC - Data in Archive",
   "description": "Data Archived at HEASARC",
   "allOf": [
-    {
-      "$ref": "../core/Alert.schema.json"
-    },
-    {
-      "$ref": "../core/DateTime.schema.json"
-    },
-    {
-      "$ref": "../core/Event.schema.json"
-    },
-    {
-      "$ref": "../core/Reporter.schema.json"
-    }
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" }
   ],
   "properties": {
     "obs_id": {

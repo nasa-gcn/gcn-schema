@@ -10,7 +10,7 @@
   "dec": -68.0289,
   "ra_dec_error": 0.1,
   "image_snr": 25.67,
-  "image_duration": 0.0,
+  "image_duration": 0,
   "image_energy_range": [4, 20],
   "trigger_type": "rate",
   "slew_status": "accepted"

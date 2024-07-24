@@ -1,31 +1,53 @@
 {
   "name": "@nasa-gcn/schema",
-  "version": "4.0.0",
+  "description": "Unified JSON Schema for multi-messenger and high-energy astronomy alerts",
+  "version": "4.1.0",
+  "repository": {
+    "type": "git",
+    "url": "github:nasa-gcn/gcn-schema"
+  },
   "scripts": {
-    "prepare": "husky install",
-    "validate:prettier": "prettier --check .",
-    "validate:jsonschema": "node validate.mjs",
-    "validate": "run-s validate:*",
+    "prepare": "husky",
+    "test": "node validate.mjs",
     "version": "node update-tags.mjs && git add -u",
-    "postversion": "node update-tags.mjs --reset && git add -u && git commit -m \"Back to development\""
+    "postversion": "node update-tags.mjs --reset && git add -u && git commit --no-verify -m \"Back to development\""
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
-    "ajv": "^8.12.0",
-    "glob": "^9.0.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "2.8.3"
+    "@nasa-gcn/eslint-config-gitignore": "^0.0.2",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^9.1.0",
+    "execa": "^9.3.0",
+    "glob": "^10.1.0",
+    "husky": "^9.1.1",
+    "lint-staged": "^15.2.7",
+    "prettier": "3.3.3"
   },
   "prettier": {
     "semi": false,
     "singleQuote": true
   },
+  "eslintConfig": {
+    "env": {
+      "es2022": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "@nasa-gcn/eslint-config-gitignore",
+      "prettier"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  },
   "lint-staged": {
     "*.{json,js,mjs}": "prettier --write",
+    "*.{js,mjs}": "eslint --max-warnings 0",
     "*.schema.json": "node validate.mjs"
-  },
-  "dependencies": {
-    "ajv-formats": "^2.1.1"
   }
 }

@@ -1,13 +1,19 @@
 import { readFile, writeFile } from 'fs/promises'
 import { glob as baseGlob } from 'glob'
-import packageJSON from './package.json' assert { type: 'json' }
 import * as prettier from 'prettier'
 
-const tagPath = `v${packageJSON.version}`
+// FIXME: replace with a JSON import when Import Attributes become part of
+// EcmaScript. See https://github.com/tc39/proposal-import-attributes
+const { version } = JSON.parse(
+  await readFile('package.json', { encoding: 'utf8' }),
+)
+
+const tagPath = `v${version}`
 
 async function glob(path) {
   return await baseGlob(path, {
     ignore: ['node_modules/**'],
+    posix: true,
   })
 }
 
@@ -17,20 +23,20 @@ async function fileUpdates(fileSet, key, oldValue, newValue) {
       let file = JSON.parse(
         await readFile(fileItem, {
           encoding: 'utf-8',
-        })
+        }),
       )
       file[key] = file[key].replace(
         `https://gcn.nasa.gov/schema/${oldValue}/`,
-        `https://gcn.nasa.gov/schema/${newValue}/`
+        `https://gcn.nasa.gov/schema/${newValue}/`,
       )
 
       await writeFile(
         fileItem,
-        prettier.format(JSON.stringify(file), {
+        await prettier.format(JSON.stringify(file), {
           parser: 'json',
-        })
+        }),
       )
-    })
+    }),
   )
 }
 
