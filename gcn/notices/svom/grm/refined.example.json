@@ -1,0 +1,19 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/refined.schema.json",
+  "mission": "SVOM",
+  "instrument": "GRM",
+  "messenger": "EM",
+  "alert_datetime": "2024-02-22T08:52:55",
+  "alert_tense": "current",
+  "alert_type": "update",
+  "trigger_time": "2024-02-22T08:51:31.310000",
+  "id": ["sb24022203"],
+  "t90": 4.48,
+  "t90_error": [0.06, 0.07],
+  "hardness_ratio": 0.07,
+  "hardness_ratio_error": [0.01],
+  "energy_range_soft": [50.0, 300.0],
+  "energy_range_hard": [300.0, 700.0],
+  "classification": { "short_grb": 26.0, "long_grb": 74.0 },
+  "slew_status": "not-requested"
+}

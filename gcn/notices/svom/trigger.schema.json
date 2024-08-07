@@ -12,9 +12,7 @@
     { "$ref": "../core/Event.schema.json" },
     { "$ref": "../core/Localization.schema.json" },
     { "$ref": "../core/Reporter.schema.json" },
-    { "$ref": "../core/Statistics.schema.json" },
-    { "$ref": "../core/Pointing.schema.json" },
-    { "$ref": "../core/GeoLocBase.schema.json" }
+    { "$ref": "../core/Statistics.schema.json" }
   ],
   "properties": {
     "$schema": true,
