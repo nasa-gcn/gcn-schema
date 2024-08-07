@@ -1,0 +1,31 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/gecam/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "GECAM Trigger Alert",
+  "allOf": [
+    { "ref": "../core/Alert.schema.json" },
+    { "ref": "../core/DateTime.schema.json" },
+    { "ref": "../core/Event.schema.json" },
+    { "ref": "../core/Localization.schema.json" },
+    { "ref": "../core/Orbit.schema.json" },
+    { "ref": "../core/Reporter.schema.json" },
+    { "ref": "../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "notice_type": {
+      "type:": "string",
+      "description": "GECAM has two notice types: Flight and Ground"
+    },
+    "mission_type": {
+      "type": "string",
+      "description": "The satellite which recorded the data; either A or B"
+    },
+    "duration": {
+      "type": "number",
+      "description": "The collection duration of the trigger"
+    }
+  }
+}
