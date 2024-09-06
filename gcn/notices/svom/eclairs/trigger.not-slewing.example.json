@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v4.2.0/gcn/notices/svom/trigger.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/trigger.schema.json",
   "instrument": "ECLAIRs",
   "alert_datetime": "2024-02-22T08:51:55",
   "alert_tense": "test",
