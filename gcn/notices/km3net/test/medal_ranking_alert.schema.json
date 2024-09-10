@@ -81,15 +81,15 @@
   "$defs": {
     "prob_evt_topology": {
       "type": "string",
-      "description": "track, shower, starting event."
+      "description": "Most probable event topology, could be track ('starting' if the origin is inside the detector) or shower. Track is associated to a muon flavor, shower can be the 3 flavors."
     },
     "cos_zenith": {
       "type": "number",
-      "description": "Value of the cosine of the angle between the event direction and the vertical -1 correspond to up-going event while 1 is down-going."
+      "description": "Value of the cosine of the angle between the event direction and the vertical. -1 correspond to up-going event while 1 is down-going."
     },
     "n_triggered_pmt": {
       "type": "number",
-      "description": "Number of PMT triggered by the event (energy proxy)."
+      "description": "Number of PMT triggered by the event (i.e energy proxy)."
     },
     "space_time_coord": {
       "type": "object",
