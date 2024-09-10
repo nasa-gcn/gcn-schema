@@ -7,7 +7,7 @@
   "alert_tense": "test",
   "alert_type": "initial",
   "alert_datetime": "2024-09-01T12:01:00.00Z",
-  "analysis_pipeline": "exceptionnal_evt_arca",
+  "analysis_pipeline": "exceptional_evt_arca",
   "description": "KM3NeT online analysis, bronze candidate neutrino observation.",
   "event_name": ["KM240901A"],
   "trigger_time": "2024-09-01T12:00:00.00Z",
