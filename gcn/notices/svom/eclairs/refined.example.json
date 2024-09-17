@@ -8,6 +8,7 @@
   "alert_type": "update",
   "trigger_time": "2024-02-22T08:51:31.310000",
   "id": ["sb24022203"],
+  "record_number": 3,
   "t90": 4.48,
   "t90_error": [0.06, 0.07],
   "hardness_ratio": 0.07,

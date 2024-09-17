@@ -10,9 +10,11 @@
   "record_number": 1,
   "trigger_time": "2024-02-22T08:51:31.320000",
   "image_snr": 25.67,
-  "mean_flux": 5.1,
-  "flux_error": 0.2,
+  "image_duration": 30,
+  "energy_flux": 5.1,
+  "energy_flux_error": 0.2,
   "ra": 143.2478,
   "dec": -68.0289,
-  "ra_dec_error": 0.1
+  "ra_dec_error": 0.1,
+  "use_VT_attitude": true
 }

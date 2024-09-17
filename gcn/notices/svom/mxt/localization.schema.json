@@ -12,21 +12,14 @@
     { "$ref": "../../core/Event.schema.json" },
     { "$ref": "../../core/Localization.schema.json" },
     { "$ref": "../../core/Reporter.schema.json" },
-    { "$ref": "../../core/Statistics.schema.json" }
+    { "$ref": "../../core/Statistics.schema.json" },
+    { "$ref": "../../core/spectral/GammaRay.schema.json" }
   ],
   "properties": {
     "$schema": true,
-    "mean_flux": {
-      "type": "number",
-      "description": "Mean flux of the detection [erg.cm^-2]"
-    },
-    "flux_error": {
-      "type": "number",
-      "description": "Error on the mean flux of the detection [erg.cm^-2]"
-    },
     "use_VT_attitude": {
       "type": "boolean",
-      "description": "Whether the platform stabilisation process uses the VT instead of the standard star tracker. This leads to an improved localization."
+      "description": "If True, the platform uses the VT quaternions instead of the standard star tracker. This leads to an improved localization."
     }
   }
 }
