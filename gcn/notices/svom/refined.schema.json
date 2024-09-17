@@ -1,0 +1,26 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/refined.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "T90 and HR parameters of a burst candidate",
+  "description": "Burst parameter and classification derived from a subset of ECLAIRs and GRM data, or a joint ECLGRM analysis",
+  "allOf": [
+    { "$ref": "../core/AdditionalInfo.schema.json" },
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/Duration.schema.json" },
+    { "$ref": "../core/HardnessRatio.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "slew_status": {
+      "enum": ["accepted", "rejected", "not-requested"],
+      "description": "Spacecraft slew status"
+    }
+  }
+}

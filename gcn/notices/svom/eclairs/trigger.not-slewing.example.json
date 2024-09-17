@@ -5,6 +5,7 @@
   "alert_tense": "test",
   "alert_type": "update",
   "id": ["sb24022203"],
+  "record_number": 2,
   "trigger_time": "2024-02-22T08:51:31.320000",
   "ra": 143.2478,
   "dec": -68.0289,
