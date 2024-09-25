@@ -1,0 +1,17 @@
+{
+  "alert_datetime": "2023-1-25T13:25:38Z",
+  "trigger_time": "2023-01-25T13:13:35.00Z",
+  "ra": 198.2299,
+  "dec": 59.5099,
+  "ra_dec_error": 25.18,
+  "ra_dec_error_50": 13.8,
+  "record_number": 1,
+  "far": 1.1096841704718416e-7,
+  "event_date": "230125A",
+  "additional_info": "AMON NEUTRINO-EM Coincidence.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/amon/alert.schema.json",
+  "mission": "AMON",
+  "notice_type": "Neutrino-EM Coincidence",
+  "id": ["0_127938"],
+  "coincidence_with": ["IC-HAWC"]
+}

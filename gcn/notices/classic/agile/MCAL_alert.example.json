@@ -1,0 +1,29 @@
+{
+  "alert_datetime": "2022-9-16T14:36:53Z",
+  "id": [590418347],
+  "trigger_time": "2022-09-16T13:05:47.55Z",
+  "n_events": 234,
+  "events_snr": 16.6,
+  "peak_events": 30,
+  "peak_snr": 8.19,
+  "bkg_events": 7,
+  "triggering_interval": 0.032,
+  "duration": 0.349,
+  "lightcurve_url": "http://www.agilescienceapp.it/notices/080080_GRB_590418347.550575.png",
+  "additional_info": "AGILE MCAL TRIGGER.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/agile/alert.schema.json",
+  "mission": "AGILE",
+  "notice_type": "MCAL",
+  "longitude": 175.6,
+  "latitude": 1.62,
+  "events_energy_range": [400, 100000],
+  "trigger_logic": {
+    "sub-ms": false,
+    "1ms": false,
+    "16ms": false,
+    "64ms": false,
+    "256ms": false,
+    "1024ms": false,
+    "8192ms": false
+  }
+}

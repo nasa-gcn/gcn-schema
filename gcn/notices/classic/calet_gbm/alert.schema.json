@@ -1,0 +1,41 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/calet_gbm/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "CALET GBM Lightcurve Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/GeoLocBase.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "lightcurve_url": {
+      "type": "string",
+      "description": "The url at which the lightcurve for the trigger is stored."
+    },
+    "foreground_duration": {
+      "type": "number",
+      "description": "The amount of time that defines the triggering interval."
+    },
+    "background_duration": {
+      "type": "number",
+      "description": "The amount of time used to define the background countrate used to calcuate signal-to-noise ratio."
+    },
+    "detector_status": {
+      "type": "object",
+      "properties": {
+        "HXM1": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "HXM2": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "SGM": { "$ref": "../../core/DetectorStatus.schema.json" }
+      }
+    }
+  }
+}
