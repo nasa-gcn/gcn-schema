@@ -1,0 +1,18 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/detectors.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "detectors_status": {
+      "type": "array",
+      "items": {
+        "$ref": "../../core/DetectorStatus.schema.json"
+      },
+      "minItems": 14,
+      "maxItems": 14,
+      "description": "Triggered detectors"
+    }
+  }
+}
