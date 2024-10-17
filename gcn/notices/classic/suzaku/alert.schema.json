@@ -1,0 +1,23 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/suzaku/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "Counterpart Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "lightcurve_url": {
+      "type": "string",
+      "description": "URL to the GIF containing the lightcurve associated with the trigger."
+    }
+  }
+}
