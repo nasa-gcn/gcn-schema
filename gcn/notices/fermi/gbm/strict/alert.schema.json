@@ -1,0 +1,174 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GCN Schema for Fermi GBM Alert Notices",
+  "description": "This schema is a stricter version of the more permissive main schema, https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json.  The Kafka server uses the main schema for new notices.  Each Alert notice (classic numeric type 110) must validate against the main schema and should also validate against this one.  Examples in this directory come in two versions referencing the main and the strict schemas respectively.  The intent of the strict schema is to help understanding the Alert notice, since it better describes what content to be expected.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "enum": [
+        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json",
+        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/alert.schema.json"
+      ],
+      "description": "Required by GCN"
+    },
+    "additional_info": {
+      "type": "string",
+      "default": null,
+      "description": "Free text comments about the event and the notice."
+    },
+    "alert_datetime": {
+      "type": "string",
+      "description": "Date and time of notice creation [UTC, ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
+    },
+    "alert_tense": {
+      "enum": [
+        "current",
+        "archival",
+        "planned",
+        "injection",
+        "commanded",
+        "test"
+      ],
+      "default": "current",
+      "description": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), a planned observation in the future (planned), a signal injection (injection), commanded trigger (commanded) or a test trigger (test)."
+    },
+    "alert_type": {
+      "enum": ["initial", "update", "retraction"],
+      "default": "initial",
+      "description": "Indication of alert sequence if multiple of same type sent"
+    },
+    "data_archive_page": {
+      "type": "string",
+      "description": "URL of archived data files"
+    },
+    "detectors_status": {
+      "type": "array",
+      "items": {
+        "enum": ["on", "off", "triggered"]
+      },
+      "minItems": 14,
+      "maxItems": 14,
+      "description": "Triggered detectors"
+    },
+    "event_name": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Name of the event, for example GRB170817A"
+    },
+    "hitl": {
+      "type": "boolean",
+      "default": false,
+      "description": "\"Human in the loop\".  When false, the notice was generated entirely automatically.  A value of true means that a human had an input, while the notice was being prepared.  The latter includes notices, which weren't altered by the human input, i.e. simply confirmed or approved by a human for further processing."
+    },
+    "id": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "description": "Instrument-specific trigger ID, for example: 745121685, bn240812094"
+    },
+    "instrument": {
+      "const": "GBM",
+      "default": "GBM",
+      "description": "Name of the instrument reporting the event"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Geocentric latitude [deg]"
+    },
+    "light_curve_url": {
+      "type": "string",
+      "description": "URL of the quicklook light curve plot"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Geocentric longitude [deg]"
+    },
+    "messenger": {
+      "const": "EM",
+      "default": "EM",
+      "description": "Messenger of report; EM, GW or Neutrino"
+    },
+    "mission": {
+      "const": "Fermi",
+      "default": "Fermi",
+      "description": "Name of Mission or Telescope reporting the event"
+    },
+    "notice_type": {
+      "const": "FERMI_GBM_ALERT",
+      "description": "Notice title"
+    },
+    "rate_duration": {
+      "type": "number",
+      "description": "Duration in seconds of the ime interval used in the signal to noise ratio calculation"
+    },
+    "rate_energy_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Energy bounds in keV used in the signal to noise ratio calculation"
+    },
+    "rate_snr": {
+      "type": "number",
+      "description": "Signal to noise ratio"
+    },
+    "record_number": {
+      "type": "number",
+      "description": "Incremental number for notices related to the same trigger (ex: 1, 2, 3)"
+    },
+    "spectrum": {
+      "const": "energy",
+      "default": "energy",
+      "description": "high-energy or optical or radio observations, if not parsed, then default band is energy"
+    },
+    "trigger_algorithm_number": {
+      "type": "number",
+      "description": "The criterion number that caused the flight software to trigger. Not to be confused with flight software or any other version number."
+    },
+    "trigger_time": {
+      "type": "string",
+      "description": "Time of the trigger [ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
+    },
+    "trigger_type": {
+      "const": "rate",
+      "default": "rate",
+      "description": "Type of trigger algorithm used to identify the transient event."
+    },
+    "units": {
+      "const": "keV",
+      "default": "keV",
+      "description": "Units of band range, if not parsed, then default energy is keV"
+    }
+  },
+  "required": [
+    "alert_datetime",
+    "data_archive_page",
+    "detectors_status",
+    "event_name",
+    "id",
+    "latitude",
+    "light_curve_url",
+    "longitude",
+    "notice_type",
+    "rate_duration",
+    "rate_energy_range",
+    "rate_snr",
+    "record_number",
+    "trigger_algorithm_number",
+    "trigger_time"
+  ],
+  "additionalProperties": false
+}
