@@ -5,13 +5,7 @@
   "description": "This schema is a stricter version of the more permissive main schema, https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json.  The Kafka server uses the main schema for new notices.  Each Alert notice (classic numeric type 110) must validate against the main schema and should also validate against this one.  Examples in this directory come in two versions referencing the main and the strict schemas respectively.  The intent of the strict schema is to help understanding the Alert notice, since it better describes what content to be expected.",
   "type": "object",
   "properties": {
-    "$schema": {
-      "enum": [
-        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json",
-        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/alert.schema.json"
-      ],
-      "description": "Required by GCN"
-    },
+    "$schema": { "type": "string", "format": "uri" },
     "additional_info": {
       "type": "string",
       "default": null,
