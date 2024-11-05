@@ -6,6 +6,22 @@ The alert format for new Notices over GCN Kafka is JavaScript Object Notation (J
 
 Please add your schema to this repository under <code>gcn/notices/<i>mission</i>/</code> and submit a pull request for the GCN Team to review. The GCN team is happy to iterate with the producers on their schema contents and format. Your pipeline will generate JSON files following these schema and send alerts to GCN as described in [New Notice Producers](https://gcn.nasa.gov/docs/notices/producers).
 
+## How to Contribute
+
+To get started, fork the [nasa-gcn/gcn-schema](https://github.com/nasa-gcn/gcn-schema) repository on GitHub and clone it on your computer. If you are new to GitHub, refer to our [GitHub primer](https://gcn.nasa.gov/docs/contributing/github).
+
+After you have forked and cloned the repository, make sure that Node.js and NPM are installed on your computer. There are several options to install Node.js and NPM. Pick _one_ of the following:
+
+- Download and run [the Node.js installer for your operating system](https://nodejs.org/en/download/).
+- Install and use the [Node Version Manager, nvm](https://github.com/nvm-sh/nvm).
+- Install using a [package manager](https://nodejs.org/en/download/package-manager/).
+
+Finally, run the following command inside the repository working directory to install the pre-commit hooks for code formatting and syntax checking:
+
+```
+npm install
+```
+
 ## How To Release
 
 1.  Clone the parent repo (nasa-gcn/gcn-schema).
