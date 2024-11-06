@@ -104,7 +104,7 @@
     },
     "rate_duration": {
       "type": "number",
-      "description": "Duration in seconds of the ime interval used in the signal to noise ratio calculation"
+      "description": "Duration in seconds of the time interval used in the signal to noise ratio calculation"
     },
     "rate_energy_range": {
       "type": "array",
