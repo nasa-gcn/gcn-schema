@@ -22,7 +22,7 @@
     "on"
   ],
   "event_name": ["GRB240824A"],
-  "hitl": false,
+  "human_in_the_loop": false,
   "id": ["745121685", "bn240812094"],
   "instrument": "GBM",
   "latitude": 23.83,

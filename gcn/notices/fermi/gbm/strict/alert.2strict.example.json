@@ -1,6 +1,6 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/alert.schema.json",
-  "additional_info": "*** ABOUT THIS EXAMPLE: This is an example of a Fermi GBM Alert GCN notice. Only stricly necessary fields are present. This 'about' note is not going to be part of a streamed real notice. This field may be missing or empty in case of no comments. An example of a typical notice comment follows. ***\n\nLightcurve and other quicklook files will not be created until about 15 minutes after the trigger.",
+  "additional_info": "*** ABOUT THIS EXAMPLE: This is an example of a Fermi GBM Alert GCN notice. Only stricly necessary fields are present. This 'about' note is not going to be part of streamed/real notices. This field may be missing or empty in case of no comments. An example of a typical notice comment follows. ***\n\nLightcurve and other quicklook files will not be created until about 15 minutes after the trigger.",
   "alert_datetime": "2024-08-24T02:14:54",
   "data_archive_page": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094",
   "detectors_status": [

@@ -1,6 +1,6 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json",
-  "additional_info": "*** ABOUT THIS EXAMPLE: This is an example of a Fermi GBM Alert GCN notice. All fields, including the optional ones, are present. This 'about' note is not going to be part of a streamed real notice. This field may be missing or empty in case of no comments. An example of a typical notice comment follows. ***\n\nLightcurve and other quicklook files will not be created until about 15 minutes after the trigger.",
+  "additional_info": "*** ABOUT THIS EXAMPLE: This is an example of a Fermi GBM Alert GCN notice. All fields, including the optional ones, are present. This 'about' note is not going to be part of streamed/real notices. This field may be missing or empty in case of no comments. An example of a typical notice comment follows. ***\n\nLightcurve and other quicklook files will not be created until about 15 minutes after the trigger.",
   "alert_datetime": "2024-08-24T02:14:54",
   "alert_tense": "current",
   "alert_type": "initial",
@@ -22,7 +22,7 @@
     "on"
   ],
   "event_name": ["GRB240824A"],
-  "hitl": false,
+  "human_in_the_loop": false,
   "id": ["745121685", "bn240812094"],
   "instrument": "GBM",
   "latitude": 23.83,
