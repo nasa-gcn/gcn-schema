@@ -144,7 +144,7 @@
     "units": {
       "const": "keV",
       "default": "keV",
-      "description": "Units of band range, if not parsed, then default energy is keV"
+      "description": "Units of the \"rate_energy_range\", if not parsed, then default energy is in keV"
     }
   },
   "required": [
