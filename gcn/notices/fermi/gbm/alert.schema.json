@@ -35,9 +35,9 @@
       "type": "string",
       "description": "Notice title"
     },
-    "hitl": {
+    "human_in_the_loop": {
       "type": "boolean",
-      "description": "\"Human in the loop\".  When false, the notice was generated entirely automatically.  A value of true means that a human had an input, while the notice was being prepared.  The latter includes notices, which weren't altered by the human input, i.e. simply confirmed or approved by a human for further processing."
+      "description": "Someimes abbreviated as \"HITL\".  When false, the notice was generated entirely automatically.  A value of true means that a human had an input, while the notice was being prepared.  The latter includes notices, which weren't altered by the human input, but a human was given the option to make an input, or asked to confirm, or approve before further processing."
     },
     "trigger_algorithm_number": {
       "type": "number",
