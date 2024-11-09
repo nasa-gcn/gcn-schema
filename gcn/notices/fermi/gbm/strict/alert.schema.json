@@ -130,7 +130,7 @@
     },
     "trigger_algorithm_number": {
       "type": "number",
-      "description": "The criterion number that caused the flight software to trigger. Not to be confused with flight software or any other version number."
+      "description": "The number identifying the algorithm that detected the gamma-ray burst and caused the trigger.  \"Trigger algorithm\" here is a moniker for a method or a criterion that watches for significant rate increase in the observed rate.  Multiple \"trigger algorithms\" are active simultaneously and any one can trigger independently.  The trigger_algorithm_number, tells which one did."
     },
     "trigger_time": {
       "type": "string",
