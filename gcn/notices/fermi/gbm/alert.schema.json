@@ -33,6 +33,7 @@
   "properties": {
     "notice_type": {
       "type": "string",
+      "const": "FERMI_GBM_ALERT",
       "description": "Notice title"
     },
     "human_in_the_loop": {
