@@ -38,7 +38,7 @@
     },
     "human_in_the_loop": {
       "type": "boolean",
-      "description": "Someimes abbreviated as \"HITL\".  When false, the notice was generated entirely automatically.  A value of true means that a human had an input, while the notice was being prepared.  The latter includes notices, which weren't altered by the human input, but a human was given the option to make an input, or asked to confirm, or approve before further processing."
+      "description": "True when a human had input or confirmed before further processing. False when the notice was generated entirely automatically. Sometimes abbreviated as \"HITL\"."
     },
     "trigger_algorithm_number": {
       "type": "number",
