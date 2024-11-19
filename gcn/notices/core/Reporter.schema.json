@@ -27,6 +27,12 @@
       "type": "string",
       "default": "energy"
     },
+    "spectral_center": {
+      "enum": ["energy", "wavelength", "frequency"],
+      "description": "Central value of the observing band",
+      "type": "number",
+      "default": "energy"
+    },
     "units": {
       "enum": ["keV", "nm", "Hz"],
       "description": "Units of band range, if not parsed, then default energy is keV",
