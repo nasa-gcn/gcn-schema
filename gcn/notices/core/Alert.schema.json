@@ -22,7 +22,7 @@
     },
     "alert_type": {
       "enum": ["initial", "update", "retraction"],
-      "description": "Indication of alert sequence if multiple of same type sent"
+      "description": "Indication of alert sequence if multiple of the same type are sent."
     }
   }
 }
