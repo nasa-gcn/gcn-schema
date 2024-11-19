@@ -1,0 +1,45 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/RadioSignal.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Radio transients specific schema",
+  "description": "Observables for studying the radio transients",
+  "properties": {
+    "dm": {
+      "type": "number",
+      "description": "Dispersion measure of the burst [pc/cm^3]"
+    },
+    "dm_error": {
+      "type": "number",
+      "description": "Error on the dispersion measure [pc/cm^3]"
+    },
+    "dm_gal_ne_2001_max": {
+      "type": "number",
+      "description": "Estimated contribution to the dispersion measure from the Galaxy using the NE2001 model."
+    },
+    "dm_gal_ymw_2016_max": {
+      "type": "number",
+      "description": "Estimated contribution to the dispersion measure from the Galaxy using the YMW2016 model."
+    },
+    "sampling_time": {
+      "type": "number",
+      "description": "The time resolution of the real-time FRB search."
+    },
+    "bandwidth": {
+      "type": "number",
+      "description": "The bandwidth of the real-time FRB search."
+    },
+    "centre_frequency": {
+      "type": "number",
+      "description": "The centre frequency of the real-time FRB search."
+    },
+    "npol": {
+      "type": "number",
+      "description": "The number of polarizations of the real-time FRB search."
+    },
+    "tsys": {
+      "type": "number",
+      "description": "The system temperature of the real-time FRB search."
+    }
+  }
+}
