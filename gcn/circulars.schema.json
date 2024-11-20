@@ -29,18 +29,14 @@
       "enum": ["text/plain", "text/markdown"],
       "description": "Format of the body text as a MIME type. See https://gcn.nasa.gov/docs/circulars/markdown for documentation on using Markdown in Circulars"
     },
-    "body": { "type": "string", "description": "Body text" },
+    "body": {
+      "type": "string",
+      "description": "Body text"
+    },
     "createdOn": {
       "type": "number",
       "description": "Date and time the Circular is accepted and published onto the GCN Circulars archive, formatted as a UNIX timestamp (milliseconds since the UNIX epoch)"
     }
   },
-  "required": [
-    "eventId",
-    "submitter",
-    "subject",
-    "circularId",
-    "body",
-    "createdOn"
-  ]
+  "required": ["submitter", "subject", "circularId", "body", "createdOn"]
 }
