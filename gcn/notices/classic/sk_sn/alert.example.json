@@ -1,0 +1,19 @@
+{
+  "alert_datetime": "2024-1-01T00:00:24Z",
+  "trigger_time": "2023-12-31T23:19:02.55Z",
+  "ra": 270.8199,
+  "dec": 31.46,
+  "ra_dec_error": 0.91,
+  "ra_dec_error_68": 0.64,
+  "ra_dec_error_95": 1.04,
+  "n_events": 64176,
+  "collection_duration": 10.0,
+  "energy_limit": 7000.0,
+  "additional_info": "The position error is statistical only, there is no systematic added.  \nAll numbers are preliminary.  \n\nNOTE: This is a TEST Notice.  \n",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/sk_sn/alert.schema.json",
+  "mission": "Super-Kamiokande",
+  "messenger": "Neutrino",
+  "alert_tense": "test",
+  "id": [10058],
+  "distance_range": [0.00216, 0.0029500000000000004]
+}
