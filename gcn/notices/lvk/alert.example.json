@@ -1,0 +1,38 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/lvk/alert.schema.json",
+  "alert_type": "update",
+  "alert_datetime": "2018-11-01T22:36:25Z",
+  "id": ["MS181101ab"],
+  "trigger_time": "2018-11-01T22:22:46.654Z",
+  "far": 9.11069936486e-14,
+  "significant": true,
+  "detector_status": {
+    "H1": "triggered",
+    "L1": "triggered",
+    "V1": "triggered"
+  },
+  "healpix_file": "U0lNUExFICA9ICAgICAgICAgICAgICAgICAgICBUIC8gY29uZm...",
+  "healpix_url": "https://gracedb.ligo.org/api/superevents/MS181101ab/files/bayestar.multiorder.fits,0",
+  "search": "MDC",
+  "group": "CBC",
+  "pipeline": "gstlal",
+  "duration": null,
+  "central_frequency": null,
+  "properties": { "HasNS": 0.95, "HasRemnant": 0.91, "HasMassGap": 0.01 },
+  "classification": {
+    "BNS": 0.95,
+    "NSBH": 0.01,
+    "BBH": 0.03,
+    "Terrestrial": 0.01
+  },
+  "external_coincidence": {
+    "gcn_notice_id": 524666471,
+    "ivorn": "ivo://nasa.gsfc.gcn/Fermi#GBM_Fin_Pos2017-08-17T12:41:06.47_524666471_0-389",
+    "observatory": "Fermi",
+    "search": "GRB",
+    "time_difference": 2.02,
+    "time_coincidence_far": 2.14387838137e-14,
+    "time_sky_position_coincidence_far": 6.410749524018777e-16,
+    "combined_skymap": "U0lNUExFICA9ICAgICAgICAgICAgICAgICAgICBUIC8gY29uZm..."
+  }
+}
