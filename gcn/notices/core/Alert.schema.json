@@ -22,7 +22,7 @@
     },
     "alert_type": {
       "enum": ["initial", "subsequent", "update", "retraction"],
-      "description": "Indication of alert sequence if multiple of the same type are sent. Alert sequence: initial refers to the detection, followed by subsequent alerts for recurrent observations from the same source. Updates and retractions come from further analysis."
+      "description": "Indication of alert sequence if multiple of the same type are sent. Alert sequence: initial refers to the detection, followed by subsequent alerts for recurrent detections of the same source. Updates and retractions come from further analysis."
     }
   }
 }
