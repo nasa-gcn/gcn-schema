@@ -21,8 +21,8 @@
       "description": "Indication of whether this alert refers to a recent observation (current), re-analysis of archival data (archival), a planned observation in the future (planned), a signal injection (injection), commanded trigger (commanded) or a test trigger (test)."
     },
     "alert_type": {
-      "enum": ["initial", "update", "retraction"],
-      "description": "Indication of alert sequence if multiple of same type sent"
+      "enum": ["initial", "subsequent", "update", "retraction"],
+      "description": "Indication of alert sequence if multiple of the same type are sent. Alert sequence: initial refers to the detection, followed by subsequent alerts for recurrent detections of the same source. Updates and retractions come from further analysis."
     }
   }
 }
