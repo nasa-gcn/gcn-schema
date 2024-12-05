@@ -1,0 +1,32 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/test/medal_ranking_alert.schema.json",
+  "mission": "KM3NeT",
+  "instrument": "ARCA028",
+  "messenger": "Neutrino",
+  "packet_type": 999,
+  "alert_tense": "test",
+  "alert_type": "initial",
+  "alert_datetime": "2024-09-01T12:01:00.00Z",
+  "analysis_pipeline": "exceptional_evt_arca",
+  "description": "KM3NeT online analysis, bronze candidate neutrino observation.",
+  "event_name": ["KM240901A"],
+  "trigger_time": "2024-09-01T12:00:00.00Z",
+  "ra": 13.82,
+  "dec": 19.01,
+  "ra_dec_error": 0.9,
+  "healpix_url": "https://www.km3net.org/about-km3net/open-access/",
+  "far": 8.029e-8,
+  "additional_info": "Track only / Track+Shower analysis. Up-going / All-sky selection. Analysis pipeline event selection tuned to select X event per month in average.",
+  "triggering_evts": [
+    {
+      "trigger_time": "2024-09-01T12:00:00.00Z",
+      "ra": 13.82,
+      "dec": 19.01,
+      "ra_dec_error": 0.9,
+      "cos_zenith": -0.95,
+      "prob_evt_topology": "(Starting) Track / Shower",
+      "n_triggered_pmt": 586
+    }
+  ],
+  "known_sources": "No search / No match / [List]"
+}

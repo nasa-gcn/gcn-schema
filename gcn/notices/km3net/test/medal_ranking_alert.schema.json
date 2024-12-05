@@ -1,0 +1,142 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/test/medal_ranking_alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "KM3NeT/Gold-Silver-Bronze Alerts",
+  "description": "Candidate neutrino observation reported from the KM3NeT online analysis pipeline.",
+  "allOf": [
+    {
+      "$ref": "../../core/Reporter.schema.json",
+      "description": "Instrument (ARCAxxx/ORCAxxx) issuing the alert. Mission=KM3NeT; Messenger=Neutrino."
+    },
+    {
+      "$ref": "../../core/Alert.schema.json",
+      "description": "Tense role (test/current observation), type (initial/update/retraction) and datetime of the alert generation"
+    },
+    {
+      "$ref": "../../core/Event.schema.json",
+      "description": "Event ID (eg 1A. Nb increment for each new alert, letter increment for update/retraction of the nb). Event_Name (KM3-yymmddL) if appropriate. "
+    },
+    {
+      "$ref": "#/$defs/space_time_coord",
+      "description": "Most probable Localization (Time, Position, Error and Skymap if available)."
+    },
+    {
+      "$ref": "../../core/Statistics.schema.json",
+      "description": "FAR and other statistic related to the event probability."
+    },
+    {
+      "$ref": "../../core/AdditionalInfo.schema.json",
+      "description": "Description of the pipeline used to produce the alert."
+    }
+  ],
+  "properties": {
+    "$schema": true,
+    "packet_type": {
+      "type": "number",
+      "description": "packet_type provided by GCN as for the old GCN format, associatied to notice_type/topic Gold=, Silver=, Bronze=."
+    },
+    "description": { "type": "string", "description": "Alert description." },
+    "analysis_pipeline": {
+      "type": "string",
+      "description": "Analysis pipeline outputing the alert (eg exceptionnal_evt_arca, multiplets_orca, ...)."
+    },
+    "triggering_evts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/km3event" },
+      "description": "Array of KM3NeT event space-time coord, topology and energy info."
+    },
+    "known_sources": {
+      "type": ["array", "string"],
+      "items": {
+        "anyOf": [
+          { "$ref": "#/$defs/knownsrc" },
+          { "$ref": "#/$defs/mmcoincevent" }
+        ]
+      },
+      "description": "No search / No match / Array of known astrophysical sources present in the KM3NeT event RoI (not exhaustive) OR reference and position for a coincident time-variable source."
+    }
+  },
+  "required": [
+    "$schema",
+    "packet_type",
+    "description",
+    "mission",
+    "instrument",
+    "messenger",
+    "alert_tense",
+    "alert_type",
+    "alert_datetime",
+    "analysis_pipeline",
+    "event_name",
+    "trigger_time",
+    "ra",
+    "dec",
+    "ra_dec_error",
+    "far",
+    "triggering_evts",
+    "known_sources"
+  ],
+  "$defs": {
+    "prob_evt_topology": {
+      "type": "string",
+      "description": "Most probable event topology, could be track ('starting' if the origin is inside the detector) or shower. Track is associated to a muon flavor, shower can be the 3 flavors."
+    },
+    "cos_zenith": {
+      "type": "number",
+      "description": "Value of the cosine of the angle between the event direction and the vertical. -1 correspond to up-going event while 1 is down-going."
+    },
+    "n_triggered_pmt": {
+      "type": "number",
+      "description": "Number of PMT triggered by the event (i.e energy proxy)."
+    },
+    "space_time_coord": {
+      "type": "object",
+      "allOf": [
+        { "$ref": "../../core/DateTime.schema.json" },
+        { "$ref": "../../core/Localization.schema.json" }
+      ],
+      "description": "Time and position of a source."
+    },
+    "km3event": {
+      "type": "object",
+      "allOf": [{ "$ref": "#/$defs/space_time_coord" }],
+      "properties": {
+        "prob_evt_topology": { "$ref": "#/$defs/prob_evt_topology" },
+        "cos_zenith": { "$ref": "#/$defs/cos_zenith" },
+        "n_triggered_pmt": { "$ref": "#/$defs/n_triggered_pmt" }
+      },
+      "required": [
+        "trigger_time",
+        "ra",
+        "dec",
+        "ra_dec_error",
+        "prob_evt_topology",
+        "cos_zenith",
+        "n_triggered_pmt"
+      ],
+      "description": "[Date_Event, RA, Dec, Radius_Error, Topology, Zenith, NTrigPmts] of a KM3NeT event."
+    },
+    "knownsrc": {
+      "type": "object",
+      "allOf": [
+        { "$ref": "../../core/FollowUp.schema.json" },
+        { "$ref": "../../core/Localization.schema.json" },
+        { "$ref": "../../core/Distance.schema.json" },
+        { "$ref": "../../core/Redshift.schema.json" }
+      ],
+      "required": ["reference", "ra", "dec"],
+      "description": "[Name, Catalog, URL, RA, Dec, Distance (if available)] of each source (not exhaustive) in the KM3NeT event RoI"
+    },
+    "mmcoincevent": {
+      "type": "object",
+      "allOf": [
+        { "$ref": "../../core/FollowUp.schema.json" },
+        { "$ref": "#/$defs/space_time_coord" }
+      ],
+      "required": ["ref_type", "ref_instrument", "trigger_time"],
+      "description": "[Type, Instrument, Notice_Link (if available), Time, Position (if available)] for each GCN/Chime alerts in coincidence with KM3NeT event / Burst in LCs provided by MAXI or Swift-BAT for a time variabile source."
+    }
+  }
+}
