@@ -55,4 +55,4 @@ This will make the release available for use. For subsequent releases:
 
 2.  Follow the above steps from Step 3 on.
 
-**Note**: GCN maintainers are responsible for version tagging. When producers are ready to publish their alerts, please contact the GCN maintainers to tag a new version of the schema.
+**Note**: Version tagging is managed by the GCN maintainers. Producers, when ready to publish alerts, please contact the GCN maintainers to tag a new version of the schema.
