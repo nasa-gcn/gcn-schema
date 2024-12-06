@@ -33,9 +33,13 @@ npm install
 
         npm install
 
-3.  Tag a new version by running the following command: `npm version [ major | minor | patch ]`. Choose `major`, `minor`, or `patch` depending on the kind of update according to [Semantic Versioning](https://semver.org) rules.
+3.  Tag a new version by running the following command: `npm version [ major | minor | patch ]`. Choose `major`, `minor`, or `patch` depending on the kind of update according to [Semantic Versioning](https://semver.org) rules. Updates are categorized as major, minor, or patch, depending on the type of change:
 
-    This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts
+    - Major revisions are for changes that break compatibility; they are not necessarily limited to core schema changes.
+    - Minor revisions are for introduction of new features: new schema, or new fields in existing schema.
+    - Patch revisions are for bug fixes that do not break compatibility.
+
+    This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts.
 
 4.  Review the changes with `git log -p` to make sure that each file is appropriately updated.
 
@@ -50,3 +54,5 @@ This will make the release available for use. For subsequent releases:
         git pull
 
 2.  Follow the above steps from Step 3 on.
+
+**Note**: Version tagging is managed by the GCN maintainers. Producers, when ready to publish alerts, please contact the GCN maintainers to tag a new version of the schema.
