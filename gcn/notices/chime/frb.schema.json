@@ -1,0 +1,88 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/chime/frb.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CHIME/FRB Alert",
+  "description": "Fast radio burst alert from the Canadian Hydrogen Intensity Mapping Experiment.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Localization.schema.json" }
+  ],
+  "properties": {
+    "alert_kind": {
+      "type": "string",
+      "description": "The kind of alert (detection or subsequent). Similar meaning to alert_type"
+    },
+    "known_source": {
+      "type": "string",
+      "description": "Transient Name Server name of the known source (if a repeating FRB source)"
+    },
+    "snr": {
+      "type": "number",
+      "description": "Signal-to-noise ratio of the burst"
+    },
+    "dm": {
+      "type": "number",
+      "description": "Dispersion measure of the burst [pc/cm^3]"
+    },
+    "dm_error": {
+      "type": "number",
+      "description": "Error on the dispersion measure [pc/cm^3]"
+    },
+    "dm_gal_ne_2001_max": {
+      "type": "number",
+      "description": "Estimated contribution to the dispersion measure from the Galaxy using the NE2001 model."
+    },
+    "dm_gal_ymw_2016_max": {
+      "type": "number",
+      "description": "Estimated contribution to the dispersion measure from the Galaxy using the YMW2016 model."
+    },
+    "trigger_time_error": {
+      "type": "number",
+      "description": "Error on the trigger time [s]"
+    },
+    "trigger_time_inf_freq": {
+      "type": "string",
+      "description": "Time of the trigger at infinite frequency [ISO 8601]"
+    },
+    "trigger_time_inf_freq_error": {
+      "type": "number",
+      "description": "Error on the trigger time at infinite frequency [s]"
+    },
+    "importance": {
+      "type": "number",
+      "description": "A machine learning score from 0-1 separating RFI (0) from an astrophysical signal (1)"
+    },
+    "probability": {
+      "type": "number",
+      "description": "A score of known source association probability from poorly associated (0) to confidently associated (1)"
+    },
+    "sampling_time": {
+      "type": "number",
+      "description": "The time resolution of the real-time FRB search."
+    },
+    "bandwidth": {
+      "type": "number",
+      "description": "The bandwidth of the real-time FRB search."
+    },
+    "centre_frequency": {
+      "type": "number",
+      "description": "The centre frequency of the real-time FRB search."
+    },
+    "npol": {
+      "type": "number",
+      "description": "The number of polarizations of the real-time FRB search."
+    },
+    "tsys": {
+      "type": "number",
+      "description": "The system temperature of the real-time FRB search."
+    },
+    "update_message": {
+      "type": "string",
+      "description": "Message to be included in an update alert"
+    }
+  }
+}
