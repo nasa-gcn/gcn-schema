@@ -1,0 +1,52 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GCN Schema for Fermi GBM Alert Notices",
+  "description": "This schema is used to report Fermi GBM Alerts.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../core/AdditionalInfo.schema.json"
+    },
+    {
+      "$ref": "../../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../../core/Event.schema.json"
+    },
+    {
+      "$ref": "../../core/GeoLocBase.schema.json"
+    },
+    {
+      "$ref": "../../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../../core/Statistics.schema.json"
+    },
+    {
+      "$ref": "detectors.schema.json"
+    }
+  ],
+  "properties": {
+    "notice_type": {
+      "type": "string",
+      "const": "FERMI_GBM_ALERT",
+      "description": "Notice title"
+    },
+    "human_in_the_loop": {
+      "type": "boolean",
+      "description": "True when a human had input or confirmed before further processing. False when the notice was generated entirely automatically. Sometimes abbreviated as \"HITL\"."
+    },
+    "trigger_algorithm_number": {
+      "type": "number",
+      "description": "The instrument flight software algorithm that triggered on this event, dependent on timescale, energy, and significance as described in A. von Kienlin et al 2020 ApJ 893 46."
+    },
+    "light_curve_url": {
+      "type": "string",
+      "description": "URL of the quicklook light curve plot"
+    }
+  }
+}
