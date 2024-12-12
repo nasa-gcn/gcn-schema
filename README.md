@@ -33,9 +33,9 @@ npm install
 
         npm install
 
-3.  Tag a new version by running the following command: `npm version [ major | minor | patch ]`. Choose `major`, `minor`, or `patch` depending on the kind of update according to [Semantic Versioning](https://semver.org) rules. Updates are categorized as major, minor, or patch, depending on the type of change. A major change is defined as any modification that breaks compatibility with the core schema, such as a change in a property or the addition of a new property that affects the mission pipelines. Introducing a new mission and new core schema constitutes a minor change, while modifying the new mission schema and adding a new property to the core schema are considered patches.
+3.  3.  Tag a new version by running the following command: `npm version [ major | minor | patch ]`. Choose `major`, `minor`, or `patch` depending on the kind of update according to [Semantic Versioning](https://semver.org) rules.
 
-        This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts.
+    This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts
 
 4.  Review the changes with `git log -p` to make sure that each file is appropriately updated.
 
