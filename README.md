@@ -33,7 +33,7 @@ npm install
 
         npm install
 
-3.  3.  Tag a new version by running the following command: `npm version [ major | minor | patch ]`. Choose `major`, `minor`, or `patch` depending on the kind of update according to [Semantic Versioning](https://semver.org) rules.
+3.  Tag a new version by running the following command: `npm version [ major | minor | patch ]`. Choose `major`, `minor`, or `patch` depending on the kind of update according to [Semantic Versioning](https://semver.org) rules.
 
     This command will handle the intermediate steps of updating and committing the path changes in each file as defined in the `version` and `postversion` npm scripts
 
