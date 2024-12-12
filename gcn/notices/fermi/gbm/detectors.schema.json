@@ -1,0 +1,18 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/detectors.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "detectors_status": {
+      "type": "array",
+      "items": {
+        "$ref": "../../core/DetectorStatus.schema.json"
+      },
+      "minItems": 14,
+      "maxItems": 14,
+      "description": "The array shows which of the 14 GBM detectors triggered, and for the rest, whether they are on or off.  Array elements 0-11 correspond to NaI detectors 0-11, among which 10 and 11 are sometimes labeled as \"a\" and \"b\" respectively.  The status of the BGO0 and BGO1 detectors is at indices 12 and 13."
+    }
+  }
+}
