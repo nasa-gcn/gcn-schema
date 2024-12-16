@@ -1,0 +1,20 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/mxt/localization.schema.json",
+  "mission": "SVOM",
+  "instrument": "MXT",
+  "messenger": "EM",
+  "alert_datetime": "2024-02-22T08:51:55",
+  "alert_tense": "current",
+  "alert_type": "initial",
+  "id": ["sb24022203"],
+  "record_number": 1,
+  "trigger_time": "2024-02-22T08:51:31.320000",
+  "image_snr": 25.67,
+  "image_duration": 30,
+  "energy_flux": 5.1,
+  "energy_flux_error": 0.2,
+  "ra": 143.2478,
+  "dec": -68.0289,
+  "ra_dec_error": 0.1,
+  "use_VT_attitude": true
+}

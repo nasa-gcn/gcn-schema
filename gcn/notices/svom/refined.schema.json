@@ -1,10 +1,10 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/trigger.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/refined.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "unevaluatedProperties": false,
-  "title": "SVOM trigger alerts",
-  "description": "ECLAIRs or GRM trigger parameters computed onboard",
+  "title": "Automatic analysis of a burst candidate light curve",
+  "description": "Burst parameter and classification derived from a subset of ECLAIRs and GRM data, or a joint ECLGRM analysis",
   "allOf": [
     { "$ref": "../core/AdditionalInfo.schema.json" },
     { "$ref": "../core/Alert.schema.json" },
@@ -12,20 +12,15 @@
     { "$ref": "../core/Event.schema.json" },
     { "$ref": "../core/Localization.schema.json" },
     { "$ref": "../core/Reporter.schema.json" },
-    { "$ref": "../core/Statistics.schema.json" }
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/Duration.schema.json" },
+    { "$ref": "../core/HardnessRatio.schema.json" }
   ],
   "properties": {
     "$schema": true,
     "slew_status": {
-      "enum": ["accepted", "rejected", "not_requested"],
+      "enum": ["accepted", "rejected", "not-requested"],
       "description": "Whether the platform accepted or rejected a slew requested by ECLAIRs (to its best localisation). If the detection is not significant enough, this value can remain to 'not_requested'"
-    },
-    "triggered_GRDs": {
-      "type": "array",
-      "items": { "type": "boolean" },
-      "minItems": 3,
-      "maxItems": 3,
-      "description": "In case of a GRM trigger, trigger status the 3 GRDs. Each item correspond to one of the 3 GRDs: true means the GRD triggers, false not"
     }
   }
 }
