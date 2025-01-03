@@ -15,6 +15,10 @@
       "maxItems": 2,
       "description": "Trigger time uncertainty [s, 1-sigma], with optional asymmetric uncertainty"
     },
+    "time_resolution": {
+      "type": "number",
+      "description": "Time resolution used for the source search [ms]"
+    },
     "observation_start": {
       "type": "string",
       "description": "Start time of the observation [ISO 8601]"

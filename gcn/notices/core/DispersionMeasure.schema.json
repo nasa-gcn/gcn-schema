@@ -1,0 +1,23 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DispersionMeasure.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Schema for Radio Transients Observables",
+  "description": "Dispersion Measure schema used for radio transients",
+  "properties": {
+    "dm": {
+      "type": "number",
+      "description": "Dispersion measure (DM) of the burst [pc/cm^3], representing the integrated column density of free electrons along the line of sight."
+    },
+    "dm_error": {
+      "type": "array",
+      "items": { "type": "number" },
+      "maxItems": 2,
+      "description": "Uncertainity associated with the dispersion measure [pc/cm^3, 1-sigma], with optional asymmetric uncertainty."
+    },
+    "dm_gal_ne_2001_max": {
+      "type": "number",
+      "description": "Estimated contribution to the dispersion measure [pc/cm^3], from the Galaxy using the NE2001 model."
+    }
+  }
+}
