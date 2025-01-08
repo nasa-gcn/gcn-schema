@@ -9,7 +9,7 @@
   "alert_type": "initial",
   "analysis_pipeline": "IceCube Bronze Track alert",
   "alert_topology": "Track",
-  "n_evt_in_alert": 1,
+  "number_of_events": 1,
   "ra": 345.82,
   "dec": 9.01,
   "ra_dec_error": 0.5,
