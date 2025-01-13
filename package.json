@@ -19,7 +19,7 @@
     "@nasa-gcn/eslint-config-gitignore": "^0.0.2",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
-    "eslint": "^8.34.0",
+    "eslint": "^9.18.0",
     "eslint-config-prettier": "^9.1.0",
     "execa": "^9.3.0",
     "glob": "^10.1.0",
