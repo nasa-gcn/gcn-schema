@@ -28,10 +28,6 @@
     { "$ref": "../core/DateTime.schema.json" }
   ],
   "properties": {
-    "nu_energy": {
-      "description": "Most probable neutrino energy [TeV] that would have produced an event",
-      "type": "number"
-    },
     "number_of_events": {
       "description": "Number of detected events that contributed to alert",
       "type": "number"
