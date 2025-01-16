@@ -6,8 +6,8 @@
   "description": "IceCube Astrotrack Gold And Bronze track alert events",
   "allOf": [{ "$ref": "../neutrino_telescope/NeutrinoAlert.schema.json" }],
   "properties": {
-    "lagniappe": {
-      "description": "A little something extra from IceCube",
+    "nu_energy": {
+      "description": "Most probable neutrino energy [TeV] that would have produced an event",
       "type": "number"
     }
   }
