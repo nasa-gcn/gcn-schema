@@ -29,7 +29,7 @@
     },
     "spectral_center": {
       "enum": ["energy", "wavelength", "frequency"],
-      "description": "Central value of the observing band",
+      "description": "Central value of the observing band, should have same units as spectrum",
       "type": "number",
       "default": "energy"
     },
