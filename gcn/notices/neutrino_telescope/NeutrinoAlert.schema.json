@@ -11,7 +11,7 @@
     },
     {
       "$ref": "../core/Alert.schema.json",
-      "description": "Alert information (alert_datetime and alert_type)"
+      "description": "Alert information"
     },
     {
       "$ref": "../core/Reporter.schema.json",
@@ -19,11 +19,11 @@
     },
     {
       "$ref": "../core/Statistics.schema.json",
-      "description": "Alert signficance measures (FAR, p_astro)"
+      "description": "Alert significance measures"
     },
     {
       "$ref": "../core/Localization.schema.json",
-      "description": "Alert sky localization information (RA/DEC, error)"
+      "description": "Alert sky localization information"
     },
     { "$ref": "../core/DateTime.schema.json" }
   ],
@@ -37,7 +37,7 @@
       "type": "string"
     },
     "alert_topology": {
-      "description": "Topology of the alert (e.g. track, cascade, multiplet...)",
+      "description": "Event topology of the alert",
       "enum": ["Track", "Shower", "Multiplet"]
     }
   }
