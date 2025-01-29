@@ -1,0 +1,139 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/all.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GCN Schema for Fermi GBM Notices",
+  "description": "This schema is for the following Fermi GBM notices: alert, flight position, ground position, final position and subthreshold.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../core/AdditionalInfo.schema.json"
+    },
+    {
+      "$ref": "../../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../../core/Event.schema.json"
+    },
+    {
+      "$ref": "../../core/GeoLocBase.schema.json"
+    },
+    {
+      "$ref": "../../core/HardnessRatio.schema.json"
+    },
+    {
+      "$ref": "../../core/Localization.schema.json"
+    },
+    {
+      "$ref": "../../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../../core/Statistics.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/GammaRay.schema.json"
+    }
+  ],
+  "properties": {
+    "detectors_status":{
+      "type": "array",
+      "items": {
+        "$ref": "../../core/DetectorStatus.schema.json"
+      },
+      "minItems": 14,
+      "maxItems": 14,
+      "description": "Triggered detectors"
+    },
+    "duration_class": {
+      "enum": [
+        "SHORT",
+        "LONG",
+        "UNCERTAIN"
+      ],
+      "description": "Long vs. short event"
+    },
+    "earth_angle": {
+      "type": "number",
+      "description": "Event-Earth angle [deg]"
+    },
+    "galactic_b": {
+      "type": "number",
+      "description": "Galactic altitude [deg]"
+    },
+    "galactic_l": {
+      "type": "number",
+      "description": "Galactic longitude [deg]"
+    },
+    "ground_generated_notice": {
+      "type": "boolean",
+      "description": "Some notices, designed to be generated in flight, can be issued on the ground."
+    },
+    "hardness_class": {
+      "enum": [
+        "SOFT",
+        "HARD"
+      ],
+      "description": "Soft vs. hard spectrum"
+    },
+    "hehi": {
+      "enum": [
+        false,
+        true,
+        "UNCERTAIN"
+      ],
+      "description": "High energy, high intensity event"
+    },
+    "human_in_the_loop": {
+      "type": "boolean",
+      "description": "True when a human had input or confirmed before further processing. False when the notice was generated entirely automatically. Sometimes abbreviated as \"HITL\"."
+    },
+    "in_lat_fov": {
+      "enum": [
+        false,
+        true,
+        "UNCERTAIN"
+      ],
+      "description": "The event was localizad in the LAT field of view."
+    },
+    "light_curve_url": {
+      "type": "string",
+      "description": "URL of the quicklook light curve plot"
+    },
+    "localization_algorithm": {
+      "type": "string",
+      "description": "Version number"
+    },
+    "localization_energy_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Not to be confused with the trigger energy range."
+    },
+    "notice_type": {
+      "type": "string",
+      "enum": ["FERMI_GBM_ALERT","FERMI_GBM_FLIGHT_POS","FERMI_GBM_GROUND_POS","FERMI_GBM_FINAL_POS","FERMI_GBM_SUBTHRESHOLD"],
+      "description": "This is the notice title from the text format.  The enum also corresponds to packet types 110, 111, 112, 115 and 131 from the classic binary format."
+    },
+    "reliability": {
+      "enum": [
+        "LOW",
+        "MED",
+        "HIGH"
+      ],
+      "description": "Reliability of the subthreshold search result."
+    },
+    "sun_distance": {
+      "type": "number",
+      "description": "Event-Sun angle [deg]"
+    },
+    "trigger_algorithm_number": {
+      "type": "number",
+      "description": "The instrument flight software algorithm that triggered on this event, dependent on timescale, energy, and significance as described in A. von Kienlin et al 2020 ApJ 893 46."
+    }
+  }
+}
