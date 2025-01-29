@@ -37,7 +37,7 @@
     }
   ],
   "properties": {
-    "detectors_status":{
+    "detectors_status": {
       "type": "array",
       "items": {
         "$ref": "../../core/DetectorStatus.schema.json"
@@ -116,7 +116,13 @@
     },
     "notice_type": {
       "type": "string",
-      "enum": ["FERMI_GBM_ALERT","FERMI_GBM_FLIGHT_POS","FERMI_GBM_GROUND_POS","FERMI_GBM_FINAL_POS","FERMI_GBM_SUBTHRESHOLD"],
+      "enum": [
+        "FERMI_GBM_ALERT",
+        "FERMI_GBM_FLIGHT_POS",
+        "FERMI_GBM_GROUND_POS",
+        "FERMI_GBM_FINAL_POS",
+        "FERMI_GBM_SUBTHRESHOLD"
+      ],
       "description": "This is the notice title from the text format.  The enum also corresponds to packet types 110, 111, 112, 115 and 131 from the classic binary format."
     },
     "reliability": {
