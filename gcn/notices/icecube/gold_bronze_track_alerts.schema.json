@@ -1,0 +1,14 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/gold_bronze_track_alerts.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "IceCubeGoldAndBronzeTracks",
+  "description": "IceCube Astrotrack Gold And Bronze track alert events",
+  "allOf": [{ "$ref": "../neutrino_telescope/NeutrinoAlert.schema.json" }],
+  "properties": {
+    "nu_energy": {
+      "description": "Most probable neutrino energy [TeV] that would have produced an event",
+      "type": "number"
+    }
+  }
+}
