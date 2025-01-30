@@ -47,11 +47,7 @@
       "description": "Triggered detectors"
     },
     "duration_class": {
-      "enum": [
-        "SHORT",
-        "LONG",
-        "UNCERTAIN"
-      ],
+      "enum": ["SHORT", "LONG", "UNCERTAIN"],
       "description": "Long vs. short event"
     },
     "earth_angle": {
@@ -71,18 +67,11 @@
       "description": "Some notices, designed to be generated in flight, can be issued on the ground."
     },
     "hardness_class": {
-      "enum": [
-        "SOFT",
-        "HARD"
-      ],
+      "enum": ["SOFT", "HARD"],
       "description": "Soft vs. hard spectrum"
     },
     "hehi": {
-      "enum": [
-        false,
-        true,
-        "UNCERTAIN"
-      ],
+      "enum": [false, true, "UNCERTAIN"],
       "description": "High energy, high intensity event"
     },
     "human_in_the_loop": {
@@ -90,11 +79,7 @@
       "description": "True when a human had input or confirmed before further processing. False when the notice was generated entirely automatically. Sometimes abbreviated as \"HITL\"."
     },
     "in_lat_fov": {
-      "enum": [
-        false,
-        true,
-        "UNCERTAIN"
-      ],
+      "enum": [false, true, "UNCERTAIN"],
       "description": "The event was localizad in the LAT field of view."
     },
     "light_curve_url": {
@@ -126,11 +111,7 @@
       "description": "This is the notice title from the text format.  The enum also corresponds to packet types 110, 111, 112, 115 and 131 from the classic binary format."
     },
     "reliability": {
-      "enum": [
-        "LOW",
-        "MED",
-        "HIGH"
-      ],
+      "enum": ["LOW", "MED", "HIGH"],
       "description": "Reliability of the subthreshold search result."
     },
     "sun_distance": {
@@ -143,3 +124,4 @@
     }
   }
 }
+
