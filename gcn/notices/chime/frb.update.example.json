@@ -1,0 +1,9 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/chime/frb.schema.json",
+  "alert_type": "update",
+  "id": ["FRB 20231013B"],
+  "trigger_time": "2024-09-18T07:19:10.765268Z",
+  "trigger_time_error": 0.007864319719374001,
+  "update_message": "The dispersion measure of FRB 20231013B has been updated to 221.19271850585938 +/- 0.40437427163124 pc/cm^3.",
+  "description": "This alert was generated automatically by human-issued retraction. Please direct comments, questions, and concerns to Thomas Abbott at thomas.abbott@mail.mcgill.ca."
+}
