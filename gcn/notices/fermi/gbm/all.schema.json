@@ -56,7 +56,7 @@
     },
     "galactic_b": {
       "type": "number",
-      "description": "Galactic altitude [deg]"
+      "description": "Galactic latitude [deg]"
     },
     "galactic_l": {
       "type": "number",
