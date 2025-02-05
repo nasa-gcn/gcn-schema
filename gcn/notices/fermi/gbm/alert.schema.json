@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/all.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Fermi GBM Alert",
   "description": "This schema is for the following Fermi GBM notices: alert, flight position, ground position, final position and subthreshold.",
