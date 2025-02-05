@@ -108,7 +108,7 @@
         "FERMI_GBM_FINAL_POS",
         "FERMI_GBM_SUBTHRESHOLD"
       ],
-      "description": "This is the notice title from the text format.  The enum also corresponds to packet types 110, 111, 112, 115 and 131 from the classic binary format."
+      "description": "This is the notice title from the GCN Classic text format.  The enum also corresponds to packet types 110, 111, 112, 115 and 131 from the GCN Classic binary format."
     },
     "reliability": {
       "enum": ["LOW", "MED", "HIGH"],
