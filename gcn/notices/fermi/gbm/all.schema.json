@@ -48,7 +48,7 @@
     },
     "duration_class": {
       "enum": ["SHORT", "LONG", "UNCERTAIN"],
-      "description": "Long vs. short event"
+      "description": "Long vs. short duration event"
     },
     "earth_angle": {
       "type": "number",
