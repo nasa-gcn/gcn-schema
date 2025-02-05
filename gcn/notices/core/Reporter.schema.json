@@ -13,6 +13,10 @@
       "type": "string",
       "description": "Name of the Instrument reporting the event"
     },
+    "notice_type": {
+      "type": "string",
+      "description": "Defines the category or type of notice and serves as its title. It is recommended when a single schema is used to produce multiple notice types."
+    },
     "record_number": {
       "type": "number",
       "description": "Incremental number for messages from the instrument during a given trigger (ex: 1, 2, 3)"
