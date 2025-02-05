@@ -52,7 +52,7 @@
     },
     "earth_angle": {
       "type": "number",
-      "description": "Event-Earth angle [deg]"
+      "description": "Angle between the event and the ceter of the Earth [deg]"
     },
     "galactic_b": {
       "type": "number",
@@ -64,23 +64,23 @@
     },
     "ground_generated_notice": {
       "type": "boolean",
-      "description": "Some notices, designed to be generated in flight, can be issued on the ground."
+      "description": "The notice has been issued on the ground, if this flag is true."
     },
     "hardness_class": {
       "enum": ["SOFT", "HARD"],
-      "description": "Soft vs. hard spectrum"
+      "description": "Classification based on the hardness ratio."
     },
-    "hehi": {
+    "high_energy_high_intensity": {
       "enum": [false, true, "UNCERTAIN"],
       "description": "High energy, high intensity event"
     },
     "human_in_the_loop": {
       "type": "boolean",
-      "description": "True when a human had input or confirmed before further processing. False when the notice was generated entirely automatically. Sometimes abbreviated as \"HITL\"."
+      "description": "True when a human had input or confirmed before further processing. False when the notice was generated entirely automatically."
     },
     "in_lat_fov": {
       "enum": [false, true, "UNCERTAIN"],
-      "description": "The event was localizad in the LAT field of view."
+      "description": "The event was localizad in the LAT field of view, 60 degrees from the LAT boresight."
     },
     "light_curve_url": {
       "type": "string",
@@ -97,7 +97,7 @@
       },
       "minItems": 2,
       "maxItems": 2,
-      "description": "Not to be confused with the trigger energy range."
+      "description": "The energy range used for localization, which is distinct from the energy range used by the trigger algorithm."
     },
     "notice_type": {
       "type": "string",

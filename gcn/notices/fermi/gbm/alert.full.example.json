@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/all.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json",
   "additional_info": "*** ABOUT THIS EXAMPLE: This is an example of a Fermi GBM ALERT GCN notice. All fields that belong to the GBM ALERT notice type are present. This 'about' note is not going to be part of real notices. This field, 'additional_info', may be empty or missing alltogether in case of no comments. An example of a typical notice comment follows. ***\n\nLightcurve and other quicklook files will not be created until about 15 minutes after the trigger.",
   "alert_datetime": "2024-08-24T02:14:54",
   "alert_tense": "current",
