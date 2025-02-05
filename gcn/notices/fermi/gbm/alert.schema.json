@@ -80,7 +80,7 @@
     },
     "in_lat_fov": {
       "enum": [false, true, "UNCERTAIN"],
-      "description": "The event was localizad in the LAT field of view, 60 degrees from the LAT boresight."
+      "description": "The event was localized in the LAT field of view, 60 degrees from the LAT boresight."
     },
     "light_curve_url": {
       "type": "string",
