@@ -65,7 +65,16 @@
     },
     "coincevent": {
       "type": "object",
-      "allOf": [{ "$ref": "../core/Localization.schema.json" }],
+      "allOf": [
+        {
+          "$ref": "../core/Localization.schema.json",
+          "description": "Per-event direction and uncertainty information"
+        },
+        {
+          "$ref": "../core/Event.schema.json",
+          "description": "Unique per-event identification information"
+        }
+      ],
       "properties": {
         "event_dt": {
           "description": "Time difference between LVK alert time and neutrino candidate [sec]",
