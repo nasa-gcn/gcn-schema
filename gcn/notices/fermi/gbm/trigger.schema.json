@@ -64,7 +64,7 @@
     },
     "ground_generated_notice": {
       "type": "boolean",
-      "description": "The notice has been issued on the ground, if this flag is set true."
+      "description": "The notice has been issued on the ground, if this flag is set (true)."
     },
     "hardness_class": {
       "enum": ["SOFT", "HARD"],
