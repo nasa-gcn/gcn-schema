@@ -52,7 +52,7 @@
     },
     "earth_angle": {
       "type": "number",
-      "description": "Angle between the event and the center of the Earth [deg]"
+      "description": "Angle between the event and the Earth's center [deg]"
     },
     "galactic_b": {
       "type": "number",
