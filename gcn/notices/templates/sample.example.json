@@ -1,0 +1,8 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/templates/sample.schema.json",
+  "alert_datetime": "2023-09-28T01:40:30Z",
+  "ra": 197.44871198,
+  "dec": -23.38397612,
+  "example_field_1": "The ultimate answer to life, the universe, and everything",
+  "example_field_2": 42
+}

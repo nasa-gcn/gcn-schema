@@ -1,0 +1,30 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/templates/sample.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Your Schema Name",
+  "description": "A description for your schema",
+  "allOf": [
+    {
+      "$ref": "../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../core/Localization.schema.json"
+    }
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "example_field_1": {
+      "type": "string",
+      "description": "A custom field that can hold text"
+    },
+    "example_field_2": {
+      "type": "number",
+      "description": "A custom field that holds a number"
+    }
+  }
+}
