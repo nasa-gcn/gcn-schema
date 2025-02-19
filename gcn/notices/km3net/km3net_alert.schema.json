@@ -1,0 +1,85 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/km3net_alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "KM3NeT Alerts",
+  "description": "Candidate neutrino observation reported from the KM3NeT online analysis pipeline.",
+  "allOf": [
+    {
+      "$ref": "../neutrino_telescope/NeutrinoAlert.schema.json",
+      "description": "Neutrino alert schema. Most probable Localization (Time, Position, Error and Skymap if available)."
+    },
+    {
+      "$ref": "../core/AdditionalInfo.schema.json",
+      "description": "Nb. of pipeline triggering on this event, FAR of the analysis and details on selection."
+    }
+  ],
+  "properties": {
+    "$schema": true,
+    "packet_type": {
+      "type": "number",
+      "description": "packet_type provided by GCN as for the old GCN format."
+    },
+    "significance": {},
+    "src_error_50": {},
+    "event_details": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/km3event" },
+      "description": "List of KM3NeT events involved in the alert."
+    },
+    "potential_counterpart": {},
+    "counterpart_info": {
+      "type": ["array", "string"],
+      "items": { "$ref": "#/$defs/knownsrc" },
+      "description": "No search / No match / Array of known (transient) astrophysical sources present in the KM3NeT event RoI (not exhaustive)."
+    }
+  },
+  "required": [
+    "$schema",
+    "mission", "instrument", "messenger",
+    "alert_tense", "alert_type",
+    "alert_datetime", "analysis_pipeline", "id", "event_name",
+    "trigger_time", "ra", "dec", "ra_dec_error",
+    "far", "alert_topology", "number_of_events", "significance"
+  ],
+  "$defs": {
+    "prob_evt_topology": {
+      "type": "string",
+      "description": "track, shower, starting/through-going."
+    },
+    "cos_zenith": {
+      "type": "number",
+      "description": "Value of the cosine of the angle between the event direction and the vertical: -1 correspond to up-going event, 1 is down-going."
+    },
+    "reco_energy": {
+      "type": "number",
+      "description": "Estimation of the measured energy [GeV]."
+    },
+    "km3event": {
+      "type": "object",
+      "allOf": [
+        { "$ref": "../core/Event.schema.json"}, 
+        { "$ref": "../core/DateTime.schema.json" },
+        { "$ref": "../core/Localization.schema.json" }
+      ],
+      "properties": {
+        "prob_evt_topology": { "$ref": "#/$defs/prob_evt_topology" },
+        "cos_zenith": { "$ref": "#/$defs/cos_zenith" },
+        "reco_energy": { "$ref": "#/$defs/reco_energy" }
+      },
+      "description": "[Id, Date_Event, RA, Dec, Radius_Error, Topology, Zenith, reco_energy] of the KM3NeT events involved in the alert."
+    },
+    "knownsrc": {
+      "type": "object",
+      "allOf": [
+        { "$ref": "../core/FollowUp.schema.json" },
+        { "$ref": "../core/Localization.schema.json" },
+        { "$ref": "../core/DateTime.schema.json" },
+        { "$ref": "../core/Distance.schema.json" },
+        { "$ref": "../core/Redshift.schema.json" }
+      ],
+      "description": "(not exhaustive) list of [reference, position and additional information] for sources founded in the KM3NeT event RoI"
+    }
+  }
+}
