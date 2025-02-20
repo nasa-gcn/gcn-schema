@@ -8,7 +8,7 @@
   "allOf": [
     {
       "$ref": "../neutrino_telescope/NeutrinoAlert.schema.json",
-      "description": "Neutrino alert schema. Most probable Localization (Time, Position, Error and Skymap if available)."
+      "description": "Neutrino alert schema. Alert info and most probable Localization (Time, Position, Error and Skymap if available)."
     },
     {
       "$ref": "../core/AdditionalInfo.schema.json",
@@ -37,11 +37,23 @@
   },
   "required": [
     "$schema",
-    "mission", "instrument", "messenger",
-    "alert_tense", "alert_type",
-    "alert_datetime", "analysis_pipeline", "id", "event_name",
-    "trigger_time", "ra", "dec", "ra_dec_error",
-    "far", "alert_topology", "number_of_events", "significance"
+    "mission",
+    "instrument",
+    "messenger",
+    "alert_tense",
+    "alert_type",
+    "alert_datetime",
+    "analysis_pipeline",
+    "id",
+    "event_name",
+    "trigger_time",
+    "ra",
+    "dec",
+    "ra_dec_error",
+    "far",
+    "alert_topology",
+    "number_of_events",
+    "significance"
   ],
   "$defs": {
     "prob_evt_topology": {
@@ -59,7 +71,7 @@
     "km3event": {
       "type": "object",
       "allOf": [
-        { "$ref": "../core/Event.schema.json"}, 
+        { "$ref": "../core/Event.schema.json" },
         { "$ref": "../core/DateTime.schema.json" },
         { "$ref": "../core/Localization.schema.json" }
       ],
@@ -73,7 +85,6 @@
     "knownsrc": {
       "type": "object",
       "allOf": [
-        { "$ref": "../core/FollowUp.schema.json" },
         { "$ref": "../core/Localization.schema.json" },
         { "$ref": "../core/DateTime.schema.json" },
         { "$ref": "../core/Distance.schema.json" },
