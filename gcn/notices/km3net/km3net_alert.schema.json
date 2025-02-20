@@ -85,6 +85,7 @@
     "knownsrc": {
       "type": "object",
       "allOf": [
+        { "$ref": "../core/FollowUp.schema.json" },
         { "$ref": "../core/Localization.schema.json" },
         { "$ref": "../core/DateTime.schema.json" },
         { "$ref": "../core/Distance.schema.json" },

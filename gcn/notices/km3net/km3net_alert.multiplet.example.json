@@ -1,57 +1,57 @@
 {
-    "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/km3net_alert.schema.json",
-    "mission": "KM3NeT",
-    "instrument": "ARCA021",
-    "messenger": "Neutrino",
-    "packet_type": 999,
-    "alert_tense": "current",
-    "alert_type": "initial",
-    "alert_datetime": "2025-01-01T12:01:00.00Z",
-    "id": [2],
-    "event_name": ["KM3-240901A"],
-    "analysis_pipeline": "exceptionnal_evt_arca",
-    "additional_info": "Observation from single pipeline. Analysis tuned to select 1 event/month in average. Track only analysis w/ Up-going selection.",
-    "trigger_time": "2025-01-01T01:16:47.0Z",
-    "ra": 13.81,
-    "dec": 18.85,
-    "ra_dec_error": 0.41,
-    "healpix_url": "https://www.km3net.org/about-km3net/open-access/",
-    "far": 8.029e-8,
-    "significance": 0.99,
-    "alert_topology": "Multiplet",
-    "number_of_events": 1,
-    "src_error_50": 0.225,
-    "event_details": [
-        {
-            "id": ["234.22488.72853.13018"],
-            "trigger_time": "2025-01-01T11:56:07.0Z",
-            "ra": 13.79,
-            "dec": 18.56,
-            "ra_dec_error": 0.69,
-            "cos_zenith": 0.01,
-            "prob_evt_topology": "Track",
-            "reco_energy": 1.2e5
-        },
-        {
-            "id": ["234.22488.66259.11878"],
-            "trigger_time": "2025-01-01T01:16:47.0Z",
-            "ra": 13.82,
-            "dec": 19.01,
-            "ra_dec_error": 0.52,
-            "cos_zenith": -0.02,
-            "prob_evt_topology": "Track",
-            "reco_energy": 1.2e5 
-        }
-    ],
-    "potential_counterpart": true,
-    "counterpart_info": [
-        {
-            "name": "SourceName",
-            "reference": "url to catalog or notice",
-            "ra": 13.0,
-            "dec": 19.5,
-            "angular_distance": 1.004,
-            "trigger_time": "2024-12-31T09:56:15.0Z"
-        }
-    ]
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/km3net_alert.schema.json",
+  "mission": "KM3NeT",
+  "instrument": "ARCA021",
+  "messenger": "Neutrino",
+  "packet_type": 999,
+  "alert_tense": "current",
+  "alert_type": "initial",
+  "alert_datetime": "2025-01-01T12:01:00.00Z",
+  "id": [2],
+  "event_name": ["KM3-240901A"],
+  "analysis_pipeline": "exceptionnal_evt_arca",
+  "additional_info": "Observation from single pipeline. Analysis tuned to select 1 event/month in average. Track only analysis w/ Up-going selection.",
+  "trigger_time": "2025-01-01T01:16:47.0Z",
+  "ra": 13.81,
+  "dec": 18.85,
+  "ra_dec_error": 0.41,
+  "healpix_url": "https://www.km3net.org/about-km3net/open-access/",
+  "far": 8.029e-8,
+  "significance": 0.99,
+  "alert_topology": "Multiplet",
+  "number_of_events": 1,
+  "src_error_50": 0.225,
+  "event_details": [
+    {
+      "id": ["234.22488.72853.13018"],
+      "trigger_time": "2025-01-01T11:56:07.0Z",
+      "ra": 13.79,
+      "dec": 18.56,
+      "ra_dec_error": 0.69,
+      "cos_zenith": 0.01,
+      "prob_evt_topology": "Track",
+      "reco_energy": 1.2e5
+    },
+    {
+      "id": ["234.22488.66259.11878"],
+      "trigger_time": "2025-01-01T01:16:47.0Z",
+      "ra": 13.82,
+      "dec": 19.01,
+      "ra_dec_error": 0.52,
+      "cos_zenith": -0.02,
+      "prob_evt_topology": "Track",
+      "reco_energy": 1.2e5
+    }
+  ],
+  "potential_counterpart": true,
+  "counterpart_info": [
+    {
+      "name": "SourceName",
+      "reference": { "url": "url to catalog or notice" },
+      "ra": 13.0,
+      "dec": 19.5,
+      "angular_distance": 1.004,
+      "trigger_time": "2024-12-31T09:56:15.0Z"
+    }
+  ]
 }
