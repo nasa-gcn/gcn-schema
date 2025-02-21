@@ -3,7 +3,6 @@
   "mission": "KM3NeT",
   "instrument": "ARCA021",
   "messenger": "Neutrino",
-  "packet_type": 999,
   "alert_tense": "current",
   "alert_type": "initial",
   "alert_datetime": "2025-01-01T12:01:00.00Z",
