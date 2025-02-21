@@ -21,7 +21,7 @@
       "type": "number",
       "description": "packet_type provided by GCN as for the old GCN format."
     },
-    "significance": {},
+    "p_value": {},
     "src_error_50": {},
     "event_details": {
       "type": "array",
@@ -53,7 +53,7 @@
     "far",
     "alert_topology",
     "number_of_events",
-    "significance"
+    "p_value"
   ],
   "$defs": {
     "prob_evt_topology": {
