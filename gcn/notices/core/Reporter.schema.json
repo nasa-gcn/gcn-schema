@@ -24,7 +24,7 @@
     "spectrum": {
       "type": "string",
       "enum": ["energy", "wavelength", "frequency"],
-      "description": "Mode of spectral measurement: high-energy or optical or radio observations, if not parsed, then default is energy",
+      "description": "Mode of spectral measurement; default is energy",
       "default": "energy"
     },
     "spectral_band": {
