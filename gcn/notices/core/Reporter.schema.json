@@ -43,7 +43,7 @@
     "units": {
       "type": "string",
       "enum": ["keV", "nm", "Hz"],
-      "description": "Units for the spectral data, default unit is keV",
+      "description": "Units for the spectral data; default unit is keV",
       "default": "keV"
     },
     "filter": {
