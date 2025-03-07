@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "NeutrinoAlert",
-  "description": "Neutrino alert information common to all neutrino telescope alerts",
+  "description": "Neutrino alert common base schema for high-energy neutrino telescope alerts.  To be inherited from for alerts on experiment specific alert topics",
   "allOf": [
     {
       "$ref": "../core/Event.schema.json",
