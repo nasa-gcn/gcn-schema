@@ -32,10 +32,6 @@
       "description": "Number of detected events that contributed to alert",
       "type": "number"
     },
-    "analysis_pipeline": {
-      "description": "Name of analysis pipeline used to generate alert",
-      "type": "string"
-    },
     "alert_topology": {
       "description": "Event topology of the alert",
       "enum": ["Track", "Shower", "Multiplet"]
