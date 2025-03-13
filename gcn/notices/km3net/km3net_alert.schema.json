@@ -7,7 +7,7 @@
   "description": "Candidate neutrino observation reported from the KM3NeT online analysis pipeline.",
   "allOf": [
     {
-      "$ref": "../neutrino_telescope/NeutrinoAlert.schema.json",
+      "$ref": "../neutrino/Alert.schema.json",
       "description": "Neutrino alert schema. Alert info and most probable Localization (Time, Position, Error and Skymap if available)."
     },
     {
@@ -17,12 +17,23 @@
   ],
   "properties": {
     "$schema": true,
-    "packet_type": {
-      "type": "number",
-      "description": "packet_type provided by GCN as for the old GCN format."
+    "notice_type": {
+      "enum": [
+        "exceptional_evt_arca",
+        "exceptional_evt_orca",
+        "multiplet_arca",
+        "multiplet_orca"
+      ],
+      "description": "Pipeline issuing this notice"
     },
-    "p_value": {},
-    "src_error_50": {},
+    "p_value": {
+      "type": "number",
+      "description": "occurence propapility of the alert reported."
+    },
+    "src_error_50": {
+      "type": "number",
+      "description": "50% CL uncertainty region described as a circle with a radius [deg]."
+    },
     "event_details": {
       "type": "array",
       "items": { "$ref": "#/$defs/km3event" },
@@ -42,8 +53,9 @@
     "messenger",
     "alert_tense",
     "alert_type",
+    "record_number",
     "alert_datetime",
-    "analysis_pipeline",
+    "notice_type",
     "id",
     "event_name",
     "trigger_time",
@@ -56,18 +68,6 @@
     "p_value"
   ],
   "$defs": {
-    "prob_evt_topology": {
-      "type": "string",
-      "description": "track, shower, starting/through-going."
-    },
-    "cos_zenith": {
-      "type": "number",
-      "description": "Value of the cosine of the angle between the event direction and the vertical: -1 correspond to up-going event, 1 is down-going."
-    },
-    "reco_energy": {
-      "type": "number",
-      "description": "Estimation of the measured energy [GeV]."
-    },
     "km3event": {
       "type": "object",
       "allOf": [
@@ -76,9 +76,18 @@
         { "$ref": "../core/Localization.schema.json" }
       ],
       "properties": {
-        "prob_evt_topology": { "$ref": "#/$defs/prob_evt_topology" },
-        "cos_zenith": { "$ref": "#/$defs/cos_zenith" },
-        "reco_energy": { "$ref": "#/$defs/reco_energy" }
+        "prob_evt_topology": {
+          "enum": ["track", "starting track", "shower"],
+          "description": "Best reconstructed topology, possible to acknowledge is track start inside the detector volume."
+        },
+        "cos_zenith": {
+          "type": "number",
+          "description": "Value of the cosine of the angle between the event direction and the vertical: -1 correspond to up-going event, 1 is down-going."
+        },
+        "reco_energy": {
+          "type": "number",
+          "description": "Estimation of the track/shower energy [GeV]."
+        }
       },
       "description": "[Id, Date_Event, RA, Dec, Radius_Error, Topology, Zenith, reco_energy] of the KM3NeT events involved in the alert."
     },

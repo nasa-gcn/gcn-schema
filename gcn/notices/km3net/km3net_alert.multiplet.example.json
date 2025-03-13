@@ -5,10 +5,11 @@
   "messenger": "Neutrino",
   "alert_tense": "current",
   "alert_type": "initial",
+  "record_number": 1,
   "alert_datetime": "2025-01-01T12:01:00.00Z",
   "id": [2],
   "event_name": ["KM3-240901A"],
-  "analysis_pipeline": "exceptionnal_evt_arca",
+  "notice_type": "multiplet_orca",
   "additional_info": "Observation from single pipeline. Analysis tuned to select 1 event/month in average. Track only analysis w/ Up-going selection.",
   "trigger_time": "2025-01-01T01:16:47.0Z",
   "ra": 13.81,
@@ -28,7 +29,7 @@
       "dec": 18.56,
       "ra_dec_error": 0.69,
       "cos_zenith": 0.01,
-      "prob_evt_topology": "Track",
+      "prob_evt_topology": "track",
       "reco_energy": 1.2e5
     },
     {
@@ -38,7 +39,7 @@
       "dec": 19.01,
       "ra_dec_error": 0.52,
       "cos_zenith": -0.02,
-      "prob_evt_topology": "Track",
+      "prob_evt_topology": "shower",
       "reco_energy": 1.2e5
     }
   ],
