@@ -46,27 +46,6 @@
       "description": "No search / No match / Array of known (transient) astrophysical sources present in the KM3NeT event RoI (not exhaustive)."
     }
   },
-  "required": [
-    "$schema",
-    "mission",
-    "instrument",
-    "messenger",
-    "alert_tense",
-    "alert_type",
-    "record_number",
-    "alert_datetime",
-    "notice_type",
-    "id",
-    "event_name",
-    "trigger_time",
-    "ra",
-    "dec",
-    "ra_dec_error",
-    "far",
-    "alert_topology",
-    "number_of_events",
-    "p_value"
-  ],
   "$defs": {
     "km3event": {
       "type": "object",
