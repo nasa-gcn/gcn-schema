@@ -1,0 +1,20 @@
+{
+  "alert_datetime": "2021-9-04T02:53:53Z",
+  "id": [21462],
+  "trigger_time": "2021-09-03T23:23:19.00Z",
+  "ra": 250.2136,
+  "dec": 17.5305,
+  "ra_dec_error": 3.2,
+  "submitter_name": "Phil_Evans",
+  "energy_flux": 3.7e-13,
+  "duration": 1125.8,
+  "additional_info": "GRB COUNTERPART Coordinates.  \nWe cannot confirm whether this is the GRB or serendipitous.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/counterpart/alert.schema.json",
+  "notice_type": "GRB_Counterpart",
+  "record_number": 1,
+  "alert_type": "initial",
+  "mission": "Swift",
+  "instrument": "XRT",
+  "energy_flux_error": 1.6e-13,
+  "flux_energy_range": [0.3, 10.0]
+}
