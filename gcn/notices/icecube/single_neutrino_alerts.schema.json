@@ -10,7 +10,7 @@
       "description": "Most probable neutrino energy [TeV] that would have produced an event",
       "type": "number"
     },
-    "notice_type": {
+    "pipeline": {
       "enum": ["Gold Track Alert", "Bronze Track Alert", "Cascade Alert"],
       "description": "Type of IceCube Alert",
       "type": "string"
