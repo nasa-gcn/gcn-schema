@@ -2,7 +2,7 @@
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/neutrino/Alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "NeutrinoAlert",
+  "title": "Neutrino Alert",
   "description": "Neutrino alert common base schema for high-energy neutrino telescope alerts.  To be inherited from for alerts on experiment specific alert topics",
   "allOf": [
     {
