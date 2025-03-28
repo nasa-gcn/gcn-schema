@@ -2,8 +2,8 @@
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/single_neutrino_alerts.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "IceCubeGoldAndBronzeTracks",
-  "description": "IceCube Astrotrack Gold And Bronze track alert events",
+  "title": "IceCubeSingleNeutrinoAlert",
+  "description": "IceCube Astrophysical alert events - Generate alerts from neutrino events detected by IceCube that are likely astrophysical in origin.",
   "allOf": [{ "$ref": "../neutrino/Alert.schema.json" }],
   "properties": {
     "nu_energy": {
