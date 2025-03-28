@@ -12,7 +12,7 @@
     },
     "pipeline": {
       "enum": ["Gold Track Alert", "Bronze Track Alert", "Cascade Alert"],
-      "description": "Type of IceCube Alert",
+      "description": "Name of IceCube Astrophysical Alert Selection pipeline",
       "type": "string"
     }
   }
