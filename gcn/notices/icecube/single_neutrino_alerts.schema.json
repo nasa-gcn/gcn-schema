@@ -1,0 +1,19 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/single_neutrino_alerts.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "IceCube Single Neutrino Alert",
+  "description": "IceCube Astrophysical alert events - Generate alerts from neutrino events detected by IceCube that are likely astrophysical in origin.",
+  "allOf": [{ "$ref": "../neutrino/Alert.schema.json" }],
+  "properties": {
+    "nu_energy": {
+      "description": "Most probable neutrino energy [TeV] that would have produced an event",
+      "type": "number"
+    },
+    "pipeline": {
+      "enum": ["Gold Track Alert", "Bronze Track Alert", "Cascade Alert"],
+      "description": "Name of IceCube Astrophysical Alert Selection pipeline",
+      "type": "string"
+    }
+  }
+}
