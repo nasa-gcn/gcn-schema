@@ -9,7 +9,7 @@
   "alert_datetime": "2025-01-01T12:01:00.00Z",
   "id": [2],
   "event_name": ["KM3-240901A"],
-  "notice_type": "multiplet_orca",
+  "pipeline": "multiplet_orca",
   "additional_info": "Observation from single pipeline. Analysis tuned to select 1 event/month in average. Track only analysis w/ Up-going selection.",
   "trigger_time": "2025-01-01T01:16:47.0Z",
   "ra": 13.81,

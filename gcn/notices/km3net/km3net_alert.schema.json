@@ -17,7 +17,7 @@
   ],
   "properties": {
     "$schema": true,
-    "notice_type": {
+    "pipeline": {
       "enum": [
         "exceptional_evt_arca",
         "exceptional_evt_orca",
