@@ -72,7 +72,7 @@
     },
     "high_energy_high_intensity": {
       "enum": [false, true, "UNCERTAIN"],
-      "description": "High energy, high intensity event"
+      "description": "True, if `A * RATE > 1`, where `RATE` is the background-subtracted rate (in counts per second) in the energy range 0.4 – 20 MeV in the brighter BGO detectors and `A` is a factor depending on the `rate_duration` (in seconds) as follows:  {0.016: 1, 0.032: 2, 0.064: 2, 0.128: 2, 0.256: 4, 0.512: 4, 1.024: 4, 2.048: 6, 4.096: 8.8, 8.192: 8.8}.  False, if neither BGO detector satisfies the condition."
     },
     "human_in_the_loop": {
       "type": "boolean",
@@ -98,17 +98,6 @@
       "minItems": 2,
       "maxItems": 2,
       "description": "The energy range used for localization, which is distinct from the energy range used by the trigger algorithm."
-    },
-    "notice_type": {
-      "type": "string",
-      "enum": [
-        "FERMI_GBM_ALERT",
-        "FERMI_GBM_FLIGHT_POS",
-        "FERMI_GBM_GROUND_POS",
-        "FERMI_GBM_FINAL_POS",
-        "FERMI_GBM_SUBTHRESHOLD"
-      ],
-      "description": "This is the notice title from the GCN Classic text format.  The enum also corresponds to packet types 110, 111, 112, 115 and 131 from the GCN Classic binary format."
     },
     "reliability": {
       "enum": ["LOW", "MED", "HIGH"],
