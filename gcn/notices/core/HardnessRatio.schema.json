@@ -7,13 +7,21 @@
   "properties": {
     "hardness_ratio": {
       "type": "number",
-      "description": "ratio of flux between high and low energy bands"
+      "description": "Ratio of flux between high and low energy bands"
     },
     "hardness_ratio_error": {
-      "type": "array",
-      "items": { "type": "number" },
-      "maxItems": 2,
-      "description": "ratio of flux between high and low energy bands, with asymmetric statistical errors taken into account"
+      "anyOf": [
+        {
+          "type": "number",
+          "description": "Error in hardness ratio, number for symmetric statistical error"
+        },
+        {
+          "type": "array",
+          "items": { "type": "number" },
+          "maxItems": 2,
+          "description": "Error in hardness ratio, array for asymmetric statistical errors"
+        }
+      ]
     },
     "energy_range_soft": {
       "type": "array",

@@ -10,10 +10,18 @@
       "description": "Dispersion measure (DM) of the burst [pc/cm^3], representing the integrated column density of free electrons along the line of sight."
     },
     "dm_error": {
-      "type": "array",
-      "items": { "type": "number" },
-      "maxItems": 2,
-      "description": "Uncertainity associated with the dispersion measure [pc/cm^3, 1-sigma], with optional asymmetric uncertainty."
+      "anyOf": [
+        {
+          "type": "number",
+          "description": "Uncertainity associated with the dispersion measure [pc/cm^3, 1-sigma], with symmetric uncertainty"
+        },
+        {
+          "type": "array",
+          "items": { "type": "number" },
+          "maxItems": 2,
+          "description": "Uncertainity associated with the dispersion measure [pc/cm^3, 1-sigma], with asymmetric uncertainty"
+        }
+      ]
     }
   }
 }
