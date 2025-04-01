@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/neutrino/Alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v4.3.0/gcn/notices/neutrino/Alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Neutrino Alert",
@@ -9,10 +9,7 @@
       "$ref": "../core/Event.schema.json",
       "description": "Unique per-alert identification information from source telescope"
     },
-    {
-      "$ref": "../core/Alert.schema.json",
-      "description": "Alert information"
-    },
+    { "$ref": "../core/Alert.schema.json", "description": "Alert information" },
     {
       "$ref": "../core/Reporter.schema.json",
       "description": "Reporting telescope ID information"

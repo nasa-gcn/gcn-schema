@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v4.3.0/gcn/notices/core/Pointing.schema.json",
   "ra_pointing": 120.5,
   "dec_pointing": 30.2,
   "roll": -12.8,
