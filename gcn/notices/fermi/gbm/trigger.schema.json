@@ -47,7 +47,7 @@
       "description": "Triggered detectors"
     },
     "duration_class": {
-      "enum": ["SHORT", "LONG", "UNCERTAIN"],
+      "enum": ["SHORT", "LONG"],
       "description": "A burst is classified as LONG or SHORT, if an initial duration estimate is respectively longer than 2.048 s or not.  This is a preliminary result.  The burst is classified again, when the T_90 becomes available.  A preliminary classification of LONG matches the T_90 classification for 95% of the bursts;  SHORT holds 92% of the time"
     },
     "earth_angle": {
@@ -71,7 +71,7 @@
       "description": "Classification based on the hardness ratio."
     },
     "high_energy_high_intensity": {
-      "enum": [false, true, "UNCERTAIN"],
+      "enum": [false, true],
       "description": "True, if `A * RATE > 1`, where `RATE` is the background-subtracted rate (in counts per second) in the energy range 0.4 – 20 MeV in the brighter BGO detectors and `A` is a factor depending on the `rate_duration` (in seconds) as follows:  {0.016: 1, 0.032: 2, 0.064: 2, 0.128: 2, 0.256: 4, 0.512: 4, 1.024: 4, 2.048: 6, 4.096: 8.8, 8.192: 8.8}.  False, if neither BGO detector satisfies the condition."
     },
     "human_in_the_loop": {
@@ -79,7 +79,7 @@
       "description": "True when a human had input or confirmed before further processing. False when the notice was generated entirely automatically."
     },
     "in_lat_fov": {
-      "enum": [false, true, "UNCERTAIN"],
+      "enum": [false, true],
       "description": "The event was localized in the LAT field of view, 60 degrees from the LAT boresight."
     },
     "light_curve_url": {
