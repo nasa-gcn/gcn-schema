@@ -27,7 +27,7 @@
       "description": "Time duration of central 50% of integrated fluence [s]"
     },
     "t50_error": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "number",
           "description": "1-sigma uncertainty of the T50 duration [s], with symmetric statistical errors taken into account"
