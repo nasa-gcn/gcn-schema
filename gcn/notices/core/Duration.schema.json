@@ -9,7 +9,7 @@
       "description": "Time duration of central 90% of integrated fluence [s]"
     },
     "t90_error": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "number",
           "description": "1-sigma uncertainty of the T90 duration [s], with symmetric statistical errors taken into account"
