@@ -10,7 +10,7 @@
       "description": "Time of the trigger [ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
     },
     "trigger_time_error": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "number",
           "description": "Trigger time uncertainty [s, 1-sigma], with symmetric uncertainty"
