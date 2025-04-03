@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v4.3.1/gcn/notices/einstein_probe/wxt/alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/einstein_probe/wxt/alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "EP/WXT Alert",
   "description": "Candidate X-ray transient reported from the EP/WXT on board trigger",
