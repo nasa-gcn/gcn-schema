@@ -10,7 +10,7 @@
       "description": "Luminosity distance [Mpc]"
     },
     "luminosity_distance_error": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "number",
           "description": "Luminosity distance uncertainty [Mpc, 1-sigma], with symmetric uncertainty"
