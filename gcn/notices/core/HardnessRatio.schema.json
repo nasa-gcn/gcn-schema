@@ -10,7 +10,7 @@
       "description": "Ratio of flux between high and low energy bands"
     },
     "hardness_ratio_error": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "number",
           "description": "Error in hardness ratio, number for symmetric statistical error"
