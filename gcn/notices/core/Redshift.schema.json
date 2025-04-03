@@ -10,7 +10,7 @@
       "description": "Displacement of spectral lines toward longer wavelengths [sigma]"
     },
     "redshift_error": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "number",
           "description": "Error in redshift, number for symmetric statistical error"
