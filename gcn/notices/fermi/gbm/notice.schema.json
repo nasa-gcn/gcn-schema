@@ -71,7 +71,7 @@
       "description": "Classification based on the hardness ratio."
     },
     "high_energy_high_intensity": {
-      "enum": [false, true],
+      "enum": "boolean",
       "description": "True, if `A * RATE > 1`, where `RATE` is the background-subtracted rate (in counts per second) in the energy range 0.4 – 20 MeV in the brighter BGO detectors and `A` is a factor depending on the `rate_duration` (in seconds) as follows:  {0.016: 1, 0.032: 2, 0.064: 2, 0.128: 2, 0.256: 4, 0.512: 4, 1.024: 4, 2.048: 6, 4.096: 8.8, 8.192: 8.8}.  False, if neither BGO detector satisfies the condition."
     },
     "human_in_the_loop": {
@@ -79,7 +79,7 @@
       "description": "True when a human had input or confirmed before further processing. False when the notice was generated entirely automatically."
     },
     "in_lat_fov": {
-      "enum": [false, true],
+      "enum": "boolean",
       "description": "The event was localized in the LAT field of view, 60 degrees from the LAT boresight."
     },
     "light_curve_url": {
@@ -102,6 +102,10 @@
     "reliability": {
       "enum": ["LOW", "MED", "HIGH"],
       "description": "Reliability of the subthreshold search result."
+    },
+    "subtype": {
+      "enum": ["GBM_ALERT", "GBM_FLIGHT_POS", "GBM_GROUND_POS", "GBM_FINAL_POS"],
+      "description": "."
     },
     "sun_distance": {
       "type": "number",
