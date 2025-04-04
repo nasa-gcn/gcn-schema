@@ -1,0 +1,28 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/grm/grm.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "SVOM GRM alerts",
+  "description": "GRM detection information of a GRB or other X-Ray transient",
+  "allOf": [
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" },
+    { "$ref": "../../core/Pointing.schema.json" },
+    { "$ref": "../../core/AdditionalInfo.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "triggered_GRDs": {
+      "type": "array",
+      "items": { "type": "boolean" },
+      "minItems": 3,
+      "maxItems": 3,
+      "description": "In case of a GRM trigger, trigger status the 3 GRDs. Each item correspond to one of the 3 GRDs: true means the GRD triggers, false not."
+    }
+  }
+}
