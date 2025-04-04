@@ -47,10 +47,7 @@
       "description": "Triggered detectors"
     },
     "duration_class": {
-      "enum": [
-        "SHORT",
-        "LONG"
-      ],
+      "enum": ["SHORT", "LONG"],
       "description": "A burst is classified as LONG or SHORT, if an initial duration estimate is respectively longer than 2.048 s or not.  This is a preliminary result.  The burst is classified again, when the T_90 becomes available.  A preliminary classification of LONG matches the T_90 classification for 95% of the bursts;  SHORT holds 92% of the time"
     },
     "earth_angle": {
@@ -70,10 +67,7 @@
       "description": "The notice has been issued on the ground, if this flag is set, i.e. is true."
     },
     "hardness_class": {
-      "enum": [
-        "SOFT",
-        "HARD"
-      ],
+      "enum": ["SOFT", "HARD"],
       "description": "Classification based on the hardness ratio."
     },
     "high_energy_high_intensity": {
@@ -106,11 +100,7 @@
       "description": "The energy range used for localization, which is distinct from the energy range used by the trigger algorithm."
     },
     "reliability": {
-      "enum": [
-        "LOW",
-        "MED",
-        "HIGH"
-      ],
+      "enum": ["LOW", "MED", "HIGH"],
       "description": "Reliability of the subthreshold search result."
     },
     "subtype": {
