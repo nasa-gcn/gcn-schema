@@ -4,7 +4,7 @@
   "type": "object",
   "unevaluatedProperties": false,
   "title": "KM3NeT Alerts",
-  "description": "Candidate neutrino observation reported from the KM3NeT online analysis pipeline.",
+  "description": "Candidate neutrino observation reported from the KM3NeT online analysis pipelines.",
   "allOf": [
     {
       "$ref": "../neutrino/Alert.schema.json",
@@ -12,7 +12,7 @@
     },
     {
       "$ref": "../core/AdditionalInfo.schema.json",
-      "description": "Nb. of pipeline triggering on this event, FAR of the analysis and details on selection."
+      "description": "Nb. of pipeline triggering on this event, targeted FAR and details on selection."
     }
   ],
   "properties": {
@@ -24,11 +24,11 @@
         "multiplet_arca",
         "multiplet_orca"
       ],
-      "description": "Pipeline issuing this notice"
+      "description": "Pipeline issuing this notice: either single, exceptional (high-energy), event or multiple coincident events, from KM3NeT/ARCA or KM3NeT/ORCA data."
     },
     "p_value": {
       "type": "number",
-      "description": "occurence propapility of the alert reported."
+      "description": "Occurence probability of the alert reported."
     },
     "src_error_50": {
       "type": "number",
@@ -37,13 +37,13 @@
     "event_details": {
       "type": "array",
       "items": { "$ref": "#/$defs/km3event" },
-      "description": "List of KM3NeT events involved in the alert."
+      "description": "List and details of KM3NeT events involved in the alert."
     },
     "potential_counterpart": {},
     "counterpart_info": {
       "type": ["array", "string"],
       "items": { "$ref": "#/$defs/knownsrc" },
-      "description": "No search / No match / Array of known (transient) astrophysical sources present in the KM3NeT event RoI (not exhaustive)."
+      "description": "No search / No match / (not exhaustive) Array of known astrophysical sources or transient present in the KM3NeT event RoI."
     }
   },
   "$defs": {
@@ -57,7 +57,7 @@
       "properties": {
         "prob_evt_topology": {
           "enum": ["track", "starting track", "shower"],
-          "description": "Best reconstructed topology, possible to acknowledge is track start inside the detector volume."
+          "description": "Best reconstructed topology, possible to acknowledge if track starts inside the detector volume."
         },
         "cos_zenith": {
           "type": "number",
