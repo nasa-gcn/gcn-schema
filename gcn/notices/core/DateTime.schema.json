@@ -10,10 +10,18 @@
       "description": "Time of the trigger [ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
     },
     "trigger_time_error": {
-      "type": "array",
-      "items": { "type": "number" },
-      "maxItems": 2,
-      "description": "Trigger time uncertainty [s, 1-sigma], with optional asymmetric uncertainty"
+      "oneOf": [
+        {
+          "type": "number",
+          "description": "Trigger time uncertainty [s, 1-sigma], with symmetric uncertainty"
+        },
+        {
+          "type": "array",
+          "items": { "type": "number" },
+          "maxItems": 2,
+          "description": "Trigger time uncertainty [s, 1-sigma], with asymmetric uncertainty"
+        }
+      ]
     },
     "observation_start": {
       "type": "string",

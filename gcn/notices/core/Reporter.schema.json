@@ -23,9 +23,7 @@
     },
     "spectral_band": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "description": "Observed spectral band, must be consistent with the 'spectrum' type and expressed in the specified 'units' field",
       "minItems": 2,
       "maxItems": 2
