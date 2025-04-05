@@ -110,7 +110,7 @@
         "FERMI_GBM_GROUND_POS",
         "FERMI_GBM_FINAL_POS"
       ],
-      "description": "."
+      "description": "Specifies the Fermi GBM notice subtype.  The enum corresponds to legacy numeric notice types 110, 111, 112, 115."
     },
     "sun_distance": {
       "type": "number",
