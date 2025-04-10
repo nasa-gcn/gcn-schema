@@ -13,8 +13,12 @@
   "rate_snr": 25.67,
   "rate_duration": 0,
   "rate_energy_range": [15, 550],
-  "triggered_GRDs": [true, true, true],
   "ra_pointing": 143.6,
   "dec_pointing": -70.44,
-  "roll": 63.22
+  "roll": 63.22,
+  "detector_status": {
+    "GRD1": "triggered",
+    "GRD2": "triggered",
+    "GRD3": "on"
+  }
 }
