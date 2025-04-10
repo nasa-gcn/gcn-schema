@@ -4,6 +4,7 @@
   "instrument": "ECLAIRs",
   "alert_tense": "test",
   "alert_type": "initial",
+  "subtype": "catalog",
   "alert_datetime": "2024-02-22T08:51:55",
   "id": ["sb24022203"],
   "record_number": 1,

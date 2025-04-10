@@ -18,6 +18,10 @@
   ],
   "properties": {
     "$schema": true,
+    "subtype": {
+      "enum": ["wakeup", "catalog", "slewing", "not-slewing"],
+      "description": "Different subtypes of ECLAIRs notices. 'wakeup' and 'catalog' are initial detections of respectively unknown flaring sources (potential GRBs) and flaring sources of the on-board catalog. 'slewing/not-slewing' are subsequent detections (with an improved localisation) indicating if the initial detection leads to an automatic slew of the platform for an on-board follow-up by MXT and VT."
+    },
     "slew_status": {
       "enum": ["accepted", "rejected", "not_requested"],
       "description": "Whether the platform accepted or rejected a slew requested by ECLAIRs (to its best localisation). If the detection is not significant enough, this value can remain to 'not_requested'"
