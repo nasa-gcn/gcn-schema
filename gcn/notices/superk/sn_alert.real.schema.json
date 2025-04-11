@@ -1,0 +1,33 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/superk/sn_alert.real.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Test of Super-Kamiokande Supernova Alert",
+  "description": "Test of Supernova alert from Super Kamiokande",
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Distance.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "n_events": {
+      "type": "number",
+      "description": "The number of detected neutrino events. If 'processed_sample' is partial, this number corresponds to only for neutrino events found in the 'processed' sample. The final number for the full sample will be provided later."
+    },
+    "n_ibd_events": {
+      "type": "number",
+      "description": "The number of tagged inverse beta decay events in the processed sample (refer 'n_events')"
+    },
+    "processed_sample": {
+      "enum": ["partial", "full"],
+      "description": "The sample size used for this analysis process. In case of nearby supernova, because of huge statistics the initial alert will be published based on the analysis result of partial sample."
+    },
+    "processed_pipeline": {
+      "type": "string",
+      "description": "Pipleline used for this analysis process."
+    }
+  }
+}
