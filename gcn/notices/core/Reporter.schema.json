@@ -24,17 +24,13 @@
     "spectral_band": {
       "type": "array",
       "items": { "type": "number" },
-      "description": "Observed spectral band, must be consistent with the 'spectrum' type and expressed in the specified 'units' field",
+      "description": "Observed spectral band, expressed in the specified 'units' field",
       "minItems": 2,
       "maxItems": 2
     },
-    "spectral_center": {
-      "type": "number",
-      "description": "Central value of the observed spectral band, must be consistent with the 'spectrum' type and expressed in the specified 'units' field"
-    },
     "units": {
       "type": "string",
-      "enum": ["keV", "nm", "Hz"],
+      "enum": ["keV", "nm", "MHz"],
       "description": "Units for the spectral data; default unit is keV",
       "default": "keV"
     },
