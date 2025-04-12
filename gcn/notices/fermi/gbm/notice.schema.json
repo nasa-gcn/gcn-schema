@@ -48,7 +48,7 @@
     },
     "duration_class": {
       "enum": ["SHORT", "LONG"],
-      "description": "This is a preliminary classification of the GRB of LONG (> 2.048) or SHORT (<= 2.048 s). It is reevaluated using the T_90 bmeasurement, when it ecomes available.  Note that a preliminary classification of LONG is confirmed by the T_90 classification for 95% of the bursts and SHORT - for 92%."
+      "description": "This is a preliminary classification of the GRB of LONG (> 2.048) or SHORT (<= 2.048 s).  It is reevaluated using the T_90 bmeasurement, when it ecomes available.  Note that a preliminary classification of LONG is confirmed by the T_90 classification for 95% of the bursts and SHORT - for 92%."
     },
     "earth_angle": {
       "type": "number",
