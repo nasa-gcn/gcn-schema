@@ -104,12 +104,7 @@
       "description": "Reliability of the subthreshold search result."
     },
     "subtype": {
-      "enum": [
-        "ALERT",
-        "FLIGHT_POSITION",
-        "GROUND_POSITION",
-        "FINAL_POSITION"
-      ],
+      "enum": ["ALERT", "FLIGHT_POSITION", "GROUND_POSITION", "FINAL_POSITION"],
       "description": "Specifies the Fermi GBM notice subtype.  The enum corresponds to legacy numeric notice types 110, 111, 112, 115."
     },
     "sun_distance": {
