@@ -48,7 +48,7 @@
     },
     "duration_class": {
       "enum": ["SHORT", "LONG"],
-      "description": "A burst is classified as LONG or SHORT, if an initial duration estimate is respectively longer than 2.048 s or not.  This is a preliminary result.  The burst is classified again, when the T_90 becomes available.  A preliminary classification of LONG matches the T_90 classification for 95% of the bursts;  SHORT holds 92% of the time"
+      "description": "This is a preliminary classification of the GRB of LONG (> 2.048) or SHORT (<= 2.048 s). It is reevaluated using the T_90 bmeasurement, when it ecomes available.  Note that a preliminary classification of LONG is confirmed by the T_90 classification for 95% of the bursts and SHORT - for 92%."
     },
     "earth_angle": {
       "type": "number",
@@ -105,10 +105,10 @@
     },
     "subtype": {
       "enum": [
-        "FERMI_GBM_ALERT",
-        "FERMI_GBM_FLIGHT_POS",
-        "FERMI_GBM_GROUND_POS",
-        "FERMI_GBM_FINAL_POS"
+        "ALERT",
+        "FLIGHT_POSITION",
+        "GROUND_POSITION",
+        "FINAL_POSITION"
       ],
       "description": "Specifies the Fermi GBM notice subtype.  The enum corresponds to legacy numeric notice types 110, 111, 112, 115."
     },
