@@ -28,7 +28,7 @@
   "rate_energy_range": [47, 291],
   "rate_snr": 4.9,
   "record_number": 1,
-  "subtype": "FERMI_GBM_ALERT",
+  "subtype": "ALERT",
   "trigger_algorithm_number": 14,
   "trigger_time": "2024-08-24T02:14:40.43"
 }
