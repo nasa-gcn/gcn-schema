@@ -21,16 +21,17 @@
       "enum": ["EM", "GW", "Neutrino"],
       "description": "Messenger of report; EM, GW or Neutrino"
     },
-    "spectrum": {
-      "enum": ["energy", "wavelength", "frequency"],
-      "description": "high-energy or optical or radio observations, if not parsed, then default band is energy",
-      "type": "string",
-      "default": "energy"
+    "spectral_band": {
+      "type": "array",
+      "items": { "type": "number" },
+      "description": "Observed spectral band, expressed in the specified 'units' field",
+      "minItems": 2,
+      "maxItems": 2
     },
     "units": {
-      "enum": ["keV", "nm", "Hz"],
-      "description": "Units of band range, if not parsed, then default energy is keV",
       "type": "string",
+      "enum": ["keV", "nm", "MHz"],
+      "description": "Units for the spectral data; default unit is keV",
       "default": "keV"
     },
     "filter": {

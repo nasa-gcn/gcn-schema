@@ -10,10 +10,18 @@
       "description": "Displacement of spectral lines toward longer wavelengths [sigma]"
     },
     "redshift_error": {
-      "type": "array",
-      "items": { "type": "number" },
-      "maxItems": 2,
-      "description": "Error in redshift, array for asymmetric statistical errors"
+      "oneOf": [
+        {
+          "type": "number",
+          "description": "Error in redshift, number for symmetric statistical error"
+        },
+        {
+          "type": "array",
+          "items": { "type": "number" },
+          "maxItems": 2,
+          "description": "Error in redshift, array for asymmetric statistical errors"
+        }
+      ]
     },
     "redshift_measure": { "enum": ["spectroscopic", "photometric"] },
     "redshift_type": { "enum": ["emission", "absorption", "host"] }

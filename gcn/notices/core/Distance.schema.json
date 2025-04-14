@@ -10,10 +10,18 @@
       "description": "Luminosity distance [Mpc]"
     },
     "luminosity_distance_error": {
-      "type": "array",
-      "items": { "type": "number" },
-      "maxItems": 2,
-      "description": "Luminosity distance uncertainty [Mpc, 1-sigma], with optional asymmetric uncertainty"
+      "oneOf": [
+        {
+          "type": "number",
+          "description": "Luminosity distance uncertainty [Mpc, 1-sigma], with symmetric uncertainty"
+        },
+        {
+          "type": "array",
+          "items": { "type": "number" },
+          "maxItems": 2,
+          "description": "Luminosity distance uncertainty [Mpc, 1-sigma], with optional asymmetric uncertainty"
+        }
+      ]
     }
   }
 }

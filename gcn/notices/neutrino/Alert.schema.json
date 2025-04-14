@@ -1,0 +1,37 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/neutrino/Alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Neutrino Alert",
+  "description": "Neutrino alert common base schema for high-energy neutrino telescope alerts.  To be inherited from for alerts on experiment specific alert topics",
+  "allOf": [
+    {
+      "$ref": "../core/Event.schema.json",
+      "description": "Unique per-alert identification information from source telescope"
+    },
+    { "$ref": "../core/Alert.schema.json", "description": "Alert information" },
+    {
+      "$ref": "../core/Reporter.schema.json",
+      "description": "Reporting telescope ID information"
+    },
+    {
+      "$ref": "../core/Statistics.schema.json",
+      "description": "Alert significance measures"
+    },
+    {
+      "$ref": "../core/Localization.schema.json",
+      "description": "Alert sky localization information"
+    },
+    { "$ref": "../core/DateTime.schema.json" }
+  ],
+  "properties": {
+    "number_of_events": {
+      "description": "Number of detected events that contributed to alert",
+      "type": "number"
+    },
+    "alert_topology": {
+      "description": "Event topology of the alert",
+      "enum": ["Track", "Shower", "Multiplet"]
+    }
+  }
+}
