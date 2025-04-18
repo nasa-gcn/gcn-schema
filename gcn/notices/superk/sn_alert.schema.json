@@ -1,9 +1,9 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/superk/sn_alert.test.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/superk/sn_alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Test of Super-Kamiokande Supernova Alert",
-  "description": "Test of Supernova alert from Super Kamiokande",
+  "title": "Super-Kamiokande Supernova Alert",
+  "description": "Supernova alert from Super Kamiokande",
   "allOf": [
     { "$ref": "../core/Alert.schema.json" },
     { "$ref": "../core/DateTime.schema.json" },
@@ -25,8 +25,8 @@
       "enum": ["partial", "full"],
       "description": "The sample size used for this analysis process. In case of nearby supernova, because of huge statistics the initial alert will be published based on the analysis result of partial sample."
     },
-    "processed_pipeline": {
-      "type": "string",
+    "pipeline": {
+      "enum": ["snwatch", "wit"],
       "description": "Pipleline used for this analysis process."
     }
   }
