@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v4.3.2/gcn/notices/heasarc/archive_alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/archive_alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "HEASARC - Data in Archive",
