@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/trigger.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v4.3.2/gcn/notices/svom/trigger.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "unevaluatedProperties": false,

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/circulars.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v4.3.2/gcn/circulars.schema.json",
   "eventId": "GRB 230410A",
   "submitter": "Fermi GBM Team at MSFC/Fermi-GBM <do_not_reply@GIOC.nsstc.nasa.gov>",
   "submittedHow": "email-legacy",
