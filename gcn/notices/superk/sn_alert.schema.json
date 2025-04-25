@@ -23,11 +23,11 @@
     },
     "processed_sample": {
       "enum": ["partial", "full"],
-      "description": "The sample size used for this analysis process. In case of nearby supernova, because of huge statistics the initial alert will be published based on the analysis result of partial sample."
+      "description": "The sample size used for this analysis process. In case of a nearby supernova, because of huge statistics the initial alert will be published based on the analysis result of partial sample."
     },
     "pipeline": {
       "enum": ["snwatch", "wit"],
-      "description": "Pipleline used for this analysis process."
+      "description": "Pipeline used for this analysis process."
     }
   }
 }
