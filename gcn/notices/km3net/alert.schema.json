@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/km3net_alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "unevaluatedProperties": false,
@@ -63,9 +63,9 @@
           "type": "number",
           "description": "Value of the cosine of the angle between the event direction and the vertical: 1 correspond to up-going event, -1 is down-going."
         },
-        "reco_energy": {
+        "proxy_energy": {
           "type": "number",
-          "description": "Estimation of the energy of the track/shower [GeV]."
+          "description": "Estimation of the energy of the lepton track/shower, resulting from the neutrino interaction [GeV]."
         }
       },
       "description": "[Id, Date_Event, RA, Dec, Radius_Error, Topology, Zenith, reco_energy] of the KM3NeT events involved in the alert."

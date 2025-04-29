@@ -1,15 +1,15 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/km3net_alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/alert.schema.json",
   "messenger": "Neutrino",
   "mission": "KM3NeT",
   "instrument": "ORCA024",
   "pipeline": "exceptional_evt_orca",
-  "additional_info": "Observation from single pipeline. Analysis tuned to select 1 event/month in average. Track only analysis w/ Up-going selection.",
   "alert_tense": "current",
   "alert_type": "initial",
   "record_number": 1,
   "alert_datetime": "2024-09-01T12:01:00.00Z",
-  "id": [1],
+  "additional_info": "Observation from single pipeline. Analysis tuned to select 1 event/month in average. Track only analysis w/ Up-going selection.",
+  "id": "1",
   "event_name": ["KM3-240901A"],
   "trigger_time": "2024-09-01T01:16:47.0Z",
   "ra": 10.82,
@@ -30,7 +30,7 @@
       "ra_dec_error": 0.9,
       "cos_zenith": 0.01,
       "prob_evt_topology": "track",
-      "reco_energy": 1.2e5
+      "proxy_energy": 1.2e5
     }
   ],
   "potential_counterpart": false,
