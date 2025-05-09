@@ -1,0 +1,63 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/moa/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "MOA Gravitational Lensing Event Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "max_time": {
+      "type": "string",
+      "description": "The maximum of the lightcurve [ISO 8601]"
+    },
+    "max_time_error": {
+      "type": "number",
+      "description": "The error in max_time [days]"
+    },
+    "u0": {
+      "type": "number",
+      "description": "The impact parameter for the lensing object in Einstein Ring units"
+    },
+    "u0_error": {
+      "type": "number",
+      "description": "The error in the impact parameter"
+    },
+    "cusp_width": {
+      "type": "number",
+      "description": "The Einstein crossing time in days"
+    },
+    "cusp_width_error": {
+      "type": "number",
+      "description": "The error in the Einstein crossing time"
+    },
+    "base_mag": {
+      "type": "number",
+      "description": "The baseline magnitude of the lensed star [mag]"
+    },
+    "base_mag_error": {
+      "type": "number",
+      "description": "The error in the baseline magnitude"
+    },
+    "max_mag": {
+      "type": "number",
+      "description": "The maximum magnitude of the lensed star [mag]"
+    },
+    "amplification": {
+      "type": "number",
+      "description": "The projection of much brighter the lensed star will get compared to the base magnitude using a light curve fit"
+    },
+    "lightcurve_url": {
+      "type": "string",
+      "description": "The URL to the webpage storing the lightcurve image"
+    }
+  }
+}
