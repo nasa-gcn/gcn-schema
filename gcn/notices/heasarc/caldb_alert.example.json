@@ -7,7 +7,7 @@
   "observation_start": "2022-02-21T16:12:23.000",
   "data_archive_page": "https://heasarc.gsfc.nasa.gov/FTP/caldb/data/ixpe",
   "path": "caldb/data/ixpe",
-  "mission_page": "https://heasarcdev.gsfc.nasa.gov/docs/ixpe/caldb/",
+  "mission_page": "https://heasarc.gsfc.nasa.gov/docs/ixpe/caldb/",
   "facility_name": "IXPE",
   "instrument_name": ""
 }
