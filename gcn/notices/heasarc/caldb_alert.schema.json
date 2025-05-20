@@ -1,0 +1,22 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/caldb_alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "HEASARC - Archive Update",
+  "description": "Generic data archived at HEASARC;  see also observation alerts.",
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "path": {
+      "type": "string",
+      "description": "The subset of the archive updated specified as the file path." },
+    "facility_name": {
+      "type": "string",
+      "description": "Name of the creator of the data [e.g., IVOA ObsCore]"
+    }
+  }
+}
