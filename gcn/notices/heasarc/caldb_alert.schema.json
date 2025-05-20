@@ -18,5 +18,9 @@
       "type": "string",
       "description": "Name of the creator of the data [e.g., IVOA ObsCore]"
     }
+    "instrument_name": {
+      "type": "string",
+      "description": "Name of the instrument creator of the data [e.g., IVOA ObsCore]"
+    }
   }
 }
