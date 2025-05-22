@@ -9,7 +9,7 @@
       "oneOf": [
         {
           "type": "string",
-          "description": "Name of the event (ex: GRB 170817A, GW170817, AT2017gfo, SSS 17a)"
+          "description": "Name of the event (ex: GRB 170817A)"
         },
         {
           "type": "array",
