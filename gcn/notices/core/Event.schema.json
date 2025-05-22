@@ -14,7 +14,7 @@
         {
           "type": "array",
           "items": { "type": "string" },
-          "description": "If multiple event names are present"
+          "description": "Multiple names of the same event (ex: GRB 170817A, GW170817, AT2017gfo, SSS 17a)"
         }
       ]
     },
