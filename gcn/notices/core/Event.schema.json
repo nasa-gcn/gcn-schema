@@ -6,9 +6,17 @@
   "description": "Name or names of the event",
   "properties": {
     "event_name": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Name of the event (ex: GRB 170817A, GW170817, AT2017gfo, SSS 17a)"
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Name of the event (ex: GRB 170817A, GW170817, AT2017gfo, SSS 17a)"
+        },
+        {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "If multiple event names are present"
+        }
+      ]
     },
     "id": {
       "oneOf": [
