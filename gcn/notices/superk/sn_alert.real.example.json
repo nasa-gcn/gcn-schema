@@ -12,7 +12,7 @@
   "pipeline": "snwatch",
   "n_events": 64176,
   "n_ibd_events": 6310,
-  "rate_duration": 10.0,
+  "detection_interval": 10.0,
   "rate_energy_range": [6000.0, 100000.0],
   "ra": 270.82,
   "dec": 31.46,
