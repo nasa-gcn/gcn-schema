@@ -22,6 +22,10 @@
       "type": "number",
       "description": "The number of tagged inverse beta decay events in the processed sample (see 'n_events')"
     },
+    "detection_interval": {
+      "type": "number",
+      "description": "The time interval between the first and last neutrino events in the burst of detected neutrino events [s]"
+    },
     "processed_sample": {
       "enum": ["partial", "full"],
       "description": "The sample size used for this analysis process. In case of a nearby supernova, because of huge statistics the initial alert will be published based on the analysis result of partial sample."
