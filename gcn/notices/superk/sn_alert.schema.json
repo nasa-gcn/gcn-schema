@@ -10,7 +10,8 @@
     { "$ref": "../core/Distance.schema.json" },
     { "$ref": "../core/Event.schema.json" },
     { "$ref": "../core/Localization.schema.json" },
-    { "$ref": "../core/Statistics.schema.json" }
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" }
   ],
   "properties": {
     "n_events": {
@@ -19,7 +20,7 @@
     },
     "n_ibd_events": {
       "type": "number",
-      "description": "The number of tagged inverse beta decay events in the processed sample (refer 'n_events')"
+      "description": "The number of tagged inverse beta decay events in the processed sample (see 'n_events')"
     },
     "processed_sample": {
       "enum": ["partial", "full"],
