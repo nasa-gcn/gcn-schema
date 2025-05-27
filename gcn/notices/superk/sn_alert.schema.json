@@ -33,6 +33,10 @@
     "pipeline": {
       "enum": ["snwatch", "wit"],
       "description": "Pipeline used for this analysis process."
+    },
+    "trigger_number": {
+      "type": "number",
+      "description": "Event ID used for GCN Classic. It is introduced to identify the same event as one in GCN Classic."
     }
   }
 }
