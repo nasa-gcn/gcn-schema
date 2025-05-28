@@ -13,10 +13,12 @@
   "properties": {
     "path": {
       "type": "string",
-      "description": "The subset of the archive updated specified as the file path." },
+      "description": "The subset of the archive updated specified as the file path."
+    },
     "facility_name": {
       "type": "string",
-      "description": "Name of the creator of the data [e.g., IVOA ObsCore]" },
+      "description": "Name of the creator of the data [e.g., IVOA ObsCore]"
+    },
     "instrument_name": {
       "type": "string",
       "description": "Name of the instrument creator of the data [e.g., IVOA ObsCore]"
