@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/superk/sn_alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v4.5.0/gcn/notices/superk/sn_alert.schema.json",
   "mission": "Super-Kamiokande",
   "messenger": "Neutrino",
   "id": "SN.095001.000001",
@@ -13,8 +13,8 @@
   "pipeline": "snwatch",
   "n_events": 64176,
   "n_ibd_events": 6310,
-  "detection_interval": 10.0,
-  "rate_energy_range": [6000.0, 100000.0],
+  "detection_interval": 10,
+  "rate_energy_range": [6000, 100000],
   "ra": 270.82,
   "dec": 31.46,
   "ra_dec_error": 0.91,

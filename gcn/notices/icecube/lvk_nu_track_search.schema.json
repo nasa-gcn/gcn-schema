@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/lvk_nu_track_search.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v4.5.0/gcn/notices/icecube/lvk_nu_track_search.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "IceCube LVK Alert Nu Track Search",

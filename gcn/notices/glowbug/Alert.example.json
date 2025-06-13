@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/glowbug/Alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v4.5.0/gcn/notices/glowbug/Alert.schema.json",
   "mission": "GLOWBUG",
   "alert_datetime": "2023-04-23T15:25:55Z",
   "alert_tense": "current",
