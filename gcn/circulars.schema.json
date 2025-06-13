@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v4.5.0/gcn/circulars.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/circulars.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "GCN Circular",
