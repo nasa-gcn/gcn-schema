@@ -8,6 +8,10 @@
   "data_archive_page": "https://heasarc.gsfc.nasa.gov/FTP/ixpe/data/obs/01/01001099/",
   "obs_id": "01001099",
   "target_name": "Crab",
+  "s_ra": "86.633",
+  "s_dec": "22.0145",
+  "t_min":"59631.6752662037",
+  "t_max": "59646.1103445255",
   "mission_page": "https://heasarc.gsfc.nasa.gov/docs/ixpe/",
   "facility_name": "IXPE"
 }
