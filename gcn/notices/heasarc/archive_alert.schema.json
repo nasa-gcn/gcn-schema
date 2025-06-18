@@ -55,5 +55,5 @@
       "type": "string",
       "description": "The file that triggers the alert."
     }
- }
+  }
 }
