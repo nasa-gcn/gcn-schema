@@ -36,8 +36,8 @@
       "description": "Declination of pointing in decimal degrees. [IVOA ObsCore]"
     },
     "obs_publisher_did": {
-        "type": "string",
-        "description": "Unique identifier of this dataset at the archive. [IVOA ObsCore]"
+      "type": "string",
+      "description": "Unique identifier of this dataset at the archive. [IVOA ObsCore]"
     },
     "mission_page": {
       "type": "string",
@@ -46,7 +46,7 @@
     "facility_name": {
       "type": "string",
       "description": "Name of the creator of the data [IVOA ObsCore]"
-    }
+    },
     "path": {
       "type": "string",
       "description": "The subset of the archive updated specified as the file path."

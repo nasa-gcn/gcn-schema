@@ -8,5 +8,5 @@
   "path": "caldb/data/ixpe",
   "mission_page": "https://heasarc.gsfc.nasa.gov/docs/ixpe/caldb/",
   "facility_name": "IXPE",
-  "instrument_name": ""
+  "instrument_name": "IXPE"
 }

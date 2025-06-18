@@ -6,7 +6,7 @@
   "alert_type": "initial",
   "data_archive_page": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2025/bn250520483/current/",
   "path": "fermi/data/gbm/triggers/2025/bn250520483/current/",
-  "trigger": "fermi/data/gbm/triggers/2025/bn250520483/current/glg_tte_nb_bn250520483_v00.fit"
+  "trigger": "fermi/data/gbm/triggers/2025/bn250520483/current/glg_tte_nb_bn250520483_v00.fit",
   "mission_page": "https://fermi.gsfc.nasa.gov/",
   "facility_name": "Fermi",
   "instrument_name": "GBM"
