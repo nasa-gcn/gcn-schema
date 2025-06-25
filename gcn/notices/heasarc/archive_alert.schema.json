@@ -21,11 +21,11 @@
     },
     "t_min": {
       "type": "string",
-      "description": "Start time of the observation. [IVOA ObsCore]"
+      "description": "Start time of the observation in Modified Julian Days (MJD). [IVOA ObsCore]"
     },
     "t_max": {
       "type": "string",
-      "description": "Stop time of the observation. [IVOA ObsCore]"
+      "description": "Stop time of the observation in Modified Julian Days (MJD). [IVOA ObsCore]"
     },
     "s_ra": {
       "type": "string",
