@@ -1,0 +1,12 @@
+{
+  "alert_datetime": "2011-5-05T21:16:54Z",
+  "trigger_time": "2011-05-05T21:05:53.30Z",
+  "intensity_snr": 15.47,
+  "additional_info": "INTEGRAL SPI_ACS GRB Trigger.  \nThe SPIACS lightcurve can be found at:  \nftp://isdcarc.unige.ch/arc/FTP/ibas/spiacs/2011-05/2011-05-05T21-05-53.1387-22720-00007-0.lc",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/integral/alert.schema.json",
+  "mission": "INTEGRAL",
+  "notice_type": "SPI-ACS",
+  "record_number": 1,
+  "alert_type": "initial",
+  "id": [6187]
+}

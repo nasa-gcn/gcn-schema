@@ -1,0 +1,17 @@
+{
+  "alert_datetime": "2017-11-12T20:59:40Z",
+  "id": [69695336],
+  "trigger_time": "2017-11-12T20:50:01.00Z",
+  "ra": 20.08,
+  "dec": -59.64,
+  "ra_dec_error": 1.0,
+  "energy_flux": 3.26e-9,
+  "duration": "4orbit",
+  "additional_info": "MAXI Unknown Source Position. GRB or unknown X-ray Transient.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/maxi/alert.schema.json",
+  "notice_type": "Unknown",
+  "systematic_included": true,
+  "record_number": 1,
+  "alert_type": "initial",
+  "flux_energy_range": [2, 4]
+}
