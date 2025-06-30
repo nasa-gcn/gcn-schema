@@ -5,7 +5,7 @@
   "alert_tense": "archival",
   "alert_type": "initial",
   "data_archive_page": "https://heasarc.gsfc.nasa.gov/FTP/caldb/data/ixpe",
-  "path": "caldb/data/ixpe",
+  "data_archive_s3": "https://nasa-heasarc.s3.amazonaws.com/caldb/data/ixpe",
   "mission_page": "https://heasarc.gsfc.nasa.gov/docs/ixpe/caldb/",
   "facility_name": "IXPE",
   "instrument_name": "IXPE"

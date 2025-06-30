@@ -47,9 +47,9 @@
       "type": "string",
       "description": "Name of the creator of the data [IVOA ObsCore]"
     },
-    "path": {
+    "data_archive_s3": {
       "type": "string",
-      "description": "The subset of the archive updated specified as the file path."
+      "description": "The base URL of the AWS S3 bucket mirroring the data."
     },
     "trigger": {
       "type": "string",
