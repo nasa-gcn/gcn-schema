@@ -53,7 +53,7 @@
     },
     "trigger": {
       "type": "string",
-      "description": "The file that triggers the alert."
+      "description": "The file that triggers the alert.  Applies to Fermi GBM triggers."
     }
   }
 }
