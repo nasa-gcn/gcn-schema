@@ -13,8 +13,7 @@
   "properties": {
     "obs_id": {
       "type": "string",
-      "description": "The observation identifier of the sequence. Also called the observation id, sequence number, and seqnum, it is a series of numerical digits, each signifying different aspects for the observation, such as AO year, proposal number, and target number. Each mission has their own specification for how the obsid is defined. Every observation by an observatory is identified by the obsid. The data set identified by the obsid contains the level one and level 2 data created by that mission's processing pipeline. [Fields to align with IVOA ObsCore]
-      "
+      "description": "The observation identifier of the sequence. Also called the observation id, sequence number, and seqnum, it is a series of numerical digits, each signifying different aspects for the observation, such as AO year, proposal number, and target number. Each mission has their own specification for how the obsid is defined. Every observation by an observatory is identified by the obsid. The data set identified by the obsid contains the level one and level 2 data created by that mission's processing pipeline. [Fields to align with IVOA ObsCore]"
     },
     "target_name": {
       "type": "string",
