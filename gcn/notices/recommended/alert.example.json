@@ -1,0 +1,15 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/recommended/alert.schema.json",
+  "alert_datetime": "2050-02-29T00:00:00Z",
+  "mission": "LISA",
+  "subtype": "type_1",
+  "alert_type": "initial",
+  "trigger_time": "2050-02-28T12:00:00Z",
+  "ra": 60.0,
+  "dec": 42.0,
+  "ra_dec_error": 0.02,
+  "instrument": "Space Observatory",
+  "messenger": "GW",
+  "id": "GW500228",
+  "record_number": 1
+}
