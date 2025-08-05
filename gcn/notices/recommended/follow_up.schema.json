@@ -24,7 +24,7 @@
       "$ref": "../core/Localization.schema.json"
     }
   ],
-  "required": ["mission"],
+  "required": ["mission", "ref_instrument"],
   "properties": {
     "subtype": {
       "enum": ["type_1", "type_2", "type_3"],
