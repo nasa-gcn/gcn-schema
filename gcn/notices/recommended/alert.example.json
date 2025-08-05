@@ -10,6 +10,7 @@
   "ra_dec_error": 0.02,
   "instrument": "Space Observatory",
   "messenger": "GW",
-  "id": "GW500228",
+  "event_name": "GW500228",
+  "id": "0123456",
   "record_number": 1
 }

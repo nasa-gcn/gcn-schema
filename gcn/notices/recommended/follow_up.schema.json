@@ -1,0 +1,34 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/recommended/follow_up.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recommended Schema for follow-up events",
+  "description": "This is basic schema template.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../core/FollowUp.schema.json"
+    },
+    {
+      "$ref": "../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../core/Event.schema.json"
+    },
+    {
+      "$ref": "../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../core/Localization.schema.json"
+    }
+  ],
+  "required": ["mission"],
+  "properties": {
+    "subtype": {
+      "enum": ["type_1", "type_2", "type_3"],
+      "description": "Defines the subtype of notice, when a single schema is used to produce multiple variations of a notice."
+    }
+  }
+}
