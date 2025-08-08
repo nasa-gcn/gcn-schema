@@ -1,0 +1,14 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/dsa110/frb.schema.json",
+  "alert_type": "initial",
+  "trigger_time": "2024-09-18T07:19:10.765268Z",
+  "id": "240918aaaa",
+  "snr": 12.698559761047363,
+  "ra": 346.77850859547,
+  "dec": 12.632485229956252,
+  "ra_dec_error": [0.016, 0.016, 0],
+  "dm": 279.422607421875,
+  "width": 1.0,
+  "importance": 0.9871308604784662,
+  "description": "This alert was generated automatically by the DSA-110 FRB Search Pipeline."
+}
