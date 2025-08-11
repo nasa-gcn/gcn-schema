@@ -4,7 +4,7 @@
   "type": "object",
   "unevaluatedProperties": false,
   "title": "SVOM/MXT localisation parameters",
-  "description": "MXT localisation after a slew of the SVOM platform on an ECLAIRs triggered source",
+  "description": "MXT localization after a slew of the SVOM platform on an ECLAIRs triggered source",
   "allOf": [
     { "$ref": "../../core/Alert.schema.json" },
     { "$ref": "../../core/Reporter.schema.json" },
