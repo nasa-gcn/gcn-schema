@@ -23,9 +23,14 @@
   ],
   "required": ["alert_datetime", "mission"],
   "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
     "subtype": {
       "enum": ["type_1", "type_2", "type_3"],
       "description": "Defines the subtype of notice, when a single schema is used to produce multiple variations of a notice."
     }
-  }
+  },
+  "unevaluatedProperties": false
 }
