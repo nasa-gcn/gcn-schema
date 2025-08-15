@@ -1,0 +1,14 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/recommended/follow_up.schema.json",
+  "mission": "LISA",
+  "subtype": "type_1",
+  "alert_type": "initial",
+  "ra": 60.0,
+  "dec": 42.0,
+  "ra_dec_error": 0.02,
+  "event_name": "GW500228",
+  "record_number": 1,
+  "ref_type": "GW",
+  "ref_instrument": "Space Observatory",
+  "ref_ID": "0123456"
+}
