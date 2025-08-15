@@ -1,0 +1,25 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/dsa110/frb.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DSA-110 FRB Alert",
+  "description": "Fast radio burst alert from the Deep Synoptic Array 110.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/DispersionMeasure.schema.json" }
+  ],
+  "properties": {
+    "importance": {
+      "type": "number",
+      "description": "A machine learning score separating RFI (0) from an astrophysical signal (1)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of how the event was identified and what it represents."
+    }
+  }
+}
