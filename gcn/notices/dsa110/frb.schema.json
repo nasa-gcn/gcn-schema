@@ -20,6 +20,10 @@
     "description": {
       "type": "string",
       "description": "Description of how the event was identified and what it represents."
+    },
+    "snr": {
+      "type": "number",
+      "description": "Signal-to-noise ratio of the burst [dimensionless]"
     }
   }
 }
