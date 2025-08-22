@@ -49,9 +49,5 @@
     "*.{json,js,mjs}": "prettier --write",
     "*.{js,mjs}": "eslint --max-warnings 0",
     "*.schema.json": "node validate.mjs"
-  },
-  "dependencies": {
-    "major": "^0.0.0",
-    "minor": "^1.2.3"
   }
 }
