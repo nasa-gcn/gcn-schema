@@ -1,0 +1,56 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/alert.schema.json",
+  "messenger": "Neutrino",
+  "mission": "KM3NeT",
+  "instrument": "ARCA021",
+  "pipeline": "multiplet_orca",
+  "alert_tense": "current",
+  "alert_type": "initial",
+  "record_number": 1,
+  "alert_datetime": "2025-01-01T12:01:00.00Z",
+  "additional_info": "Observation from single pipeline. Analysis tuned to select 1 event/month in average. Track only analysis w/ Up-going selection.",
+  "id": "2",
+  "event_name": "KM3-240901B",
+  "trigger_time": "2025-01-01T01:16:47.0Z",
+  "ra": 13.81,
+  "dec": 18.85,
+  "ra_dec_error": 0.41,
+  "healpix_url": "https://opendata.km3net.de/",
+  "far": 8.029e-8,
+  "alert_topology": "Multiplet",
+  "number_of_events": 2,
+  "src_error_50": 0.225,
+  "event_details": [
+    {
+      "id": "km3.234.22488.72853.13018",
+      "trigger_time": "2025-01-01T11:56:07.0Z",
+      "ra": 13.79,
+      "dec": 18.56,
+      "ra_dec_error": 0.69,
+      "cos_zenith": 0.01,
+      "prob_evt_topology": "track",
+      "energy_measured": 120000
+    },
+    {
+      "id": "km3.234.23492.58959.787",
+      "trigger_time": "2025-01-01T01:16:47.0Z",
+      "ra": 13.82,
+      "dec": 19.01,
+      "ra_dec_error": 0.52,
+      "cos_zenith": -0.02,
+      "prob_evt_topology": "shower",
+      "energy_measured": 120000
+    }
+  ],
+  "potential_counterpart": true,
+  "counterpart_info": [
+    {
+      "name": "SourceName",
+      "reference": { "url": "url to catalog or notice" },
+      "ra": 13,
+      "dec": 19.5,
+      "angular_distance": 1.004,
+      "trigger_time": "2024-12-31T09:56:15.0Z"
+    }
+  ]
+}
