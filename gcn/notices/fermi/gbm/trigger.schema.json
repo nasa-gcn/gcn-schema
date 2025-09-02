@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/notice.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/trigger.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Fermi GBM Alert",
   "description": "This schema is for the following Fermi GBM notices: alert, flight position, ground position, final position and subthreshold.",
@@ -99,13 +99,13 @@
       "maxItems": 2,
       "description": "The energy range used for localization, which is distinct from the energy range used by the trigger algorithm."
     },
+    "notice_subtype": {
+      "enum": ["INITAL_ALERT", "FLIGHT_POSITION", "GROUND_POSITION", "FINAL_POSITION"],
+      "description": "Specifies the Fermi GBM notice subtype.  The enum corresponds to legacy numeric notice types 110, 111, 112, 115."
+    },
     "reliability": {
       "enum": ["LOW", "MED", "HIGH"],
       "description": "Reliability of the subthreshold search result."
-    },
-    "subtype": {
-      "enum": ["ALERT", "FLIGHT_POSITION", "GROUND_POSITION", "FINAL_POSITION"],
-      "description": "Specifies the Fermi GBM notice subtype.  The enum corresponds to legacy numeric notice types 110, 111, 112, 115."
     },
     "sun_distance": {
       "type": "number",
