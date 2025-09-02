@@ -31,7 +31,7 @@
     },
     "sampling_time": {
       "type": "number",
-      "description": "Please add description."
+      "description": "Time resolution of the FRB search at the host observatory [ms]"
     },
     "importance": {
       "type": "number",
