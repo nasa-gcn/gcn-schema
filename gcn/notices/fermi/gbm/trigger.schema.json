@@ -100,7 +100,12 @@
       "description": "The energy range used for localization, which is distinct from the energy range used by the trigger algorithm."
     },
     "notice_subtype": {
-      "enum": ["INITAL_ALERT", "FLIGHT_POSITION", "GROUND_POSITION", "FINAL_POSITION"],
+      "enum": [
+        "INITAL_ALERT",
+        "FLIGHT_POSITION",
+        "GROUND_POSITION",
+        "FINAL_POSITION"
+      ],
       "description": "Specifies the Fermi GBM notice subtype.  The enum corresponds to legacy numeric notice types 110, 111, 112, 115."
     },
     "reliability": {
