@@ -6,14 +6,30 @@
   "description": "Name or names of the event",
   "properties": {
     "event_name": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Name of the event (ex: GRB 170817A, GW170817, AT2017gfo, SSS 17a)"
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Name of the event (ex: GRB 170817A)"
+        },
+        {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Multiple names of the same event (ex: GRB 170817A, GW170817, AT2017gfo, SSS 17a)"
+        }
+      ]
     },
     "id": {
-      "type": "array",
-      "items": { "oneOf": [{ "type": "string" }, { "type": "number" }] },
-      "description": "Instrument-specific trigger ID (ex: bn230313485 (Fermi), 1159327 (Swift)) or alternate ID"
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Instrument-specific trigger ID (ex: bn230313485 (Fermi), 1159327 (Swift)) or alternate ID"
+        },
+        {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "If multiple instrument-specific trigger IDs are present"
+        }
+      ]
     },
     "data_archive_page": {
       "type": "string",

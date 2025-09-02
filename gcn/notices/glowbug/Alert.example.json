@@ -4,7 +4,7 @@
   "alert_datetime": "2023-04-23T15:25:55Z",
   "alert_tense": "current",
   "alert_type": "initial",
-  "id": ["BUG230423.789", 432],
+  "id": ["BUG230423.789", "432"],
   "data_archive_page": "glowbug.com/230423.789",
   "trigger_time": "2023-04-23T15:20:11Z",
   "far": 0.2,
