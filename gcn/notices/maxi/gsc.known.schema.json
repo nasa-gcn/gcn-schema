@@ -1,0 +1,141 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.known.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "MAXI/GSC Known Source Position",
+  "description": "MAXI Known Source detection.",
+
+  "allOf": [
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/AdditionalInfo.schema.json" }
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "circle_error_radius": {
+      "type": "number",
+      "description": "Radius of the 90% confidence level statistical error circle, in degrees."
+    },
+    "elliptical_error_radii": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Semi-major and semi-minor axes of the 90% confidence level statistical error ellipse, in degrees."
+    },
+    "elliptical_error_roll": {
+      "type": "number",
+      "description": "Position angle of the semi-major axis of the error ellipse, measured counterclockwise from celestial north, in degrees."
+    },
+    "rectangular_error_corners": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": { "type": "number" },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "Coordinates of the four corners of the rectangular error box. Each item is a [RA, Dec] pair in degrees"
+    },
+    "source_flux": {
+      "type": "number",
+      "description": "X-ray flux in the 2–20 keV band (in mCrab)."
+    },
+    "source_flux_error": {
+      "type": "number",
+      "description": "Error of the X-ray flux in the 2–20 keV band (in mCrab)."
+    },
+    "source_tscale": {
+      "type": "string",
+      "description": "Detection time scale of the source"
+    },
+    "source_eband": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Energy range for the source detection (in keV)"
+    },
+    "source_name": {
+      "type": "string",
+      "description": "Source name"
+    },
+    "band_flux_low": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "X-ray fluxes of the source and the background in the 2–4 keV energy band, measured in mCrab."
+    },
+    "band_flux_med": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "X-ray fluxes of the source and the background in the 4–10 keV energy band, measured in mCrab."
+    },
+    "band_flux_high": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "X-ray fluxes of the source and the background in the 10–20 keV energy band, measured in mCrab."
+    },
+    "iss_lon_lat": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Geographic longitude and latitude of the International Space Station in degrees."
+    },
+    "sun_position": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Equatorial coordinates of the Sun (RA, Dec) in degrees"
+    },
+    "sun_distance": {
+      "type": "number",
+      "description": "Angular distance between the source and the Sun (in degrees)"
+    },
+    "moon_position": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Equatorial coordinates of the Moon (RA, Dec) in degrees"
+    },
+    "moon_distance": {
+      "type": "number",
+      "description": "Angular distance between the source and the Moon (in degrees)"
+    },
+    "moon_illumination": {
+      "type": "number",
+      "description": "Illuminated fraction of the Moon's surface, in percent."
+    },
+    "galactic_coords": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Galactic longitude and latitude of the burst or transient event (in degrees)"
+    },
+    "ecliptic_coords": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Ecliptic longitude and latitude of the burst or transient event (in degrees)"
+    }
+  }
+}
