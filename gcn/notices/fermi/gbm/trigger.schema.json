@@ -64,7 +64,7 @@
     },
     "ground_generated_notice": {
       "type": "boolean",
-      "description": "The notice has been issued on the ground, if this flag is set, i.e. is true."
+      "description": "If true, the notice is ground generated. If false, the notice is flight generated."
     },
     "hardness_class": {
       "enum": ["SOFT", "HARD"],
