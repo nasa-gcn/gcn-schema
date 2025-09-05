@@ -30,7 +30,7 @@
   "longitude": 257.4,
   "messenger": "EM",
   "mission": "Fermi",
-  "notice_subtype": "INITAL_ALERT",
+  "notice_subtype": "INITIAL_ALERT",
   "rate_duration": 2.048,
   "rate_energy_range": [47, 291],
   "rate_snr": 4.9,
