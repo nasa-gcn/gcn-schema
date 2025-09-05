@@ -101,7 +101,7 @@
     },
     "notice_subtype": {
       "enum": [
-        "INITAL_ALERT",
+        "INITIAL_ALERT",
         "FLIGHT_POSITION",
         "GROUND_POSITION",
         "FINAL_POSITION"
