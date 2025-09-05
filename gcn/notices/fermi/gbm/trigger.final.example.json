@@ -11,7 +11,7 @@
   "galactic_b": -51.99,
   "galactic_l": 291.19,
   "ground_generated_notice": false,
-  "healpix_url": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094/quicklook/glg_locplot_all_bn240812094.png",
+  "healpix_url": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094/quicklook/glg_healpix_all_bn240812094.fit",
   "high_energy_high_intensity": false,
   "human_in_the_loop": false,
   "id": ["745121685", "bn240812094"],
