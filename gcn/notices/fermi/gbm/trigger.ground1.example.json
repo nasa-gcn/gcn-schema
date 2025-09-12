@@ -26,16 +26,15 @@
   "longitude": 257.4,
   "messenger": "EM",
   "mission": "Fermi",
-  "notice_subtype": "GROUND_POSITION",
   "ra": 92.17,
   "ra_dec_error": 1.34,
   "rate_duration": 15.36,
   "rate_snr": 16.6,
   "record_number": 5,
-  "spectrum": "energy",
+  "spectral_band_units": "keV",
+  "subtype": "GROUND_POSITION",
   "sun_distance": 89.63,
   "systematic_included": false,
   "trigger_time": "2024-08-24T02:14:40.43",
-  "trigger_type": "rate",
-  "units": "keV"
+  "trigger_type": "rate"
 }

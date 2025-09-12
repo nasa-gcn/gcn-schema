@@ -42,17 +42,16 @@
   "longitude": 257.4,
   "messenger": "EM",
   "mission": "Fermi",
-  "notice_subtype": "FLIGHT_POSITION",
   "photon_flux": 118,
   "ra": 236.783,
   "ra_dec_error": 9.23,
   "rate_duration": 4.096,
   "rate_snr": 9.7,
   "record_number": 3,
-  "spectrum": "energy",
+  "spectral_band_units": "keV",
+  "subtype": "FLIGHT_POSITION",
   "sun_distance": 78.19,
   "systematic_included": true,
   "trigger_time": "2024-08-24T02:14:40.43",
-  "trigger_type": "rate",
-  "units": "keV"
+  "trigger_type": "rate"
 }

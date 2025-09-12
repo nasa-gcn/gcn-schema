@@ -22,14 +22,13 @@
   "localization_energy_range": [44, 280],
   "messenger": "EM",
   "mission": "Fermi",
-  "notice_subtype": "FINAL_POSITION",
   "ra": 29.24,
   "ra_dec_error": 1.0,
   "record_number": 7,
-  "spectrum": "energy",
+  "spectral_band_units": "keV",
+  "subtype": "FINAL_POSITION",
   "sun_distance": 113.39,
   "systematic_included": false,
   "trigger_time": "2024-08-24T02:14:40.43",
-  "trigger_type": "rate",
-  "units": "keV"
+  "trigger_type": "rate"
 }

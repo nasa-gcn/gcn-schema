@@ -4,6 +4,7 @@
   "title": "Fermi GBM Alert",
   "description": "This schema is for the following Fermi GBM notices: alert, flight position, ground position, final position and subthreshold.",
   "type": "object",
+  "unevaluatedProperties": false,
   "allOf": [
     {
       "$ref": "../../core/AdditionalInfo.schema.json"
@@ -37,6 +38,10 @@
     }
   ],
   "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
     "detectors_status": {
       "type": "array",
       "items": {
@@ -97,9 +102,13 @@
       },
       "minItems": 2,
       "maxItems": 2,
-      "description": "The energy range used for localization, which is distinct from the energy range used by the trigger algorithm."
+      "description": "The energy range in keV used for localization, which is distinct from the energy range used by the trigger algorithm."
     },
-    "notice_subtype": {
+    "reliability": {
+      "enum": ["LOW", "MED", "HIGH"],
+      "description": "Reliability of the subthreshold search result."
+    },
+    "subtype": {
       "enum": [
         "INITIAL_ALERT",
         "FLIGHT_POSITION",
@@ -107,10 +116,6 @@
         "FINAL_POSITION"
       ],
       "description": "Specifies the Fermi GBM notice subtype.  The enum corresponds to legacy numeric notice types 110, 111, 112, 115."
-    },
-    "reliability": {
-      "enum": ["LOW", "MED", "HIGH"],
-      "description": "Reliability of the subthreshold search result."
     },
     "sun_distance": {
       "type": "number",

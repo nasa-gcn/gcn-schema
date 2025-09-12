@@ -35,9 +35,8 @@
   "rate_energy_range": [47, 291],
   "rate_snr": 4.9,
   "record_number": 1,
-  "spectrum": "energy",
+  "spectral_band_units": "keV",
   "trigger_algorithm_number": 14,
   "trigger_time": "2024-08-24T02:14:40.43",
-  "trigger_type": "rate",
-  "units": "keV"
+  "trigger_type": "rate"
 }
