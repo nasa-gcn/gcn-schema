@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v5.0.0/gcn/notices/core/FollowUp.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/FollowUp.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "FollowUp",
   "description": "Schema specific to follow-up cases",

@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v5.0.0/gcn/notices/chime/frb.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/chime/frb.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "CHIME/FRB Alert",
   "description": "Fast radio burst alert from the Canadian Hydrogen Intensity Mapping Experiment.",

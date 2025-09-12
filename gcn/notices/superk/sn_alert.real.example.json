@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v5.0.0/gcn/notices/superk/sn_alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/superk/sn_alert.schema.json",
   "mission": "Super-Kamiokande",
   "messenger": "Neutrino",
   "id": "SN.095001.000001",
