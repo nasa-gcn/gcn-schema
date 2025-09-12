@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/dsa110/frb.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v6.0.0/gcn/notices/dsa110/frb.schema.json",
   "alert_type": "initial",
   "trigger_time": "2024-09-18T07:19:10.765268Z",
   "id": "240918aaaa",
