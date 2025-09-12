@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v6.0.0/gcn/notices/core/Alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Alert",
   "description": "Alert Information description properties of this notice",
