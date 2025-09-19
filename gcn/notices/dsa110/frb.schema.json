@@ -32,6 +32,10 @@
     "description": {
       "type": "string",
       "description": "Description of how the event was identified and what it represents."
+    },
+    "known_source": {
+      "type": "string",
+      "description": "Name of a known FRB that this event has been associated to."
     }
   },
   "unevaluatedProperties": false
