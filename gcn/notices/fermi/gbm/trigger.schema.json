@@ -1,0 +1,129 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/trigger.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fermi GBM Alert",
+  "description": "This schema is for the following Fermi GBM notices: alert, flight position, ground position, final position and subthreshold.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "allOf": [
+    {
+      "$ref": "../../core/AdditionalInfo.schema.json"
+    },
+    {
+      "$ref": "../../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../../core/Event.schema.json"
+    },
+    {
+      "$ref": "../../core/GeoLocBase.schema.json"
+    },
+    {
+      "$ref": "../../core/HardnessRatio.schema.json"
+    },
+    {
+      "$ref": "../../core/Localization.schema.json"
+    },
+    {
+      "$ref": "../../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../../core/Statistics.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/GammaRay.schema.json"
+    }
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "detectors_status": {
+      "type": "array",
+      "items": {
+        "$ref": "../../core/DetectorStatus.schema.json"
+      },
+      "minItems": 14,
+      "maxItems": 14,
+      "description": "Triggered detectors"
+    },
+    "duration_class": {
+      "enum": ["SHORT", "LONG"],
+      "description": "This is a preliminary classification of the GRB of LONG (> 2.048) or SHORT (<= 2.048 s).  It is reevaluated using the T_90 bmeasurement, when it ecomes available.  Note that a preliminary classification of LONG is confirmed by the T_90 classification for 95% of the bursts and SHORT - for 92%."
+    },
+    "earth_angle": {
+      "type": "number",
+      "description": "Angle between the event and the Earth's center [deg]"
+    },
+    "galactic_b": {
+      "type": "number",
+      "description": "Galactic latitude [deg]"
+    },
+    "galactic_l": {
+      "type": "number",
+      "description": "Galactic longitude [deg]"
+    },
+    "ground_generated_notice": {
+      "type": "boolean",
+      "description": "If true, the notice is ground generated. If false, the notice is flight generated."
+    },
+    "hardness_class": {
+      "enum": ["SOFT", "HARD"],
+      "description": "Classification based on the hardness ratio."
+    },
+    "high_energy_high_intensity": {
+      "type": "boolean",
+      "description": "True, if `A * RATE > 1`, where `RATE` is the background-subtracted rate (in counts per second) in the energy range 0.4 – 20 MeV in the brighter BGO detectors and `A` is a factor depending on the `rate_duration` (in seconds) as follows:  {0.016: 1, 0.032: 2, 0.064: 2, 0.128: 2, 0.256: 4, 0.512: 4, 1.024: 4, 2.048: 6, 4.096: 8.8, 8.192: 8.8}.  False, if neither BGO detector satisfies the condition."
+    },
+    "human_in_the_loop": {
+      "type": "boolean",
+      "description": "True when a human had input or confirmed before further processing. False when the notice was generated entirely automatically."
+    },
+    "in_lat_fov": {
+      "type": "boolean",
+      "description": "The event was localized in the LAT field of view, 60 degrees from the LAT boresight."
+    },
+    "light_curve_url": {
+      "type": "string",
+      "description": "URL of the quicklook light curve plot"
+    },
+    "localization_algorithm": {
+      "type": "string",
+      "description": "Version number of the algorithm"
+    },
+    "localization_energy_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "The energy range in keV used for localization, which is distinct from the energy range used by the trigger algorithm."
+    },
+    "reliability": {
+      "enum": ["LOW", "MED", "HIGH"],
+      "description": "Reliability of the subthreshold search result."
+    },
+    "subtype": {
+      "enum": [
+        "INITIAL_ALERT",
+        "FLIGHT_POSITION",
+        "GROUND_POSITION",
+        "FINAL_POSITION"
+      ],
+      "description": "Specifies the Fermi GBM notice subtype.  The enum corresponds to legacy numeric notice types 110, 111, 112, 115."
+    },
+    "sun_distance": {
+      "type": "number",
+      "description": "Event-Sun angle [deg]"
+    },
+    "trigger_algorithm_number": {
+      "type": "number",
+      "description": "The instrument flight software algorithm that triggered on this event, dependent on timescale, energy, and significance as described in A. von Kienlin et al 2020 ApJ 893 46."
+    }
+  }
+}
