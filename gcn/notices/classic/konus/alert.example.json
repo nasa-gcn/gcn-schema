@@ -1,0 +1,9 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/konus/alert.schema.json",
+  "trigger_time": "2019-12-27T17:21:40.487Z",
+  "detector_number": 1,
+  "classification": { "GRB": 1 },
+  "id": [4837],
+  "lightcurve_image_url": "https://gcn.gsfc.nasa.gov/notices_k/GRB20191227_62500.487_k.gif",
+  "lightcurve_textfile_url": "https://gcn.gsfc.nasa.gov/notices_k/GRB20191227_62500.487_k.txt"
+}
