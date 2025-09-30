@@ -13,13 +13,30 @@
     { "$ref": "../core/DispersionMeasure.schema.json" }
   ],
   "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
     "importance": {
       "type": "number",
       "description": "A machine learning score separating RFI (0) from an astrophysical signal (1)"
     },
+    "event_duration": {
+      "type": "number",
+      "description": "Time duration of the event in milliseconds"
+    },
+    "snr": {
+      "type": "number",
+      "description": "Signal to noise ratio of burst [dimensionless]"
+    },
     "description": {
       "type": "string",
       "description": "Description of how the event was identified and what it represents."
+    },
+    "known_source": {
+      "type": "string",
+      "description": "Name of a known FRB that this event has been associated to."
     }
-  }
+  },
+  "unevaluatedProperties": false
 }
