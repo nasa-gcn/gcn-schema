@@ -1,0 +1,13 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/dsa110/frb.schema.json",
+  "alert_type": "initial",
+  "trigger_time": "2024-09-18T07:19:10.765268Z",
+  "id": "240918aaaa",
+  "snr": 12.698559761047363,
+  "dm": 279.422607421875,
+  "event_duration": 1.0,
+  "ra": 346.77850859547,
+  "dec": 12.632485229956252,
+  "ra_dec_error": [0.016, 0.02],
+  "importance": 0.9871308604784662
+}
