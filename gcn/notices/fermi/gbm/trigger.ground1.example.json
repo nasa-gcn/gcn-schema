@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/trigger.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v6.0.0/gcn/notices/fermi/gbm/trigger.schema.json",
   "additional_info": "The LC_URL file will not be created/available until ~15 min after the trigger.\nThe POS_MAP_URL file will not be created/available until ~1.5 min after the notice.",
   "alert_datetime": "2024-08-24T02:16:11",
   "alert_tense": "current",
@@ -17,8 +17,8 @@
   "id": ["745121685", "bn240812094"],
   "in_lat_fov": false,
   "instrument": "GBM",
-  "instrument_phi": 33.0,
-  "instrument_theta": 166.0,
+  "instrument_phi": 33,
+  "instrument_theta": 166,
   "latitude": 23.83,
   "light_curve_url": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094/quicklook/glg_lc_medres34_bn240812094.gif",
   "localization_algorithm": "41731",

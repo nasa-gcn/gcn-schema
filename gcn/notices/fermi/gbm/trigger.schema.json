@@ -1,52 +1,27 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/trigger.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v6.0.0/gcn/notices/fermi/gbm/trigger.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Fermi GBM Alert",
   "description": "This schema is for the following Fermi GBM notices: alert, flight position, ground position, final position and subthreshold.",
   "type": "object",
   "unevaluatedProperties": false,
   "allOf": [
-    {
-      "$ref": "../../core/AdditionalInfo.schema.json"
-    },
-    {
-      "$ref": "../../core/Alert.schema.json"
-    },
-    {
-      "$ref": "../../core/DateTime.schema.json"
-    },
-    {
-      "$ref": "../../core/Event.schema.json"
-    },
-    {
-      "$ref": "../../core/GeoLocBase.schema.json"
-    },
-    {
-      "$ref": "../../core/HardnessRatio.schema.json"
-    },
-    {
-      "$ref": "../../core/Localization.schema.json"
-    },
-    {
-      "$ref": "../../core/Reporter.schema.json"
-    },
-    {
-      "$ref": "../../core/Statistics.schema.json"
-    },
-    {
-      "$ref": "../../core/spectral/GammaRay.schema.json"
-    }
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/GeoLocBase.schema.json" },
+    { "$ref": "../../core/HardnessRatio.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" },
+    { "$ref": "../../core/spectral/GammaRay.schema.json" }
   ],
   "properties": {
-    "$schema": {
-      "type": "string",
-      "format": "uri"
-    },
+    "$schema": { "type": "string", "format": "uri" },
     "detectors_status": {
       "type": "array",
-      "items": {
-        "$ref": "../../core/DetectorStatus.schema.json"
-      },
+      "items": { "$ref": "../../core/DetectorStatus.schema.json" },
       "minItems": 14,
       "maxItems": 14,
       "description": "Triggered detectors"
@@ -97,9 +72,7 @@
     },
     "localization_energy_range": {
       "type": "array",
-      "items": {
-        "type": "number"
-      },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "The energy range in keV used for localization, which is distinct from the energy range used by the trigger algorithm."

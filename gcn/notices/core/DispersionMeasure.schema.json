@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DispersionMeasure.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v6.0.0/gcn/notices/core/DispersionMeasure.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Schema for Radio Transients Observables",
