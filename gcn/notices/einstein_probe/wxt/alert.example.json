@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v6.0.0/gcn/notices/einstein_probe/wxt/alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/einstein_probe/wxt/alert.schema.json",
   "instrument": "WXT",
   "trigger_time": "2024-03-01T21:46:05.13Z",
   "id": ["01708973486"],

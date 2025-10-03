@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v6.0.0/gcn/notices/icecube/single_neutrino_alerts.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/single_neutrino_alerts.schema.json",
   "mission": "IceCube",
   "instrument": "IC86",
   "messenger": "Neutrino",

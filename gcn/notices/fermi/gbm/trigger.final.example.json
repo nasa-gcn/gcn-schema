@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v6.0.0/gcn/notices/fermi/gbm/trigger.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/trigger.schema.json",
   "additional_info": "The LC_URL file should be available by the time this FINAL notice is produced.",
   "alert_datetime": "2024-08-24T02:24:04",
   "alert_tense": "current",
