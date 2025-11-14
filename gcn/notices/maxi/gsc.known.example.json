@@ -2,7 +2,7 @@
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.known.schema.json",
   "instrument": "GSC",
   "trigger_time": "2025-07-02T14:35:59.00Z",
-  "id": ["858800020"],
+  "id": "858800020",
   "ra": 285.6,
   "dec": -9.2,
   "circle_error_radius": 0.5,
