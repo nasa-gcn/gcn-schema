@@ -13,10 +13,7 @@
     { "$ref": "../core/DispersionMeasure.schema.json" }
   ],
   "properties": {
-    "$schema": {
-      "type": "string",
-      "format": "uri"
-    },
+    "$schema": { "type": "string", "format": "uri" },
     "importance": {
       "type": "number",
       "description": "A machine learning score separating RFI (0) from an astrophysical signal (1)"
