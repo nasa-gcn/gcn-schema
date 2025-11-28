@@ -64,46 +64,6 @@
       "minItems": 2,
       "maxItems": 2,
       "description": "Energy range for the event detection (in keV)"
-    },
-    "sun_position": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Equatorial coordinates of the Sun (RA, Dec) in degrees"
-    },
-    "sun_distance": {
-      "type": "number",
-      "description": "Angular distance between the source and the Sun (in degrees)"
-    },
-    "moon_position": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Equatorial coordinates of the Moon (RA, Dec) in degrees"
-    },
-    "moon_distance": {
-      "type": "number",
-      "description": "Angular distance between the source and the Moon (in degrees)"
-    },
-    "moon_illumination": {
-      "type": "number",
-      "description": "Illuminated fraction of the Moon's surface, in percent."
-    },
-    "galactic_coords": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Galactic longitude and latitude of the burst or transient event (in degrees)"
-    },
-    "ecliptic_coords": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Ecliptic longitude and latitude of the burst or transient event (in degrees)"
     }
   }
 }
