@@ -1,0 +1,114 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/boom/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Optical alerts",
+  "description": "Optical alert with crossmatch gcn events",
+  "properties": {
+    "data": {
+      "type": "object",
+      "description": "Data container for targets and photometry",
+      "$ref": "#/$defs/data"
+    }
+  },
+  "$defs": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "targets": {
+          "type": "array",
+          "description": "An array of alert",
+          "items": { "$ref": "#/$defs/target" }
+        },
+        "photometry": {
+          "type": "array",
+          "description": "An array of photometry points",
+          "items": { "$ref": "#/$defs/photometry" }
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "../core/Localization.schema.json",
+          "description": "Localization information for the target"
+        }
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the target"
+        },
+        "classifications": {
+          "type": "array",
+          "description": "Array of classifications for the target",
+          "items": { "$ref": "#/$defs/classification" }
+        },
+        "gcn_crossmatch": {
+          "type": "array",
+          "description": "Array of GCN event alias that crossmatch with this target",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "type": "string",
+          "description": "Classification of the target"
+        },
+        "probability": {
+          "type": "number",
+          "description": "Probability associated with the classification"
+        }
+      }
+    },
+    "photometry": {
+      "type": "object",
+      "properties": {
+        "target_name": {
+          "type": "string",
+          "description": "Name of the target associated with this photometry point"
+        },
+        "date_obs": {
+          "type": "number",
+          "description": "Observation date in MJD"
+        },
+        "telescope": {
+          "type": "string",
+          "description": "Name of the telescope used for observation"
+        },
+        "instrument": {
+          "type": "string",
+          "description": "Instrument used for observation"
+        },
+        "bandpass": {
+          "type": "string",
+          "description": "Bandpass of the observation"
+        },
+        "brightness": {
+          "type": ["number", "null"],
+          "description": "Measured brightness of the target"
+        },
+        "brightness_error": {
+          "type": ["number", "null"],
+          "description": "Error in the measured brightness"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of brightness measurement"
+        },
+        "limiting_brightness": {
+          "type": ["number", "null"],
+          "description": "Limiting brightness of the observation"
+        },
+        "limiting_brightness_unit": {
+          "type": "string",
+          "description": "Unit of limiting brightness measurement"
+        }
+      }
+    }
+  }
+}
