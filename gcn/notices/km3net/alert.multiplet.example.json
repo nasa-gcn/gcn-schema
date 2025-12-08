@@ -10,7 +10,7 @@
   "alert_datetime": "2025-01-01T12:01:00.00Z",
   "additional_info": "Observation from single pipeline. Analysis tuned to select 1 event/month in average. Track only analysis w/ Up-going selection.",
   "id": "2",
-  "event_name": ["KM3-240901B"],
+  "event_name": "KM3-240901B",
   "trigger_time": "2025-01-01T01:16:47.0Z",
   "ra": 13.81,
   "dec": 18.85,

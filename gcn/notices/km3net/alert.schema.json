@@ -2,7 +2,6 @@
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "unevaluatedProperties": false,
   "title": "KM3NeT Alerts",
   "description": "Candidate neutrino observation reported from the KM3NeT online analysis pipelines.",
   "allOf": [
@@ -18,13 +17,8 @@
   "properties": {
     "$schema": true,
     "pipeline": {
-      "enum": [
-        "exceptional_evt_arca",
-        "exceptional_evt_orca",
-        "multiplet_arca",
-        "multiplet_orca"
-      ],
-      "description": "Pipeline issuing this notice: either single, exceptional (high-energy), event or multiple coincident events, from KM3NeT/ARCA or KM3NeT/ORCA data."
+      "type": "string",
+      "description": "Pipeline issuing this notice: either exceptional (high-energy) event or multiple coincident events."
     },
     "p_value": {
       "type": "number",
@@ -43,7 +37,7 @@
     "counterpart_info": {
       "type": ["array", "string"],
       "items": { "$ref": "#/$defs/knownsrc" },
-      "description": "No search / No match / (not exhaustive) Array of known astrophysical sources or transient present in the KM3NeT event RoI."
+      "description": "No search / No match / Array of known astrophysical sources or transient present in the KM3NeT event RoI (not exhaustive list)."
     }
   },
   "$defs": {
@@ -68,7 +62,7 @@
           "description": "Estimation of the energy of the lepton track/shower, resulting from the neutrino interaction [GeV]."
         }
       },
-      "description": "[Id, Date_Event, RA, Dec, Radius_Error, Topology, Zenith, reco_energy] of the KM3NeT events involved in the alert."
+      "description": "The properties of the KM3NeT events that contributed to this alert."
     },
     "knownsrc": {
       "type": "object",
@@ -79,7 +73,7 @@
         { "$ref": "../core/Distance.schema.json" },
         { "$ref": "../core/Redshift.schema.json" }
       ],
-      "description": "(not exhaustive) list of [reference, position and additional information] for sources founded in the KM3NeT event RoI"
+      "description": "Properties of known sources found in the KM3NeT event region of interest."
     }
   }
 }
