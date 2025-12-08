@@ -17,7 +17,6 @@
   "ra_dec_error": 0.41,
   "healpix_url": "https://opendata.km3net.de/",
   "far": 8.029e-8,
-  "p_value": 0.0025,
   "alert_topology": "Multiplet",
   "number_of_events": 2,
   "src_error_50": 0.225,
