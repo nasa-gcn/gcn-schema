@@ -1,0 +1,16 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.unknown.schema.json",
+  "instrument": "GSC",
+  "trigger_time": "2023-02-20T08:56:01.00Z",
+  "id": "9995289617",
+  "ra": 346.56,
+  "dec": 18.61,
+  "ra_dec_error": 1.5,
+  "event_flux": 182.0,
+  "event_flux_error": 28.0,
+  "event_tscale": "10s",
+  "event_eband": [2.0, 4.0],
+  "latitude": 0.0,
+  "longitude": 0.0,  
+  "additional_info": "MAXI Unknown Source Position. GRB or unknown X-ray Transient."
+}

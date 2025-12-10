@@ -19,33 +19,6 @@
       "type": "string",
       "format": "uri"
     },
-    "circle_error_radius": {
-      "type": "number",
-      "description": "Radius of the 90% confidence level statistical error circle, in degrees."
-    },
-    "elliptical_error_radii": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Semi-major and semi-minor axes of the 90% confidence level statistical error ellipse, in degrees."
-    },
-    "elliptical_error_roll": {
-      "type": "number",
-      "description": "Position angle of the semi-major axis of the error ellipse, measured counterclockwise from celestial north, in degrees."
-    },
-    "rectangular_error_corners": {
-      "type": "array",
-      "items": {
-        "type": "array",
-        "items": { "type": "number" },
-        "minItems": 2,
-        "maxItems": 2
-      },
-      "minItems": 4,
-      "maxItems": 4,
-      "description": "Coordinates of the four corners of the rectangular error box. Each item is a [RA, Dec] pair in degrees"
-    },
     "source_flux": {
       "type": "number",
       "description": "X-ray flux in the 2–20 keV band (in mCrab)."

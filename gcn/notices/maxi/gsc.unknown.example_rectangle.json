@@ -5,9 +5,6 @@
   "id": "9995289617",
   "ra": 346.56,
   "dec": 18.61,
-  "circle_error_radius": 1.0,
-  "elliptical_error_radii": [0.22, 0.19],
-  "elliptical_error_roll": 153.0,
   "rectangular_error_corners": [
     [345.72, 19.547],
     [345.464, 19.29],
