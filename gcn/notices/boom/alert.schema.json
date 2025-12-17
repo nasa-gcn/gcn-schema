@@ -33,13 +33,13 @@
         {
           "$ref": "../core/Localization.schema.json",
           "description": "Localization information for the target"
+        },
+        {
+          "$ref": "../core/Event.schema.json",
+          "description": "Event name"
         }
       ],
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of the target"
-        },
         "classifications": {
           "type": "array",
           "description": "Array of classifications for the target",
@@ -71,17 +71,17 @@
         {
           "$ref": "../core/Reporter.schema.json",
           "description": "Instrument information for the photometry point"
+        },
+        {
+          "$ref": "../core/Event.schema.json",
+          "description": "Event name"
+        },
+        {
+          "$ref": "../core/Alert.schema.json",
+          "description": "Alert observation date"
         }
       ],
       "properties": {
-        "target_name": {
-          "type": "string",
-          "description": "Name of the target associated with this photometry point"
-        },
-        "date_obs": {
-          "type": "number",
-          "description": "Observation date in MJD"
-        },
         "bandpass": {
           "type": "string",
           "description": "Bandpass of the observation"
