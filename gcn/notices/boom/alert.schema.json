@@ -67,6 +67,12 @@
     },
     "photometry": {
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "../core/Reporter.schema.json",
+          "description": "Instrument information for the photometry point"
+        }
+      ],
       "properties": {
         "target_name": {
           "type": "string",
@@ -75,14 +81,6 @@
         "date_obs": {
           "type": "number",
           "description": "Observation date in MJD"
-        },
-        "telescope": {
-          "type": "string",
-          "description": "Name of the telescope used for observation"
-        },
-        "instrument": {
-          "type": "string",
-          "description": "Instrument used for observation"
         },
         "bandpass": {
           "type": "string",
