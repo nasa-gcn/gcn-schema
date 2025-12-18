@@ -11,7 +11,7 @@
     },
     {
       "$ref": "../core/AdditionalInfo.schema.json",
-      "description": "Nb. of pipeline triggering on this event, targeted FAR and details on selection."
+      "description": "Details on selection."
     }
   ],
   "properties": {
