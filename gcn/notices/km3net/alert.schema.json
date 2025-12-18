@@ -33,7 +33,10 @@
       "items": { "$ref": "#/$defs/km3event" },
       "description": "List and details of KM3NeT events involved in the alert."
     },
-    "potential_counterpart": {},
+    "potential_counterpart": {
+      "type": "boolean",
+      "description": "Flag indicating positive result of our counterpart search (true), or absence of search/of result (false)."
+    },
     "counterpart_info": {
       "type": ["array", "string"],
       "items": { "$ref": "#/$defs/knownsrc" },
