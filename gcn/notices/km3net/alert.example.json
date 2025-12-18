@@ -29,7 +29,7 @@
       "ra_dec_error": 0.9,
       "cos_zenith": 0.01,
       "prob_evt_topology": "track",
-      "proxy_energy": 1.2e5
+      "energy_measured": 1.2e5
     }
   ],
   "potential_counterpart": false,

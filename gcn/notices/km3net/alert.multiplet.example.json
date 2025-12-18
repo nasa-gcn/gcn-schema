@@ -29,7 +29,7 @@
       "ra_dec_error": 0.69,
       "cos_zenith": 0.01,
       "prob_evt_topology": "track",
-      "proxy_energy": 1.2e5
+      "energy_measured": 1.2e5
     },
     {
       "id": "km3.234.23492.58959.787",
@@ -39,7 +39,7 @@
       "ra_dec_error": 0.52,
       "cos_zenith": -0.02,
       "prob_evt_topology": "shower",
-      "proxy_energy": 1.2e5
+      "energy_measured": 1.2e5
     }
   ],
   "potential_counterpart": true,

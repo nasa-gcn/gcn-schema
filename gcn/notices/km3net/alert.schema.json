@@ -57,9 +57,9 @@
           "type": "number",
           "description": "Value of the cosine of the angle between the event direction and the vertical: 1 correspond to up-going event, -1 is down-going."
         },
-        "proxy_energy": {
+        "energy_measured": {
           "type": "number",
-          "description": "Estimation of the energy of the lepton track/shower, resulting from the neutrino interaction [GeV]."
+          "description": "Estimation of the proxy (lepton track or shower) energy at the neutrino interaction vertex position [GeV]."
         }
       },
       "description": "The properties of the KM3NeT events that contributed to this alert."
