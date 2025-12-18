@@ -1,0 +1,82 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "KM3NeT Alerts",
+  "description": "Candidate neutrino observation reported from the KM3NeT online analysis pipelines.",
+  "allOf": [
+    {
+      "$ref": "../neutrino/Alert.schema.json",
+      "description": "Neutrino alert schema. Alert info and most probable Localization (Time, Position, Error and Skymap if available)."
+    },
+    {
+      "$ref": "../core/AdditionalInfo.schema.json",
+      "description": "Details on selection."
+    }
+  ],
+  "properties": {
+    "$schema": true,
+    "pipeline": {
+      "type": "string",
+      "description": "Pipeline issuing this notice: either exceptional (high-energy) event or multiple coincident events."
+    },
+    "p_value": {
+      "type": "number",
+      "description": "Occurence probability of the alert reported."
+    },
+    "src_error_50": {
+      "type": "number",
+      "description": "50% CL uncertainty region described as a circle with a radius [deg]."
+    },
+    "event_details": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/km3event" },
+      "description": "List and details of KM3NeT events involved in the alert."
+    },
+    "potential_counterpart": {
+      "type": "boolean",
+      "description": "Flag indicating positive result of our counterpart search (true), or absence of search/of result (false)."
+    },
+    "counterpart_info": {
+      "type": ["array", "string"],
+      "items": { "$ref": "#/$defs/knownsrc" },
+      "description": "No search / No match / Array of known astrophysical sources or transient present in the KM3NeT event RoI (not exhaustive list)."
+    }
+  },
+  "$defs": {
+    "km3event": {
+      "type": "object",
+      "allOf": [
+        { "$ref": "../core/Event.schema.json" },
+        { "$ref": "../core/DateTime.schema.json" },
+        { "$ref": "../core/Localization.schema.json" }
+      ],
+      "properties": {
+        "prob_evt_topology": {
+          "enum": ["track", "starting track", "shower"],
+          "description": "Best reconstructed topology, possible to acknowledge if track starts inside the detector volume."
+        },
+        "cos_zenith": {
+          "type": "number",
+          "description": "Value of the cosine of the angle between the event direction and the vertical: 1 correspond to up-going event, -1 is down-going."
+        },
+        "energy_measured": {
+          "type": "number",
+          "description": "Estimation of the proxy (lepton track or shower) energy at the neutrino interaction vertex position [GeV]."
+        }
+      },
+      "description": "The properties of the KM3NeT events that contributed to this alert."
+    },
+    "knownsrc": {
+      "type": "object",
+      "allOf": [
+        { "$ref": "../core/FollowUp.schema.json" },
+        { "$ref": "../core/Localization.schema.json" },
+        { "$ref": "../core/DateTime.schema.json" },
+        { "$ref": "../core/Distance.schema.json" },
+        { "$ref": "../core/Redshift.schema.json" }
+      ],
+      "description": "Properties of known sources found in the KM3NeT event region of interest."
+    }
+  }
+}
