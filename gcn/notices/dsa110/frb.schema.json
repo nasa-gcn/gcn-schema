@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/dsa110/frb.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v6.1.0/gcn/notices/dsa110/frb.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "DSA-110 FRB Alert",
   "description": "Fast radio burst alert from the Deep Synoptic Array 110.",

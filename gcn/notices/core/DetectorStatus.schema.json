@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DetectorStatus.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v6.1.0/gcn/notices/core/DetectorStatus.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "DetectorStatus",
   "enum": ["on", "off", "triggered"],

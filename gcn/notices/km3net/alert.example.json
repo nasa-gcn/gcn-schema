@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v6.1.0/gcn/notices/km3net/alert.schema.json",
   "messenger": "Neutrino",
   "mission": "KM3NeT",
   "instrument": "ORCA024",
@@ -29,7 +29,7 @@
       "ra_dec_error": 0.9,
       "cos_zenith": 0.01,
       "prob_evt_topology": "track",
-      "energy_measured": 1.2e5
+      "energy_measured": 120000
     }
   ],
   "potential_counterpart": false,
