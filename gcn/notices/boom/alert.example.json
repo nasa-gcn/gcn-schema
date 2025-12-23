@@ -1,0 +1,95 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/boom/alert.schema.json",
+  "type": "Optical alerts with crossmatch gcn events",
+  "title": "Optical alert ZTF25abxxkod",
+  "data": {
+    "targets": [
+      {
+        "name": "ZTF25acffkdr",
+        "ra": 150.175649,
+        "dec": 15.2832185,
+        "classifications": [
+          {
+            "classification": "Type II",
+            "probability": 0.9
+          }
+        ],
+        "gcn_crossmatch": ["S251117bs"]
+      }
+    ],
+    "photometry": [
+      {
+        "target_name": "ZTF25acffkdr",
+        "date_obs": 61006.585492,
+        "telescope": "Asteroid Terrestrial-impact Last Alert System",
+        "instrument": "ATLAS",
+        "bandpass": "atlaso",
+        "brightness": null,
+        "brightness_error": null,
+        "unit": "ab",
+        "limiting_brightness": 19.53,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "target_name": "ZTF25acffkdr",
+        "date_obs": 61007.42162040016,
+        "telescope": "Palomar 1.2m Oschin",
+        "instrument": "ZTF",
+        "bandpass": "ztfg",
+        "brightness": 18.098275781661336,
+        "brightness_error": 0.022992066138614722,
+        "unit": "ab",
+        "limiting_brightness": 20.4824,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "target_name": "ZTF25acffkdr",
+        "date_obs": 61007.46530089993,
+        "telescope": "Palomar 1.2m Oschin",
+        "instrument": "ZTF",
+        "bandpass": "ztfr",
+        "brightness": 18.374372988784426,
+        "brightness_error": 0.02848386359189418,
+        "unit": "ab",
+        "limiting_brightness": 20.57976153466707,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "target_name": "ZTF25acffkdr",
+        "date_obs": 61008.14301,
+        "telescope": "Liverpool Telescope",
+        "instrument": "IOO",
+        "bandpass": "sdssg",
+        "brightness": 17.780707737213493,
+        "brightness_error": 0.03273829683077194,
+        "unit": "ab",
+        "limiting_brightness": 20.961081520120693,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "target_name": "ZTF25acffkdr",
+        "date_obs": 61008.144087,
+        "telescope": "Liverpool Telescope",
+        "instrument": "IOO",
+        "bandpass": "sdssr",
+        "brightness": 18.08085088883707,
+        "brightness_error": 0.03800648469770929,
+        "unit": "ab",
+        "limiting_brightness": 21.202698774093086,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "target_name": "ZTF25acffkdr",
+        "date_obs": 61008.1465,
+        "telescope": "Liverpool Telescope",
+        "instrument": "IOO",
+        "bandpass": "sdssz",
+        "brightness": 18.682093322012918,
+        "brightness_error": 0.09498580953056104,
+        "unit": "ab",
+        "limiting_brightness": 20.39424160245688,
+        "limiting_brightness_unit": "ab"
+      }
+    ]
+  }
+}
