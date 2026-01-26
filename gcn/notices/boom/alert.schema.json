@@ -49,8 +49,11 @@
         },
         "gcn_crossmatch": {
           "type": "array",
-          "description": "Array of GCN event alias that crossmatch with this target",
-          "items": { "type": "string" }
+          "description": "Array of GCN event that crossmatch with this target",
+          "items": {
+            "$ref": "../core/FollowUp.schema.json",
+            "description": "GCN event properties"
+          }
         }
       }
     },

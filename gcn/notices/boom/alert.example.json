@@ -12,7 +12,12 @@
             "probability": 0.9
           }
         ],
-        "gcn_crossmatch": ["S251117bs"]
+        "gcn_crossmatch": [
+          {
+            "ref_instrument": "LVC",
+            "ref_ID": "S251117bs"
+          }
+        ]
       }
     ],
     "photometry": [
