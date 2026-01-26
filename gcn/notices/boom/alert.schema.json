@@ -70,7 +70,7 @@
       "allOf": [
         {
           "$ref": "../core/Reporter.schema.json",
-          "description": "Instrument information for the photometry point"
+          "description": "Instrument and filter information for the photometry point"
         },
         {
           "$ref": "../core/Event.schema.json",
@@ -79,10 +79,6 @@
         {
           "$ref": "../core/Alert.schema.json",
           "description": "Alert observation date"
-        },
-        {
-          "$ref": "../core/Reporter.schema.json",
-          "description": "Filter information for the photometry point"
         }
       ],
       "properties": {
