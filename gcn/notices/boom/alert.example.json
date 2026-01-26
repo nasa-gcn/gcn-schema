@@ -1,7 +1,5 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/boom/alert.schema.json",
-  "type": "Optical alerts with crossmatch gcn events",
-  "title": "Optical alert ZTF25abxxkod",
   "data": {
     "targets": [
       {

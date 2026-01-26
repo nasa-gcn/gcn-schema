@@ -2,9 +2,11 @@
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/boom/alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
+  "unevaluatedProperties": false,
   "title": "Optical alerts",
   "description": "Optical alert with crossmatch gcn events",
   "properties": {
+    "$schema": true,
     "data": {
       "type": "object",
       "description": "Data container for targets and photometry",
