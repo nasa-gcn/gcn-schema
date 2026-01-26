@@ -79,13 +79,13 @@
         {
           "$ref": "../core/Alert.schema.json",
           "description": "Alert observation date"
+        },
+        {
+          "$ref": "../core/Reporter.schema.json",
+          "description": "Filter information for the photometry point"
         }
       ],
       "properties": {
-        "bandpass": {
-          "type": "string",
-          "description": "Bandpass of the observation"
-        },
         "brightness": {
           "type": ["number", "null"],
           "description": "Measured brightness of the target"
