@@ -70,7 +70,7 @@
       "allOf": [
         {
           "$ref": "../core/Reporter.schema.json",
-          "description": "Instrument and filter information for the photometry point"
+          "description": "Telescope, instrument and filter information for the photometry point"
         },
         {
           "$ref": "../core/Event.schema.json",
