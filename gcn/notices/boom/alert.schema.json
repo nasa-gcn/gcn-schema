@@ -94,7 +94,7 @@
           "type": ["number", "null"],
           "description": "Error in the measured brightness"
         },
-        "unit": {
+        "brightness_unit": {
           "type": "string",
           "description": "Unit of brightness measurement"
         },

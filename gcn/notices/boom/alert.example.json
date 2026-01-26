@@ -26,7 +26,7 @@
         "filter": ["atlaso"],
         "brightness": null,
         "brightness_error": null,
-        "unit": "ab",
+        "brightness_unit": "ab",
         "limiting_brightness": 19.53,
         "limiting_brightness_unit": "ab"
       },
@@ -38,7 +38,7 @@
         "filter": ["ztfg"],
         "brightness": 18.098275781661336,
         "brightness_error": 0.022992066138614722,
-        "unit": "ab",
+        "brightness_unit": "ab",
         "limiting_brightness": 20.4824,
         "limiting_brightness_unit": "ab"
       },
@@ -50,7 +50,7 @@
         "filter": ["ztfr"],
         "brightness": 18.374372988784426,
         "brightness_error": 0.02848386359189418,
-        "unit": "ab",
+        "brightness_unit": "ab",
         "limiting_brightness": 20.57976153466707,
         "limiting_brightness_unit": "ab"
       },
@@ -62,7 +62,7 @@
         "filter": ["sdssg"],
         "brightness": 17.780707737213493,
         "brightness_error": 0.03273829683077194,
-        "unit": "ab",
+        "brightness_unit": "ab",
         "limiting_brightness": 20.961081520120693,
         "limiting_brightness_unit": "ab"
       },
@@ -74,7 +74,7 @@
         "filter": ["sdssr"],
         "brightness": 18.08085088883707,
         "brightness_error": 0.03800648469770929,
-        "unit": "ab",
+        "brightness_unit": "ab",
         "limiting_brightness": 21.202698774093086,
         "limiting_brightness_unit": "ab"
       },
@@ -86,7 +86,7 @@
         "filter": ["sdssz"],
         "brightness": 18.682093322012918,
         "brightness_error": 0.09498580953056104,
-        "unit": "ab",
+        "brightness_unit": "ab",
         "limiting_brightness": 20.39424160245688,
         "limiting_brightness_unit": "ab"
       }
