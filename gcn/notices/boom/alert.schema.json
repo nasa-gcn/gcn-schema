@@ -82,8 +82,8 @@
           "description": "Event name"
         },
         {
-          "$ref": "../core/Alert.schema.json",
-          "description": "Alert observation date"
+          "$ref": "../core/DateTime.schema.json",
+          "description": "Observation time information"
         }
       ],
       "properties": {

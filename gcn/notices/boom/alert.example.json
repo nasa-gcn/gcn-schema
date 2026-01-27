@@ -24,7 +24,7 @@
     "photometry": [
       {
         "target_name": "ZTF25acffkdr",
-        "date_obs": 61006.585492,
+        "observation_start": "2025-11-27T14:03:06.509Z",
         "mission": "Asteroid Terrestrial-impact Last Alert System",
         "instrument": "ATLAS",
         "filter": ["atlaso"],
@@ -36,7 +36,7 @@
       },
       {
         "target_name": "ZTF25acffkdr",
-        "date_obs": 61007.42162040016,
+        "observation_start": "2025-11-28T10:07:08.003Z",
         "mission": "Palomar 1.2m Oschin",
         "instrument": "ZTF",
         "filter": ["ztfg"],
@@ -48,7 +48,7 @@
       },
       {
         "target_name": "ZTF25acffkdr",
-        "date_obs": 61007.46530089993,
+        "observation_start": "2025-11-28T11:10:01.998Z",
         "mission": "Palomar 1.2m Oschin",
         "instrument": "ZTF",
         "filter": ["ztfr"],
@@ -60,7 +60,7 @@
       },
       {
         "target_name": "ZTF25acffkdr",
-        "date_obs": 61008.14301,
+        "observation_start": "2025-11-29T03:25:56.064Z",
         "mission": "Liverpool Telescope",
         "instrument": "IOO",
         "filter": ["sdssg"],
@@ -72,7 +72,7 @@
       },
       {
         "target_name": "ZTF25acffkdr",
-        "date_obs": 61008.144087,
+        "observation_start": "2025-11-29T03:27:29.117Z",
         "mission": "Liverpool Telescope",
         "instrument": "IOO",
         "filter": ["sdssr"],
@@ -84,7 +84,7 @@
       },
       {
         "target_name": "ZTF25acffkdr",
-        "date_obs": 61008.1465,
+        "observation_start": "2025-11-29T03:30:57.600Z",
         "mission": "Liverpool Telescope",
         "instrument": "IOO",
         "filter": ["sdssz"],
