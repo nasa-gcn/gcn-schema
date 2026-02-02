@@ -75,7 +75,7 @@
       "allOf": [
         {
           "$ref": "../core/Reporter.schema.json",
-          "description": "Telescope, instrument and filter information for the photometry point"
+          "description": "Instrument and filter information for the photometry point"
         },
         {
           "$ref": "../core/Event.schema.json",
@@ -87,6 +87,10 @@
         }
       ],
       "properties": {
+        "telescope": {
+          "type": "string",
+          "description": "Name of the telescope used to get the photometry point"
+        },
         "brightness": {
           "type": ["number", "null"],
           "description": "Measured brightness of the target"
