@@ -19,7 +19,7 @@
       "properties": {
         "targets": {
           "type": "array",
-          "description": "An array of alert",
+          "description": "An array of alert that temporally crossmatch with GCN events",
           "items": { "$ref": "#/$defs/target" }
         },
         "photometry": {
