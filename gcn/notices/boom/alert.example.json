@@ -6,9 +6,9 @@
         "name": "ZTF25acffkdr",
         "ra": 150.175649,
         "dec": 15.2832185,
-        "classifications": [
+        "classification_scores": [
           {
-            "classification": "Type II",
+            "label": "Type II",
             "probability": 0.9
           }
         ],

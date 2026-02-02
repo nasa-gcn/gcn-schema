@@ -42,10 +42,10 @@
         }
       ],
       "properties": {
-        "classifications": {
+        "classification_scores": {
           "type": "array",
-          "description": "Array of classifications for the target",
-          "items": { "$ref": "#/$defs/classification" }
+          "description": "Array of classification scores for the target",
+          "items": { "$ref": "#/$defs/classification_score" }
         },
         "gcn_crossmatch": {
           "type": "array",
@@ -57,12 +57,12 @@
         }
       }
     },
-    "classification": {
+    "classification_score": {
       "type": "object",
       "properties": {
-        "classification": {
+        "label": {
           "type": "string",
-          "description": "Classification of the target"
+          "description": "Label of the classification"
         },
         "probability": {
           "type": "number",
