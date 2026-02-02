@@ -15,7 +15,7 @@
         "gcn_crossmatch": [
           {
             "ref_type": "GW",
-            "ref_instrument": "LVC",
+            "ref_instrument": "LVK",
             "ref_ID": "S251117bs"
           }
         ]
