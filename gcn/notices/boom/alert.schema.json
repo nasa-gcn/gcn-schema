@@ -5,6 +5,12 @@
   "unevaluatedProperties": false,
   "title": "Optical alerts",
   "description": "Optical alert with crossmatch gcn events",
+  "allOf": [
+    {
+      "$ref": "../core/Alert.schema.json",
+      "description": "Date and time when the alert has been generated"
+    }
+  ],
   "properties": {
     "$schema": true,
     "data": {
