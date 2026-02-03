@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v6.1.1/gcn/notices/km3net/alert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/km3net/alert.schema.json",
   "messenger": "Neutrino",
   "mission": "KM3NeT",
   "instrument": "ARCA021",
