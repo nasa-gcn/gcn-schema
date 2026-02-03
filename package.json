@@ -1,7 +1,7 @@
 {
   "name": "@nasa-gcn/schema",
   "description": "Unified JSON Schema for multi-messenger and high-energy astronomy alerts",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "repository": {
     "type": "git",
     "url": "github:nasa-gcn/gcn-schema"
