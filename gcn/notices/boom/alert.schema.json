@@ -9,6 +9,10 @@
     {
       "$ref": "../core/Alert.schema.json",
       "description": "Date and time when the alert has been generated"
+    },
+    {
+      "$ref": "../core/Reporter.schema.json",
+      "description": "Mission"
     }
   ],
   "properties": {

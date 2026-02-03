@@ -1,6 +1,7 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/boom/alert.schema.json",
   "alert_datetime": "2025-11-30T10:28:570Z",
+  "mission": "Boom",
   "data": {
     "targets": [
       {
