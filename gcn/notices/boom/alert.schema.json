@@ -94,7 +94,7 @@
         },
         "brightness_error": {
           "type": ["number", "null"],
-          "description": "Error in the measured brightness"
+          "description": "Error in the measured brightness (1 sigma)"
         },
         "brightness_unit": {
           "type": "string",
