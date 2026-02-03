@@ -53,9 +53,9 @@
       ],
       "properties": {
         "classification_scores": {
-          "type": "array",
-          "description": "Array of classification scores for the target",
-          "items": { "$ref": "#/$defs/classification_score" }
+          "type": "object",
+          "additionalProperties": { "type": "number" },
+          "description": "Dictionary mapping classification labels to their scores"
         },
         "gcn_crossmatch": {
           "type": "array",
@@ -64,19 +64,6 @@
             "$ref": "../core/FollowUp.schema.json",
             "description": "GCN event properties"
           }
-        }
-      }
-    },
-    "classification_score": {
-      "type": "object",
-      "properties": {
-        "label": {
-          "type": "string",
-          "description": "Label of the classification"
-        },
-        "probability": {
-          "type": "number",
-          "description": "Probability associated with the classification"
         }
       }
     },

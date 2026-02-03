@@ -8,12 +8,7 @@
         "name": "ZTF25acffkdr",
         "ra": 150.175649,
         "dec": 15.2832185,
-        "classification_scores": [
-          {
-            "label": "Type II",
-            "probability": 0.9
-          }
-        ],
+        "classification_scores": { "Type II": 0.9 },
         "gcn_crossmatch": [
           {
             "ref_type": "GW",
