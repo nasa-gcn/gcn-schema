@@ -1,5 +1,5 @@
 {
-    "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare.schema.json",
+    "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare/flare.schema.json",
     "alert_datetime": "2025-11-21T00:00:00",
     "mission": "Fermi",
     "instrument": "LAT",
