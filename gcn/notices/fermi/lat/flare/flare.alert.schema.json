@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare.alert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare.schema.json",
   "$schema": "https://json-schema.org/draft/2025-11/schema",
   "type": "object",
   "title": "Fermi-LAT Flare Advocate Alert",
@@ -18,10 +18,7 @@
     {
       "$ref": "../../core/Localization.schema.json"
     },
-    {
-      "$ref": "../../core/Redshift.schema.json"
-    },
-    {
+        {
       "$ref": "../../core/Reporter.schema.json"
     },
     {
@@ -33,33 +30,25 @@
       "type": "string",
       "format": "uri"
     },
-    "flux": {
-      "type": "number",
-      "description": "Daily averaged gamma-ray flux [ph/cm2/s]"
-    },
-    "flux_error": {
-      "type": "number",
-      "description": "Daily averaged gamma-ray flux error [ph/cm2/s]"
+    "reference_catalog": {
+      "type": "string",
+      "description": "Fermi-LAT catalog used to compare the observed flux with a reference flux"
     },
     "flux_ratio": {
       "type": "number",
-      "description": "Factor by which the flux has increased with respect to the average flux in the fourth Fermi-LAT catalog (4FGL)"
+      "description": "Factor by which the flux has increased with respect to the average flux in the given reference_catalog entry"
     },
-    "alpha_4FGL": {
+    "index": {
       "type": "number",
-      "description": "Photon index value from the 4FGL catalog"
+      "description": "Photon index value of the observation"
     },
-    "alpha_error_4FGL": {
+    "index_error": {
       "type": "number",
-      "description": "1-sigma uncertainty of alpha_4FGL"
+      "description": "1-sigma uncertainty of index"
     },
     "TS": {
       "type": "number",
-      "description": "Test statistic for detection of the source"
-    },
-    "subtype": {
-    "enum": ["high_energy_photons", "flux_ratio"],
-    "description": "High-energy photons is required when high-energy photons are detected at 1 degree from the source, while flux ratio is required when the flux is increasing and surpassing a threshold that could be 10 for example"
-  }
+      "description": "Test Statistic for detection of the source. TS is approximately equal to the square of the detection significance in Gaussian sigma (TS ≈ significance^2) for one degree of freedom"
+    }
  }
 }
