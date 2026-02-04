@@ -1,0 +1,54 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare.schema.json",
+  "$schema": "https://json-schema.org/draft/2025-11/schema",
+  "type": "object",
+  "title": "Fermi-LAT Flare Advocate Alert",
+  "description": "This schema is to alert the scientific comunity about a flare. It gives information about the position, the time, the flux, the photon index and the presence of high-energy photons.",
+  "unevaluatedProperties": false,
+  "allOf": [
+    {
+      "$ref": "../../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../../core/Event.schema.json"
+    },
+    {
+      "$ref": "../../core/Localization.schema.json"
+    },
+        {
+      "$ref": "../../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/GammaRay.schema.json" 
+    }
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "reference_catalog": {
+      "type": "string",
+      "description": "Fermi-LAT catalog used to compare the observed flux with a reference flux"
+    },
+    "flux_ratio": {
+      "type": "number",
+      "description": "Factor by which the flux has increased with respect to the average flux in the given reference_catalog entry"
+    },
+    "index": {
+      "type": "number",
+      "description": "Photon index value of the observation"
+    },
+    "index_error": {
+      "type": "number",
+      "description": "1-sigma uncertainty of index"
+    },
+    "TS": {
+      "type": "number",
+      "description": "Test Statistic for detection of the source. TS is approximately equal to the square of the detection significance in Gaussian sigma (TS ≈ significance^2) for one degree of freedom"
+    }
+ }
+}
