@@ -1,0 +1,22 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/bepposax/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "BeppoSAX GRB Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "flux_energy_mcrab": {
+      "type": ["null", "number"],
+      "description": "Flux of the detected source in mCrab units."
+    }
+  }
+}

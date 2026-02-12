@@ -1,0 +1,20 @@
+{
+  "alert_datetime": "2005-11-28T21:27:30Z",
+  "trigger_time": "2005-11-28T21:27:17.14Z",
+  "longitude": 44.0,
+  "additional_info": "Possible GRB.\nProbable XRB.\nWXM error box is circular; not rectangular.\nThis position matches a known X-ray source.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/hete/alert.schema.json",
+  "mission": "HETE",
+  "notice_type": "S/C_Update",
+  "id": [3972],
+  "record_number": 2,
+  "rate_energy_range": [6, 80],
+  "net_count_rate": 562,
+  "rate_duration": 0.16,
+  "ra": 64.0,
+  "dec": 19.0,
+  "wxm_ra": 94.226,
+  "wxm_dec": 9.333,
+  "wxm_ra_dec_error": 0.4666666666666667,
+  "wxm_image_snr": 15.0
+}

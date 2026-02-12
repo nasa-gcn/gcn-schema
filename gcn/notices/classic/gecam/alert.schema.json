@@ -1,0 +1,63 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/gecam/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "GECAM Trigger Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/GeoLocBase.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "notice_type": {
+      "type": "string",
+      "description": "GECAM has two notice types: Flight and Ground."
+    },
+    "mission_type": {
+      "type": "string",
+      "description": "The satellite which recorded the data: A or B."
+    },
+    "trigger_duration": {
+      "type": "number",
+      "description": "The collection duration of the trigger."
+    },
+    "detector_status": {
+      "type": "object",
+      "properties": {
+        "1": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "2": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "3": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "4": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "5": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "6": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "7": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "8": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "9": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "10": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "11": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "12": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "13": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "14": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "15": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "16": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "17": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "18": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "19": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "20": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "21": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "22": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "23": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "24": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "25": { "$ref": "../../core/DetectorStatus.schema.json" }
+      }
+    }
+  }
+}

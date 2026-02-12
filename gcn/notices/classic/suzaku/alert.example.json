@@ -1,0 +1,13 @@
+{
+  "alert_datetime": "2014-1-04T23:04:04Z",
+  "id": [1666163133],
+  "trigger_time": "2014-01-04T17:32:13.92Z",
+  "additional_info": "SUZAKU WAM Lightcurve.  \nThis event came from an on-board trigger.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/suzaku/alert.schema.json",
+  "record_number": 1,
+  "alert_type": "initial",
+  "mission": "SUZAKU",
+  "instrument": "WAM",
+  "trigger_type": "rate",
+  "lightcurve_url": "https://gcn.gsfc.nasa.gov/notices_suz/suzaku_lc_140104_63133.gif"
+}

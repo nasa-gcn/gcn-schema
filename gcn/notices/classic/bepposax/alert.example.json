@@ -1,0 +1,12 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/bepposax/alert.schema.json",
+  "mission": "BeppoSAX",
+  "trigger_time": "2002-04-11T01:49:05.00Z",
+  "instrument": "WFC",
+  "ra": 78.111,
+  "dec": 68.257,
+  "ra_dec_error": 0.083,
+  "systematic_included": true,
+  "flux_energy_mcrab": null,
+  "additional_info": "   SAX-WFC GRB Coordinates.      Possible GRB or X-ray Flash. GRBM was switched off during burst   "
+}

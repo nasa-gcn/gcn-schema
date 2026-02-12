@@ -1,0 +1,53 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/snews/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "SNEWS Trigger Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "n_events": {
+      "type": "number",
+      "description": "The number of neutrinoes detected."
+    },
+    "duration": {
+      "type": "number",
+      "description": "Collection duration for neutrinoes."
+    },
+    "detector_quality": {
+      "type": "object",
+      "properties": {
+        "Super-K": {
+          "enum": ["did not contribute", "possible", "good", "override"]
+        },
+        "LVD": {
+          "enum": ["did not contribute", "possible", "good", "override"]
+        },
+        "IceCube": {
+          "enum": ["did not contribute", "possible", "good", "override"]
+        },
+        "KamLAND": {
+          "enum": ["did not contribute", "possible", "good", "override"]
+        },
+        "Bore": {
+          "enum": ["did not contribute", "possible", "good", "override"]
+        },
+        "Daya Bay": {
+          "enum": ["did not contribute", "possible", "good", "override"]
+        },
+        "HALO": {
+          "enum": ["did not contribute", "possible", "good", "override"]
+        }
+      }
+    }
+  }
+}

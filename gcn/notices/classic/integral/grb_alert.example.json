@@ -1,0 +1,17 @@
+{
+  "alert_datetime": "2004-3-18T10:52:32Z",
+  "trigger_time": "2004-03-18T10:52:20.98Z",
+  "ra": 288.8131,
+  "dec": 11.1343,
+  "ra_dec_error": 3.02,
+  "intensity_snr": 10.2,
+  "ra_pointing": 288.06,
+  "dec_pointing": 18.41,
+  "additional_info": "INTEGRAL GRB Coordinates.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/integral/alert.schema.json",
+  "mission": "INTEGRAL",
+  "notice_type": "Wakeup",
+  "record_number": 1,
+  "alert_type": "initial",
+  "id": [1680]
+}

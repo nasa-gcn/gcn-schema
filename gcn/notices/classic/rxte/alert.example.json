@@ -1,0 +1,14 @@
+{
+  "alert_datetime": "2000-5-08T23:23:09Z",
+  "trigger_time": "2000-05-08T19:10:50.88Z",
+  "position_type": "Line",
+  "ra_dec_error": 10.0,
+  "flux_energy_mcrab": 330.0,
+  "additional_info": "RXTE-ASM GRB Coordinates.  \nThis GRB was only seen in one camera.  \nDue to missing anodes, we can poorly constrain the  \nposition of the GRB along the long direction of the  \nerror box.  From the given position, the box should  \nextend 10 degrees to the north east, and 1.5 degrees  \nto the south west.  \n\nThis was a complex observation to analyze.  It appears  \nthat the GRB came out of earth-occult in progress  \nat around 19:13:40 UTC.  The average flux over the  \nfull 90-s observation was 330 mCrab (2-12 keV), but  \nwe only observed the burst for around 20 s.  The   \nmaximum flux may have exceeded 2 Crab.    \n\nThe ASM position passes 5' outside the nominal 0.4deg  \nradius LOCBURST position reported by BATSE.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/rxte/alert.schema.json",
+  "mission": "RXTE",
+  "instrument": "ASM",
+  "messenger": "EM",
+  "record_number": 1,
+  "alert_type": "initial"
+}

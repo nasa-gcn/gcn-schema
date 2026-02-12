@@ -1,0 +1,49 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/counterpart/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "Counterpart Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/FollowUp.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "notice_type": {
+      "type": "string",
+      "enum": ["GRB_Counterpart", "LVC_Counterpart"]
+    },
+    "submitter_name": {
+      "type": "string",
+      "description": "The name of the submitter of the trigger."
+    },
+    "energy_flux": {
+      "type": "number",
+      "description": "The intensity of the counterpart trigger [erg/cm2/sec]"
+    },
+    "energy_flux_error": {
+      "type": "number",
+      "description": "The error in measuring the intensity of the counterpart trigger [erg/cm2/sec]"
+    },
+    "flux_energy_range": {
+      "type": "array",
+      "minItems": 2,
+      "description": "The upper and lower energy limit on the counterpart detection [keV]"
+    },
+    "duration": {
+      "type": "number",
+      "description": "The duration of collectring energy_flux [s]"
+    },
+    "rank": {
+      "type": "number",
+      "description": "Indicates how likely a source is a GW counterpart. Goes from 1-4 with 1 being the most likely and 4 being the least."
+    }
+  }
+}
