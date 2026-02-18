@@ -1,0 +1,96 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/boom/alert.schema.json",
+  "alert_datetime": "2025-11-30T10:28:57Z",
+  "mission": "Boom",
+  "data": {
+    "targets": [
+      {
+        "event_name": "ZTF25acffkdr",
+        "ra": 150.175649,
+        "dec": 15.2832185,
+        "classification_scores": { "Type II": 0.9 },
+        "gcn_crossmatch": [
+          {
+            "ref_type": "GW",
+            "ref_instrument": "LVK",
+            "ref_ID": "S251117bs"
+          }
+        ]
+      }
+    ],
+    "photometry": [
+      {
+        "event_name": "ZTF25acffkdr",
+        "observation_start": "2025-11-27T14:03:06.509Z",
+        "telescope": "Asteroid Terrestrial-impact Last Alert System",
+        "instrument": "ATLAS",
+        "filter": ["atlaso"],
+        "brightness": null,
+        "brightness_error": null,
+        "brightness_unit": "ab",
+        "limiting_brightness": 19.53,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "event_name": "ZTF25acffkdr",
+        "observation_start": "2025-11-28T10:07:08.003Z",
+        "telescope": "Palomar 1.2m Oschin",
+        "instrument": "ZTF",
+        "filter": ["ztfg"],
+        "brightness": 18.1,
+        "brightness_error": 0.02,
+        "brightness_unit": "ab",
+        "limiting_brightness": 20.48,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "event_name": "ZTF25acffkdr",
+        "observation_start": "2025-11-28T11:10:01.998Z",
+        "telescope": "Palomar 1.2m Oschin",
+        "instrument": "ZTF",
+        "filter": ["ztfr"],
+        "brightness": 18.37,
+        "brightness_error": 0.03,
+        "brightness_unit": "ab",
+        "limiting_brightness": 20.58,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "event_name": "ZTF25acffkdr",
+        "observation_start": "2025-11-29T03:25:56.064Z",
+        "telescope": "Liverpool Telescope",
+        "instrument": "IOO",
+        "filter": ["sdssg"],
+        "brightness": 17.78,
+        "brightness_error": 0.03,
+        "brightness_unit": "ab",
+        "limiting_brightness": 20.96,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "event_name": "ZTF25acffkdr",
+        "observation_start": "2025-11-29T03:27:29.117Z",
+        "telescope": "Liverpool Telescope",
+        "instrument": "IOO",
+        "filter": ["sdssr"],
+        "brightness": 18.08,
+        "brightness_error": 0.04,
+        "brightness_unit": "ab",
+        "limiting_brightness": 21.2,
+        "limiting_brightness_unit": "ab"
+      },
+      {
+        "event_name": "ZTF25acffkdr",
+        "observation_start": "2025-11-29T03:30:57.600Z",
+        "telescope": "Liverpool Telescope",
+        "instrument": "IOO",
+        "filter": ["sdssz"],
+        "brightness": 18.68,
+        "brightness_error": 0.09,
+        "brightness_unit": "ab",
+        "limiting_brightness": 20.39,
+        "limiting_brightness_unit": "ab"
+      }
+    ]
+  }
+}
