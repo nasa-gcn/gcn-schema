@@ -90,11 +90,11 @@
         },
         "brightness": {
           "type": ["number", "null"],
-          "description": "Measured brightness of the target"
+          "description": "Measured brightness of the target, rounded to two decimal places"
         },
         "brightness_error": {
           "type": ["number", "null"],
-          "description": "Error in the measured brightness (1 sigma)"
+          "description": "Error in the measured brightness (1 sigma), rounded to two decimal places"
         },
         "brightness_unit": {
           "type": "string",
@@ -102,7 +102,7 @@
         },
         "limiting_brightness": {
           "type": ["number", "null"],
-          "description": "Limiting brightness of the observation"
+          "description": "Limiting brightness of the observation, rounded to two decimal places"
         },
         "limiting_brightness_unit": {
           "type": "string",
