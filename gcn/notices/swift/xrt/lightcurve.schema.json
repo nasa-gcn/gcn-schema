@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/lightcurve.schema.json",
+  "title": "swift.xrt.lightcurve",
+  "description": "GCN Notice schema for Swift XRT lightcurve notices (packet type 70: SWIFT_XRT_LC). The lightcurve notice is issued when the XRT on-board software has accumulated a lightcurve of up to 100 time bins over the observation. The XRT boresight pointing direction (bin[7-8]) is stored in pointing_ra/pointing_dec. The observation start/stop times and livetime are derived from bin[5-6], bin[10-11], and bin[9] respectively.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+  ],
+  "properties": {
+
+    "alert_datetime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 datetime string indicating when this GCN notice was issued."
+    },
+
+    "alert_tense": {
+      "type": "string",
+      "enum": ["current", "test"],
+      "description": "Indicates whether this is a real current notice ('current') or a test submission ('test')."
+    },
+
+    "alert_type": {
+      "type": "string",
+      "enum": ["initial", "update"],
+      "description": "Indicates whether this is the initial XRT lightcurve notice ('initial') for the trigger or a subsequent update ('update')."
+    },
+
+    "mission": {
+      "type": "string",
+      "const": "Swift",
+      "description": "Fixed string identifying the mission."
+    },
+
+    "instrument": {
+      "type": "string",
+      "const": "XRT",
+      "description": "Fixed string identifying the instrument."
+    },
+
+    "id": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "description": "BAT trigger ID number that initiated this XRT follow-up observation. Derived from the lower 24 bits of trig_obs_num (bin[4])."
+    },
+
+    "pointing_ra": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 360.0,
+      "description": "Right Ascension of the XRT boresight (center of the XRT field of view) during the lightcurve accumulation, in degrees (J2000 epoch). Derived from bore_ra (bin[7]) converted from 0.0001-deg units."
+    },
+
+    "pointing_dec": {
+      "type": "number",
+      "minimum": -90.0,
+      "maximum": 90.0,
+      "description": "Declination of the XRT boresight (center of the XRT field of view) during the lightcurve accumulation, in degrees (J2000 epoch). Derived from bore_dec (bin[8]) converted from 0.0001-deg units."
+    },
+
+    "observation_start": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 datetime string of the start of the first CCD integration in the lightcurve accumulation. Derived from start_tjd (bin[5]) and start_sod (bin[6])."
+    },
+
+    "observation_stop": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 datetime string of the end of the last CCD integration in the lightcurve accumulation. Derived from SpecStop_tjd (bin[10]) and SpecStop_sod (bin[11])."
+    },
+
+    "observation_livetime": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Exposure time duration of the lightcurve integration in seconds. Derived from live_time (bin[9]) converted from centi-seconds."
+    },
+
+    "collected_bins": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Number of valid time bins collected in the lightcurve (range 0–100). Derived from n_bins (bin[20]). A full lightcurve has 100 bins; fewer bins indicate early termination (see termination_condition)."
+    },
+
+    "termination_condition": {
+      "type": "string",
+      "enum": [
+        "Normal",
+        "Terminated by time",
+        "Terminated by snapshot",
+        "Terminated by entering SAA"
+      ],
+      "description": "Condition that caused the lightcurve collection process to terminate. Derived from term_cond (bin[21]). Values: 0='Normal' (100 bins collected), 1='Terminated by time' (1–99 bins), 2='Terminated by snapshot' (1–99 bins), 3='Terminated by entering SAA' (1–99 bins)."
+    },
+
+    "lightcurve_fits_file": {
+      "type": "string",
+      "contentEncoding": "base64",
+      "contentMediaType": "image/fits",
+      "description": "Base64-encoded content of the XRT lightcurve FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
+    }
+
+  },
+
+  "required": [
+    "alert_datetime",
+    "alert_tense",
+    "alert_type",
+    "mission",
+    "instrument",
+    "id",
+    "pointing_ra",
+    "pointing_dec",
+    "observation_start",
+    "observation_stop",
+    "observation_livetime",
+    "collected_bins",
+    "termination_condition",
+    "lightcurve_fits_file"
+  ],
+
+  "additionalProperties": false
+}

@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/image.schema.json",
+  "title": "swift.xrt.image",
+  "description": "GCN Notice schema for Swift XRT image notices (packet types 69 and 78: SWIFT_XRT_IMAGE and SWIFT_XRT_IMAGE_PROC). Both raw flight (type=69) and ground-processed (type=78) notices share an identical packet word layout. The subtype field distinguishes them: 'FLIGHT' for type=69, derived from misc bit 2^30. The XRT image is a 51x51 pixel postage-stamp image centred on the GRB afterglow position. The burst RA/Dec (bin[7-8]) contains the centroid position of the afterglow, NOT the XRT boresight. The roll (bin[16]), gain/mode/waveform (bin[17]), and exposure time (bin[18]) are all unique to this packet relative to other XRT notice types.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+  ],
+  "properties": {
+
+    "alert_datetime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 datetime string indicating when this GCN notice was issued."
+    },
+
+    "alert_tense": {
+      "type": "string",
+      "enum": ["current", "test"],
+      "description": "Indicates whether this is a real current notice ('current') or a test submission ('test')."
+    },
+
+    "alert_type": {
+      "type": "string",
+      "enum": ["initial", "update"],
+      "description": "Indicates whether this is the initial XRT image notice ('initial') for the trigger or an updated/reprocessed image ('update'). Type=69 (raw flight) maps to 'initial'; type=78 (ground-processed) maps to 'update', indicated by misc bit 2^30."
+    },
+
+    "mission": {
+      "type": "string",
+      "const": "Swift",
+      "description": "Fixed string identifying the mission."
+    },
+
+    "instrument": {
+      "type": "string",
+      "const": "XRT",
+      "description": "Fixed string identifying the instrument."
+    },
+
+    "id": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "description": "BAT trigger ID number that initiated this XRT follow-up observation. Derived from the lower 24 bits of trig_obs_num (bin[4])."
+    },
+
+    "ra": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 360.0,
+      "description": "Right Ascension of the XRT-detected afterglow centroid position in degrees (J2000 epoch). Derived from burst_ra (bin[7]) converted from 0.0001-deg units. NOTE: this is the centroid of the afterglow detection, NOT the XRT boresight pointing direction."
+    },
+
+    "dec": {
+      "type": "number",
+      "minimum": -90.0,
+      "maximum": 90.0,
+      "description": "Declination of the XRT-detected afterglow centroid position in degrees (J2000 epoch). Derived from burst_dec (bin[8]) converted from 0.0001-deg units. NOTE: this is the centroid of the afterglow detection, NOT the XRT boresight pointing direction."
+    },
+
+    "ra_dec_error": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Detection significance expressed as the square root of the number of bright pixels above background, in units of degrees (0.0001-deg). Derived from cent_sdev (bin[11]) converted from 0.0001-deg units. NOTE: despite the field name, this value encodes detection significance rather than a positional error radius — it is retained as ra_dec_error for schema consistency."
+    },
+
+    "systematic_included": {
+      "type": "boolean",
+      "const": true,
+      "description": "Always True for XRT image notices, indicating that the ra_dec_error value incorporates both statistical and systematic contributions."
+    },
+
+    "pointing_roll": {
+      "type": "number",
+      "minimum": -180.0,
+      "maximum": 180.0,
+      "description": "Roll angle of the XRT pointing direction in degrees. Derived from roll (bin[16]) converted from 0.0001-deg units."
+    },
+
+    "observation_start": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 datetime string of the start of the XRT CCD image integration. Derived from ImgStartTJD (bin[5]) and ImgStartSOD (bin[6])."
+    },
+
+    "observation_livetime": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Nominal exposure time of the XRT image integration in seconds. Derived from expo_time (bin[18]) converted from centi-seconds."
+    },
+
+    "ccd_readout_mode": {
+      "type": "string",
+      "enum": [
+        "Null",
+        "Short image",
+        "Long image",
+        "Piled-up Photodiode",
+        "Low Rate Photodiode",
+        "Windowed Timing",
+        "Photo-counting",
+        "Raw data",
+        "Bias map",
+        "Stop"
+      ],
+      "description": "XRT CCD operational readout mode at the time of the image. Derived from the mode field packed in bits 2^8–15 of gain/mod/wav (bin[17]). Integer values 1–10 map to the enum strings in order."
+    },
+
+    "ccd_waveform_id": {
+      "type": "integer",
+      "enum": [50, 60],
+      "description": "XRT CCD waveform identifier. Derived from the waveform field packed in bits 2^0–7 of gain/mod/wav (bin[17]). Value is either 50 or 60."
+    },
+
+    "amplifier_gain": {
+      "type": "integer",
+      "enum": [1, 2, 4, 8, 16],
+      "description": "XRT CCD amplifier gain setting. Derived from the gain field packed in bits 2^16–23 of gain/mod/wav (bin[17]). Possible values are 1, 2, 4, 8, or 16."
+    },
+
+    "bright_pixels": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of bright pixels detected above background in the XRT image. Derived from n_bright (bin[9])."
+    },
+
+    "centroid_position": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Centroid position of the detected afterglow in the XRT image plane, as [x, y] in centi-pixel units. Derived from cent_x (bin[12]) and cent_y (bin[13]), each converted from centi-pixels by dividing by 100."
+    },
+
+    "centroid_ccd_position": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Center of the 51×51 pixel postage stamp image in raw CCD pixel coordinates, as [x, y] in integer pixel units. Derived from iraw_x (bin[14]) and iraw_y (bin[15])."
+    },
+
+    "grb_xrt_coordinates": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Position of the GRB afterglow in XRT detector coordinates, as [y, z] in centi-pixel units. Derived from grb_in_xrt_y (bin[20]) and grb_in_xrt_z (bin[21]), each converted from centi-pixels by dividing by 100."
+    },
+
+    "subtype": {
+      "type": "string",
+      "enum": ["FLIGHT", "GROUND"],
+      "description": "Indicates the origin of this image notice. 'FLIGHT' for the raw flight-generated notice (type=69, misc bit 2^30 = 0); 'GROUND' for the ground-processed notice (type=78, misc bit 2^30 = 1)."
+    },
+
+    "watchdog_timeout": {
+      "type": "boolean",
+      "description": "Indicates whether this XRT_IMAGE notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
+    },
+
+    "image_fits_file": {
+      "type": "string",
+      "contentEncoding": "base64",
+      "contentMediaType": "image/fits",
+      "description": "Base64-encoded content of the XRT postage-stamp image FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
+    }
+
+  },
+
+  "required": [
+    "alert_datetime",
+    "alert_tense",
+    "alert_type",
+    "mission",
+    "instrument",
+    "id",
+    "ra",
+    "dec",
+    "ra_dec_error",
+    "systematic_included",
+    "pointing_roll",
+    "observation_start",
+    "observation_livetime",
+    "ccd_readout_mode",
+    "ccd_waveform_id",
+    "amplifier_gain",
+    "bright_pixels",
+    "centroid_position",
+    "centroid_ccd_position",
+    "grb_xrt_coordinates",
+    "subtype",
+    "watchdog_timeout",
+    "image_fits_file"
+  ],
+
+  "additionalProperties": false
+}
