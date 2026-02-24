@@ -2,204 +2,29 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gcn.nasa.gov/schema/main/swift/bat/lightcurve.schema.json",
   "title": "swift.bat.lightcurve",
-  "description": "GCN Notice schema for Swift BAT GRB lightcurve notices (packet types 63 and 76: SWIFT_BAT_GRB_LC and SWIFT_BAT_GRB_LC_PROC). The lightcurve notice is issued when the BAT ground software has accumulated sufficient data to generate a lightcurve FITS file for the trigger.",
+  "description": "GCN Notice schema for Swift BAT GRB lightcurve notices (packet types 63 and 76: SWIFT_BAT_GRB_LC and SWIFT_BAT_GRB_LC_PROC). The lightcurve notice is issued when the BAT ground software has accumulated sufficient data to generate a lightcurve FITS file for the trigger. Type=63 is the raw flight notice; type=76 is the ground-processed notice.",
   "type": "object",
   "allOf": [
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/GeoLocBase.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/HardnessRatio.schema.json" }
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/HardnessRatio.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Duration.schema.json" }
   ],
   "properties": {
-
-    "alert_datetime": {
-      "type": "string",
-      "format": "date-time",
-      "description": "ISO 8601 datetime string indicating when this GCN notice was issued."
-    },
-
-    "alert_tense": {
-      "type": "string",
-      "enum": ["current", "test"],
-      "description": "Indicates whether this is a real current notice ('current') or a test submission ('test'). Derived from soln_status bit 2^30 (test_submit). Note: soln_status is only valid in the lightcurve packet when misc bit 2^24 is set, indicating it was copied from the associated BAT_POS_ACK packet."
-    },
-
-    "alert_type": {
-      "type": "string",
-      "enum": ["initial", "update"],
-      "description": "Indicates whether this is the initial lightcurve notice ('initial') for the trigger, or an updated/reprocessed lightcurve ('update'). Type=63 (raw flight) maps to 'initial'; type=76 (ground-processed) maps to 'update', indicated by misc bit 2^30."
-    },
-
-    "mission": {
-      "type": "string",
-      "const": "Swift",
-      "description": "Fixed string identifying the mission."
-    },
-
-    "instrument": {
-      "type": "string",
-      "const": "BAT",
-      "description": "Fixed string identifying the instrument."
-    },
-
-    "id": {
-      "type": "array",
-      "items": {
-        "type": "integer"
-      },
-      "description": "BAT trigger ID number. Derived from the lower 24 bits of trig_obs_num (bin[4])."
-    },
-
-    "trigger_time": {
-      "type": "string",
-      "format": "date-time",
-      "description": "ISO 8601 datetime string of the Swift-BAT burst trigger time. Derived from burst_tjd (bin[5]) and burst_sod (bin[6])."
-    },
-
-    "ra": {
-      "type": ["number", "null"],
-      "minimum": 0.0,
-      "maximum": 360.0,
-      "description": "Right Ascension of the burst/transient in degrees (J2000 epoch), copied from the associated BAT_POS_ACK packet. Derived from burst_ra (bin[7]) converted from 0.0001-deg units. Only valid if misc bit 2^24 is set; null otherwise."
-    },
-
-    "dec": {
-      "type": ["number", "null"],
-      "minimum": -90.0,
-      "maximum": 90.0,
-      "description": "Declination of the burst/transient in degrees (J2000 epoch), copied from the associated BAT_POS_ACK packet. Derived from burst_dec (bin[8]) converted from 0.0001-deg units. Only valid if misc bit 2^24 is set; null otherwise."
-    },
-
-    "ra_dec_error": {
-      "type": "null",
-      "description": "90%-containment position error radius. Not available in the BAT_GRB_LC (type=63/76) packet — bin[9–11] are spare. Always null for this notice type."
-    },
-
-    "systematic_included": {
-      "type": "null",
-      "description": "Not meaningful for this notice type as ra_dec_error is not available in the BAT_GRB_LC packet. Always null."
-    },
-
-    "latitude": {
-      "type": ["number", "null"],
-      "minimum": -90.0,
-      "maximum": 90.0,
-      "description": "Spacecraft latitude at the time of the BAT trigger, in degrees. Derived from the high-order short of lon_lat (bin[16]) converted from centi-degrees."
-    },
-
-    "longitude": {
-      "type": ["number", "null"],
-      "minimum": -180.0,
-      "maximum": 360.0,
-      "description": "Spacecraft longitude at the time of the BAT trigger, in degrees. Derived from the low-order short of lon_lat (bin[16]) converted from centi-degrees."
-    },
-
-    "instrument_phi": {
-      "type": "number",
-      "description": "BAT instrument phi coordinate of the trigger in degrees. Measured from the +Y-axis of the spacecraft increasing towards the -Z axis. Derived from phi (bin[12]) converted from centi-degrees."
-    },
-
-    "instrument_theta": {
-      "type": "number",
-      "minimum": 0.0,
-      "description": "BAT instrument theta coordinate of the trigger in degrees. Measured from the BAT boresight. Derived from theta (bin[13]) converted from centi-degrees."
-    },
-
-    "trigger_type": {
-      "type": "string",
-      "enum": ["image", "rate"],
-      "description": "Indicates whether the BAT trigger was an image trigger ('image') or a rate trigger ('rate'). Derived from soln_status bit 2^4 (image_trig). Only valid if misc bit 2^24 is set."
-    },
 
     "trigger_index": {
       "type": "integer",
       "description": "Row number in the BAT on-board flight software trigger table corresponding to the highest-significance successful trigger criterion. Derived from trig_index (bin[17])."
     },
 
-    "net_count_rate": {
-      "type": "null",
-      "description": "Net (background-subtracted) count rate during the trigger interval. Not available in the BAT_GRB_LC packet — bin[9] is spare. Always null for this notice type."
-    },
-
-    "background_count_rate": {
-      "type": "null",
-      "description": "Number of events during the background interval. Not available in the BAT_GRB_LC packet — bin[22–38] contains the lightcurve URL, not background counts. Always null for this notice type."
-    },
-
-    "rate_snr": {
-      "type": "number",
-      "minimum": 0.0,
-      "description": "Signal-to-noise ratio of the rate-trigger detection in sigma. Derived from rate_signif (bin[21]) converted from centi-sigma units."
-    },
-
-    "rate_duration": {
-      "type": ["number", "null"],
-      "minimum": 0.0,
-      "description": "Duration of the rate-trigger sampling interval in seconds. Set to the integration time (integ_time, bin[15], in units of 4msec ticks) for rate triggers; null for image triggers. Only valid if misc bit 2^24 is set."
-    },
-
-    "rate_energy_range": {
-      "type": "null",
-      "description": "Energy range of the rate-trigger criterion in keV. No energy range field is present in the BAT_GRB_LC binary packet. Always null for this notice type."
-    },
-
-    "image_snr": {
-      "type": "number",
-      "minimum": 0.0,
-      "description": "Signal-to-noise ratio of the image-trigger detection in sigma. Derived from image_signif (bin[20]) converted from centi-sigma units."
-    },
-
-    "image_duration": {
-      "type": ["number", "null"],
-      "minimum": 0.0,
-      "description": "Duration of the image-trigger sampling interval in seconds. Set to the integration time (integ_time, bin[15], in units of 4msec ticks) for image triggers; null for rate triggers. Only valid if misc bit 2^24 is set."
-    },
-
-    "image_energy_range": {
-      "type": "null",
-      "description": "Energy range of the image-trigger criterion in keV. No energy range field is present in the BAT_GRB_LC binary packet. Always null for this notice type."
-    },
-
-    "classification": {
-      "type": ["object", "null"],
-      "description": "Dictionary of source classification probabilities (e.g. {'known': 0.0, 'unknown': 1.0}). Not derivable from the BAT_GRB_LC binary packet; always null.",
-      "additionalProperties": {
-        "type": "number",
-        "minimum": 0.0,
-        "maximum": 1.0
-      }
-    },
-
-    "properties": {
-      "type": ["object", "null"],
-      "description": "Dictionary of source property probabilities (e.g. {'NAME': 1.0, 'LGRB': 0.0, 'SGRB': 0.0}). Not derivable from the BAT_GRB_LC binary packet; always null.",
-      "additionalProperties": {
-        "type": "number",
-        "minimum": 0.0,
-        "maximum": 1.0
-      }
-    },
-
-    "T90": {
-      "type": ["number", "null"],
-      "minimum": 0.0,
-      "description": "T90 duration of the GRB in seconds (time over which 90% of the burst fluence accumulates, from 5% to 95%). Not derivable from the BAT_GRB_LC binary packet; always null."
-    },
-
-    "hardness_ratio": {
-      "type": ["number", "null"],
-      "description": "Ratio of counts in a hard energy band to counts in a soft energy band. Not derivable from the BAT_GRB_LC binary packet; always null."
-    },
-
     "spectral_lag": {
       "type": ["number", "null"],
       "description": "Spectral lag of the GRB in seconds — the time delay between the arrival of hard and soft photons. Not derivable from the BAT_GRB_LC binary packet; always null."
-    },
-
-    "observation_start": {
-      "type": "null",
-      "description": "Start time of the Swift follow-up observation. Not derivable from the BAT_GRB_LC binary packet; always null."
     },
 
     "lightcurve_fits_file": {
@@ -222,37 +47,8 @@
   },
 
   "required": [
-    "alert_datetime",
-    "alert_tense",
-    "alert_type",
-    "mission",
-    "instrument",
-    "id",
-    "trigger_time",
-    "ra",
-    "dec",
-    "ra_dec_error",
-    "systematic_included",
-    "latitude",
-    "longitude",
-    "instrument_phi",
-    "instrument_theta",
-    "trigger_type",
     "trigger_index",
-    "net_count_rate",
-    "background_count_rate",
-    "rate_snr",
-    "rate_duration",
-    "rate_energy_range",
-    "image_snr",
-    "image_duration",
-    "image_energy_range",
-    "classification",
-    "properties",
-    "T90",
-    "hardness_ratio",
     "spectral_lag",
-    "observation_start",
     "lightcurve_fits_file",
     "watchdog_timeout",
     "star_tracker_locked"
