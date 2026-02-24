@@ -2,161 +2,74 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/position.schema.json",
   "title": "swift.xrt.position",
-  "description": "GCN Notice schema for Swift XRT position notices (packet type 67: SWIFT_XRT_POSITION). Covers both the initial flight-generated position (type=67, alert_type='initial', subtype='FLIGHT_POSITION') and the ground-refined position (alert_type='update', subtype='GROUND_POSITION'). The position (ra/dec) is the XRT afterglow localization. The high-precision error (hi_prec_err, bin[16]) is used for ra_dec_error as it avoids the quantization error of the low-precision burst_error (bin[11]). The error includes both statistical and systematic contributions (systematic_included=True). The TAM (Target Acquisition Monitor) values provide the 2x2 pixel positions of two guide stars used in the attitude solution.",
+  "description": "GCN Notice schema for Swift XRT position notices (packet type 67: SWIFT_XRT_POS, and its ground-processed counterpart). The XRT position notice is issued when the XRT on-board centroiding software has calculated a position for the X-ray afterglow. Type=67 (raw flight, subtype='FLIGHT_POSITION') and the ground-processed form (subtype='GROUND_POSITION') share this schema. bin[5-6] contain the observation start time; bin[7-8] the burst RA/Dec (ra/dec); bin[11] the position error (ra_dec_error); bin[16] the roll angle; bin[17] the packed gain/mode/waveform; bin[18] the exposure time (observation_livetime); bin[20-21] the GRB position in XRT coordinates.",
   "type": "object",
   "allOf": [
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" }
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json" }
   ],
   "properties": {
 
-    "alert_datetime": {
-      "type": "string",
-      "format": "date-time",
-      "description": "ISO 8601 datetime string indicating when this GCN notice was issued."
-    },
-
-    "alert_tense": {
-      "type": "string",
-      "enum": ["current", "test"],
-      "description": "Indicates whether this is a real current notice ('current') or a test submission ('test'). Derived from soln_status bit 2^30 (test_submit)."
-    },
-
-    "alert_type": {
-      "type": "string",
-      "enum": ["initial", "update"],
-      "description": "Indicates whether this is the initial flight-generated XRT position ('initial', type=67, subtype='FLIGHT_POSITION') or a ground-refined position ('update', subtype='GROUND_POSITION'). Derived from misc bit 2^30 (ground_generated)."
-    },
-
-    "mission": {
-      "type": "string",
-      "const": "Swift",
-      "description": "Fixed string identifying the mission."
-    },
-
-    "instrument": {
-      "type": "string",
-      "const": "XRT",
-      "description": "Fixed string identifying the instrument."
-    },
-
-    "id": {
-      "type": "array",
-      "items": {
-        "type": "integer"
-      },
-      "description": "BAT trigger ID number. Derived from the lower 24 bits of trig_obs_num (bin[4]). The trigger ID originates from BAT as the initial trigger is always from BAT."
-    },
-
-    "observation_start": {
-      "type": "string",
-      "format": "date-time",
-      "description": "ISO 8601 datetime string of the start of the XRT observation. Derived from burst_tjd (bin[5]) and burst_sod (bin[6])."
-    },
-
-    "ra": {
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 360.0,
-      "description": "Right Ascension of the XRT afterglow position in degrees (J2000 epoch). Derived from burst_ra (bin[7]) converted from 0.0001-deg units."
-    },
-
-    "dec": {
-      "type": "number",
-      "minimum": -90.0,
-      "maximum": 90.0,
-      "description": "Declination of the XRT afterglow position in degrees (J2000 epoch). Derived from burst_dec (bin[8]) converted from 0.0001-deg units."
-    },
-
-    "ra_dec_error": {
-      "type": "number",
-      "minimum": 0.0,
-      "description": "High-precision 90%-containment position error radius in degrees, including both statistical and systematic contributions. Derived from hi_prec_err (bin[16]) in units of centi-arcsec, converted to degrees by multiplying by 1e-4 / 36. This is preferred over the low-precision burst_error (bin[11]) which has a quantization error."
-    },
-
-    "systematic_included": {
-      "type": "boolean",
-      "const": true,
-      "description": "Indicates whether the position error includes systematic contributions. Always True for XRT positions — the hi_prec_err field (bin[16]) explicitly includes both statistical and systematic contributions."
-    },
-
     "energy_flux": {
-      "type": "number",
+      "type": ["number", "null"],
       "minimum": 0.0,
-      "description": "XRT energy flux of the afterglow in units of flux (linear scale, 0 to infinity). Derived from burst_flux (bin[9]) converted from scaled integer units (divided by 100)."
-    },
-
-    "image_snr": {
-      "type": "number",
-      "minimum": 0.0,
-      "description": "Detection significance of the XRT afterglow in sigma. Derived from det_signif (bin[21]) converted from centi-sigma units (divided by 100)."
+      "description": "X-ray energy flux of the afterglow measured by XRT, derived from the centroid intensity (bin[9], burst_inten). Units are mCrab. Null if not derivable."
     },
 
     "xrt_bat_distance": {
       "type": "number",
       "minimum": 0.0,
-      "description": "Angular distance between the XRT afterglow position and the BAT burst position in degrees. Derived from xrt-bat (bin[20]) converted from 0.0001-deg units (multiplied by 1e-4). Provides a consistency check between the XRT and BAT localizations."
+      "description": "Angular distance between the XRT centroid position and the BAT position in degrees. Used to assess consistency between the XRT and BAT localizations. Derived from grb_in_xrt_y (bin[20]) and grb_in_xrt_z (bin[21])."
     },
 
     "tam_values": {
       "type": "array",
       "items": {
         "type": "array",
-        "items": {
-          "type": "number"
-        },
+        "items": { "type": "number" },
         "minItems": 2,
         "maxItems": 2
       },
       "minItems": 2,
       "maxItems": 2,
-      "description": "Target Acquisition Monitor (TAM) pixel positions of two guide stars used in the XRT attitude solution, as a 2×2 array [[X_TAM_I1, Y_TAM_I1], [X_TAM_I2, Y_TAM_I2]] in centi-pixel units. Derived from X_TAM_I1 (bin[12]), Y_TAM_I1 (bin[13]), X_TAM_I2 (bin[14]), Y_TAM_I2 (bin[15]), each converted from centi-pixels (divided by 100)."
+      "description": "TAM (Target Acquisition Mirror) star tracker values as a 2×2 array of [x, y] pixel coordinates [[x1, y1], [x2, y2]]. Derived from cent_x (bin[12]), cent_y (bin[13]), iraw_x (bin[14]), iraw_y (bin[15])."
     },
 
     "readout_waveform": {
       "type": "integer",
-      "enum": [50, 60],
-      "description": "XRT CCD waveform ID used for the observation. Decoded from the lower byte of Amp_Wave (bin[17]). Valid values are 50 and 60."
+      "description": "XRT CCD waveform identifier number (typically 50 or 60). Decoded from the waveform sub-field packed in bin[17] (gain/mod/wav). Specifies the CCD clocking waveform used during the observation."
     },
 
     "readout_amplifier": {
       "type": "integer",
-      "description": "XRT CCD amplifier number used for the observation. Decoded from the upper byte of Amp_Wave (bin[17], value = AmpNum × 256 + WaveformNum)."
+      "enum": [1, 2, 4, 8, 16],
+      "description": "XRT CCD amplifier gain setting as a multiplicative factor. Decoded from the gain sub-field packed in bin[17] (gain/mod/wav)."
     },
 
     "possible_cosmic_ray": {
       "type": "boolean",
-      "description": "Indicates whether the XRT detection may be a cosmic ray rather than a real astrophysical source. Derived from soln_status bit 2^10 (possible_cosmic_ray): True if set, False if unset."
+      "description": "Indicates whether the XRT detection may be a cosmic ray rather than a genuine X-ray afterglow. Derived from misc bit 2^20 (cosmic_ray flag) in the XRT position packet."
     },
 
     "subtype": {
       "type": "string",
       "enum": ["FLIGHT_POSITION", "GROUND_POSITION"],
-      "description": "Indicates the processing origin of this XRT position notice. 'FLIGHT_POSITION' for the initial on-board flight-generated position (type=67, misc bit 2^30 = 0); 'GROUND_POSITION' for the ground-refined position (misc bit 2^30 = 1). Derived from misc bit 2^30 (ground_generated)."
+      "description": "Indicates whether this position was computed by the on-board XRT flight software ('FLIGHT_POSITION', type=67) or by ground reprocessing ('GROUND_POSITION'). Derived from misc bit 2^30: 0 = FLIGHT_POSITION, 1 = GROUND_POSITION."
     },
 
     "star_tracker_locked": {
       "type": "boolean",
-      "description": "Indicates whether the StarTracker was locked at the time of the XRT observation. True = locked; False = not locked (position may be unreliable). Derived from soln_status bit 2^11 (st_loss_lock) via lookup table."
+      "description": "Indicates whether the Swift StarTracker was locked at the time of the XRT position determination. True = locked (reliable attitude solution); False = not locked (position may be unreliable). Derived from soln_status bit 2^10 (st_loss_lock)."
     }
 
   },
 
   "required": [
-    "alert_datetime",
-    "alert_tense",
-    "alert_type",
-    "mission",
-    "instrument",
-    "id",
-    "observation_start",
-    "ra",
-    "dec",
-    "ra_dec_error",
-    "systematic_included",
     "energy_flux",
-    "image_snr",
     "xrt_bat_distance",
     "tam_values",
     "readout_waveform",

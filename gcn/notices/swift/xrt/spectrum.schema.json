@@ -2,84 +2,16 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/spectrum.schema.json",
   "title": "swift.xrt.spectrum",
-  "description": "GCN Notice schema for Swift XRT spectrum notices (packet types 68 and 77: SWIFT_XRT_SPEC and SWIFT_XRT_SPECTRUM_PROC). Both raw flight (type=68) and ground-processed (type=77) notices share an identical packet word layout. The subtype field distinguishes them: 'FLIGHT' for type=68 and 'GROUND' for type=77, derived from misc bit 2^30. The XRT boresight pointing direction (bin[7-8]) is stored in pointing_ra/pointing_dec. Observation start, stop, and livetime are derived from bin[5-6], bin[10-11], and bin[9] respectively.",
+  "description": "GCN Notice schema for Swift XRT spectrum notices (packet types 68 and 77: SWIFT_XRT_SPEC and SWIFT_XRT_SPEC_PROC). The XRT spectrum notice is issued when the XRT has accumulated sufficient data to generate a spectrum FITS file for the trigger. Type=68 is the raw flight notice; type=77 is the ground-processed notice. Both types share an identical packet word layout. bin[7-8] contain the XRT boresight RA/Dec (ra_pointing/dec_pointing); bin[5-6] the spectrum start time (observation_start); bin[9] the livetime (observation_livetime); bin[10-11] the spectrum stop time (observation_stop); bin[21] the termination condition code.",
   "type": "object",
   "allOf": [
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
   ],
   "properties": {
-
-    "alert_datetime": {
-      "type": "string",
-      "format": "date-time",
-      "description": "ISO 8601 datetime string indicating when this GCN notice was issued."
-    },
-
-    "alert_tense": {
-      "type": "string",
-      "enum": ["current", "test"],
-      "description": "Indicates whether this is a real current notice ('current') or a test submission ('test')."
-    },
-
-    "alert_type": {
-      "type": "string",
-      "enum": ["initial", "update"],
-      "description": "Indicates whether this is the initial XRT spectrum notice ('initial') for the trigger or an updated/reprocessed spectrum ('update'). Type=68 (raw flight) maps to 'initial'; type=77 (ground-processed) maps to 'update', indicated by misc bit 2^30."
-    },
-
-    "mission": {
-      "type": "string",
-      "const": "Swift",
-      "description": "Fixed string identifying the mission."
-    },
-
-    "instrument": {
-      "type": "string",
-      "const": "XRT",
-      "description": "Fixed string identifying the instrument."
-    },
-
-    "id": {
-      "type": "array",
-      "items": {
-        "type": "integer"
-      },
-      "description": "BAT trigger ID number that initiated this XRT follow-up observation. Derived from the lower 24 bits of trig_obs_num (bin[4])."
-    },
-
-    "pointing_ra": {
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 360.0,
-      "description": "Right Ascension of the XRT boresight (center of the XRT field of view) during the spectrum accumulation, in degrees (J2000 epoch). Derived from bore_ra (bin[7]) converted from 0.0001-deg units."
-    },
-
-    "pointing_dec": {
-      "type": "number",
-      "minimum": -90.0,
-      "maximum": 90.0,
-      "description": "Declination of the XRT boresight (center of the XRT field of view) during the spectrum accumulation, in degrees (J2000 epoch). Derived from bore_dec (bin[8]) converted from 0.0001-deg units."
-    },
-
-    "observation_start": {
-      "type": "string",
-      "format": "date-time",
-      "description": "ISO 8601 datetime string of the start of the first CCD integration in the spectrum accumulation. Derived from SpecStart_tjd (bin[5]) and SpecStart_sod (bin[6])."
-    },
-
-    "observation_stop": {
-      "type": "string",
-      "format": "date-time",
-      "description": "ISO 8601 datetime string of the end of the last CCD integration in the spectrum accumulation. Derived from SpecStopTJD (bin[10]) and SpecStopSOD (bin[11])."
-    },
-
-    "observation_livetime": {
-      "type": "number",
-      "minimum": 0.0,
-      "description": "Exposure time duration of the spectrum integration in seconds. Derived from LiveTime (bin[9]) converted from centi-seconds."
-    },
 
     "ccd_readout_mode": {
       "type": "string",
@@ -95,7 +27,23 @@
         "Bias map",
         "Stop"
       ],
-      "description": "XRT CCD operational readout mode at the time of the spectrum. Derived from the mode field (bin[12]). Integer values 1–10 map to the enum strings in order."
+      "description": "XRT CCD readout mode active during the spectrum integration. Decoded from the mode field (bin[12])."
+    },
+
+    "ccd_waveform_id": {
+      "type": "integer",
+      "description": "XRT CCD waveform identifier number (typically 50 or 60). Derived from the waveform field (bin[13]). Specifies the CCD clocking waveform used during the observation."
+    },
+
+    "amplifier_gain": {
+      "type": "integer",
+      "enum": [1, 2, 4, 8, 16],
+      "description": "XRT CCD amplifier gain setting as a multiplicative factor. Not directly available as a standalone field in the spectrum packet — derived from the gain sub-field packed in bin[12] (mode) or bin[13] (waveform) depending on implementation."
+    },
+
+    "bias": {
+      "type": "integer",
+      "description": "XRT CCD bias level in ADU (Analogue-to-Digital Units). Derived from the bias field (bin[14]). Used in CCD calibration to establish the baseline signal level."
     },
 
     "termination_condition": {
@@ -104,34 +52,20 @@
         "Normal",
         "Terminated by time",
         "Terminated by snapshot",
-        "Terminated by entering SAA",
-        "Spectrum generated at the LRPD-to-WT transition",
-        "Spectrum generated at the WT-to-LRorPC transition"
+        "Terminated by entering SAA"
       ],
-      "description": "Condition that caused the spectrum collection process to terminate. Derived from term_code (bin[21]). Values: 0='Normal', 1='Terminated by time', 2='Terminated by snapshot', 3='Terminated by entering SAA', 4='Spectrum generated at the LRPD-to-WT transition', 5='Spectrum generated at the WT-to-LRorPC transition'."
-    },
-
-    "ccd_waveform_id": {
-      "type": "integer",
-      "enum": [50, 60],
-      "description": "XRT CCD waveform identifier. Derived from the waveform field (bin[13]). Value is either 50 or 60."
-    },
-
-    "bias": {
-      "type": "integer",
-      "minimum": 0,
-      "description": "XRT CCD bias value in ADU (Analog-to-Digital Units). Derived from the bias field (bin[14]). Only meaningful for Low Rate Photodiode (LRPD) readout mode."
+      "description": "Condition that caused the XRT spectrum accumulation to terminate. Decoded from the term_code field (bin[21])."
     },
 
     "subtype": {
       "type": "string",
       "enum": ["FLIGHT", "GROUND"],
-      "description": "Indicates the origin of this spectrum notice. 'FLIGHT' for the raw flight-generated notice (type=68, misc bit 2^30 = 0); 'GROUND' for the ground-processed notice (type=77, misc bit 2^30 = 1)."
+      "description": "Indicates whether this notice was generated from raw flight telemetry ('FLIGHT', type=68) or from ground reprocessing ('GROUND', type=77). Derived from misc bit 2^30: 0 = FLIGHT, 1 = GROUND."
     },
 
     "watchdog_timeout": {
       "type": "boolean",
-      "description": "Indicates whether this XRT_SPECTRUM notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
+      "description": "Indicates whether this XRT spectrum notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
     },
 
     "spectrum_fits_file": {
@@ -144,21 +78,11 @@
   },
 
   "required": [
-    "alert_datetime",
-    "alert_tense",
-    "alert_type",
-    "mission",
-    "instrument",
-    "id",
-    "pointing_ra",
-    "pointing_dec",
-    "observation_start",
-    "observation_stop",
-    "observation_livetime",
     "ccd_readout_mode",
-    "termination_condition",
     "ccd_waveform_id",
+    "amplifier_gain",
     "bias",
+    "termination_condition",
     "subtype",
     "watchdog_timeout",
     "spectrum_fits_file"
