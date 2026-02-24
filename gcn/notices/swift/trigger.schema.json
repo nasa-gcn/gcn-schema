@@ -616,7 +616,7 @@
             }
           }
         }
-      }
+      },
       "$schema": true,
      "unevaluatedProperties": false
     }
