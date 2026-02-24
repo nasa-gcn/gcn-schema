@@ -2,185 +2,78 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gcn.nasa.gov/schema/main/swift/uvot/source_list.schema.json",
   "title": "swift.uvot.source_list",
-  "description": "GCN Notice schema for Swift UVOT source list notices (packet types 73 and 80: SWIFT_UVOT_SRCLIST and SWIFT_UVOT_SRCLIST_PROC). Covers both the raw flight source list (type=73, alert_type='initial') and the ground-processed source list (type=80, alert_type='update'). Both packet types share an identical word layout; the distinction is made via misc bit 2^30 (ground_generated). The bin[22-38] URL field points to the raw source list FITS file in type=73 packets and to the ground-processed source list FITS file in type=80 packets.",
+  "description": "GCN Notice schema for Swift UVOT source list notices (packet types 73 and 80: SWIFT_UVOT_SRCLIST and SWIFT_UVOT_SRCLIST_PROC). Type=73 is the raw flight notice; type=80 is the ground-processed notice. Both types share an identical packet word layout; they are distinguished by misc bit 2^30 and the pkt_type value in bin[0]. The bin[22–38] URL field points to the raw source list FITS file in type=73 packets and to the ground-processed source list FITS file in type=80 packets.",
   "type": "object",
   "allOf": [
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
   ],
   "properties": {
 
-    "alert_datetime": {
-      "type": "string",
-      "format": "date-time",
-      "description": "ISO 8601 datetime string indicating when this GCN notice was issued."
-    },
-
-    "alert_tense": {
-      "type": "string",
-      "enum": ["current", "test"],
-      "description": "Indicates whether this is a real current notice ('current') or a test submission ('test'). Derived from GCN metadata."
-    },
-
-    "alert_type": {
-      "type": "string",
-      "enum": ["initial", "update"],
-      "description": "Indicates whether this is the raw flight source list notice ('initial', type=73) or the ground-processed source list notice ('update', type=80). Derived from misc bit 2^30 (ground_generated): 0 = type=73 ('initial'), 1 = type=80 ('update')."
-    },
-
-    "mission": {
-      "type": "string",
-      "const": "Swift",
-      "description": "Fixed string identifying the mission."
-    },
-
-    "instrument": {
-      "type": "string",
-      "const": "UVOT",
-      "description": "Fixed string identifying the instrument."
-    },
-
-    "id": {
-      "type": "array",
-      "items": {
-        "type": "integer"
-      },
-      "description": "BAT trigger ID number. Derived from the lower 24 bits of trig_obs_num (bin[4]). Note: the trigger ID originates from BAT even for UVOT source list notices, as the initial trigger is always from BAT."
-    },
-
-    "ra_pointing": {
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 360.0,
-      "description": "Right Ascension of the spacecraft pointing direction at the start/stop of the source list integration interval, in degrees (J2000 epoch). Derived from point_ra (bin[7]) converted from 0.0001-deg units."
-    },
-
-    "dec_pointing": {
-      "type": "number",
-      "minimum": -90.0,
-      "maximum": 90.0,
-      "description": "Declination of the spacecraft pointing direction at the start/stop of the source list integration interval, in degrees (J2000 epoch). Derived from point_dec (bin[8]) converted from 0.0001-deg units."
-    },
-
-    "roll": {
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 360.0,
-      "description": "Roll angle of the target in degrees. Derived from image_roll (bin[9]) converted from 0.0001-deg units."
-    },
-
-    "observation_start": {
-      "type": "string",
-      "format": "date-time",
-      "description": "ISO 8601 datetime string of the start of the UVOT CCD exposure integration. Derived from expo_start_tjd (bin[5]) and expo_start_sod (bin[6])."
-    },
-
-    "filter": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "Blocked",
-          "UV_Grism",
-          "UVW2",
-          "V",
-          "UVM2",
-          "Vis_Grism",
-          "UVW1",
-          "U",
-          "Magnifier",
-          "B",
-          "White",
-          "unknown"
-        ]
-      },
-      "minItems": 1,
-      "maxItems": 1,
-      "description": "UVOT filter used for the source list exposure. Decoded from the filter integer (bin[10]) via lookup table. Possible values: Blocked=0, UV_Grism=1, UVW2=2, V=3, UVM2=4, Vis_Grism=5, UVW1=6, U=7, Magnifier=8, B=9, White=10, unknown=11."
-    },
-
     "background_mean": {
       "type": "number",
-      "minimum": 0.0,
-      "description": "Mean value of the background level in the exposure. Derived from bkg_mean (bin[11]) converted from units of 0.001 (multiplied by 1e-3)."
+      "description": "Mean value of the background level in the UVOT exposure. Derived from bkg_mean (bin[11]) converted from 0.001 units (value × 1e-3)."
     },
 
     "image_extent": {
       "type": "array",
-      "items": {
-        "type": "integer",
-        "minimum": 0,
-        "maximum": 2095
-      },
+      "items": { "type": "integer" },
       "minItems": 2,
       "maxItems": 2,
-      "description": "Maximum extent of the image window [x_max, y_max] in detector coordinates (range 0–2095). Derived from x_max (bin[12]) and y_max (bin[13])."
+      "description": "Maximum extent of the UVOT image window in detector coordinates [x_max, y_max] in pixels (range 0–2095). Derived from x_max (bin[12]) and y_max (bin[13])."
     },
 
     "image_offset": {
       "type": "array",
-      "items": {
-        "type": "integer",
-        "minimum": 0,
-        "maximum": 2095
-      },
+      "items": { "type": "integer" },
       "minItems": 2,
       "maxItems": 2,
-      "description": "Coordinates of the image window origin [x_offset, y_offset] in detector coordinates (range 0–2095). Derived from x_offset (bin[15]) and y_offset (bin[16])."
+      "description": "Coordinates of pixel_zero (origin) of the UVOT image subarray in detector coordinates [x_offset, y_offset] in pixels (range 0–2095). Derived from x_offset (bin[15]) and y_offset (bin[16])."
     },
 
     "n_stars": {
       "type": "integer",
       "minimum": 0,
-      "description": "Total number of stars (sources) found in the source list. Derived from n_stars (bin[14])."
+      "description": "Total number of stars (sources) found in the UVOT source list. Derived from n_stars (bin[14])."
     },
 
     "detection_threshold": {
       "type": "integer",
       "minimum": 0,
-      "description": "Detection threshold used in this exposure, in DN (digital number) units. Derived from det_thresh (bin[17])."
+      "description": "Detection threshold used in the UVOT source detection for this exposure, in digital number (DN) units. Derived from det_thresh (bin[17])."
     },
 
     "photometry_threshold": {
       "type": "integer",
       "minimum": 0,
-      "description": "Photometry threshold used in this exposure, in DN (digital number) units. Derived from photo_thresh (bin[18])."
+      "description": "Photometry threshold used in the UVOT source photometry for this exposure, in digital number (DN) units. Derived from photo_thresh (bin[18])."
     },
 
     "watchdog_timeout": {
       "type": "boolean",
-      "description": "Indicates whether this UVOT_SRCLIST notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
+      "description": "Indicates whether this UVOT source list notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
     },
 
     "raw_source_list_fits_file": {
       "type": ["string", "null"],
       "contentEncoding": "base64",
       "contentMediaType": "image/fits",
-      "description": "Base64-encoded content of the raw UVOT source list FITS file. Populated for the raw flight notice (type=73, misc bit 2^30 = 0) from the URL in bin[22–38]; null for the ground-processed notice (type=80, misc bit 2^30 = 1)."
+      "description": "Base64-encoded content of the raw UVOT source list FITS file. Populated from bin[22–38] URL string for the raw flight notice (type=73, misc bit 2^30 = 0); null for the ground-processed notice (type=80)."
     },
 
     "processed_source_list_fits_files": {
       "type": ["string", "null"],
       "contentEncoding": "base64",
       "contentMediaType": "image/fits",
-      "description": "Base64-encoded content of the ground-processed UVOT source list FITS file. Populated for the ground-processed notice (type=80, misc bit 2^30 = 1) from the URL in bin[22–38]; null for the raw flight notice (type=73, misc bit 2^30 = 0)."
+      "description": "Base64-encoded content of the ground-processed UVOT source list FITS file. Populated from bin[22–38] URL string for the ground-processed notice (type=80, misc bit 2^30 = 1); null for the raw flight notice (type=73)."
     }
 
   },
 
   "required": [
-    "alert_datetime",
-    "alert_tense",
-    "alert_type",
-    "mission",
-    "instrument",
-    "id",
-    "ra_pointing",
-    "dec_pointing",
-    "roll",
-    "observation_start",
-    "filter",
     "background_mean",
     "image_extent",
     "image_offset",
