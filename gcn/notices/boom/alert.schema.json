@@ -1,0 +1,114 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/boom/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Optical alerts",
+  "description": "Optical alert with crossmatch gcn events",
+  "allOf": [
+    {
+      "$ref": "../core/Alert.schema.json",
+      "description": "Date and time when the alert has been generated"
+    },
+    {
+      "$ref": "../core/Reporter.schema.json",
+      "description": "Mission"
+    }
+  ],
+  "properties": {
+    "$schema": true,
+    "data": {
+      "type": "object",
+      "description": "Data container for targets and photometry",
+      "$ref": "#/$defs/data"
+    }
+  },
+  "$defs": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "targets": {
+          "type": "array",
+          "description": "An array of alert that temporally crossmatch with GCN events",
+          "items": { "$ref": "#/$defs/target" }
+        },
+        "photometry": {
+          "type": "array",
+          "description": "An array of photometry points",
+          "items": { "$ref": "#/$defs/photometry" }
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "../core/Localization.schema.json",
+          "description": "Localization information for the target"
+        },
+        {
+          "$ref": "../core/Event.schema.json",
+          "description": "Event name"
+        }
+      ],
+      "properties": {
+        "classification_scores": {
+          "type": "object",
+          "additionalProperties": { "type": "number" },
+          "description": "Dictionary mapping classification labels to their scores"
+        },
+        "gcn_crossmatch": {
+          "type": "array",
+          "description": "Array of GCN event that crossmatch with this target",
+          "items": {
+            "$ref": "../core/FollowUp.schema.json",
+            "description": "GCN event properties"
+          }
+        }
+      }
+    },
+    "photometry": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "../core/Reporter.schema.json",
+          "description": "Instrument and filter information for the photometry point"
+        },
+        {
+          "$ref": "../core/Event.schema.json",
+          "description": "Event name"
+        },
+        {
+          "$ref": "../core/DateTime.schema.json",
+          "description": "Observation time information"
+        }
+      ],
+      "properties": {
+        "telescope": {
+          "type": "string",
+          "description": "Name of the telescope used to get the photometry point"
+        },
+        "brightness": {
+          "type": ["number", "null"],
+          "description": "Measured brightness of the target, rounded to two decimal places"
+        },
+        "brightness_error": {
+          "type": ["number", "null"],
+          "description": "Error in the measured brightness (1 sigma), rounded to two decimal places"
+        },
+        "brightness_unit": {
+          "type": "string",
+          "description": "Unit of brightness measurement"
+        },
+        "limiting_brightness": {
+          "type": ["number", "null"],
+          "description": "Limiting brightness of the observation, rounded to two decimal places"
+        },
+        "limiting_brightness_unit": {
+          "type": "string",
+          "description": "Unit of limiting brightness measurement"
+        }
+      }
+    }
+  }
+}
