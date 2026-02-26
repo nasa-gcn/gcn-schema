@@ -9,7 +9,8 @@
   "event_flux": 182.0,
   "event_flux_error": 28.0,
   "event_tscale": "10s",
-  "event_eband": [2.0, 4.0],
+  "spectral_band": [2.0, 4.0],
+  "spectral_band_units": "keV", 
   "latitude": 0.0,
   "longitude": 0.0,  
   "additional_info": "MAXI Unknown Source Position. GRB or unknown X-ray Transient."

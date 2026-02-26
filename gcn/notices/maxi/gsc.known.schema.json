@@ -31,13 +31,6 @@
       "type": "string",
       "description": "Detection time scale of the source"
     },
-    "source_eband": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Energy range for the source detection (in keV)"
-    },
     "source_name": {
       "type": "string",
       "description": "Source name"
