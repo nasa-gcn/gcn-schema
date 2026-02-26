@@ -1,0 +1,47 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.unknown.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "MAXI/GSC Unknown Source Position",
+  "description": "MAXI Unknown Source Position. GRB or unknown X-ray Transient.",
+
+  "allOf": [
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/AdditionalInfo.schema.json" }
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "rectangular_error_corners": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": { "type": "number" },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "Coordinates of the four corners of the rectangular error box. Each item is a [RA, Dec] pair in degrees"
+    },
+    "event_flux": {
+      "type": "number",
+      "description": "X-ray flux of the event in mCrab"
+    },
+    "event_flux_error": {
+      "type": "number",
+      "description": "Error of the X-ray flux of the event in mCrab"
+    },
+    "event_tscale": {
+      "type": "string",
+      "description": "Detection time scale of the event"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.known.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "MAXI/GSC Known Source Position",
+  "description": "MAXI Known Source detection.",
+
+  "allOf": [
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/AdditionalInfo.schema.json" }
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source_flux": {
+      "type": "number",
+      "description": "X-ray flux in the 2–20 keV band (in mCrab)."
+    },
+    "source_flux_error": {
+      "type": "number",
+      "description": "Error of the X-ray flux in the 2–20 keV band (in mCrab)."
+    },
+    "source_tscale": {
+      "type": "string",
+      "description": "Detection time scale of the source"
+    },
+    "source_name": {
+      "type": "string",
+      "description": "Source name"
+    },
+    "band_flux_low": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "X-ray fluxes of the source and the background in the 2–4 keV energy band, measured in mCrab."
+    },
+    "band_flux_med": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "X-ray fluxes of the source and the background in the 4–10 keV energy band, measured in mCrab."
+    },
+    "band_flux_high": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "X-ray fluxes of the source and the background in the 10–20 keV energy band, measured in mCrab."
+    }
+  }
+}
