@@ -1,0 +1,18 @@
+{
+    "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare/flare.schema.json",
+    "alert_datetime": "2025-11-21T00:00:00",
+    "mission": "Fermi",
+    "instrument": "LAT",
+    "event_name": ["OQ 334"],
+    "ra": 215.62657,
+    "dec": 32.38623,
+    "observation_start": "2025-11-20T00:00:00.0",
+    "observation_stop": "2025-11-21T00:00:00.0",
+    "photon_flux": 1.2e-6,
+    "photon_flux_error": 0.1e-6,
+    "index": 2.0, 
+    "index_error": 0.1,
+    "reference_catalog": "3FGL",
+    "flux_ratio": 20,
+    "TS": 45
+}
