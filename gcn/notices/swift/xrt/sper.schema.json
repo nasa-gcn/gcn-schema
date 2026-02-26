@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/sper.schema.json",
+  "title": "swift.xrt.sper",
+  "description": "GCN Notice schema for Swift XRT Single Pixel Event Rate (SPER) notices (packet types 87 and 88: SWIFT_XRT_SPER and SWIFT_XRT_SPER_PROC). Not available to the public — Swift team only. The SPER notice is issued when the XRT has accumulated a set of single-pixel events during a follow-up observation. Type=87 is the raw flight notice; type=88 is the ground-processed notice. NOTE: bin[12] has different meanings between the two types — num_pkt (number of packets in the integration) for type=87, and seq_num (serial number of this message, 1-3) for type=88.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+  ],
+  "properties": {
+
+    "number_packets": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "description": "Number of telemetry packets that went into compiling this SPER integration. Derived from num_pkt (bin[12]). Only valid for the raw flight notice (type=87); bin[12] contains the message serial number (seq_num, range 1-3) for the ground-processed notice (type=88), so this field is null for type=88."
+    },
+
+    "number_events": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of single-pixel events accumulated during the SPER integration interval. Derived from num_evt (bin[20])."
+    },
+
+    "watchdog_timeout": {
+      "type": "boolean",
+      "description": "Indicates whether this XRT SPER notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
+    },
+
+    "subtype": {
+      "type": "string",
+      "enum": ["FLIGHT", "GROUND"],
+      "description": "Indicates whether this notice was generated from raw flight telemetry ('FLIGHT', type=87) or from ground reprocessing ('GROUND', type=88). Derived from misc bit 2^30: 0 = FLIGHT, 1 = GROUND."
+    },
+
+    "sper_fits_file": {
+      "type": "string",
+      "contentEncoding": "base64",
+      "contentMediaType": "image/fits",
+      "description": "Base64-encoded content of the XRT SPER FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
+    }
+
+  },
+
+  "required": [
+    "number_packets",
+    "number_events",
+    "watchdog_timeout",
+    "subtype",
+    "sper_fits_file"
+  ],
+
+  "additionalProperties": false
+}

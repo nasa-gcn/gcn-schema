@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/position.schema.json",
+  "title": "swift.xrt.position",
+  "description": "GCN Notice schema for Swift XRT position notices (packet type 67: SWIFT_XRT_POS, and its ground-processed counterpart). The XRT position notice is issued when the XRT on-board centroiding software has calculated a position for the X-ray afterglow. Type=67 (raw flight, subtype='FLIGHT_POSITION') and the ground-processed form (subtype='GROUND_POSITION') share this schema. bin[5-6] contain the observation start time; bin[7-8] the burst RA/Dec (ra/dec); bin[11] the position error (ra_dec_error); bin[16] the roll angle; bin[17] the packed gain/mode/waveform; bin[18] the exposure time (observation_livetime); bin[20-21] the GRB position in XRT coordinates.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json" }
+  ],
+  "properties": {
+
+    "energy_flux": {
+      "type": ["number", "null"],
+      "minimum": 0.0,
+      "description": "X-ray energy flux of the afterglow measured by XRT, derived from the centroid intensity (bin[9], burst_inten). Units are mCrab. Null if not derivable."
+    },
+
+    "xrt_bat_distance": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Angular distance between the XRT centroid position and the BAT position in degrees. Used to assess consistency between the XRT and BAT localizations. Derived from grb_in_xrt_y (bin[20]) and grb_in_xrt_z (bin[21])."
+    },
+
+    "tam_values": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": { "type": "number" },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "TAM (Target Acquisition Mirror) star tracker values as a 2×2 array of [x, y] pixel coordinates [[x1, y1], [x2, y2]]. Derived from cent_x (bin[12]), cent_y (bin[13]), iraw_x (bin[14]), iraw_y (bin[15])."
+    },
+
+    "readout_waveform": {
+      "type": "integer",
+      "description": "XRT CCD waveform identifier number (typically 50 or 60). Decoded from the waveform sub-field packed in bin[17] (gain/mod/wav). Specifies the CCD clocking waveform used during the observation."
+    },
+
+    "readout_amplifier": {
+      "type": "integer",
+      "enum": [1, 2, 4, 8, 16],
+      "description": "XRT CCD amplifier gain setting as a multiplicative factor. Decoded from the gain sub-field packed in bin[17] (gain/mod/wav)."
+    },
+
+    "possible_cosmic_ray": {
+      "type": "boolean",
+      "description": "Indicates whether the XRT detection may be a cosmic ray rather than a genuine X-ray afterglow. Derived from misc bit 2^20 (cosmic_ray flag) in the XRT position packet."
+    },
+
+    "subtype": {
+      "type": "string",
+      "enum": ["FLIGHT_POSITION", "GROUND_POSITION"],
+      "description": "Indicates whether this position was computed by the on-board XRT flight software ('FLIGHT_POSITION', type=67) or by ground reprocessing ('GROUND_POSITION'). Derived from misc bit 2^30: 0 = FLIGHT_POSITION, 1 = GROUND_POSITION."
+    },
+
+    "star_tracker_locked": {
+      "type": "boolean",
+      "description": "Indicates whether the Swift StarTracker was locked at the time of the XRT position determination. True = locked (reliable attitude solution); False = not locked (position may be unreliable). Derived from soln_status bit 2^10 (st_loss_lock)."
+    }
+
+  },
+
+  "required": [
+    "energy_flux",
+    "xrt_bat_distance",
+    "tam_values",
+    "readout_waveform",
+    "readout_amplifier",
+    "possible_cosmic_ray",
+    "subtype",
+    "star_tracker_locked"
+  ],
+
+  "additionalProperties": false
+}

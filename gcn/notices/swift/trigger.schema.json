@@ -1,0 +1,624 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/trigger.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Swift/BAT Alert",
+  "description": "Swift BAT trigger parameters",
+  "type": "object",
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Pointing.schema.json" },
+    { "$ref": "../core/GeoLocBase.schema.json" },
+    { "$ref": "../core/AdditionalInfo.schema.json" }
+  ],
+  "properties": {
+      "swift_spacecraft": {
+        "type": "object",
+        "description": "Swift spacecraft-level information",
+        "required": ["trigger_number", "segment_number"],
+        "properties": {
+          "trigger_number": {
+            "type": "integer",
+            "description": "Swift trigger number (unique across all instruments)"
+          },
+          "segment_number": {
+            "type": "integer",
+            "description": "Segment number of this trigger (unique across all instruments)",
+            "default": 0
+          },
+          "catalog_match": {
+            "type": "object",
+            "description": "Information about catalog matches",
+            "properties": {
+              "onboard_match": {
+                "type": "boolean",
+                "description": "True if the source matches an entry in the on-board catalog"
+              },
+              "ground_match": {
+                "type": "boolean",
+                "description": "True if the source matches an entry in the ground catalog"
+              },
+              "matched_source": {
+                "type": "string",
+                "description": "Name of the matched catalog source, if any"
+              },
+              "match_distance": {
+                "type": "number",
+                "description": "Angular distance to the matched source [deg]"
+              }
+            }
+          },
+          "slew_decision": {
+            "type": "object",
+            "description": "Information about spacecraft slew decisions",
+            "properties": {
+              "will_slew": {
+                "type": "boolean",
+                "description": "True if spacecraft will slew to the target"
+              },
+              "slew_query": {
+                "type": "integer",
+                "description": "Slew query status code"
+              },
+              "wait_time": {
+                "type": "number",
+                "description": "Wait time before slew [sec]"
+              },
+              "observation_time": {
+                "type": "number",
+                "description": "Planned observation time [sec]"
+              },
+              "instrument_modes": {
+                "type": "object",
+                "description": "Instrument modes for observation",
+                "properties": {
+                  "bat": { "type": "integer" },
+                  "xrt": { "type": "integer" },
+                  "uvot": { "type": "integer" }
+                }
+              },
+              "slew_constraint": {
+                "type": "string",
+                "description": "Constraint preventing immediate slew, if any"
+              }
+            }
+          },
+          "fom_decision": {
+            "type": "object",
+            "description": "Figure of Merit (FOM) decision information",
+            "properties": {
+              "will_observe": {
+                "type": "boolean",
+                "description": "True if FOM will request spacecraft to slew and observe"
+              },
+              "merit": {
+                "type": "number",
+                "description": "Figure of merit value for this trigger"
+              },
+              "automated_target": {
+                "type": "boolean",
+                "description": "True if this became the new automated target"
+              }
+            }
+          },
+          "target_info": {
+            "type": "object",
+            "description": "Target information for planned observations",
+            "properties": {
+              "target_name": {
+                "type": "string",
+                "description": "Name of the target being observed"
+              },
+              "target_number": {
+                "type": "integer",
+                "description": "Target number in the observation sequence"
+              },
+              "merit": {
+                "type": "number",
+                "description": "Merit value for this target"
+              }
+            }
+          }
+        }
+      },
+      "swift_bat": {
+        "type": "object",
+        "description": "Swift BAT instrument information",
+        "properties": {
+          "trigger_type": {
+            "type": "string",
+            "enum": ["rate", "image", "unknown"],
+            "description": "Type of BAT trigger (rate or image)"
+          },
+          "position_status": {
+            "type": "string",
+            "enum": ["found", "not_found", "retracted"],
+            "description": "Status of the BAT position determination"
+          },
+          "is_grb": {
+            "type": "boolean",
+            "description": "True if the event is identified as a GRB"
+          },
+          "is_subthreshold": {
+            "type": "boolean",
+            "description": "True if this is a sub-threshold trigger",
+            "default": false
+          },
+          "instrument_coordinates": {
+            "type": "object",
+            "description": "Position in BAT instrument coordinates",
+            "properties": {
+              "phi": {
+                "type": "number",
+                "description": "BAT instrument phi angle [deg]"
+              },
+              "theta": {
+                "type": "number",
+                "description": "BAT instrument theta angle [deg]"
+              }
+            }
+          },
+          "intensity": {
+            "type": "object",
+            "description": "BAT intensity measurements",
+            "properties": {
+              "counts": {
+                "type": "number",
+                "description": "GRB counts"
+              },
+              "peak_rate": {
+                "type": "number",
+                "description": "Peak count rate [cnts/sec]"
+              },
+              "background_counts": {
+                "type": "number",
+                "description": "Background counts"
+              },
+              "background_duration": {
+                "type": "number",
+                "description": "Background measurement duration [sec]"
+              },
+              "background_time": {
+                "type": "string",
+                "description": "Time of background measurement [ISO 8601]"
+              },
+              "image_peak": {
+                "type": "number",
+                "description": "Image peak counts (for image triggers)"
+              }
+            }
+          },
+          "trigger_status": {
+            "type": "object",
+            "description": "BAT trigger status information",
+            "properties": {
+              "solution_status": {
+                "type": "integer",
+                "description": "BAT solution status code"
+              },
+              "flags": {
+                "type": "integer",
+                "description": "BAT status flags"
+              },
+              "merit": {
+                "type": "number",
+                "description": "BAT figure of merit for this trigger"
+              },
+              "merit_parameters": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "description": "BAT merit parameter values"
+              }
+            }
+          },
+          "trigger_criteria": {
+            "type": "object",
+            "description": "BAT trigger criteria information",
+            "properties": {
+              "trigger_index": {
+                "type": "integer",
+                "description": "BAT trigger index"
+              },
+              "trigger_duration": {
+                "type": "number",
+                "description": "Trigger duration [sec]"
+              },
+              "energy_range": {
+                "type": "array",
+                "items": { "type": "number" },
+                "minItems": 2,
+                "maxItems": 2,
+                "description": "Energy range used for trigger [keV]"
+              },
+              "criteria_description": {
+                "type": "string",
+                "description": "Description of the trigger criteria used"
+              }
+            }
+          },
+          "lightcurve": {
+            "type": "object",
+            "description": "BAT lightcurve information and data",
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "URL to access the BAT lightcurve data file"
+              },
+              "file": {
+                "type": "string",
+                "contentEncoding": "base64",
+                "contentMediaType": "application/octet-stream",
+                "description": "Base64 encoded content of the BAT lightcurve file"
+              },
+              "delta_time": {
+                "type": "number",
+                "description": "Time resolution of the lightcurve [sec]"
+              }
+            }
+          }
+        }
+      },
+      "swift_xrt": {
+        "type": "object",
+        "description": "Swift XRT instrument information",
+        "properties": {
+          "position_status": {
+            "type": "string",
+            "enum": ["found", "not_found", "retracted"],
+            "description": "Status of the XRT position determination"
+          },
+          "time_since_trigger": {
+            "type": "number",
+            "description": "Time since BAT trigger when XRT observation started [sec]"
+          },
+          "position": {
+            "type": "object",
+            "description": "XRT position determination information",
+            "properties": {
+              "intensity": {
+                "type": "number",
+                "description": "Source intensity [erg/cm2/sec]"
+              },
+              "significance": {
+                "type": "number",
+                "description": "Source significance [sigma]"
+              },
+              "tam_values": {
+                "type": "array",
+                "items": { "type": "number" },
+                "maxItems": 4,
+                "description": "XRT TAM values"
+              },
+              "amplifier": {
+                "type": "integer",
+                "description": "XRT amplifier setting"
+              },
+              "waveform": {
+                "type": "integer",
+                "description": "XRT waveform setting"
+              },
+              "mode": {
+                "type": "integer",
+                "description": "XRT readout mode"
+              },
+              "counts": {
+                "type": "integer",
+                "description": "Source counts detected"
+              },
+              "min_counts_needed": {
+                "type": "integer",
+                "description": "Minimum counts needed for detection"
+              },
+              "standard_deviation": {
+                "type": "number",
+                "description": "Standard deviation of the position fit"
+              },
+              "max_std_dev_allowed": {
+                "type": "number",
+                "description": "Maximum standard deviation allowed for good position"
+              },
+              "iterations": {
+                "type": "integer",
+                "description": "Number of iterations in position fitting"
+              },
+              "max_iterations": {
+                "type": "integer",
+                "description": "Maximum iterations allowed"
+              },
+              "error_code": {
+                "type": "integer",
+                "description": "XRT position error code"
+              }
+            }
+          },
+          "instrument_coordinates": {
+            "type": "object",
+            "description": "Position in XRT instrument coordinates",
+            "properties": {
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "x": { "type": "number", "description": "X centroid position" },
+                  "y": { "type": "number", "description": "Y centroid position" },
+                  "x_raw": { "type": "integer", "description": "Raw X pixel position" },
+                  "y_raw": { "type": "integer", "description": "Raw Y pixel position" }
+                }
+              },
+              "grb_position": {
+                "type": "object",
+                "properties": {
+                  "y": { "type": "number", "description": "GRB Y position in XRT coordinates" },
+                  "z": { "type": "number", "description": "GRB Z position in XRT coordinates" }
+                }
+              }
+            }
+          },
+          "image": {
+            "type": "object",
+            "description": "XRT image information and data",
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "URL to access the XRT image file"
+              },
+              "file": {
+                "type": "string",
+                "contentEncoding": "base64",
+                "contentMediaType": "image/fits",
+                "description": "Base64 encoded content of the XRT image FITS file"
+              },
+              "exposure_time": {
+                "type": "number",
+                "description": "Exposure time [sec]"
+              },
+              "mode": {
+                "type": "string",
+                "description": "XRT imaging mode"
+              },
+              "gain": {
+                "type": "integer",
+                "description": "XRT gain setting"
+              },
+              "roll": {
+                "type": "number",
+                "description": "Spacecraft roll angle [deg]"
+              }
+            }
+          },
+          "spectrum": {
+            "type": "object",
+            "description": "XRT spectrum information and data",
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "URL to access the XRT spectrum file"
+              },
+              "file": {
+                "type": "string",
+                "contentEncoding": "base64",
+                "contentMediaType": "application/octet-stream",
+                "description": "Base64 encoded content of the XRT spectrum file"
+              },
+              "livetime": {
+                "type": "number",
+                "description": "Spectrum accumulation livetime [sec]"
+              },
+              "start_time": {
+                "type": "string",
+                "description": "Spectrum start time [ISO 8601]"
+              },
+              "stop_time": {
+                "type": "string",
+                "description": "Spectrum stop time [ISO 8601]"
+              },
+              "mode": {
+                "type": "integer",
+                "description": "XRT spectrum mode"
+              },
+              "waveform": {
+                "type": "integer",
+                "description": "XRT waveform setting"
+              },
+              "bias": {
+                "type": "integer",
+                "description": "XRT bias setting"
+              },
+              "termination_condition": {
+                "type": "integer",
+                "description": "Spectrum termination condition code"
+              }
+            }
+          },
+          "lightcurve": {
+            "type": "object",
+            "description": "XRT lightcurve information and data",
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "URL to access the XRT lightcurve file"
+              },
+              "file": {
+                "type": "string",
+                "contentEncoding": "base64",
+                "contentMediaType": "application/octet-stream",
+                "description": "Base64 encoded content of the XRT lightcurve file"
+              },
+              "start_time": {
+                "type": "string",
+                "description": "Lightcurve start time [ISO 8601]"
+              },
+              "stop_time": {
+                "type": "string",
+                "description": "Lightcurve stop time [ISO 8601]"
+              },
+              "livetime": {
+                "type": "number",
+                "description": "Total livetime [sec]"
+              },
+              "livetime_fraction": {
+                "type": "number",
+                "description": "Fraction of livetime to total time"
+              },
+              "num_bins": {
+                "type": "integer",
+                "description": "Number of time bins in the lightcurve"
+              },
+              "termination_condition": {
+                "type": "integer",
+                "description": "Lightcurve termination condition code"
+              }
+            }
+          }
+        }
+      },
+      "swift_uvot": {
+        "type": "object",
+        "description": "Swift UVOT instrument information",
+        "properties": {
+          "position_status": {
+            "type": "string",
+            "enum": ["found", "not_found", "retracted"],
+            "description": "Status of the UVOT position determination"
+          },
+          "time_since_trigger": {
+            "type": "number",
+            "description": "Time since BAT trigger when UVOT observation started [sec]"
+          },
+          "position": {
+            "type": "object",
+            "description": "UVOT position determination information",
+            "properties": {
+              "magnitude": {
+                "type": "number",
+                "description": "Source magnitude"
+              },
+              "magnitude_error": {
+                "type": "number",
+                "description": "Source magnitude error"
+              },
+              "magnitude_limit": {
+                "type": "number",
+                "description": "Magnitude limit for non-detections"
+              },
+              "sigma_limit": {
+                "type": "number",
+                "description": "Sigma level for magnitude limit"
+              },
+              "filter": {
+                "type": "integer",
+                "description": "UVOT filter code"
+              },
+              "filter_name": {
+                "type": "string",
+                "description": "UVOT filter name",
+                "enum": ["White", "V", "B", "U", "UVW1", "UVM2", "UVW2"]
+              },
+              "search_radius": {
+                "type": "number",
+                "description": "Search radius used for detection [arcsec]"
+              },
+              "region_source": {
+                "type": "string",
+                "description": "Source of the search region (e.g., 'BAT location', 'XRT location')"
+              }
+            }
+          },
+          "instrument_coordinates": {
+            "type": "object",
+            "description": "Position in UVOT instrument coordinates",
+            "properties": {
+              "x_offset": {
+                "type": "integer",
+                "description": "X offset [pixels]"
+              },
+              "y_offset": {
+                "type": "integer",
+                "description": "Y offset [pixels]"
+              },
+              "x_max": {
+                "type": "integer",
+                "description": "X maximum coordinate [pixels]"
+              },
+              "y_max": {
+                "type": "integer",
+                "description": "Y maximum coordinate [pixels]"
+              },
+              "roll": {
+                "type": "number",
+                "description": "UVOT roll angle [deg]"
+              }
+            }
+          },
+          "source_list": {
+            "type": "object",
+            "description": "UVOT source list information and data",
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "URL to access the UVOT source list FITS file"
+              },
+              "file": {
+                "type": "string",
+                "contentEncoding": "base64",
+                "contentMediaType": "image/fits",
+                "description": "Base64 encoded content of the UVOT source list FITS file"
+              },
+              "num_sources": {
+                "type": "integer",
+                "description": "Number of sources in the list"
+              },
+              "filter": {
+                "type": "integer",
+                "description": "UVOT filter code used for source detection"
+              },
+              "filter_name": {
+                "type": "string",
+                "description": "UVOT filter name used for source detection"
+              }
+            }
+          },
+          "image": {
+            "type": "object",
+            "description": "UVOT image information and data",
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "URL to access the UVOT image FITS file"
+              },
+              "file": {
+                "type": "string",
+                "contentEncoding": "base64",
+                "contentMediaType": "image/fits",
+                "description": "Base64 encoded content of the UVOT image FITS file"
+              },
+              "start_time": {
+                "type": "string",
+                "description": "Image start time [ISO 8601]"
+              },
+              "filter": {
+                "type": "integer",
+                "description": "UVOT filter code used for the image"
+              },
+              "filter_name": {
+                "type": "string",
+                "description": "UVOT filter name used for the image"
+              },
+              "roll": {
+                "type": "number",
+                "description": "UVOT roll angle [deg]"
+              }
+            }
+          }
+        }
+      },
+      "$schema": true,
+     "unevaluatedProperties": false
+    }
+}
+
