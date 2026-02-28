@@ -1,0 +1,19 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/archive_alert.schema.json",
+  "mission": "HEASARC",
+  "alert_datetime": "2022-05-04T00:00:00Z",
+  "alert_tense": "archival",
+  "alert_type": "initial",
+  "observation_start": "2022-02-21T16:12:23.000",
+  "data_archive_page": "https://heasarc.gsfc.nasa.gov/FTP/xrism/data/obs/0/000105000/",
+  "data_archive_s3": "https://nasa-heasarc.s3.amazonaws.com/xrism/data/obs/0/000105000/",
+  "obs_id": "000105000",
+  "target_name": "1E0102.2-7219",
+  "s_ra": "16.0064",
+  "s_dec": "-72.033174",
+  "t_min": "60249.57713",
+  "t_max": "60251.64657",
+  "mission_page": "https://heasarc.gsfc.nasa.gov/docs/xrism/",
+  "facility_name": "XRISM",
+  "instrument_name": "XRISM"
+}
