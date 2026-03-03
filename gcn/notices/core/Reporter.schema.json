@@ -33,11 +33,6 @@
       "enum": ["keV", "nm", "MHz"],
       "description": "Units for the spectral data; default unit is keV",
       "default": "keV"
-    },
-    "filter": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Optional filter name, as used in optical observations"
     }
   }
 }

@@ -1,0 +1,40 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Photometry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Photometry: Magnitude Schema",
+  "description": "Magnitude-based UV/optical/NIR photometry for an astronomical source in a specified filter, consistent with optical survey reporting practices.",
+  "type": "object",
+  "properties": {
+    "filter": {
+      "type": "string",
+      "description": "Filter used for the observation (e.g., u, g, r, or instrument-specific)."
+    },
+
+    "mag": {
+      "type": "number",
+      "description": "Measured apparent magnitude [mag] of the source in the specified filter."
+    },
+
+    "mag_error": {
+      "type": "number",
+      "description": "1-sigma statistical uncertainty on magnitude [mag]."
+    },
+
+    "mag_system": {
+      "type": "string",
+      "default": "AB",
+      "description": "Photometric magnitude system (zeropoint convention) for mag and limiting_mag. Default is 'AB'."
+    },
+
+    "limiting_mag": {
+      "type": "number",
+      "description": "Limiting magnitude (upper limit) for the observation [mag]."
+    },
+
+    "limiting_mag_sigma": {
+      "type": "number",
+      "default": 5,
+      "description": "Significance level [sigma] associated with limiting_mag. Default is 5 (5-sigma upper limit)."
+    }
+  }
+}
