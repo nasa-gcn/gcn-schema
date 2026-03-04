@@ -28,7 +28,7 @@
 
     "limiting_mag": {
       "type": "number",
-      "description": "Limiting magnitude (upper limit) for the observation [mag]."
+      "description": "Limiting magnitude (upper limit) for the observation [mag] in the specified filter."
     },
 
     "limiting_mag_sigma": {
