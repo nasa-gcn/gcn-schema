@@ -9,28 +9,23 @@
       "type": "string",
       "description": "Filter used for the observation (e.g., u, g, r, or instrument-specific)."
     },
-
     "mag": {
       "type": "number",
       "description": "Measured apparent magnitude [mag] of the source in the specified filter."
     },
-
     "mag_error": {
       "type": "number",
       "description": "1-sigma statistical uncertainty on magnitude [mag]."
     },
-
     "mag_system": {
       "type": "string",
       "default": "AB",
       "description": "Photometric magnitude system (zeropoint convention) for mag and limiting_mag. Default is 'AB'."
     },
-
     "limiting_mag": {
       "type": "number",
       "description": "Limiting magnitude (upper limit) for the observation [mag] in the specified filter."
     },
-
     "limiting_mag_sigma": {
       "type": "number",
       "default": 5,
