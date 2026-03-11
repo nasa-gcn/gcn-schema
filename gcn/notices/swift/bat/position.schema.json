@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/swift/bat/position.schema.json",
+  "title": "swift.bat.position",
+  "description": "GCN Notice schema for Swift BAT GRB position notices (packet types 61 and 97: SWIFT_BAT_GRB_POS_ACK and SWIFT_BAT_QUICKLOOK_POSITION).",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/GeoLocBase.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json" }
+  ],
+  "properties": {
+
+    "trigger_index": {
+      "type": "integer",
+      "description": "Row number in the BAT on-board flight software trigger table corresponding to the highest-significance successful trigger criterion. Derived from trig_index (bin[17])."
+    },
+
+    "background_start_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 datetime string of the start of the BAT background interval. Derived from burst_tjd (bin[5]) combined with bkg_start (bin[23]). May be zero/epoch if no background interval is defined for this trigger criterion."
+    },
+
+    "background_duration": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Duration of the BAT background interval in seconds. Derived from bkg_dur (bin[24]) converted from centi-seconds (value × 1e-2)."
+    },
+
+    "catalog_number": {
+      "type": ["integer", "null"],
+      "description": "On-board catalog match ID number for the source. Only valid when soln_status bit 2^3 (flt_cat_src) is set, indicating the source matched a known source in the on-board catalog; null otherwise. Derived from cat_num (bin[25])."
+    },
+
+    "within_10arcmin": {
+      "type": "boolean",
+      "description": "Indicates whether the BAT position is within 10 arcmin of a source in the catalog of sources to be blocked from automatic follow-up — i.e. Swift was already pointed at this source at the time of the trigger. Derived from misc bit 2^12."
+    },
+
+    "star_tracker_locked": {
+      "type": "boolean",
+      "description": "Indicates whether the StarTracker was locked at the time of the BAT trigger. True = locked; False = not locked (trigger is probably bogus). Derived from soln_status bit 2^10 (st_loss_lock) via lookup table."
+    },
+
+    "watchdog_timeout": {
+      "type": ["boolean", "null"],
+      "description": "Not assigned in the BAT_GRB_POS_ACK (type=61/97) packet; set to null. Present in related packet types (e.g. BAT_GRB_LC type=63) where misc bit 2^29 indicates the notice was forced out early via the watchdog timeout mechanism."
+    }
+
+  },
+
+  "required": [
+    "trigger_index",
+    "background_start_time",
+    "background_duration",
+    "catalog_number",
+    "within_10arcmin",
+    "star_tracker_locked",
+    "watchdog_timeout"
+  ],
+
+  "additionalProperties": false
+}

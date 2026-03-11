@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/swift/uvot/image.schema.json",
+  "title": "swift.uvot.image",
+  "description": "GCN Notice schema for Swift UVOT image notices (packet types 72 and 79: SWIFT_UVOT_IMAGE and SWIFT_UVOT_IMAGE_PROC, aka DarkBurst, aka Genie). Type=72 is the raw flight notice; type=79 is the ground-processed notice. Both types share an identical packet word layout; they are distinguished by misc bit 2^30 and the pkt_type value in bin[0].",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+  ],
+  "properties": {
+
+    "exposure_id": {
+      "type": "integer",
+      "description": "UVOT exposure ID expressed in spacecraft seconds. Derived from expo_id (bin[11])."
+    },
+
+    "image_extent": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Maximum extent of the UVOT image window in detector coordinates [width, height] in pixels (range 0–2095). Derived from width (bin[14]) and height (bin[15])."
+    },
+
+    "image_offset": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Coordinates of pixel_zero (origin) of the UVOT image subarray in detector coordinates [X0, Y0] in pixels (range 0–2095). Derived from X0 (bin[12]) and Y0 (bin[13])."
+    },
+
+    "n_frames": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Total number of read-out frames that went into compiling this UVOT image. Derived from n_frames (bin[17])."
+    },
+
+    "pixel_binning": {
+      "type": "string",
+      "enum": ["1x1", "2x2", "4x4", "8x8", "16x16", "32x32", "64x64"],
+      "description": "Pixel binning of the UVOT image. Decoded from misc bits 2^0–2^3 (4-bit value) via lookup: 0=1x1 (no binning), 1=2x2, 2=4x4, 3=8x8, 4=16x16, 5=32x32, 6=64x64."
+    },
+
+    "grb_position_source": {
+      "type": "string",
+      "enum": ["XRT", "Window"],
+      "description": "Source of the GRB position stored in xy_grb (bin[16]). Derived from misc bit 2^28: 1 = position came from an XRT Position command ('XRT'); 0 = position came from the Window Position in the Mode command ('Window')."
+    },
+
+    "watchdog_timeout": {
+      "type": "boolean",
+      "description": "Indicates whether this UVOT image notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
+    },
+
+    "raw_image_fits_file": {
+      "type": ["string", "null"],
+      "contentEncoding": "base64",
+      "contentMediaType": "image/fits",
+      "description": "Base64-encoded content of the raw UVOT image FITS file. Populated from bin[22–38] URL string for the raw flight notice (type=72, misc bit 2^30 = 0); null for the ground-processed notice (type=79)."
+    },
+
+    "processed_image_fits_file": {
+      "type": ["string", "null"],
+      "contentEncoding": "base64",
+      "contentMediaType": "image/fits",
+      "description": "Base64-encoded content of the ground-processed UVOT image FITS file. Populated from bin[22–38] URL string for the ground-processed notice (type=79, misc bit 2^30 = 1); null for the raw flight notice (type=72)."
+    }
+
+  },
+
+  "required": [
+    "exposure_id",
+    "image_extent",
+    "image_offset",
+    "n_frames",
+    "pixel_binning",
+    "grb_position_source",
+    "watchdog_timeout",
+    "raw_image_fits_file",
+    "processed_image_fits_file"
+  ],
+
+  "additionalProperties": false
+}
