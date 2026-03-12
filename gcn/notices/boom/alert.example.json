@@ -82,6 +82,17 @@
         "mag_error": 0.09,
         "mag_system": "AB",
         "limiting_mag": 20.39
+      },
+      {
+        "event_name": "ZTF25acffkdr",
+        "observation_start": "2025-11-30T10:28:56.997Z",
+        "telescope": "Palomar 1.2m Oschin",
+        "instrument": "ZTF",
+        "filter": "ztfr",
+        "mag": 17.98,
+        "mag_error": 0.05,
+        "mag_system": "AB",
+        "limiting_mag": 19.49
       }
     ]
   }
