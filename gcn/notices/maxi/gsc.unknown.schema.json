@@ -4,7 +4,7 @@
   "type": "object",
   "unevaluatedProperties": false,
   "title": "MAXI/GSC Unknown Source Position",
-  "description": "MAXI Unknown Source Position. GRB or unknown X-ray Transient.",
+  "description": "MAXI/GSC unknown-source detection notice for a GRB or other unknown X-ray transient.",
 
   "allOf": [
     { "$ref": "../core/DateTime.schema.json" },
@@ -14,11 +14,14 @@
     { "$ref": "../core/Statistics.schema.json" },
     { "$ref": "../core/AdditionalInfo.schema.json" }
   ],
+
   "properties": {
+
     "$schema": {
       "type": "string",
       "format": "uri"
     },
+
     "rectangular_error_corners": {
       "type": "array",
       "items": {
@@ -29,19 +32,30 @@
       },
       "minItems": 4,
       "maxItems": 4,
-      "description": "Coordinates of the four corners of the rectangular error box. Each item is a [RA, Dec] pair in degrees"
+      "description": "Coordinates of the four corners of the rectangular error box. Each element is a [RA, Dec] pair in degrees in J2000 equatorial coordinates. RA is in the range [0, 360)."
     },
+
     "event_flux": {
       "type": "number",
-      "description": "X-ray flux of the event in mCrab"
+      "description": "X-ray flux of the event in the energy band specified by spectral_band and spectral_band_units [erg/cm^2/s]."
     },
+
     "event_flux_error": {
       "type": "number",
-      "description": "Error of the X-ray flux of the event in mCrab"
+      "description": "1-sigma statistical uncertainty on event_flux [erg/cm^2/s]."
     },
+
     "event_tscale": {
+      "type": "number",
+      "description": "Detection time scale of the event; unit specified by event_tunits."
+    },
+
+    "event_tunits": {
       "type": "string",
-      "description": "Detection time scale of the event"
+      "enum": ["s", "orbit", "d"],
+      "description": "Unit of event_tscale: s (seconds), orbit (one ISS orbit), or d (days).",
+      "default": "s"
     }
+
   }
 }

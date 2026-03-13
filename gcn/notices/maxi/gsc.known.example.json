@@ -1,19 +1,21 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.known.schema.json",
   "instrument": "GSC",
-  "trigger_time": "2025-07-02T14:35:59.00Z",
+  "trigger_time": "2025-07-02T14:35:59Z",
   "id": "858800020",
   "ra": 285.6,
   "dec": -9.2,
-  "source_flux": 17.0,
-  "source_tscale": "1s",
+  "source_flux": 2.00e-10,
+  "source_flux_error": 1.77e-10,
+  "source_tscale": 1,
+  "source_tunits": "s",
   "spectral_band": [4.0, 10.0],
   "spectral_band_units": "keV",
   "source_name": "Swift J1858.6-0814",
-  "band_flux_low": [45.0, 14.0],
-  "band_flux_med": [17.0, 15.0],
-  "band_flux_high": [82.0, 27.0],
+  "band_flux_low": [4.17e-10, 1.30e-10],
+  "band_flux_med": [2.00e-10, 1.77e-10],
+  "band_flux_high": [6.77e-10, 2.23e-10],
   "latitude": 0.0,
   "longitude": 0.0,
-  "additional_info": "MAXI Known Source detection."
+  "additional_info": "MAXI/GSC known-source detection notice."
 }

@@ -5,14 +5,6 @@
     "id": "9995289617",
     "ra": 346.56,
     "dec": 18.61,
-    "rectangular_error_corners": [
-	[345.72, 19.547],
-	[345.464, 19.29],
-	[347.309, 17.634],
-	[347.566, 17.889]
-    ],
-    "containment_probability": 0.90,
-    "systematic_included": false,
     "event_flux": 1.69e-09,
     "event_flux_error": 2.60e-10,
     "event_tscale": 10,
