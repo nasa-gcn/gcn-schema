@@ -32,7 +32,7 @@
       },
       "minItems": 4,
       "maxItems": 4,
-      "description": "Coordinates of the four corners of the rectangular error box. Each element is a [RA, Dec] pair in degrees in J2000 equatorial coordinates. RA is in the range [0, 360)."
+      "description": "Coordinates of the four corners of the rectangular error box. Each element is a [RA, Dec] pair in degrees in J2000 equatorial coordinates. RA is in the range [0, 360]."
     },
 
     "event_flux": {
