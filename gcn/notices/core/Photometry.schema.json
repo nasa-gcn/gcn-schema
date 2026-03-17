@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Photometry.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v6.3.0/gcn/notices/core/Photometry.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Photometry: Magnitude Schema",
   "description": "Magnitude-based UV/optical/NIR photometry for an astronomical source in a specified filter, consistent with optical survey reporting practices.",
