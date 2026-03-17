@@ -1,9 +1,9 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v6.3.0/gcn/notices/core/spectral/models/Band.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/models/CutOffPowerLaw.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Band",
-  "description": "Spectral model Band smoothly broken powerlaw (Band et al. 1993)",
+  "title": "CutOffPowerLaw",
+  "description": "Spectral model known as comptonized or powerlaw with exponential cutoff amplitude*energy^{-alpha}*exp(-energy/beta)",
   "properties": {
     "amplitude": {
       "type": "number",
@@ -13,7 +13,11 @@
       "type": "number",
       "description": "1-sigma uncertainty of amplitude [ph/cm2/s/keV]"
     },
-    "pivot_energy": { "type": "number", "description": "pivot energy [keV]" },
+    "pivot_energy": {
+      "type": "number",
+      "description": "pivot energy [keV]",
+      "default": 1
+    },
     "alpha": {
       "type": "number",
       "description": "power-law index of spectral model"
@@ -29,14 +33,6 @@
     "epeak_error": {
       "type": "number",
       "description": "1-sigma uncertainty of Epeak [keV]"
-    },
-    "beta": {
-      "type": "number",
-      "description": "high-energy power-law index of Band parameterization"
-    },
-    "beta_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of beta"
     }
   }
 }
