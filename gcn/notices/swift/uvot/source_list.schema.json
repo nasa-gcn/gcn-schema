@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/swift/uvot/source_list.schema.json",
+  "title": "swift.uvot.source_list",
+  "description": "GCN Notice schema for Swift UVOT source list notices (packet types 73 and 80: SWIFT_UVOT_SRCLIST and SWIFT_UVOT_SRCLIST_PROC). Type=73 is the raw flight notice; type=80 is the ground-processed notice. Both types share an identical packet word layout; they are distinguished by misc bit 2^30 and the pkt_type value in bin[0]. The bin[22–38] URL field points to the raw source list FITS file in type=73 packets and to the ground-processed source list FITS file in type=80 packets.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+  ],
+  "properties": {
+
+    "background_mean": {
+      "type": "number",
+      "description": "Mean value of the background level in the UVOT exposure. Derived from bkg_mean (bin[11]) converted from 0.001 units (value × 1e-3)."
+    },
+
+    "image_extent": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Maximum extent of the UVOT image window in detector coordinates [x_max, y_max] in pixels (range 0–2095). Derived from x_max (bin[12]) and y_max (bin[13])."
+    },
+
+    "image_offset": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Coordinates of pixel_zero (origin) of the UVOT image subarray in detector coordinates [x_offset, y_offset] in pixels (range 0–2095). Derived from x_offset (bin[15]) and y_offset (bin[16])."
+    },
+
+    "n_stars": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of stars (sources) found in the UVOT source list. Derived from n_stars (bin[14])."
+    },
+
+    "detection_threshold": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Detection threshold used in the UVOT source detection for this exposure, in digital number (DN) units. Derived from det_thresh (bin[17])."
+    },
+
+    "photometry_threshold": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Photometry threshold used in the UVOT source photometry for this exposure, in digital number (DN) units. Derived from photo_thresh (bin[18])."
+    },
+
+    "watchdog_timeout": {
+      "type": "boolean",
+      "description": "Indicates whether this UVOT source list notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
+    },
+
+    "raw_source_list_fits_file": {
+      "type": ["string", "null"],
+      "contentEncoding": "base64",
+      "contentMediaType": "image/fits",
+      "description": "Base64-encoded content of the raw UVOT source list FITS file. Populated from bin[22–38] URL string for the raw flight notice (type=73, misc bit 2^30 = 0); null for the ground-processed notice (type=80)."
+    },
+
+    "processed_source_list_fits_files": {
+      "type": ["string", "null"],
+      "contentEncoding": "base64",
+      "contentMediaType": "image/fits",
+      "description": "Base64-encoded content of the ground-processed UVOT source list FITS file. Populated from bin[22–38] URL string for the ground-processed notice (type=80, misc bit 2^30 = 1); null for the raw flight notice (type=73)."
+    }
+
+  },
+
+  "required": [
+    "background_mean",
+    "image_extent",
+    "image_offset",
+    "n_stars",
+    "detection_threshold",
+    "photometry_threshold",
+    "watchdog_timeout",
+    "raw_source_list_fits_file",
+    "processed_source_list_fits_files"
+  ],
+
+  "additionalProperties": false
+}

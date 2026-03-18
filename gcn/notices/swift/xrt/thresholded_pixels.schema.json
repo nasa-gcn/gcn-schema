@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/thresholded_pixels.schema.json",
+  "title": "swift.xrt.thresholded_pixels",
+  "description": "GCN Notice schema for Swift XRT thresholded pixels notices (packet types 85 and 86: SWIFT_XRT_THRESHPIX and SWIFT_XRT_THRESHPIX_PROC). Not available to the public — Swift team only. The thresholded pixels notice is issued when the XRT ground software has identified pixels above a threshold in the XRT CCD image. Type=85 is the raw flight notice; type=86 is the ground-processed notice.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+  ],
+  "properties": {
+
+    "watchdog_timeout": {
+      "type": "boolean",
+      "description": "Indicates whether this XRT thresholded pixels notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
+    },
+
+    "subtype": {
+      "type": "string",
+      "enum": ["FLIGHT", "GROUND"],
+      "description": "Indicates whether this notice was generated from raw flight telemetry ('FLIGHT', type=85) or from ground reprocessing ('GROUND', type=86). Derived from misc bit 2^30: 0 = FLIGHT, 1 = GROUND."
+    }
+
+  },
+
+  "required": [
+    "watchdog_timeout",
+    "subtype"
+  ],
+
+  "additionalProperties": false
+}
