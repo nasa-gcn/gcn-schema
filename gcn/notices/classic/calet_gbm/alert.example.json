@@ -1,0 +1,22 @@
+{
+  "alert_datetime": "2023-6-02T07:25:13Z",
+  "id": [1369725886],
+  "trigger_time": "2023-06-02T07:24:48.30Z",
+  "ra": 115.61,
+  "dec": 50.53,
+  "lightcurve_url": "http://cgbm.calet.jp/cgbm_trigger/flight//1369725886/index.html",
+  "rate_snr": 8.4,
+  "foreground_duration": 4.0,
+  "background_duration": 16.0,
+  "additional_info": "CALET-GBM Flight Lightcurve.  \nThe LC_URL file will not be created until ~15 min after the trigger.",
+  "record_number": 1,
+  "alert_type": "initial",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/calet_gbm/alert.schema.json",
+  "mission": "CALET",
+  "instrument": "GBM",
+  "trigger_type": "rate",
+  "longitude": 114.33,
+  "latitude": 50.47,
+  "rate_energy_range": [40, 230],
+  "detector_status": { "HXM1": "on", "HXM2": "on", "SGM": "triggered" }
+}
