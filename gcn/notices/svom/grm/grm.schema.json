@@ -1,0 +1,27 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/svom/grm/grm.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "SVOM GRM alerts",
+  "description": "GRM detection information of a GRB or other X-Ray transient",
+  "allOf": [
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" },
+    { "$ref": "../../core/Pointing.schema.json" },
+    { "$ref": "../../core/AdditionalInfo.schema.json" }
+  ],
+  "properties": {
+    "detector_status": {
+      "type": "object",
+      "properties": {
+        "GRD1": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "GRD2": { "$ref": "../../core/DetectorStatus.schema.json" },
+        "GRD3": { "$ref": "../../core/DetectorStatus.schema.json" }
+      }
+    }
+  }
+}
