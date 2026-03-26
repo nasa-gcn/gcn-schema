@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/lightcurve.schema.json",
+  "title": "swift.xrt.lightcurve",
+  "description": "GCN Notice schema for Swift XRT lightcurve notices (packet type 70: SWIFT_XRT_LC). The XRT lightcurve notice is issued when the XRT has accumulated sufficient data to generate a lightcurve FITS file for the trigger. bin[5-6] contain the lightcurve start time (observation_start); bin[7-8] the XRT boresight RA/Dec (ra_pointing/dec_pointing); bin[9] the livetime (observation_livetime); bin[10-11] the lightcurve stop time (observation_stop); bin[20] the number of valid bins (collected_bins); bin[21] the termination condition code (termination_condition). NOTE: misc bits 2^29 and 2^30 are not assigned in this packet type — there is no watchdog_timeout or subtype field.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+  ],
+  "properties": {
+
+    "collected_bins": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Number of valid bins accumulated in the XRT lightcurve. Range is 0–100. Derived from n_bins (bin[20]). A value of 100 indicates a normally completed lightcurve; lower values indicate early termination."
+    },
+
+    "termination_condition": {
+      "type": "string",
+      "enum": [
+        "Normal",
+        "Terminated by time",
+        "Terminated by snapshot",
+        "Terminated by entering SAA"
+      ],
+      "description": "Condition that caused the XRT lightcurve accumulation to terminate. Decoded from term_cond (bin[21]): 0 = Normal (100 bins collected), 1 = Terminated by time (1-99 bins), 2 = Terminated by snapshot (1-99 bins), 3 = Terminated by entering SAA (1-99 bins)."
+    },
+
+    "lightcurve_fits_file": {
+      "type": "string",
+      "contentEncoding": "base64",
+      "contentMediaType": "image/fits",
+      "description": "Base64-encoded content of the XRT lightcurve FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
+    }
+
+  },
+
+  "required": [
+    "collected_bins",
+    "termination_condition",
+    "lightcurve_fits_file"
+  ],
+
+  "additionalProperties": false
+}
