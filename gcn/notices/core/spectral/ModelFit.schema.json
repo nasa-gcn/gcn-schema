@@ -1,0 +1,27 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/ModelFit.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "spectral.model_fit",
+  "description": "Describes the spectral model fit for a transient source, including best fit model and associated parameters.",
+  "properties": {
+    "best_fit_model": {
+      "type": "string",
+      "enum": ["POWERLAW", "CUTOFFPOWERLAW", "BAND"],
+      "description": "Name of model corresponding to best statistical fit of spectrum"
+    },
+    "power_law": {
+      "$ref": "./models/PowerLaw.schema.json",
+      "description": "Fit parameters for PowerLaw model"
+    },
+    "cutoff_power_law": {
+      "$ref": "./models/CutOffPowerLaw.schema.json",
+      "description": "Fit parameters for Cutoff PowerLaw model"
+    },
+    "band": {
+      "$ref": "./models/Band.schema.json",
+      "description": "Fit parameters for Band model"
+    }
+  },
+  "required": ["best_fit_model"]
+}
