@@ -10,10 +10,7 @@
       "$ref": "../core/Alert.schema.json",
       "description": "Date and time when the alert has been generated"
     },
-    {
-      "$ref": "../core/Reporter.schema.json",
-      "description": "Mission"
-    }
+    { "$ref": "../core/Reporter.schema.json", "description": "Mission" }
   ],
   "properties": {
     "$schema": true,
@@ -46,10 +43,7 @@
           "$ref": "../core/Localization.schema.json",
           "description": "Localization information for the target"
         },
-        {
-          "$ref": "../core/Event.schema.json",
-          "description": "Event name"
-        }
+        { "$ref": "../core/Event.schema.json", "description": "Event name" }
       ],
       "properties": {
         "classification_scores": {
@@ -78,10 +72,7 @@
           "$ref": "../core/Photometry.schema.json",
           "description": "Photometry information for the photometry point"
         },
-        {
-          "$ref": "../core/Event.schema.json",
-          "description": "Event name"
-        },
+        { "$ref": "../core/Event.schema.json", "description": "Event name" },
         {
           "$ref": "../core/DateTime.schema.json",
           "description": "Observation time information"
