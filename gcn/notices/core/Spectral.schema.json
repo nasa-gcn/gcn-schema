@@ -2,10 +2,11 @@
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Spectral.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "spectral.GammaRay",
-  "description": "Spectral properties from gamma-ray data",
+  "title": "Spectral properties",
+  "description": "Spectral properties derived from gamma-ray, X-ray data",
   "properties": {
     "best_fit_model": {
+      "type": "string",
       "enum": ["POWERLAW", "CUTOFFPOWERLAW", "BAND"],
       "description": "Name of model corresponding to best statistical fit of spectrum"
     },
@@ -21,25 +22,40 @@
       "$ref": "models/Band.schema.json",
       "description": "Fit parameters for Band model"
     },
-    "photon_flux": {
+    "flux": {
       "type": "number",
-      "description": "Photon Flux [ph/cm2/s]"
+      "description": "Flux in the specified flux_unit"
     },
-    "photon_flux_error": {
+    "flux_error": {
       "type": "number",
-      "description": "1-sigma uncertainty in Photon Flux [ph/cm2/s]"
+      "description": "1-sigma uncertainty in flux"
+    },
+    "flux_unit": {
+      "type": "string",
+      "enum": ["ph/cm2/s", "erg/cm2/s"],
+      "default": "erg/cm2/s",
+      "description": "Units for the measured flux, default unit is [erg/cm2/s]"
+    },
+    "limiting_flux": {
+      "type": "number",
+      "description": "Limiting flux (upper limit) in flux_density_unit"
+    },
+    "limiting_flux_sigma": {
+      "type": "number",
+      "default": 5,
+      "description": "Significance level [sigma] of the limiting flux. Default is 5 (5-sigma upper limit)."
     },
     "flux_density": {
       "type": "number",
-      "description": "Flux density in the specified flux_unit"
+      "description": "Flux density in the specified flux_density_unit"
     },
     "flux_density_error": {
       "type": "number",
-      "description": "1-sigma statistical uncertainty on flux density in the specified flux_unit"
+      "description": "1-sigma uncertainty on flux density"
     },
     "limiting_flux_density": {
       "type": "number",
-      "description": "Limiting flux density (upper limit) in flux_unit"
+      "description": "Limiting flux density (upper limit) in flux_density_unit"
     },
     "limiting_flux_density_sigma": {
       "type": "number",
@@ -48,24 +64,24 @@
     },
     "flux_density_unit": {
       "type": "string",
-      "enum": ["erg/s/cm2/Hz", "erg/s/cm2/keV", "erg/s/cm2/nm"],
-      "default": "erg/s/cm2/keV",
-      "description": "Unit of the flux density: frequency-based [erg/s/cm2/Hz], energy-based [erg/s/cm2/keV], or wavelength-based [erg/s/cm2/nm]"
+      "enum": ["erg/cm2/s/Hz", "erg/cm2//keV", "erg/cm2/s/nm"],
+      "default": "erg/cm2/s/keV",
+      "description": "Unit of the flux density: frequency-based [erg/cm2/s/Hz], energy-based [erg/cm2/s/keV], or wavelength-based [erg/cm2/s/nm]. Default is [erg/cm2/s/keV]."
     },
-    "flux_density_energy_band": {
+    "flux_density_energy_range": {
       "type": "array",
       "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
-      "description": "Low and High energy bounds used in flux density calculation (if not parsed in Reporter.schema), default unit is keV"
+      "description": "Low and High energy bounds used in flux density calculation (if not parsed in Reporter.schema)"
     },
-    "flux_density_energy_units": {
+    "flux_density_energy_range_units": {
       "type": "string",
       "enum": ["keV", "nm", "MHz"],
       "default": "keV",
-      "description": "Units for the spectral energy band (if not parsed in Reporter.schema), default unit is keV"
+      "description": "Units for the flux density energy band (if not parsed in Reporter.schema), default is [keV]"
     },
-    "flux_time_range": {
+    "flux_density_time_range": {
       "type": "array",
       "items": { "type": "number" },
       "minItems": 2,
@@ -78,11 +94,11 @@
     },
     "fluence_error": {
       "type": "number",
-      "description": "1-sigma statistical uncertainty on Fluence [erg/cm2]"
+      "description": "1-sigma uncertainty on Fluence"
     },
     "limiting_fluence": {
       "type": "number",
-      "description": "Limiting fluence (upper limit) in erg/cm2"
+      "description": "Limiting fluence (upper limit) in [erg/cm2]"
     },
     "limiting_fluence_sigma": {
       "type": "number",
@@ -94,7 +110,7 @@
       "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
-      "description": "Low and High energy bounds used in fluence calculation (if not parsed in Reporter.schema), default unit is keV"
+      "description": "Low and High energy bounds used in fluence calculation (if not parsed in Reporter.schema), default unit is [keV]"
     },
     "fluence_time_range": {
       "type": "array",
