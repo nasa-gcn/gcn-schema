@@ -1,10 +1,44 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Flux.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/spectral/GammaRay.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Flux Schema",
-  "description": "Describes flux-related observational properties of a transient source.",
   "type": "object",
+  "title": "spectral.GammaRay",
+  "description": "Spectral properties from gamma-ray data",
   "properties": {
+    "best_fit_model": {
+      "enum": ["POWERLAW", "CUTOFFPOWERLAW", "BAND"],
+      "description": "Name of model corresponding to best statistical fit of spectrum"
+    },
+    "power_law": {
+      "$ref": "./models/PowerLaw.schema.json",
+      "description": "Fit parameters for PowerLaw model"
+    },
+    "cutoff_power_law": {
+      "$ref": "./models/CutOffPowerLaw.schema.json",
+      "description": "Fit parameters for Cutoff PowerLaw model"
+    },
+    "band": {
+      "$ref": "./models/Band.schema.json",
+      "description": "Fit parameters for Band model"
+    },
+    "spectral_energy_range": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Low and High energy bounds used in spectral fit (if not parsed in Reporter.schema), default unit is keV"
+    },
+    "hardness_ratio": {
+      "type": "number",
+      "description": "ratio of flux between high and low energy bands"
+    },
+    "hardness_ratio_energy_range": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Low and High energy bounds used for hardness ratio, if not parsed in Reporter.schema.json, default unit is keV"
+    },
     "photon_flux": {
       "type": "number",
       "description": "Photon Flux [ph/cm2/s]"
