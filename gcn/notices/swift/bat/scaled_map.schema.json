@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gcn.nasa.gov/schema/main/swift/bat/scaled_map.schema.json",
   "title": "swift.bat.scaled_map",
-  "description": "GCN Notice schema for Swift BAT scaled map notices (packet type 64: SWIFT_BAT_SCALED_MAP). Not available to the public — Swift team only. The scaled map notice is issued when the BAT ground software has generated a sky-plane scaled map FITS file for the trigger. bin[5–6] contains the map generation time (stored as trigger_time), not the BAT burst trigger time. bin[7–8] contains the spacecraft pointing direction (ra_pointing/dec_pointing), not the burst position. ra/dec from the Localization base schema are null for this notice type as no burst position is available in the packet.",
+  "description": "GCN Notice schema for Swift BAT scaled map notices (packet type 64: SWIFT_BAT_SCALED_MAP). The scaled map notice is issued when the BAT ground software has generated a sky-plane scaled map FITS file for the trigger. bin[5–6] contains the map generation time (stored as trigger_time), not the BAT burst trigger time. bin[7–8] contains the spacecraft pointing direction (ra_pointing/dec_pointing), not the burst position. ra/dec from the Localization base schema are null for this notice type as no burst position is available in the packet.",
   "type": "object",
   "allOf": [
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
@@ -34,12 +34,6 @@
     }
 
   },
-
-  "required": [
-    "scaled_map_fits_file",
-    "watchdog_timeout",
-    "star_tracker_locked"
-  ],
 
   "additionalProperties": false
 }
