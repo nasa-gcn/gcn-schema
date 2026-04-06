@@ -10,19 +10,9 @@
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" }
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Photometry.schema.json" }
   ],
   "properties": {
-
-    "magnitude": {
-      "type": "number",
-      "description": "Magnitude of the burst/afterglow in the specified UVOT filter. Derived from burst_mag (bin[9]) converted from centi-mag units (value × 1e-2)."
-    },
-
-    "magnitude_error": {
-      "type": "number",
-      "minimum": 0.0,
-      "description": "Uncertainty in the magnitude value in the specified UVOT filter. Derived from mag_error (bin[20]) converted from centi-mag units (value × 1e-2)."
-    },
 
     "uvot_xrt_distance": {
       "type": "number",
@@ -31,12 +21,6 @@
     }
 
   },
-
-  "required": [
-    "magnitude",
-    "magnitude_error",
-    "uvot_xrt_distance"
-  ],
 
   "additionalProperties": false
 }
