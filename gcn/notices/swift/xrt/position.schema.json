@@ -68,16 +68,5 @@
 
   },
 
-  "required": [
-    "energy_flux",
-    "xrt_bat_distance",
-    "tam_values",
-    "readout_waveform",
-    "readout_amplifier",
-    "possible_cosmic_ray",
-    "subtype",
-    "star_tracker_locked"
-  ],
-
   "additionalProperties": false
 }

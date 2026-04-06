@@ -26,10 +26,5 @@
 
   },
 
-  "required": [
-    "watchdog_timeout",
-    "subtype"
-  ],
-
   "additionalProperties": false
 }

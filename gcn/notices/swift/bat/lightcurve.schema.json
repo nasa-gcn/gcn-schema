@@ -45,14 +45,5 @@
     }
 
   },
-
-  "required": [
-    "trigger_index",
-    "spectral_lag",
-    "lightcurve_fits_file",
-    "watchdog_timeout",
-    "star_tracker_locked"
-  ],
-
   "additionalProperties": false
 }

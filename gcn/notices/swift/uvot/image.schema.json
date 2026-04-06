@@ -73,17 +73,6 @@
 
   },
 
-  "required": [
-    "exposure_id",
-    "image_extent",
-    "image_offset",
-    "n_frames",
-    "pixel_binning",
-    "grb_position_source",
-    "watchdog_timeout",
-    "raw_image_fits_file",
-    "processed_image_fits_file"
-  ],
 
   "additionalProperties": false
 }

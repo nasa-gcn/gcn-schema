@@ -77,16 +77,5 @@
 
   },
 
-  "required": [
-    "ccd_readout_mode",
-    "ccd_waveform_id",
-    "amplifier_gain",
-    "bias",
-    "termination_condition",
-    "subtype",
-    "watchdog_timeout",
-    "spectrum_fits_file"
-  ],
-
   "additionalProperties": false
 }

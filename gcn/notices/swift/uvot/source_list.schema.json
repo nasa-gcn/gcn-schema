@@ -73,17 +73,5 @@
 
   },
 
-  "required": [
-    "background_mean",
-    "image_extent",
-    "image_offset",
-    "n_stars",
-    "detection_threshold",
-    "photometry_threshold",
-    "watchdog_timeout",
-    "raw_source_list_fits_file",
-    "processed_source_list_fits_files"
-  ],
-
   "additionalProperties": false
 }

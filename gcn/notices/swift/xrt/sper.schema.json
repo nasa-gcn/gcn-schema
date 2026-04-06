@@ -45,13 +45,5 @@
 
   },
 
-  "required": [
-    "number_packets",
-    "number_events",
-    "watchdog_timeout",
-    "subtype",
-    "sper_fits_file"
-  ],
-
   "additionalProperties": false
 }

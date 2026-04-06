@@ -54,15 +54,5 @@
 
   },
 
-  "required": [
-    "trigger_index",
-    "background_start_time",
-    "background_duration",
-    "catalog_number",
-    "within_10arcmin",
-    "star_tracker_locked",
-    "watchdog_timeout"
-  ],
-
   "additionalProperties": false
 }

@@ -40,11 +40,5 @@
 
   },
 
-  "required": [
-    "collected_bins",
-    "termination_condition",
-    "lightcurve_fits_file"
-  ],
-
   "additionalProperties": false
 }

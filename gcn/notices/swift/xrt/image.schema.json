@@ -92,18 +92,5 @@
 
   },
 
-  "required": [
-    "ccd_readout_mode",
-    "ccd_waveform_id",
-    "amplifier_gain",
-    "bright_pixels",
-    "centroid_position",
-    "centroid_ccd_position",
-    "grb_xrt_coordinates",
-    "subtype",
-    "watchdog_timeout",
-    "image_fits_file"
-  ],
-
   "additionalProperties": false
 }
