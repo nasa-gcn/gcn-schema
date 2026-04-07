@@ -1,0 +1,42 @@
+{
+  "mission": "SWIFT",
+  "instrument": "BAT",
+  "id": [
+    1253910
+  ],
+  "trigger_time": "2024-09-12T01:46:39.180Z",
+  "ra": 124.6332,
+  "dec": 33.9949,
+  "rate_snr": 13.0,
+  "ra_dec_error": 0.05,
+  "systematic_included": false,
+  "latitude": 76.76,
+  "longitude": 0.9400000000000001,
+  "instrument_phi": -165.32,
+  "instrument_theta": 29.080000000000002,
+  "trigger_type": "rate",
+  "trigger_index": 124,
+  "net_count_rate": 1479,
+  "background_count_rate": 16327,
+  "rate_duration": 0.512,
+  "rate_energy_range": [
+    25,
+    100
+  ],
+  "image_snr": 7.78,
+  "image_duration": null,
+  "image_energy_range": null,
+  "classification": null,
+  "properties": null,
+  "T90": null,
+  "hardness_ratio": null,
+  "spectral_lag": null,
+  "background_start_time": "2024-09-12T01:46:21.840Z",
+  "background_duration": 8.0,
+  "catalog_number": null,
+  "within_10arcmin": false,
+  "star_tracker_locked": true,
+  "alert_tense": "current",
+  "alert_type": "update",
+  "notice_type": "bat.position"
+}
