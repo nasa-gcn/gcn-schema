@@ -1,4 +1,6 @@
 {
+  "mission": "SWIFT",
+  "instrument": "XRT",
   "id": [
     1253910
   ],
@@ -23,5 +25,6 @@
   ],
   "readout_amplifier": 2,
   "readout_waveform": 134,
-  "possible_cosmic_ray": false
+  "possible_cosmic_ray": false,
+  "notice_type": "xrt.position"
 }
