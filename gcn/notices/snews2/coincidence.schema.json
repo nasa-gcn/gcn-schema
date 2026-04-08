@@ -1,0 +1,64 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/snews2/coincidence.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "SNEWS2 Coincidence Alert",
+  "description": "Supernova Early Warning System (SNEWS 2.0) coincidence network capabilities.",
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "snews_schema_version": {
+      "type": "string",
+      "description": "SNEWS2 schema version."
+    },
+    "snews2_tier": {
+      "type": "string",
+      "description": "The categorization of the SNEWS 2.0 alert type (e.g., CoincidenceTier, SignificanceTier, TimingTier) indicating the nature of the supernova detection."
+    },
+    "detector_status": {
+      "type": "object",
+      "description": "Status of SNEWS2 detectors at the time of the alert.",
+      "additionalProperties": { "$ref": "../core/DetectorStatus.schema.json" }
+    },
+    "event_times_utc": {
+      "type": "array",
+      "items": { "$ref": "../core/DateTime.schema.json#/properties/trigger_time" },
+      "description": "Primary timestamp(s) for the event from the detectors."
+    },
+    "tier_data": {
+      "type": "object",
+      "description": "Tier-specific data payload containing p-values, detector statistics, etc.",
+      "properties": {
+        "neutrino_time_utc": {
+          "type": "string",
+          "description": "The aggregated neutrino arrival time across the coincidence network."
+        },
+        "p_values": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "description": "The p-values representing the significance of the signal from each respective detector."
+        },
+        "false_alarm_prob": {
+          "type": "number",
+          "description": "The calculated false alarm probability of the coincidence."
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "snews_schema_version",
+    "snews2_tier",
+    "detector_status",
+    "event_times_utc",
+    "tier_data"
+  ]
+}
