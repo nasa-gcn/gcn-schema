@@ -28,7 +28,7 @@
     },
     "flux_error": {
       "type": "number",
-      "description": "1-sigma uncertainty in flux"
+      "description": "1-sigma uncertainty in flux in specified flux_unit"
     },
     "flux_unit": {
       "type": "string",
