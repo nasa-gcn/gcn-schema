@@ -75,7 +75,7 @@
       "maxItems": 2,
       "description": "Low and High energy bounds used in flux density calculation (if not parsed in Reporter.schema)"
     },
-    "flux_density_energy_range_units": {
+    "flux_density_spectral_units": {
       "type": "string",
       "enum": ["keV", "nm", "MHz"],
       "default": "keV",
