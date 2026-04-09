@@ -68,7 +68,7 @@
       "default": "erg/cm2/s/keV",
       "description": "Unit of the flux density: frequency-based [erg/cm2/s/Hz], energy-based [erg/cm2/s/keV], or wavelength-based [erg/cm2/s/nm]. Default is [erg/cm2/s/keV]."
     },
-    "flux_density_energy_range": {
+    "flux_density_spectral_range": {
       "type": "array",
       "items": { "type": "number" },
       "minItems": 2,
