@@ -38,7 +38,7 @@
     },
     "limiting_flux": {
       "type": "number",
-      "description": "Limiting flux (upper limit) in flux_density_unit"
+      "description": "Limiting flux (upper limit) in flux_unit"
     },
     "limiting_flux_sigma": {
       "type": "number",
