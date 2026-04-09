@@ -7,7 +7,7 @@
   "properties": {
     "best_fit_model": {
       "type": "string",
-      "enum": ["POWERLAW", "CUTOFFPOWERLAW", "BAND"],
+      "enum": ["PowerLaw", "CutoffPowerLaw", "Band"],
       "description": "Name of model corresponding to best statistical fit of spectrum"
     },
     "power_law": {
