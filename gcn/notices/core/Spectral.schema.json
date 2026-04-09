@@ -96,7 +96,7 @@
       "type": "string",
       "enum": ["keV", "nm", "MHz"],
       "default": "keV",
-      "description": "Units for the flux density spectral point, default is [keV]"
+      "description": "Unit for the flux density spectral point, default is [keV]"
     },
     "flux_density_time_range": {
       "type": "array",
