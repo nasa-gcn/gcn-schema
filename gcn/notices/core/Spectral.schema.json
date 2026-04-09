@@ -45,6 +45,26 @@
       "default": 5,
       "description": "Significance level [sigma] of the limiting flux. Default is 5 (5-sigma upper limit)."
     },
+    "flux_spectral_band": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Low and High energy bounds used in flux calculation (if not parsed in Reporter.schema)"
+    },
+    "flux_spectral_units": {
+      "type": "string",
+      "enum": ["keV", "nm", "MHz"],
+      "default": "keV",
+      "description": "Units for the flux energy band (if not parsed in Reporter.schema), default is [keV]"
+    },
+    "flux_time_range": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Start and stop time stamps used in flux calculation (if not parsed in DateTime.schema.json), measured since trigger [s]"
+    },
     "flux_density": {
       "type": "number",
       "description": "Flux density in the specified flux_density_unit"
@@ -68,18 +88,15 @@
       "default": "erg/cm2/s/keV",
       "description": "Unit of the flux density: frequency-based [erg/cm2/s/Hz], energy-based [erg/cm2/s/keV], or wavelength-based [erg/cm2/s/nm]. Default is [erg/cm2/s/keV]."
     },
-    "flux_density_spectral_range": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2,
-      "description": "Low and High energy bounds used in flux density calculation (if not parsed in Reporter.schema)"
+    "flux_density_spectral_point": {
+      "type": "number",
+      "description": "Flux density measured at a specific spectral point."
     },
     "flux_density_spectral_units": {
       "type": "string",
       "enum": ["keV", "nm", "MHz"],
       "default": "keV",
-      "description": "Units for the flux density energy band (if not parsed in Reporter.schema), default is [keV]"
+      "description": "Units for the flux density spectral point, default is [keV]"
     },
     "flux_density_time_range": {
       "type": "array",
@@ -96,7 +113,7 @@
       "type": "number",
       "description": "1-sigma uncertainty on Fluence"
     },
-    "fluence_energy_range": {
+    "fluence_spectral_band": {
       "type": "array",
       "items": { "type": "number" },
       "minItems": 2,
