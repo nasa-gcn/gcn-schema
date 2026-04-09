@@ -64,7 +64,7 @@
     },
     "flux_density_unit": {
       "type": "string",
-      "enum": ["erg/cm2/s/Hz", "erg/cm2//keV", "erg/cm2/s/nm"],
+      "enum": ["erg/cm2/s/Hz", "erg/cm2/keV", "erg/cm2/s/nm"],
       "default": "erg/cm2/s/keV",
       "description": "Unit of the flux density: frequency-based [erg/cm2/s/Hz], energy-based [erg/cm2/s/keV], or wavelength-based [erg/cm2/s/nm]. Default is [erg/cm2/s/keV]."
     },
