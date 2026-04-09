@@ -96,15 +96,6 @@
       "type": "number",
       "description": "1-sigma uncertainty on Fluence"
     },
-    "limiting_fluence": {
-      "type": "number",
-      "description": "Limiting fluence (upper limit) in [erg/cm2]"
-    },
-    "limiting_fluence_sigma": {
-      "type": "number",
-      "default": 5,
-      "description": "Significance level [sigma] of the limiting fluence. Default is 5 (5-sigma upper limit)."
-    },
     "fluence_energy_range": {
       "type": "array",
       "items": { "type": "number" },
