@@ -1,0 +1,30 @@
+{
+  "mission": "SWIFT",
+  "instrument": "XRT",
+  "id": [
+    1253910
+  ],
+  "alert_type": "initial",
+  "alert_tense": "current",
+  "observation_start": "2024-09-12T01:48:25.200Z",
+  "ra": 124.6327,
+  "dec": 34.0001,
+  "ra_dec_error": 0.0013666666666666666,
+  "energy_flux": 8.636841e-08,
+  "image_snr": 10.24,
+  "xrt_bat_distance": 0.005200000000000001,
+  "tam_values": [
+    [
+      327.59000000000003,
+      237.1
+    ],
+    [
+      261.49,
+      243.89000000000001
+    ]
+  ],
+  "readout_amplifier": 2,
+  "readout_waveform": 134,
+  "possible_cosmic_ray": false,
+  "notice_type": "xrt.position"
+}

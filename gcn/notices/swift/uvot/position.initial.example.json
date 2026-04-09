@@ -1,0 +1,20 @@
+{
+  "mission": "SWIFT",
+  "instrument": "UVOT",
+  "id": [
+    1253910
+  ],
+  "alert_tense": "current",
+  "alert_type": "initial",
+  "observation_start": "2024-09-12T01:48:31.000Z",
+  "ra": 124.635,
+  "dec": 33.9989,
+  "ra_dec_error": 0.00020833333333333335,
+  "systematic_included": true,
+  "mag": 17.39,
+  "mag_error": 0.14,
+  "mag_system": "Vega",
+  "filter": "White",
+  "uvot_xrt_distance": 0.0022,
+  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/uvot/position.schema.json"
+}

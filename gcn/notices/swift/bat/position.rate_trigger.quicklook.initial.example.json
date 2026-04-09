@@ -1,0 +1,19 @@
+{
+  "mission": "SWIFT",
+  "instrument": "BAT",
+  "id": [
+    1253910
+  ],
+  "trigger_time": "2024-09-12T01:46:47.890Z",
+  "ra": 124.6332,
+  "dec": 33.9949,
+  "rate_snr": 13.0,
+  "latitude": 76.76,
+  "longitude": 0.9400000000000001,
+  "ra_dec_error": 0.05,
+  "roll": 0.0,
+  "trigger_index": 124,
+  "merit_value": 100.0,
+  "alert_tense": "current",
+  "alert_type": "initial"
+}
