@@ -7,13 +7,19 @@
     "description": "MAXI/GSC known-source detection notice.",
     
     "allOf": [
+	{ "$ref": "../core/Alert.schema.json" },
 	{ "$ref": "../core/DateTime.schema.json" },
 	{ "$ref": "../core/Event.schema.json" },
+	{ "$ref": "../core/GeoLocBase.schema.json" },
 	{ "$ref": "../core/Localization.schema.json" },
 	{ "$ref": "../core/Reporter.schema.json" },
 	{ "$ref": "../core/Statistics.schema.json" },
 	{ "$ref": "../core/AdditionalInfo.schema.json" }
     ],
+    "required": [
+        "mission",
+        "alert_datetime"
+    ], 
     "properties": {
 	"$schema": {
 	    "type": "string",

@@ -1,61 +1,66 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.unknown.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
-  "unevaluatedProperties": false,
-  "title": "MAXI/GSC Unknown Source Position",
-  "description": "MAXI/GSC unknown-source detection notice for a GRB or other unknown X-ray transient.",
-
-  "allOf": [
-    { "$ref": "../core/DateTime.schema.json" },
-    { "$ref": "../core/Event.schema.json" },
-    { "$ref": "../core/Localization.schema.json" },
-    { "$ref": "../core/Reporter.schema.json" },
-    { "$ref": "../core/Statistics.schema.json" },
-    { "$ref": "../core/AdditionalInfo.schema.json" }
-  ],
-
-  "properties": {
-
-    "$schema": {
-      "type": "string",
-      "format": "uri"
-    },
-
-    "rectangular_error_corners": {
-      "type": "array",
-      "items": {
-        "type": "array",
-        "items": { "type": "number" },
-        "minItems": 2,
-        "maxItems": 2
-      },
-      "minItems": 4,
-      "maxItems": 4,
-      "description": "Coordinates of the four corners of the rectangular error box. Each element is a [RA, Dec] pair in degrees in J2000 equatorial coordinates. RA is in the range [0, 360]."
-    },
-
-    "event_flux": {
-      "type": "number",
-      "description": "X-ray flux of the event in the energy band specified by spectral_band and spectral_band_units [erg/cm^2/s]."
-    },
-
-    "event_flux_error": {
-      "type": "number",
-      "description": "1-sigma statistical uncertainty on event_flux [erg/cm^2/s]."
-    },
-
-    "event_tscale": {
-      "type": "number",
-      "description": "Detection time scale of the event; unit specified by event_tunits."
-    },
-
-    "event_tunits": {
-      "type": "string",
-      "enum": ["s", "orbit", "d"],
-      "description": "Unit of event_tscale: s (seconds), orbit (one ISS orbit), or d (days).",
-      "default": "s"
+    "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.unknown.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "title": "MAXI/GSC Unknown Source Position",
+    "description": "MAXI/GSC unknown-source detection notice for a GRB or other unknown X-ray transient.",
+    
+    "allOf": [
+	{ "$ref": "../core/Alert.schema.json" },
+	{ "$ref": "../core/DateTime.schema.json" },
+	{ "$ref": "../core/Event.schema.json" },
+	{ "$ref": "../core/GeoLocBase.schema.json" },
+	{ "$ref": "../core/Localization.schema.json" },
+	{ "$ref": "../core/Reporter.schema.json" },
+	{ "$ref": "../core/Statistics.schema.json" },
+	{ "$ref": "../core/AdditionalInfo.schema.json" }
+    ],
+    "required": [
+	"mission",
+	"alert_datetime"
+    ],
+    
+    "properties": {
+	
+	"$schema": {
+	    "type": "string",
+	    "format": "uri"
+	},
+	
+	"rectangular_error_corners": {
+	    "type": "array",
+	    "items": {
+		"type": "array",
+		"items": { "type": "number" },
+		"minItems": 2,
+		"maxItems": 2
+	    },
+	    "minItems": 4,
+	    "maxItems": 4,
+	    "description": "Coordinates of the four corners of the rectangular error box. Each element is a [RA, Dec] pair in degrees in J2000 equatorial coordinates. RA is in the range [0, 360]."
+	},
+	
+	"event_flux": {
+	    "type": "number",
+	    "description": "X-ray flux of the event in the energy band specified by spectral_band and spectral_band_units [erg/cm^2/s]."
+	},
+	
+	"event_flux_error": {
+	    "type": "number",
+	    "description": "1-sigma statistical uncertainty on event_flux [erg/cm^2/s]."
+	},
+	
+	"event_tscale": {
+	    "type": "number",
+	    "description": "Detection time scale of the event; unit specified by event_tunits."
+	},
+	
+	"event_tunits": {
+	    "type": "string",
+	    "enum": ["s", "orbit", "d"],
+	    "description": "Unit of event_tscale: s (seconds), orbit (one ISS orbit), or d (days).",
+	    "default": "s"
+	}
     }
-
-  }
 }
