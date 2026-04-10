@@ -1,72 +1,69 @@
 {
-    "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.known.schema.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "unevaluatedProperties": false,
-    "title": "MAXI/GSC Known Source Position",
-    "description": "MAXI/GSC known-source detection notice.",
-    
-    "allOf": [
-	{ "$ref": "../core/Alert.schema.json" },
-	{ "$ref": "../core/DateTime.schema.json" },
-	{ "$ref": "../core/Event.schema.json" },
-	{ "$ref": "../core/GeoLocBase.schema.json" },
-	{ "$ref": "../core/Localization.schema.json" },
-	{ "$ref": "../core/Reporter.schema.json" },
-	{ "$ref": "../core/Statistics.schema.json" },
-	{ "$ref": "../core/AdditionalInfo.schema.json" }
-    ],
-    "required": [
-        "mission",
-        "alert_datetime"
-    ], 
-    "properties": {
-	"$schema": {
-	    "type": "string",
-	    "format": "uri"
-	},
-	"source_flux": {
-	    "type": "number",
-	    "description": "Representative X-ray flux of the source in the most significant energy band specified by spectral_band and spectral_band_units [erg/cm^2/s]."
-	},
-	"source_flux_error": {
-	    "type": "number",
-	    "description": "1-sigma statistical uncertainty on source_flux [erg/cm^2/s]."
-	},
-	"source_tscale": {
-	    "type": "number",
-	    "description": "Detection time scale of the source; unit specified by source_tunits."
-	},
-	"source_tunits": {
-            "type": "string",
-            "enum": ["s", "orbit", "d"],
-            "description": "Unit of source_tscale: s (seconds), orbit (one ISS orbit), or d (days).",
-            "default": "s"
-	},
-	"source_name": {
-	    "type": "string",
-	    "description": "Name of the detected source."
-	},
-	"band_flux_low": {
-	    "type": "array",
-	    "items": { "type": "number" },
-	    "minItems": 2,
-	    "maxItems": 2,
-	    "description": "Two-element array [flux, 1-sigma statistical uncertainty] for the 2-4 keV band [erg/cm^2/s]."
-	},
-	"band_flux_med": {
-	    "type": "array",
-	    "items": { "type": "number" },
-	    "minItems": 2,
-	    "maxItems": 2,
-	    "description": "Two-element array [flux, 1-sigma statistical uncertainty] for the 4-10 keV band [erg/cm^2/s]."
-	},
-	"band_flux_high": {
-	    "type": "array",
-	    "items": { "type": "number" },
-	    "minItems": 2,
-	    "maxItems": 2,
-	    "description": "Two-element array [flux, 1-sigma statistical uncertainty] for the 10-20 keV band [erg/cm^2/s]."
-	}
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.known.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "MAXI/GSC Known Source Position",
+  "description": "MAXI/GSC known-source detection notice.",
+
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/GeoLocBase.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/AdditionalInfo.schema.json" }
+  ],
+  "required": ["mission", "alert_datetime"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source_flux": {
+      "type": "number",
+      "description": "Representative X-ray flux of the source in the most significant energy band specified by spectral_band and spectral_band_units [erg/cm^2/s]."
+    },
+    "source_flux_error": {
+      "type": "number",
+      "description": "1-sigma statistical uncertainty on source_flux [erg/cm^2/s]."
+    },
+    "source_tscale": {
+      "type": "number",
+      "description": "Detection time scale of the source; unit specified by source_tunits."
+    },
+    "source_tunits": {
+      "type": "string",
+      "enum": ["s", "orbit", "d"],
+      "description": "Unit of source_tscale: s (seconds), orbit (one ISS orbit), or d (days).",
+      "default": "s"
+    },
+    "source_name": {
+      "type": "string",
+      "description": "Name of the detected source."
+    },
+    "band_flux_low": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Two-element array [flux, 1-sigma statistical uncertainty] for the 2-4 keV band [erg/cm^2/s]."
+    },
+    "band_flux_med": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Two-element array [flux, 1-sigma statistical uncertainty] for the 4-10 keV band [erg/cm^2/s]."
+    },
+    "band_flux_high": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Two-element array [flux, 1-sigma statistical uncertainty] for the 10-20 keV band [erg/cm^2/s]."
     }
+  }
 }
