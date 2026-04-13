@@ -1,0 +1,21 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.unknown.schema.json",
+  "mission": "MAXI",
+  "instrument": "GSC",
+  "alert_datetime": "2023-02-20T06:19:49Z",
+  "alert_type": "initial",
+  "alert_tense": "current",
+  "trigger_time": "2023-02-20T08:56:01Z",
+  "id": "9995289617",
+  "ra": 346.56,
+  "dec": 18.61,
+  "event_flux": 1.69e-9,
+  "event_flux_error": 2.6e-10,
+  "event_name": "GRB 230220A",
+  "event_tscale": 10,
+  "event_tunits": "s",
+  "spectral_band": [2.0, 4.0],
+  "spectral_band_units": "keV",
+  "latitude": 0.0,
+  "longitude": 0.0
+}
