@@ -16,7 +16,7 @@
   "spectral_band": [4.0, 10.0],
   "spectral_band_units": "keV",
   "source_name": "Swift J1858.6-0814",
-  "event_name": "858800020",
+  "event_name": "Swift J1858.6-0814",
   "band_flux_low": [4.17e-10, 1.3e-10],
   "band_flux_med": [2.0e-10, 1.77e-10],
   "band_flux_high": [6.77e-10, 2.23e-10],
