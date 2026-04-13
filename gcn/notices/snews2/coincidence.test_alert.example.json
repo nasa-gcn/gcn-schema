@@ -1,0 +1,28 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/snews2/coincidence.schema.json",
+  "alert_datetime": "2026-04-03T16:23:21.937Z",
+  "alert_tense": "test",
+  "alert_type": "initial",
+  "id": "efd6aa89-7828-4d68-a289-d044ccaa2266",
+  "mission": "SNEWS",
+  "messenger": "Neutrino",
+  "trigger_time": "2026-04-03T16:21:07.312Z",
+  "far": 0.0001,
+  "snews_schema_version": "1.0",
+  "snews2_tier": "CoincidenceTier",
+  "detector_status": {
+    "Super-K": "triggered",
+    "IceCube": "triggered",
+    "KamLAND": "triggered"
+  },
+  "event_times_utc": [
+    "2026-04-03T16:21:07.312Z",
+    "2026-04-03T16:21:07.312Z",
+    "2026-04-03T16:21:07.312Z"
+  ],
+  "tier_data": {
+    "neutrino_time_utc": "2026-04-03T16:21:07.312000Z",
+    "p_values": [0.01, 0.05, 0.08],
+    "false_alarm_prob": 0.0001
+  }
+}
