@@ -1,0 +1,131 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Spectral.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Spectral properties",
+  "description": "Spectral properties derived from observations",
+  "properties": {
+    "best_fit_model": {
+      "type": "string",
+      "enum": ["PowerLaw", "CutoffPowerLaw", "Band"],
+      "description": "Name of model corresponding to best statistical fit of spectrum"
+    },
+    "power_law": {
+      "$ref": "models/PowerLaw.schema.json",
+      "description": "Fit parameters for PowerLaw model"
+    },
+    "cutoff_power_law": {
+      "$ref": "models/CutOffPowerLaw.schema.json",
+      "description": "Fit parameters for Cutoff PowerLaw model"
+    },
+    "band": {
+      "$ref": "models/Band.schema.json",
+      "description": "Fit parameters for Band model"
+    },
+    "flux": {
+      "type": "number",
+      "description": "Flux in the specified flux_unit"
+    },
+    "flux_error": {
+      "type": "number",
+      "description": "1-sigma uncertainty in flux in specified flux_unit"
+    },
+    "flux_unit": {
+      "type": "string",
+      "enum": ["ph/cm2/s", "erg/cm2/s"],
+      "default": "erg/cm2/s",
+      "description": "Units for the measured flux, default unit is [erg/cm2/s]"
+    },
+    "limiting_flux": {
+      "type": "number",
+      "description": "Limiting flux (upper limit) in flux_unit"
+    },
+    "limiting_flux_sigma": {
+      "type": "number",
+      "default": 5,
+      "description": "Significance level [sigma] of the limiting flux. Default is 5 (5-sigma upper limit)."
+    },
+    "flux_spectral_band": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Low and High energy bounds used in flux calculation (if not parsed in Reporter.schema)"
+    },
+    "flux_spectral_unit": {
+      "type": "string",
+      "enum": ["keV", "nm", "MHz"],
+      "default": "keV",
+      "description": "Units for the flux energy band (if not parsed in Reporter.schema), default is [keV]"
+    },
+    "flux_time_range": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Start and stop time stamps used in flux calculation (if not parsed in DateTime.schema.json), measured since trigger [s]"
+    },
+    "flux_density": {
+      "type": "number",
+      "description": "Flux density in the specified flux_density_unit"
+    },
+    "flux_density_error": {
+      "type": "number",
+      "description": "1-sigma uncertainty on flux density"
+    },
+    "limiting_flux_density": {
+      "type": "number",
+      "description": "Limiting flux density (upper limit) in flux_density_unit"
+    },
+    "limiting_flux_density_sigma": {
+      "type": "number",
+      "default": 5,
+      "description": "Significance level [sigma] of the limiting flux density. Default is 5 (5-sigma upper limit)."
+    },
+    "flux_density_unit": {
+      "type": "string",
+      "enum": ["erg/cm2/s/Hz", "erg/cm2/keV", "erg/cm2/s/nm"],
+      "default": "erg/cm2/s/keV",
+      "description": "Unit of the flux density: frequency-based [erg/cm2/s/Hz], energy-based [erg/cm2/s/keV], or wavelength-based [erg/cm2/s/nm]. Default is [erg/cm2/s/keV]."
+    },
+    "flux_density_spectral_point": {
+      "type": "number",
+      "description": "Flux density at a specific spectral point in the specified flux_density_spectral_point_unit"
+    },
+    "flux_density_spectral_point_unit": {
+      "type": "string",
+      "enum": ["keV", "nm", "MHz"],
+      "default": "keV",
+      "description": "Unit of the flux density spectral point, default is [keV]"
+    },
+    "flux_density_time_range": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Start and stop time stamps used in flux density calculation (if not parsed in DateTime.schema.json), measured since trigger [s]"
+    },
+    "fluence": {
+      "type": "number",
+      "description": "Fluence [erg/cm2]"
+    },
+    "fluence_error": {
+      "type": "number",
+      "description": "1-sigma uncertainty on Fluence"
+    },
+    "fluence_spectral_band": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Low and High energy bounds used in fluence calculation (if not parsed in Reporter.schema), default unit is [keV]"
+    },
+    "fluence_time_range": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Start and stop time stamps used in fluence calculation (if not parsed in DateTime.schema), measured since trigger [s]"
+    }
+  }
+}
