@@ -118,7 +118,7 @@
       "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
-      "description": "Low and High energy bounds used in fluence calculation (if not parsed in Reporter.schema), default unit is [keV]"
+      "description": "Low and High energy bounds used in fluence calculation, in unit of [keV]"
     },
     "fluence_time_range": {
       "type": "array",
