@@ -92,7 +92,7 @@
       "type": "number",
       "description": "Flux density measured at a specific spectral point."
     },
-    "flux_density_spectral_units": {
+    "flux_density_reference_point_units": {
       "type": "string",
       "enum": ["keV", "nm", "MHz"],
       "default": "keV",
