@@ -90,7 +90,7 @@
     },
     "flux_density_spectral_point": {
       "type": "number",
-      "description": "Flux density measured at a specific spectral point at `flux_density_spectral_point_unit`."
+      "description": "Flux density measured at a specific spectral point in the specified flux_density_spectral_point_unit"
     },
     "flux_density_spectral_point_unit": {
       "type": "string",
