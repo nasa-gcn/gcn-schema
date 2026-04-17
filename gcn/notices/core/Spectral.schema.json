@@ -52,7 +52,7 @@
       "maxItems": 2,
       "description": "Low and High energy bounds used in flux calculation (if not parsed in Reporter.schema)"
     },
-    "flux_spectral_units": {
+    "flux_spectral_unit": {
       "type": "string",
       "enum": ["keV", "nm", "MHz"],
       "default": "keV",
