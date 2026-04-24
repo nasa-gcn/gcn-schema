@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v7.0.0/gcn/notices/core/Spectral.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Spectral.schema.json",
   "best_fit_model": "PowerLaw",
   "power_law": {
     "amplitude": 0.05,
