@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Spectral.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v7.0.0/gcn/notices/core/Spectral.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Spectral properties",
@@ -105,10 +105,7 @@
       "maxItems": 2,
       "description": "Start and stop time stamps used in flux density calculation (if not parsed in DateTime.schema.json), measured since trigger [s]"
     },
-    "fluence": {
-      "type": "number",
-      "description": "Fluence [erg/cm2]"
-    },
+    "fluence": { "type": "number", "description": "Fluence [erg/cm2]" },
     "fluence_error": {
       "type": "number",
       "description": "1-sigma uncertainty on Fluence"
