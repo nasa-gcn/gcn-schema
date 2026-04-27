@@ -40,10 +40,6 @@
       "description": "Unit of source_tscale: s (seconds), orbit (one ISS orbit), or d (days).",
       "default": "s"
     },
-    "source_name": {
-      "type": "string",
-      "description": "Name of the detected source."
-    },
     "band_flux_low": {
       "type": "array",
       "items": { "type": "number" },

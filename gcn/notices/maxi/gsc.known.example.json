@@ -9,17 +9,17 @@
   "id": "858800020",
   "ra": 285.6,
   "dec": -9.2,
-  "source_flux": 2.0e-10,
-  "source_flux_error": 1.77e-10,
+  "flux": 2.0e-10,
+  "flux_error": 1.77e-10,
   "source_tscale": 1,
   "source_tunits": "s",
-  "spectral_band": [4.0, 10.0],
-  "spectral_band_units": "keV",
-  "source_name": "Swift J1858.6-0814",
+  "flux_spectral_band": [4.0, 10.0],
+  "flux_spectral_unit": "keV",
   "event_name": "Swift J1858.6-0814",
   "band_flux_low": [4.17e-10, 1.3e-10],
   "band_flux_med": [2.0e-10, 1.77e-10],
   "band_flux_high": [6.77e-10, 2.23e-10],
   "latitude": 0.0,
-  "longitude": 0.0
+  "longitude": 0.0,
+  "record_number": 1
 }

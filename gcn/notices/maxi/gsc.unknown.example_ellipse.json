@@ -12,13 +12,14 @@
   "ra_dec_error": [0.22, 0.19, 153.0],
   "containment_probability": 0.9,
   "systematic_included": false,
-  "event_flux": 1.69e-9,
-  "event_flux_error": 2.6e-10,
+  "flux": 1.69e-9,
+  "flux_error": 2.6e-10,
   "event_name": "GRB 230220A",
   "event_tscale": 10,
   "event_tunits": "s",
-  "spectral_band": [2.0, 4.0],
-  "spectral_band_units": "keV",
+  "flux_spectral_band": [2.0, 4.0],
+  "flux_spectral_unit": "keV",
   "latitude": 0.0,
-  "longitude": 0.0
+  "longitude": 0.0,
+  "record_number": 1
 }
