@@ -14,7 +14,8 @@
     { "$ref": "../core/Localization.schema.json" },
     { "$ref": "../core/Reporter.schema.json" },
     { "$ref": "../core/Statistics.schema.json" },
-    { "$ref": "../core/AdditionalInfo.schema.json" }
+    { "$ref": "../core/AdditionalInfo.schema.json" },
+    { "$ref": "../core/Spectral.schema.json" }
   ],
   "required": ["mission", "alert_datetime"],
 
