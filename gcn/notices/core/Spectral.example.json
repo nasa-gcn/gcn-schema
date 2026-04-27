@@ -1,0 +1,27 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Spectral.schema.json",
+  "best_fit_model": "PowerLaw",
+  "power_law": {
+    "amplitude": 0.05,
+    "amplitude_error": 0.01,
+    "pivot_energy": 1,
+    "alpha": 1.85,
+    "alpha_error": 0.12
+  },
+  "flux": 0.0000015,
+  "flux_error": 5e-8,
+  "flux_unit": "ph/cm2/s",
+  "flux_spectral_band": [10, 1000],
+  "flux_spectral_unit": "keV",
+  "flux_time_range": [0, 20],
+  "flux_density": 9.5e-7,
+  "flux_density_error": 1.1e-7,
+  "flux_density_unit": "erg/cm2/keV",
+  "flux_density_spectral_point": 100,
+  "flux_density_spectral_point_unit": "keV",
+  "flux_density_time_range": [0, 10],
+  "fluence": 0.0000025,
+  "fluence_error": 9e-7,
+  "fluence_spectral_band": [10, 1000],
+  "fluence_time_range": [0, 50]
+}
