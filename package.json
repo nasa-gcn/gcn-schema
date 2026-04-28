@@ -6,6 +6,7 @@
     "type": "git",
     "url": "github:nasa-gcn/gcn-schema"
   },
+  "type": "module",
   "scripts": {
     "prepare": "husky",
     "test": "node validate.mjs",
