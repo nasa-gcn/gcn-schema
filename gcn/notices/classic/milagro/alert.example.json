@@ -1,0 +1,20 @@
+{
+  "alert_datetime": "2006-11-01T15:25:21Z",
+  "id": [458],
+  "trigger_time": "2006-11-01T15:09:22.58Z",
+  "ra": 194.1,
+  "dec": 3.8,
+  "ra_dec_error": 0.54,
+  "n_events": 20,
+  "bkg_events": 2.749,
+  "stat_signif": 1.862e-11,
+  "annual_rate": 212.7,
+  "duration": 4.0,
+  "zenith": 44.1,
+  "additional_info": "MILAGRO TRANSIENT Coordinates.  \nPossible GRB  \nFor more information see:  \nhttp://umdgrb.umd.edu/cosmic/milagro_grb_main.html",
+  "mission": "MILAGRO",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/milagro/alert.schema.json",
+  "record_number": 1,
+  "alert_type": "initial",
+  "systematic_included": true
+}
