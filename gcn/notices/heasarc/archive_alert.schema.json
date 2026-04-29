@@ -17,7 +17,27 @@
     },
     "target_name": {
       "type": "string",
-      "description": "Name of the target object for the observation [IVOA ObsCore]"
+      "description": "Name of the target object for the observation [IVOA ObsCore]."
+    },
+    "t_min": {
+      "type": "string",
+      "description": "Start time of the observation in Modified Julian Days (MJD). [IVOA ObsCore]"
+    },
+    "t_max": {
+      "type": "string",
+      "description": "Stop time of the observation in Modified Julian Days (MJD). [IVOA ObsCore]"
+    },
+    "s_ra": {
+      "type": "string",
+      "description": "Right ascension of pointing in decimal degrees. [IVOA ObsCore]"
+    },
+    "s_dec": {
+      "type": "string",
+      "description": "Declination of pointing in decimal degrees. [IVOA ObsCore]"
+    },
+    "obs_publisher_did": {
+      "type": "string",
+      "description": "Unique identifier of this dataset at the archive. [IVOA ObsCore]"
     },
     "mission_page": {
       "type": "string",
@@ -25,7 +45,15 @@
     },
     "facility_name": {
       "type": "string",
-      "description": "Name of the creator of the data [IVOA ObsCore]"
+      "description": "Name of the mission/creator of the data [IVOA ObsCore]"
+    },
+    "data_archive_s3": {
+      "type": "string",
+      "description": "The base URL of the AWS S3 bucket mirroring the data."
+    },
+    "trigger": {
+      "type": "string",
+      "description": "The file that triggers the alert.  Applies to Fermi GBM triggers."
     }
   }
 }
