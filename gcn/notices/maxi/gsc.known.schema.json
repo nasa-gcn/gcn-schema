@@ -23,19 +23,19 @@
       "type": "string",
       "format": "uri"
     },
-    "source_flux": {
+    "flux": {
       "type": "number",
       "description": "Representative X-ray flux of the source in the most significant energy band specified by spectral_band and spectral_band_units [erg/cm^2/s]."
     },
-    "source_flux_error": {
+    "flux_error": {
       "type": "number",
       "description": "1-sigma statistical uncertainty on source_flux [erg/cm^2/s]."
     },
-    "source_tscale": {
+    "detection_timescale": {
       "type": "number",
       "description": "Detection time scale of the source; unit specified by source_tunits."
     },
-    "source_tunits": {
+    "detection_timescale_units": {
       "type": "string",
       "enum": ["s", "orbit", "d"],
       "description": "Unit of source_tscale: s (seconds), orbit (one ISS orbit), or d (days).",
