@@ -4,7 +4,7 @@
   "version": "7.0.0",
   "repository": {
     "type": "git",
-    "url": "github:nasa-gcn/gcn-schema"
+    "url": "git+https://github.com/nasa-gcn/gcn-schema.git"
   },
   "type": "module",
   "scripts": {
