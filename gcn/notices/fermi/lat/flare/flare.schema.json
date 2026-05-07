@@ -22,7 +22,7 @@
       "$ref": "../../core/Reporter.schema.json"
     },
     {
-      "$ref": "../../core/spectral/GammaRay.schema.json" 
+      "$ref": "../../core/Spectral.schema.json" 
     }
   ],
   "properties": {
