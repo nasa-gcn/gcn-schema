@@ -1,28 +1,28 @@
 {
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare/flare.schema.json",
-  "$schema": "https://json-schema.org/draft/2025-11/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Fermi-LAT Flare Advocate Alert",
-  "description": "This schema is to alert the scientific comunity about a flare. It gives information about the position, the time, the flux, the photon index and the presence of high-energy photons.",
+  "description": "This schema is to alert the scientific community about a flare. It gives information about position, time, flux, photon index and the presence of high-energy photons.",
   "unevaluatedProperties": false,
   "allOf": [
     {
-      "$ref": "../../core/Alert.schema.json"
+      "$ref": "../../../core/Alert.schema.json"
     },
     {
-      "$ref": "../../core/DateTime.schema.json"
+      "$ref": "../../../core/DateTime.schema.json"
     },
     {
-      "$ref": "../../core/Event.schema.json"
+      "$ref": "../../../core/Event.schema.json"
     },
     {
-      "$ref": "../../core/Localization.schema.json"
-    },
-        {
-      "$ref": "../../core/Reporter.schema.json"
+      "$ref": "../../../core/Localization.schema.json"
     },
     {
-      "$ref": "../../core/Spectral.schema.json" 
+      "$ref": "../../../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../../../core/Spectral.schema.json" 
     }
   ],
   "properties": {
