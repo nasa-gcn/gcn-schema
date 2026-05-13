@@ -10,7 +10,7 @@
       "description": "Event name, automatically inferred from the subject"
     },
     "eventType": {
-      "type": ["array", "null"],
+      "type": "array",
       "items": { "type": "string" },
       "description": "Event type(s), automatically inferred from the subject"
     },
