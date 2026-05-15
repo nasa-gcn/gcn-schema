@@ -5,7 +5,6 @@
   "unevaluatedProperties": false,
   "title": "MAXI/GSC Known Source Position",
   "description": "MAXI/GSC known-source detection notice.",
-
   "allOf": [
     { "$ref": "../core/Alert.schema.json" },
     { "$ref": "../core/DateTime.schema.json" },
