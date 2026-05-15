@@ -5,7 +5,6 @@
   "unevaluatedProperties": false,
   "title": "MAXI/GSC Unknown Source Position",
   "description": "MAXI/GSC unknown-source detection notice for a GRB or other unknown X-ray transient.",
-
   "allOf": [
     { "$ref": "../core/Alert.schema.json" },
     { "$ref": "../core/DateTime.schema.json" },
