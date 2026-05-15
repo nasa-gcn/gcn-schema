@@ -1,6 +1,7 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/circulars.schema.json",
   "eventId": "GRB 230410A",
+  "eventType": ["GRB"],
   "submitter": "Fermi GBM Team at MSFC/Fermi-GBM <do_not_reply@GIOC.nsstc.nasa.gov>",
   "submittedHow": "email-legacy",
   "subject": "GRB 230410A: Fermi GBM Final Real-time Localization",
