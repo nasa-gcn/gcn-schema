@@ -9,6 +9,11 @@
       "type": "string",
       "description": "Event name, automatically inferred from the subject"
     },
+    "eventType": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Event type(s), automatically inferred from the subject"
+    },
     "submitter": {
       "type": "string",
       "description": "Name, affiliation, and email address of the person who submitted the Circular, in the form `A. E. Einstein at IAS <albert.einstein@example.edu>`"
