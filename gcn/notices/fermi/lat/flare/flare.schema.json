@@ -23,6 +23,9 @@
     },
     {
       "$ref": "../../../core/Spectral.schema.json" 
+    },
+    {
+      "$ref": "../../../core/models/PowerLaw.schema.json"
     }
   ],
   "properties": {
@@ -37,14 +40,6 @@
     "flux_ratio": {
       "type": "number",
       "description": "Factor by which the flux has increased with respect to the average flux in the given reference_catalog entry"
-    },
-    "index": {
-      "type": "number",
-      "description": "Photon index value of the observation"
-    },
-    "index_error": {
-      "type": "number",
-      "description": "1-sigma uncertainty of index"
     },
     "TS": {
       "type": "number",
