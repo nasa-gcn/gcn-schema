@@ -29,6 +29,10 @@
       "type": "number",
       "description": "Error on the trigger time at infinite frequency [s]"
     },
+    "sampling_time": {
+      "type": "number",
+      "description": "Time resolution of the FRB search at the host observatory [ms]"
+    },
     "importance": {
       "type": "number",
       "description": "A machine learning score separating RFI (0) from an astrophysical signal (1)"

@@ -17,7 +17,7 @@
       "type": "number",
       "description": "Net count rate of the transient above the background [counts/s] over rate_duration and rate_energy_range. Do specify rate_duration and rate_energy_range with net_count_rate property."
     },
-    "backgound_count_rate": {
+    "background_count_rate": {
       "type": "number",
       "description": "Count rate of the background during the transient [counts/s] over same rate_duration and rate_energy_range used for net_count_rate."
     },

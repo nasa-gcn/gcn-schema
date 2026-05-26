@@ -16,7 +16,7 @@
   "importance": 0.9871308604784662,
   "sampling_time": 0.983,
   "spectral_band": [400, 800],
-  "units": "MHz",
+  "spectral_band_units": "MHz",
   "npol": 2,
   "tsys": 50,
   "description": "This alert was generated automatically by the CHIME/FRB Real-time Search Pipeline."

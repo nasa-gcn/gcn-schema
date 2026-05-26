@@ -6,7 +6,7 @@
   "pipeline": "Bronze Track Alert",
   "record_number": 1,
   "event_name": ["IceCube-230416A"],
-  "id": ["137840_57034692_0"],
+  "id": ["137840_57034692"],
   "alert_datetime": "2023-04-16T05:42:00.0Z",
   "alert_type": "initial",
   "alert_tense": "current",

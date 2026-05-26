@@ -20,7 +20,7 @@ async function glob(path) {
 async function fileUpdates(fileSet, key, oldValue, newValue) {
   await Promise.all(
     fileSet.map(async (fileItem) => {
-      let file = JSON.parse(
+      const file = JSON.parse(
         await readFile(fileItem, {
           encoding: 'utf-8',
         }),
