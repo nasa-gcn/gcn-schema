@@ -1,0 +1,43 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/bat/position.schema.json",
+  "T90": null,
+  "alert_datetime": "2026-05-27T17:53:46.328Z",
+  "alert_tense": "current",
+  "alert_type": "update",
+  "background_count_rate": 0,
+  "background_duration": 0.0,
+  "background_start_time": "2024-03-15T00:00:00.000Z",
+  "classification": {
+    "known": 0.0,
+    "unknown": 1.0
+  },
+  "dec": -15.772300000000001,
+  "hardness_ratio": null,
+  "id": 1220155,
+  "image_duration": 64.0,
+  "image_energy_range": [
+    15,
+    50
+  ],
+  "image_snr": 12.94,
+  "instrument": "BAT",
+  "instrument_phi": -45.800000000000004,
+  "instrument_theta": 19.09,
+  "latitude": 238.54,
+  "longitude": 18.22,
+  "mission": "SWIFT",
+  "net_count_rate": 0,
+  "properties": null,
+  "ra": 244.7363,
+  "ra_dec_error": 0.05,
+  "rate_duration": null,
+  "rate_energy_range": null,
+  "rate_snr": 0.0,
+  "spectral_lag": null,
+  "star_tracker_locked": false,
+  "systematic_included": false,
+  "trigger_index": 20000,
+  "trigger_time": "2024-03-15T09:17:50.910Z",
+  "trigger_type": "image",
+  "within_10arcmin": false
+}
