@@ -16,7 +16,7 @@
   "flux_time_range": [0, 20],
   "flux_density": 9.5e-7,
   "flux_density_error": 1.1e-7,
-  "flux_density_unit": "erg/cm2/keV",
+  "flux_density_unit": "erg/cm2/s/keV",
   "flux_density_spectral_point": 100,
   "flux_density_spectral_point_unit": "keV",
   "flux_density_time_range": [0, 10],
