@@ -1,10 +1,16 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/bat/lightcurve.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/bat/position.schema.json",
   "T90": null,
-  "alert_datetime": "2026-05-26T21:56:59.674Z",
-  "alert_type": "initial",
-  "background_count_rate": null,
-  "classification": null,
+  "alert_datetime": "2026-05-26T21:55:44.495Z",
+  "alert_tense": "current",
+  "alert_type": "update",
+  "background_count_rate": 16327,
+  "background_duration": 8.0,
+  "background_start_time": "2024-09-12T01:46:21.840Z",
+  "classification": {
+    "known": 0.0,
+    "unknown": 1.0
+  },
   "dec": 33.9949,
   "hardness_ratio": null,
   "id": 1253910,
@@ -15,25 +21,23 @@
   "instrument_phi": -165.32,
   "instrument_theta": 29.080000000000002,
   "latitude": 76.76,
-  "lightcurve_fits_file": {
-    "bat_attitude.fits": "place holder",
-    "bat_raw_lc.fits": "place holder"
-  },
   "longitude": 0.9400000000000001,
   "mission": "SWIFT",
-  "net_count_rate": null,
-  "observation_start": null,
+  "net_count_rate": 1479,
   "properties": null,
   "ra": 124.6332,
-  "ra_dec_error": null,
+  "ra_dec_error": 0.05,
   "rate_duration": 0.512,
-  "rate_energy_range": null,
+  "rate_energy_range": [
+    25,
+    100
+  ],
   "rate_snr": 13.0,
   "spectral_lag": null,
   "star_tracker_locked": true,
-  "systematic_included": null,
+  "systematic_included": false,
   "trigger_index": 124,
   "trigger_time": "2024-09-12T01:46:39.180Z",
   "trigger_type": "rate",
-  "watchdog_timeout": false
+  "within_10arcmin": false
 }
