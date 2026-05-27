@@ -1,0 +1,19 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/bat/position.schema.json",
+  "alert_datetime": "2026-05-27T16:56:01.248Z",
+  "alert_tense": "current",
+  "alert_type": "initial",
+  "dec": -57.342600000000004,
+  "id": 1218701,
+  "instrument": "BAT",
+  "latitude": -325.17,
+  "longitude": -2.33,
+  "merit_value": 100.0,
+  "mission": "SWIFT",
+  "ra": 229.70510000000002,
+  "ra_dec_error": 0.05,
+  "rate_snr": 0.0,
+  "roll": 0.0,
+  "trigger_index": 20000,
+  "trigger_time": "2024-03-05T04:13:50.540Z"
+}
