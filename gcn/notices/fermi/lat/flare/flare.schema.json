@@ -1,9 +1,9 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare/flare.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Fermi-LAT Flare Advocate Alert",
-  "description": "This schema is to alert the scientific community about a flare. It gives information about position, time, flux, photon index and the presence of high-energy photons.",
+  "description": "This schema is to alert the scientific community about a flare. It gives information about the position, time, flux, photon index and the presence of high-energy photons.",
   "unevaluatedProperties": false,
   "allOf": [
     {
@@ -22,7 +22,7 @@
       "$ref": "../../../core/Reporter.schema.json"
     },
     {
-      "$ref": "../../../core/Spectral.schema.json" 
+      "$ref": "../../../core/Spectral.schema.json"
     },
     {
       "$ref": "../../../core/models/PowerLaw.schema.json"
@@ -45,5 +45,5 @@
       "type": "number",
       "description": "Test Statistic for detection of the source. TS is approximately equal to the square of the detection significance in Gaussian sigma (TS ≈ significance^2) for one degree of freedom"
     }
- }
+  }
 }
