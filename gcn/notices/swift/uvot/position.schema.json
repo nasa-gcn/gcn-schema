@@ -9,7 +9,7 @@
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" }
+    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" },
     { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Photometry.schema.json" }
   ],
   "properties": {
