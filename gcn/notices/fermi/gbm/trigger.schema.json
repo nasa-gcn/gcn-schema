@@ -15,7 +15,7 @@
     { "$ref": "../../core/Localization.schema.json" },
     { "$ref": "../../core/Reporter.schema.json" },
     { "$ref": "../../core/Statistics.schema.json" },
-    { "$ref": "../../core/spectral/GammaRay.schema.json" }
+    { "$ref": "../../core/Spectral.schema.json" }
   ],
   "properties": {
     "$schema": { "type": "string", "format": "uri" },
