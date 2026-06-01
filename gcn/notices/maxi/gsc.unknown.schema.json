@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v7.1.0/gcn/notices/maxi/gsc.unknown.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.unknown.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "unevaluatedProperties": false,
@@ -18,7 +18,10 @@
   ],
   "required": ["mission", "alert_datetime"],
   "properties": {
-    "$schema": { "type": "string", "format": "uri" },
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
     "rectangular_error_corners": {
       "type": "array",
       "items": {

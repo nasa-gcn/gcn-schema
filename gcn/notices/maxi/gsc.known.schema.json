@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v7.1.0/gcn/notices/maxi/gsc.known.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.known.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "unevaluatedProperties": false,
@@ -18,7 +18,10 @@
   ],
   "required": ["mission", "alert_datetime"],
   "properties": {
-    "$schema": { "type": "string", "format": "uri" },
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
     "flux": {
       "type": "number",
       "description": "Representative X-ray flux of the source in the most significant energy band specified by spectral_band and spectral_band_units [erg/cm^2/s]."
