@@ -5,11 +5,24 @@
   "title": "SNEWS2 Coincidence Alert",
   "description": "Supernova Early Warning System (SNEWS 2.0) coincidence network capabilities.",
   "allOf": [
-    { "$ref": "../core/Alert.schema.json" },
-    { "$ref": "../core/Event.schema.json" },
-    { "$ref": "../core/Reporter.schema.json" },
-    { "$ref": "../core/DateTime.schema.json" },
-    { "$ref": "../core/Statistics.schema.json" }
+    {
+      "$ref": "../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../core/Event.schema.json"
+    },
+    {
+      "$ref": "../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../core/Statistics.schema.json"
+    },
+    {
+      "$ref": "../core/Localization.schema.json"
+    }
   ],
   "properties": {
     "snews_schema_version": {
@@ -23,11 +36,15 @@
     "detector_status": {
       "type": "object",
       "description": "Status of SNEWS2 detectors at the time of the alert.",
-      "additionalProperties": { "$ref": "../core/DetectorStatus.schema.json" }
+      "additionalProperties": {
+        "$ref": "../core/DetectorStatus.schema.json"
+      }
     },
     "event_times_utc": {
       "type": "array",
-      "items": { "$ref": "../core/DateTime.schema.json#/properties/trigger_time" },
+      "items": {
+        "$ref": "../core/DateTime.schema.json#/properties/trigger_time"
+      },
       "description": "Primary timestamp(s) for the event from the detectors."
     },
     "tier_data": {

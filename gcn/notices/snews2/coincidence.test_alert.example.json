@@ -6,8 +6,10 @@
   "id": "efd6aa89-7828-4d68-a289-d044ccaa2266",
   "mission": "SNEWS",
   "messenger": "Neutrino",
+  "record_number": 1,
   "trigger_time": "2026-04-03T16:21:07.312Z",
   "far": 0.0001,
+  "healpix_url": "https://example.com/skymap.fits",
   "snews_schema_version": "1.0",
   "snews2_tier": "CoincidenceTier",
   "detector_status": {
