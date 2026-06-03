@@ -5,14 +5,23 @@
   "description": "GCN Notice schema for Swift UVOT source list notices (packet types 73 and 80: SWIFT_UVOT_SRCLIST and SWIFT_UVOT_SRCLIST_PROC). Type=73 is the raw flight notice; type=80 is the ground-processed notice. Both types share an identical packet word layout; they are distinguished by misc bit 2^30 and the pkt_type value in bin[0]. The bin[22–38] URL field points to the raw source list FITS file in type=73 packets and to the ground-processed source list FITS file in type=80 packets.",
   "type": "object",
   "allOf": [
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json"
+    }
   ],
   "properties": {
-
     "background_mean": {
       "type": "number",
       "description": "Mean value of the background level in the UVOT exposure. Derived from bkg_mean (bin[11]) converted from 0.001 units (value × 1e-3)."
@@ -70,7 +79,6 @@
       "contentMediaType": "image/fits",
       "description": "Base64-encoded content of the ground-processed UVOT source list FITS file. Populated from bin[22–38] URL string for the ground-processed notice (type=80, misc bit 2^30 = 1); null for the raw flight notice (type=73)."
     }
-
   },
 
   "additionalProperties": false

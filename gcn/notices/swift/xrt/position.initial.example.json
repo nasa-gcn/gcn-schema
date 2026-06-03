@@ -4,7 +4,7 @@
   "alert_tense": "current",
   "alert_type": "initial",
   "dec": 34.0001,
-  "energy_flux": 8.636841e-08,
+  "energy_flux": 8.636841e-8,
   "id": 1253910,
   "image_snr": 10.24,
   "instrument": "XRT",
@@ -16,14 +16,8 @@
   "readout_amplifier": 2,
   "readout_waveform": 134,
   "tam_values": [
-    [
-      327.59000000000003,
-      237.1
-    ],
-    [
-      261.49,
-      243.89000000000001
-    ]
+    [327.59000000000003, 237.1],
+    [261.49, 243.89000000000001]
   ],
   "xrt_bat_distance": 0.005200000000000001
 }

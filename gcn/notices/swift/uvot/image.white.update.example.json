@@ -5,10 +5,7 @@
   "dec_pointing": 33.9941,
   "exposure_id": 747798548,
   "filter": "White",
-  "grb_position": [
-    865,
-    1081
-  ],
+  "grb_position": [865, 1081],
   "grb_position_source": "XRT Position",
   "id": 1253910,
   "image_fits_files": {
@@ -17,14 +14,8 @@
     "uvot_sky_image.fits.gz": "place holder",
     "uvot_sources_image.fits.gz": "place holder"
   },
-  "image_offset": [
-    705,
-    921
-  ],
-  "image_size": [
-    160,
-    160
-  ],
+  "image_offset": [705, 921],
+  "image_size": [160, 160],
   "instrument": "UVOT",
   "mission": "SWIFT",
   "n_frames": 13574,

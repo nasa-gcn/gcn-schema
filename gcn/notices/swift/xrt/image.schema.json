@@ -5,15 +5,26 @@
   "description": "GCN Notice schema for Swift XRT image notices (packet types 69 and 78: SWIFT_XRT_IMAGE and SWIFT_XRT_IMAGE_PROC). The XRT image notice is issued when the XRT has accumulated sufficient data to generate a CCD image for the trigger. Type=69 is the raw flight notice; type=78 is the ground-processed notice.",
   "type": "object",
   "allOf": [
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json"
+    }
   ],
   "properties": {
-
     "ccd_readout_mode": {
       "type": "string",
       "enum": [
@@ -89,7 +100,6 @@
       "contentMediaType": "image/fits",
       "description": "Base64-encoded content of the XRT CCD image FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
     }
-
   },
 
   "additionalProperties": false

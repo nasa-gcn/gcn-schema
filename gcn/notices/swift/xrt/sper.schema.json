@@ -5,14 +5,23 @@
   "description": "GCN Notice schema for Swift XRT Single Pixel Event Rate (SPER) notices (packet types 87 and 88: SWIFT_XRT_SPER and SWIFT_XRT_SPER_PROC). Not available to the public — Swift team only. The SPER notice is issued when the XRT has accumulated a set of single-pixel events during a follow-up observation. Type=87 is the raw flight notice; type=88 is the ground-processed notice. NOTE: bin[12] has different meanings between the two types — num_pkt (number of packets in the integration) for type=87, and seq_num (serial number of this message, 1-3) for type=88.",
   "type": "object",
   "allOf": [
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json" }
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json"
+    }
   ],
   "properties": {
-
     "number_packets": {
       "type": ["integer", "null"],
       "minimum": 1,
@@ -42,7 +51,6 @@
       "contentMediaType": "image/fits",
       "description": "Base64-encoded content of the XRT SPER FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
     }
-
   },
 
   "additionalProperties": false

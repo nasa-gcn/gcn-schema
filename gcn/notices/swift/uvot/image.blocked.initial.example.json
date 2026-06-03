@@ -5,23 +5,14 @@
   "dec_pointing": 0.0,
   "exposure_id": 65537,
   "filter": "Blocked",
-  "grb_position": [
-    0,
-    0
-  ],
+  "grb_position": [0, 0],
   "grb_position_source": "Window Position",
   "id": 1253910,
   "image_fits_files": {
     "uvot_raw_image.fits": "place holder"
   },
-  "image_offset": [
-    911,
-    1282
-  ],
-  "image_size": [
-    800,
-    1821
-  ],
+  "image_offset": [911, 1282],
+  "image_size": [800, 1821],
   "instrument": "UVOT",
   "mission": "SWIFT",
   "n_frames": 1122322716,

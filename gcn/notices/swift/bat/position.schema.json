@@ -5,16 +5,29 @@
   "description": "GCN Notice schema for Swift BAT GRB position notices (packet types 61 and 97: SWIFT_BAT_GRB_POS_ACK and SWIFT_BAT_QUICKLOOK_POSITION).",
   "type": "object",
   "allOf": [
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/GeoLocBase.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json" }
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/GeoLocBase.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json"
+    }
   ],
   "properties": {
-
     "trigger_index": {
       "type": "integer",
       "description": "Row number in the BAT on-board flight software trigger table corresponding to the highest-significance successful trigger criterion. Derived from trig_index (bin[17])."
@@ -51,7 +64,6 @@
       "type": ["boolean", "null"],
       "description": "Not assigned in the BAT_GRB_POS_ACK (type=61/97) packet; set to null. Present in related packet types (e.g. BAT_GRB_LC type=63) where misc bit 2^29 indicates the notice was forced out early via the watchdog timeout mechanism."
     }
-
   },
 
   "additionalProperties": false

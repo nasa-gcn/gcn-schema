@@ -7,14 +7,8 @@
   "detection_threshold": 21,
   "filter": "White",
   "id": 1253910,
-  "image_extent": [
-    1375,
-    1575
-  ],
-  "image_offset": [
-    416,
-    616
-  ],
+  "image_extent": [1375, 1575],
+  "image_offset": [416, 616],
   "instrument": "UVOT",
   "mission": "SWIFT",
   "n_stars": 19,

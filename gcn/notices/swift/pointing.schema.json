@@ -15,5 +15,5 @@
     { "$ref": "../core/GeoLocBase.schema.json" },
     { "$ref": "../core/AdditionalInfo.schema.json" }
   ],
-   "unevaluatedProperties": false
+  "unevaluatedProperties": false
 }

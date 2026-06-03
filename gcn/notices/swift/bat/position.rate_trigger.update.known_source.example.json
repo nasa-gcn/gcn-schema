@@ -28,10 +28,7 @@
   "ra": 117.1755,
   "ra_dec_error": 0.05,
   "rate_duration": 2.048,
-  "rate_energy_range": [
-    15,
-    25
-  ],
+  "rate_energy_range": [15, 25],
   "rate_snr": 7.54,
   "spectral_lag": null,
   "star_tracker_locked": true,

@@ -5,18 +5,35 @@
   "description": "GCN Notice schema for Swift BAT GRB lightcurve notices (packet types 63 and 76: SWIFT_BAT_GRB_LC and SWIFT_BAT_GRB_LC_PROC). The lightcurve notice is issued when the BAT ground software has accumulated sufficient data to generate a lightcurve FITS file for the trigger. Type=63 is the raw flight notice; type=76 is the ground-processed notice.",
   "type": "object",
   "allOf": [
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/GeoLocBase.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/HardnessRatio.schema.json" },
-    { "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Duration.schema.json" }
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Alert.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/DateTime.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Reporter.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Event.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Localization.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/GeoLocBase.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/HardnessRatio.schema.json"
+    },
+    {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Duration.schema.json"
+    }
   ],
   "properties": {
-
     "trigger_index": {
       "type": "integer",
       "description": "Row number in the BAT on-board flight software trigger table corresponding to the highest-significance successful trigger criterion. Derived from trig_index (bin[17])."
@@ -43,7 +60,6 @@
       "type": "boolean",
       "description": "Indicates whether the StarTracker was locked at the time of the BAT trigger. True = locked; False = not locked (trigger is probably bogus). Derived from soln_status bit 2^10 (st_loss_lock) via lookup table. Only valid if misc bit 2^24 is set."
     }
-
   },
   "additionalProperties": false
 }

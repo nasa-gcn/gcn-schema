@@ -15,10 +15,7 @@
   "hardness_ratio": null,
   "id": 1218701,
   "image_duration": 64.0,
-  "image_energy_range": [
-    15,
-    50
-  ],
+  "image_energy_range": [15, 50],
   "image_snr": 9.24,
   "instrument": "BAT",
   "instrument_phi": -157.29,
