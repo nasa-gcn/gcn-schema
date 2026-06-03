@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/xrt/sper.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/sper.schema.json",
   "alert_datetime": "2026-05-26T21:59:23.750Z",
   "alert_type": "initial",
   "dec_pointing": 33.9938,

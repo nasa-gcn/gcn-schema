@@ -14,5 +14,5 @@
   "mag_system": "Vega",
   "filter": "White",
   "uvot_xrt_distance": 0.0022,
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/uvot/position.schema.json"
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/uvot/position.schema.json"
 }

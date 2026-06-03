@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/bat/position.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/bat/position.schema.json",
   "T90": null,
   "alert_datetime": "2026-05-26T21:55:44.495Z",
   "alert_tense": "current",

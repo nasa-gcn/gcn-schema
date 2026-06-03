@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/xrt/lightcurve.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/lightcurve.schema.json",
   "alert_datetime": "2026-05-26T21:56:51.815Z",
   "alert_type": "initial",
   "collected_bins": 100,

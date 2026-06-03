@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/uvot/source_list.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/uvot/source_list.schema.json",
   "alert_datetime": "2026-05-26T21:57:30.884Z",
   "alert_type": "update",
   "background_mean": 5.868,

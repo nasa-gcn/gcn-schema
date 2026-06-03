@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/bat/scaled_map.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/bat/scaled_map.schema.json",
   "alert_datetime": "2026-05-26T21:57:49.026Z",
   "alert_type": "initial",
   "dec": null,

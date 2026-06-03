@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/xrt/image.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/image.schema.json",
   "alert_datetime": "2026-05-26T21:56:35.702Z",
   "alert_type": "update",
   "amplifier_gain": 1,

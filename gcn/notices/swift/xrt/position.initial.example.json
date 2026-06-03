@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/xrt/position.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/position.schema.json",
   "alert_datetime": "2026-05-26T21:56:26.615Z",
   "alert_tense": "current",
   "alert_type": "initial",

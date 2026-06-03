@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/vX.Y.Z/gcn/notices/swift/uvot/image.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/uvot/image.schema.json",
   "alert_datetime": "2026-05-26T21:58:28.363Z",
   "alert_type": "update",
   "dec_pointing": 33.993700000000004,
