@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/uvot/image.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/uvot/image.schema.json",
   "title": "swift.uvot.image",
   "description": "GCN Notice schema for Swift UVOT image notices (packet types 72 and 79: SWIFT_UVOT_IMAGE and SWIFT_UVOT_IMAGE_PROC, aka DarkBurst, aka Genie). Type=72 is the raw flight notice; type=79 is the ground-processed notice. Both types share an identical packet word layout; they are distinguished by misc bit 2^30 and the pkt_type value in bin[0].",
   "type": "object",

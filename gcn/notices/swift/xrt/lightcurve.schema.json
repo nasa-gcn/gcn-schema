@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/lightcurve.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/lightcurve.schema.json",
   "title": "swift.xrt.lightcurve",
   "description": "GCN Notice schema for Swift XRT lightcurve notices (packet type 70: SWIFT_XRT_LC). The XRT lightcurve notice is issued when the XRT has accumulated sufficient data to generate a lightcurve FITS file for the trigger. bin[5-6] contain the lightcurve start time (observation_start); bin[7-8] the XRT boresight RA/Dec (ra_pointing/dec_pointing); bin[9] the livetime (observation_livetime); bin[10-11] the lightcurve stop time (observation_stop); bin[20] the number of valid bins (collected_bins); bin[21] the termination condition code (termination_condition). NOTE: misc bits 2^29 and 2^30 are not assigned in this packet type — there is no watchdog_timeout or subtype field.",
   "type": "object",

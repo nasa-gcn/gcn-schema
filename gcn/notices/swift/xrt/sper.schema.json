@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/sper.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/sper.schema.json",
   "title": "swift.xrt.sper",
   "description": "GCN Notice schema for Swift XRT Single Pixel Event Rate (SPER) notices (packet types 87 and 88: SWIFT_XRT_SPER and SWIFT_XRT_SPER_PROC). Not available to the public — Swift team only. The SPER notice is issued when the XRT has accumulated a set of single-pixel events during a follow-up observation. Type=87 is the raw flight notice; type=88 is the ground-processed notice. NOTE: bin[12] has different meanings between the two types — num_pkt (number of packets in the integration) for type=87, and seq_num (serial number of this message, 1-3) for type=88.",
   "type": "object",

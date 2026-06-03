@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/bat/lightcurve.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/bat/lightcurve.schema.json",
   "title": "swift.bat.lightcurve",
   "description": "GCN Notice schema for Swift BAT GRB lightcurve notices (packet types 63 and 76: SWIFT_BAT_GRB_LC and SWIFT_BAT_GRB_LC_PROC). The lightcurve notice is issued when the BAT ground software has accumulated sufficient data to generate a lightcurve FITS file for the trigger. Type=63 is the raw flight notice; type=76 is the ground-processed notice.",
   "type": "object",

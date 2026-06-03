@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/image.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/image.schema.json",
   "title": "swift.xrt.image",
   "description": "GCN Notice schema for Swift XRT image notices (packet types 69 and 78: SWIFT_XRT_IMAGE and SWIFT_XRT_IMAGE_PROC). The XRT image notice is issued when the XRT has accumulated sufficient data to generate a CCD image for the trigger. Type=69 is the raw flight notice; type=78 is the ground-processed notice.",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/spectrum.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/spectrum.schema.json",
   "title": "swift.xrt.spectrum",
   "description": "GCN Notice schema for Swift XRT spectrum notices (packet types 68 and 77: SWIFT_XRT_SPEC and SWIFT_XRT_SPEC_PROC). The XRT spectrum notice is issued when the XRT has accumulated sufficient data to generate a spectrum FITS file for the trigger. Type=68 is the raw flight notice; type=77 is the ground-processed notice. Both types share an identical packet word layout. bin[7-8] contain the XRT boresight RA/Dec (ra_pointing/dec_pointing); bin[5-6] the spectrum start time (observation_start); bin[9] the livetime (observation_livetime); bin[10-11] the spectrum stop time (observation_stop); bin[21] the termination condition code.",
   "type": "object",

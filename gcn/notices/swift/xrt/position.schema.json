@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/position.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/position.schema.json",
   "title": "swift.xrt.position",
   "description": "GCN Notice schema for Swift XRT position notices (packet type 67: SWIFT_XRT_POS, and its ground-processed counterpart). The XRT position notice is issued when the XRT on-board centroiding software has calculated a position for the X-ray afterglow. Type=67 (raw flight, subtype='FLIGHT_POSITION') and the ground-processed form (subtype='GROUND_POSITION') share this schema. bin[5-6] contain the observation start time; bin[7-8] the burst RA/Dec (ra/dec); bin[11] the position error (ra_dec_error); bin[16] the roll angle; bin[17] the packed gain/mode/waveform; bin[18] the exposure time (observation_livetime); bin[20-21] the GRB position in XRT coordinates.",
   "type": "object",

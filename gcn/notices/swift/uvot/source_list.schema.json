@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/uvot/source_list.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/uvot/source_list.schema.json",
   "title": "swift.uvot.source_list",
   "description": "GCN Notice schema for Swift UVOT source list notices (packet types 73 and 80: SWIFT_UVOT_SRCLIST and SWIFT_UVOT_SRCLIST_PROC). Type=73 is the raw flight notice; type=80 is the ground-processed notice. Both types share an identical packet word layout; they are distinguished by misc bit 2^30 and the pkt_type value in bin[0]. The bin[22–38] URL field points to the raw source list FITS file in type=73 packets and to the ground-processed source list FITS file in type=80 packets.",
   "type": "object",

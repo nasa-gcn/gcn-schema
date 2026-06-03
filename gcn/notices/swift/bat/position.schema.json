@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/bat/position.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/bat/position.schema.json",
   "title": "swift.bat.position",
   "description": "GCN Notice schema for Swift BAT GRB position notices (packet types 61 and 97: SWIFT_BAT_GRB_POS_ACK and SWIFT_BAT_QUICKLOOK_POSITION).",
   "type": "object",

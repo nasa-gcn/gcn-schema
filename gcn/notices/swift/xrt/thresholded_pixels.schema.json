@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://gcn.nasa.gov/schema/main/swift/xrt/thresholded_pixels.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/thresholded_pixels.schema.json",
   "title": "swift.xrt.thresholded_pixels",
   "description": "GCN Notice schema for Swift XRT thresholded pixels notices (packet types 85 and 86: SWIFT_XRT_THRESHPIX and SWIFT_XRT_THRESHPIX_PROC). Not available to the public — Swift team only. The thresholded pixels notice is issued when the XRT ground software has identified pixels above a threshold in the XRT CCD image. Type=85 is the raw flight notice; type=86 is the ground-processed notice.",
   "type": "object",
