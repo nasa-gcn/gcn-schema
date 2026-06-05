@@ -41,7 +41,6 @@
       "description": "Condition that caused the XRT lightcurve accumulation to terminate. Decoded from term_cond (bin[21]): 0 = Normal (100 bins collected), 1 = Terminated by time (1-99 bins), 2 = Terminated by snapshot (1-99 bins), 3 = Terminated by entering SAA (1-99 bins)."
     },
 
-    
     "lightcurve_fits_file": {
       "type": "object",
       "description": "Dictionary holding the FITS filename and its base64-encoded file content.",
@@ -52,7 +51,6 @@
         "description": "Base64-encoded content of the XRT lightcurve FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
       }
     }
-    
   },
 
   "unevaluatedProperties": false

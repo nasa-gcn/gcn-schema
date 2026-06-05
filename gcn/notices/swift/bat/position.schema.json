@@ -24,6 +24,9 @@
       "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/GeoLocBase.schema.json"
     },
     {
+      "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Pointing.schema.json"
+    },
+    {
       "$ref": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Statistics.schema.json"
     }
   ],
@@ -49,6 +52,11 @@
     "catalog_number": {
       "type": ["integer", "null"],
       "description": "On-board catalog match ID number for the source. Only valid when soln_status bit 2^3 (flt_cat_src) is set, indicating the source matched a known source in the on-board catalog; null otherwise. Derived from cat_num (bin[25])."
+    },
+
+    "merit_value": {
+      "type": ["number", "null"],
+      "description": "On-board figure of merit for the trigger. This determines whether a slew will occur or not from the current target being observed."
     },
 
     "within_10arcmin": {

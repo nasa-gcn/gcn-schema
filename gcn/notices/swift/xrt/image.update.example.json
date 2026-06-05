@@ -19,7 +19,7 @@
   "mission": "SWIFT",
   "observation_livetime": 0.1,
   "observation_start": "2024-09-12T01:48:25.200Z",
-  "pointing_roll": 114.6426,
+  "roll": 114.6426,
   "ra": 124.6327,
   "watchdog_timeout": false
 }

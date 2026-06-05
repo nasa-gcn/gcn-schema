@@ -56,7 +56,6 @@
         "description": "Base64-encoded content of the XRT SPER FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
       }
     }
-
   },
 
   "unevaluatedProperties": false

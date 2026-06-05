@@ -30,14 +30,14 @@
       "type": "string",
       "enum": [
         "Null",
-        "Short image",
-        "Long image",
+        "Short Image",
+        "Long Image",
         "Piled-up Photodiode",
         "Low Rate Photodiode",
         "Windowed Timing",
         "Photo-counting",
-        "Raw data",
-        "Bias map",
+        "Raw Data",
+        "Bias Map",
         "Stop"
       ],
       "description": "XRT CCD readout mode active during the image integration. Decoded from the mode field packed in bin[17] (gain/mod/wav). Determines the type of CCD data product."
@@ -67,10 +67,16 @@
       "maxItems": 2,
       "description": "Centroid position of the brightest source in the XRT CCD image in sub-pixel detector coordinates [x, y], in units of centi-pixels. Derived from cent_x (bin[12]) and cent_y (bin[13]), each converted from centi-pixel units (value × 1e-2)."
     },
+    
+    "centroid_std_dev": {
+      "type": "number",
+      "description": "Standard deviation of the centroid position in degrees."
+    },
+
 
     "centroid_ccd_position": {
       "type": "array",
-      "items": { "type": "integer" },
+      "items": { "type": "number" },
       "minItems": 2,
       "maxItems": 2,
       "description": "Center of the 51×51 pixel postage stamp image in integer detector coordinates [x, y]. Derived from iraw_x (bin[14]) and iraw_y (bin[15])."
@@ -96,11 +102,16 @@
     },
 
     "image_fits_file": {
-      "type": "string",
-      "contentEncoding": "base64",
-      "contentMediaType": "image/fits",
-      "description": "Base64-encoded content of the XRT CCD image FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
+      "type": "object",
+      "description": "Dictionary holding the FITS filename and its base64-encoded file content.",
+      "additionalProperties": {
+        "type": "string",
+        "contentEncoding": "base64",
+        "contentMediaType": "image/fits",
+        "description": "Base64-encoded content of the XRT CCD image FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
+      }
     }
+
   },
 
   "unevaluatedProperties": false

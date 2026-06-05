@@ -27,14 +27,14 @@
       "type": "string",
       "enum": [
         "Null",
-        "Short image",
-        "Long image",
+        "Short Image",
+        "Long Image",
         "Piled-up Photodiode",
         "Low Rate Photodiode",
         "Windowed Timing",
         "Photo-counting",
-        "Raw data",
-        "Bias map",
+        "Raw Data",
+        "Bias Map",
         "Stop"
       ],
       "description": "XRT CCD readout mode active during the spectrum integration. Decoded from the mode field (bin[12])."
@@ -52,8 +52,8 @@
     },
 
     "bias": {
-      "type": "integer",
-      "description": "XRT CCD bias level in ADU (Analogue-to-Digital Units). Derived from the bias field (bin[14]). Used in CCD calibration to establish the baseline signal level."
+      "type": ["integer", "null"],
+      "description": "XRT CCD bias level in ADU (Analogue-to-Digital Units). Derived from the bias field (bin[14]). Used in CCD calibration to establish the baseline signal level. Only meaningful in Low Rate Photodiode mode."
     },
 
     "termination_condition": {
@@ -62,7 +62,9 @@
         "Normal",
         "Terminated by time",
         "Terminated by snapshot",
-        "Terminated by entering SAA"
+        "Terminated by entering SAA",
+        "Spectrum generated at the LRPD-to-WT transition",
+        "Spectrum generated at the WT-to-LRorPC transition"
       ],
       "description": "Condition that caused the XRT spectrum accumulation to terminate. Decoded from the term_code field (bin[21])."
     },
@@ -76,6 +78,26 @@
     "watchdog_timeout": {
       "type": "boolean",
       "description": "Indicates whether this XRT spectrum notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
+    },
+
+    "fits_file_does_not_exist": {
+      "type": ["boolean", "null"],
+      "description": "Indicates whether the processed XRT spectrum had a processing error, and thus does not exist"
+    },
+
+    "first_packet_missing": {
+      "type": ["boolean", "null"],
+      "description": "Indicates whether the assembled raw XRT spectrum had an error related to the first telemetry packet"
+    },
+
+    "second_packet_missing": {
+      "type": ["boolean", "null"],
+      "description": "Indicates whether the assembled raw XRT spectrum had an error related to the second telemetry packet"
+    },
+
+    "third_packet_missing": {
+      "type": ["boolean", "null"],
+      "description": "Indicates whether the assembled raw XRT spectrum had an error related to the third telemetry packet"
     },
 
     "spectrum_fits_file": {
