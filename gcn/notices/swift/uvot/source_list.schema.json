@@ -67,19 +67,17 @@
       "description": "Indicates whether this UVOT source list notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
     },
 
-    "raw_source_list_fits_file": {
-      "type": ["string", "null"],
-      "contentEncoding": "base64",
-      "contentMediaType": "image/fits",
-      "description": "Base64-encoded content of the raw UVOT source list FITS file. Populated from bin[22–38] URL string for the raw flight notice (type=73, misc bit 2^30 = 0); null for the ground-processed notice (type=80)."
-    },
-
-    "processed_source_list_fits_files": {
-      "type": ["string", "null"],
-      "contentEncoding": "base64",
-      "contentMediaType": "image/fits",
-      "description": "Base64-encoded content of the ground-processed UVOT source list FITS file. Populated from bin[22–38] URL string for the ground-processed notice (type=80, misc bit 2^30 = 1); null for the raw flight notice (type=73)."
+    "source_list_fits_file": {
+      "type": "object",
+      "description": "Dictionary holding the FITS filename and its base64-encoded file content.",
+      "additionalProperties": {
+        "type": "string",
+        "contentEncoding": "base64",
+        "contentMediaType": "image/fits",
+        "description": "Base64-encoded content of the raw UVOT source list FITS file. Populated from bin[22–38] URL string for the raw flight notice (type=73, misc bit 2^30 = 0); null for the ground-processed notice (type=80). OR Base64-encoded content of the ground-processed UVOT source list FITS file. Populated from bin[22–38] URL string for the ground-processed notice (type=80, misc bit 2^30 = 1); null for the raw flight notice (type=73)."
+      }
     }
+
   },
 
   "unevaluatedProperties": false

@@ -66,20 +66,18 @@
       "type": "boolean",
       "description": "Indicates whether this UVOT image notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
     },
-
-    "raw_image_fits_file": {
-      "type": ["string", "null"],
-      "contentEncoding": "base64",
-      "contentMediaType": "image/fits",
-      "description": "Base64-encoded content of the raw UVOT image FITS file. Populated from bin[22–38] URL string for the raw flight notice (type=72, misc bit 2^30 = 0); null for the ground-processed notice (type=79)."
-    },
-
-    "processed_image_fits_file": {
-      "type": ["string", "null"],
-      "contentEncoding": "base64",
-      "contentMediaType": "image/fits",
-      "description": "Base64-encoded content of the ground-processed UVOT image FITS file. Populated from bin[22–38] URL string for the ground-processed notice (type=79, misc bit 2^30 = 1); null for the raw flight notice (type=72)."
+    
+    "image_fits_file": {
+      "type": "object",
+      "description": "Dictionary holding the FITS filename and its base64-encoded file content.",
+      "additionalProperties": {
+        "type": "string",
+        "contentEncoding": "base64",
+        "contentMediaType": "image/fits",
+        "description": "Base64-encoded content of the raw UVOT image FITS file. Populated from bin[22–38] URL string for the raw flight notice (type=72, misc bit 2^30 = 0); null for the ground-processed notice (type=79). OR Base64-encoded content of the ground-processed UVOT image FITS file. Populated from bin[22–38] URL string for the ground-processed notice (type=79, misc bit 2^30 = 1); null for the raw flight notice (type=72)."
+      }
     }
+
   },
 
   "unevaluatedProperties": false

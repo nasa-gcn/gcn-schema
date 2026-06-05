@@ -46,11 +46,16 @@
     },
 
     "lightcurve_fits_file": {
-      "type": "string",
-      "contentEncoding": "base64",
-      "contentMediaType": "image/fits",
-      "description": "Base64-encoded content of the BAT lightcurve FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
+      "type": "object",
+      "description": "Dictionary holding the FITS filename and its base64-encoded file content.",
+      "additionalProperties": {
+        "type": "string",
+        "contentEncoding": "base64",
+        "contentMediaType": "image/fits",
+        "description":  "Base64-encoded content of the BAT lightcurve FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
+      }
     },
+
 
     "watchdog_timeout": {
       "type": "boolean",
