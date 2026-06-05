@@ -5,7 +5,7 @@
   "alert_type": "initial",
   "dec": 34.0001,
   "energy_flux": 8.636841e-8,
-  "id": 1253910,
+  "id": "1253910",
   "image_snr": 10.24,
   "instrument": "XRT",
   "mission": "SWIFT",

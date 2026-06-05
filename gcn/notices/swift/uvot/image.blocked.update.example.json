@@ -7,7 +7,7 @@
   "filter": "Blocked",
   "grb_position": [0, 0],
   "grb_position_source": "Window Position",
-  "id": 1253910,
+  "id": "1253910",
   "image_fits_files": {
     "uvot_catalog_image.fits.gz": "place holder",
     "uvot_field_image.ps.gz": "place holder",

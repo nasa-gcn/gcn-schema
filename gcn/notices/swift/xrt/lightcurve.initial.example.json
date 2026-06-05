@@ -4,7 +4,7 @@
   "alert_type": "initial",
   "collected_bins": 100,
   "dec_pointing": 33.9936,
-  "id": 1253910,
+  "id": "1253910",
   "instrument": "XRT",
   "lightcurve_fits_file": {
     "xrt_raw_lc.fits": "place holder"

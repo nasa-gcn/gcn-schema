@@ -3,7 +3,7 @@
   "alert_datetime": "2026-05-26T21:59:44.930Z",
   "alert_type": "update",
   "dec_pointing": 33.993900000000004,
-  "id": 1253910,
+  "id": "1253910",
   "instrument": "XRT",
   "mission": "SWIFT",
   "num_events": 120,

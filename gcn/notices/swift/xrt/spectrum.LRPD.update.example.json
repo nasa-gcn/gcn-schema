@@ -7,7 +7,7 @@
   "ccd_waveform_id": 82,
   "dec_pointing": 33.9947,
   "fits_file_does_not_exist": false,
-  "id": 1253910,
+  "id": "1253910",
   "instrument": "XRT",
   "mission": "SWIFT",
   "observation_livetime": 1.37,

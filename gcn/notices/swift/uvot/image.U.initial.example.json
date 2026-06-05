@@ -7,7 +7,7 @@
   "filter": "U",
   "grb_position": [865, 1081],
   "grb_position_source": "XRT Position",
-  "id": 1253910,
+  "id": "1253910",
   "image_fits_files": {
     "uvot_raw_image.fits": "place holder"
   },

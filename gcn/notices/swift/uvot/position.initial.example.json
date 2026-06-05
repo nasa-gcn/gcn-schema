@@ -1,7 +1,7 @@
 {
   "mission": "SWIFT",
   "instrument": "UVOT",
-  "id": 1253910,
+  "id": "1253910",
   "alert_tense": "current",
   "alert_type": "initial",
   "observation_start": "2024-09-12T01:48:31.000Z",

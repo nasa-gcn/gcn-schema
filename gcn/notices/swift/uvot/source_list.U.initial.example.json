@@ -6,7 +6,7 @@
   "dec_pointing": 33.993700000000004,
   "detection_threshold": 11,
   "filter": "U",
-  "id": 1253910,
+  "id": "1253910",
   "image_extent": [1344, 1560],
   "image_offset": [385, 601],
   "instrument": "UVOT",

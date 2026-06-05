@@ -11,7 +11,7 @@
   "centroid_std_dev": 0.0013000000000000002,
   "dec": 34.0001,
   "grb_xrt_coordinates": [1.45, 50.620000000000005],
-  "id": 1253910,
+  "id": "1253910",
   "image_fits_file": {
     "xrt_raw_image.fits": "place holder"
   },
