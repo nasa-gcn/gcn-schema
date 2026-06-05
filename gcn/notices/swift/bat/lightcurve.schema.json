@@ -34,6 +34,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "trigger_index": {
       "type": "integer",
       "description": "Row number in the BAT on-board flight software trigger table corresponding to the highest-significance successful trigger criterion. Derived from trig_index (bin[17])."
@@ -61,5 +62,5 @@
       "description": "Indicates whether the StarTracker was locked at the time of the BAT trigger. True = locked; False = not locked (trigger is probably bogus). Derived from soln_status bit 2^10 (st_loss_lock) via lookup table. Only valid if misc bit 2^24 is set."
     }
   },
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }

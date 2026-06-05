@@ -22,6 +22,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "watchdog_timeout": {
       "type": "boolean",
       "description": "Indicates whether this XRT thresholded pixels notice was forced out early via the watchdog timeout mechanism rather than completing normally. Derived from misc bit 2^29."
@@ -34,5 +35,5 @@
     }
   },
 
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }

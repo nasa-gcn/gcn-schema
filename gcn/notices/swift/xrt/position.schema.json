@@ -25,6 +25,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "energy_flux": {
       "type": ["number", "null"],
       "minimum": 0.0,
@@ -78,5 +79,5 @@
     }
   },
 
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }

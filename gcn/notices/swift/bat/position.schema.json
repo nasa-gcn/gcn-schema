@@ -28,6 +28,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "trigger_index": {
       "type": "integer",
       "description": "Row number in the BAT on-board flight software trigger table corresponding to the highest-significance successful trigger criterion. Derived from trig_index (bin[17])."
@@ -66,5 +67,5 @@
     }
   },
 
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }

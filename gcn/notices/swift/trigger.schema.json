@@ -16,6 +16,7 @@
     { "$ref": "../core/AdditionalInfo.schema.json" }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "swift_spacecraft": {
       "type": "object",
       "description": "Swift spacecraft-level information",

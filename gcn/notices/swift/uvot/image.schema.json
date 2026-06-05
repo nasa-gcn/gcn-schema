@@ -22,6 +22,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "exposure_id": {
       "type": "integer",
       "description": "UVOT exposure ID expressed in spacecraft seconds. Derived from expo_id (bin[11])."
@@ -81,5 +82,5 @@
     }
   },
 
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }

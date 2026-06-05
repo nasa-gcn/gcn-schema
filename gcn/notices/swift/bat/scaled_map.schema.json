@@ -31,6 +31,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "scaled_map_fits_file": {
       "type": "string",
       "contentEncoding": "base64",
@@ -49,5 +50,5 @@
     }
   },
 
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }

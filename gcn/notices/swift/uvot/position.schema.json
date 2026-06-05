@@ -25,6 +25,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "uvot_xrt_distance": {
       "type": "number",
       "minimum": 0.0,
@@ -32,5 +33,5 @@
     }
   },
 
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }

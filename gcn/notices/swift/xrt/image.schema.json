@@ -25,6 +25,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "ccd_readout_mode": {
       "type": "string",
       "enum": [
@@ -102,5 +103,5 @@
     }
   },
 
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }

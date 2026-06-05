@@ -22,6 +22,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "number_packets": {
       "type": ["integer", "null"],
       "minimum": 1,
@@ -53,5 +54,5 @@
     }
   },
 
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }

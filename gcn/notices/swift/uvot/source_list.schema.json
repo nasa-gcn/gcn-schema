@@ -22,6 +22,7 @@
     }
   ],
   "properties": {
+    "$schema": { "type": "string", "format": "uri" },
     "background_mean": {
       "type": "number",
       "description": "Mean value of the background level in the UVOT exposure. Derived from bkg_mean (bin[11]) converted from 0.001 units (value × 1e-3)."
@@ -81,5 +82,5 @@
     }
   },
 
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }
