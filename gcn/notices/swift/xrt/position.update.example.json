@@ -17,15 +17,8 @@
   "readout_amplifier": 1,
   "readout_waveform": 31,
   "tam_values": [
-    [
-      100.0,
-      100.0
-    ],
-    [
-      100.0,
-      100.0
-    ]
+    [100.0, 100.0],
+    [100.0, 100.0]
   ],
   "xrt_bat_distance": 0.0
 }
-

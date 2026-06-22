@@ -55,7 +55,6 @@
       "description": "[width, height] of the Image subarray in detector coordinates (0–2095)."
     },
 
-    
     "n_frames": {
       "type": "integer",
       "minimum": 1,
@@ -67,7 +66,7 @@
       "enum": ["1x1", "2x2", "4x4", "8x8", "16x16", "32x32", "64x64"],
       "description": "Pixel binning of the UVOT image. Decoded from misc bits 2^0–2^3 (4-bit value) via lookup: 0=1x1 (no binning), 1=2x2, 2=4x4, 3=8x8, 4=16x16, 5=32x32, 6=64x64."
     },
-    
+
     "grb_position": {
       "type": "array",
       "items": { "type": "integer" },
@@ -75,7 +74,6 @@
       "maxItems": 2,
       "description": "Position of the GRB/transient in unbinned detector coordinates."
     },
-
 
     "grb_position_source": {
       "type": "string",

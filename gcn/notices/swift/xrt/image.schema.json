@@ -67,12 +67,11 @@
       "maxItems": 2,
       "description": "Centroid position of the brightest source in the XRT CCD image in sub-pixel detector coordinates [x, y], in units of centi-pixels. Derived from cent_x (bin[12]) and cent_y (bin[13]), each converted from centi-pixel units (value × 1e-2)."
     },
-    
+
     "centroid_std_dev": {
       "type": "number",
       "description": "Standard deviation of the centroid position in degrees."
     },
-
 
     "centroid_ccd_position": {
       "type": "array",
@@ -111,7 +110,6 @@
         "description": "Base64-encoded content of the XRT CCD image FITS file. The raw binary packet (bin[22–38]) contains only the filename portion of the URL pointing to this file; the base64-encoded file content is populated during GCN ground processing."
       }
     }
-
   },
 
   "unevaluatedProperties": false
