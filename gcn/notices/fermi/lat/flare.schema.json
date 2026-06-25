@@ -16,7 +16,7 @@
       "$ref": "../../core/Event.schema.json"
     },
     {
-      "$ref": "../../../core/Localization.schema.json"
+      "$ref": "../../core/Localization.schema.json"
     },
     {
       "$ref": "../../../core/Reporter.schema.json"
