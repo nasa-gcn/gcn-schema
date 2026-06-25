@@ -7,7 +7,7 @@
   "unevaluatedProperties": false,
   "allOf": [
     {
-      "$ref": "../../../core/Alert.schema.json"
+      "$ref": "../../core/Alert.schema.json"
     },
     {
       "$ref": "../../../core/DateTime.schema.json"
