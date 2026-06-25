@@ -19,7 +19,7 @@
       "$ref": "../../core/Localization.schema.json"
     },
     {
-      "$ref": "../../../core/Reporter.schema.json"
+      "$ref": "../../core/Reporter.schema.json"
     },
     {
       "$ref": "../../core/Spectral.schema.json"
