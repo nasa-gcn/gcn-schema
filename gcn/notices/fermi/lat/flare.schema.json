@@ -13,7 +13,7 @@
       "$ref": "../../core/DateTime.schema.json"
     },
     {
-      "$ref": "../../../core/Event.schema.json"
+      "$ref": "../../core/Event.schema.json"
     },
     {
       "$ref": "../../../core/Localization.schema.json"
