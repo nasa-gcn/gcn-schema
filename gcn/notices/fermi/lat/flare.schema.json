@@ -25,7 +25,7 @@
       "$ref": "../../../core/Spectral.schema.json"
     },
     {
-      "$ref": "../../../core/models/PowerLaw.schema.json"
+      "$ref": "../../core/models/PowerLaw.schema.json"
     }
   ],
   "properties": {
