@@ -1,29 +1,30 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/snews2/coincidence.schema.json",
-  "alert_datetime": "2026-04-03T16:23:21.937Z",
-  "alert_tense": "test",
+  "alert_datetime": "2026-06-18T16:23:21.937Z",
+  "alert_tense": "current",
   "alert_type": "initial",
-  "id": "SNEWS_Coincidence_ALERT 2026-04-03T16:23:21.937Z",
+  "id": "SNEWS_Coincidence_ALERT 2026-06-18T16:23:21.937Z",
   "mission": "SNEWS",
   "messenger": "Neutrino",
   "record_number": 1,
-  "trigger_time": "2026-04-03T16:21:07.312Z",
+  "trigger_time": "2026-06-18T16:21:07.312Z",
   "far": 0.0001,
-  "healpix_url": "https://example.com/skymap.fits",
+  "healpix_url": "https://snews2.org/skymaps/123e4567-e89b-12d3-a456-426614174000.fits",
   "snews_schema_version": "1.0",
   "snews2_tier": "CoincidenceTier",
   "detector_status": {
     "Super-K": "triggered",
     "IceCube": "triggered",
-    "KamLAND": "triggered"
+    "KamLAND": "triggered",
+    "Borexino": "normal"
   },
   "event_times_utc": [
-    "2026-04-03T16:21:07.312Z",
-    "2026-04-03T16:21:07.312Z",
-    "2026-04-03T16:21:07.312Z"
+    "2026-06-18T16:21:07.312Z",
+    "2026-06-18T16:21:07.315Z",
+    "2026-06-18T16:21:07.311Z"
   ],
   "tier_data": {
-    "neutrino_time_utc": "2026-04-03T16:21:07.312000Z",
+    "neutrino_time_utc": "2026-06-18T16:21:07.312000Z",
     "p_values": [0.01, 0.05, 0.08],
     "false_alarm_prob": 0.0001
   }
