@@ -16,7 +16,7 @@
     "Super-K": "triggered",
     "IceCube": "triggered",
     "KamLAND": "triggered",
-    "Borexino": "normal"
+    "Borexino": "on"
   },
   "event_times_utc": [
     "2026-06-18T16:21:07.312Z",
