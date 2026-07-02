@@ -6,7 +6,7 @@
   "alert_type": "initial",
   "alert_tense": "current",
   "trigger_time": "2025-07-02T14:35:59Z",
-  "id": "858800020",
+  "id": "0858800020",
   "ra": 285.6,
   "dec": -9.2,
   "flux": 2.0e-10,
