@@ -36,15 +36,15 @@
     },
     "flux": {
       "type": "number",
-      "description": "X-ray flux of the event in the energy band specified by spectral_band and spectral_band_units [erg/cm^2/s]."
+      "description": "X-ray flux of the event in the energy band specified by flux_spectral_band and flux_spectral_unit [erg/cm^2/s]."
     },
     "flux_error": {
       "type": "number",
-      "description": "1-sigma statistical uncertainty on event_flux [erg/cm^2/s]."
+      "description": "1-sigma statistical uncertainty on flux [erg/cm^2/s]."
     },
     "detection_timescale": {
       "type": "number",
-      "description": "Detection time scale of the event; unit specified by event_tunits."
+      "description": "Detection time scale of the event; unit specified by detection_timescale_units."
     },
     "detection_timescale_units": {
       "type": "string",
