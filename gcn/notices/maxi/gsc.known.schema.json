@@ -21,15 +21,15 @@
     "$schema": { "type": "string", "format": "uri" },
     "flux": {
       "type": "number",
-      "description": "Representative X-ray flux of the source in the most significant energy band specified by spectral_band and spectral_band_units [erg/cm^2/s]."
+      "description": "Representative X-ray flux of the source in the most significant energy band specified by flux_spectral_band and flux_spectral_unit [erg/cm^2/s]."
     },
     "flux_error": {
       "type": "number",
-      "description": "1-sigma statistical uncertainty on source_flux [erg/cm^2/s]."
+      "description": "1-sigma statistical uncertainty on flux [erg/cm^2/s]."
     },
     "detection_timescale": {
       "type": "number",
-      "description": "Detection time scale of the source; unit specified by source_tunits."
+      "description": "Detection time scale of the source; unit specified by detection_timescale_units."
     },
     "detection_timescale_units": {
       "type": "string",

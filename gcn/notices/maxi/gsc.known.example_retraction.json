@@ -1,0 +1,12 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.known.schema.json",
+  "mission": "MAXI",
+  "instrument": "GSC",
+  "alert_datetime": "2025-07-05T04:00:00Z",
+  "alert_type": "retraction",
+  "alert_tense": "current",
+  "trigger_time": "2025-07-02T14:35:59Z",
+  "id": "0858800020",
+  "event_name": "Swift J1858.6-0814",
+  "record_number": 2
+}
