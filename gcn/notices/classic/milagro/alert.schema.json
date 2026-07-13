@@ -1,0 +1,43 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/milagro/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "MILAGRO trigger Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "n_events": {
+      "type": "number",
+      "description": "The integral fluence of the burst over the duration of the trigger."
+    },
+    "bkg_events": {
+      "type": "number",
+      "description": "The counts in a 2 hour interval prior to the trigger."
+    },
+    "duration": {
+      "type": "number",
+      "description": "The interval of the search window."
+    },
+    "stat_signif": {
+      "type": "number",
+      "description": "The statistical significance of the detection."
+    },
+    "annual_rate": {
+      "type": "number",
+      "description": "The number of times per year that a fluctuation of this significance is expexted to be seen."
+    },
+    "zenith": {
+      "type": "number",
+      "description": "The zenith angle of the MILAGRO instrument during the trigger."
+    }
+  }
+}

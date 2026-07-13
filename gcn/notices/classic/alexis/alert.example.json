@@ -1,0 +1,15 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/alexis/alert.schema.json",
+  "mission": "ALEXIS",
+  "end_datetime": "2099-12-30T11:40:11Z",
+  "map_duration": 48,
+  "notice_type": "Initial",
+  "ra": 193.62,
+  "dec": 23.41,
+  "ra_dec_error": 0.66,
+  "containment_probability": 0.9973002039367398,
+  "systematic_included": true,
+  "alpha": 10.8,
+  "telescope_id": "1B",
+  "energy_bandpass": 70
+}

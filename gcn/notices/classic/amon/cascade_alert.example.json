@@ -1,0 +1,19 @@
+{
+  "alert_datetime": "2021-4-16T02:03:57Z",
+  "trigger_time": "2021-04-16T01:58:00.70Z",
+  "ra": 194.1867,
+  "dec": -6.2888,
+  "ra_dec_error": 19.85,
+  "ra_dec_error_50": 10.89,
+  "record_number": 1,
+  "energy": 30.2,
+  "signalness": 0.80427,
+  "far": 2.973744292237443e-8,
+  "additional_info": "IceCube Cascade event.\nThe position error is the combined statistical and the systematic.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/amon/alert.schema.json",
+  "mission": "AMON",
+  "notice_type": "Cascade",
+  "id": ["135196_31863828"],
+  "systematic_included": true,
+  "event_name": ["IceCubeCascade-210416a"]
+}

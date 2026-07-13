@@ -1,0 +1,43 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/integral/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "INTEGRAL GRB Trigger Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Pointing.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "notice_type": {
+      "type": "string",
+      "enum": [
+        "SPI-ACS",
+        "Weak",
+        "Refined",
+        "Wakeup",
+        "Offline",
+        "Pointing Direction"
+      ]
+    },
+    "intensity_snr": {
+      "type": "number",
+      "description": "The intensity of the burst in sigma units. Essentiallya signal/noise metric."
+    },
+    "next_sc_ra": {
+      "type": "number",
+      "description": "The RA at which the spacecraft will point after this slew."
+    },
+    "next_sc_dec": {
+      "type": "number",
+      "description": "The Dec at which the spacecraft will point after this slew."
+    }
+  }
+}

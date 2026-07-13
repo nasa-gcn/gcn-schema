@@ -1,0 +1,79 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/amon/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "AMON Neutrino Trigger Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Pointing.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "notice_type": {
+      "type": "string",
+      "enum": [
+        "Astrotrack Bronze",
+        "Astrotrack Gold",
+        "Cascade",
+        "EHE",
+        "HESE",
+        "Neutrino-EM Coincidence",
+        "Burst"
+      ]
+    },
+    "ra_dec_error_50": {
+      "type": "number",
+      "description": "The radies of circle that contains on average 50\\% t of the sources"
+    },
+    "energy": {
+      "type": "number",
+      "description": "The lower bound estimate of the neutrino."
+    },
+    "signalness": {
+      "type": "number",
+      "description": "The probability that the neutrino event was signal and track-like."
+    },
+    "delta_time": {
+      "type": "number",
+      "description": "Time window of the burst"
+    },
+    "sigma_time": {
+      "type": "number",
+      "description": "The uncertainity of the time window"
+    },
+    "p_value": {
+      "type": "number",
+      "description": "The chance that the alert is an atmospheric neutrino."
+    },
+    "event_date": {
+      "type": "string",
+      "description": "The date-based name for the event."
+    },
+    "n_events": {
+      "type": "number",
+      "description": "The number of events that occured during the deltaT window."
+    },
+    "charge": {
+      "type": "number",
+      "description": "The total neutrino event charge in photo-electrons"
+    },
+    "false_positive": {
+      "type": "number",
+      "description": "Specifies how often a trigger of this intensity would happend from just noise fluctuation."
+    },
+    "coincidence_with": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 9,
+      "description": "The instruments with a coincident trigger."
+    }
+  }
+}

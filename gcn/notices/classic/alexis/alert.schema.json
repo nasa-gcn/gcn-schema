@@ -1,0 +1,39 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/alexis/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "ALEXIS UV Transient Alert",
+  "allOf": [
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "end_datetime": {
+      "type": "string",
+      "description": "The time at which the map integration ended [ISO 8601]"
+    },
+    "notice_type": {
+      "type": "string",
+      "description": "ALEXIS has two notice types: Initial and Final."
+    },
+    "map_duration": {
+      "type": "number",
+      "description": "The amount of time that went into accumalating the data where the transient was found [hrs]."
+    },
+    "alpha": {
+      "type": "number",
+      "description": "Parameterizes the statistical significance of the detection. alpha=-log10(probability_of_false_detection)."
+    },
+    "telescope_id": {
+      "type": "string",
+      "description": "The telescope in which the transient was identified."
+    },
+    "energy_bandpass": {
+      "type": "number",
+      "description": "The energy bandpass associated with the telescope [eV]"
+    }
+  }
+}
