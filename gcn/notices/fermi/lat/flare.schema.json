@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v7.2.0/gcn/notices/fermi/lat/flare.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/flare.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Fermi-LAT Flare Advocate Alert",
