@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/maxi/gsc.unknown.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v7.2.1/gcn/notices/maxi/gsc.unknown.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "unevaluatedProperties": false,
