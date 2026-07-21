@@ -1,0 +1,18 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/archive_alert.schema.json",
+  "mission": "HEASARC",
+  "alert_datetime": "2022-05-04T00:00:00Z",
+  "alert_tense": "archival",
+  "alert_type": "initial",
+  "data_archive_page": "https://heasarc.gsfc.nasa.gov/FTP/nustar/data/obs/07/9/90710001002/",
+  "data_archive_s3": "https://nasa-heasarc.s3.amazonaws.com/nustar/data/obs/07/9/90710001002/",
+  "obs_id": "90710001002",
+  "target_name": "NGC424",
+  "s_ra": "17.9042",
+  "s_dec": "-38.1031",
+  "t_min": "59146.6848",
+  "t_max": "59147.5147",
+  "mission_page": "https://heasarc.gsfc.nasa.gov/docs/nustar/",
+  "facility_name": "Nustar",
+  "instrument_name": "Nustar"
+}

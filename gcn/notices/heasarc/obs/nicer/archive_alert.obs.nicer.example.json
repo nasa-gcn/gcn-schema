@@ -1,0 +1,18 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/archive_alert.schema.json",
+  "mission": "HEASARC",
+  "alert_datetime": "2022-05-04T00:00:00Z",
+  "alert_tense": "archival",
+  "alert_type": "initial",
+  "data_archive_page": "https://heasarc.gsfc.nasa.gov//FTP/nicer/data/obs/2021_07/4202210118/",
+  "data_archive_s3": "https://nasa-heasarc.s3.amazonaws.com/nicer/data/obs/2021_07/4202210118/",
+  "obs_id": "4202210118",
+  "target_name": "GRO_J1744-28",
+  "s_ra": "0",
+  "s_dec": "-90",
+  "t_min": "59396.6685",
+  "t_max": "59396.6773",
+  "mission_page": "https://heasarc.gsfc.nasa.gov/docs/ixpe/",
+  "facility_name": "NICER",
+  "instrument_name": "NICER"
+}

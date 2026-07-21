@@ -1,0 +1,19 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/heasarc/archive_alert.schema.json",
+  "mission": "HEASARC",
+  "alert_datetime": "2022-05-04T00:00:00Z",
+  "alert_tense": "archival",
+  "alert_type": "initial",
+  "observation_start": "2022-02-21T16:12:23.000",
+  "data_archive_page": "https://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2018_06/00048691084/",
+  "data_archive_s3": "https://nasa-heasarc.s3.amazonaws.com/swift/data/obs/2018_06/00048691084/",
+  "obs_id": "00048691084",
+  "target_name": "SMCJ0050.3-7424",
+  "s_ra": "12.55869605",
+  "s_dec": "-74.39978118",
+  "t_min": "58281.15259",
+  "t_max": "58281.188380",
+  "mission_page": "https://heasarc.gsfc.nasa.gov/docs/swift/",
+  "facility_name": "IXPE",
+  "instrument_name": "IXPE"
+}
