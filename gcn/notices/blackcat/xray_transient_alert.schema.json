@@ -1,0 +1,71 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/blackcat/xray_transient_alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "BlackCAT Alert",
+  "description": "Generate alerts from the detection of soft X-ray transients.",
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Distance.schema.json" },
+    { "$ref": "../core/Duration.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/GeoLocBase.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Pointing.schema.json" },
+    { "$ref": "../core/Redshift.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "detector_status": {
+      "type": "array",
+      "items": { "$ref": "../core/DetectorStatus.schema.json" },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "Triggered detectors"
+    },
+    "follow_up_event": {
+      "type": "string",
+      "description": "Name or trigger time of the external trigger that launched the search."
+    },
+    "follow_up_type": {
+      "type": "string",
+      "description": "Type of external trigger that launched the search, eg GW, GRB, etc."
+    },
+    "known_source": {
+      "type": "string",
+      "description": "Name of a known source that this event has been associated to."
+    },
+    "association_probability": {
+      "type": "number",
+      "description": "A score of known source association probability from poorly associated (0) to confidently associated (1)"
+    },
+    "image_peak_value": {
+      "type": "number",
+      "description": "Peak value of the source [image units]"
+    },
+    "image_peak_ra": {
+      "type": "number",
+      "description": "RA of the peak [deg]"
+    },
+    "image_peak_dec": {
+      "type": "number",
+      "description": "DEC of the peak [deg]"
+    },
+    "source_offset_ra": {
+      "type": "number",
+      "description": "RA angle of the offset between the detected source and catalogued position [arcsec]"
+    },
+    "source_offset_dec": {
+      "type": "number",
+      "description": "DEC angle of the offset between the detected source and catalogued position [arcsec]"
+    },
+    "light_curve_url": {
+      "type": "string",
+      "description": "URL of the quicklook light curve plot"
+    }
+  }
+}
