@@ -1,0 +1,173 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/FluxMeasurement.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Flux Measurement",
+  "description": "Brightness measurement of a source in any band, as a magnitude, flux density, or band-integrated flux.",
+  "required": ["band", "value", "is_detection"],
+  "properties": {
+    "time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Mid-exposure epoch of this measurement [ISO 8601, UTC]."
+    },
+    "exposure": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Total exposure time [s]."
+    },
+    "telescope": {
+      "type": "string",
+      "description": "Telescope that made this measurement (e.g., GTC, ZTF, VLA)."
+    },
+    "instrument": {
+      "type": "string",
+      "description": "Instrument used, where it is distinguished from the telescope (e.g., OSIRIS, EP-FXT)."
+    },
+    "band": {
+      "description": "Part of the spectrum measured.",
+      "oneOf": [
+        {
+          "type": "object",
+          "title": "Named filter",
+          "required": ["filter"],
+          "properties": {
+            "filter": {
+              "type": "string",
+              "description": "Filter as named by the observer (e.g., u, g, r, Rc, F160W, clear)."
+            },
+            "filter_id": {
+              "type": "string",
+              "description": "Canonical identifier for the filter, preferably an SVO Filter Profile Service id (e.g., SLOAN/SDSS.r)."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "title": "Point on the spectrum",
+          "required": ["spectral_point", "spectral_unit"],
+          "properties": {
+            "spectral_point": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Frequency, wavelength or energy at which the measurement was made."
+            },
+            "spectral_unit": {
+              "type": "string",
+              "enum": ["keV", "nm", "MHz", "GHz"],
+              "description": "Unit of spectral_point."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "title": "Bounded band",
+          "required": ["spectral_band", "spectral_unit"],
+          "properties": {
+            "spectral_band": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2,
+              "description": "Low and high bounds of the band the value is integrated over."
+            },
+            "spectral_unit": {
+              "type": "string",
+              "enum": ["keV", "nm", "MHz", "GHz"],
+              "description": "Unit of spectral_band."
+            }
+          }
+        }
+      ]
+    },
+    "value": {
+      "type": "number",
+      "description": "Measured value where is_detection is true, upper limit where it is false."
+    },
+    "value_error": {
+      "description": "1-sigma statistical uncertainty on value, in the same unit.",
+      "oneOf": [
+        {
+          "type": "number",
+          "description": "Symmetric statistical error."
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "Asymmetric statistical errors."
+        }
+      ]
+    },
+    "is_detection": {
+      "type": "boolean",
+      "description": "True where value is a measurement, false where it is an upper limit."
+    },
+    "limit_sigma": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Significance of the upper limit [sigma], where is_detection is false. Circulars most often quote 3."
+    },
+    "extinction_corrected": {
+      "type": "boolean",
+      "description": "True where Galactic extinction has already been removed from value."
+    },
+    "calibration_reference": {
+      "type": "string",
+      "description": "Catalogue the measurement was calibrated against (e.g., PS1, SDSS, APASS, 2MASS, Gaia)."
+    }
+  },
+  "oneOf": [
+    {
+      "title": "Apparent magnitude",
+      "required": ["kind", "unit"],
+      "properties": {
+        "kind": {
+          "const": "magnitude"
+        },
+        "unit": {
+          "enum": ["AB", "Vega", "STMag"],
+          "description": "Magnitude system (zeropoint convention) for value."
+        }
+      }
+    },
+    {
+      "title": "Flux density",
+      "required": ["kind", "unit"],
+      "properties": {
+        "kind": {
+          "const": "flux_density"
+        },
+        "unit": {
+          "enum": [
+            "Jy",
+            "mJy",
+            "uJy",
+            "erg/cm2/s/Hz",
+            "erg/cm2/s/keV",
+            "erg/cm2/s/nm"
+          ],
+          "description": "Unit of the flux density."
+        }
+      }
+    },
+    {
+      "title": "Band-integrated flux",
+      "required": ["kind", "unit"],
+      "properties": {
+        "kind": {
+          "const": "flux"
+        },
+        "unit": {
+          "enum": ["erg/cm2/s", "ph/cm2/s"],
+          "description": "Unit of the flux integrated over the band."
+        }
+      }
+    }
+  ]
+}
