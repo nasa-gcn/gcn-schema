@@ -1,0 +1,19 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/sper.schema.json",
+  "alert_datetime": "2026-05-26T21:59:23.750Z",
+  "alert_type": "initial",
+  "dec_pointing": 33.9938,
+  "id": "1253910",
+  "instrument": "XRT",
+  "mission": "SWIFT",
+  "number_events": 56,
+  "number_packets": 13,
+  "observation_livetime": 32.594,
+  "observation_start": "2024-09-12T02:04:25.970Z",
+  "observation_stop": "2024-09-12T02:05:01.070Z",
+  "ra_pointing": 124.64800000000001,
+  "sper_fits_file": {
+    "xrt_raw_sper.fits": "place holder"
+  },
+  "watchdog_timeout": true
+}

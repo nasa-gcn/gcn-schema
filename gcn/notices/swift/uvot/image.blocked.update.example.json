@@ -1,0 +1,27 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/uvot/image.schema.json",
+  "alert_datetime": "2026-05-26T22:00:03.101Z",
+  "alert_type": "update",
+  "dec_pointing": 0.0,
+  "exposure_id": 65537,
+  "filter": "Blocked",
+  "grb_position": [0, 0],
+  "grb_position_source": "Window Position",
+  "id": "1253910",
+  "image_fits_files": {
+    "uvot_catalog_image.fits.gz": "place holder",
+    "uvot_field_image.ps.gz": "place holder",
+    "uvot_sky_image.fits.gz": "place holder",
+    "uvot_sources_image.fits.gz": "place holder"
+  },
+  "image_offset": [911, 1282],
+  "image_size": [800, 1821],
+  "instrument": "UVOT",
+  "mission": "SWIFT",
+  "n_frames": 1122322716,
+  "observation_start": "2024-09-12T02:07:36.540Z",
+  "pixel_binning": "1x1",
+  "ra_pointing": 0.0,
+  "roll": 33.9938,
+  "watchdog_timeout": true
+}

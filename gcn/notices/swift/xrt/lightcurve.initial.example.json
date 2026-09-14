@@ -1,0 +1,18 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/lightcurve.schema.json",
+  "alert_datetime": "2026-05-26T21:56:51.815Z",
+  "alert_type": "initial",
+  "collected_bins": 100,
+  "dec_pointing": 33.9936,
+  "id": "1253910",
+  "instrument": "XRT",
+  "lightcurve_fits_file": {
+    "xrt_raw_lc.fits": "place holder"
+  },
+  "mission": "SWIFT",
+  "observation_livetime": 107.35000000000001,
+  "observation_start": "2024-09-12T01:48:28.050Z",
+  "observation_stop": "2024-09-12T01:50:13.660Z",
+  "ra_pointing": 124.64800000000001,
+  "termination_condition": "Normal"
+}

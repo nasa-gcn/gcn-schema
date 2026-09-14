@@ -1,0 +1,24 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/spectrum.schema.json",
+  "alert_datetime": "2026-05-26T21:59:04.591Z",
+  "alert_type": "initial",
+  "bias": null,
+  "ccd_readout_mode": "Windowed Timing",
+  "ccd_waveform_id": 60,
+  "dec_pointing": 33.993700000000004,
+  "first_packet_missing": false,
+  "id": "1253910",
+  "instrument": "XRT",
+  "mission": "SWIFT",
+  "observation_livetime": 955.38,
+  "observation_start": "2024-09-12T01:48:28.840Z",
+  "observation_stop": "2024-09-12T02:04:24.430Z",
+  "ra_pointing": 124.6478,
+  "second_packet_missing": false,
+  "spectrum_fits_file": {
+    "xrt_raw_spec2.fits": "place holder"
+  },
+  "termination_condition": "Spectrum generated at the WT-to-LRorPC transition",
+  "third_packet_missing": false,
+  "watchdog_timeout": false
+}

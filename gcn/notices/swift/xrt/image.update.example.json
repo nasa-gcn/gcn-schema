@@ -1,0 +1,25 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/image.schema.json",
+  "alert_datetime": "2026-05-26T21:56:35.702Z",
+  "alert_type": "update",
+  "amplifier_gain": 1,
+  "bright_pixels": 105,
+  "ccd_readout_mode": "Short Image",
+  "ccd_waveform_id": 134,
+  "centroid_ccd_position": [3.29, 2.99],
+  "centroid_position": [328.87, 298.71],
+  "centroid_std_dev": 0.0013000000000000002,
+  "dec": 34.0001,
+  "grb_xrt_coordinates": [1.45, 50.620000000000005],
+  "id": "1253910",
+  "image_fits_file": {
+    "xrt_proc_image.fits": "place holder"
+  },
+  "instrument": "XRT",
+  "mission": "SWIFT",
+  "observation_livetime": 0.1,
+  "observation_start": "2024-09-12T01:48:25.200Z",
+  "roll": 114.6426,
+  "ra": 124.6327,
+  "watchdog_timeout": false
+}
