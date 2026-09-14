@@ -23,13 +23,19 @@
         }
       ]
     },
-    "observation_start": {
+    "observation_time_format": {
       "type": "string",
-      "description": "Start time of the observation [ISO 8601]"
+      "enum": ["ISO 8601", "MJD"],
+      "default": "ISO 8601",
+      "description": "Format used for observation start and stop times [default is ISO 8601]"
+    },
+    "observation_start": {
+      "type": ["string", "number"],
+      "description": "Start time of the observation [ISO 8601 by default; MJD if specified in observation_time_format]"
     },
     "observation_stop": {
-      "type": "string",
-      "description": "Stop time of the observation [ISO 8601]"
+      "type": ["string", "number"],
+      "description": "Stop time of the observation [ISO 8601 by default; MJD if specified in observation_time_format]"
     },
     "observation_livetime": {
       "type": "number",
