@@ -1,0 +1,95 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/lvk/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "LIGO-Virgo Collaboration Gravitational Wave Alert",
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Localization.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "detector_status": {
+      "type": "object",
+      "properties": {
+        "H1": { "$ref": "../core/DetectorStatus.schema.json" },
+        "L1": { "$ref": "../core/DetectorStatus.schema.json" },
+        "V1": { "$ref": "../core/DetectorStatus.schema.json" }
+      }
+    },
+    "duration": {
+      "type": ["number", "null"],
+      "description": "Duration of GW signal. Defined only for the burst class of events."
+    },
+    "central_frequency": {
+      "type": ["number", "null"],
+      "description": "Peak frequency of GW signal in Hz. Defined only for the burst class of events."
+    },
+    "pipeline": {
+      "type": "string",
+      "description": "The pipeline used to process the triggers."
+    },
+    "search": {
+      "type": "string",
+      "description": "The search method used for the GW event."
+    },
+    "group": {
+      "type": "string",
+      "description": "The class of GW trigger: CBC or Burst."
+    },
+    "significant": {
+      "type": "boolean",
+      "description": "Whether the far is above a certain threshold."
+    },
+    "external_coincidence": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "description": "Coincidence with a non-GW event sent through GCN.",
+          "properties": {
+            "gcn_notice_id": {
+              "type": "number",
+              "description": "ID used by GCN to identify external event."
+            },
+            "ivorn": {
+              "type": "string",
+              "description": "External IVORN identification field."
+            },
+            "observatory": {
+              "type": "string",
+              "description": "The mission which detected the external event."
+            },
+            "search": {
+              "type": "string",
+              "description": "The search method used to find the external event."
+            },
+            "time_difference": {
+              "type": "number",
+              "description": "Time between GW source and external event [secs]"
+            },
+            "time_coincidence_far": {
+              "type": "number",
+              "description": "Estimated coincidence false alarm rate using just timing [Hz]"
+            },
+            "time_sky_position_coincidence_far": {
+              "type": "number",
+              "description": "Estimated coincidence false alarm rate using timing and sky position [Hz]"
+            },
+            "combined_skymap": {
+              "type": "string",
+              "contentEncoding": "base64",
+              "contentMediaType": "image/fits",
+              "description": "The GW skymap and the external coincidence skymap combined in a multi-order FITS file as a Base64-encoded string."
+            }
+          }
+        }
+      ]
+    }
+  }
+}
