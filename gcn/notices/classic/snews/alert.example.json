@@ -1,0 +1,22 @@
+{
+  "alert_datetime": "2017-6-13T16:00:11Z",
+  "id": [1000128],
+  "trigger_time": "2017-06-13T16:00:01.00Z",
+  "ra_dec_error": 360.0,
+  "n_events": 0,
+  "duration": 0.0,
+  "additional_info": "SNEWS Event without RA,Dec coordinates.  \nThis is a Test COINCIDENCE notice.  It is NOT a Real event.  \nThis is a Test COINCIDENCE notice.  The EXPT labels have been anonymized.  \n\nRA,Dec fields undefined.  \nFor more information see:  \nhttp://snews.bnl.gov/",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/snews/alert.schema.json",
+  "alert_tense": "test",
+  "systematic_included": true,
+  "containment_probability": 68.0,
+  "detector_quality": {
+    "Super-K": "good",
+    "LVD": "good",
+    "IceCube": "did not contribute",
+    "KamLAND": "possible",
+    "Borexino": "good",
+    "Daya Bay": "possible",
+    "HALO": "did not contribute"
+  }
+}

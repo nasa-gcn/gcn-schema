@@ -1,0 +1,17 @@
+{
+  "alert_datetime": "2008-8-25T21:08:50Z",
+  "id": [599],
+  "trigger_time": "2008-08-25T17:46:40.00Z",
+  "ra": 209.281,
+  "dec": -68.943,
+  "ra_dec_error": 3.0,
+  "n_events_x": 1071.739,
+  "snr_x": 17.51,
+  "additional_info": "SuperAGILE GRB Coordinates.  \nThis is a GRB.  \nSuperAGILE ground GRB coordinates",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/agile/alert.schema.json",
+  "mission": "AGILE",
+  "notice_type": "Ground",
+  "systematic_included": true,
+  "n_events_y": 919.802,
+  "snr_y": 16.3
+}

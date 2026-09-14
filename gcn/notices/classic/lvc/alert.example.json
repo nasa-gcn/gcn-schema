@@ -1,0 +1,24 @@
+{
+  "alert_datetime": "2023-10-28T10:05:14Z",
+  "record_number": 2,
+  "far": 8.69e-6,
+  "healpix_url": "https://gracedb.ligo.org/api/superevents/S231028ai/files/bayestar.multiorder.fits,1",
+  "eventpage_url": "https://gracedb.ligo.org/superevents/S231028ai/view/",
+  "additional_info": "LVC Preliminary Trigger Alert.  \nThis event is an OpenAlert.  \nLIGO-Hanford Observatory contributed to this candidate event.  \nLIGO-Livingston Observatory contributed to this candidate event.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/lvc/alert.schema.json",
+  "mission": "LVK",
+  "messenger": "GW",
+  "id": ["S231028ai"],
+  "notice_type": "Preliminary",
+  "group": "CBC",
+  "search": "AllSky",
+  "pipeline": "spiir",
+  "p_astro": 0.13,
+  "classification": {
+    "BNS": 0.13,
+    "NSBH": 0.0,
+    "BBH": 0.0,
+    "Terrestrial": 0.87
+  },
+  "properties": { "HasNS": 1.0, "HasRemnant": 1.0, "HasMassGa[]": 0.02 }
+}

@@ -1,0 +1,22 @@
+{
+  "alert_datetime": "2019-5-04T18:26:49Z",
+  "trigger_time": "2019-05-04T18:25:18.39Z",
+  "ra": 65.7866,
+  "dec": -37.4431,
+  "ra_dec_error": 73.79,
+  "ra_dec_error_50": 25.19,
+  "record_number": 1,
+  "signalness": 0.63,
+  "n_events": 1,
+  "delta_time": 0.0,
+  "sigma_time": 0.0,
+  "charge": 7328.35,
+  "p_value": 0.0,
+  "false_positive": 0.0,
+  "additional_info": "AMON_ICECUBE_HESE.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/amon/alert.schema.json",
+  "mission": "AMON",
+  "notice_type": "HESE",
+  "id": ["132518_766165"],
+  "systematic_included": true
+}

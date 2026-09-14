@@ -1,0 +1,88 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/agile/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "AGILE GRB Trigger Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/GeoLocBase.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "notice_type": { "type": "string", "enum": ["Ground", "MCAL"] },
+    "duration": {
+      "type": "number",
+      "description": "The duration of the lightcurve. For MCAL notices only."
+    },
+    "triggering_interval": {
+      "type": "number",
+      "description": "The binning size of the the bins in the lightcurve. For MCAL notices only."
+    },
+    "n_events": {
+      "type": "number",
+      "description": "The total number of counts in the duration of the burst. For MCAL notices only."
+    },
+    "n_events_x": {
+      "type": "number",
+      "description": "The number of events in the X 1-D localization. For Ground notices only."
+    },
+    "n_events_y": {
+      "type": "number",
+      "description": "The number of events in the Y 1-D localization. For Ground notices only."
+    },
+    "events_snr": {
+      "type": "number",
+      "description": "The significance of peak countrate. For MCAL notices only."
+    },
+    "snr_x": {
+      "type": "number",
+      "description": "The X-drection significance. For Ground notices only."
+    },
+    "snr_y": {
+      "type": "number",
+      "description": "The Y-drection significance. For Ground notices only."
+    },
+    "lightcurve_url": {
+      "type": "string",
+      "description": "URL to the Lightcurve image. For MCAL notices only."
+    },
+    "peak_events": {
+      "type": "number",
+      "description": "The total number of counts at the peak of the burst. For MCAL notices only."
+    },
+    "peak_snr": {
+      "type": "number",
+      "description": "The significance of the peak countrate. For MCAL notices only."
+    },
+    "bkg_events": {
+      "type": "number",
+      "description": "The total number of background counts in the 32 msec window. For MCAL notices only."
+    },
+    "events_energy_range": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "The energy windown of the event [keV]. For MCAL notices only."
+    },
+    "trigger_logic": {
+      "type": "object",
+      "description": "If the trigger time interval participated in the trigger logic. For MCAL notices only.",
+      "properties": {
+        "sub-ms": { "type": "boolean" },
+        "1ms": { "type": "boolean" },
+        "16ms": { "type": "boolean" },
+        "64ms": { "type": "boolean" },
+        "256ms": { "type": "boolean" },
+        "1024ms": { "type": "boolean" },
+        "8192ms": { "type": "boolean" }
+      }
+    }
+  }
+}

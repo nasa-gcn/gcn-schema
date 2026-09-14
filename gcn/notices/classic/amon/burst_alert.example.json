@@ -1,0 +1,16 @@
+{
+  "alert_datetime": "2021-5-12T20:03:55Z",
+  "trigger_time": "2021-05-12T20:03:27.00Z",
+  "ra": 76.7242,
+  "dec": 28.143,
+  "ra_dec_error": 35.99,
+  "record_number": 1,
+  "far": 2.4865233384069e-7,
+  "delta_time": 1.0,
+  "p_value": 0.0109,
+  "additional_info": "HAWC burst monitor event.  \nThe position error is statistical only, there is no systematic added.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/amon/alert.schema.json",
+  "mission": "AMON",
+  "notice_type": "Burst",
+  "id": ["110081_574"]
+}

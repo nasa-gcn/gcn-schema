@@ -1,0 +1,17 @@
+{
+  "alert_datetime": "2024-2-04T09:10:06Z",
+  "trigger_time": "2024-02-04T09:09:00.44Z",
+  "ra": 348.6482,
+  "dec": 11.0595,
+  "ra_dec_error": 30.8,
+  "ra_dec_error_50": 12.0,
+  "record_number": 1,
+  "energy": 155920000000.0,
+  "signalness": 0.41419,
+  "far": 5.100202942668696e-8,
+  "additional_info": "IceCube Bronze event.  \nThe position error is statistical only, there is no systematic added.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/amon/alert.schema.json",
+  "mission": "AMON",
+  "notice_type": "Astrotrack Bronze",
+  "id": ["138938_62272876"]
+}

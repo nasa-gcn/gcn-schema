@@ -1,0 +1,29 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/konus/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "KONUS Lightcurve Alert",
+  "allOf": [
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "lightcurve_image_url": {
+      "type": "string",
+      "description": "The URL for the lightcurve GIF associated with the trigger."
+    },
+    "lightcurve_textfile_url": {
+      "type": "string",
+      "description": "The URL for the lightcurve textfile associated with the trigger."
+    },
+    "detector_number": {
+      "type": "number",
+      "enum": [1, 2],
+      "description": "The detector which was responsible for the detection"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/sk_sn/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "Super-Kamiokande SuperNova Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "ra_dec_error_68": {
+      "type": "number",
+      "description": "Statistical error on position with 68 percent containment probability."
+    },
+    "ra_dec_error_95": {
+      "type": "number",
+      "description": "Statistical error on position with 95 percent containment probability."
+    },
+    "n_events": {
+      "type": "number",
+      "description": "The number of neutrinoes in the event."
+    },
+    "collection_duration": {
+      "type": "number",
+      "description": "The interval over which the neutrinoes are collected."
+    },
+    "energy_limit": {
+      "type": "number",
+      "description": "Minimum energy of the neutrinoes in kEV."
+    },
+    "distance_range": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Lower and Upper bounds on the distance of the event."
+    }
+  }
+}
