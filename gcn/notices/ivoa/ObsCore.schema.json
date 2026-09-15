@@ -2,7 +2,7 @@
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/ivoa/ObsCore.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ObsCoreDm v1.1",
-  "description": "Schema aligned with the IVOA Observation Data Model Core Components (ObsCoreDM) v1.1: Mandatory elements",
+  "description": "Schema aligned with the IVOA Observation Data Model Core Components (ObsCoreDM) v1.1",
   "type": "object",
   "properties": {
     "dataproduct_type": {
@@ -18,6 +18,10 @@
       ],
       "description": "Data product (file content) primary type"
     },
+    "dataproduct_subtype": {
+      "type": "string",
+      "description": "Data product specific type"
+    },
     "calib_level": {
       "enum": [0, 1, 2, 3, 4],
       "description": "Calibration level of the observation: in {0, 1, 2, 3, 4}"
@@ -26,14 +30,53 @@
       "type": "string",
       "description": "Astronomical object observed"
     },
-    "obs_id": { "type": "string", "description": "Observation ID" },
+    "target_class": {
+      "type": "string",
+      "description": "Class of the Target object as in SSA"
+    },
+    "obs_id": {
+      "type": "string",
+      "description": "Observation ID"
+    },
+    "obs_title": {
+      "type": "string",
+      "description": "Brief description of dataset in free format"
+    },
     "obs_collection": {
       "type": "string",
       "description": "Name of the data collection"
     },
+    "obs_creation_date": {
+      "type": "string",
+      "description": "Date when the dataset was created (ISO 8601)"
+    },
+    "obs_creator_name": {
+      "type": "string",
+      "description": "Name of the creator of the data"
+    },
+    "obs_creator_did": {
+      "type": "string",
+      "description": "IVOA dataset identifier given by the creator"
+    },
+    "obs_release_date": {
+      "type": "string",
+      "description": "Observation release date (ISO 8601)"
+    },
     "obs_publisher_did": {
       "type": "string",
       "description": "ID for the Dataset given by the publisher."
+    },
+    "publisher_id": {
+      "type": "string",
+      "description": "IVOA-ID for the Publisher"
+    },
+    "bib_reference": {
+      "type": "string",
+      "description": "Service bibliographic reference"
+    },
+    "data_rights": {
+      "enum": ["Public", "Secure", "Proprietary"],
+      "description": "Public/Secure/Proprietary"
     },
     "access_url": {
       "type": "string",
@@ -75,20 +118,77 @@
       "type": "number",
       "description": "Number of elements along the second coordinate of the spatial axis"
     },
+    "s_ucd": {
+      "type": "string",
+      "description": "UCD for the nature of the spatial axis (pos or u,v data)"
+    },
+    "s_unit": {
+      "type": "string",
+      "description": "Unit used for spatial axis"
+    },
+    "s_resolution_min": {
+      "type": "number",
+      "description": "Resolution min value on spatial axis (FHWM of PSF) [arcsec]"
+    },
+    "s_resolution_max": {
+      "type": "number",
+      "description": "Resolution max value on spatial axis [arcsec]"
+    },
+    "s_calib_status": {
+      "enum": ["uncalibrated", "raw", "calibrated"],
+      "description": "Type of calibration along the spatial axis"
+    },
+    "s_stat_error": {
+      "type": "number",
+      "description": "Astrometric precision along the spatial axis [arcsec]"
+    },
+    "s_pixel_scale": {
+      "type": "number",
+      "description": "Sampling period in world coordinate units along the spatial axis [arcsec]"
+    },
     "t_xel": {
       "type": "number",
       "description": "Number of elements along the time axis"
     },
-    "t_min": { "type": "number", "description": "Start time in MJD [d]" },
-    "t_max": { "type": "number", "description": "Stop time in MJD [d]" },
-    "t_exptime": { "type": "number", "description": "Total exposure time [s]" },
+    "t_min": {
+      "type": "number",
+      "description": "Start time in MJD [d]"
+    },
+    "t_max": {
+      "type": "number",
+      "description": "Stop time in MJD [d]"
+    },
+    "t_exptime": {
+      "type": "number",
+      "description": "Total exposure time [s]"
+    },
     "t_resolution": {
       "type": "number",
       "description": "Temporal resolution FWHM [s]"
     },
+    "t_calib_status": {
+      "enum": ["uncalibrated", "calibrated", "raw", "relative"],
+      "description": "Type of time coordinate calibration"
+    },
+    "t_stat_error": {
+      "type": "number",
+      "description": "Time coord statistical error [s]"
+    },
     "em_xel": {
       "type": "number",
       "description": "Number of elements along the spectral axis"
+    },
+    "em_ucd": {
+      "type": "string",
+      "description": "Nature of the spectral axis"
+    },
+    "em_unit": {
+      "type": "string",
+      "description": "Units along  the spectral axis"
+    },
+    "em_calib_status": {
+      "enum": ["uncalibrated", "calibrated", "relative", "absolute"],
+      "description": "Type of spectral coord calibration"
     },
     "em_min": {
       "type": "number",
@@ -102,9 +202,37 @@
       "type": "number",
       "description": "Value of the resolving power along the spectral axis. (R)"
     },
+    "em_res_power_min": {
+      "type": "number",
+      "description": "Resolving power min value on spectral axis"
+    },
+    "em_res_power_max": {
+      "type": "number",
+      "description": "Resolving power max value on spectral axis"
+    },
+    "em_resolution": {
+      "type": "number",
+      "description": "Value of Resolution along the spectral axis [m]"
+    },
+    "em_stat_error": {
+      "type": "number",
+      "description": "Spectral coord statistical error [m]"
+    },
     "o_ucd": {
       "type": "string",
       "description": "Nature of the observable axis (e.g. phot.flux, phot.count, phot.mag, etc...)"
+    },
+    "o_unit": {
+      "type": "string",
+      "description": "Units used for the observable values"
+    },
+    "o_calib_status": {
+      "enum": ["absolute", "relative", "normallized", "any"],
+      "description": "Type of calibration for the observable coordinate"
+    },
+    "o_stat_error": {
+      "type": "number",
+      "description": "Statistical error on the Observable axis"
     },
     "pol_xel": {
       "type": "number",
@@ -122,6 +250,10 @@
     "instrument_name": {
       "type": "string",
       "description": "The name of the instrument used for the observation"
+    },
+    "proposal_id": {
+      "type": "string",
+      "description": "Identifier of proposal to which observation belongs"
     }
   }
 }
