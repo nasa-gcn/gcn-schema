@@ -1,8 +1,8 @@
 {
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/ivoa/ObsCore.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "ObsCore",
-  "description": "Observation Data Model Mandatory Core Components (ObsCoreDM) v1.1 as approved by IVOA",
+  "title": "ObsCoreDm v1.1",
+  "description": "Schema aligned with the IVOA Observation Data Model Core Components (ObsCoreDM) v1.1: Mandatory elements",
   "type": "object",
   "properties": {
     "dataproduct_type": {
@@ -19,7 +19,7 @@
       "description": "Data product (file content) primary type"
     },
     "calib_level": {
-      "enum": [1, 2, 3, 4],
+      "enum": [0, 1, 2, 3, 4],
       "description": "Calibration level of the observation: in {0, 1, 2, 3, 4}"
     },
     "target_name": {
@@ -122,6 +122,10 @@
       "type": "number",
       "description": "Number of elements along the polarization axis"
     },
+    "facility_name": {
+      "type": "string",
+      "description": "The observatory or facility used to collect the data"
+    }
     "instrument_name": {
       "type": "string",
       "description": "The name of the instrument used for the observation"
