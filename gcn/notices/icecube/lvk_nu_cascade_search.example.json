@@ -21,7 +21,7 @@
       "localization": {
         "ra": 281.59,
         "dec": 20.89,
-        "ra_dec_error": 8.55,
+        "ra_dec_error": 58.5,
         "containment_probability": 0.9,
         "systematic_included": false
       },
@@ -30,9 +30,9 @@
       "event_pval_bayesian": null
     }
   ],
-  "most_probable_direction": { "ra": 280.98, "dec": 20.7 },
+  "most_probable_direction": { "ra": 245.74, "dec": -5.98 },
   "neutrino_flux_sensitivity_range": {
     "flux_sensitivity": [0.0983, 0.1424],
-    "sensitive_energy_range": [710, 47000000]
+    "sensitive_energy_range": [720, 4800000]
   }
 }
