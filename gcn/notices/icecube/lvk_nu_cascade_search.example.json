@@ -6,14 +6,14 @@
       "skymap_filename":"bayestar.multiorder.fits,1"
   },
   "ref_ID": "S230914ak",
-  "pipeline": "HE Tracks",
+  "pipeline": "HE Cascades",
   "alert_datetime": "2023-09-14T11:49:16.526Z",
   "trigger_time": "2023-09-14T11:14:01Z",
   "observation_start": "2023-09-14T11:05:41.000Z",
   "observation_stop": "2023-09-14T11:22:21.000Z",
   "observation_livetime": 1000,
   "pval_generic": 0.0191,
-  "pval_bayesian": 0.0549,
+  "pval_bayesian": null,
   "n_events_coincident": 2,
   "coincident_events": [
     {
@@ -40,7 +40,7 @@
       },
       "id": ["138590_39164579"],
       "event_pval_generic": 0.0928,
-      "event_pval_bayesian": 0.0656
+      "event_pval_bayesian": null
     }
   ],
   "most_probable_direction": { "ra": 17.49, "dec": 16.18 },
