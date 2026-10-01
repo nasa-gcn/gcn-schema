@@ -52,7 +52,7 @@
     },
     "s_ra": {
       "type": "number",
-      "description": "Central Spatial Position in ICRS Right ascension [deg]"
+      "description": "Central Spatial Position in ICRS Right Ascension [deg]"
     },
     "s_dec": {
       "type": "number",
