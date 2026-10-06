@@ -24,11 +24,11 @@
     },
     "target_name": {
       "type": "string",
-      "description": "Object of interest"
+      "description": "Astronomical object observed"
     },
     "obs_id": {
       "type": "string",
-      "description": "Internal ID given by the ObsTAP service"
+      "description": "Internal ID given by the ObsTAP (ObsCore Table Access Protocol) service"
     },
     "obs_collection": {
       "type": "string",
@@ -116,7 +116,7 @@
     },
     "o_ucd": {
       "type": "string",
-      "description": "Nature of the observable axis"
+      "description": "Nature of the observable axis (e.g. phot.flux, phot.count, phot.mag, etc...)"
     },
     "pol_xel": {
       "type": "number",
@@ -125,7 +125,7 @@
     "facility_name": {
       "type": "string",
       "description": "The observatory or facility used to collect the data"
-    }
+    },
     "instrument_name": {
       "type": "string",
       "description": "The name of the instrument used for the observation"
