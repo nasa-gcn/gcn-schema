@@ -28,7 +28,7 @@
     },
     "obs_id": {
       "type": "string",
-      "description": "Internal ID given by the ObsTAP (ObsCore Table Access Protocol) service"
+      "description": "Observation ID"
     },
     "obs_collection": {
       "type": "string",
@@ -121,6 +121,11 @@
     "pol_xel": {
       "type": "number",
       "description": "Number of elements along the polarization axis"
+    },
+    "pol_states": {
+      "type": "string",
+      "pattern": "^/(?!$)(?:I/)?(?:Q/)?(?:U/)?(?:V/)?(?:RR/)?(?:LL/)?(?:RL/)?(?:LR/)?(?:XX/)?(?:YY/)?(?:XY/)?(?:YX/)?(?:POLI/)?(?:POLA/)?$",
+      "description": "List of polarization states present in the data file"
     },
     "facility_name": {
       "type": "string",
