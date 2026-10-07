@@ -1,0 +1,139 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/ivoa/ObsCore.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ObsCoreDm v1.1",
+  "description": "Schema aligned with the IVOA Observation Data Model Core Components (ObsCoreDM) v1.1: Mandatory elements",
+  "type": "object",
+  "properties": {
+    "dataproduct_type": {
+      "enum": [
+        "image",
+        "cube",
+        "spectrum",
+        "sed",
+        "timeseries",
+        "visibility",
+        "event",
+        "measurements"
+      ],
+      "description": "Data product (file content) primary type"
+    },
+    "calib_level": {
+      "enum": [0, 1, 2, 3, 4],
+      "description": "Calibration level of the observation: in {0, 1, 2, 3, 4}"
+    },
+    "target_name": {
+      "type": "string",
+      "description": "Astronomical object observed"
+    },
+    "obs_id": {
+      "type": "string",
+      "description": "Observation ID"
+    },
+    "obs_collection": {
+      "type": "string",
+      "description": "Name of the data collection"
+    },
+    "obs_publisher_did": {
+      "type": "string",
+      "description": "ID for the Dataset given by the publisher."
+    },
+    "access_url": {
+      "type": "string",
+      "description": "URL used to access dataset"
+    },
+    "access_format": {
+      "type": "string",
+      "description": "Content format of the dataset"
+    },
+    "access_estsize": {
+      "type": "number",
+      "description": "Estimated size of dataset: in kilobytes"
+    },
+    "s_ra": {
+      "type": "number",
+      "description": "Central Spatial Position in ICRS Right Ascension [deg]"
+    },
+    "s_dec": {
+      "type": "number",
+      "description": "Central Spatial Position in ICRS Declination [deg]"
+    },
+    "s_fov": {
+      "type": "number",
+      "description": "Estimated size of the covered region as the diameter of a containing circle [deg]"
+    },
+    "s_region": {
+      "type": "string",
+      "description": "Sky region covered by the data product (expressed in ICRS frame)"
+    },
+    "s_resolution": {
+      "type": "number",
+      "description": "Spatial resolution of data as FWHM of PSF [arcsec]"
+    },
+    "s_xel1": {
+      "type": "number",
+      "description": "Number of elements along the first coordinate of the spatial axis "
+    },
+    "s_xel2": {
+      "type": "number",
+      "description": "Number of elements along the second coordinate of the spatial axis"
+    },
+    "t_xel": {
+      "type": "number",
+      "description": "Number of elements along the time axis"
+    },
+    "t_min": {
+      "type": "number",
+      "description": "Start time in MJD [d]"
+    },
+    "t_max": {
+      "type": "number",
+      "description": "Stop time in MJD [d]"
+    },
+    "t_exptime": {
+      "type": "number",
+      "description": "Total exposure time [s]"
+    },
+    "t_resolution": {
+      "type": "number",
+      "description": "Temporal resolution FWHM [s]"
+    },
+    "em_xel": {
+      "type": "number",
+      "description": "Number of elements along the spectral axis"
+    },
+    "em_min": {
+      "type": "number",
+      "description": "start in spectral coordinates [m]"
+    },
+    "em_max": {
+      "type": "number",
+      "description": "stop in spectral coordinates [m]"
+    },
+    "em_res_power": {
+      "type": "number",
+      "description": "Value of the resolving power along the spectral axis. (R)"
+    },
+    "o_ucd": {
+      "type": "string",
+      "description": "Nature of the observable axis (e.g. phot.flux, phot.count, phot.mag, etc...)"
+    },
+    "pol_xel": {
+      "type": "number",
+      "description": "Number of elements along the polarization axis"
+    },
+    "pol_states": {
+      "type": "string",
+      "pattern": "^/(?!$)(?:I/)?(?:Q/)?(?:U/)?(?:V/)?(?:RR/)?(?:LL/)?(?:RL/)?(?:LR/)?(?:XX/)?(?:YY/)?(?:XY/)?(?:YX/)?(?:POLI/)?(?:POLA/)?$",
+      "description": "List of polarization states present in the data file"
+    },
+    "facility_name": {
+      "type": "string",
+      "description": "The observatory or facility used to collect the data"
+    },
+    "instrument_name": {
+      "type": "string",
+      "description": "The name of the instrument used for the observation"
+    }
+  }
+}
