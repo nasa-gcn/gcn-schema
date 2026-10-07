@@ -1,9 +1,9 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/FluxMeasurement.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Measurement.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Flux Measurement",
-  "description": "Brightness measurement of a source in any band, as a magnitude, flux density, or band-integrated flux.",
+  "title": "Measurement",
+  "description": "One brightness measurement of a source, as a magnitude, a flux density or a band-integrated flux, carrying the epoch, instrument and calibration that belong to it rather than to the notice. A notice reporting a table of measurements, as a circular does, holds an array of these; Spectral and Photometry describe the single measurement case. Units are those of Spectral, referenced rather than restated.",
   "required": ["band", "value", "is_detection"],
   "properties": {
     "time": {
@@ -53,9 +53,7 @@
               "description": "Frequency, wavelength or energy at which the measurement was made."
             },
             "spectral_unit": {
-              "type": "string",
-              "enum": ["keV", "nm", "MHz", "GHz"],
-              "description": "Unit of spectral_point."
+              "$ref": "Spectral.schema.json#/properties/flux_density_spectral_point_unit"
             }
           }
         },
@@ -74,9 +72,7 @@
               "description": "Low and high bounds of the band the value is integrated over."
             },
             "spectral_unit": {
-              "type": "string",
-              "enum": ["keV", "nm", "MHz", "GHz"],
-              "description": "Unit of spectral_band."
+              "$ref": "Spectral.schema.json#/properties/flux_spectral_unit"
             }
           }
         }
@@ -132,7 +128,7 @@
         },
         "unit": {
           "enum": ["AB", "Vega", "STMag"],
-          "description": "Magnitude system (zeropoint convention) for value."
+          "description": "Magnitude system (zeropoint convention) for value. Photometry's mag_system names the same thing for a single measurement."
         }
       }
     },
@@ -144,15 +140,7 @@
           "const": "flux_density"
         },
         "unit": {
-          "enum": [
-            "Jy",
-            "mJy",
-            "uJy",
-            "erg/cm2/s/Hz",
-            "erg/cm2/s/keV",
-            "erg/cm2/s/nm"
-          ],
-          "description": "Unit of the flux density."
+          "$ref": "Spectral.schema.json#/properties/flux_density_unit"
         }
       }
     },
@@ -164,8 +152,7 @@
           "const": "flux"
         },
         "unit": {
-          "enum": ["erg/cm2/s", "ph/cm2/s"],
-          "description": "Unit of the flux integrated over the band."
+          "$ref": "Spectral.schema.json#/properties/flux_unit"
         }
       }
     }
