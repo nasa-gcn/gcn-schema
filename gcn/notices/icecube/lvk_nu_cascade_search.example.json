@@ -6,46 +6,33 @@
       "skymap_filename":"bayestar.multiorder.fits,1"
   },
   "ref_ID": "S230914ak",
-  "pipeline": "HE Tracks",
+  "pipeline": "HE Cascades",
   "alert_datetime": "2023-09-14T11:49:16.526Z",
   "trigger_time": "2023-09-14T11:14:01Z",
   "observation_start": "2023-09-14T11:05:41.000Z",
   "observation_stop": "2023-09-14T11:22:21.000Z",
   "observation_livetime": 1000,
-  "pval_generic": 0.0191,
-  "pval_bayesian": 0.0549,
-  "n_events_coincident": 2,
+  "pval_generic": 0.0987,
+  "pval_bayesian": null,
+  "n_events_coincident": 1,
   "coincident_events": [
     {
-      "event_dt": 12.91,
+      "event_dt": -47.37,
       "localization": {
-        "ra": 17.48,
-        "dec": 16.15,
-        "ra_dec_error": 0.5,
+        "ra": 281.59,
+        "dec": 20.89,
+        "ra_dec_error": 58.5,
         "containment_probability": 0.9,
         "systematic_included": false
       },
-      "id": ["138590_39138551"],
-      "event_pval_generic": 0.0191,
+      "id": ["138590_39138552"],
+      "event_pval_generic": 0.0987,
       "event_pval_bayesian": null
-    },
-    {
-      "event_dt": 222.46,
-      "localization": {
-        "ra": 13.82,
-        "dec": 18.66,
-        "ra_dec_error": 0.5,
-        "containment_probability": 0.9,
-        "systematic_included": false
-      },
-      "id": ["138590_39164579"],
-      "event_pval_generic": 0.0928,
-      "event_pval_bayesian": 0.0656
     }
   ],
-  "most_probable_direction": { "ra": 17.49, "dec": 16.18 },
+  "most_probable_direction": { "ra": 245.74, "dec": -5.98 },
   "neutrino_flux_sensitivity_range": {
-    "flux_sensitivity": [0.0277, 0.647],
-    "sensitive_energy_range": [542, 23000000]
+    "flux_sensitivity": [0.0983, 0.1424],
+    "sensitive_energy_range": [720, 4800000]
   }
 }
