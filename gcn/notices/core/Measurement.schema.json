@@ -16,13 +16,13 @@
       "exclusiveMinimum": 0,
       "description": "Total exposure time [s]."
     },
-    "telescope": {
-      "type": "string",
-      "description": "Telescope that made this measurement (e.g., GTC, ZTF, VLA)."
+    "mission": {
+      "$ref": "Reporter.schema.json#/properties/mission",
+      "description": "Mission or telescope that made this measurement (e.g., GTC, ZTF, VLA), which may differ from the one reporting the notice."
     },
     "instrument": {
-      "type": "string",
-      "description": "Instrument used, where it is distinguished from the telescope (e.g., OSIRIS, EP-FXT)."
+      "$ref": "Reporter.schema.json#/properties/instrument",
+      "description": "Instrument that made this measurement, where it is distinguished from the telescope (e.g., OSIRIS, EP-FXT)."
     },
     "band": {
       "description": "Part of the spectrum measured.",
