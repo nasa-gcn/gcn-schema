@@ -1,7 +1,7 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/core/Measurement.schema.json",
   "time": "2026-09-03T13:15:26Z",
-  "exposure": 300,
+  "observation_livetime": 300,
   "mission": "LCO",
   "instrument": "Sinistro",
   "band": { "filter": "r", "filter_id": "SLOAN/SDSS.r" },

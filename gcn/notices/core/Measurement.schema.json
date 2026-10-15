@@ -11,10 +11,11 @@
       "format": "date-time",
       "description": "Mid-exposure epoch of this measurement [ISO 8601, UTC]."
     },
-    "exposure": {
+    "observation_livetime": {
+      "$ref": "DateTime.schema.json#/properties/observation_livetime",
       "type": "number",
       "exclusiveMinimum": 0,
-      "description": "Total exposure time [s]."
+      "description": "Livetime of the observation this measurement came from [s], which may differ from the notice's own."
     },
     "mission": {
       "$ref": "Reporter.schema.json#/properties/mission",
