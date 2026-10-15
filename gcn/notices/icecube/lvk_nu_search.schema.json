@@ -1,9 +1,9 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/lvk_nu_track_search.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/lvk_nu_search.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "IceCube LVK Alert Nu Track Search",
-  "description": "IceCube LVK Coincident Neutrino Track Search",
+  "title": "IceCube LVK Alert Nu Followup",
+  "description": "IceCube LVK Coincident Neutrino Followup Search",
   "allOf": [
     {
       "$ref": "../core/Alert.schema.json",
@@ -21,6 +21,11 @@
     { "$ref": "../core/DateTime.schema.json" }
   ],
   "properties": {
+    "pipeline": {
+      "enum": ["HE Tracks", "HE Cascades"],
+      "description": "Type of followup dataset used in analysis",
+      "type": "string"
+    },
     "pval_generic": {
       "description": "P-value from generic transient search; consistency with background expectations [0-1]",
       "type": ["number", "null"]
@@ -35,7 +40,7 @@
     },
     "coincident_events": {
       "type": "array",
-      "description": "An array of summary of information for each coincident neutrino track event",
+      "description": "An array of summary of information for each coincident neutrino event",
       "items": { "$ref": "#/$defs/coincevent" }
     },
     "most_probable_direction": {
