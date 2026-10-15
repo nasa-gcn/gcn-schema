@@ -1,9 +1,9 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/icecube/lvk_nu_search.schema.json",
   "type": "IceCube LVK Alert Nu Followup",
-  "reference": { 
-      "gcn.notices.LVK.alert": "S230914ak-preliminary-20230914T111906Z", 
-      "skymap_filename":"bayestar.multiorder.fits,1"
+  "reference": {
+    "gcn.notices.LVK.alert": "S230914ak-preliminary-20230914T111906Z",
+    "skymap_filename": "bayestar.multiorder.fits,1"
   },
   "ref_ID": "S230914ak",
   "pipeline": "HE Tracks",
