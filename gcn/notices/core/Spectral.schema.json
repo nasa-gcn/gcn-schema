@@ -84,16 +84,9 @@
     },
     "flux_density_unit": {
       "type": "string",
-      "enum": [
-        "erg/cm2/s/Hz",
-        "erg/cm2/s/keV",
-        "erg/cm2/s/nm",
-        "Jy",
-        "mJy",
-        "uJy"
-      ],
+      "enum": ["erg/cm2/s/Hz", "erg/cm2/s/keV", "erg/cm2/s/nm", "Jy"],
       "default": "erg/cm2/s/keV",
-      "description": "Unit of the flux density: frequency-based [erg/cm2/s/Hz], energy-based [erg/cm2/s/keV], wavelength-based [erg/cm2/s/nm], or a Jansky [Jy, mJy, uJy] as radio reports it. Default is [erg/cm2/s/keV]."
+      "description": "Unit of the flux density: frequency-based [erg/cm2/s/Hz], energy-based [erg/cm2/s/keV], wavelength-based [erg/cm2/s/nm], or a Jansky [Jy]. Default is [erg/cm2/s/keV]."
     },
     "flux_density_spectral_point": {
       "type": "number",
