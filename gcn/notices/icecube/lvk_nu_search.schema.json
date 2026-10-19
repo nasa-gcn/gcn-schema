@@ -21,9 +21,9 @@
     { "$ref": "../core/DateTime.schema.json" }
   ],
   "properties": {
-    "pipeline": {
+    "datasample": {
       "enum": ["HE Tracks", "HE Cascades"],
-      "description": "Type of followup dataset used in analysis",
+      "description": "Type of neutrino event datasample used in the followup analysis",
       "type": "string"
     },
     "pval_generic": {
