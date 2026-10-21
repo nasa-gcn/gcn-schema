@@ -34,8 +34,7 @@
           "required": ["filter"],
           "properties": {
             "filter": {
-              "type": "string",
-              "description": "Filter as named by the observer (e.g., u, g, r, Rc, F160W, clear)."
+              "$ref": "Photometry.schema.json#/properties/filter"
             },
             "filter_id": {
               "type": "string",
@@ -49,9 +48,7 @@
           "required": ["spectral_point", "spectral_unit"],
           "properties": {
             "spectral_point": {
-              "type": "number",
-              "exclusiveMinimum": 0,
-              "description": "Frequency, wavelength or energy at which the measurement was made."
+              "$ref": "Spectral.schema.json#/properties/flux_density_spectral_point"
             },
             "spectral_unit": {
               "$ref": "Spectral.schema.json#/properties/flux_density_spectral_point_unit"
@@ -64,13 +61,7 @@
           "required": ["spectral_band", "spectral_unit"],
           "properties": {
             "spectral_band": {
-              "type": "array",
-              "items": {
-                "type": "number"
-              },
-              "minItems": 2,
-              "maxItems": 2,
-              "description": "Low and high bounds of the band the value is integrated over."
+              "$ref": "Spectral.schema.json#/properties/flux_spectral_band"
             },
             "spectral_unit": {
               "$ref": "Spectral.schema.json#/properties/flux_spectral_unit"
@@ -128,8 +119,7 @@
           "const": "magnitude"
         },
         "unit": {
-          "enum": ["AB", "Vega", "STMag"],
-          "description": "Magnitude system (zeropoint convention) for value. Photometry's mag_system names the same thing for a single measurement."
+          "$ref": "Photometry.schema.json#/properties/mag_system"
         }
       }
     },
