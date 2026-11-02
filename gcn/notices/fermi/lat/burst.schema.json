@@ -1,0 +1,26 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/burst.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Fermi-LAT Burst Advocate Alert",
+  "description": "This schema is to alert the scientific community about a burst. ",
+  "allOf": [
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Spectral.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "trigger_significance": {
+      "type": "number",
+      "description": "Test Statistic for detection of the source. TS is approximately equal to the square of the detection significance in Gaussian sigma (TS ≈ significance^2) for one degree of freedom"
+    },
+    "trigger_duration": {
+      "type": "number",
+      "description": "Duration of the trigger [s]"
+    }
+  }
+}

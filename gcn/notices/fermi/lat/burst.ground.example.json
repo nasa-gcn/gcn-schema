@@ -1,0 +1,20 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/burst.schema.json",
+  "alert_datetime": "2025-11-21T00:00:00",
+  "trigger_time": "2024-08-24T02:14:40.43",
+  "mission": "Fermi",
+  "instrument": "LAT",
+  "record_number": 3,
+  "id": "245262818",
+  "ra": 30.123,
+  "dec": 60.123,
+  "ra_dec_error": 15.123,
+  "instrument_phi": 45.0,
+  "instrument_theta": 90.0,
+  "net_count_rate": 91,
+  "TS": 45,
+  "trigger_duration": 10.5,
+  "flux": 1.5e-6,
+  "flux_error": 1e-7,
+  "flux_unit": "ph/cm2/s"
+}
