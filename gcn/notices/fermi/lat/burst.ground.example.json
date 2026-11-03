@@ -10,6 +10,7 @@
   "seed": "GBM",
   "ra": 12.25,
   "dec": 32.32,
+  "ra_dec_error": 0.75,
   "theta": 70.27,
   "zenith": 84.96,
   "sun_distance": 153.13,
