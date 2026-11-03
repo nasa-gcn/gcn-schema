@@ -1,20 +1,43 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/burst.schema.json",
-  "alert_datetime": "2025-11-21T00:00:00",
-  "trigger_time": "2024-08-24T02:14:40.43",
+  "alert_datetime": "2026-10-29T01:27:03",
+  "trigger_time": "2026-10-29T01:27:08",
   "mission": "Fermi",
   "instrument": "LAT",
+  "subtype": "GROUND",
   "record_number": 3,
-  "id": "245262818",
-  "ra": 30.123,
-  "dec": 60.123,
-  "ra_dec_error": 15.123,
-  "instrument_phi": 45.0,
-  "instrument_theta": 90.0,
-  "net_count_rate": 91,
-  "TS": 45,
-  "trigger_duration": 10.5,
-  "flux": 1.5e-6,
-  "flux_error": 1e-7,
-  "flux_unit": "ph/cm2/s"
+  "id": "261029060",
+  "seed": "GBM",
+  "ra": 12.25,
+  "dec": 32.32,
+  "theta": 70.27,
+  "zenith": 84.96,
+  "sun_distance": 153.13,
+  "irf": "P8R3_TRANSIENT020_V2",
+  "max_energy_photon": 10.0,
+  "flux": 1.2e-3,
+  "flux_error": 0.2e-6,
+  "flux_unit": "ph/cm2/s",
+  "trigger_analysis": [
+    {
+      "trigger_duration": 100,
+      "trigger_significance": 291.66
+    },
+    {
+      "trigger_duration": 300,
+      "trigger_significance": 291.66
+    },
+    {
+      "trigger_duration": 1000,
+      "trigger_significance": 291.66
+    },
+    {
+      "trigger_duration": 3000,
+      "trigger_significance": 291.66
+    },
+    {
+      "trigger_duration": 10000,
+      "trigger_significance": 50.19
+    }
+  ]
 }

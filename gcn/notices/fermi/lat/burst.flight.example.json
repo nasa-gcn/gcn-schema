@@ -4,17 +4,22 @@
   "trigger_time": "2024-08-24T02:14:40.43",
   "mission": "Fermi",
   "instrument": "LAT",
-  "record_number": 1,
+  "subtype": "FLIGHT",
+  "record_number": 6,
   "id": "245262818",
   "ra": 106.783,
   "dec": 14.45,
-  "ra_dec_error": 27.33,
-  "instrument_phi": 45.0,
-  "instrument_theta": 90.0,
-  "net_count_rate": 91,
-  "TS": 45,
-  "trigger_duration": 10.5,
-  "flux": 1.5e-6,
-  "flux_error": 1e-7,
-  "flux_unit": "ph/cm2/s"
+  "ra_dec_error": 2.33,
+  "energy_band_counts": [
+    {
+      "spectral_band": [1e8, 1e9],
+      "spectral_band_units": "keV",
+      "counts": 45
+    },
+    {
+      "spectral_band": [1e9, 1e10],
+      "spectral_band_units": "keV",
+      "counts": 30
+    }
+  ]
 }
