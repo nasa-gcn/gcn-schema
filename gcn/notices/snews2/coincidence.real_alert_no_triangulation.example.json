@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/snews2/coincidence.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/v7.3.0/gcn/notices/snews2/coincidence.schema.json",
   "alert_datetime": "2026-06-18T16:23:21.937Z",
   "alert_tense": "current",
   "alert_type": "initial",
@@ -11,10 +11,7 @@
   "far": 0.0001,
   "snews_schema_version": "1.0",
   "snews2_tier": "CoincidenceTier",
-  "detector_status": {
-    "Super-K": "triggered",
-    "Borexino": "triggered"
-  },
+  "detector_status": { "Super-K": "triggered", "Borexino": "triggered" },
   "event_times_utc": ["2026-06-18T16:21:07.312Z", "2026-06-18T16:21:07.318Z"],
   "tier_data": {
     "neutrino_time_utc": "2026-06-18T16:21:07.312000Z",

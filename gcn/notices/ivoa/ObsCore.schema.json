@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/ivoa/ObsCore.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v7.3.0/gcn/notices/ivoa/ObsCore.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ObsCoreDm v1.1",
   "description": "Schema aligned with the IVOA Observation Data Model Core Components (ObsCoreDM) v1.1: Mandatory elements",
@@ -26,10 +26,7 @@
       "type": "string",
       "description": "Astronomical object observed"
     },
-    "obs_id": {
-      "type": "string",
-      "description": "Observation ID"
-    },
+    "obs_id": { "type": "string", "description": "Observation ID" },
     "obs_collection": {
       "type": "string",
       "description": "Name of the data collection"
@@ -82,18 +79,9 @@
       "type": "number",
       "description": "Number of elements along the time axis"
     },
-    "t_min": {
-      "type": "number",
-      "description": "Start time in MJD [d]"
-    },
-    "t_max": {
-      "type": "number",
-      "description": "Stop time in MJD [d]"
-    },
-    "t_exptime": {
-      "type": "number",
-      "description": "Total exposure time [s]"
-    },
+    "t_min": { "type": "number", "description": "Start time in MJD [d]" },
+    "t_max": { "type": "number", "description": "Stop time in MJD [d]" },
+    "t_exptime": { "type": "number", "description": "Total exposure time [s]" },
     "t_resolution": {
       "type": "number",
       "description": "Temporal resolution FWHM [s]"

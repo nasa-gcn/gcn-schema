@@ -1,28 +1,16 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/snews2/coincidence.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/v7.3.0/gcn/notices/snews2/coincidence.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "SNEWS2 Coincidence Alert",
   "description": "Supernova Early Warning System (SNEWS 2.0) coincidence network capabilities.",
   "allOf": [
-    {
-      "$ref": "../core/Alert.schema.json"
-    },
-    {
-      "$ref": "../core/Event.schema.json"
-    },
-    {
-      "$ref": "../core/Reporter.schema.json"
-    },
-    {
-      "$ref": "../core/DateTime.schema.json"
-    },
-    {
-      "$ref": "../core/Statistics.schema.json"
-    },
-    {
-      "$ref": "../core/Localization.schema.json"
-    }
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Statistics.schema.json" },
+    { "$ref": "../core/Localization.schema.json" }
   ],
   "properties": {
     "snews_schema_version": {
@@ -36,9 +24,7 @@
     "detector_status": {
       "type": "object",
       "description": "Status of SNEWS2 detectors at the time of the alert.",
-      "additionalProperties": {
-        "$ref": "../core/DetectorStatus.schema.json"
-      }
+      "additionalProperties": { "$ref": "../core/DetectorStatus.schema.json" }
     },
     "event_times_utc": {
       "type": "array",
@@ -57,10 +43,7 @@
         },
         "p_values": {
           "type": "array",
-          "items": {
-            "type": "number",
-            "minimum": 0
-          },
+          "items": { "type": "number", "minimum": 0 },
           "description": "The p-values representing the significance of the signal from each respective detector."
         },
         "false_alarm_prob": {
