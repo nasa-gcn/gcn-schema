@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/v7.3.0/gcn/notices/ivoa/ObsCore.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/ivoa/ObsCore.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ObsCoreDm v1.1",
   "description": "Schema aligned with the IVOA Observation Data Model Core Components (ObsCoreDM) v1.1: Mandatory elements",

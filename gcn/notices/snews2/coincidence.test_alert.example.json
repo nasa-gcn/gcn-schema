@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/v7.3.0/gcn/notices/snews2/coincidence.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/snews2/coincidence.schema.json",
   "alert_datetime": "2026-04-03T16:23:21.937Z",
   "alert_tense": "test",
   "alert_type": "initial",
