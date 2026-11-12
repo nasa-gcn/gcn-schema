@@ -1,0 +1,84 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/lat/burst.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Fermi-LAT Burst Advocate Alert",
+  "description": "Fermi-LAT alerts reporting burst detections and related analysis results.",
+  "allOf": [
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Spectral.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "subtype": {
+      "type": "string",
+      "enum": ["FLIGHT", "GROUND", "BA", "LTF", "Human-In-the-Loop"],
+      "description": "Fermi-LAT notice subtype."
+    },
+    "seed": {
+      "type": "string",
+      "description": "Instrument or pipeline that provided the seed trigger, e.g., GBM."
+    },
+    "theta": {
+      "type": "number",
+      "description": "Angular separation between the source direction and the instrument boresight [deg]."
+    },
+    "zenith": {
+      "type": "number",
+      "description": "Zenith angle of the source [deg]."
+    },
+    "sun_distance": {
+      "type": "number",
+      "description": "Angular separation between the source and the Sun [deg]."
+    },
+    "irf": {
+      "type": "string",
+      "description": "Instrument response function used in the analysis."
+    },
+    "trigger_analysis": {
+      "type": "array",
+      "description": "Source detection analysis results for different time intervals.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "trigger_duration": {
+            "type": "number",
+            "description": "Duration of the analysis interval [s]."
+          },
+          "trigger_significance": {
+            "type": "number",
+            "description": "Maximum Test Statistic (TS) obtained in the analysis."
+          }
+        }
+      }
+    },
+    "max_energy_photon": {
+      "type": "number",
+      "description": "Energy of the highest-energy photon detected from the source [GeV]."
+    },
+    "energy_band_counts": {
+      "type": "array",
+      "description": "Photon counts measured in individual energy bands.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "spectral_band": {
+            "$ref": "../../core/Reporter.schema.json#/properties/spectral_band"
+          },
+          "spectral_band_units": {
+            "$ref": "../../core/Reporter.schema.json#/properties/spectral_band_units"
+          },
+          "counts": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Number of detected photons in the energy band."
+          }
+        }
+      }
+    }
+  }
+}
