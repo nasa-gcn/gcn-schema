@@ -1,0 +1,26 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/bat/scaled_map.schema.json",
+  "alert_datetime": "2026-05-26T21:57:49.026Z",
+  "alert_type": "initial",
+  "dec": null,
+  "dec_pointing": 5.1102,
+  "id": "1253910",
+  "image_snr": 7.78,
+  "instrument": "BAT",
+  "latitude": 76.76,
+  "longitude": 0.9400000000000001,
+  "mission": "SWIFT",
+  "observation_start": "2024-09-12T01:46:39.180Z",
+  "ra": null,
+  "ra_dec_error": null,
+  "ra_pointing": 121.04400000000001,
+  "rate_snr": 13.0,
+  "scaled_map_fits_file": {
+    "bat_scaledmap.fits.gz": "place holder"
+  },
+  "star_tracker_locked": true,
+  "systematic_included": null,
+  "trigger_time": "2024-09-12T01:46:39.180Z",
+  "trigger_type": "rate",
+  "watchdog_timeout": false
+}

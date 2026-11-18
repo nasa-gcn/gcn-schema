@@ -1,0 +1,24 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/swift/xrt/position.schema.json",
+  "alert_datetime": "2026-06-10T18:45:38.236Z",
+  "alert_tense": "current",
+  "alert_type": "update",
+  "dec": 35.5238,
+  "energy_flux": 1e-10,
+  "id": "1252695",
+  "image_snr": 10.0,
+  "instrument": "XRT",
+  "mission": "SWIFT",
+  "notice_type": "xrt.position",
+  "observation_start": "2024-09-05T18:30:24.000Z",
+  "possible_cosmic_ray": false,
+  "ra": 345.8037,
+  "ra_dec_error": 0.001388888888888889,
+  "readout_amplifier": 1,
+  "readout_waveform": 31,
+  "tam_values": [
+    [100.0, 100.0],
+    [100.0, 100.0]
+  ],
+  "xrt_bat_distance": 0.0
+}
