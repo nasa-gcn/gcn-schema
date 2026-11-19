@@ -46,7 +46,7 @@
         "type": "object",
         "properties": {
           "analysis_interval": {
-            "type": "number",
+            "type": "array",
             "description": "Duration of the analysis interval [s]."
           },
           "interval_test_statistic": {
