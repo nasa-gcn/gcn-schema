@@ -16,7 +16,7 @@
   "properties": {
     "subtype": {
       "type": "string",
-      "enum": ["FLIGHT", "GROUND", "BA", "LTF", "Human-In-the-Loop"],
+      "enum": ["Flight", "BA Tool", "LTF", "Human-In-the-Loop"],
       "description": "Fermi-LAT notice subtype."
     },
     "seed": {
