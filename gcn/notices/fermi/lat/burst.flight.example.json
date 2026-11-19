@@ -9,7 +9,7 @@
   "id": "245262818",
   "ra": 106.783,
   "dec": 14.45,
-  "ra_dec_error": 2.33,
+  "ra_dec_error": 0.5,
   "energy_band_counts": [
     {
       "spectral_band": [1e8, 1e9],
