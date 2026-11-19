@@ -45,7 +45,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "trigger_duration": {
+          "analysis_interval": {
             "type": "number",
             "description": "Duration of the analysis interval [s]."
           },
