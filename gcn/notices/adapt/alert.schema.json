@@ -1,0 +1,32 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/adapt/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ADAPT Alert",
+  "description": "Gamma-ray burst alert from the Antarctic Demonstrator for the Advanced Particle-astrophysics Telescope.",
+  "allOf": [
+    {
+      "$ref": "../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../core/Event.schema.json"
+    },
+    {
+      "$ref": "../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../core/Localization.schema.json"
+    },
+    {
+      "$ref": "../core/Spectral.schema.json"
+    }
+  ],
+  "properties": {
+    "localization_url": {
+      "type": "string",
+      "description": "URL of the localization map file (FITS format) for the event"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/adapt/alert.schema.json",
+  "mission": "ADAPT",
+  "instrument": "ADAPT",
+  "messenger": "EM",
+  "alert_datetime": "2000-00-00T00:00:00Z",
+  "alert_tense": "test",
+  "id": "01234567",
+  "trigger_time": "2000-00-00T00:00:00Z",
+  "ra": 0,
+  "dec": 0,
+  "ra_dec_error": 0,
+  "record_number": 1,
+  "fluence": 0,
+  "fluence_error": 0,
+  "fluence_spectral_band": [10, 1000],
+  "fluence_time_range": [0, 50]
+}
