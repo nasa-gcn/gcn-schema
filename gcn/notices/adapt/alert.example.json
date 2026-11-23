@@ -1,14 +1,14 @@
 {
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/adapt/alert.schema.json",
   "mission": "ADAPT",
-  "instrument": "APT",
+  "instrument": "ADAPT",
   "messenger": "EM",
-  "alert_datetime": "2026-12-28T12:10:00Z",
+  "alert_datetime": "2026-12-10T12:10:00Z",
   "alert_type": "initial",
   "alert_tense": "current",
   "event_name": "GRB 261210A",
   "id": "01234567",
-  "trigger_time": "2026-12-28T12:00:00Z",
+  "trigger_time": "2026-12-10T12:00:00Z",
   "ra": 60,
   "dec": 42,
   "ra_dec_error": 0.02,
@@ -16,5 +16,6 @@
   "fluence": 0.0000025,
   "fluence_error": 9e-7,
   "fluence_spectral_band": [10, 1000],
-  "fluence_time_range": [0, 50]
+  "fluence_time_range": [0, 50],
+  "localization_url": "https://gcn.nasa.gov/data/alerts/GRB261210A_localization.fits"
 }

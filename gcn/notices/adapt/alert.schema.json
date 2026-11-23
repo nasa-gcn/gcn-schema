@@ -22,5 +22,11 @@
     {
       "$ref": "../core/Spectral.schema.json"
     }
-  ]
+  ],
+  "properties": {
+    "localization_url": {
+      "type": "string",
+      "description": "URL of the localization map file (FITS format) for the event"
+    }
+  }
 }
