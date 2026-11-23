@@ -5,6 +5,7 @@
   "messenger": "EM",
   "alert_datetime": "2026-12-28T12:10:00Z",
   "alert_type": "initial",
+  "alert_tense": "current",
   "event_name": "GRB 261210A",
   "id": "01234567",
   "trigger_time": "2040-02-28T12:00:00Z",
