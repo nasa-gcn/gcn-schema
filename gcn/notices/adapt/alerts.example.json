@@ -8,7 +8,7 @@
   "alert_tense": "current",
   "event_name": "GRB 261210A",
   "id": "01234567",
-  "trigger_time": "2040-02-28T12:00:00Z",
+  "trigger_time": "2026-12-28T12:00:00Z",
   "ra": 60,
   "dec": 42,
   "ra_dec_error": 0.02,
