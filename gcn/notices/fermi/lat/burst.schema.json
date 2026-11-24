@@ -69,6 +69,14 @@
       "type": "number",
       "description": "Final Test Statistic (TS)."
     },
+    "closest_point_source": {
+      "type": "string",
+      "description": "Information about the closest known point source to the detected burst."
+    },
+    "angular_separation": {
+      "type": "number",
+      "description": "Angular separation between the detected burst and the closest known point source [deg]."
+    },
     "trigger_analysis": {
       "type": "array",
       "description": "Source detection analysis results for different time intervals.",
