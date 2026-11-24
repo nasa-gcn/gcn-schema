@@ -4,7 +4,7 @@
   "trigger_time": "2026-10-29T01:27:08",
   "mission": "Fermi",
   "instrument": "LAT",
-  "subtype": "GROUND",
+  "subtype": "BA Tool",
   "record_number": 3,
   "id": "261029060",
   "seed": "GBM",
@@ -21,24 +21,24 @@
   "flux_unit": "ph/cm2/s",
   "trigger_analysis": [
     {
-      "trigger_duration": 100,
-      "trigger_significance": 291.66
+      "analysis_interval": 100,
+      "interval_test_statistic": 291.66
     },
     {
-      "trigger_duration": 300,
-      "trigger_significance": 291.66
+      "analysis_interval": 300,
+      "interval_test_statistic": 291.66
     },
     {
-      "trigger_duration": 1000,
-      "trigger_significance": 291.66
+      "analysis_interval": 1000,
+      "interval_test_statistic": 291.66
     },
     {
-      "trigger_duration": 3000,
-      "trigger_significance": 291.66
+      "analysis_interval": 3000,
+      "interval_test_statistic": 291.66
     },
     {
-      "trigger_duration": 10000,
-      "trigger_significance": 50.19
+      "analysis_interval": 10000,
+      "interval_test_statistic": 50.19
     }
   ]
 }
