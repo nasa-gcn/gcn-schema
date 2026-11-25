@@ -1,0 +1,6 @@
+{
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/near/alert.schema.json",
+  "trigger_time": "2000-12-30T10:22:15.588Z",
+  "lightcurve_image_url": "https://gcn.gsfc.nasa.gov/https://gcn.gsfc.nasa.gov/<A HREF=notices_n/001230_37335.588_n.ps",
+  "lightcurve_textfile_url": "https://gcn.gsfc.nasa.gov/https://gcn.gsfc.nasa.gov/<A HREF=notices_n/001230_37335.588_n.ps"
+}

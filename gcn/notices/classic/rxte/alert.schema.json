@@ -1,0 +1,28 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/rxte/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "BeppoSAX GRB Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "flux_energy_mcrab": {
+      "type": ["null", "number"],
+      "description": "Flux of the detected source in mCrab units. Only defined for ASM notices."
+    },
+    "position_type": {
+      "type": "string",
+      "enum": ["Line", "Box"],
+      "description": "The type of error box used for the trigger. Only defined for ASM notices."
+    }
+  }
+}

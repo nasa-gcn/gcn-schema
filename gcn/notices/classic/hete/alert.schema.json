@@ -1,0 +1,57 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/hete/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "HETE alert trigger",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/GeoLocBase.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "notice_type": {
+      "type": "string",
+      "enum": ["S/C_Alert", "S/C_Update", "S/C_Last", "Ground"]
+    },
+    "wxm_ra": {
+      "type": "number",
+      "description": "The RA reported by the WXM instrument."
+    },
+    "wxm_dec": {
+      "type": "number",
+      "description": "The Dec reported by the WXM instrument."
+    },
+    "wxm_ra_dec_error": {
+      "type": "number",
+      "description": "The location uncertainty reported by the WXM instrument."
+    },
+    "wxm_image_snr": {
+      "type": "number",
+      "description": "The significance of the detection of the point source in the image plane by the WXM instrument."
+    },
+    "sxc_ra": {
+      "type": "number",
+      "description": "The RA reported by the SXC instrument."
+    },
+    "sxc_dec": {
+      "type": "number",
+      "description": "The Dec reported by the SXC instrument."
+    },
+    "sxc_ra_dec_error": {
+      "type": "number",
+      "description": "The location uncertainty reported by the SXC instrument."
+    },
+    "sxc_image_snr": {
+      "type": "number",
+      "description": "The significance of the detection of the point source in the image plane by the SXC instrument."
+    }
+  }
+}

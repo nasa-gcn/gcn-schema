@@ -1,0 +1,21 @@
+{
+  "alert_datetime": "2019-4-12T20:35:19Z",
+  "trigger_time": "2019-04-12T18:01:16.00Z",
+  "ra": 214.9745,
+  "dec": 33.3909,
+  "ref_ID": "S190412",
+  "ra_dec_error": 8.3,
+  "submitter_name": "Phil_Evans",
+  "energy_flux": 2e-12,
+  "duration": 150.4,
+  "rank": 3,
+  "additional_info": "LVC Counterpart.  \nThis source has been given a rank of 3  \nRanks indicate how likely the object is to be  \nthe GW counterpart. Ranks go from 1-4 with   \n1 being the most likely and 4 the least.  \nSee http://www.swift.ac.uk/ranks.php for details.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/counterpart/alert.schema.json",
+  "notice_type": "LVC_Counterpart",
+  "record_number": 1,
+  "alert_type": "initial",
+  "mission": "Swift",
+  "instrument": "XRT",
+  "energy_flux_error": 9e-13,
+  "flux_energy_range": [0.3, 10.0]
+}

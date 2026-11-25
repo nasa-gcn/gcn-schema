@@ -1,0 +1,60 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/lvc/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "LIGO-Virgo Collaboration Gravitational Wave Alert",
+  "allOf": [
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "notice_type": {
+      "type": "string",
+      "enum": ["Preliminary", "Initial", "Update", "Retracted"]
+    },
+    "duration": {
+      "type": "number",
+      "description": "Duration of GW signal. Defined only for the burst class of events."
+    },
+    "central_frequency": {
+      "type": "number",
+      "description": "Peak frequency of GW signal in Hz. Defined only for the burst class of events."
+    },
+    "pipeline": {
+      "type": "string",
+      "description": "The pipeline used to process the triggers."
+    },
+    "search": {
+      "type": "string",
+      "description": "The search method used for the GW event."
+    },
+    "group": {
+      "type": "string",
+      "description": "The class of GW trigger: CBC or Burst."
+    },
+    "eventpage_url": {
+      "type": "string",
+      "description": "URL to the webpage with information associated with the trigger."
+    },
+    "chrip_mass": {
+      "type": "number",
+      "description": "Chirp Mass of teh compact binary system. Negative value indicates non-detection."
+    },
+    "eta": {
+      "type": "number",
+      "description": "Mass ratio of teh compact binary system. Negative value indicates non-detection."
+    },
+    "max_dist": {
+      "type": "number",
+      "description": "The furthest possible distance of the compact binary system. Negative value indicates non-detection."
+    }
+  }
+}

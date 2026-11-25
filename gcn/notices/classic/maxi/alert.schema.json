@@ -1,0 +1,64 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/maxi/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "title": "Alert",
+  "description": "MAXI Trigger Alert",
+  "allOf": [
+    { "$ref": "../../core/spectral/GammaRay.schema.json" },
+    { "$ref": "../../core/AdditionalInfo.schema.json" },
+    { "$ref": "../../core/Alert.schema.json" },
+    { "$ref": "../../core/DateTime.schema.json" },
+    { "$ref": "../../core/Event.schema.json" },
+    { "$ref": "../../core/GeoLocBase.schema.json" },
+    { "$ref": "../../core/Localization.schema.json" },
+    { "$ref": "../../core/Reporter.schema.json" },
+    { "$ref": "../../core/Statistics.schema.json" }
+  ],
+  "properties": {
+    "$schema": true,
+    "notice_type": {
+      "type": "string",
+      "description": "Details whether the observed source has been previously detected. MAXI has two notice types: Known and Unknown"
+    },
+    "duration": {
+      "type": "string",
+      "enum": [
+        "undefined/unavailable",
+        "1s",
+        "3s",
+        "10s",
+        "30s",
+        "1scan",
+        "1orbit",
+        "4orbit",
+        "1day"
+      ]
+    },
+    "source_flux_low_band": {
+      "type": "number",
+      "description": "Source flux for in the low band for cross-matched transient in keV. For Known notices only."
+    },
+    "background_flux_low_band": {
+      "type": "number",
+      "description": "Background flux for in the low band for cross-matched transient in keV. For Known notices only."
+    },
+    "source_flux_medium_band": {
+      "type": "number",
+      "description": "Source flux for in the medium band for cross-matched transient in keV. For Known notices only."
+    },
+    "background_flux_medium_band": {
+      "type": "number",
+      "description": "Background flux for in the medium band for cross-matched transient in keV. For Known notices only."
+    },
+    "source_flux_high_band": {
+      "type": "number",
+      "description": "Source flux for in the high band for cross-matched transient in keV. For Known notices only."
+    },
+    "background_flux_high_band": {
+      "type": "number",
+      "description": "Background flux for in the high band for cross-matched transient in keV. For Known notices only."
+    }
+  }
+}

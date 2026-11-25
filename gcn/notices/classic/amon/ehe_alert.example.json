@@ -1,0 +1,20 @@
+{
+  "alert_datetime": "2016-12-10T20:07:16Z",
+  "trigger_time": "2016-12-10T20:06:40.31Z",
+  "ra": 45.8549,
+  "dec": 15.7851,
+  "ra_dec_error": 14.99,
+  "record_number": 1,
+  "signalness": 0.49023,
+  "n_events": 1,
+  "delta_time": 0.0,
+  "sigma_time": 0.0,
+  "charge": 0.4902,
+  "additional_info": "AMON_ICECUBE_EHE.",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/classic/amon/alert.schema.json",
+  "mission": "AMON",
+  "notice_type": "EHE",
+  "id": ["128906_80127519"],
+  "systematic_included": true,
+  "containment_probability": 0.5
+}
